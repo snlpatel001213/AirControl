@@ -48,6 +48,7 @@ public class TCPTestServer : MonoBehaviour
 	/// <summary>
 	/// Runs in background TcpServerThread; Handles incomming TcpClient requests 
 	/// </summary>
+	
 	private void ListenForIncommingRequests () { 		
 		try { 			
 			// Create listener on localhost port 8052. 			
