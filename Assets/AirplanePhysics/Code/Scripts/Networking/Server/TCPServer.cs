@@ -9,7 +9,7 @@ using UnityEngine;
 
 namespace AirControl
 {
-	public class TCPTestServer : MonoBehaviour
+	public class TCPServer : MonoBehaviour
 	{
 		// Start is called before the first frame update
 		#region private members 	
@@ -27,6 +27,8 @@ namespace AirControl
 		/// </summary> 	
 		private TcpClient connectedTcpClient; 	
 		// provide base input to access variables
+		[Header("Airplane Input Required")]
+		[Tooltip("Drag and drop here the  AC_BaseAirplane_Input.cs OR AC_XboxAirplane_Input.cs")]
 		public AC_BaseAirplane_Input currentReadings;
 
 		private InputOutputHandel InOutManager =  new InputOutputHandel();

@@ -9,13 +9,13 @@ namespace AirControl
     public class AC_BaseRigidbody_Controller : MonoBehaviour
     {
         #region Variable
-        private Rigidbody rb;
-        private AudioSource aSource;
+        protected Rigidbody rb;
+        protected AudioSource aSource;
         #endregion
 
         #region Builtin Methods
         // Start is called before the first frame update
-        void Start()
+        public virtual void Start()
         {
             rb = GetComponent<Rigidbody>();
             aSource = GetComponent<AudioSource>();
