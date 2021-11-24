@@ -26,6 +26,8 @@ namespace AirControl
 		/// Create handle to connected tcp client. 	
 		/// </summary> 	
 		private TcpClient connectedTcpClient; 	
+		// provide base input to access variables
+		public AC_BaseAirplane_Input currentReadings;
 
 		private InputOutputHandel InOutManager =  new InputOutputHandel();
 		#endregion 	
@@ -38,16 +40,6 @@ namespace AirControl
 			tcpListenerThread.IsBackground = true; 		
 			tcpListenerThread.Start(); 	
 		}  	
-		#region Depricated
-		// Update is called once per frame
-		void Update () { 		
-			// if (Input.GetKeyDown(KeyCode.Space)) {     
-
-				string outputmsg = InOutManager.Outputhandel();
-				SendMessage(outputmsg);         
-			// } 	
-		}  	
-		#endregion
 		#endregion
 		
 		#region Custom Methods
@@ -72,10 +64,11 @@ namespace AirControl
 								var incommingData = new byte[length]; 							
 								Array.Copy(bytes, 0, incommingData, 0, length);  							
 								// Convert byte array to string message. 							
-								string clientMessage = Encoding.ASCII.GetString(incommingData); 							
-								Debug.Log("client message received as: " + clientMessage); 	
-								// send message in return
-								// SendMessage(String);					
+								string clientMessage = Encoding.ASCII.GetString(incommingData); 
+								InOutManager.ParseInput(clientMessage);							
+								// once received the message, send message in return
+								string outputmsg = InOutManager.ParseOutput(currentReadings);
+								SendMessage(outputmsg);				
 							} 					
 						} 				
 					} 			
@@ -93,7 +86,6 @@ namespace AirControl
 			if (connectedTcpClient == null) {             
 				return;         
 			}  		
-			
 			try { 			
 				// Get a stream object for writing. 			
 				NetworkStream stream = connectedTcpClient.GetStream(); 			
