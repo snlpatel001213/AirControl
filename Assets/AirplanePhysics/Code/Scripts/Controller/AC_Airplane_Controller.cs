@@ -16,6 +16,14 @@ namespace AirControl
 
         [Tooltip("Initialize an empty object and set it in  airplane body. That position is Center of Gravity of the Airplane. Hook that object here")]
         public Transform centerOfGravity;
+
+        [Header("Engines")]
+        [Tooltip("Initialize an empty object and set it in  airplane body at the place of Engine. Add AC_Airplane_Engine script to that object. Hook that engine object here")]
+        public List<AC_Airplane_Engine> engines =  new List<AC_Airplane_Engine>();
+
+        [Header("Wheels")]
+        [Tooltip("Initialize wheel colliders and set it in  airplane body at the place of wheel. Add AC_Airplane_Wheel script to that object. Hook those wheels object here")]
+        public List<AC_Airplane_Wheel> wheels =  new List<AC_Airplane_Wheel>();
         
         #endregion
 
@@ -34,6 +42,14 @@ namespace AirControl
                     rb.centerOfMass = centerOfGravity.localPosition;
                 } // handel exception 
             }
+
+            if (wheels != null){
+                if(wheels.Count>0){
+                    foreach(AC_Airplane_Wheel wheel in wheels){
+                        wheel.initWheel();
+                    }
+                }
+            }
                 
         }
         #endregion
@@ -41,14 +57,24 @@ namespace AirControl
         #region Custom Methods
         protected override void HandlePhysics()
         {
-            HandleEngines();
-            HandleAerodynamics();
-            HandleSteering();
-            HandleBrakes();
-            HandleAltitude();
+            if(input){
+                HandleEngines();
+                HandleAerodynamics();
+                HandleSteering();
+                HandleBrakes();
+                HandleAltitude();
+            }// handle else
+            
         }
 
         void HandleEngines(){
+            if(engines != null){
+                if(engines.Count > 0 ){
+                    foreach(AC_Airplane_Engine engine in engines){
+                        rb.AddForce(engine.calculateForce(input.Throttle));
+                    }
+                }
+            }
 
         }
         void HandleAerodynamics(){

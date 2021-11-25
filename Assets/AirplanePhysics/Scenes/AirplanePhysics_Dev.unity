@@ -285,6 +285,23 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &642623931 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5326315427244834903, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
+  m_PrefabInstance: {fileID: 5927820846799532006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &642623934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 642623931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c08337b1230f07fb5cff8db8c2bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &687950350
 GameObject:
   m_ObjectHideFlags: 0
@@ -373,6 +390,68 @@ Transform:
   m_Father: {fileID: 583229504}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1277489896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1277489897}
+  - component: {fileID: 1277489898}
+  m_Layer: 0
+  m_Name: Engine
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1277489897
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277489896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.007, z: 2.554}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6182990085044994289}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1277489898
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277489896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d1198e7ca3218d3458280310b41bc617, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxForce: 800
+  mazRPM: 2550
+--- !u!1 &1314026184 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5927820847480063281, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
+  m_PrefabInstance: {fileID: 5927820846799532006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1314026187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1314026184}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c08337b1230f07fb5cff8db8c2bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1346952765
 GameObject:
   m_ObjectHideFlags: 0
@@ -640,6 +719,23 @@ Transform:
   m_Father: {fileID: 380894392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &1968806855 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5927820846027065746, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
+  m_PrefabInstance: {fileID: 5927820846799532006}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1968806858
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1968806855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00c08337b1230f07fb5cff8db8c2bb7b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2080838344
 GameObject:
   m_ObjectHideFlags: 0
@@ -683,7 +779,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 755010503212096059}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4aceb154824b2f88596fc8cfcb350fac, type: 3}
   m_Name: 
@@ -717,6 +813,12 @@ MonoBehaviour:
   input: {fileID: 755010503212096061}
   airplaneWeight: 800
   centerOfGravity: {fileID: 1432887365}
+  engines:
+  - {fileID: 1277489898}
+  wheels:
+  - {fileID: 1314026187}
+  - {fileID: 642623934}
+  - {fileID: 1968806858}
 --- !u!82 &755010503212096063
 AudioSource:
   m_ObjectHideFlags: 0
