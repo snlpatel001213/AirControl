@@ -4,12 +4,19 @@ using UnityEngine;
 
 namespace AirControl
 {
+    [RequireComponent(typeof(AC_Airplane_Characteristics))]
+    [RequireComponent(typeof(AC_BaseAirplane_Input))]
+    [RequireComponent(typeof(AC_XboxAirplane_Input))]
     public class AC_Airplane_Controller : AC_BaseRigidbody_Controller
     {
         #region variables
         [Header("Base Airplane Properties")]
         [Tooltip("Drag and drop here the  AC_BaseAirplane_Input.cs OR AC_XboxAirplane_Input.cs")]
         public AC_BaseAirplane_Input input;
+
+        [Header("Airplane Characteristics")]
+        [Tooltip("Drag and drop here the  AC_Airplane_Characteristics.cs")]
+        public AC_Airplane_Characteristics characteristics;
 
         [Tooltip("Weight is in pounds")]
         public float airplaneWeight = 800f;
@@ -35,14 +42,25 @@ namespace AirControl
         public override void Start()
         {
             base.Start();
+
+            //calculate final mass in kilos
             float finalMass =  airplaneWeight * poundToKilos;
+            
+            // if rigid body added then add center of mass
             if (rb){
                 rb.mass = finalMass;
                 if(centerOfGravity){
                     rb.centerOfMass = centerOfGravity.localPosition;
                 } // handel exception 
-            }
 
+                // Initialize Airplane characteristics  
+                characteristics = GetComponent<AC_Airplane_Characteristics>();  
+                if(characteristics){
+                    characteristics.InitCharacteristics(rb);
+                }
+            }
+            
+            // Initialize Wheels
             if (wheels != null){
                 if(wheels.Count>0){
                     foreach(AC_Airplane_Wheel wheel in wheels){
@@ -50,6 +68,9 @@ namespace AirControl
                     }
                 }
             }
+
+            
+            
                 
         }
         #endregion
@@ -59,7 +80,7 @@ namespace AirControl
         {
             if(input){
                 HandleEngines();
-                HandleAerodynamics();
+                HandleCharacteristics();
                 HandleSteering();
                 HandleBrakes();
                 HandleAltitude();
@@ -71,14 +92,17 @@ namespace AirControl
             if(engines != null){
                 if(engines.Count > 0 ){
                     foreach(AC_Airplane_Engine engine in engines){
-                        rb.AddForce(engine.calculateForce(input.Throttle));
+                        rb.AddForce(engine.calculateForce(input.StickyThrottle));
                     }
                 }
             }
 
         }
-        void HandleAerodynamics(){
-
+        void HandleCharacteristics(){
+            if (characteristics){
+                characteristics.UpdateCharacteristics();
+            }
+            
         }
         void HandleSteering(){
 

@@ -14,6 +14,12 @@ namespace  AirControl
         protected float brake = 0f;
         public int maxFlapIncrements=2; // maximum increment allowed to flaps
         protected int flaps = 0;
+
+        // Slowly move the throttle
+        [Header("Sticky throttle value control how the throttle can be moved")]
+        public float throttleSpeed = 0.8f;
+        protected float stickyThrottle;
+
         #endregion
 
         #region Properties
@@ -34,6 +40,9 @@ namespace  AirControl
         }
         public float Brake{
             get{return brake;}
+        }
+        public float StickyThrottle {
+            get{return stickyThrottle;}
         }
         #endregion
         
@@ -59,6 +68,7 @@ namespace  AirControl
             roll =  Input.GetAxis("Horizontal");
             yaw =  Input.GetAxis("yaw");
             throttle =  Input.GetAxis("throttle");
+            StickyThrottleControl();
             // Process brakes bool
             brake =  Input.GetKey(KeyCode.Space)?1f:0f;
             // Process flaps
@@ -70,6 +80,12 @@ namespace  AirControl
                 flaps-=1;
             }
             flaps =   Mathf.Clamp(flaps, 0,maxFlapIncrements);
+
+        }
+
+        void StickyThrottleControl(){
+            stickyThrottle = stickyThrottle + (throttle*throttleSpeed*Time.deltaTime);
+            stickyThrottle =  Mathf.Clamp01(stickyThrottle);
 
         }
         #endregion

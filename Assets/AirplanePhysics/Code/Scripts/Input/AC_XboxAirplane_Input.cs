@@ -10,17 +10,6 @@ namespace AirControl
         #endregion
 
         #region Builtin Methods
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
-
-        // Update is called once per frame
-        void Update()
-        {
-            
-        }
         #endregion
 
         #region Custom Methods
@@ -35,10 +24,10 @@ namespace AirControl
             pitch =  Input.GetAxis("Vertical");
             roll =  Input.GetAxis("Horizontal");
             yaw =  Input.GetAxis("Fire1");
-            bool isGamepad = Input.GetAxis("Gamepad Fire") != 0f;
-            if(isGamepad){
-                Debug.Log("Game pad fire detected");
-            }
+            // bool isGamepad = Input.GetAxis("Gamepad Fire") != 0f;
+            // if(isGamepad){
+            //     Debug.Log("Game pad fire detected");
+            // }
             throttle =  Input.GetAxis("X_RV_Stick");
             // Process brakes bool
             brake =  Input.GetAxis("Fire1");

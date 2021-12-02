@@ -26,6 +26,7 @@ namespace AirControl
             debugInfo += "Throttle : "+ targetInput.Throttle+ "\n";
             debugInfo += "Brake : "+ targetInput.Brake+ "\n";
             debugInfo += "Flaps : "+ targetInput.Flaps+ "\n";
+            debugInfo += "Sticky Throttle "+targetInput.StickyThrottle+ "\n";
 
             // custom editor code
             GUILayout.Space(20);
