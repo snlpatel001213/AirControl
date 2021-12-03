@@ -9,7 +9,7 @@ namespace AirControl
         #region Variables
         [Header("Engine Properties")]
         // Max force the engine can produce
-        public float maxForce = 200f;
+        public float maxForce = 3900f;
         // Max RPM the engine can produce
         public float maxRPM = 2550f;
         [Header("Animation curve for to set engine efficiency")]

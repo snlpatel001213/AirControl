@@ -17,7 +17,7 @@ namespace  AirControl
 
         // Slowly move the throttle
         [Header("Sticky throttle value control how the throttle can be moved")]
-        public float throttleSpeed = 0.8f;
+        public float throttleSpeed = 0.5f;
         protected float stickyThrottle;
 
         #endregion
