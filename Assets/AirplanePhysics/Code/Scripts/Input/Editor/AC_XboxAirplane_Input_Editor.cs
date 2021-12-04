@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+
 namespace AirControl
 {
     [CustomEditor(typeof(AC_XboxAirplane_Input))]

@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 525880060}
   m_Layer: 0
   m_Name: Plane
-  m_TagString: Untagged
+  m_TagString: ground
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -268,7 +268,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 7e0195a3a636ffa41b6cc396ddae4758, type: 2}
+  - {fileID: -8274133419916619345, guid: 6be004aed976d39018c5ca4a458a9f64, type: 3}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -637,6 +637,7 @@ GameObject:
   - component: {fileID: 1737466728}
   - component: {fileID: 1737466727}
   - component: {fileID: 1737466726}
+  - component: {fileID: 1737466729}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -702,13 +703,30 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737466725}
-  m_LocalRotation: {x: 0.18158482, y: -0, z: -0, w: 0.98337525}
-  m_LocalPosition: {x: 0.47, y: 8.79, z: -13.69}
+  m_LocalRotation: {x: 0.18158484, y: -0, z: -0, w: 0.9833753}
+  m_LocalPosition: {x: 0.47, y: 10.424, z: -13.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 6182990085044994289}
-  m_RootOrder: 4
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 20.924, y: 0, z: 0}
+--- !u!114 &1737466729
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737466725}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf7aba100789b4ce487fde455121e9a9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airplane: {fileID: 6182990085044994289}
+  cameraDistance: 10
+  cameraHeight: 6
+  cameraMovementSpeed: 0.5
+  minHeaightFromGround: 4
 --- !u!1 &1791669347
 GameObject:
   m_ObjectHideFlags: 0
