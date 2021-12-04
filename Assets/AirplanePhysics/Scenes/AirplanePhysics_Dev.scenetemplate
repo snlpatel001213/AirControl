@@ -1,0 +1,43 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 13966, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: AirplanePhysics_Dev
+  m_EditorClassIdentifier: 
+  templateScene: {fileID: 102900000, guid: 8c7e87c8175cc9b59bc16af3b39e56d0, type: 3}
+  templateName: 
+  description: 
+  preview: {fileID: 0}
+  dependencies:
+  - dependency: {fileID: 2800000, guid: afca6f421a018e04e8fe394ed1a18cc8, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 100008, guid: 0a5b6c85101505647b87da703d0ae99a, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: cdaf5638a02bcb822944c58817d22426, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 919132149155446097, guid: d9d328ba04cb0c01cb7eaf284638a361, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: 7e0195a3a636ffa41b6cc396ddae4758, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: d1371de9c5d45404489896398081255b, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2100000, guid: 4d0afa186ed9a7f48b9404b430babf60, type: 2}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: aa18ba462c867134b9f6556be5597f32, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: e5600378dd761e64d9423790c482bf36, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 2800000, guid: aeaaac644b62c9249acd7da7a0307840, type: 3}
+    instantiationMode: 0
+  - dependency: {fileID: 6357270310726759901, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
+    instantiationMode: 0
+  templatePipeline: {fileID: 0}
+  addToDefaults: 0

@@ -19,7 +19,7 @@ namespace AirControl
         public AC_Airplane_Characteristics characteristics;
 
         [Tooltip("Weight is in pounds")]
-        public float airplaneWeight = 800f;
+        public float airplaneWeight = 1200f;
 
         [Tooltip("Initialize an empty object and set it in  airplane body. That position is Center of Gravity of the Airplane. Hook that object here")]
         public Transform centerOfGravity;
@@ -56,7 +56,7 @@ namespace AirControl
                 // Initialize Airplane characteristics  
                 characteristics = GetComponent<AC_Airplane_Characteristics>();  
                 if(characteristics){
-                    characteristics.InitCharacteristics(rb);
+                    characteristics.InitCharacteristics(rb, input);
                 }
             }
             
@@ -67,11 +67,7 @@ namespace AirControl
                         wheel.initWheel();
                     }
                 }
-            }
-
-            
-            
-                
+            }  
         }
         #endregion
 
@@ -92,7 +88,7 @@ namespace AirControl
             if(engines != null){
                 if(engines.Count > 0 ){
                     foreach(AC_Airplane_Engine engine in engines){
-                        rb.AddForce(engine.calculateForce(input.StickyThrottle));
+                        rb.AddForce(engine.CalculateForce(input.StickyThrottle));
                     }
                 }
             }
