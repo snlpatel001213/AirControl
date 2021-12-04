@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
+
 namespace AirControl
 {
     [CustomEditor(typeof(AC_XboxAirplane_Input))]
@@ -26,6 +27,7 @@ namespace AirControl
             debugInfo += "Throttle : "+ targetInput.Throttle+ "\n";
             debugInfo += "Brake : "+ targetInput.Brake+ "\n";
             debugInfo += "Flaps : "+ targetInput.Flaps+ "\n";
+            debugInfo += "Sticky Throttle "+targetInput.StickyThrottle+ "\n";
 
             // custom editor code
             GUILayout.Space(20);
