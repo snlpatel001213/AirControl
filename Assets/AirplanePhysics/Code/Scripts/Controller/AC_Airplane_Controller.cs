@@ -35,10 +35,25 @@ namespace AirControl
         [Header("Control Surfaces")]
         [Tooltip("Initialize empty control surfaces. Add AC_Airplane_ControlSurface script to that object. Hook wheels object here")]
         public List<AC_Airplane_ControlSurface> controlSurfaces = new List<AC_Airplane_ControlSurface>();
+        
+        // Meadian sea level
+        private float currentMSL;
+        // Above Ground Level
+        private float currentAGL;
+        #endregion
+
+        #region Properties
+        public float CurrentMSL{
+            get{return currentMSL;}
+        }
+        public float CurrentAGL{
+            get{return currentAGL;}
+        }
         #endregion
 
         #region Constants
         const float poundToKilos = 0.453592f;
+        const float metersToFeets = 3.28084f;
         #endregion
 
         #region Builtin Methods
@@ -130,7 +145,15 @@ namespace AirControl
 
         }
         void HandleAltitude(){
-
+            currentMSL  =  transform.position.y * metersToFeets;
+            RaycastHit hit;
+            if(Physics.Raycast(transform.position, Vector3.down, out hit))
+            {
+                if(hit.transform.tag == "ground" || hit.transform.tag == "building")
+                {
+                    currentAGL = (hit.distance) *metersToFeets;
+                }
+            }
         }
         #endregion
     }
