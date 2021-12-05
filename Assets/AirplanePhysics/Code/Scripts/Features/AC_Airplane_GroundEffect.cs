@@ -49,7 +49,6 @@ namespace AirControl
 
                     float distance = groundDistance - hit.distance;
                     float finalForce = liftForce *distance *normalizedSpeed;
-                    Debug.Log("Hitting the ground"+finalForce);
                     rb.AddForce(Vector3.up*finalForce);
                 }
             }

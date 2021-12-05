@@ -20,15 +20,17 @@ namespace AirControl
         // 2. https://www.udemy.com/course/intro-to-airplane-physics-in-unity-3d/learn/lecture/10348654#questions
         protected override void HandleInput()
         {
+            base.HandleInput();
+            base.ClampInputs();
             // Process pitch, roll, yaw and throttle
-            pitch =  Input.GetAxis("Vertical");
-            roll =  Input.GetAxis("Horizontal");
-            yaw =  Input.GetAxis("Fire1");
+            pitch +=  Input.GetAxis("Vertical");
+            roll +=  Input.GetAxis("Horizontal");
+            yaw +=  Input.GetAxis("Fire1");
             // bool isGamepad = Input.GetAxis("Gamepad Fire") != 0f;
             // if(isGamepad){
             //     Debug.Log("Game pad fire detected");
             // }
-            throttle =  Input.GetAxis("X_RV_Stick");
+            throttle +=  Input.GetAxis("X_RV_Stick");
             // Process brakes bool
             brake =  Input.GetAxis("Fire1");
             // Process flaps

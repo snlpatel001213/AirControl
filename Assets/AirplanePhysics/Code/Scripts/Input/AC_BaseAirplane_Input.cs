@@ -20,6 +20,7 @@ namespace  AirControl
         [Header("Sticky throttle value control how the throttle can be moved")]
         public float throttleSpeed = 0.5f;
         protected float stickyThrottle;
+        
 
         #endregion
 
@@ -59,6 +60,8 @@ namespace  AirControl
         void Update()
         {
             HandleInput();
+            StickyThrottleControl();
+            ClampInputs();
         }
         #endregion
         
@@ -88,6 +91,15 @@ namespace  AirControl
             stickyThrottle = stickyThrottle + (throttle*throttleSpeed*Time.deltaTime);
             stickyThrottle =  Mathf.Clamp01(stickyThrottle);
 
+        }
+        protected void ClampInputs()
+        {
+            pitch = Mathf.Clamp(pitch,-1f,1f);
+            roll = Mathf.Clamp(roll,-1f,1f);
+            yaw = Mathf.Clamp(yaw,-1f,1f);
+            throttle = Mathf.Clamp(throttle,-1f,1f);
+            brake = Mathf.Clamp(brake,0f,1f);
+            flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);
         }
         #endregion
     }
