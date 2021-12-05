@@ -49,6 +49,7 @@ namespace AirControl
         public float CurrentAGL{
             get{return currentAGL;}
         }
+
         #endregion
 
         #region Constants

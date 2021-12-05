@@ -40,6 +40,11 @@ namespace  AirControl
         public int Flaps{
             get{return flaps;}
         }
+        public float NormalizedFlaps{
+            get{
+                return (float)flaps / maxFlapIncrements;
+            }
+        }
         public float Brake{
             get{return brake;}
         }
