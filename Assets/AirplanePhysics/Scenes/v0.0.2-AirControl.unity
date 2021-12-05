@@ -281,7 +281,7 @@ Transform:
   m_GameObject: {fileID: 525880058}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 100, y: 100, z: 100}
+  m_LocalScale: {x: 1000, y: 1000, z: 1000}
   m_Children: []
   m_Father: {fileID: 2080838345}
   m_RootOrder: 0
@@ -587,10 +587,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 2
-  maxAngle: 30
-  axis: {x: 1, y: 0, z: 0}
-  controlSurfaceGraphic: {fileID: 0}
-  smoothSpeed: 4
+  maxAngle: 15
+  axis: {x: -1, y: 0, z: 0}
+  controlSurfaceGraphic: {fileID: 1373379104}
+  smoothSpeed: 1
 --- !u!1 &881114906
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,10 +688,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 2
-  maxAngle: 30
-  axis: {x: 1, y: 0, z: 0}
-  controlSurfaceGraphic: {fileID: 0}
-  smoothSpeed: 4
+  maxAngle: 15
+  axis: {x: -1, y: 0, z: 0}
+  controlSurfaceGraphic: {fileID: 1816933970}
+  smoothSpeed: 1
 --- !u!1 &1277489896
 GameObject:
   m_ObjectHideFlags: 0
@@ -823,6 +823,11 @@ Transform:
   m_Father: {fileID: 583229504}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &1373379104 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5930405196318581469, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
+  m_PrefabInstance: {fileID: 5927820846799532006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1383941249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1184,6 +1189,11 @@ Transform:
   m_Father: {fileID: 380894392}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!4 &1816933970 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5930291695205291811, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
+  m_PrefabInstance: {fileID: 5927820846799532006}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1961209726 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5930549210806142019, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
@@ -1308,6 +1318,8 @@ MonoBehaviour:
   - {fileID: 1657433721}
   - {fileID: 1539276306}
   - {fileID: 576308096}
+  - {fileID: 731033317}
+  - {fileID: 1258356410}
 --- !u!82 &755010503212096063
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1490,6 +1502,21 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   forwardSpeed: 0
+--- !u!114 &755010503212096066
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 755010503212096059}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfeb1a37e3774600f978083d638c354f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  groundDistance: 3
+  liftForce: 50
+  maxSpeed: 15
 --- !u!1001 &4012236714384895244
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1544,6 +1571,10 @@ PrefabInstance:
     - target: {fileID: 4282709773745956877, guid: c9a4c715f52317e8e87ee20a281d2fb7, type: 3}
       propertyPath: m_Name
       value: Runway1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4282709773745956877, guid: c9a4c715f52317e8e87ee20a281d2fb7, type: 3}
+      propertyPath: m_TagString
+      value: ground
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c9a4c715f52317e8e87ee20a281d2fb7, type: 3}
@@ -1714,13 +1745,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: -52.504
       objectReference: {fileID: 0}
+    - target: {fileID: 5930656164026729521, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6357270310726759901, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
       propertyPath: m_Icon
       value: 
       objectReference: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
     - target: {fileID: 6357270310726759901, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
       propertyPath: m_Name
-      value: IndiePixel_Plane
+      value: Cessna-152
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: be7e18da56ed7db508088899b2b9e2b8, type: 3}
