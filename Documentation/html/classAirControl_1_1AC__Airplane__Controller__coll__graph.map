@@ -1,0 +1,7 @@
+<map id="AirControl.AC_Airplane_Controller" name="AirControl.AC_Airplane_Controller">
+<area shape="rect" id="node1" title=" " alt="" coords="541,57,712,98"/>
+<area shape="rect" id="node2" href="$classAirControl_1_1AC__BaseRigidbody__Controller.html" title=" " alt="" coords="179,5,393,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,64,129,91"/>
+<area shape="rect" id="node4" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="185,57,387,98"/>
+<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__Characteristics.html" title=" " alt="" coords="201,122,371,163"/>
+</map>

@@ -1,0 +1,6 @@
+<map id="AirControl.IP_Airplane_ThrottleLever" name="AirControl.IP_Airplane_ThrottleLever">
+<area shape="rect" id="node1" title=" " alt="" coords="108,185,272,227"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node4" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="89,81,291,123"/>
+<area shape="rect" id="node3" href="$interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="316,89,411,115"/>
+</map>
