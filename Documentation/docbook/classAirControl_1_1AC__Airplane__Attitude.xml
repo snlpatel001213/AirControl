@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__Airplane__Attitude">
+<title>AirControl.AC_Airplane_Attitude Class Reference</title>
+<indexterm><primary>AirControl.AC_Airplane_Attitude</primary></indexterm>
+Inheritance diagram for AirControl.AC_Airplane_Attitude:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Attitude__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_Airplane_Attitude:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Attitude__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Attitude_1a948c1dd59c940e29e0768dde36f55068"/>void <emphasis role="strong">HandleAirplaneUI</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Attitude_1a9dec13e2accf80136f018cd2fd3e0d52"/><link linkend="_classAirControl_1_1AC__Airplane__Controller">AC_Airplane_Controller</link> <emphasis role="strong">airplane</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Attitude_1ae28687568998fa9fb7e416e475afeca9"/>RectTransform <emphasis role="strong">bgRect</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Attitude_1ab8607a99c01e407c6cb3273280a9ab75"/>RectTransform <emphasis role="strong">arrowRect</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/UI/Instruments/AC_Airplane_Attitude.cs</section>

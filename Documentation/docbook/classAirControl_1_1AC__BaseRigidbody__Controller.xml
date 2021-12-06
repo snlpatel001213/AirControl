@@ -1,0 +1,48 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__BaseRigidbody__Controller">
+<title>AirControl.AC_BaseRigidbody_Controller Class Reference</title>
+<indexterm><primary>AirControl.AC_BaseRigidbody_Controller</primary></indexterm>
+Inheritance diagram for AirControl.AC_BaseRigidbody_Controller:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__BaseRigidbody__Controller__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_BaseRigidbody_Controller:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__BaseRigidbody__Controller__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseRigidbody__Controller_1ade06ce6d724670962e0ef1a1f266562c"/>virtual void <emphasis role="strong">Start</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseRigidbody__Controller_1aeed47e34dcb35b0b1c2bf1e8f4872a6d"/>virtual void <emphasis role="strong">HandlePhysics</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseRigidbody__Controller_1a6aa1fada121d4bb14ae0d2071790a983"/>Rigidbody <emphasis role="strong">rb</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseRigidbody__Controller_1a0feceab8b400cafded30da0e34c172f6"/>AudioSource <emphasis role="strong">aSource</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Controller/AC_BaseRigidbody_Controller.cs</section>

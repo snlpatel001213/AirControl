@@ -1,0 +1,74 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__Airplane__Characteristics">
+<title>AirControl.AC_Airplane_Characteristics Class Reference</title>
+<indexterm><primary>AirControl.AC_Airplane_Characteristics</primary></indexterm>
+Inheritance diagram for AirControl.AC_Airplane_Characteristics:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Characteristics__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_Airplane_Characteristics:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Characteristics__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a06dce47f65a8f8d7dc6c3f18027afc05"/>void <emphasis role="strong">InitCharacteristics</emphasis> (Rigidbody curRB, <link linkend="_classAirControl_1_1AC__BaseAirplane__Input">AC_BaseAirplane_Input</link> curInput)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a640a3e09356681418c0f9350ff8b4a68"/>void <emphasis role="strong">UpdateCharacteristics</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1ad885dfa16cb6c0a8f108cd0ecdab654e"/>float <emphasis role="strong">maxMPH</emphasis> = 110f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a4d5f63d30c88e117c4fad8ccf2f3e8c7"/>float <emphasis role="strong">rbLerpSpeed</emphasis> = 0.01f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a9a0fe429271c1349cb93933f8d89e2b6"/>float <emphasis role="strong">maxLiftPower</emphasis> = 4000f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1ae0b20a1f681c4d71ff3afce6ed6395bc"/>AnimationCurve <emphasis role="strong">liftCurve</emphasis> = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a5c53a7e99000ff3505e5cedc32a0cd43"/>float <emphasis role="strong">flapLiftPower</emphasis> = 100f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1ac1677912739835dd5ee50376ebe7d8ae"/>float <emphasis role="strong">dragFactor</emphasis> = 0.01f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a66eca01562c671dc74e61a27bac5d1e9"/>float <emphasis role="strong">flapDragFactor</emphasis> = 0.005f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1ae66f345232c8564468eafe9a54b7e595"/>float <emphasis role="strong">pitchSpeed</emphasis> = 1000f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1acfb34ad43f5c83b76af9237a9e76ad42"/>float <emphasis role="strong">rollSpeed</emphasis> = 1000f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1ab2c6b7079c346a881e030f6ff2959c03"/>float <emphasis role="strong">yawSpeed</emphasis> = 1000f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a5a778d41aebbe9371be83e64cc89a362"/>AnimationCurve <emphasis role="strong">controlSurfaceEfficiency</emphasis> = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1afd298c042785fd2c67a281de655b7174"/>float <emphasis role="strong">forwardSpeed</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1ab0448dffd178755907b255023872acf0"/>float <emphasis role="strong">ForwardSpeed</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Characteristics_1a85b4fa8d7124f26e2c3779f8e79f816c"/>float <emphasis role="strong">MPH</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Characteristics/AC_Airplane_Characteristics.cs</section>

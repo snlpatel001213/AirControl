@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__Airplane__Audio">
+<title>AirControl.AC_Airplane_Audio Class Reference</title>
+<indexterm><primary>AirControl.AC_Airplane_Audio</primary></indexterm>
+Inheritance diagram for AirControl.AC_Airplane_Audio:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Audio__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_Airplane_Audio:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Audio__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Audio_1a0a1ade4fb31ae20a4c7bccea6e610029"/><link linkend="_classAirControl_1_1AC__BaseAirplane__Input">AC_BaseAirplane_Input</link> <emphasis role="strong">input</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Audio_1ac2aed4fada77efd11ab12afa13ca02d9"/>AudioSource <emphasis role="strong">idleSource</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Audio_1a19908223d1e8255e05aed253599119b0"/>AudioSource <emphasis role="strong">fullThrottleSource</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Audio_1a83fb264dcc1f3aba01a974aaf7503ee4"/>virtual void <emphasis role="strong">HandleAudio</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Audio/AC_Airplane_Audio.cs</section>

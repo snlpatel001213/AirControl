@@ -1,0 +1,77 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_namespaceAirControl">
+<title>AirControl Namespace Reference</title>
+<indexterm><primary>AirControl</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Airspeed">AC_Airplane_Airspeed</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Altimeter">AC_Airplane_Altimeter</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Attitude">AC_Airplane_Attitude</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Audio">AC_Airplane_Audio</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Camera">AC_Airplane_Camera</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Characteristics">AC_Airplane_Characteristics</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Controller">AC_Airplane_Controller</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__ControlSurface">AC_Airplane_ControlSurface</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Engine">AC_Airplane_Engine</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Fuel">AC_Airplane_Fuel</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__GroundEffect">AC_Airplane_GroundEffect</link></para>
+</listitem>
+            <listitem><para>class <emphasis role="strong">AC_Airplane_Menus</emphasis></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Propeller">AC_Airplane_Propeller</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Tachometer">AC_Airplane_Tachometer</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Airplane__Wheel">AC_Airplane_Wheel</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__AirplaneUI__Controller">AC_AirplaneUI_Controller</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__BaseAirplane__Input">AC_BaseAirplane_Input</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__BaseAirplane__Input__Editor">AC_BaseAirplane_Input_Editor</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__BaseRigidbody__Controller">AC_BaseRigidbody_Controller</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__Basic__Follow__Camera">AC_Basic_Follow_Camera</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__XboxAirplane__Input">AC_XboxAirplane_Input</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1AC__XboxAirplane__Input__Editor">AC_XboxAirplane_Input_Editor</link></para>
+</listitem>
+            <listitem><para>interface <link linkend="_interfaceAirControl_1_1IAirplaneUI">IAirplaneUI</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1InputOutputHandel">InputOutputHandel</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1IP__Airplane__FlapLever">IP_Airplane_FlapLever</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1IP__Airplane__FuelGauge">IP_Airplane_FuelGauge</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1IP__Airplane__ThrottleLever">IP_Airplane_ThrottleLever</link></para>
+</listitem>
+            <listitem><para>class <link linkend="_classAirControl_1_1TCPServer">TCPServer</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Enumerations    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_namespaceAirControl_1a8c47baf0b580ee7cb5f8838442d97d24"/>enum <emphasis role="strong">ControlSurfaceType</emphasis> { <emphasis role="strong">Rudder</emphasis>, 
+<emphasis role="strong">Elevator</emphasis>, 
+<emphasis role="strong">Flaps</emphasis>, 
+<emphasis role="strong">Alerons</emphasis>
+ }</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

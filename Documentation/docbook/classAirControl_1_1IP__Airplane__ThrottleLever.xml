@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1IP__Airplane__ThrottleLever">
+<title>AirControl.IP_Airplane_ThrottleLever Class Reference</title>
+<indexterm><primary>AirControl.IP_Airplane_ThrottleLever</primary></indexterm>
+Inheritance diagram for AirControl.IP_Airplane_ThrottleLever:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1IP__Airplane__ThrottleLever__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.IP_Airplane_ThrottleLever:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1IP__Airplane__ThrottleLever__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__ThrottleLever_1a854d8718e2b1a5b258dbe3ad148a86b5"/>void <emphasis role="strong">HandleAirplaneUI</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__ThrottleLever_1a50486bd99eca7a628fa39a59be579745"/><link linkend="_classAirControl_1_1AC__BaseAirplane__Input">AC_BaseAirplane_Input</link> <emphasis role="strong">input</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__ThrottleLever_1a7fce612742862217890888c922837e6b"/>RectTransform <emphasis role="strong">parentRect</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__ThrottleLever_1a5d7cf0a9386ad50a19f66c53c63218ef"/>RectTransform <emphasis role="strong">handleRect</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__ThrottleLever_1a568d13e04953a05f127051507d5af4f9"/>float <emphasis role="strong">handleSpeed</emphasis> = 2f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/UI/Instruments/AC_Airplane_ThrottleLever.cs</section>

@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__Airplane__GroundEffect">
+<title>AirControl.AC_Airplane_GroundEffect Class Reference</title>
+<indexterm><primary>AirControl.AC_Airplane_GroundEffect</primary></indexterm>
+Inheritance diagram for AirControl.AC_Airplane_GroundEffect:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__GroundEffect__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_Airplane_GroundEffect:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__GroundEffect__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__GroundEffect_1aac696852d9efe32ab2465f3d10211ab1"/>float <emphasis role="strong">groundDistance</emphasis> = 3f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__GroundEffect_1a546b6ae46b30cb1c907b5260301e8e20"/>float <emphasis role="strong">liftForce</emphasis> = 20f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__GroundEffect_1a1e5c61cd268789015bf213b64c416fec"/>float <emphasis role="strong">maxSpeed</emphasis> = 15f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__GroundEffect_1ae4b18e4e4a6d6d78dee4a284befae91f"/>virtual void <emphasis role="strong">HandleGroundEffect</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Features/AC_Airplane_GroundEffect.cs</section>

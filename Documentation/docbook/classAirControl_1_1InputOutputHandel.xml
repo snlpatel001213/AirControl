@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1InputOutputHandel">
+<title>AirControl.InputOutputHandel Class Reference</title>
+<indexterm><primary>AirControl.InputOutputHandel</primary></indexterm>
+<simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structAirControl_1_1InputOutputHandel_1_1inputStructure">inputStructure</link></para>
+</listitem>
+            <listitem><para>struct <link linkend="_structAirControl_1_1InputOutputHandel_1_1outputStructure">outputStructure</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1InputOutputHandel_1a1c423a4ce07c028e0624ffe5894f8286"/>void <emphasis role="strong">ParseInput</emphasis> (string receivedString)</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1InputOutputHandel_1a810c69b2cf84368c142ee10ca32cecec"/>string <emphasis role="strong">ParseOutput</emphasis> (<link linkend="_classAirControl_1_1AC__BaseAirplane__Input">AC_BaseAirplane_Input</link> currentReadings)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Networking/Server/InputOutputHandel.cs</section>

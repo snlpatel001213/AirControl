@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__Airplane__Wheel">
+<title>AirControl.AC_Airplane_Wheel Class Reference</title>
+<indexterm><primary>AirControl.AC_Airplane_Wheel</primary></indexterm>
+Inheritance diagram for AirControl.AC_Airplane_Wheel:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Wheel__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_Airplane_Wheel:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Wheel__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Wheel_1a6488dff41e3e90d5d219438fb85e9d51"/>void <emphasis role="strong">initWheel</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Wheel_1aa484b1c1f6485fa04caea405bf2521f4"/>void <emphasis role="strong">HandleWheel</emphasis> (<link linkend="_classAirControl_1_1AC__BaseAirplane__Input">AC_BaseAirplane_Input</link> input)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Wheel_1a9acc6c783f8c819f301f5e298fcd9f98"/>Transform <emphasis role="strong">wheelGraphic</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Wheel_1a923064d989d429d4958a7b4579c347b0"/>bool <emphasis role="strong">isBraking</emphasis> =false</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Wheel_1a05a726bdaa5d9dad66b53cc4b54bdcbe"/>float <emphasis role="strong">brakePower</emphasis> = 500f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Wheel_1ad630a287907a2c334502271c9c390248"/>bool <emphasis role="strong">isSteering</emphasis> =false</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Wheel_1a728aa87d98f1634357fedb8a21a2c96a"/>float <emphasis role="strong">steerAngle</emphasis> =20f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Wheels/AC_Airplane_Wheel.cs</section>
