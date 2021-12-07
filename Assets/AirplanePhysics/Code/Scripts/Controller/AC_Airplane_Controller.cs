@@ -32,10 +32,29 @@ namespace AirControl
         [Tooltip("Initialize wheel colliders and set it in  airplane body at the place of wheel. Add AC_Airplane_Wheel script to that object. Hook those wheels object here")]
         public List<AC_Airplane_Wheel> wheels =  new List<AC_Airplane_Wheel>();
         
+        [Header("Control Surfaces")]
+        [Tooltip("Initialize empty control surfaces. Add AC_Airplane_ControlSurface script to that object. Hook wheels object here")]
+        public List<AC_Airplane_ControlSurface> controlSurfaces = new List<AC_Airplane_ControlSurface>();
+        
+        // Meadian sea level
+        private float currentMSL;
+        // Above Ground Level
+        private float currentAGL;
+        #endregion
+
+        #region Properties
+        public float CurrentMSL{
+            get{return currentMSL;}
+        }
+        public float CurrentAGL{
+            get{return currentAGL;}
+        }
+
         #endregion
 
         #region Constants
         const float poundToKilos = 0.453592f;
+        const float metersToFeets = 3.28084f;
         #endregion
 
         #region Builtin Methods
@@ -74,40 +93,68 @@ namespace AirControl
         #region Custom Methods
         protected override void HandlePhysics()
         {
-            if(input){
+            if(input)
+            {
                 HandleEngines();
                 HandleCharacteristics();
-                HandleSteering();
-                HandleBrakes();
+                HandleControlSurfaces();
+                HandleWheel();
                 HandleAltitude();
             }// handle else
             
         }
 
-        void HandleEngines(){
-            if(engines != null){
-                if(engines.Count > 0 ){
-                    foreach(AC_Airplane_Engine engine in engines){
+        void HandleEngines()
+        {
+            if(engines != null)
+            {
+                if(engines.Count > 0 )
+                {
+                    foreach(AC_Airplane_Engine engine in engines)
+                    {
                         rb.AddForce(engine.CalculateForce(input.StickyThrottle));
                     }
                 }
             }
 
         }
-        void HandleCharacteristics(){
-            if (characteristics){
+        void HandleCharacteristics()
+        {
+            if (characteristics)
+            {
                 characteristics.UpdateCharacteristics();
             }
             
         }
-        void HandleSteering(){
-
+        void HandleControlSurfaces()
+        {
+            if(controlSurfaces.Count > 0)
+            {
+                foreach (AC_Airplane_ControlSurface controlSurface in controlSurfaces){
+                    controlSurface.HandleControlSurface(input);
+                }
+            }
         }
-        void HandleBrakes(){
+        void HandleWheel(){
+            if (wheels.Count>0)
+            {
+                foreach (AC_Airplane_Wheel wheel in wheels)
+                {
+                    wheel.HandleWheel(input);
+                }
+            }
 
         }
         void HandleAltitude(){
-
+            currentMSL  =  transform.position.y * metersToFeets;
+            RaycastHit hit;
+            if(Physics.Raycast(transform.position, Vector3.down, out hit))
+            {
+                if(hit.transform.tag == "ground" || hit.transform.tag == "building")
+                {
+                    currentAGL = (hit.distance) *metersToFeets;
+                }
+            }
         }
         #endregion
     }

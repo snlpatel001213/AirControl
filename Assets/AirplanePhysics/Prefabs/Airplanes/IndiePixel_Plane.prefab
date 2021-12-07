@@ -753,7 +753,7 @@ GameObject:
   - component: {fileID: 5930656164026729521}
   - component: {fileID: 5985368005805970665}
   m_Layer: 0
-  m_Name: IndiePixel_Airplane
+  m_Name: Airplane
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2405,7 +2405,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 8012879981194708693, guid: 9e3ccb40f1bee6fb5bcc056137d6aef7, type: 3}
       propertyPath: m_Name
-      value: IndiePixel_Airplane
+      value: Airplane
       objectReference: {fileID: 0}
     - target: {fileID: 8015202976662872037, guid: 9e3ccb40f1bee6fb5bcc056137d6aef7, type: 3}
       propertyPath: m_RootOrder

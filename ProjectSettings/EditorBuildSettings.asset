@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
+  - enabled: 1
+    path: Assets/AirplanePhysics/Scenes/AirplanePhysics_Dev.unity
+    guid: 8c7e87c8175cc9b59bc16af3b39e56d0
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: be7517225352ea2eca267b955b06308b, type: 2}

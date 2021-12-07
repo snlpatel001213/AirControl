@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1IP__Airplane__FlapLever">
+<title>AirControl.IP_Airplane_FlapLever Class Reference</title>
+<indexterm><primary>AirControl.IP_Airplane_FlapLever</primary></indexterm>
+Inheritance diagram for AirControl.IP_Airplane_FlapLever:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1IP__Airplane__FlapLever__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.IP_Airplane_FlapLever:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1IP__Airplane__FlapLever__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FlapLever_1a355cb7f8910582d2a53ce6e4484c9fb3"/>void <emphasis role="strong">HandleAirplaneUI</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FlapLever_1af5fa56072891ef77504a018f68501ead"/><link linkend="_classAirControl_1_1AC__BaseAirplane__Input">AC_BaseAirplane_Input</link> <emphasis role="strong">input</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FlapLever_1a663244e919d024a8e8f42d9f904fe9e4"/>RectTransform <emphasis role="strong">parentRect</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FlapLever_1a51db8af0c708f28070d2679e63d9f894"/>RectTransform <emphasis role="strong">handleRect</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FlapLever_1a278393e05a72d5c47fa972e98c8f6347"/>float <emphasis role="strong">handleSpeed</emphasis> = 2f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/UI/Instruments/AC_Airplane_FlapLever.cs</section>

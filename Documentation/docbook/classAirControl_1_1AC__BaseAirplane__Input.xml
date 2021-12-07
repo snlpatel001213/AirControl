@@ -1,0 +1,91 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__BaseAirplane__Input">
+<title>AirControl.AC_BaseAirplane_Input Class Reference</title>
+<indexterm><primary>AirControl.AC_BaseAirplane_Input</primary></indexterm>
+Inheritance diagram for AirControl.AC_BaseAirplane_Input:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__BaseAirplane__Input__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_BaseAirplane_Input:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__BaseAirplane__Input__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a13ad113359881bde74cd39d0c9c45d0a"/>int <emphasis role="strong">maxFlapIncrements</emphasis> =2</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a619c4a6a0edaf53f4dd7fe4afd45148f"/>float <emphasis role="strong">throttleSpeed</emphasis> = 0.5f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a11051fe1627e915ee5e2be703c880904"/>virtual void <emphasis role="strong">HandleInput</emphasis> ()</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a2b880c1486afc1588c6e9d2057b3cba0"/>void <emphasis role="strong">ClampInputs</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Protected Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a70a642fbfb1709c0e964600214cf3f11"/>float <emphasis role="strong">pitch</emphasis> = 0f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a234d847b4593255add50f206e7e2ffa0"/>float <emphasis role="strong">roll</emphasis> = 0f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1ab03dad02dcea9b3a877e8410ddb48077"/>float <emphasis role="strong">yaw</emphasis> = 0f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a8ed736580932db519c713c0bff5c9931"/>float <emphasis role="strong">throttle</emphasis> = 0f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a439ac565b5f91277a328efeed7be840c"/>float <emphasis role="strong">brake</emphasis> = 0f</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1ae0eab120cdd214b8380f54925d340c3d"/>int <emphasis role="strong">flaps</emphasis> = 0</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a5da52f331f4d442a41be025b17d78ea1"/>float <emphasis role="strong">stickyThrottle</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Properties    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a438a5f5a16b5cb0610e8bf8681a6ab93"/>float <emphasis role="strong">Pitch</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a83800b36e3ba1ac2fe6f85da61083575"/>float <emphasis role="strong">Roll</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1af6d69a0f4cff0836813284ee42dbe094"/>float <emphasis role="strong">Yaw</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a59febaac24010d125bfbdd20f9fe1d5c"/>float <emphasis role="strong">Throttle</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1aa3fec8b5e5f9e424a10afe447e5ed5b7"/>int <emphasis role="strong">Flaps</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a42c334e3c7907d7d63ec6c28d4e8f7eb"/>float <emphasis role="strong">NormalizedFlaps</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a3306d5b9a7948893599008705456f6a7"/>float <emphasis role="strong">Brake</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__BaseAirplane__Input_1a966053b1b5397b1788c309ea1d1e6a86"/>float <emphasis role="strong">StickyThrottle</emphasis><computeroutput> [get]</computeroutput>
+</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Input/AC_BaseAirplane_Input.cs</section>

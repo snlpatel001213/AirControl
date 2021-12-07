@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1IP__Airplane__FuelGauge">
+<title>AirControl.IP_Airplane_FuelGauge Class Reference</title>
+<indexterm><primary>AirControl.IP_Airplane_FuelGauge</primary></indexterm>
+Inheritance diagram for AirControl.IP_Airplane_FuelGauge:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1IP__Airplane__FuelGauge__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.IP_Airplane_FuelGauge:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1IP__Airplane__FuelGauge__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FuelGauge_1a6de3f9d0a03f0e900750ce0377879ea0"/>void <emphasis role="strong">HandleAirplaneUI</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FuelGauge_1aca1911f92e93c54774999096c8f4b257"/><link linkend="_classAirControl_1_1AC__Airplane__Fuel">AC_Airplane_Fuel</link> <emphasis role="strong">fuel</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FuelGauge_1ae909a3318b9056fc391e0d405b170a05"/>RectTransform <emphasis role="strong">pointer</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1IP__Airplane__FuelGauge_1a137e8fcaa86460407f9385a43c28b23d"/>Vector2 <emphasis role="strong">minMaxRotation</emphasis> = new Vector2(-90f, 90f)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/UI/Instruments/AC_Airplane_FuelGauge.cs</section>

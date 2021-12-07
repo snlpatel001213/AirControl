@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_classAirControl_1_1AC__Airplane__Airspeed">
+<title>AirControl.AC_Airplane_Airspeed Class Reference</title>
+<indexterm><primary>AirControl.AC_Airplane_Airspeed</primary></indexterm>
+Inheritance diagram for AirControl.AC_Airplane_Airspeed:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Airspeed__inherit__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+Collaboration diagram for AirControl.AC_Airplane_Airspeed:<para>
+    <informalfigure>
+        <mediaobject>
+            <imageobject>
+                <imagedata width="50%" align="center" valign="middle" scalefit="0" fileref="classAirControl_1_1AC__Airplane__Airspeed__coll__graph.png"></imagedata>
+            </imageobject>
+        </mediaobject>
+    </informalfigure>
+</para>
+<simplesect>
+    <title>Public Member Functions    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Airspeed_1a1c1a7f4562dd0d096615f0f61e057261"/>void <emphasis role="strong">HandleAirplaneUI</emphasis> ()</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Airspeed_1abd24d02ce6fe98a7cb3d906be0e00cc0"/><link linkend="_classAirControl_1_1AC__Airplane__Characteristics">AC_Airplane_Characteristics</link> <emphasis role="strong">characteristics</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Airspeed_1a9d1b3783be049f4f12a1c0fae535215f"/>RectTransform <emphasis role="strong">pointer</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Airspeed_1aecea0d409d045d0ba257bc84ca451d29"/>float <emphasis role="strong">maxIndicatedKnots</emphasis> = 160f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Static Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_classAirControl_1_1AC__Airplane__Airspeed_1a3402cdc84ac51cbf863390e15aea2904"/>const float <emphasis role="strong">mphToKnts</emphasis> = 0.868976f</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this class was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/UI/Instruments/AC_Airplane_Airspeed.cs</section>

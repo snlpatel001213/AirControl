@@ -1,0 +1,24 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structAirControl_1_1InputOutputHandel_1_1inputStructure">
+<title>AirControl.InputOutputHandel.inputStructure Struct Reference</title>
+<indexterm><primary>AirControl.InputOutputHandel.inputStructure</primary></indexterm>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para><anchor xml:id="_structAirControl_1_1InputOutputHandel_1_1inputStructure_1aa5dfe8e8fbf23a4d6421025a557ad431"/>float <emphasis role="strong">pitch</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structAirControl_1_1InputOutputHandel_1_1inputStructure_1a426198451de398cd66b2b782efd6887a"/>float <emphasis role="strong">roll</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structAirControl_1_1InputOutputHandel_1_1inputStructure_1adf5fdf2b3b1ac2e586a05be6096b3a46"/>float <emphasis role="strong">yaw</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structAirControl_1_1InputOutputHandel_1_1inputStructure_1a23873fec7365c83e41609d8b5ba7f1b1"/>float <emphasis role="strong">throttle</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structAirControl_1_1InputOutputHandel_1_1inputStructure_1ac67e71c6de9a2120824af85aa5223ccf"/>float <emphasis role="strong">brake</emphasis></para>
+</listitem>
+            <listitem><para><anchor xml:id="_structAirControl_1_1InputOutputHandel_1_1inputStructure_1a6ef6f03987c34bcd5e83da93365139ff"/>int <emphasis role="strong">flaps</emphasis></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<para>
+The documentation for this struct was generated from the following file:</para>
+/home/supatel/Documents/AirControl/Assets/AirplanePhysics/Code/Scripts/Networking/Server/InputOutputHandel.cs</section>

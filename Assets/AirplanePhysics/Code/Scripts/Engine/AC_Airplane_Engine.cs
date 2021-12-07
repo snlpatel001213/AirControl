@@ -8,8 +8,8 @@ namespace AirControl
     {
          #region Variables
         [Header("Engine Properties")]
-        public float maxForce = 200f;
-        private float maxRPM = 2500f;
+        public float maxForce = 3000f;
+        public float maxRPM = 3000f;
         public float shutOffSpeed = 2f;
         public AnimationCurve powerCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
@@ -23,9 +23,6 @@ namespace AirControl
 
         // private AC_Airplane_Fuel fuel;
         #endregion
-
-
-
 
         #region Properties
         public bool ShutEngineOff
