@@ -23,6 +23,15 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "AirControl", "index.html", [
+    [ "Welcome to Aircontrol", "index.html", [
+      [ "Demo", "index.html#autotoc_md1", null ],
+      [ "Getting started", "index.html#autotoc_md2", null ],
+      [ "Documentation", "index.html#autotoc_md3", null ],
+      [ "Research Inspirations", "index.html#autotoc_md4", [
+        [ "Feel free to list your research topic you love to work on over here. Collaborate and publish.", "index.html#autotoc_md5", null ]
+      ] ],
+      [ "Contribute", "index.html#autotoc_md6", null ]
+    ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
