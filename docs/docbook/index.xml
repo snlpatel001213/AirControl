@@ -4,6 +4,10 @@
     <title>AirControl</title>
     </info>
 <chapter>
+    <title>Welcome to Aircontrol</title>
+    <xi:include href="mainpage.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</chapter>
+<chapter>
     <title>Namespace Documentation</title>
 <xi:include href="namespaceAirControl.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
 </chapter>

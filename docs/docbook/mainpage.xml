@@ -1,0 +1,85 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<chapter xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_mainpage">
+
+<para><emphasis role="bold"><link linkend="_namespaceAirControl">AirControl</link> is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.</emphasis> Airsim offers a realistic simulation experience with a variety of airplanes. The Airsim is built on <link xlink:href="https://unity.com">Unity Game engine</link>. Following are the salient features of the Aircontrol:</para>
+
+<para><itemizedlist>
+<listitem>
+<para>Built with <emphasis role="bold">C#</emphasis>, it has <emphasis role="bold">Python</emphasis> API to control it from your favorite Deep learning Framework.</para>
+</listitem><listitem>
+<para>Complete source code is open on Github.</para>
+</listitem><listitem>
+<para>Aircontrol takes full advantage of object-oriented programming. Developed fully modular from day one. You can easily introduce new features such as <emphasis role="bold">vertical takeoff</emphasis>. you can bring your own <emphasis role="bold">alien plane to AirCotrol</emphasis>.</para>
+</listitem><listitem>
+<para><link linkend="_namespaceAirControl">AirControl</link> is truly cross-platform, can be compiled on Linux, macOS, and Windows. Binary will be released for all the platforms.</para>
+</listitem><listitem>
+<para>The <link linkend="_namespaceAirControl">AirControl</link> uses Nvidia <link xlink:href="https://en.wikipedia.org/wiki/PhysX">Physx</link> for the best possible Newtonian physics simulation.</para>
+</listitem><listitem>
+<para>Aircontrol allows users to take advantage of aerodynamics effects such as <link xlink:href="https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)">Ground effect</link>.</para>
+</listitem><listitem>
+<para>All the control surfaces (Throttle, Rudder, Ailerons, and Flaps) accepts normalized input between -1 and 1. This makes Aircontrol even more friendly with AI.</para>
+</listitem></itemizedlist>
+</para>
+<section xml:id="_index_1autotoc_md1">
+<title>Demo</title>
+</section>
+<section xml:id="_index_1autotoc_md2">
+<title>Getting started</title>
+
+<para><orderedlist>
+<listitem>
+<para>Windows<orderedlist>
+<listitem>
+<para>Download Binaries - <link xlink:href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</link></para>
+</listitem><listitem>
+<para>Build it</para>
+</listitem></orderedlist>
+</para>
+</listitem><listitem>
+<para>Linux<orderedlist>
+<listitem>
+<para>Download Binaries - <link xlink:href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</link></para>
+</listitem><listitem>
+<para>Build it</para>
+</listitem></orderedlist>
+</para>
+</listitem><listitem>
+<para>macOS<orderedlist>
+<listitem>
+<para>Download Binaries - <link xlink:href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</link></para>
+</listitem><listitem>
+<para>Build it</para>
+</listitem></orderedlist>
+</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md3">
+<title>Documentation</title>
+
+<para><orderedlist>
+<listitem>
+<para>API Documentation - <link xlink:href="https://snlpatel001213.github.io/AirControl/html/index.html">https://snlpatel001213.github.io/AirControl/html/index.html</link></para>
+</listitem><listitem>
+<para>Usage Documentation -</para>
+</listitem></orderedlist>
+</para>
+</section>
+<section xml:id="_index_1autotoc_md4">
+<title>Research Inspirations</title>
+<section xml:id="_index_1autotoc_md5">
+<title>Feel free to list your research topic you love to work on over here. Collaborate and publish.</title>
+
+<para><orderedlist>
+<listitem>
+<para>On January 15, 2009, US Airways Flight 1549, an Airbus A320 on a flight from New York City&apos;s LaGuardia Airport to Charlotte, North Carolina, struck a flock of birds shortly after take-off, losing all engine power. Unable to reach any airport for an emergency landing due to their low altitude, pilots Chesley &quot;Sully&quot; Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan. <emphasis role="bold">Well! Sully did the best but Could we have a different outcome, If Reinforcement learning was controlling this plane?</emphasis>. <link xlink:href="https://en.wikipedia.org/wiki/US_Airways_Flight_1549">Reference</link></para>
+</listitem></orderedlist>
+</para>
+</section>
+</section>
+<section xml:id="_index_1autotoc_md6">
+<title>Contribute</title>
+
+<para>If you are keen to contribute to Aircontrol, refer to the contribution guide. </para>
+</section>
+</chapter>
