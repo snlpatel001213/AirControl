@@ -65,7 +65,7 @@ namespace AirControl
             float currentBurn = ((fuelBurnRate * aPrecentage) / 3600f) * Time.deltaTime;
             currentFuel -= currentBurn;
             currentFuel = Mathf.Clamp(currentFuel, 0f, fuelCapacity);
-            Debug.Log("currentFuel   -- "+currentFuel);
+            // Debug.Log("currentFuel   -- "+currentFuel);
 
             normalizeFuel = currentFuel / fuelCapacity;
         }

@@ -55,8 +55,8 @@ namespace AirControl{
                 else
                 {
                     //cutting off audio when engine cutoff
-                    fullThrottleSource.volume -= fullThrottleSource.volume * 0.005f;
-                    idleSource.volume -=  idleSource.volume * 0.005f;
+                    fullThrottleSource.volume -= fullThrottleSource.volume * fadeVolumeRate;
+                    idleSource.volume -=  idleSource.volume * fadeVolumeRate;
                 }
                 
             }
