@@ -43,6 +43,9 @@ namespace AirControl
             }
             flaps =   Mathf.Clamp(flaps, 0,maxFlapIncrements);
 
+            // camera swith button
+            // camerSwitch =  Input.GetButtonDown("X_Y_Button") || Input.GetKeyDown(cameraKey);
+
         }
         #endregion
 

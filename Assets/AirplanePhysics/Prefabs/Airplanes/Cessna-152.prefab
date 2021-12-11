@@ -16,7 +16,6 @@ GameObject:
   - component: {fileID: 152136542231531067}
   - component: {fileID: 152136542231531076}
   - component: {fileID: 152136542231531079}
-  - component: {fileID: 152136542231531078}
   m_Layer: 0
   m_Name: Cessna-152
   m_TagString: Untagged
@@ -298,21 +297,6 @@ MonoBehaviour:
   groundDistance: 3
   liftForce: 50
   maxSpeed: 15
---- !u!114 &152136542231531078
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 152136542231531070}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e9e2e7dde066bf0b83843cb3fdc2c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 152136542231531064}
-  idleSource: {fileID: 605216745905441723}
-  fullThrottleSource: {fileID: 605216745124453596}
 --- !u!1 &603483572810328968
 GameObject:
   m_ObjectHideFlags: 0
@@ -2210,7 +2194,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 605216744122752786}
-  - component: {fileID: 605216744122752797}
   - component: {fileID: 605216744122752796}
   m_Layer: 0
   m_Name: Audio_GRP
@@ -2235,21 +2218,6 @@ Transform:
   m_Father: {fileID: 6748729620254348532}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &605216744122752797
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 605216744122752787}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 69e9e2e7dde066bf0b83843cb3fdc2c2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  input: {fileID: 605216744122752796}
-  idleSource: {fileID: 605216745905441723}
-  fullThrottleSource: {fileID: 605216745124453596}
 --- !u!114 &605216744122752796
 MonoBehaviour:
   m_ObjectHideFlags: 0
