@@ -10,21 +10,22 @@ namespace AirControl
         [Header("Engine Properties")]
         public float maxForce = 3000f;
         public float maxRPM = 3000f;
-        public float shutOffSpeed = 2f;
+        
         public AnimationCurve powerCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
 
         [Header("Propellers")]
         public AC_Airplane_Propeller propeller;
 
-
+        private float shutOffSpeed = 2f; // engine slowdone rate on shutoff
         private bool isShutOff = false;
         private float lastThrottleValue;
         private float finalShutoffThrottleValue;
 
-        // private AC_Airplane_Fuel fuel;
+        private AC_Airplane_Fuel fuel;
         #endregion
 
         #region Properties
+        // property that listens to the engine shutoff script events
         public bool ShutEngineOff
         {
             set{isShutOff = value;}
@@ -42,19 +43,16 @@ namespace AirControl
         #region BuiltIn Methods
         void Start()
         {
-            // if(!fuel)
-            // {
-            //     fuel = GetComponent<IP_Airplane_Fuel>();
-            //     if(fuel)
-            //     {
-            //         fuel.InitFuel();
-            //     }
-            // }
+            if(!fuel)
+            {
+                fuel = GetComponent<AC_Airplane_Fuel>();
+                if(fuel)
+                {
+                    fuel.InitFuel();
+                }
+            }
         }
         #endregion
-
-
-
 
         #region Custom Methods
         public Vector3 CalculateForce(float throttle)
@@ -66,6 +64,7 @@ namespace AirControl
             if(!isShutOff)
             {
                 finalThrottle = powerCurve.Evaluate(finalThrottle);
+                //keep eye on last throttle value, In case of engine cutoff we can use this value to slowly decrease the engine power
                 lastThrottleValue = finalThrottle;
             }
             else
@@ -84,8 +83,8 @@ namespace AirControl
             }
 
 
-            //Process the Fuel
-            // HandleFuel(finalThrottle);
+            // Process the Fuel
+            HandleFuel(finalThrottle);
 
 
             //Create Force
@@ -97,18 +96,18 @@ namespace AirControl
         }
 
 
-        // void HandleFuel(float throttleValue)
-        // {
-        //     //Handle Fuel
-        //     if(fuel)
-        //     {
-        //         fuel.UpdateFuel(throttleValue);
-        //         if(fuel.CurrentFuel <= 0f)
-        //         {
-        //             isShutOff = false;
-        //         }
-        //     }
-        // }
+        void HandleFuel(float throttleValue)
+        {
+            //Handle Fuel
+            if(fuel)
+            {
+                fuel.UpdateFuel(throttleValue);
+                if(fuel.CurrentFuel <= 0f)
+                {
+                    isShutOff = false;
+                }
+            }
+        }
         #endregion
 
     }

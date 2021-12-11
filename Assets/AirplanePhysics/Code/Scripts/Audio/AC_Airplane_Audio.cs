@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+
 namespace AirControl{
     public class AC_Airplane_Audio : MonoBehaviour
     {
@@ -15,7 +16,19 @@ namespace AirControl{
         private float maxPitchValue = 1.5f;
 
         private float fullVolumeValue;
+        private bool isShutOff = false;
         private float finalPitchValue;
+        // Decrease the volume gradually when engine cutoff;
+        private float fadeVolumeRate = 0.005f;
+        #endregion
+
+        #region Propeties
+        // property that listens to the engine shutoff script events
+        public bool ShutEngineOff
+        {
+            set{isShutOff = value;}
+        }
+        
         #endregion
 
         #region Builtin Methods
@@ -35,7 +48,17 @@ namespace AirControl{
         {
             if(input)
             {
-                HandleAudio();
+                if(!isShutOff)
+                {
+                    HandleAudio();
+                }
+                else
+                {
+                    //cutting off audio when engine cutoff
+                    fullThrottleSource.volume -= fullThrottleSource.volume * 0.005f;
+                    idleSource.volume -=  idleSource.volume * 0.005f;
+                }
+                
             }
         }
         #endregion
@@ -50,6 +73,8 @@ namespace AirControl{
                 fullThrottleSource.volume = fullVolumeValue;
                 fullThrottleSource.pitch = finalPitchValue;
             }
+            
+
         }
         #endregion
     }
