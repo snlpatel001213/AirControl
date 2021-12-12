@@ -31,7 +31,7 @@ namespace AirControl
 		[Tooltip("Drag and drop here the  AC_BaseAirplane_Input.cs OR AC_XboxAirplane_Input.cs")]
 		public AC_BaseAirplane_Input currentReadings;
 
-		private InputOutputHandel InOutManager =  new InputOutputHandel();
+		private InputOutputHandle InOutManager =  new InputOutputHandle();
 		#endregion 	
 		
 		#region  Default Methods

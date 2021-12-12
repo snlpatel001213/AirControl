@@ -1,10 +1,17 @@
 import socket
 import time
+import json
 host, port =  "127.0.0.1" , 8052
 sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 sock.connect((host,port))
-for i in range(0,10):
-    data = '{"pitch":1.245,"roll":0.0,"yaw":5555,"throttle":0.0,"brake":0.0,"flaps":0}'
+for i in range(0,1):
+    dict_ = { "type" : "Camera",
+        "InputDataStruct":{"pitch":1.245,"roll":0.0,"yaw":5555,"throttle":0.0,"brake":0.0,"flaps":0},
+        "Camera":{"active":1},
+        "Init":{},
+    }
+
+    data = json.dumps(dict_)
     try:
         
         sock.sendall(data.encode("utf-8"))
