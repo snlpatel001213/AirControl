@@ -10,7 +10,7 @@ namespace AirControl
         [Header("Camera Controller Properties")]
         public AC_BaseAirplane_Input input;
         public List<Camera> cameras = new List<Camera>();
-
+        public int startCameraIndex = 0;
         private int curentCameraIndex=0;
 
         #endregion
@@ -19,7 +19,12 @@ namespace AirControl
         // Start is called before the first frame update
         void Start()
         {
-            
+            if (startCameraIndex >=0 && startCameraIndex < cameras.Count)
+            {
+                DisableAllCameras();
+                cameras[startCameraIndex].enabled = true;
+                cameras[startCameraIndex].GetComponent<AudioListener>().enabled = true;
+            }
         }
 
         // Update is called once per frame
@@ -36,13 +41,26 @@ namespace AirControl
         protected virtual void SwitchCamera()
         {
             // chnage the camera index as we chaneg the camera
-            cameras[curentCameraIndex].enabled = false;
+            DisableAllCameras();
             curentCameraIndex++;
             //circular index 
             if (curentCameraIndex >= cameras.Count){
                 curentCameraIndex = 0;
             }
             cameras[curentCameraIndex].enabled = true;
+            cameras[curentCameraIndex].GetComponent<AudioListener>().enabled = true;
+        }
+
+        void DisableAllCameras()
+        {
+            if(cameras.Count > 0)
+            {
+                foreach(Camera cam in cameras)
+                {
+                    cam.enabled = false;
+                    cam.GetComponent<AudioListener>().enabled = false;
+                }
+            }
         }
         #endregion
     }

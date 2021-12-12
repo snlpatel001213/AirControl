@@ -3,7 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace AirControl
-{
+{   
+    [RequireComponent(typeof(AC_Airplane_Propeller))]
+    [RequireComponent(typeof(AC_Airplane_Fuel))]
+    [RequireComponent(typeof(AC_Airplane_Audio))]
+    [RequireComponent(typeof(AC_BaseAirplane_Input))]
+    [RequireComponent(typeof(AC_XboxAirplane_Input))]
+    [RequireComponent(typeof(AC_Airplane_Audio))]
     public class AC_Airplane_Engine : MonoBehaviour
     {
          #region Variables

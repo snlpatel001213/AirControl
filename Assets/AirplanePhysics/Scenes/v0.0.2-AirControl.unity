@@ -917,6 +917,7 @@ MonoBehaviour:
   cameras:
   - {fileID: 1504063921}
   - {fileID: 1737466727}
+  startCameraIndex: 0
 --- !u!1 &328328709
 GameObject:
   m_ObjectHideFlags: 0
@@ -1362,6 +1363,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 525880058}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!82 &542205353 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 605216745905441723, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+  m_PrefabInstance: {fileID: 605216745383547909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &583229503
 GameObject:
   m_ObjectHideFlags: 0
@@ -1487,6 +1493,11 @@ Transform:
   m_Father: {fileID: 583229504}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!82 &804405185 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 605216745124453596, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+  m_PrefabInstance: {fileID: 605216745383547909}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &992229460
 GameObject:
   m_ObjectHideFlags: 0
@@ -2060,6 +2071,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1198e7ca3218d3458280310b41bc617, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1277489899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 605216744508794606, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+  m_PrefabInstance: {fileID: 605216745383547909}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1277489896}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be405153293f5ea12b8f2d0e557e9170, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &1277489902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2069,26 +2091,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 1277489896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a3cbf4f1c9355ddc0a9607313f27b7e8, type: 3}
+  m_Script: {fileID: 11500000, guid: 69e9e2e7dde066bf0b83843cb3fdc2c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuelCapacity: 26
-  fuelBurnRate: 6.1
-  onFuelFull:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 1277489898}
-        m_TargetAssemblyTypeName: AirControl.AC_Airplane_Engine, Assembly-CSharp
-        m_MethodName: set_ShutEngineOff
-        m_Mode: 6
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  input: {fileID: 1277489899}
+  idleSource: {fileID: 542205353}
+  fullThrottleSource: {fileID: 804405185}
 --- !u!1 &1383728948
 GameObject:
   m_ObjectHideFlags: 0
@@ -2796,7 +2804,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f367c4aeb347aa12b285a465a7a5584, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fuel: {fileID: 1277489902}
+  fuel: {fileID: 0}
   pointer: {fileID: 37746205}
   minMaxRotation: {x: -43, y: 43}
 --- !u!1 &1926694529
@@ -3169,13 +3177,69 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1383941250}
     m_Modifications:
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1277489898}
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: set_ShutEngineOff
+      objectReference: {fileID: 0}
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: AirControl.AC_Airplane_Engine, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -1032036830310864712, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: onFuelFull.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 152136542231531064, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 152136542231531066, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 152136542231531070, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: m_Name
       value: Cessna-152
       objectReference: {fileID: 0}
     - target: {fileID: 605216744508794600, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: input
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 605216744508794600, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: m_Enabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 605216744508794606, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 605216745430190991, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_Name
+      value: Airplane
+      objectReference: {fileID: 0}
+    - target: {fileID: 605216745665298893, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_Name
+      value: Control_Surfaces_GRP
       objectReference: {fileID: 0}
     - target: {fileID: 6748729620254348532, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: m_RootOrder

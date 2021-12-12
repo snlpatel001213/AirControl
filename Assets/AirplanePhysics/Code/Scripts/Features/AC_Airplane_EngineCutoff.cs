@@ -5,7 +5,7 @@ using UnityEngine.Events;
 
 namespace Aircontrol
 {
-    public class AC_airplane_EngineCutoff : MonoBehaviour
+    public class AC_Airplane_EngineCutoff : MonoBehaviour
     {
         // Start is called before the first frame update
         # region Variables
