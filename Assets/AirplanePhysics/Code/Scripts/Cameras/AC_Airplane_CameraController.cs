@@ -51,6 +51,15 @@ namespace AirControl
             cameras[curentCameraIndex].GetComponent<AudioListener>().enabled = true;
         }
 
+        public void selectCamera(int cameraId)
+        {
+            DisableAllCameras();
+            if (cameraId <= cameras.Count){
+                cameras[cameraId].enabled = true;
+                cameras[cameraId].GetComponent<AudioListener>().enabled = true;
+            }
+        }
+
         void DisableAllCameras()
         {
             if(cameras.Count > 0)

@@ -1,4 +1,4 @@
-using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
@@ -6,27 +6,23 @@ using Newtonsoft.Json.Linq;
 using  AirControl;
 namespace AirControl
 {
-    public class InputOutputHandle
+    public class InputOutputHandle:MonoBehaviour
     {
         #region Builtin Methods
-        // Update is called once per frame
-        // void Update()
-        // {
-        //     Outputhandel();
-        // }
         #endregion
 
         #region Custom Methods
         // receive msg to unity
         public void ParseInput(string receivedString)
         {
-            //parse input
+            // Parse input
+            
             var incoming =  JObject.Parse(receivedString);
-            Debug.Log("received string  : " +  incoming);
-            var vari_ = incoming["type"].ToString();
-            Debug.Log(incoming[vari_]);
-            // inStruct.(inStruct.type)
-            // call a fucntion to set this input to the rigid body 
+            Debug.Log("received string >>>>>>>>>>>> : " +  incoming);
+            var type = incoming["type"].ToString();
+            Debug.Log(">>>>>>>>>>>>>>>>>"+incoming[type]);
+            // camera_.selectCamera(Int32.Parse(incoming[type]["active"].ToString()));
+            
         }
 
         // send msg out of unity
@@ -52,4 +48,3 @@ namespace AirControl
 
     }
 }
-
