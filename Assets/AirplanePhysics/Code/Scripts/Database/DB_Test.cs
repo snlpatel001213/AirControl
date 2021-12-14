@@ -34,12 +34,16 @@ public class DB_Test : MonoBehaviour
     void Update()
     {
         DB_InputClassDefinitions temp = new DB_InputClassDefinitions{
-				direction = "outgoing",
-                date = DateTime.Now,
-				Name = "Sunil",
-				Surname = "Sivan",
-				Age = 27};
+				direction = "incoming",
+                // date = DateTime.Now,
+				ActiveCamera = 1,
+				// Surname = "Sivan",
+				// Age = 27
+                };
         _connection.InsertOrReplace(temp);
-
     }
+    public DB_InputClassDefinitions getcamera_status(SQLiteConnection _connection)
+    {
+        return _connection.Table<DB_InputClassDefinitions>().Where(x => x.direction == "incoming").FirstOrDefault();
+    } 
 }

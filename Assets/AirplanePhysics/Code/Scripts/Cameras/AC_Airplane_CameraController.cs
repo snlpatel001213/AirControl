@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SQLite4Unity3d;
+
 
 namespace AirControl
 {
@@ -9,6 +11,7 @@ namespace AirControl
         #region Variables
         [Header("Camera Controller Properties")]
         public AC_BaseAirplane_Input input;
+        public DB_Test DB;
         public List<Camera> cameras = new List<Camera>();
         public int startCameraIndex = 0;
         private int curentCameraIndex=0;
@@ -30,6 +33,14 @@ namespace AirControl
         // Update is called once per frame
         void Update()
         {
+            //switching camera as per the database
+            SQLiteConnection _connection = DB._connection;
+            DB_InputClassDefinitions x = DB.getcamera_status(_connection);
+            if (x.ActiveCamera != curentCameraIndex){
+                Debug.Log("Switched camera from DB");
+                selectCamera(x.ActiveCamera);
+            }
+
             if(input.CameraSwitch){
                 SwitchCamera();
 
@@ -54,9 +65,11 @@ namespace AirControl
         public void selectCamera(int cameraId)
         {
             DisableAllCameras();
+            
             if (cameraId <= cameras.Count){
                 cameras[cameraId].enabled = true;
                 cameras[cameraId].GetComponent<AudioListener>().enabled = true;
+                curentCameraIndex = cameraId;
             }
         }
 

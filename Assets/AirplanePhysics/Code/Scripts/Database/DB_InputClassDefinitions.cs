@@ -14,10 +14,10 @@ public class DB_InputClassDefinitions
 	/// <value></value>
     [PrimaryKey]
 	public string direction  { get; set; }
-    public DateTime date  { get; set; }
-	public string Name { get; set; }
-	public string Surname { get; set; }
-	public int Age { get; set; }
+    // public DateTime date  { get; set; }
+	public int ActiveCamera { get; set; }
+	// public string Surname { get; set; }
+	// public int Age { get; set; }
 
 }
 
