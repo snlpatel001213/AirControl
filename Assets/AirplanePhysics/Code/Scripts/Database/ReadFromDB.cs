@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine.UI;
 
-public class ExistingDBScript : MonoBehaviour {
+public class ReadFromDB : MonoBehaviour {
 
-	public Text DebugText;
+	// public Text DebugText;
 
 	// Use this for initialization
 	void Start () {
-		var ds = new DataService ("existing.db");
+		var ds = new DataService ("tempDatabase.sqlite");
 		//ds.CreateDB ();
 		var people = ds.GetPersons ();
 		ToConsole (people);
@@ -31,7 +31,7 @@ public class ExistingDBScript : MonoBehaviour {
 	}
 
 	private void ToConsole(string msg){
-		DebugText.text += System.Environment.NewLine + msg;
+		// DebugText.text += System.Environment.NewLine + msg;
 		Debug.Log (msg);
 	}
 

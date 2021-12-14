@@ -13,8 +13,9 @@ public class CreateDBScript : MonoBehaviour {
 
     private void StartSync()
     {
-        var ds = new DataService("tempDatabase.sqlite");
-        ds.CreateDB();
+        
+		var ds = new DataService("tempDatabase.sqlite");
+		ds.CreateDB();
         
         var people = ds.GetPersons ();
         ToConsole (people);
@@ -32,5 +33,8 @@ public class CreateDBScript : MonoBehaviour {
 	private void ToConsole(string msg){
 		// DebugText.text += System.Environment.NewLine + msg;
 		Debug.Log (msg);
+	}
+	void Update(){
+		
 	}
 }
