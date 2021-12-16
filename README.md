@@ -17,11 +17,14 @@
 
 # Demo
 
-*Current release version v0.0.3 is a pre-release to test the air stability and controls. Python integration is still in development.* 
-
-<iframe 
+*Current release version v0.0.3 is a pre-release to test the air stability and controls. Python integration is still in development.*
+  
+<p align="center">
+  <iframe   width="420" height="315"
 src="https://www.youtube.com/embed/Lhwb4UVulMs">
 </iframe>
+</p>
+
 
 # Control Inputs
 ![Keyboard Mappings](docs/images/keyboard-layout.png)
