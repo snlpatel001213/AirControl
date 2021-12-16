@@ -52,4 +52,4 @@ Feel free to list your research topic you love to work on over here. Collaborate
 # Contribute
 If you are keen to contribute to Aircontrol, refer to the contribution guide.
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id&left_color=green&right_color=red)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
