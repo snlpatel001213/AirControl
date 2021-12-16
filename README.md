@@ -17,22 +17,32 @@
 
 # Demo
 
+*Current release version v0.0.3 is a pre-release to test the air stability and controls. Python integration is still in development.* 
+
+[![AirControl Basic Demo](https://img.youtube.com/vi/Lhwb4UVulMs/0.jpg)](https://www.youtube.com/watch?v=Lhwb4UVulMs)
+
+# Control Inputs
+![Keyboard Mappings](docs/images/keyboard-layout.png)
 
 # Getting started
-1. Windows
+1. Windows - Not Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
-2. Linux
+2. Linux - Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
-3. macOS
+3. macOS - Not Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
 
 # Documentation
 
 1. API Documentation - https://snlpatel001213.github.io/AirControl/html/index.html
-2. Usage Documentation - 
+2. Usage Documentation - Yet ot be compiled
+
+# Release Goals
+
+Refer to the Project page for the future release, features and bug tracking : https://github.com/snlpatel001213/AirControl/projects/1
 
 # Research Inspirations
 Feel free to list your research topic you love to work on over here. Collaborate and publish.
