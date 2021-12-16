@@ -2,7 +2,7 @@
   <img src="docs/images/logo_original.png" height="200"/>
 </p>
 <BR>
-
+  
 # Welcome to Aircontrol
 
 **AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** Airsim offers a realistic simulation experience with a variety of airplanes. The Airsim is built on [Unity Game engine](https://unity.com). Following are the salient features of the Aircontrol:
@@ -52,3 +52,4 @@ Feel free to list your research topic you love to work on over here. Collaborate
 # Contribute
 If you are keen to contribute to Aircontrol, refer to the contribution guide.
 
+![visitors](https://visitor-badge.glitch.me/badge?page_id=page.id&left_color=green&right_color=red)
