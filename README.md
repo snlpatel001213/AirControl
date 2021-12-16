@@ -19,12 +19,7 @@
 
 *Current release version v0.0.3 is a pre-release to test the air stability and controls. Python integration is still in development.*
   
-<p align="center">
-  <iframe   width="420" height="315"
-src="https://www.youtube.com/embed/Lhwb4UVulMs">
-</iframe>
-</p>
-
+[![AirControl Basic Demo](https://img.youtube.com/vi/Lhwb4UVulMs/0.jpg)](https://www.youtube.com/watch?v=Lhwb4UVulMs){:target="_blank"}
 
 # Control Inputs
 ![Keyboard Mappings](docs/images/keyboard-layout.png)
