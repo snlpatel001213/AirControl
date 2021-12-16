@@ -25,11 +25,8 @@ namespace AirControl
             // Process pitch, roll, yaw and throttle
             pitch +=  Input.GetAxis("Vertical");
             roll +=  Input.GetAxis("Horizontal");
-            yaw +=  Input.GetAxis("Fire1");
-            // bool isGamepad = Input.GetAxis("Gamepad Fire") != 0f;
-            // if(isGamepad){
-            //     Debug.Log("Game pad fire detected");
-            // }
+            yaw +=  Input.GetAxis("X_RH_Stick");
+            
             throttle +=  Input.GetAxis("X_RV_Stick");
             // Process brakes bool
             brake =  Input.GetAxis("Fire1");
@@ -42,6 +39,9 @@ namespace AirControl
                 flaps-=1;
             }
             flaps =   Mathf.Clamp(flaps, 0,maxFlapIncrements);
+
+            // camera swith button
+            // camerSwitch =  Input.GetButtonDown("X_Y_Button") || Input.GetKeyDown(cameraKey);
 
         }
         #endregion

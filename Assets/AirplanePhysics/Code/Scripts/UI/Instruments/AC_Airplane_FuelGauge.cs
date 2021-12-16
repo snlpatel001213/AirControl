@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace AirControl
 {
-    public class IP_Airplane_FuelGauge : MonoBehaviour, IAirplaneUI 
+    public class AC_Airplane_FuelGauge : MonoBehaviour, IAirplaneUI 
     {
         #region Variables
         [Header("Fuel Guage Properties")]

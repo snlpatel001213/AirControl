@@ -27,15 +27,15 @@ namespace AirControl
                 //Handle UI Elements
                 if(bgRect)
                 {
-                    Quaternion bankRot = Quaternion.Euler(0f, 0f, bankAngle);
-                    bgRect.transform.rotation = bankRot;
+                    Quaternion bankRotation  = Quaternion.Euler(0f, 0f, bankAngle);
+                    bgRect.transform.rotation = bankRotation;
 
                     Vector3 wantedPosition = new Vector3(0f, -pitchAngle, 0f);
                     bgRect.anchoredPosition = wantedPosition;
 
                     if(arrowRect)
                     {
-                        arrowRect.transform.rotation = bankRot;
+                        arrowRect.transform.rotation = bankRotation;
                     }
                 }
 

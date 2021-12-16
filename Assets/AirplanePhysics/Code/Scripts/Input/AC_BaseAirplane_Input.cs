@@ -16,6 +16,10 @@ namespace  AirControl
         public int maxFlapIncrements=2; // maximum increment allowed to flaps
         protected int flaps = 0;
 
+        protected KeyCode cameraKey = KeyCode.C;
+        protected bool camerSwitch = false;
+        
+
         // Slowly move the throttle
         [Header("Sticky throttle value control how the throttle can be moved")]
         public float throttleSpeed = 0.5f;
@@ -50,6 +54,9 @@ namespace  AirControl
         }
         public float StickyThrottle {
             get{return stickyThrottle;}
+        }
+        public bool CameraSwitch{
+            get{return camerSwitch;}
         }
         #endregion
         
@@ -89,6 +96,9 @@ namespace  AirControl
                 flaps-=1;
             }
             flaps =   Mathf.Clamp(flaps, 0,maxFlapIncrements);
+
+            //camera switch key
+            camerSwitch = Input.GetKeyDown(cameraKey);
 
         }
 

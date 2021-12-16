@@ -1,0 +1,1 @@
+The DB design is inspired from https://github.com/codemaker2015/sqlite-unity-demo

@@ -5,14 +5,14 @@ using UnityEngine;
 
 namespace AirControl
 {
-    public class IP_Airplane_FlapLever : MonoBehaviour, IAirplaneUI
+    public class AC_Airplane_FlapLever : MonoBehaviour, IAirplaneUI
     {
         #region Variables
         [Header("Flap Lever Properties")]
         public AC_BaseAirplane_Input input;
         public RectTransform parentRect;
         public RectTransform handleRect;
-        public float handleSpeed = 2f;
+        private float handleSpeed = 2f;
         #endregion
 
 

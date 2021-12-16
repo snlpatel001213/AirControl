@@ -8,8 +8,14 @@ EditorBuildSettings:
   - enabled: 0
     path: 
     guid: 00000000000000000000000000000000
-  - enabled: 1
+  - enabled: 0
     path: Assets/AirplanePhysics/Scenes/AirplanePhysics_Dev.unity
     guid: 8c7e87c8175cc9b59bc16af3b39e56d0
+  - enabled: 0
+    path: Assets/AirplanePhysics/Scenes/v0.0.2-AirControl.unity
+    guid: e54379a42a7a15d83ab89d2e4ab58944
+  - enabled: 1
+    path: Assets/AirplanePhysics/Scenes/v0.0.3-AirControl.unity
+    guid: 262c6f3e53f0221c0af5900637a59757
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: be7517225352ea2eca267b955b06308b, type: 2}

@@ -6,3 +6,6 @@ https://jothepro.github.io/doxygen-awesome-css/index.html#autotoc_md8
 https://joeloskarsson.github.io/2018/automatic-docs
 https://snlpatel001213.github.io/AirControl/html/namespaceAirControl.html
 
+pip install sphinx
+sphinx-quickstart
+sphinx-quickstart

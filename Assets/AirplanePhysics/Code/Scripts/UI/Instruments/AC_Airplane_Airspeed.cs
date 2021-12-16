@@ -11,7 +11,7 @@ namespace AirControl
         [Header("Airspeed Indicator Properties")]
         public AC_Airplane_Characteristics characteristics;
         public RectTransform pointer;
-        public float maxIndicatedKnots = 160f;
+        public float maxIndicatedKnots = 200f;
         #endregion
 
 
