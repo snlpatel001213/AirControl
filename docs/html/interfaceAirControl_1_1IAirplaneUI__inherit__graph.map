@@ -3,8 +3,8 @@
 <area shape="rect" id="node2" href="$classAirControl_1_1AC__Airplane__Airspeed.html" title=" " alt="" coords="216,5,387,47"/>
 <area shape="rect" id="node3" href="$classAirControl_1_1AC__Airplane__Altimeter.html" title=" " alt="" coords="216,71,387,112"/>
 <area shape="rect" id="node4" href="$classAirControl_1_1AC__Airplane__Attitude.html" title=" " alt="" coords="216,136,387,177"/>
-<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__Tachometer.html" title=" " alt="" coords="216,201,387,243"/>
-<area shape="rect" id="node6" href="$classAirControl_1_1IP__Airplane__FlapLever.html" title=" " alt="" coords="219,267,383,308"/>
-<area shape="rect" id="node7" href="$classAirControl_1_1IP__Airplane__FuelGauge.html" title=" " alt="" coords="219,332,383,373"/>
-<area shape="rect" id="node8" href="$classAirControl_1_1IP__Airplane__ThrottleLever.html" title=" " alt="" coords="219,397,383,439"/>
+<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__FlapLever.html" title=" " alt="" coords="216,201,387,243"/>
+<area shape="rect" id="node6" href="$classAirControl_1_1AC__Airplane__FuelGauge.html" title=" " alt="" coords="216,267,387,308"/>
+<area shape="rect" id="node7" href="$classAirControl_1_1AC__Airplane__Tachometer.html" title=" " alt="" coords="216,332,387,373"/>
+<area shape="rect" id="node8" href="$classAirControl_1_1AC__Airplane__ThrottleLever.html" title=" " alt="" coords="216,397,387,439"/>
 </map>

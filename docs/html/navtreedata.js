@@ -32,6 +32,7 @@ var NAVTREE =
       ] ],
       [ "Contribute", "index.html#autotoc_md6", null ]
     ] ],
+    [ "reference", "md__home_supatel_Documents_AirControl_Assets_AirplanePhysics_Code_Scripts_Database_reference.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],
@@ -41,7 +42,8 @@ var NAVTREE =
       [ "Class Hierarchy", "hierarchy.html", "hierarchy" ],
       [ "Class Members", "functions.html", [
         [ "All", "functions.html", null ],
-        [ "Functions", "functions_func.html", null ]
+        [ "Functions", "functions_func.html", null ],
+        [ "Properties", "functions_prop.html", null ]
       ] ]
     ] ]
   ] ]
@@ -49,7 +51,8 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html"
+"annotated.html",
+"classSQLite4Unity3d_1_1SQLiteConnection.html#a128fbdb55d52ce57872c3aae9a9c473e"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
