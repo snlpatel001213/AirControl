@@ -2,7 +2,6 @@ using System.Collections;
 using SQLite4Unity3d;
 using System;
 using System.Collections.Generic;
-using UnityEngine;
 namespace SqliteDB
 {
 	public class DB_Schema 
@@ -14,32 +13,42 @@ namespace SqliteDB
 		/// </summary>
 		/// <value></value>
 		[PrimaryKey]
-		public string Direction  { get; set; }
+		public string Direction  { get; set; } = "Incoming";
 		// Which camera is active
-		public int ActiveCamera { get; set; }
-		// if sun is present 
-		public bool sunLocation { get; set; }
+		public int ActiveCamera { get; set; } = 0;
+		// if sun is present
+		public bool sunPresent  { get; set; } = true;
+		public float sunLocation_x { get; set; } = 0f;
+		public float sunLocation_y { get; set; } = 0f;
+		public float sunLocation_z { get; set; } = 0f;
+		public float sunRotation_x { get; set; } = 0f;
+		public float sunRotation_y { get; set; } = 0f;
+		public float sunRotation_z { get; set; } = 0f;
 		// Airplane weight - to simulate the effect of weight on airplane
-		public float AirplaneMass {get; set;}
-		// Airplane drag
-		public float AirplaneDrag {get; set;}
+		public float AirplaneMass {get; set;} = 1200f;
+		// Airplane drag 
+		public float AirplaneDrag {get; set;} = 0.01f;
 		// Airplane Angular Drag
-		public float AirplaneAngularDrag {get; set;}
+		public float AirplaneAngularDrag {get; set;} = 0.1f;
 		//Airplane collison
-		public bool AirplaneCollison {get; set;}
-
+		public bool AirplaneCollison {get; set;} = false;
+		//Airplane Properties 
+		public float AirplanemaxMPH {get; set;} = 150f;
+		//Airplane Properties 
+		public float maxLiftPower {get; set;} = 200f;
+		//Airplane Properties 
 		//Control Pitch
-		public float Pitch  {get; set;}
+		public float Pitch  {get; set;}=0f;
 		//Control Roll
-		public float Roll  {get; set;}
+		public float Roll  {get; set;} = 0f;
 		//Control Yaw
-		public float Yaw  {get; set;}
+		public float Yaw  {get; set;}=0f;
 		//Control Throttle
-		public float Throttle  {get; set;}
+		public float Throttle  {get; set;}=0f;
 		//Control Brake
-		public float Brake  {get; set;}
+		public float Brake  {get; set;}=0f;
 		//Control Flaps
-		public float Flaps  {get; set;}
+		public float Flaps  {get; set;}=0f;
 
 		public override string ToString ()
 		{

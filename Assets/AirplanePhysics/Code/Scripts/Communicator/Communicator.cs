@@ -71,8 +71,8 @@ namespace Communicator
 								string clientMessage = Encoding.ASCII.GetString(incommingData); 
 								InOutManager.ParseInput(clientMessage);							
 								// once received the message, send message in return
-								string outputmsg = InOutManager.ParseOutput(currentReadings);
-								SendMessage(outputmsg);				
+								// string outputmsg = InOutManager.ParseOutput(currentReadings);
+								// SendMessage(outputmsg);				
 							} 					
 						} 				
 					} 			

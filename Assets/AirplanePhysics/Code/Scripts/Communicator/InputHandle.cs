@@ -9,7 +9,7 @@ using SqliteDB;
 
 namespace Communicator
 {
-    [RequireComponent(typeof(DB_Init))]
+    
     public class InputHandle:MonoBehaviour
     {
         #region Builtin Methods
@@ -23,6 +23,7 @@ namespace Communicator
             // Parse input
             var incoming =  JObject.Parse(receivedString);
             int activeCamera = int.Parse(incoming["ActiveCamera"].ToString());
+            float stickyThrottle = float.Parse(incoming["stickyThrottle"].ToString());
             connection = DB_Init.GetConnection();
             connection.InsertOrReplace( new DB_Schema{
                 Direction = "Incoming",
@@ -33,23 +34,23 @@ namespace Communicator
 
         // send msg out of unity
         // this will be moved to outputHandle class
-        public string  ParseOutput(AC_BaseAirplane_Input currentReadings)
-        {
-            StructDef.OutputDataStructure outDataStruct;
-            // Put data to structure
-            outDataStruct.pitch = currentReadings.Pitch;
-            outDataStruct.roll = currentReadings.Roll;
-            outDataStruct.yaw = currentReadings.Yaw;
-            outDataStruct.throttle = currentReadings.Throttle;
-            outDataStruct.brake = currentReadings.Brake;
-            outDataStruct.flaps = currentReadings.Flaps;
+        // public string  ParseOutput(AC_BaseAirplane_Input currentReadings)
+        // {
+        //     StructDef.OutputDataStructure outDataStruct;
+        //     // Put data to structure
+        //     outDataStruct.pitch = currentReadings.Pitch;
+        //     outDataStruct.roll = currentReadings.Roll;
+        //     outDataStruct.yaw = currentReadings.Yaw;
+        //     outDataStruct.throttle = currentReadings.Throttle;
+        //     outDataStruct.brake = currentReadings.Brake;
+        //     outDataStruct.flaps = currentReadings.Flaps;
             
-            // Convert to Json and Serialize data
-            string outStructSerialized = JsonConvert.SerializeObject(outDataStruct);
-            return outStructSerialized;
+        //     // Convert to Json and Serialize data
+        //     string outStructSerialized = JsonConvert.SerializeObject(outDataStruct);
+        //     return outStructSerialized;
 
-            // networkUtils.SendMessage(outStructSerialized);
-        }
+        //     // networkUtils.SendMessage(outStructSerialized);
+        // }
 
         #endregion
 

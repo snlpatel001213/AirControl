@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using SqliteDB;
 using SQLite4Unity3d;
 
 namespace AirControl
@@ -88,6 +89,9 @@ namespace AirControl
                     }
                 }
             }  
+
+            // init DB
+            DB_Init.CreateDB();
         }
         #endregion
 

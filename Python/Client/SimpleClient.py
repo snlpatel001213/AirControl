@@ -8,7 +8,7 @@ for i in range(0,1):
     dict_ = { "type" : "Camera",
         "InputDataStruct":{"pitch":1.245,"roll":0.0,"yaw":5555,"throttle":0.0,"brake":0.0,"flaps":0},
         "ActiveCamera":1,
-        "Init":{},
+        "stickyThrottle":0.2,
     }
     # time.sleep(5)
 
