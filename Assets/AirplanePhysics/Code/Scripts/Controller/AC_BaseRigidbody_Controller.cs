@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using SQLite4Unity3d;
+using Commons;
+using SqliteDB;
 
 namespace AirControl
 {
@@ -29,27 +31,6 @@ namespace AirControl
             // invoking db connection
             // DB_connection = DB_Init();
 
-        }
-
-        SQLiteConnection DB_Init()
-        {
-            string persistentDataPath = Application.streamingAssetsPath;
-            string airControlVersion = CommonConfigs.GET_VERSION();
-            string DatabaseName =  "AirControl-"+airControlVersion+".sqlite";
-            string dbPath = System.IO.Path.Combine(persistentDataPath, DatabaseName);
-            
-            if(File.Exists(dbPath))
-            {
-                DB_connection = new SQLiteConnection(dbPath, SQLiteOpenFlags.ReadWrite | SQLiteOpenFlags.Create);
-            }
-            else
-            {
-                DB_connection = DB_InitDatabase.GetConnection(persistentDataPath,DatabaseName);
-                DB_InitDatabase.CreateTable<DB_InputClassDefinitions>( DB_connection);
-            }
-            return DB_connection;
-;
-            
         }
 
         // Update is called once per frame

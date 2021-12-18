@@ -3,12 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
+using SQLite4Unity3d;
 using  AirControl;
-namespace AirControl
+using SqliteDB;
+
+namespace Communicator
 {
-    public class InputOutputHandle:MonoBehaviour
+    [RequireComponent(typeof(DB_Init))]
+    public class InputHandle:MonoBehaviour
     {
         #region Builtin Methods
+        private SQLiteConnection connection;
         #endregion
 
         #region Custom Methods
@@ -16,16 +21,18 @@ namespace AirControl
         public void ParseInput(string receivedString)
         {
             // Parse input
-            
             var incoming =  JObject.Parse(receivedString);
-            Debug.Log("received string >>>>>>>>>>>> : " +  incoming);
-            var type = incoming["type"].ToString();
-            Debug.Log(">>>>>>>>>>>>>>>>>"+incoming[type]);
-            // camera_.selectCamera(Int32.Parse(incoming[type]["active"].ToString()));
+            int activeCamera = int.Parse(incoming["ActiveCamera"].ToString());
+            connection = DB_Init.GetConnection();
+            connection.InsertOrReplace( new DB_Schema{
+                Direction = "Incoming",
+                ActiveCamera = activeCamera,
+            });
             
         }
 
         // send msg out of unity
+        // this will be moved to outputHandle class
         public string  ParseOutput(AC_BaseAirplane_Input currentReadings)
         {
             StructDef.OutputDataStructure outDataStruct;

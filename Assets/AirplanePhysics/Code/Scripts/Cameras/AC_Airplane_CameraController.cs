@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SQLite4Unity3d;
+using SqliteDB;
 
 
 namespace AirControl
@@ -11,7 +12,7 @@ namespace AirControl
         #region Variables
         [Header("Camera Controller Properties")]
         public AC_BaseAirplane_Input input;
-        public DB_Test DB;
+
         public List<Camera> cameras = new List<Camera>();
         public int startCameraIndex = 0;
         private int curentCameraIndex=0;
@@ -34,12 +35,17 @@ namespace AirControl
         void Update()
         {
             //switching camera as per the database
-            SQLiteConnection _connection = DB._connection;
-            DB_InputClassDefinitions x = DB.getcamera_status(_connection);
-            if (x.ActiveCamera != curentCameraIndex){
-                Debug.Log("Switched camera from DB");
+            #region DBSwitch
+            
+            SQLiteConnection connection = DB_Init.GetConnection();
+            DB_Schema x = DB_Functions.getcamera_status(connection);
+            // Debug.Log(x.ToString());
+            if (x.ActiveCamera != curentCameraIndex)
+            {
                 selectCamera(x.ActiveCamera);
             }
+
+            #endregion
 
             if(input.CameraSwitch){
                 SwitchCamera();

@@ -6,8 +6,10 @@ using System.Net.Sockets;
 using System.Text; 
 using System.Threading; 
 using UnityEngine;  
+using AirControl;
 
-namespace AirControl
+
+namespace Communicator
 {
 	public class Communicator : MonoBehaviour
 	{
@@ -31,7 +33,7 @@ namespace AirControl
 		[Tooltip("Drag and drop here the  AC_BaseAirplane_Input.cs OR AC_XboxAirplane_Input.cs")]
 		public AC_BaseAirplane_Input currentReadings;
 
-		public InputOutputHandle InOutManager;
+		public InputHandle InOutManager;
 		#endregion 	
 		
 		#region  Default Methods
