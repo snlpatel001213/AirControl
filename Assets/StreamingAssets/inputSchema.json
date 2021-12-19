@@ -9,7 +9,6 @@
   "sunRotation_x": 0.0,
   "sunRotation_y": 0.0,
   "sunRotation_z": 0.0,
-  "AirplaneMass": 1200.0,
   "AirplaneDrag": 0.01,
   "AirplaneAngularDrag": 0.1,
   "AirplanemaxMPH": 150.0,
