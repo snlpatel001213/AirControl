@@ -16,6 +16,8 @@ namespace AirControl
         protected Rigidbody rb;
         protected AudioSource aSource;
         protected SQLiteConnection DB_connection ;
+        SQLiteConnection connection = DB_Init.GetConnection();
+        
         #endregion
 
         #region Builtin Methods
@@ -43,6 +45,8 @@ namespace AirControl
             if(rb){
                 HandlePhysics();
             }
+            // DB based operations
+            
         }
         #endregion
 

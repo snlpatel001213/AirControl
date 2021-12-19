@@ -71,7 +71,8 @@ namespace  AirControl
 
              // Keeping Get connection in the update loop is essential to avoid the lag
             SQLiteConnection connection = DB_Init.GetConnection();
-            DBGetter(connection);
+            DB_InputSchema DBRow = connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
+            DBGetter(DBRow);
         }
         #endregion
         
@@ -116,20 +117,20 @@ namespace  AirControl
             flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);
         }
 
-        protected void DBGetter(SQLiteConnection connection)
+        protected void DBGetter(DB_InputSchema DBRow)
         {
-            string DBInputControlType = DB_Functions.getInputControType(connection);
+            string DBInputControlType = DB_Functions.getInputControType(DBRow);
             // if control type is code then lock the controls and fly it
             // else let user fly manually
              if(DBInputControlType == "Code")
              {
-                throttle = DB_Functions.getThrottle(connection);
-                stickyThrottle = DB_Functions.getStickyThrottle(connection);
-                pitch = DB_Functions.getPitch(connection);
-                roll = DB_Functions.getRoll(connection);
-                yaw = DB_Functions.getYaw(connection);
-                brake = DB_Functions.getBrake(connection);
-                flaps = DB_Functions.getFlaps(connection);
+                throttle = DB_Functions.getThrottle(DBRow);
+                stickyThrottle = DB_Functions.getStickyThrottle(DBRow);
+                pitch = DB_Functions.getPitch(DBRow);
+                roll = DB_Functions.getRoll(DBRow);
+                yaw = DB_Functions.getYaw(DBRow);
+                brake = DB_Functions.getBrake(DBRow);
+                flaps = DB_Functions.getFlaps(DBRow);
              }
         }
            

@@ -103,6 +103,8 @@ namespace AirControl
                 HandleWheel();
                 HandleAltitude();
             }// handle else
+
+            // DB based update
             
         }
 
@@ -158,6 +160,7 @@ namespace AirControl
                 }
             }
         }
+       
         #endregion
     }
 

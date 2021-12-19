@@ -16,18 +16,18 @@ for i in range(0,1):
     "sunRotation_x": 0.0,
     "sunRotation_y": 0.0,
     "sunRotation_z": 0.0,
-    "AirplaneMass": 1200.0,
+    "AirplaneMass": 2000.0,
     "AirplaneDrag": 0.01,
     "AirplaneAngularDrag": 0.1,
     "AirplanemaxMPH": 150.0,
     "maxLiftPower": 200.0,
-    "Pitch":0.0,
+    "Pitch":1.0,
     "Roll": 0.0,
     "Yaw": 0.0,
     "Throttle": 0.0,
-    "StickyThrottle": 0.8,
+    "StickyThrottle": 0.0,
     "Brake": 0,
-    "Flaps": 0
+    "Flaps":1
     }
 
     # dict__ = {
@@ -44,7 +44,7 @@ for i in range(0,1):
     #     "Init":{},
     # }
 
-    data = json.dumps(dict__)
+    data = json.dumps(dict_)
     try:
         
         sock.sendall(data.encode("utf-8"))

@@ -26,8 +26,6 @@ namespace SqliteDB
 		public float sunRotation_x { get; set; } = 0f;
 		public float sunRotation_y { get; set; } = 0f;
 		public float sunRotation_z { get; set; } = 0f;
-		// Airplane weight - to simulate the effect of weight on airplane
-		public float AirplaneMass {get; set;} = 1200f;
 		// Airplane drag 
 		public float AirplaneDrag {get; set;} = 0.01f;
 		// Airplane Angular Drag
@@ -35,7 +33,7 @@ namespace SqliteDB
 		//Airplane Properties 
 		public float AirplanemaxMPH {get; set;} = 150f;
 		//Airplane Properties 
-		public float maxLiftPower {get; set;} = 200f;
+		public float MaxLiftPower {get; set;} = 200f;
 		//Airplane Properties 
 		//Control Pitch
 		public float Pitch  {get; set;}=0f;

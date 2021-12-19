@@ -13,7 +13,7 @@
   "AirplaneDrag": 0.01,
   "AirplaneAngularDrag": 0.1,
   "AirplanemaxMPH": 150.0,
-  "maxLiftPower": 200.0,
+  "MaxLiftPower": 200.0,
   "Pitch": 0.0,
   "Roll": 0.0,
   "Yaw": 0.0,

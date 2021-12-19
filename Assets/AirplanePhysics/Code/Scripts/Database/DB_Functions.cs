@@ -16,68 +16,83 @@ namespace SqliteDB
             /// </summary>
             /// <param name="connection"></param>
             /// <returns>Control type stored in DB</returns>
-            public static string getInputControType(SQLiteConnection connection)
+            public static string getInputControType(DB_InputSchema DBRow)
             {
-                DB_InputSchema controlType = connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").First();
-                return controlType.InputControlType;
+                return DBRow.InputControlType;
             }
             #endregion
             
             #region Camera
-            public static int getCameraStatus(SQLiteConnection connection)
+            public static int getCameraStatus(DB_InputSchema DBRow)
             {
-                DB_InputSchema currentSchema = connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
-                return currentSchema.ActiveCamera;
-
+                return DBRow.ActiveCamera;
             }
             #endregion
 
             #region Airplane Properties
-            public static float getPitch(SQLiteConnection connection)
+            public static float getPitch(DB_InputSchema DBRow)
             {
-                DB_InputSchema currentSchema =  connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
-                return currentSchema.Pitch;
+                return DBRow.Pitch;
             }
-            public static float getRoll(SQLiteConnection connection)
+            public static float getRoll(DB_InputSchema DBRow)
             {
-                DB_InputSchema currentSchema =  connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
-                return currentSchema.Roll;
+                return DBRow.Roll;
             }
-            public static float getYaw(SQLiteConnection connection)
+            public static float getYaw(DB_InputSchema DBRow)
             {
-                DB_InputSchema currentSchema =  connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
-                return currentSchema.Yaw;
+                return DBRow.Yaw;
             }
-            public static float getThrottle(SQLiteConnection connection)
+            public static float getThrottle(DB_InputSchema DBRow)
             {
-                return connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").First().Throttle;
+                return DBRow.Throttle;
             }
-            public static float getStickyThrottle(SQLiteConnection connection)
+            public static float getStickyThrottle(DB_InputSchema DBRow)
             {
-                DB_InputSchema currentSchema =  connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
-                return currentSchema.StickyThrottle;
+                return DBRow.StickyThrottle;
             }
-            public static float getBrake(SQLiteConnection connection)
+            public static float getBrake(DB_InputSchema DBRow)
             {
-                DB_InputSchema currentSchema =  connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
-                return currentSchema.Brake;
+                return DBRow.Brake;
             }
-            public static int getFlaps (SQLiteConnection connection)
+            public static int getFlaps (DB_InputSchema DBRow)
             {
-                DB_InputSchema currentSchema =  connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
-                return currentSchema.Flaps;
+                return DBRow.Flaps;
+            }
+            public static float getAirplaneDrag (DB_InputSchema DBRow)
+            {
+                return DBRow.AirplaneDrag;
+            }
+            public static float getAirplaneAngularDrag (DB_InputSchema DBRow)
+            {
+                return DBRow.AirplaneAngularDrag;
+            }
+            public static float getAirplanemaxMPH (DB_InputSchema DBRow)
+            {
+                return DBRow.AirplanemaxMPH;
+            }
+            public static float getMaxLiftPower (DB_InputSchema DBRow)
+            {
+                return DBRow.MaxLiftPower;
             }
             #endregion
         #endregion
 
 
         #region Transaction
+            /// <summary>
+            /// Trigger Level Reset
+            /// </summary>
+            /// <param name="connection"></param>
+            /// <returns></returns>
             public static bool getLevelReset(SQLiteConnection connection)
                 {
                     DB_Transactions currentSchema = connection.Table<DB_Transactions>().Where(x => x.Direction == "Transcation").FirstOrDefault();
                     return currentSchema.LevelReload;
-
                 }
+            /// <summary>
+            /// Reset the variable `LevelReset` to false to prevent repeated firing
+            /// </summary>
+            /// <param name="connection"></param>
             public static void resetLevelReset(SQLiteConnection connection)
                 {
                     connection.InsertOrReplace(new DB_Transactions{

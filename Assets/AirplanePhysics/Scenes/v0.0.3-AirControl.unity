@@ -880,7 +880,6 @@ GameObject:
   m_Component:
   - component: {fileID: 317620019}
   - component: {fileID: 317620020}
-  - component: {fileID: 317620021}
   m_Layer: 0
   m_Name: CameraController
   m_TagString: Untagged
@@ -919,18 +918,6 @@ MonoBehaviour:
   - {fileID: 1504063921}
   - {fileID: 1737466727}
   startCameraIndex: 0
---- !u!114 &317620021
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 317620018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95e50d366c212e07e8ae26c20c0e49f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &328328709
 GameObject:
   m_ObjectHideFlags: 0
