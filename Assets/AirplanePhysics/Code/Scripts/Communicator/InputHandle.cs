@@ -21,16 +21,58 @@ namespace Communicator
         public void ParseInput(string receivedString)
         {
             // Parse input
-            var incoming =  JObject.Parse(receivedString);
-            int activeCamera = int.Parse(incoming["ActiveCamera"].ToString());
-            float stickyThrottle = float.Parse(incoming["stickyThrottle"].ToString());
-            connection = DB_Init.GetConnection();
-            connection.InsertOrReplace( new DB_Schema{
-                Direction = "Incoming",
-                ActiveCamera = activeCamera,
-            });
-            
+            var inputJson =  JObject.Parse(receivedString);
+            // OperationType can be Transaction or Continuous
+            string operationType = inputJson["OperationType"].ToString();
+            if (operationType=="Continuous")
+            {
+                //input type
+                string inputControlType = inputJson["InputControlType"].ToString();
+                //Camera
+                int activeCamera = int.Parse(inputJson["ActiveCamera"].ToString());
+                // Airplane Properties
+                float throttle = float.Parse(inputJson["Throttle"].ToString());
+                float stickyThrottle = float.Parse(inputJson["StickyThrottle"].ToString());
+                float pitch = float.Parse(inputJson["Pitch"].ToString());
+                float roll = float.Parse(inputJson["Roll"].ToString());
+                float yaw = float.Parse(inputJson["Yaw"].ToString());
+                float brake = float.Parse(inputJson["Brake"].ToString());
+                int flaps = int.Parse(inputJson["Flaps"].ToString());
+
+                connection = DB_Init.GetConnection();
+                // inser in to database
+                connection.InsertOrReplace(new DB_InputSchema{
+                    Direction = "Incoming",
+                    InputControlType = inputControlType,
+                    // Camrera control
+                    ActiveCamera = activeCamera,
+                    // Airplane properties
+                    Throttle = throttle,
+                    StickyThrottle = stickyThrottle,
+                    Pitch = pitch,
+                    Roll = roll,
+                    Yaw = yaw,
+                    Brake = brake,
+                    Flaps = flaps,
+
+                });
+                connection.Commit();
+            }
+            if (operationType=="Transaction") // if operation type is transaction
+            {   
+                bool levelReload = bool.Parse(inputJson["LevelReload"].ToString());
+                connection = DB_Init.GetConnection();
+                connection.InsertOrReplace(new DB_Transactions{
+                    Direction = "Transcation",
+                    LevelReload = levelReload
+                });
+                Debug.Log("Level reload value "+ levelReload);
+                connection.Commit();
+
+            }
         }
+            
+        
 
         // send msg out of unity
         // this will be moved to outputHandle class

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['direction_213',['direction',['../classDB__InputClassDefinitions.html#a9b2c3da29be825c56be489601eba0db0',1,'DB_InputClassDefinitions']]]
+  ['direction_220',['Direction',['../classSqliteDB_1_1DB__InputSchema.html#a4c9cccdbabd802872c8617c17f07700e',1,'SqliteDB::DB_InputSchema']]]
 ];

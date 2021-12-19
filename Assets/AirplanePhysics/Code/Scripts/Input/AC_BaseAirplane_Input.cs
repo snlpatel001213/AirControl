@@ -1,7 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SQLite4Unity3d;
+using SqliteDB;
 namespace  AirControl
 {
     public class AC_BaseAirplane_Input : MonoBehaviour
@@ -18,7 +19,6 @@ namespace  AirControl
 
         protected KeyCode cameraKey = KeyCode.C;
         protected bool camerSwitch = false;
-        
 
         // Slowly move the throttle
         [Header("Sticky throttle value control how the throttle can be moved")]
@@ -62,18 +62,16 @@ namespace  AirControl
         
         
         #region Builtin Methods
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
-
         // Update is called once per frame
         void Update()
         {
             HandleInput();
             StickyThrottleControl();
             ClampInputs();
+
+             // Keeping Get connection in the update loop is essential to avoid the lag
+            SQLiteConnection connection = DB_Init.GetConnection();
+            DBGetter(connection);
         }
         #endregion
         
@@ -84,6 +82,7 @@ namespace  AirControl
             roll =  Input.GetAxis("Horizontal");
             yaw =  Input.GetAxis("yaw");
             throttle =  Input.GetAxis("throttle");
+
             StickyThrottleControl();
             // Process brakes bool
             brake =  Input.GetKey(KeyCode.Space)?1f:0f;
@@ -116,8 +115,28 @@ namespace  AirControl
             brake = Mathf.Clamp(brake,0f,1f);
             flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);
         }
-        #endregion
+
+        protected void DBGetter(SQLiteConnection connection)
+        {
+            string DBInputControlType = DB_Functions.getInputControType(connection);
+            // if control type is code then lock the controls and fly it
+            // else let user fly manually
+             if(DBInputControlType == "Code")
+             {
+                throttle = DB_Functions.getThrottle(connection);
+                stickyThrottle = DB_Functions.getStickyThrottle(connection);
+                pitch = DB_Functions.getPitch(connection);
+                roll = DB_Functions.getRoll(connection);
+                yaw = DB_Functions.getYaw(connection);
+                brake = DB_Functions.getBrake(connection);
+                flaps = DB_Functions.getFlaps(connection);
+             }
+        }
+           
     }
 
-
+        #endregion
 }
+
+
+

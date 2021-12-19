@@ -36,13 +36,14 @@ namespace AirControl
         {
             //switching camera as per the database
             #region DBSwitch
-            
+            // Keeping Get connection in the update loop is essential to avoid the lag
             SQLiteConnection connection = DB_Init.GetConnection();
-            DB_Schema x = DB_Functions.getcamera_status(connection);
+            int DBActiveCamera = DB_Functions.getCameraStatus(connection);
+            string DBInputControlType = DB_Functions.getInputControType(connection);
             // Debug.Log(x.ToString());
-            if (x.ActiveCamera != curentCameraIndex)
+            if (DBActiveCamera != curentCameraIndex && DBInputControlType == "Code")
             {
-                selectCamera(x.ActiveCamera);
+                selectCamera(DBActiveCamera);
             }
 
             #endregion

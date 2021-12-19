@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 namespace SqliteDB
 {
-	public class DB_Schema 
+	public class DB_InputSchema 
 	{
 		/// <summary>
 		/// Just [PrimaryKey] is added to the Id Attribute as we only want the updated value and dont want to accumulate it
@@ -14,6 +14,8 @@ namespace SqliteDB
 		/// <value></value>
 		[PrimaryKey]
 		public string Direction  { get; set; } = "Incoming";
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public string InputControlType {get;set;} = "Other";
 		// Which camera is active
 		public int ActiveCamera { get; set; } = 0;
 		// if sun is present
@@ -30,8 +32,6 @@ namespace SqliteDB
 		public float AirplaneDrag {get; set;} = 0.01f;
 		// Airplane Angular Drag
 		public float AirplaneAngularDrag {get; set;} = 0.1f;
-		//Airplane collison
-		public bool AirplaneCollison {get; set;} = false;
 		//Airplane Properties 
 		public float AirplanemaxMPH {get; set;} = 150f;
 		//Airplane Properties 
@@ -45,15 +45,30 @@ namespace SqliteDB
 		public float Yaw  {get; set;}=0f;
 		//Control Throttle
 		public float Throttle  {get; set;}=0f;
+		//Control Sticky Throttle
+		public float StickyThrottle  {get; set;}=0f;
 		//Control Brake
 		public float Brake  {get; set;}=0f;
 		//Control Flaps
-		public float Flaps  {get; set;}=0f;
+		public int Flaps  {get; set;}=0;
 
 		public override string ToString ()
 		{
 			return string.Format ("[Active Camera={0}]", ActiveCamera);
 		}
-		
+
+	}
+
+	public class DB_OutputSchema
+	{
+		[PrimaryKey]
+		public string Direction  { get; set; } = "Outgoing";
+	}
+
+	public class DB_Transactions
+	{	
+		[PrimaryKey]
+		public string Direction  { get; set; } = "Transcation";
+		public bool LevelReload {get; set;} = false; 
 	}
 }

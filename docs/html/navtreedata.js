@@ -23,14 +23,17 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "AirControl", "index.html", [
-    [ "Welcome to Aircontrol", "index.html", [
-      [ "Demo", "index.html#autotoc_md1", null ],
-      [ "Getting started", "index.html#autotoc_md2", null ],
-      [ "Documentation", "index.html#autotoc_md3", null ],
-      [ "Research Inspirations", "index.html#autotoc_md4", [
-        [ "Feel free to list your research topic you love to work on over here. Collaborate and publish.", "index.html#autotoc_md5", null ]
+    [ "README", "md__home_supatel_Documents_AirControl_README.html", [
+      [ "Welcome to Aircontrol", "md__home_supatel_Documents_AirControl_README.html#autotoc_md0", null ],
+      [ "Demo", "md__home_supatel_Documents_AirControl_README.html#autotoc_md1", null ],
+      [ "Control Inputs", "md__home_supatel_Documents_AirControl_README.html#autotoc_md2", null ],
+      [ "Getting started", "md__home_supatel_Documents_AirControl_README.html#autotoc_md3", null ],
+      [ "Documentation", "md__home_supatel_Documents_AirControl_README.html#autotoc_md4", null ],
+      [ "Release Goals", "md__home_supatel_Documents_AirControl_README.html#autotoc_md5", null ],
+      [ "Research Inspirations", "md__home_supatel_Documents_AirControl_README.html#autotoc_md6", [
+        [ "Feel free to list your research topic you love to work on over here. Collaborate and publish.", "md__home_supatel_Documents_AirControl_README.html#autotoc_md7", null ]
       ] ],
-      [ "Contribute", "index.html#autotoc_md6", null ]
+      [ "Contribute", "md__home_supatel_Documents_AirControl_README.html#autotoc_md8", null ]
     ] ],
     [ "reference", "md__home_supatel_Documents_AirControl_Assets_AirplanePhysics_Code_Scripts_Database_reference.html", null ],
     [ "Namespaces", "namespaces.html", [
@@ -52,7 +55,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classSQLite4Unity3d_1_1SQLiteConnection.html#a128fbdb55d52ce57872c3aae9a9c473e"
+"classSQLite4Unity3d_1_1SQLiteConnection.html#a523505494e5fcc19042e4a5d12d7c7cd"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

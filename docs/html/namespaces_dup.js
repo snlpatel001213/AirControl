@@ -1,6 +1,8 @@
 var namespaces_dup =
 [
-    [ "Aircontrol", "namespaceAircontrol.html", null ],
     [ "AirControl", "namespaceAirControl.html", null ],
-    [ "SQLite4Unity3d", "namespaceSQLite4Unity3d.html", null ]
+    [ "Commons", "namespaceCommons.html", null ],
+    [ "Communicator", "namespaceCommunicator.html", null ],
+    [ "SQLite4Unity3d", "namespaceSQLite4Unity3d.html", null ],
+    [ "SqliteDB", "namespaceSqliteDB.html", null ]
 ];

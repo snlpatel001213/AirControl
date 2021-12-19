@@ -19,6 +19,12 @@ namespace AirControl
         #endregion
 
         #region Builtin Methods
+        // Methods to be called before start goes here
+        public  virtual void Awake()
+        {
+            // init DB
+            DB_Init.CreateDB();
+        }
         // Start is called before the first frame update
         public virtual void Start()
         {
@@ -28,8 +34,6 @@ namespace AirControl
             if(aSource){
                 aSource.playOnAwake = false;
             }
-            // invoking db connection
-            // DB_connection = DB_Init();
 
         }
 

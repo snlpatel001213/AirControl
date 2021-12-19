@@ -10,7 +10,7 @@ var searchData=
   ['ac_5fairplane_5fcontroller_7',['AC_Airplane_Controller',['../classAirControl_1_1AC__Airplane__Controller.html',1,'AirControl']]],
   ['ac_5fairplane_5fcontrolsurface_8',['AC_Airplane_ControlSurface',['../classAirControl_1_1AC__Airplane__ControlSurface.html',1,'AirControl']]],
   ['ac_5fairplane_5fengine_9',['AC_Airplane_Engine',['../classAirControl_1_1AC__Airplane__Engine.html',1,'AirControl']]],
-  ['ac_5fairplane_5fenginecutoff_10',['AC_Airplane_EngineCutoff',['../classAircontrol_1_1AC__Airplane__EngineCutoff.html',1,'Aircontrol']]],
+  ['ac_5fairplane_5fenginecutoff_10',['AC_Airplane_EngineCutoff',['../classAirControl_1_1AC__Airplane__EngineCutoff.html',1,'AirControl']]],
   ['ac_5fairplane_5fflaplever_11',['AC_Airplane_FlapLever',['../classAirControl_1_1AC__Airplane__FlapLever.html',1,'AirControl']]],
   ['ac_5fairplane_5ffuel_12',['AC_Airplane_Fuel',['../classAirControl_1_1AC__Airplane__Fuel.html',1,'AirControl']]],
   ['ac_5fairplane_5ffuelgauge_13',['AC_Airplane_FuelGauge',['../classAirControl_1_1AC__Airplane__FuelGauge.html',1,'AirControl']]],
@@ -26,6 +26,6 @@ var searchData=
   ['ac_5fbasic_5ffollow_5fcamera_23',['AC_Basic_Follow_Camera',['../classAirControl_1_1AC__Basic__Follow__Camera.html',1,'AirControl']]],
   ['ac_5fxboxairplane_5finput_24',['AC_XboxAirplane_Input',['../classAirControl_1_1AC__XboxAirplane__Input.html',1,'AirControl']]],
   ['ac_5fxboxairplane_5finput_5feditor_25',['AC_XboxAirplane_Input_Editor',['../classAirControl_1_1AC__XboxAirplane__Input__Editor.html',1,'AirControl']]],
-  ['aircontrol_26',['Aircontrol',['../namespaceAircontrol.html',1,'Aircontrol'],['../namespaceAirControl.html',1,'AirControl']]],
+  ['aircontrol_26',['AirControl',['../namespaceAirControl.html',1,'']]],
   ['autoincrementattribute_27',['AutoIncrementAttribute',['../classSQLite4Unity3d_1_1AutoIncrementAttribute.html',1,'SQLite4Unity3d']]]
 ];

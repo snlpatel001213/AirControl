@@ -89,9 +89,6 @@ namespace AirControl
                     }
                 }
             }  
-
-            // init DB
-            DB_Init.CreateDB();
         }
         #endregion
 
