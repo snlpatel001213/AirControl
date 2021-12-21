@@ -1,5 +1,6 @@
 {
   "Direction": "Incoming",
+  "Version": "0.0.3",
   "InputControlType": "Other",
   "ActiveCamera": 0,
   "sunPresent": true,

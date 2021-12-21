@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using SQLite4Unity3d;
 using System.IO;
+using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
 using AirControl;
 using Commons;
@@ -15,7 +16,7 @@ namespace SqliteDB
         #region Variables
         static SQLiteConnection connection ;
         static string persistentDataPath = Application.streamingAssetsPath;
-        static string airControlVersion = CommonConfigs.GET_VERSION();
+        static string airControlVersion = CommonFunctions.GET_VERSION();
         static string DatabaseName =  "AirControl-"+airControlVersion+".sqlite";
         static string dbPath = System.IO.Path.Combine(persistentDataPath, DatabaseName);
         #endregion
@@ -44,67 +45,94 @@ namespace SqliteDB
             return connection; 
 
 	    }
+        /// <summary>
+        /// Create the schema
+        /// </summary>
+        /// <param name="connection"></param>
+        /// <param name="schemaName">name of the Json file to be created</param>
+        /// <typeparam name="T"></typeparam>
+        public static void createSchema<T>( SQLiteConnection connection, string schemaName) where T : new()
+        {
+            CreateTable<T>(connection);
+            connection.InsertOrReplace(new T());
+            string json = JsonConvert.SerializeObject(new T(),Formatting.Indented);
+            string schemaFilePath = System.IO.Path.Combine(persistentDataPath,schemaName);
+            File.WriteAllText(schemaFilePath, json);
+            Debug.Log("Writting Default schema file to : "+ schemaFilePath);
+        }
 
         /// <summary>
-        /// Delete existing DB and create new SQLite DB
-        /// Insert default paramter values to DB to prevent null point exception
-        /// Write parameter schema file (json). these parameters can be externally modified
+        /// Create new schem if the *schema.json dont exists. 
+        /// if *schema.json exist then read the paramters and insert in the db as default parameters
+        /// if version of *schema.json and version of release dont match then existing files will be deleted and new *schema.json will be created.
         /// </summary>
         public static void CreateDB()
         {
-                        
-            if(File.Exists(dbPath))
+            string existingInSchemaPath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
+            // if inputschema file exists
+            connection = GetConnection();
+            if(File.Exists(existingInSchemaPath))
             {
-                //delete the older file
-                CommonConfigs.DeleteFile(dbPath);
-                connection = GetConnection();
-                CreateTable<DB_InputSchema>(connection);
-                CreateTable<DB_OutputSchema>(connection);
-                CreateTable<DB_Transactions>(connection);
-                // write default vaues to database to avoid the null pointer exeption
-                connection.Insert(new DB_InputSchema());
-                connection.Insert(new DB_OutputSchema());
-                connection.Insert(new DB_Transactions());
-                // Write  default json to Streaming asset folder for reference
-                WriteParamSet();
-                
-            }
-            else
+                // if version of the schema matches the release version
+                DB_InputSchema existingSchema = CommonFunctions.DeserializeJson<DB_InputSchema>(existingInSchemaPath);
+                if(existingSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+                {
+                    CreateTable<DB_InputSchema>(connection);
+                    connection.InsertOrReplace(existingSchema);
+                    Debug.Log("Created from existing schema");
+                }
+                else // if schema file dont match then use the internal defaults values and write to file
+                {
+                     createSchema<DB_InputSchema>(connection,"inputSchema.json" );
+                }
+            }    
+            else // if schema file dont exist then use the internal defaults values and write to file
             {
-                connection = GetConnection();
-                CreateTable<DB_InputSchema>(connection);
-                CreateTable<DB_OutputSchema>(connection);
-                CreateTable<DB_Transactions>(connection);
-                Console.WriteLine("Database {DatabaseName} Created");
-                // write default vaues to database to avoid the null pointer exeption
-                connection.Insert(new DB_InputSchema());
-                connection.Insert(new DB_OutputSchema());
-                connection.Insert(new DB_Transactions());
-               // Write  default json to Streaming asset folder for reference
-                WriteParamSet();
+                createSchema<DB_InputSchema>(connection,"inputSchema.json" );
             }
             
+            string existingOutSchemaPath = System.IO.Path.Combine(persistentDataPath,"outputSchema.json");
+            // if inputschema file exists
+            if(File.Exists(existingOutSchemaPath))
+            {
+                // if version of the schema matches the release version
+                DB_OutputSchema existingOutSchema = CommonFunctions.DeserializeJson<DB_OutputSchema>(existingOutSchemaPath);
+                if(existingOutSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+                {
+                    CreateTable<DB_OutputSchema>(connection);
+                    connection.InsertOrReplace(existingOutSchema);
+                }
+                else // if schema file dont match then use the internal defaults values and write to file
+                {
+                    createSchema<DB_InputSchema>(connection,"outputSchema.json" );
+                }
+            }    
+            else // if schema file dont exist then use the internal defaults values and write to file
+            {
+                createSchema<DB_InputSchema>(connection,"outputSchema.json" );
+            }
+            string existingTransactionSchemaPath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
+            // if inputschema file exists
+            if(File.Exists(existingTransactionSchemaPath))
+            {
+                // if version of the schema matches the release version
+                DB_Transactions existingTransactionSchema = CommonFunctions.DeserializeJson<DB_Transactions>(existingTransactionSchemaPath);
+                if(existingTransactionSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+                {
+                    CreateTable<DB_Transactions>(connection);
+                    connection.InsertOrReplace(existingTransactionSchema);
+                }
+                else // if schema file dont match then use the internal defaults values and write to file
+                {
+                    createSchema<DB_InputSchema>(connection,"transactionSchema.json" );
+                }
+            }    
+            else // if schema file dont exist then use the internal defaults values and write to file
+            {
+                createSchema<DB_InputSchema>(connection,"transactionSchema.json" );
+            }
+        }    
             
-        }
-        /// <summary>
-        /// Write Json with all the parmaters
-        /// These parameters can be modified from python
-        /// </summary>
-        private static void WriteParamSet()
-        {
-            string inputJson = JsonConvert.SerializeObject(new DB_InputSchema(),Formatting.Indented);
-            string inputSchemaFilePath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
-            Debug.Log("Writting Default schema file to : "+ inputSchemaFilePath);
-            File.WriteAllText(inputSchemaFilePath, inputJson);
-            string outputJson = JsonConvert.SerializeObject(new DB_OutputSchema(),Formatting.Indented);
-            string outputSchemaFilePath = System.IO.Path.Combine(persistentDataPath,"outputSchema.json");
-            Debug.Log("Writting Default schema file to : "+ outputSchemaFilePath);
-            File.WriteAllText(outputSchemaFilePath, outputJson);
-            string transactionJson = JsonConvert.SerializeObject(new DB_Transactions(),Formatting.Indented);
-            string transactionSchemaFilePath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
-            Debug.Log("Writting Default schema file to : "+ transactionSchemaFilePath);
-            File.WriteAllText(transactionSchemaFilePath, transactionJson);
-        }
 
          /// <summary>
         /// Creates default table in the Database
@@ -114,7 +142,7 @@ namespace SqliteDB
         /// <typeparam name="T"></typeparam>
         public static void CreateTable<T>(SQLiteConnection connection)
         {
-            connection.CreateTable<T> ();
+            connection.CreateTable<T>();
         }   
 
         #endregion

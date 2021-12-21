@@ -1,5 +1,7 @@
 using System.IO;
 using System;
+using Newtonsoft.Json.Linq;
+using Newtonsoft.Json;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -7,7 +9,7 @@ using UnityEngine;
 namespace Commons
 {
 
-    public static class CommonConfigs
+    public static class CommonFunctions
     {
         /// <summary>
         /// Get current dev version
@@ -38,6 +40,12 @@ namespace Commons
             {    
                 Debug.Log(ioExp.Message);    
             } 
+        }
+
+        public static T DeserializeJson<T>(string path)
+        {
+            T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
+            return data;
         }   
                 
     }

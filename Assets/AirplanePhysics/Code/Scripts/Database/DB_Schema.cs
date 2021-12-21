@@ -2,6 +2,7 @@ using System.Collections;
 using SQLite4Unity3d;
 using System;
 using System.Collections.Generic;
+using Commons;
 namespace SqliteDB
 {
 	public class DB_InputSchema 
@@ -14,6 +15,8 @@ namespace SqliteDB
 		/// <value></value>
 		[PrimaryKey]
 		public string Direction  { get; set; } = "Incoming";
+		//Version of the sceme, IT will be same as the release version
+		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
 		public string InputControlType {get;set;} = "Other";
 		// Which camera is active
@@ -61,12 +64,17 @@ namespace SqliteDB
 	{
 		[PrimaryKey]
 		public string Direction  { get; set; } = "Outgoing";
+		//Version of the sceme, IT will be same as the release version
+		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 	}
 
 	public class DB_Transactions
 	{	
 		[PrimaryKey]
 		public string Direction  { get; set; } = "Transcation";
+		//Version of the sceme, IT will be same as the release version
+		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//reload the level if this is set true
 		public bool LevelReload {get; set;} = false; 
 	}
 }
