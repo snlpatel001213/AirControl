@@ -23,7 +23,7 @@ namespace SqliteDB
             #endregion
             
             #region Camera
-            public static int getCameraStatus(DB_EternalInput DBRow)
+            public static int getCameraStatus(DB_Transactions DBRow)
             {
                 return DBRow.ActiveCamera;
             }
@@ -85,9 +85,21 @@ namespace SqliteDB
             /// <returns></returns>
             public static bool getLevelReset(SQLiteConnection connection)
                 {
-                    DB_Transactions currentSchema = connection.Table<DB_Transactions>().Where(x => x.Direction == "Transcation").FirstOrDefault();
+                    DB_Transactions currentSchema = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
                     return currentSchema.LevelReload;
                 }
+            /// <summary>
+            /// Get the control type
+            /// The InputControltype can be "Code" or "Other"
+            /// "Code" meansd it can be controlled throught any external program
+            /// "Other" indicates Keyboard or Joystick
+            /// </summary>
+            /// <param name="connection"></param>
+            /// <returns>Control type stored in DB</returns>
+            public static string getInputControType(DB_Transactions DBRow)
+            {
+                return DBRow.InputControlType;
+            }
             /// <summary>
             /// Reset the variable `LevelReset` to false to prevent repeated firing
             /// </summary>
@@ -95,7 +107,7 @@ namespace SqliteDB
             public static void resetLevelReset(SQLiteConnection connection)
                 {
                     connection.InsertOrReplace(new DB_Transactions{
-                    Direction = "Incoming",
+                    MsgType = "Transcation",
                     LevelReload = false
                     });
 

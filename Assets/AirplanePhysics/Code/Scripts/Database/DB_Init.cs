@@ -68,29 +68,32 @@ namespace SqliteDB
         /// </summary>
         public static void CreateDB()
         {
-            string existingInSchemaPath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
-            // if inputschema file exists
-            connection = GetConnection();
-            if(File.Exists(existingInSchemaPath))
-            {
-                // if version of the schema matches the release version
-                DB_EternalInput existingSchema = CommonFunctions.DeserializeJson<DB_EternalInput>(existingInSchemaPath);
-                if(existingSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+            #region DB_EternalInput
+                string existingInSchemaPath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
+                // if inputschema file exists
+                connection = GetConnection();
+                if(File.Exists(existingInSchemaPath))
                 {
-                    CreateTable<DB_EternalInput>(connection);
-                    connection.InsertOrReplace(existingSchema);
-                    Debug.Log("Created from existing schema");
-                }
-                else // if schema file dont match then use the internal defaults values and write to file
+                    // if version of the schema matches the release version
+                    DB_EternalInput existingSchema = CommonFunctions.DeserializeJson<DB_EternalInput>(existingInSchemaPath);
+                    if(existingSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+                    {
+                        CreateTable<DB_EternalInput>(connection);
+                        connection.InsertOrReplace(existingSchema);
+                        Debug.Log("Created from existing schema");
+                    }
+                    else // if schema file dont match then use the internal defaults values and write to file
+                    {
+                        createSchema<DB_EternalInput>(connection,"inputSchema.json" );
+                    }
+                }    
+                else // if schema file dont exist then use the internal defaults values and write to file
                 {
-                     createSchema<DB_EternalInput>(connection,"inputSchema.json" );
+                    createSchema<DB_EternalInput>(connection,"inputSchema.json" );
                 }
-            }    
-            else // if schema file dont exist then use the internal defaults values and write to file
-            {
-                createSchema<DB_EternalInput>(connection,"inputSchema.json" );
-            }
+            #endregion
             
+            #region DB_EternalOutput
             string existingOutSchemaPath = System.IO.Path.Combine(persistentDataPath,"outputSchema.json");
             // if inputschema file exists
             if(File.Exists(existingOutSchemaPath))
@@ -104,33 +107,60 @@ namespace SqliteDB
                 }
                 else // if schema file dont match then use the internal defaults values and write to file
                 {
-                    createSchema<DB_EternalInput>(connection,"outputSchema.json" );
+                    createSchema<DB_EternalOutput>(connection,"outputSchema.json" );
                 }
             }    
             else // if schema file dont exist then use the internal defaults values and write to file
             {
-                createSchema<DB_EternalInput>(connection,"outputSchema.json" );
+                createSchema<DB_EternalOutput>(connection,"outputSchema.json" );
             }
-            string existingTransactionSchemaPath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
-            // if inputschema file exists
-            if(File.Exists(existingTransactionSchemaPath))
-            {
-                // if version of the schema matches the release version
-                DB_Transactions existingTransactionSchema = CommonFunctions.DeserializeJson<DB_Transactions>(existingTransactionSchemaPath);
-                if(existingTransactionSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+            #endregion
+
+            #region DB_Transactions
+                string existingTransactionSchemaPath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
+                // if inputschema file exists
+                if(File.Exists(existingTransactionSchemaPath))
                 {
-                    CreateTable<DB_Transactions>(connection);
-                    connection.InsertOrReplace(existingTransactionSchema);
-                }
-                else // if schema file dont match then use the internal defaults values and write to file
+                    // if version of the schema matches the release version
+                    DB_Transactions existingTransactionSchema = CommonFunctions.DeserializeJson<DB_Transactions>(existingTransactionSchemaPath);
+                    if(existingTransactionSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+                    {
+                        CreateTable<DB_Transactions>(connection);
+                        connection.InsertOrReplace(existingTransactionSchema);
+                    }
+                    else // if schema file dont match then use the internal defaults values and write to file
+                    {
+                        createSchema<DB_Transactions>(connection,"transactionSchema.json" );
+                    }
+                }    
+                else // if schema file dont exist then use the internal defaults values and write to file
                 {
-                    createSchema<DB_EternalInput>(connection,"transactionSchema.json" );
+                    createSchema<DB_Transactions>(connection,"transactionSchema.json" );
                 }
-            }    
-            else // if schema file dont exist then use the internal defaults values and write to file
-            {
-                createSchema<DB_EternalInput>(connection,"transactionSchema.json" );
-            }
+            #endregion
+            
+            #region DB_StartUpSchema
+                string existingStartUpSchemaPath = System.IO.Path.Combine(persistentDataPath,"startUpSchema.json");
+                // if inputschema file exists
+                if(File.Exists(existingStartUpSchemaPath))
+                {
+                    // if version of the schema matches the release version
+                    DB_StartUpSchema existingStartUpSchema = CommonFunctions.DeserializeJson<DB_StartUpSchema>(existingTransactionSchemaPath);
+                    if(existingStartUpSchema.Version.ToString() == CommonFunctions.GET_VERSION())
+                    {
+                        CreateTable<DB_StartUpSchema>(connection);
+                        connection.InsertOrReplace(existingStartUpSchema);
+                    }
+                    else // if schema file dont match then use the internal defaults values and write to file
+                    {
+                        createSchema<DB_StartUpSchema>(connection,"startUpSchema.json" );
+                    }
+                }    
+                else // if schema file dont exist then use the internal defaults values and write to file
+                {
+                    createSchema<DB_StartUpSchema>(connection,"startUpSchema.json" );
+                }
+            #endregion
         }    
             
 
@@ -142,6 +172,7 @@ namespace SqliteDB
         /// <typeparam name="T"></typeparam>
         public static void CreateTable<T>(SQLiteConnection connection)
         {
+            Debug.Log("Table Created" + typeof(T));
             connection.CreateTable<T>();
         }   
 

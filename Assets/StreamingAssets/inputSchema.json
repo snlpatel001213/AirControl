@@ -1,8 +1,7 @@
 {
-  "Direction": "Incoming",
+  "MsgType": "Incoming",
   "Version": "0.0.3",
   "InputControlType": "Other",
-  "ActiveCamera": 0,
   "sunPresent": true,
   "sunLocation_x": 0.0,
   "sunLocation_y": 0.0,

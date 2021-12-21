@@ -1,5 +1,7 @@
 {
-  "Direction": "Transcation",
+  "MsgType": "Transcation",
   "Version": "0.0.3",
-  "LevelReload": false
+  "InputControlType": "Other",
+  "LevelReload": false,
+  "ActiveCamera": 0
 }

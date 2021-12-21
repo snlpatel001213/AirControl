@@ -5,6 +5,9 @@ using System.Collections.Generic;
 using Commons;
 namespace SqliteDB
 {
+	/// <summary>
+	/// Class to get input from external program
+	/// </summary>
 	public class DB_EternalInput 
 	{
 		/// <summary>
@@ -14,13 +17,11 @@ namespace SqliteDB
 		/// </summary>
 		/// <value></value>
 		[PrimaryKey]
-		public string Direction  { get; set; } = "Incoming";
+		public string MsgType  { get; set; } = "Incoming";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
 		public string InputControlType {get;set;} = "Other";
-		// Which camera is active
-		public int ActiveCamera { get; set; } = 0;
 		// if sun is present
 		public bool sunPresent  { get; set; } = true;
 		public float sunLocation_x { get; set; } = 0f;
@@ -53,35 +54,45 @@ namespace SqliteDB
 		//Control Flaps
 		public int Flaps  {get; set;}=0;
 
-		public override string ToString ()
-		{
-			return string.Format ("[Active Camera={0}]", ActiveCamera);
-		}
+		// public override string ToString ()
+		// {
+		// 	return string.Format ("[Active Camera={0}]", ActiveCamera);
+		// }
 
 	}
 
+	/// <summary>
+	/// Class to output to external program
+	/// </summary>
 	public class DB_EternalOutput
 	{
 		[PrimaryKey]
-		public string Direction  { get; set; } = "Outgoing";
+		public string MsgType  { get; set; } = "Outgoing";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 	}
-
+	/// <summary>
+	/// Class to just transact once to the game engine
+	/// This can be used for level releoad or setting gameplay volume etc 
+	/// </summary>
 	public class DB_Transactions
 	{	
 		[PrimaryKey]
-		public string Direction  { get; set; } = "Transcation";
+		public string MsgType  { get; set; } = "Transcation";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public string InputControlType {get;set;} = "Other";
 		//reload the level if this is set true
 		public bool LevelReload {get; set;} = false; 
+		// Which camera is active
+		public int ActiveCamera { get; set; } = 0;
 	}
 
-	public class DB_StartUpSettings
+	public class DB_StartUpSchema
 	{	
 		[PrimaryKey]
-		public string Direction  { get; set; } = "Transcation";
+		public string MsgType  { get; set; } = "StartUp";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//set Airplane masss

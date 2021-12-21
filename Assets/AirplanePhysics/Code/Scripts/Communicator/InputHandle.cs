@@ -22,14 +22,14 @@ namespace Communicator
         {
             // Parse input
             var inputJson =  JObject.Parse(receivedString);
-            // OperationType can be Transaction or Continuous
-            string operationType = inputJson["OperationType"].ToString();
-            if (operationType=="Continuous")
+            // MsgType can be Transaction or Continuous
+            string MsgType = inputJson["MsgType"].ToString();
+            Debug.Log("MsgType : "+ MsgType);
+            if (MsgType=="Incoming")
             {
                 //input type
                 string inputControlType = inputJson["InputControlType"].ToString();
-                //Camera
-                int activeCamera = int.Parse(inputJson["ActiveCamera"].ToString());
+                
                 // Airplane Properties
                 float throttle = float.Parse(inputJson["Throttle"].ToString());
                 float stickyThrottle = float.Parse(inputJson["StickyThrottle"].ToString());
@@ -42,10 +42,8 @@ namespace Communicator
                 connection = DB_Init.GetConnection();
                 // inser in to database
                 connection.InsertOrReplace(new DB_EternalInput{
-                    Direction = "Incoming",
+                    MsgType = "Incoming",
                     InputControlType = inputControlType,
-                    // Camrera control
-                    ActiveCamera = activeCamera,
                     // Airplane properties
                     Throttle = throttle,
                     StickyThrottle = stickyThrottle,
@@ -58,15 +56,24 @@ namespace Communicator
                 });
                 connection.Commit();
             }
-            if (operationType=="Transaction") // if operation type is transaction
+            if (MsgType=="Transcation") // if operation type is transaction
             {   
                 bool levelReload = bool.Parse(inputJson["LevelReload"].ToString());
                 connection = DB_Init.GetConnection();
                 connection.InsertOrReplace(new DB_Transactions{
-                    Direction = "Transcation",
+                    MsgType = "Transcation",
                     LevelReload = levelReload
                 });
                 Debug.Log("Level reload value "+ levelReload);
+                //Camera
+                int activeCamera = int.Parse(inputJson["ActiveCamera"].ToString());
+                //input type
+                string inputControlType = inputJson["InputControlType"].ToString();
+                connection.InsertOrReplace(new DB_Transactions{
+                    // Camrera control
+                    InputControlType = inputControlType,
+                    ActiveCamera = activeCamera,
+                });
                 connection.Commit();
 
             }

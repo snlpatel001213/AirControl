@@ -38,10 +38,9 @@ namespace AirControl
             #region DBSwitch
             // Keeping Get connection in the update loop is essential to avoid the lag
             SQLiteConnection connection = DB_Init.GetConnection();
-            DB_EternalInput DBRow = connection.Table<DB_EternalInput>().Where(x => x.Direction == "Incoming").FirstOrDefault();
+            DB_Transactions DBRow = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
             int DBActiveCamera = DB_Functions.getCameraStatus(DBRow);
             string DBInputControlType = DB_Functions.getInputControType(DBRow);
-            // Debug.Log(x.ToString());
             if (DBActiveCamera != curentCameraIndex && DBInputControlType == "Code")
             {
                 selectCamera(DBActiveCamera);

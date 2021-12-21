@@ -71,7 +71,7 @@ namespace  AirControl
 
              // Keeping Get connection in the update loop is essential to avoid the lag
             SQLiteConnection connection = DB_Init.GetConnection();
-            DB_EternalInput DBRow = connection.Table<DB_EternalInput>().Where(x => x.Direction == "Incoming").FirstOrDefault();
+            DB_EternalInput DBRow = connection.Table<DB_EternalInput>().Where(x => x.MsgType == "Incoming").FirstOrDefault();
             DBGetter(DBRow);
         }
         #endregion

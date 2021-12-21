@@ -7,9 +7,8 @@ if __name__=="__main__":
     sock.connect((host,port))
     for i in range(0,1):
         dict_ = {
-        "OperationType":"Continuous",
+        "MsgType":"Incoming",
         "InputControlType": "Code",
-        "ActiveCamera": 1,
         "sunPresent": False,
         "sunLocation_x": 0.0,
         "sunLocation_y": 0.0,
@@ -30,11 +29,14 @@ if __name__=="__main__":
         "Flaps":0
         }
 
-        # dict__ = {
-        #     "OperationType":"Transaction",
-        #     "LevelReload": "true",
+        dict__ = {
+            "MsgType": "Transcation",
+            "Version": "0.0.3",
+            "InputControlType": "Code",
+            "LevelReload": "true",
+            "ActiveCamera": 1
 
-        # }
+        }
 
         # time.sleep(5)
 
@@ -44,7 +46,7 @@ if __name__=="__main__":
         #     "Init":{},
         # }
 
-        data = json.dumps(dict_)
+        data = json.dumps(dict__)
         try:
             
             sock.sendall(data.encode("utf-8"))
