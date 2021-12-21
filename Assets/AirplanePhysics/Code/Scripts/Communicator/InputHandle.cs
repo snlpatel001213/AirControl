@@ -40,7 +40,7 @@ namespace Communicator
                 int flaps = int.Parse(inputJson["Flaps"].ToString());
 
                 connection = DB_Init.GetConnection();
-                // inser in to database
+                // insert in to database
                 connection.InsertOrReplace(new DB_EternalInput{
                     MsgType = "Incoming",
                     InputControlType = inputControlType,
@@ -59,20 +59,20 @@ namespace Communicator
             if (MsgType=="Transcation") // if operation type is transaction
             {   
                 bool levelReload = bool.Parse(inputJson["LevelReload"].ToString());
-                connection = DB_Init.GetConnection();
-                connection.InsertOrReplace(new DB_Transactions{
-                    MsgType = "Transcation",
-                    LevelReload = levelReload
-                });
                 Debug.Log("Level reload value "+ levelReload);
                 //Camera
                 int activeCamera = int.Parse(inputJson["ActiveCamera"].ToString());
                 //input type
                 string inputControlType = inputJson["InputControlType"].ToString();
+                
+                connection = DB_Init.GetConnection();
                 connection.InsertOrReplace(new DB_Transactions{
-                    // Camrera control
+                    MsgType = "Transcation",
                     InputControlType = inputControlType,
+                    // Camrera control
                     ActiveCamera = activeCamera,
+                    //level reset
+                    LevelReload = levelReload
                 });
                 connection.Commit();
 
