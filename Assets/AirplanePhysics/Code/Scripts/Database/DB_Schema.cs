@@ -5,7 +5,7 @@ using System.Collections.Generic;
 using Commons;
 namespace SqliteDB
 {
-	public class DB_InputSchema 
+	public class DB_EternalInput 
 	{
 		/// <summary>
 		/// Just [PrimaryKey] is added to the Id Attribute as we only want the updated value and dont want to accumulate it
@@ -60,7 +60,7 @@ namespace SqliteDB
 
 	}
 
-	public class DB_OutputSchema
+	public class DB_EternalOutput
 	{
 		[PrimaryKey]
 		public string Direction  { get; set; } = "Outgoing";
@@ -77,4 +77,28 @@ namespace SqliteDB
 		//reload the level if this is set true
 		public bool LevelReload {get; set;} = false; 
 	}
+
+	public class DB_StartUpSettings
+	{	
+		[PrimaryKey]
+		public string Direction  { get; set; } = "Transcation";
+		//Version of the sceme, IT will be same as the release version
+		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//set Airplane masss
+		public float airplaneMass {get; set;} = 1000f; 
+		//set Airplane fuel
+		public float fuel {get; set;} = 61f;
+		//set Airplane fuel burnrate
+		public float fuelBurnRate {get; set;} = 6.1f;  
+		//set Airplane start Location
+		public float startLocation_x {get; set;} = 6.1f;  
+		public float startLocation_y {get; set;} = 6.1f;  
+		public float startLocation_z {get; set;} = 6.1f;  
+		//set Airplane start Rotation
+		public float startRotation_x {get; set;} = 6.1f;  
+		public float startRotation_y {get; set;} = 6.1f;  
+		public float startRotation_z {get; set;} = 6.1f; 
+	}
+	
+
 }

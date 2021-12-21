@@ -71,7 +71,7 @@ namespace  AirControl
 
              // Keeping Get connection in the update loop is essential to avoid the lag
             SQLiteConnection connection = DB_Init.GetConnection();
-            DB_InputSchema DBRow = connection.Table<DB_InputSchema>().Where(x => x.Direction == "Incoming").FirstOrDefault();
+            DB_EternalInput DBRow = connection.Table<DB_EternalInput>().Where(x => x.Direction == "Incoming").FirstOrDefault();
             DBGetter(DBRow);
         }
         #endregion
@@ -117,7 +117,7 @@ namespace  AirControl
             flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);
         }
 
-        protected void DBGetter(DB_InputSchema DBRow)
+        protected void DBGetter(DB_EternalInput DBRow)
         {
             string DBInputControlType = DB_Functions.getInputControType(DBRow);
             // if control type is code then lock the controls and fly it

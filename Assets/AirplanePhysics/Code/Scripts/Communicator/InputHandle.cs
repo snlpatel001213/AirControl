@@ -41,7 +41,7 @@ namespace Communicator
 
                 connection = DB_Init.GetConnection();
                 // inser in to database
-                connection.InsertOrReplace(new DB_InputSchema{
+                connection.InsertOrReplace(new DB_EternalInput{
                     Direction = "Incoming",
                     InputControlType = inputControlType,
                     // Camrera control

@@ -16,67 +16,66 @@ namespace SqliteDB
             /// </summary>
             /// <param name="connection"></param>
             /// <returns>Control type stored in DB</returns>
-            public static string getInputControType(DB_InputSchema DBRow)
+            public static string getInputControType(DB_EternalInput DBRow)
             {
                 return DBRow.InputControlType;
             }
             #endregion
             
             #region Camera
-            public static int getCameraStatus(DB_InputSchema DBRow)
+            public static int getCameraStatus(DB_EternalInput DBRow)
             {
                 return DBRow.ActiveCamera;
             }
             #endregion
 
             #region Airplane Properties
-            public static float getPitch(DB_InputSchema DBRow)
+            public static float getPitch(DB_EternalInput DBRow)
             {
                 return DBRow.Pitch;
             }
-            public static float getRoll(DB_InputSchema DBRow)
+            public static float getRoll(DB_EternalInput DBRow)
             {
                 return DBRow.Roll;
             }
-            public static float getYaw(DB_InputSchema DBRow)
+            public static float getYaw(DB_EternalInput DBRow)
             {
                 return DBRow.Yaw;
             }
-            public static float getThrottle(DB_InputSchema DBRow)
+            public static float getThrottle(DB_EternalInput DBRow)
             {
                 return DBRow.Throttle;
             }
-            public static float getStickyThrottle(DB_InputSchema DBRow)
+            public static float getStickyThrottle(DB_EternalInput DBRow)
             {
                 return DBRow.StickyThrottle;
             }
-            public static float getBrake(DB_InputSchema DBRow)
+            public static float getBrake(DB_EternalInput DBRow)
             {
                 return DBRow.Brake;
             }
-            public static int getFlaps (DB_InputSchema DBRow)
+            public static int getFlaps (DB_EternalInput DBRow)
             {
                 return DBRow.Flaps;
             }
-            public static float getAirplaneDrag (DB_InputSchema DBRow)
+            public static float getAirplaneDrag (DB_EternalInput DBRow)
             {
                 return DBRow.AirplaneDrag;
             }
-            public static float getAirplaneAngularDrag (DB_InputSchema DBRow)
+            public static float getAirplaneAngularDrag (DB_EternalInput DBRow)
             {
                 return DBRow.AirplaneAngularDrag;
             }
-            public static float getAirplanemaxMPH (DB_InputSchema DBRow)
+            public static float getAirplanemaxMPH (DB_EternalInput DBRow)
             {
                 return DBRow.AirplanemaxMPH;
             }
-            public static float getMaxLiftPower (DB_InputSchema DBRow)
+            public static float getMaxLiftPower (DB_EternalInput DBRow)
             {
                 return DBRow.MaxLiftPower;
             }
             #endregion
         #endregion
-
 
         #region Transaction
             /// <summary>
