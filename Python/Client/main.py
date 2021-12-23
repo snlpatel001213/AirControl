@@ -33,8 +33,9 @@ if __name__=="__main__":
             "MsgType": "Transcation",
             "Version": "0.0.3",
             "InputControlType": "Code",
-            "LevelReload": "true",
-            "ActiveCamera": 1
+            "LevelReload": "false",
+            "ActiveCamera": 1,
+            "GetOutput": "true"
 
         }
 
@@ -50,8 +51,8 @@ if __name__=="__main__":
         try:
             
             sock.sendall(data.encode("utf-8"))
-            # data = sock.recv(1024).decode("utf-8")
-            # print(data)
+            data = sock.recv(1024).decode("utf-8")
+            print(data)
 
         except Exception as e:
             print(">>>>>>>>>>>>",e)

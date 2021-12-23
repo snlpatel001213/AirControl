@@ -1,3 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSQLite4Unity3d_1_1BaseTableQuery_1_1Ordering.html" title=" " alt="" coords="5,5,199,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,92,39"/>
+<area shape="rect" id="node2" href="$classSQLite4Unity3d_1_1SQLiteException.html" title=" " alt="" coords="140,13,373,39"/>
+<area shape="rect" id="node3" href="$classSQLite4Unity3d_1_1NotNullConstraintViolationException.html" title=" " alt="" coords="421,5,664,47"/>
 </map>

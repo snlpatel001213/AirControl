@@ -1,6 +1,7 @@
 {
   "MsgType": "StartUp",
   "Version": "0.0.3",
+  "InputControlType": "Other",
   "airplaneMass": 1000.0,
   "fuel": 61.0,
   "fuelBurnRate": 6.1,

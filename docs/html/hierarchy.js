@@ -16,12 +16,12 @@ var hierarchy =
     [ "SQLite4Unity3d.BaseTableQuery", "classSQLite4Unity3d_1_1BaseTableQuery.html", [
       [ "SQLite4Unity3d.TableQuery< T >", "classSQLite4Unity3d_1_1TableQuery.html", null ]
     ] ],
-    [ "Communicator.StructDef.Camera", "structCommunicator_1_1StructDef_1_1Camera.html", null ],
     [ "SQLite4Unity3d.TableMapping.Column", "classSQLite4Unity3d_1_1TableMapping_1_1Column.html", null ],
     [ "SQLite4Unity3d.SQLiteConnection.ColumnInfo", "classSQLite4Unity3d_1_1SQLiteConnection_1_1ColumnInfo.html", null ],
+    [ "SqliteDB.DB_EternalInput", "classSqliteDB_1_1DB__EternalInput.html", null ],
+    [ "SqliteDB.DB_EternalOutput", "classSqliteDB_1_1DB__EternalOutput.html", null ],
     [ "SqliteDB.DB_Init", "classSqliteDB_1_1DB__Init.html", null ],
-    [ "SqliteDB.DB_InputSchema", "classSqliteDB_1_1DB__InputSchema.html", null ],
-    [ "SqliteDB.DB_OutputSchema", "classSqliteDB_1_1DB__OutputSchema.html", null ],
+    [ "SqliteDB.DB_StartUpSchema", "classSqliteDB_1_1DB__StartUpSchema.html", null ],
     [ "SqliteDB.DB_Transactions", "classSqliteDB_1_1DB__Transactions.html", null ],
     [ "Editor", null, [
       [ "AirControl.AC_BaseAirplane_Input_Editor", "classAirControl_1_1AC__BaseAirplane__Input__Editor.html", null ],
@@ -48,9 +48,6 @@ var hierarchy =
     [ "IEnumerable", null, [
       [ "SQLite4Unity3d.TableQuery< T >", "classSQLite4Unity3d_1_1TableQuery.html", null ]
     ] ],
-    [ "Communicator.StructDef.Init", "structCommunicator_1_1StructDef_1_1Init.html", null ],
-    [ "Communicator.StructDef.InputDataStruct", "structCommunicator_1_1StructDef_1_1InputDataStruct.html", null ],
-    [ "Communicator.StructDef.InputStruct", "structCommunicator_1_1StructDef_1_1InputStruct.html", null ],
     [ "MonoBehaviour", null, [
       [ "AirControl.AC_Airplane_Airspeed", "classAirControl_1_1AC__Airplane__Airspeed.html", null ],
       [ "AirControl.AC_Airplane_Altimeter", "classAirControl_1_1AC__Airplane__Altimeter.html", null ],
@@ -84,7 +81,6 @@ var hierarchy =
       [ "Communicator.InputHandle", "classCommunicator_1_1InputHandle.html", null ]
     ] ],
     [ "SQLite4Unity3d.BaseTableQuery.Ordering", "classSQLite4Unity3d_1_1BaseTableQuery_1_1Ordering.html", null ],
-    [ "Communicator.StructDef.OutputDataStructure", "structCommunicator_1_1StructDef_1_1OutputDataStructure.html", null ],
     [ "SQLite4Unity3d.SQLiteCommand", "classSQLite4Unity3d_1_1SQLiteCommand.html", null ],
     [ "SQLite4Unity3d.SQLiteConnectionString", "classSQLite4Unity3d_1_1SQLiteConnectionString.html", null ],
     [ "SQLite4Unity3d.TableMapping", "classSQLite4Unity3d_1_1TableMapping.html", null ]

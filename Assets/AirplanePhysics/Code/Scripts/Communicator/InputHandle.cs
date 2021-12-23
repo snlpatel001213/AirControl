@@ -56,14 +56,15 @@ namespace Communicator
                 });
                 connection.Commit();
             }
-            if (MsgType=="Transcation") // if operation type is transaction
+            else if (MsgType=="Transcation") // if operation type is transaction
             {   
                 bool levelReload = bool.Parse(inputJson["LevelReload"].ToString());
-                Debug.Log("Level reload value "+ levelReload);
                 //Camera
                 int activeCamera = int.Parse(inputJson["ActiveCamera"].ToString());
                 //input type
                 string inputControlType = inputJson["InputControlType"].ToString();
+                // dummy variable to trigger output without giving any input
+                bool getOutput = bool.Parse(inputJson["GetOutput"].ToString());
                 
                 connection = DB_Init.GetConnection();
                 connection.InsertOrReplace(new DB_Transactions{
@@ -72,13 +73,35 @@ namespace Communicator
                     // Camrera control
                     ActiveCamera = activeCamera,
                     //level reset
-                    LevelReload = levelReload
+                    LevelReload = levelReload,
+                    // get output (without input)
+                    GetOutput = getOutput
                 });
                 connection.Commit();
 
             }
-        }
-            
+            else if (MsgType=="Outgoing") // if operation type is transaction
+            {   
+                connection = DB_Init.GetConnection();
+                connection.InsertOrReplace(new DB_EternalOutput{
+                    MsgType = "Outgoing",
+                    InputControlType = "inputControlType",
+                    // Camrera control
+                });
+                connection.Commit();
+
+            }
+            else if (MsgType=="StartUp") // if operation type is transaction
+            {   
+                connection = DB_Init.GetConnection();
+                connection.InsertOrReplace(new DB_StartUpSchema{
+                    MsgType = "StartUp",
+                    InputControlType = "inputControlType",
+                    // Camrera control
+                });
+                connection.Commit();
+            }
+        }    
         
 
         // send msg out of unity

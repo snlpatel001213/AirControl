@@ -33,9 +33,10 @@ var NAVTREE =
       [ "Research Inspirations", "md__home_supatel_Documents_AirControl_README.html#autotoc_md6", [
         [ "Feel free to list your research topic you love to work on over here. Collaborate and publish.", "md__home_supatel_Documents_AirControl_README.html#autotoc_md7", null ]
       ] ],
-      [ "Contribute", "md__home_supatel_Documents_AirControl_README.html#autotoc_md8", null ]
+      [ "Contribute", "md__home_supatel_Documents_AirControl_README.html#autotoc_md8", [
+        [ "Current Contributors", "md__home_supatel_Documents_AirControl_README.html#autotoc_md9", null ]
+      ] ]
     ] ],
-    [ "reference", "md__home_supatel_Documents_AirControl_Assets_AirplanePhysics_Code_Scripts_Database_reference.html", null ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
     ] ],

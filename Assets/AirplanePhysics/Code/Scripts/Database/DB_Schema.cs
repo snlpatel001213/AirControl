@@ -70,6 +70,9 @@ namespace SqliteDB
 		public string MsgType  { get; set; } = "Outgoing";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public string InputControlType {get;set;} = "Other";
+
 	}
 	/// <summary>
 	/// Class to just transact once to the game engine
@@ -87,6 +90,8 @@ namespace SqliteDB
 		public bool LevelReload {get; set;} = false; 
 		// Which camera is active
 		public int ActiveCamera { get; set; } = 0;
+		// Force outoput
+		public bool GetOutput {get; set;} = false;
 	}
 
 	public class DB_StartUpSchema
@@ -95,6 +100,8 @@ namespace SqliteDB
 		public string MsgType  { get; set; } = "StartUp";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public string InputControlType {get;set;} = "Other";
 		//set Airplane masss
 		public float airplaneMass {get; set;} = 1000f; 
 		//set Airplane fuel

@@ -11,7 +11,7 @@ using AirControl;
 
 namespace Communicator
 {
-	public class Communicator : MonoBehaviour
+	public class NetworkCommunicator : MonoBehaviour
 	{
 		// Start is called before the first frame update
 		#region private members 	
@@ -33,7 +33,8 @@ namespace Communicator
 		[Tooltip("Drag and drop here the  AC_BaseAirplane_Input.cs OR AC_XboxAirplane_Input.cs")]
 		public AC_BaseAirplane_Input currentReadings;
 
-		public InputHandle InOutManager;
+		public InputHandle inputHandle;
+		public OutputHandle outputHandle;
 		#endregion 	
 		
 		#region  Default Methods
@@ -57,26 +58,34 @@ namespace Communicator
 				tcpListener = new TcpListener(IPAddress.Parse("127.0.0.1"), 8053); 			
 				tcpListener.Start();              
 				Debug.Log("Server is listening");              
-				Byte[] bytes = new Byte[1024];  			
-				while (true) { 				
-					using (connectedTcpClient = tcpListener.AcceptTcpClient()) { 					
-						// Get a stream object for reading 					
-						using (NetworkStream stream = connectedTcpClient.GetStream()) { 						
-							int length; 						
-							// Read incomming stream into byte arrary. 						
-							while ((length = stream.Read(bytes, 0, bytes.Length)) != 0) { 							
-								var incommingData = new byte[length]; 							
-								Array.Copy(bytes, 0, incommingData, 0, length);  							
-								// Convert byte array to string message. 							
-								string clientMessage = Encoding.ASCII.GetString(incommingData); 
-								InOutManager.ParseInput(clientMessage);							
-								// once received the message, send message in return
-								// string outputmsg = InOutManager.ParseOutput(currentReadings);
-								// SendMessage(outputmsg);				
-							} 					
-						} 				
-					} 			
-				} 
+				Byte[] bytes = new Byte[1024];
+				if(inputHandle)
+				{
+					while (true) { 				
+							using (connectedTcpClient = tcpListener.AcceptTcpClient()) { 					
+								// Get a stream object for reading 					
+								using (NetworkStream stream = connectedTcpClient.GetStream()) { 						
+									int length; 						
+									// Read incomming stream into byte arrary. 						
+									while ((length = stream.Read(bytes, 0, bytes.Length)) != 0) { 							
+										var incommingData = new byte[length]; 							
+										Array.Copy(bytes, 0, incommingData, 0, length);  							
+										// Convert byte array to string message. 							
+										string clientMessage = Encoding.ASCII.GetString(incommingData); 
+										inputHandle.ParseInput(clientMessage);							
+										// once received the message, send message in return
+										string outputmsg = outputHandle.ParseOutput();
+										SendMessage(outputmsg);				
+									} 					
+								} 				
+							} 			
+						} 
+				}
+				else
+				{
+					Debug.Log("InputHandle is detached in from Network manager. Go to Unity Hierarchy, look at inspeector, drag and drop InputHandle onto Network communicator");
+				}		
+				
 						
 			} 		
 			catch (SocketException socketException) { 			

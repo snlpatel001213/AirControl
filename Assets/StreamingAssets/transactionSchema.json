@@ -3,5 +3,6 @@
   "Version": "0.0.3",
   "InputControlType": "Other",
   "LevelReload": false,
-  "ActiveCamera": 0
+  "ActiveCamera": 0,
+  "GetOutput": false
 }

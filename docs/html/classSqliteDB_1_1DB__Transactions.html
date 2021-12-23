@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.2</span>
+   &#160;<span id="projectnumber">0.0.3</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -95,17 +95,34 @@ $(document).ready(function(){initNavTree('classSqliteDB_1_1DB__Transactions.html
 <div class="title">SqliteDB.DB_Transactions Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Class to just transact once to the game engine This can be used for level releoad or setting gameplay volume etc  
+ <a href="classSqliteDB_1_1DB__Transactions.html#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
-<tr class="memitem:a237cd09620ba942325a1c3ebcf674c40"><td class="memItemLeft" align="right" valign="top"><a id="a237cd09620ba942325a1c3ebcf674c40"></a>
-string&#160;</td><td class="memItemRight" valign="bottom"><b>Direction</b> = &quot;Transcation&quot;<code> [get, set]</code></td></tr>
-<tr class="separator:a237cd09620ba942325a1c3ebcf674c40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e9a04ee2b5f6e7251a654475a656bc6"><td class="memItemLeft" align="right" valign="top"><a id="a5e9a04ee2b5f6e7251a654475a656bc6"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>MsgType</b> = &quot;Transcation&quot;<code> [get, set]</code></td></tr>
+<tr class="separator:a5e9a04ee2b5f6e7251a654475a656bc6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acfd1e42173f2001bf706bf734b36df86"><td class="memItemLeft" align="right" valign="top"><a id="acfd1e42173f2001bf706bf734b36df86"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>Version</b> = CommonFunctions.GET_VERSION()<code> [get, set]</code></td></tr>
+<tr class="separator:acfd1e42173f2001bf706bf734b36df86"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a156b0a99a6495d7e6c48143787397831"><td class="memItemLeft" align="right" valign="top"><a id="a156b0a99a6495d7e6c48143787397831"></a>
+string&#160;</td><td class="memItemRight" valign="bottom"><b>InputControlType</b> = &quot;Other&quot;<code> [get, set]</code></td></tr>
+<tr class="separator:a156b0a99a6495d7e6c48143787397831"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a58d7e42dc802e8bdac92f8fd39cbe66e"><td class="memItemLeft" align="right" valign="top"><a id="a58d7e42dc802e8bdac92f8fd39cbe66e"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>LevelReload</b> = false<code> [get, set]</code></td></tr>
 <tr class="separator:a58d7e42dc802e8bdac92f8fd39cbe66e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a02a3f06678090746dfad7f5021500f61"><td class="memItemLeft" align="right" valign="top"><a id="a02a3f06678090746dfad7f5021500f61"></a>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>ActiveCamera</b> = 0<code> [get, set]</code></td></tr>
+<tr class="separator:a02a3f06678090746dfad7f5021500f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7099e616f44571ea61884bd078da659"><td class="memItemLeft" align="right" valign="top"><a id="af7099e616f44571ea61884bd078da659"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>GetOutput</b> = false<code> [get, set]</code></td></tr>
+<tr class="separator:af7099e616f44571ea61884bd078da659"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Class to just transact once to the game engine This can be used for level releoad or setting gameplay volume etc </p>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>DB_Schema.cs</li>
 </ul>
 </div><!-- contents -->

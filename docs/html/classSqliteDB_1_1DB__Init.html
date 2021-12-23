@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.2</span>
+   &#160;<span id="projectnumber">0.0.3</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -101,8 +101,11 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a3715a54becab16bf3ac4f36ab51aa4d7"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html">SQLiteConnection</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDB_1_1DB__Init.html#a3715a54becab16bf3ac4f36ab51aa4d7">GetConnection</a> ()</td></tr>
 <tr class="memdesc:a3715a54becab16bf3ac4f36ab51aa4d7"><td class="mdescLeft">&#160;</td><td class="mdescRight">To ge the connection to the SQLite database Connection can be used to Interact with Database  <a href="classSqliteDB_1_1DB__Init.html#a3715a54becab16bf3ac4f36ab51aa4d7">More...</a><br /></td></tr>
 <tr class="separator:a3715a54becab16bf3ac4f36ab51aa4d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab19bf2f438fe12cf27bd12e3f82c6336"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDB_1_1DB__Init.html#ab19bf2f438fe12cf27bd12e3f82c6336">createSchema&lt; T &gt;</a> (<a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html">SQLiteConnection</a> connection, string schemaName)</td></tr>
+<tr class="memdesc:ab19bf2f438fe12cf27bd12e3f82c6336"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create the schema  <a href="classSqliteDB_1_1DB__Init.html#ab19bf2f438fe12cf27bd12e3f82c6336">More...</a><br /></td></tr>
+<tr class="separator:ab19bf2f438fe12cf27bd12e3f82c6336"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb638fdeccc66c0298df84e84923c34c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDB_1_1DB__Init.html#acb638fdeccc66c0298df84e84923c34c">CreateDB</a> ()</td></tr>
-<tr class="memdesc:acb638fdeccc66c0298df84e84923c34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Delete existing DB and create new SQLite DB Insert default paramter values to DB to prevent null point exception Write parameter schema file (json). these parameters can be externally modified  <a href="classSqliteDB_1_1DB__Init.html#acb638fdeccc66c0298df84e84923c34c">More...</a><br /></td></tr>
+<tr class="memdesc:acb638fdeccc66c0298df84e84923c34c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create new schem if the *schema.json dont exists. if *schema.json exist then read the paramters and insert in the db as default parameters if version of *schema.json and version of release dont match then existing files will be deleted and new *schema.json will be created.  <a href="classSqliteDB_1_1DB__Init.html#acb638fdeccc66c0298df84e84923c34c">More...</a><br /></td></tr>
 <tr class="separator:acb638fdeccc66c0298df84e84923c34c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a204e602fdf2ef162fe655126c9fdc016"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDB_1_1DB__Init.html#a204e602fdf2ef162fe655126c9fdc016">CreateTable&lt; T &gt;</a> (<a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html">SQLiteConnection</a> connection)</td></tr>
 <tr class="separator:a204e602fdf2ef162fe655126c9fdc016"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -131,7 +134,66 @@ Static Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Delete existing DB and create new SQLite DB Insert default paramter values to DB to prevent null point exception Write parameter schema file (json). these parameters can be externally modified </p>
+<p>Create new schem if the *schema.json dont exists. if *schema.json exist then read the paramters and insert in the db as default parameters if version of *schema.json and version of release dont match then existing files will be deleted and new *schema.json will be created. </p>
+
+</div>
+</div>
+<a id="ab19bf2f438fe12cf27bd12e3f82c6336"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab19bf2f438fe12cf27bd12e3f82c6336">&#9670;&nbsp;</a></span>createSchema&lt; T &gt;()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void SqliteDB.DB_Init.createSchema&lt; T &gt; </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html">SQLiteConnection</a>&#160;</td>
+          <td class="paramname"><em>connection</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">string&#160;</td>
+          <td class="paramname"><em>schemaName</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create the schema </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">connection</td><td></td></tr>
+    <tr><td class="paramname">schemaName</td><td>name of the Json file to be created</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="tparams"><dt>Template Parameters</dt><dd>
+  <table class="tparams">
+    <tr><td class="paramname">T</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="typeconstraint">
+<dl><dt><b>Type Constraints</b></dt><dd>
+<table border="0" cellspacing="2" cellpadding="0">
+<tr><td valign="top"><em>T</em></td><td>&#160;:</td><td valign="top"><em>new()</em></td><td>&#160;</td></tr>
+</table>
+</dd>
+</dl>
+</div>
 
 </div>
 </div>
