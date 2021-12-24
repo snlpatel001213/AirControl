@@ -2,13 +2,13 @@
   "MsgType": "StartUp",
   "Version": "0.0.3",
   "InputControlType": "Other",
-  "airplaneMass": 1000.0,
-  "fuel": 61.0,
-  "fuelBurnRate": 6.1,
-  "startLocation_x": 6.1,
-  "startLocation_y": 6.1,
-  "startLocation_z": 6.1,
-  "startRotation_x": 6.1,
-  "startRotation_y": 6.1,
-  "startRotation_z": 6.1
+  "AirplaneMass": 1000.0,
+  "Fuel": 61.0,
+  "FuelBurnRate": 6.1,
+  "StartLocation_x": 6.1,
+  "StartLocation_y": 6.1,
+  "StartLocation_z": 6.1,
+  "StartRotation_x": 6.1,
+  "StartRotation_y": 6.1,
+  "StartRotation_z": 6.1
 }

@@ -106,12 +106,20 @@ namespace SqliteDB
             /// <param name="connection"></param>
             public static void resetLevelReset(SQLiteConnection connection)
                 {
-                    connection.InsertOrReplace(new DB_Transactions{
-                    MsgType = "Transcation",
-                    LevelReload = false
-                    });
+                    DB_Transactions currentSchema = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
+                    currentSchema.LevelReload =false;
+                    connection.InsertOrReplace(currentSchema);
 
                 }
+            /// <summary>
+            /// Set active to false to decrese the computational load
+            /// </summary>
+            /// <param name="connection"></param>
+            public static void UnsetActive(SQLiteConnection connection){
+                DB_Transactions currentSchema = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
+                currentSchema.IsActive =false;
+                connection.InsertOrReplace(currentSchema);
+            }
         #endregion
     }
 }

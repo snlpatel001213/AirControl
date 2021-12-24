@@ -47,7 +47,7 @@ if __name__=="__main__":
         #     "Init":{},
         # }
 
-        data = json.dumps(dict__)
+        data = json.dumps(dict_)
         try:
             
             sock.sendall(data.encode("utf-8"))

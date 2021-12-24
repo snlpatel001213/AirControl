@@ -53,6 +53,7 @@ namespace SqliteDB
         /// <typeparam name="T"></typeparam>
         public static void createSchema<T>( SQLiteConnection connection, string schemaName) where T : new()
         {
+            DropTable<T>(connection);
             CreateTable<T>(connection);
             connection.InsertOrReplace(new T());
             string json = JsonConvert.SerializeObject(new T(),Formatting.Indented);
@@ -78,9 +79,14 @@ namespace SqliteDB
                     DB_EternalInput existingSchema = CommonFunctions.DeserializeJson<DB_EternalInput>(existingInSchemaPath);
                     if(existingSchema.Version.ToString() == CommonFunctions.GET_VERSION())
                     {
-                        CreateTable<DB_EternalInput>(connection);
-                        connection.InsertOrReplace(existingSchema);
-                        Debug.Log("Created from existing schema");
+                        try //if schema is cchnaged then it may throw exception 
+                        {
+                            CreateTable<DB_EternalInput>(connection);
+                            connection.InsertOrReplace(existingSchema);
+                        }
+                        catch{ // so when this occurs, generate new schema 
+                            createSchema<DB_EternalInput>(connection,"outputSchema.json" );
+                        }
                     }
                     else // if schema file dont match then use the internal defaults values and write to file
                     {
@@ -102,8 +108,15 @@ namespace SqliteDB
                 DB_EternalOutput existingOutSchema = CommonFunctions.DeserializeJson<DB_EternalOutput>(existingOutSchemaPath);
                 if(existingOutSchema.Version.ToString() == CommonFunctions.GET_VERSION())
                 {
-                    CreateTable<DB_EternalOutput>(connection);
-                    connection.InsertOrReplace(existingOutSchema);
+                    try //if schema is cchnaged then it may throw exception 
+                    {
+                        CreateTable<DB_EternalOutput>(connection);
+                        connection.InsertOrReplace(existingOutSchema);
+                    }
+                    catch{ // so when this occurs, generate new schema 
+                        createSchema<DB_EternalOutput>(connection,"outputSchema.json" );
+                    }
+                    
                 }
                 else // if schema file dont match then use the internal defaults values and write to file
                 {
@@ -125,8 +138,14 @@ namespace SqliteDB
                     DB_Transactions existingTransactionSchema = CommonFunctions.DeserializeJson<DB_Transactions>(existingTransactionSchemaPath);
                     if(existingTransactionSchema.Version.ToString() == CommonFunctions.GET_VERSION())
                     {
-                        CreateTable<DB_Transactions>(connection);
-                        connection.InsertOrReplace(existingTransactionSchema);
+                        try //if schema is cchnaged then it may throw exception 
+                        {
+                            CreateTable<DB_Transactions>(connection);
+                            connection.InsertOrReplace(existingTransactionSchema);
+                        }
+                        catch{ // so when this occurs, generate new schema 
+                            createSchema<DB_Transactions>(connection,"outputSchema.json" );
+                        }
                     }
                     else // if schema file dont match then use the internal defaults values and write to file
                     {
@@ -148,8 +167,14 @@ namespace SqliteDB
                     DB_StartUpSchema existingStartUpSchema = CommonFunctions.DeserializeJson<DB_StartUpSchema>(existingTransactionSchemaPath);
                     if(existingStartUpSchema.Version.ToString() == CommonFunctions.GET_VERSION())
                     {
-                        CreateTable<DB_StartUpSchema>(connection);
-                        connection.InsertOrReplace(existingStartUpSchema);
+                        try //if schema is cchnaged then it may throw exception 
+                        {
+                            CreateTable<DB_StartUpSchema>(connection);
+                            connection.InsertOrReplace(existingStartUpSchema);
+                        }
+                        catch{ // so when this occurs, generate new schema 
+                            createSchema<DB_StartUpSchema>(connection,"outputSchema.json" );
+                        }
                     }
                     else // if schema file dont match then use the internal defaults values and write to file
                     {
@@ -174,6 +199,11 @@ namespace SqliteDB
         {
             Debug.Log("Table Created" + typeof(T));
             connection.CreateTable<T>();
+        }
+        public static void DropTable<T>(SQLiteConnection connection)
+        {
+            Debug.Log("Table Created" + typeof(T));
+            connection.DropTable<T>();
         }   
 
         #endregion

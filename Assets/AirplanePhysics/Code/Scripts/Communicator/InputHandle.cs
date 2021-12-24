@@ -18,6 +18,7 @@ namespace Communicator
 
         #region Custom Methods
         // receive msg to unity
+        
         public void ParseInput(string receivedString)
         {
             // Parse input
@@ -25,6 +26,7 @@ namespace Communicator
             // MsgType can be Transaction or Continuous
             string MsgType = inputJson["MsgType"].ToString();
             Debug.Log("MsgType : "+ MsgType);
+            # region Input
             if (MsgType=="Incoming")
             {
                 //input type
@@ -56,6 +58,9 @@ namespace Communicator
                 });
                 connection.Commit();
             }
+            #endregion
+
+            #region  Transaction
             else if (MsgType=="Transcation") // if operation type is transaction
             {   
                 bool levelReload = bool.Parse(inputJson["LevelReload"].ToString());
@@ -65,9 +70,16 @@ namespace Communicator
                 string inputControlType = inputJson["InputControlType"].ToString();
                 // dummy variable to trigger output without giving any input
                 bool getOutput = bool.Parse(inputJson["GetOutput"].ToString());
+                //set sun location
+                float sunLatitude = float.Parse(inputJson["SunLatitude"].ToString());
+                float sunLongitude = float.Parse(inputJson["SunLongitude"].ToString());
+                int sunHour = int.Parse(inputJson["SunHour"].ToString());
+                int sunMinute = int.Parse(inputJson["SunMinute"].ToString());
+                bool isActive = bool.Parse(inputJson["IsActive"].ToString());
                 
                 connection = DB_Init.GetConnection();
                 connection.InsertOrReplace(new DB_Transactions{
+                    //primary key
                     MsgType = "Transcation",
                     InputControlType = inputControlType,
                     // Camrera control
@@ -75,11 +87,21 @@ namespace Communicator
                     //level reset
                     LevelReload = levelReload,
                     // get output (without input)
-                    GetOutput = getOutput
+                    GetOutput = getOutput,
+                    //set sun location
+                    SunLatitude = sunLatitude,
+                    SunLongitude =sunLongitude,
+                    SunHour = sunHour,
+                    SunMinute = sunMinute,
+                    IsActive = isActive
+                    
                 });
                 connection.Commit();
 
             }
+            #endregion
+
+            #region Outgoing
             else if (MsgType=="Outgoing") // if operation type is transaction
             {   
                 connection = DB_Init.GetConnection();
@@ -91,6 +113,9 @@ namespace Communicator
                 connection.Commit();
 
             }
+            #endregion
+            
+            # region StartUp
             else if (MsgType=="StartUp") // if operation type is transaction
             {   
                 connection = DB_Init.GetConnection();
@@ -101,6 +126,7 @@ namespace Communicator
                 });
                 connection.Commit();
             }
+            #endregion
         }    
         
 
