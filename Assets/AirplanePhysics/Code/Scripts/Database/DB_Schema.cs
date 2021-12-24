@@ -46,11 +46,6 @@ namespace SqliteDB
 		//Control Flaps
 		public int Flaps  {get; set;}=0;
 
-		// public override string ToString ()
-		// {
-		// 	return string.Format ("[Active Camera={0}]", ActiveCamera);
-		// }
-
 	}
 
 	/// <summary>
@@ -68,7 +63,8 @@ namespace SqliteDB
 		public float MSL{get;set;}  = 0.0f;
 		public float CurrentRPM{get;set;}  = 0.0f;
 		public float MaxRPM{get;set;}  = 0.0f;
-		public float FinalPower{get;set;}  = 0.0f;
+		public float MaxPower{get;set;}  = 0.0f;
+		public float CurrentPower{get;set;}  = 0.0f;
 		public float CurrentFuel{get;set;}  = 0.0f;
 		public float CurrentSpeed{get;set;}  = 0.0f;
 		public float BankAngle{get;set;}  = 0.0f;

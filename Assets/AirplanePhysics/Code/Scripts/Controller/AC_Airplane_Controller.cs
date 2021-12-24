@@ -93,22 +93,22 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
-        protected override void HandlePhysics()
+        protected override void HandlePhysics(SQLiteConnection connection)
         {
             if(input)
             {
-                HandleEngines();
+                HandleEngines(connection);
                 HandleCharacteristics();
                 HandleControlSurfaces();
                 HandleWheel();
-                HandleAltitude();
+                HandleAltitude(connection);
             }// handle else
 
             // DB based update
             
         }
 
-        void HandleEngines()
+        void HandleEngines(SQLiteConnection connection)
         {
             if(engines != null)
             {
@@ -116,13 +116,13 @@ namespace AirControl
                 {
                     foreach(AC_Airplane_Engine engine in engines)
                     {
-                        rb.AddForce(engine.CalculateForce(input.StickyThrottle));
+                        rb.AddForce(engine.CalculateForce(input.StickyThrottle, connection));
                     }
                 }
             }
 
         }
-        void HandleCharacteristics()
+        void HandleCharacteristics( )
         {
             if (characteristics)
             {
@@ -130,7 +130,7 @@ namespace AirControl
             }
             
         }
-        void HandleControlSurfaces()
+        void HandleControlSurfaces( )
         {
             if(controlSurfaces.Count > 0)
             {
@@ -139,7 +139,7 @@ namespace AirControl
                 }
             }
         }
-        void HandleWheel(){
+        void HandleWheel( ){
             if (wheels.Count>0)
             {
                 foreach (AC_Airplane_Wheel wheel in wheels)
@@ -149,7 +149,7 @@ namespace AirControl
             }
 
         }
-        void HandleAltitude(){
+        void HandleAltitude(SQLiteConnection connection){
             currentMSL  =  transform.position.y * metersToFeets;
             RaycastHit hit;
             if(Physics.Raycast(transform.position, Vector3.down, out hit))
@@ -159,6 +159,11 @@ namespace AirControl
                     currentAGL = (hit.distance) *metersToFeets;
                 }
             }
+
+            #region DBArea
+            //Set value of AGL and MSL to DB
+            DB_Functions.SetMSLAndAGL(connection, currentMSL, currentAGL);
+            #endregion
         }
        
         #endregion

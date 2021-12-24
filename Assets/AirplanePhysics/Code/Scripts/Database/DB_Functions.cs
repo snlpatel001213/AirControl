@@ -121,5 +121,25 @@ namespace SqliteDB
                 connection.InsertOrReplace(currentSchema);
             }
         #endregion
+
+        #region Output
+            public static void SetMSLAndAGL(SQLiteConnection connection, float msl, float agl){
+
+                DB_EternalOutput currentSchema = connection.Table<DB_EternalOutput>().Where(x => x.MsgType == "Outgoing").FirstOrDefault();
+                currentSchema.MSL =msl;
+                currentSchema.AGL =agl;
+                connection.InsertOrReplace(currentSchema);
+                
+            }
+            public static void SetEngineVariables(SQLiteConnection connection, float maxForce, float finalPower, float maxRPM, float currentRPM)
+            {
+                DB_EternalOutput currentSchema = connection.Table<DB_EternalOutput>().Where(x => x.MsgType == "Outgoing").FirstOrDefault();
+                currentSchema.MaxRPM = maxRPM;
+                currentSchema.MaxPower = maxForce;
+                currentSchema.CurrentRPM =currentRPM;
+                currentSchema.CurrentPower = finalPower;
+                connection.InsertOrReplace(currentSchema);
+            }
+        #endregion
     }
 }

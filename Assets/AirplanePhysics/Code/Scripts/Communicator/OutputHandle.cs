@@ -16,22 +16,11 @@ namespace Communicator
         public string  ParseOutput()
         {
             connection = DB_Init.GetConnection();
-            DB_Transactions outputSchema = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
+            DB_EternalOutput outputSchema = connection.Table<DB_EternalOutput>().Where(x => x.MsgType == "Outgoing").FirstOrDefault();
             // get all the thing in the table
             string output = JsonConvert.SerializeObject(outputSchema);
             return output;
         }
-
-        // /// <summary>
-        // /// Direct trigger handles all those action which does not require to be put in update loop
-        // /// </summary>
-        // public static void  TriggerSendMessage(SQLiteConnection connection)
-        // {
-        //     DB_Transactions outputSchema = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
-        //     // get all the thing in the table
-        //     string output = JsonConvert.SerializeObject(outputSchema);
-                    
-        // }
     }
 
 }

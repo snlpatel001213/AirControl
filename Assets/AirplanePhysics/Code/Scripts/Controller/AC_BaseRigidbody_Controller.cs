@@ -43,7 +43,7 @@ namespace AirControl
         void FixedUpdate()
         {
             if(rb){
-                HandlePhysics();
+                HandlePhysics(connection);
             }
             // DB based operations
             
@@ -51,7 +51,7 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
-        protected virtual void HandlePhysics(){
+        protected virtual void HandlePhysics(SQLiteConnection connection){
 
         }
         #endregion
