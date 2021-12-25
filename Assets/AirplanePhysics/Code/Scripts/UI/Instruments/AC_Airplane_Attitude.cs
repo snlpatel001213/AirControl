@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SQLite4Unity3d;
+using SqliteDB;
 
 namespace AirControl
 {
@@ -16,7 +17,7 @@ namespace AirControl
 
 
         #region Interface Methods
-        public void HandleAirplaneUI()
+        public void HandleAirplaneUI(SQLiteConnection connection)
         {
             if(airplane)
             {
@@ -38,6 +39,10 @@ namespace AirControl
                         arrowRect.transform.rotation = bankRotation;
                     }
                 }
+                #region DBArea
+                //Set value of AGL and MSL to DB
+                DB_Functions.SetAirplaneAngle(connection, bankAngle, pitchAngle);
+                #endregion 
 
             }
         }

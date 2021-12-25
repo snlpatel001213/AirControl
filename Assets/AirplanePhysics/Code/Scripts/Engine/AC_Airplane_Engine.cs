@@ -92,7 +92,7 @@ namespace AirControl
 
 
             // Process the Fuel
-            HandleFuel(finalThrottle);
+            HandleFuel(finalThrottle, connection);
 
 
             //Create Force
@@ -108,7 +108,7 @@ namespace AirControl
         }
 
 
-        void HandleFuel(float throttleValue)
+        void HandleFuel(float throttleValue, SQLiteConnection connection)
         {
             //Handle Fuel
             if(fuel)

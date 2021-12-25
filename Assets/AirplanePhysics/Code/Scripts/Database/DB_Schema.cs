@@ -69,21 +69,6 @@ namespace SqliteDB
 		public float CurrentSpeed{get;set;}  = 0.0f;
 		public float BankAngle{get;set;}  = 0.0f;
 		public float PitchAngle{get;set;}  = 0.0f;
-		//Control Pitch
-		public float Pitch  {get; set;}=0f;
-		//Control Roll
-		public float Roll  {get; set;} = 0f;
-		//Control Yaw
-		public float Yaw  {get; set;}=0f;
-		//Control Throttle
-		public float Throttle  {get; set;}=0f;
-		//Control Sticky Throttle
-		public float StickyThrottle  {get; set;}=0f;
-		//Control Brake
-		public float Brake  {get; set;}=0f;
-		//Control Flaps
-		public int Flaps  {get; set;}=0;
-
 	}
 	/// <summary>
 	/// Class to just transact once to the game engine

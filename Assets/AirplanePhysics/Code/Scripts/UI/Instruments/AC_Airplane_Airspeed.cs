@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using SQLite4Unity3d;
+using SqliteDB;
 
 namespace AirControl
 {
@@ -12,6 +13,7 @@ namespace AirControl
         public AC_Airplane_Characteristics characteristics;
         public RectTransform pointer;
         public float maxIndicatedKnots = 200f;
+        float currentKnots;
         #endregion
 
 
@@ -19,17 +21,22 @@ namespace AirControl
 
 
         #region Interface Methods
-        public void HandleAirplaneUI()
+        public void HandleAirplaneUI(SQLiteConnection connection)
         {
             if(characteristics && pointer)
             {
-                float currentKnots = characteristics.MPH * mphToKnts;
+                currentKnots = characteristics.MPH * mphToKnts;
                 //Debug.Log(currentKnots);
 
                 float normalizedKnots = Mathf.InverseLerp(0f, maxIndicatedKnots, currentKnots);
                 float wantedRotation = 360f * normalizedKnots;
                 pointer.rotation = Quaternion.Euler(0f, 0f, -wantedRotation);
             }
+
+            #region DBArea
+            //Set value of AGL and MSL to DB
+            DB_Functions.SetSpeed(connection, currentKnots);
+            #endregion         
         }
         #endregion
     }

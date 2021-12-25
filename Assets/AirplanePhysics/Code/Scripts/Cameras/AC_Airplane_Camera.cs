@@ -4,6 +4,7 @@ using UnityEngine;
 
 namespace  AirControl
 {
+    [RequireComponent(typeof(ImageSynthesis))]
     public class AC_Airplane_Camera : AC_Basic_Follow_Camera
     {
         #region Variables

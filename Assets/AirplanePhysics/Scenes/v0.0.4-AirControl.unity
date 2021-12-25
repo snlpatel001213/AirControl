@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18327306, g: 0.22698411, b: 0.29514247, a: 1}
+  m_IndirectSpecularColor: {r: 0.18334797, g: 0.22896393, b: 0.3061677, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2528,6 +2528,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -8010213848334407801, guid: 59251d6043d8c12fa9f0a2f92229f282, type: 3}
+      propertyPath: m_TagString
+      value: ground
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 59251d6043d8c12fa9f0a2f92229f282, type: 3}
       propertyPath: m_Name
       value: NewYork
@@ -2867,7 +2871,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791669347}
-  m_LocalRotation: {x: -0.18688439, y: 0.34635335, z: -0.070618756, w: -0.9165842}
+  m_LocalRotation: {x: 0.3074381, y: 0.036147185, z: -0.011687958, w: 0.9508095}
   m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2888,8 +2892,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longitude: -500.39
   latitude: -1650.4
-  hour: 12
-  minutes: 5
+  hour: 15
+  minutes: 8
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1835753706
