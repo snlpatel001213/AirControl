@@ -7,13 +7,18 @@ using System.Text;
 using System.Threading; 
 using UnityEngine;  
 using AirControl;
+using Newtonsoft.Json;
+using SqliteDB;
 
 
 namespace Communicator
 {
 	public class NetworkCommunicator : MonoBehaviour
 	{
-		// Start is called before the first frame update
+		
+		#region public members
+		#endregion
+
 		#region private members 	
 		/// <summary> 	
 		/// TCPListener to listen for incomming TCP connection 	
@@ -72,10 +77,10 @@ namespace Communicator
 										Array.Copy(bytes, 0, incommingData, 0, length);  							
 										// Convert byte array to string message. 							
 										string clientMessage = Encoding.ASCII.GetString(incommingData); 
-										inputHandle.ParseInput(clientMessage);							
+										inputHandle.ParseInput(clientMessage);				
 										// once received the message, send message in return
 										string outputmsg = outputHandle.ParseOutput();
-										SendMessage(outputmsg);				
+										SendMessage(outputmsg);
 									} 					
 								} 				
 							} 			
@@ -108,7 +113,7 @@ namespace Communicator
 					byte[] serverMessageAsByteArray = Encoding.ASCII.GetBytes(outStructSerialized); 				
 					// Write byte array to socketConnection stream.               
 					stream.Write(serverMessageAsByteArray, 0, serverMessageAsByteArray.Length);               
-					Debug.Log("Server sent his message - should be received by client");           
+					// Debug.Log("Server sent his message - should be received by client");           
 				}       
 			} 		
 			catch (SocketException socketException) {             

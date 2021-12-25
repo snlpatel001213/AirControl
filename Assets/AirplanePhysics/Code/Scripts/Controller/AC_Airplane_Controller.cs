@@ -161,8 +161,8 @@ namespace AirControl
             }
 
             #region DBArea
-            //Set value of AGL and MSL to DB
-            DB_Functions.SetMSLAndAGL(connection, currentMSL, currentAGL);
+            DB_StaticEternalOutput.MSL = currentMSL;
+            DB_StaticEternalOutput.AGL = currentAGL;
             #endregion
         }
        

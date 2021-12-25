@@ -51,24 +51,37 @@ namespace SqliteDB
 	/// <summary>
 	/// Class to output to external program
 	/// </summary>
+	public static class DB_StaticEternalOutput
+	{
+		public static string MsgType  { get; set; } = "Outgoing";
+		//Version of the sceme, IT will be same as the release version
+		public static  string Version {get;set;} = CommonFunctions.GET_VERSION();
+		public static float AGL;
+		public static float MSL;
+		public static float CurrentRPM;
+		public static float MaxRPM;
+		public static float MaxPower;
+		public static float CurrentPower;
+		public static float CurrentFuel;
+		public static float CurrentSpeed;
+		public static float BankAngle;
+		public static float PitchAngle;
+	}
 	public class DB_EternalOutput
 	{
-		[PrimaryKey]
 		public string MsgType  { get; set; } = "Outgoing";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
-		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public string InputControlType {get;set;} = "Other";
-		public float AGL{get;set;}  = 0.0f;
-		public float MSL{get;set;}  = 0.0f;
-		public float CurrentRPM{get;set;}  = 0.0f;
-		public float MaxRPM{get;set;}  = 0.0f;
-		public float MaxPower{get;set;}  = 0.0f;
-		public float CurrentPower{get;set;}  = 0.0f;
-		public float CurrentFuel{get;set;}  = 0.0f;
-		public float CurrentSpeed{get;set;}  = 0.0f;
-		public float BankAngle{get;set;}  = 0.0f;
-		public float PitchAngle{get;set;}  = 0.0f;
+		public float AGL;
+		public float MSL;
+		public float CurrentRPM;
+		public float MaxRPM;
+		public float MaxPower;
+		public float CurrentPower;
+		public float CurrentFuel;
+		public float CurrentSpeed;
+		public float BankAngle;
+		public float PitchAngle;
 	}
 	/// <summary>
 	/// Class to just transact once to the game engine

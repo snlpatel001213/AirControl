@@ -101,7 +101,11 @@ namespace AirControl
 
             #region DBArea
             //Setting Current engine paramters to DB
-            DB_Functions.SetEngineVariables(connection, maxForce, finalPower,  maxRPM, CurrentRPM);
+            // DB_Functions.SetEngineVariables(connection, maxForce, finalPower,  maxRPM, CurrentRPM);
+            DB_StaticEternalOutput.MaxPower = maxForce; // can be moved to start
+            DB_StaticEternalOutput.CurrentPower = finalPower;
+            DB_StaticEternalOutput.MaxRPM = maxRPM; // can be moved to start
+            DB_StaticEternalOutput.CurrentRPM = currentRPM;
             #endregion
 
             return finalForce;

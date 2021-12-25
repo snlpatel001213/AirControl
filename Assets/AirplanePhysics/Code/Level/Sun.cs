@@ -80,7 +80,7 @@ namespace AirControl
             time = date + new TimeSpan(hour, minutes, 0);
         }
 
-        private void Update()
+        private void FixedUpdate()
         {   
 
             //switching sun location as per the database
@@ -88,15 +88,12 @@ namespace AirControl
             
             SQLiteConnection connection = DB_Init.GetConnection();
             DB_Transactions DBRow = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
-            string DBTransactionControlType = DB_Functions.getInputControType(DBRow);
-            float sunLatitude = DBRow.SunLatitude;
-            float sunLongitude = DBRow.SunLongitude;
-            int sunHour = DBRow.SunHour;
-            int sunMinute = DBRow.SunMinute;
-            bool isActive = DBRow.IsActive;
-            if(DBTransactionControlType == "Code" && isActive)
+            if(DBRow.IsActive)
             {
-                Debug.Log("??>>>>>>>>> Setting Datetime");
+                float sunLatitude = DBRow.SunLatitude;
+                float sunLongitude = DBRow.SunLongitude;
+                int sunHour = DBRow.SunHour;
+                int sunMinute = DBRow.SunMinute;
                 SetTime(sunHour, sunMinute);
                 SetLocation(sunLatitude, sunLongitude);
                 // set is active to false to not let this loop run for all the updates

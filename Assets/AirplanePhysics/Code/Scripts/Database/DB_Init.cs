@@ -100,33 +100,7 @@ namespace SqliteDB
             #endregion
             
             #region DB_EternalOutput
-            string existingOutSchemaPath = System.IO.Path.Combine(persistentDataPath,"outputSchema.json");
-            // if inputschema file exists
-            if(File.Exists(existingOutSchemaPath))
-            {
-                // if version of the schema matches the release version
-                DB_EternalOutput existingOutSchema = CommonFunctions.DeserializeJson<DB_EternalOutput>(existingOutSchemaPath);
-                if(existingOutSchema.Version.ToString() == CommonFunctions.GET_VERSION())
-                {
-                    try //if schema is cchnaged then it may throw exception 
-                    {
-                        CreateTable<DB_EternalOutput>(connection);
-                        connection.InsertOrReplace(existingOutSchema);
-                    }
-                    catch{ // so when this occurs, generate new schema 
-                        createSchema<DB_EternalOutput>(connection,"outputSchema.json" );
-                    }
-                    
-                }
-                else // if schema file dont match then use the internal defaults values and write to file
-                {
-                    createSchema<DB_EternalOutput>(connection,"outputSchema.json" );
-                }
-            }    
-            else // if schema file dont exist then use the internal defaults values and write to file
-            {
-                createSchema<DB_EternalOutput>(connection,"outputSchema.json" );
-            }
+
             #endregion
 
             #region DB_Transactions

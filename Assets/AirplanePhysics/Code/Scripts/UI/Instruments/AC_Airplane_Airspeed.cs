@@ -34,8 +34,9 @@ namespace AirControl
             }
 
             #region DBArea
+            DB_StaticEternalOutput.CurrentSpeed = currentKnots;
             //Set value of AGL and MSL to DB
-            DB_Functions.SetSpeed(connection, currentKnots);
+            // DB_Functions.SetSpeed(connection, currentKnots);
             #endregion         
         }
         #endregion

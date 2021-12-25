@@ -25,7 +25,6 @@ namespace Communicator
             var inputJson =  JObject.Parse(receivedString);
             // MsgType can be Transaction or Continuous
             string MsgType = inputJson["MsgType"].ToString();
-            Debug.Log("MsgType : "+ MsgType);
             # region Input
             if (MsgType=="Incoming")
             {
@@ -95,20 +94,6 @@ namespace Communicator
                     SunMinute = sunMinute,
                     IsActive = isActive
                     
-                });
-                connection.Commit();
-
-            }
-            #endregion
-
-            #region Outgoing
-            else if (MsgType=="Outgoing") // if operation type is transaction
-            {   
-                connection = DB_Init.GetConnection();
-                connection.InsertOrReplace(new DB_EternalOutput{
-                    MsgType = "Outgoing",
-                    InputControlType = "inputControlType",
-                    // Camrera control
                 });
                 connection.Commit();
 

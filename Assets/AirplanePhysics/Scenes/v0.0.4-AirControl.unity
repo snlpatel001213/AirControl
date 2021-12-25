@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18334797, g: 0.22896393, b: 0.3061677, a: 1}
+  m_IndirectSpecularColor: {r: 0.1835433, g: 0.22908229, b: 0.30560392, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1437,7 +1437,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &647381648
 Transform:
   m_ObjectHideFlags: 0
@@ -1466,6 +1466,7 @@ GameObject:
   - component: {fileID: 687950355}
   - component: {fileID: 687950354}
   - component: {fileID: 687950352}
+  - component: {fileID: 687950356}
   m_Layer: 0
   m_Name: NetworkAndDB_GRP
   m_TagString: Untagged
@@ -1537,9 +1538,25 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5391c484afc1e146bb7d489704c5563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  out_: {fileID: 0}
   currentReadings: {fileID: 687950353}
   inputHandle: {fileID: 687950354}
   outputHandle: {fileID: 687950352}
+--- !u!114 &687950356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 687950350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3347c7afd36edd85b4c3caf65732f52, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  airplane: {fileID: 755010503212096062}
+  bgRect: {fileID: 462525848}
+  arrowRect: {fileID: 992229461}
 --- !u!1 &729659674
 GameObject:
   m_ObjectHideFlags: 0
@@ -2871,7 +2888,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1791669347}
-  m_LocalRotation: {x: 0.3074381, y: 0.036147185, z: -0.011687958, w: 0.9508095}
+  m_LocalRotation: {x: -0.29256544, y: 0.12843892, z: -0.039690338, w: -0.946749}
   m_LocalPosition: {x: 0, y: 100, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -2892,8 +2909,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longitude: -500.39
   latitude: -1650.4
-  hour: 15
-  minutes: 8
+  hour: 13
+  minutes: 57
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1835753706
