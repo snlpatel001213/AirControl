@@ -80,7 +80,7 @@ namespace AirControl
             time = date + new TimeSpan(hour, minutes, 0);
         }
 
-        private void FixedUpdate()
+        private void Update()
         {   
 
             //switching sun location as per the database

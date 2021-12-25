@@ -101,8 +101,6 @@ namespace SqliteDB
 		public bool LevelReload {get; set;} = false; 
 		// Which camera is active
 		public int ActiveCamera { get; set; } = 0;
-		// Force outoput
-		public bool GetOutput {get; set;} = false;
 		// if sun is present
 		public float SunLatitude { get; set; } = -826.39f;
 		public float SunLongitude { get; set; } = -1605.4f;

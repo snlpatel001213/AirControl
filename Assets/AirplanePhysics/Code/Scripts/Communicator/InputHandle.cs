@@ -85,8 +85,6 @@ namespace Communicator
                     ActiveCamera = activeCamera,
                     //level reset
                     LevelReload = levelReload,
-                    // get output (without input)
-                    GetOutput = getOutput,
                     //set sun location
                     SunLatitude = sunLatitude,
                     SunLongitude =sunLongitude,
