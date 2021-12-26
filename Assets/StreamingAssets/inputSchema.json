@@ -1,6 +1,6 @@
 {
   "MsgType": "Incoming",
-  "Version": "0.0.3",
+  "Version": "0.0.4",
   "InputControlType": "Other",
   "AirplaneDrag": 0.01,
   "AirplaneAngularDrag": 0.1,

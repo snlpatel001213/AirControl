@@ -66,6 +66,7 @@ namespace SqliteDB
 		public static float CurrentSpeed;
 		public static float BankAngle;
 		public static float PitchAngle;
+		public static byte [] ScreenCapture;
 	}
 	public class DB_EternalOutput
 	{
@@ -82,6 +83,7 @@ namespace SqliteDB
 		public float CurrentSpeed;
 		public float BankAngle;
 		public float PitchAngle;
+		public byte [] ScreenCapture;
 	}
 	/// <summary>
 	/// Class to just transact once to the game engine
@@ -106,6 +108,8 @@ namespace SqliteDB
 		public float SunLongitude { get; set; } = -1605.4f;
 		public int SunHour { get; set; } = 10;
 		public int SunMinute { get; set; } = 5;
+		public bool CaptureScreen {get; set;} = false;
+		public int ScreenType {get; set;} = 0;
 
 	}
 

@@ -18,6 +18,7 @@ namespace Communicator
         
         public string  ParseOutput()
         {
+            Debug.Log(DB_StaticEternalOutput.ScreenCapture);
             string output = JsonConvert.SerializeObject(new DB_EternalOutput{
                 BankAngle = DB_StaticEternalOutput.BankAngle,
                 PitchAngle = DB_StaticEternalOutput.PitchAngle,
@@ -27,7 +28,8 @@ namespace Communicator
                 MaxRPM = DB_StaticEternalOutput.MaxRPM,
                 MaxPower = DB_StaticEternalOutput.MaxPower,
                 CurrentPower = DB_StaticEternalOutput.CurrentPower,
-                CurrentSpeed = DB_StaticEternalOutput.CurrentSpeed
+                CurrentSpeed = DB_StaticEternalOutput.CurrentSpeed,
+                ScreenCapture = DB_StaticEternalOutput.ScreenCapture
             });
             
             return output;

@@ -1,13 +1,14 @@
 {
   "MsgType": "Transcation",
-  "Version": "0.0.3",
+  "Version": "0.0.4",
   "InputControlType": "Other",
   "IsActive": false,
   "LevelReload": false,
   "ActiveCamera": 0,
-  "GetOutput": false,
   "SunLatitude": -826.39,
   "SunLongitude": -1605.4,
   "SunHour": 10,
-  "SunMinute": 5
+  "SunMinute": 5,
+  "CaptureScreen": false,
+  "ScreenType": 0
 }

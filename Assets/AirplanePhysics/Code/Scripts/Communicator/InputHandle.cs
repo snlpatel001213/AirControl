@@ -67,14 +67,14 @@ namespace Communicator
                 int activeCamera = int.Parse(inputJson["ActiveCamera"].ToString());
                 //input type
                 string inputControlType = inputJson["InputControlType"].ToString();
-                // dummy variable to trigger output without giving any input
-                bool getOutput = bool.Parse(inputJson["GetOutput"].ToString());
                 //set sun location
                 float sunLatitude = float.Parse(inputJson["SunLatitude"].ToString());
                 float sunLongitude = float.Parse(inputJson["SunLongitude"].ToString());
                 int sunHour = int.Parse(inputJson["SunHour"].ToString());
                 int sunMinute = int.Parse(inputJson["SunMinute"].ToString());
                 bool isActive = bool.Parse(inputJson["IsActive"].ToString());
+                bool captureScreen = bool.Parse(inputJson["CaptureScreen"].ToString());
+                int screenType = int.Parse(inputJson["ScreenType"].ToString());
                 
                 connection = DB_Init.GetConnection();
                 connection.InsertOrReplace(new DB_Transactions{
@@ -90,7 +90,9 @@ namespace Communicator
                     SunLongitude =sunLongitude,
                     SunHour = sunHour,
                     SunMinute = sunMinute,
-                    IsActive = isActive
+                    IsActive = isActive,
+                    CaptureScreen = captureScreen,
+                    ScreenType = screenType
                     
                 });
                 connection.Commit();

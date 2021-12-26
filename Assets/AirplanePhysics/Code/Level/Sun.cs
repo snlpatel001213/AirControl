@@ -80,7 +80,7 @@ namespace AirControl
             time = date + new TimeSpan(hour, minutes, 0);
         }
 
-        private void Update()
+        private void FixedUpdate()
         {   
 
             //switching sun location as per the database
@@ -88,6 +88,7 @@ namespace AirControl
             
             SQLiteConnection connection = DB_Init.GetConnection();
             DB_Transactions DBRow = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
+            string DBTransactionControlType = DB_Functions.getInputControType(DBRow);
             if(DBRow.IsActive)
             {
                 float sunLatitude = DBRow.SunLatitude;
