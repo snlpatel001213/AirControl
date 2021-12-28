@@ -154,7 +154,7 @@ namespace AirControl
             RaycastHit hit;
             if(Physics.Raycast(transform.position, Vector3.down, out hit))
             {
-                if(hit.transform.tag == "ground" || hit.transform.tag == "building")
+                if(hit.transform.tag == "Ground" || hit.transform.tag == "Building")
                 {
                     currentAGL = (hit.distance) *metersToFeets;
                 }

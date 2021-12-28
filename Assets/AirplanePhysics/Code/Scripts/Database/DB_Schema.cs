@@ -67,6 +67,7 @@ namespace SqliteDB
 		public static float BankAngle;
 		public static float PitchAngle;
 		public static byte [] ScreenCapture;
+		public static float [] lidarPointCloud;
 	}
 	public class DB_EternalOutput
 	{
@@ -84,6 +85,7 @@ namespace SqliteDB
 		public float BankAngle;
 		public float PitchAngle;
 		public byte [] ScreenCapture;
+		public static float [] lidarPointCloud;
 	}
 	/// <summary>
 	/// Class to just transact once to the game engine
