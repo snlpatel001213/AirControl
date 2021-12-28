@@ -100,7 +100,7 @@ namespace AirControl
             if(DBRow.IsActive)
             {
 
-                getScreenshot(DBRow.ScreenType, 1920,1080);
+                getScreenshot(DBRow.ScreenCaptureType, 1920,1080);
                 // set is active to false to not let this loop run for all the updates
                 DB_Functions.UnsetActive(connection);
             }

@@ -111,7 +111,7 @@ namespace SqliteDB
 		public int SunHour { get; set; } = 10;
 		public int SunMinute { get; set; } = 5;
 		public bool CaptureScreen {get; set;} = false;
-		public int ScreenType {get; set;} = 0;
+		public int ScreenCaptureType {get; set;} = 0;
 
 	}
 

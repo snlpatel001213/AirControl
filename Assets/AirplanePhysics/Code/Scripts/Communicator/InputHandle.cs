@@ -74,7 +74,7 @@ namespace Communicator
                 int sunMinute = int.Parse(inputJson["SunMinute"].ToString());
                 bool isActive = bool.Parse(inputJson["IsActive"].ToString());
                 bool captureScreen = bool.Parse(inputJson["CaptureScreen"].ToString());
-                int screenType = int.Parse(inputJson["ScreenType"].ToString());
+                int screenCaptureType = int.Parse(inputJson["ScreenCaptureType"].ToString());
                 
                 connection = DB_Init.GetConnection();
                 connection.InsertOrReplace(new DB_Transactions{
@@ -91,9 +91,9 @@ namespace Communicator
                     SunHour = sunHour,
                     SunMinute = sunMinute,
                     IsActive = isActive,
+                    // which screen to capture
                     CaptureScreen = captureScreen,
-                    ScreenType = screenType
-                    
+                    ScreenCaptureType = screenCaptureType,
                 });
                 connection.Commit();
 

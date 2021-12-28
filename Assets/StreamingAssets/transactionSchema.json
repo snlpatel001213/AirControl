@@ -10,5 +10,5 @@
   "SunHour": 10,
   "SunMinute": 5,
   "CaptureScreen": false,
-  "ScreenType": 0
+  "ScreenCaptureType": 0
 }

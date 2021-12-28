@@ -110,36 +110,89 @@ namespace AirControl
             // Keeping Get connection in the update loop is essential to avoid the lag
             SQLiteConnection connection = DB_Init.GetConnection();
             DB_Transactions DBRow = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
-            int DBActiveCamera = DB_Functions.getCameraStatus(DBRow);
-            string DBInputControlType = DB_Functions.getInputControType(DBRow);
+            int DBActiveCamera = DBRow.ActiveCamera;
+            string DBInputControlType = DBRow.InputControlType;
+            int screenCaptureType = DBRow.ScreenCaptureType;
+            bool ifCapture = DBRow.CaptureScreen;
             if (DBActiveCamera != curentCameraIndex && DBInputControlType == "Code")
             {
                 selectCamera(DBActiveCamera);
             }
-            #endregion
 
+            if (ifCapture)
+            {
+                //screen capture
+                CapturePass pass = CapturePassList[screenCaptureType];
+                pass.camera.enabled =true;
+                DB_StaticEternalOutput.ScreenCapture = ScreenToBytes(pass.camera, cameras[curentCameraIndex] , 250, 200, pass.supportsAntialiasing, pass.needsRescale);
+                // pass.camera.enabled =false;
+                OnCameraChange(cameras[1]);// 1 indicate the outside camera
+                OnSceneChange();
+            }
+
+            #endregion
+            // Manual Camera switch with key c
             if(input.CameraSwitch){
                 SwitchCamera();
-
             }
-            if (Input.GetKeyDown(KeyCode.Return))
-            {
-                int i = 0;
-                foreach(CapturePass pass in CapturePassList)
-                {
-                    pass.camera.enabled =true;
-                    Save(pass.camera, cameras[curentCameraIndex] ,"Sunil_"+ i + pass.name + ".png", 250, 200, pass.supportsAntialiasing, pass.needsRescale);
-                    i++;
-                    pass.camera.enabled =false;
-                    OnCameraChange(cameras[1]);
-                    OnSceneChange();
-                }
-            }  
+            // run through all camera and save screenshot - for testing
+            // if (Input.GetKeyDown(KeyCode.Return))
+            // {
+            //     int i = 0;
+            //     foreach(CapturePass pass in CapturePassList)
+            //     {
+            //         pass.camera.enabled =true;
+            //         Save(pass.camera, cameras[curentCameraIndex] ,"Sunil_"+ i + pass.name + ".png", 250, 200, pass.supportsAntialiasing, pass.needsRescale);
+            //         i++;
+            //         pass.camera.enabled =false;
+            //         OnCameraChange(cameras[1]);
+            //         OnSceneChange();
+            //     }
+            // }  
 
         }
         #endregion
 
         #region Custom Methods
+
+        public byte[] ScreenToBytes(Camera cam, Camera mainCamera, int width, int height, bool supportsAntialiasing, bool needsRescale)
+        {
+            var depth = 24;
+            var format = RenderTextureFormat.Default;
+            var readWrite = RenderTextureReadWrite.Default;
+            var antiAliasing = (supportsAntialiasing) ? Mathf.Max(1, QualitySettings.antiAliasing) : 1;
+
+            var finalRT =
+                RenderTexture.GetTemporary(width, height, depth, format, readWrite, antiAliasing);
+            var renderRT = (!needsRescale) ? finalRT :
+                RenderTexture.GetTemporary(mainCamera.pixelWidth, mainCamera.pixelHeight, depth, format, readWrite, antiAliasing);
+            var tex = new Texture2D(width, height, TextureFormat.RGB24, false);
+
+            var prevActiveRT = RenderTexture.active;
+            var prevCameraRT = cam.targetTexture;
+
+            // render to offscreen texture (readonly from CPU side)
+            RenderTexture.active = renderRT;
+            cam.targetTexture = renderRT;
+
+            cam.Render();
+
+            if (needsRescale)
+            {
+                // blit to rescale (see issue with Motion Vectors in @KNOWN ISSUES)
+                RenderTexture.active = finalRT;
+                Graphics.Blit(renderRT, finalRT);
+                RenderTexture.ReleaseTemporary(renderRT);
+            }
+
+            // read offsreen texture contents into the CPU readable texture
+            tex.ReadPixels(new Rect(0, 0, tex.width, tex.height), 0, 0);
+            tex.Apply();
+
+            // encode texture into PNG
+            return  tex.EncodeToPNG();
+            
+        }
 
         private void Save(Camera cam, Camera mainCamera, string filename, int width, int height, bool supportsAntialiasing, bool needsRescale)
         {

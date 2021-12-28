@@ -18,7 +18,6 @@ namespace Communicator
         
         public string  ParseOutput()
         {
-            Debug.Log(DB_StaticEternalOutput.ScreenCapture);
             string output = JsonConvert.SerializeObject(new DB_EternalOutput{
                 BankAngle = DB_StaticEternalOutput.BankAngle,
                 PitchAngle = DB_StaticEternalOutput.PitchAngle,
