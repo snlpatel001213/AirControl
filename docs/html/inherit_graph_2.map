@@ -1,13 +1,5 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" title=" " alt="" coords="5,238,84,265"/>
-<area shape="rect" id="node2" href="$classSQLite4Unity3d_1_1AutoIncrementAttribute.html" title=" " alt="" coords="138,5,361,47"/>
-<area shape="rect" id="node3" href="$classSQLite4Unity3d_1_1CollationAttribute.html" title=" " alt="" coords="157,71,342,112"/>
-<area shape="rect" id="node4" href="$classSQLite4Unity3d_1_1ColumnAttribute.html" title=" " alt="" coords="132,137,367,163"/>
-<area shape="rect" id="node5" href="$classSQLite4Unity3d_1_1IgnoreAttribute.html" title=" " alt="" coords="137,187,362,214"/>
-<area shape="rect" id="node6" href="$classSQLite4Unity3d_1_1IndexedAttribute.html" title=" " alt="" coords="132,238,367,265"/>
-<area shape="rect" id="node8" href="$classSQLite4Unity3d_1_1MaxLengthAttribute.html" title=" " alt="" coords="150,289,349,331"/>
-<area shape="rect" id="node9" href="$classSQLite4Unity3d_1_1NotNullAttribute.html" title=" " alt="" coords="133,355,366,382"/>
-<area shape="rect" id="node10" href="$classSQLite4Unity3d_1_1PrimaryKeyAttribute.html" title=" " alt="" coords="148,407,351,448"/>
-<area shape="rect" id="node11" href="$classSQLite4Unity3d_1_1TableAttribute.html" title=" " alt="" coords="140,473,359,499"/>
-<area shape="rect" id="node7" href="$classSQLite4Unity3d_1_1UniqueAttribute.html" title=" " alt="" coords="415,238,645,265"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,46,65,73"/>
+<area shape="rect" id="node2" href="$classAirControl_1_1AC__BaseAirplane__Input__Editor.html" title=" " alt="" coords="113,5,316,47"/>
+<area shape="rect" id="node3" href="$classAirControl_1_1AC__XboxAirplane__Input__Editor.html" title=" " alt="" coords="113,71,316,112"/>
 </map>

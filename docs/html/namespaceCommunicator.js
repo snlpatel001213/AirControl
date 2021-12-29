@@ -1,5 +1,6 @@
 var namespaceCommunicator =
 [
-    [ "Communicator", "classCommunicator_1_1Communicator.html", "classCommunicator_1_1Communicator" ],
-    [ "InputHandle", "classCommunicator_1_1InputHandle.html", "classCommunicator_1_1InputHandle" ]
+    [ "InputHandle", "classCommunicator_1_1InputHandle.html", "classCommunicator_1_1InputHandle" ],
+    [ "NetworkCommunicator", "classCommunicator_1_1NetworkCommunicator.html", "classCommunicator_1_1NetworkCommunicator" ],
+    [ "OutputHandle", "classCommunicator_1_1OutputHandle.html", "classCommunicator_1_1OutputHandle" ]
 ];

@@ -16,6 +16,8 @@ var hierarchy =
     [ "SQLite4Unity3d.BaseTableQuery", "classSQLite4Unity3d_1_1BaseTableQuery.html", [
       [ "SQLite4Unity3d.TableQuery< T >", "classSQLite4Unity3d_1_1TableQuery.html", null ]
     ] ],
+    [ "AirControl.AC_Airplane_CameraController.CapturePass", "structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html", null ],
+    [ "AirControl.ColorEncoding", "classAirControl_1_1ColorEncoding.html", null ],
     [ "SQLite4Unity3d.TableMapping.Column", "classSQLite4Unity3d_1_1TableMapping_1_1Column.html", null ],
     [ "SQLite4Unity3d.SQLiteConnection.ColumnInfo", "classSQLite4Unity3d_1_1SQLiteConnection_1_1ColumnInfo.html", null ],
     [ "SqliteDB.DB_EternalInput", "classSqliteDB_1_1DB__EternalInput.html", null ],
@@ -54,6 +56,7 @@ var hierarchy =
       [ "AirControl.AC_Airplane_Attitude", "classAirControl_1_1AC__Airplane__Attitude.html", null ],
       [ "AirControl.AC_Airplane_Audio", "classAirControl_1_1AC__Airplane__Audio.html", null ],
       [ "AirControl.AC_Airplane_CameraController", "classAirControl_1_1AC__Airplane__CameraController.html", null ],
+      [ "AirControl.AC_Airplane_CameraController_old", "classAirControl_1_1AC__Airplane__CameraController__old.html", null ],
       [ "AirControl.AC_Airplane_Characteristics", "classAirControl_1_1AC__Airplane__Characteristics.html", null ],
       [ "AirControl.AC_Airplane_ControlSurface", "classAirControl_1_1AC__Airplane__ControlSurface.html", null ],
       [ "AirControl.AC_Airplane_Engine", "classAirControl_1_1AC__Airplane__Engine.html", null ],
@@ -76,9 +79,13 @@ var hierarchy =
       [ "AirControl.AC_Basic_Follow_Camera", "classAirControl_1_1AC__Basic__Follow__Camera.html", [
         [ "AirControl.AC_Airplane_Camera", "classAirControl_1_1AC__Airplane__Camera.html", null ]
       ] ],
+      [ "AirControl.ImageSynthesis", "classAirControl_1_1ImageSynthesis.html", null ],
       [ "AirControl.LevelControl", "classAirControl_1_1LevelControl.html", null ],
-      [ "Communicator.Communicator", "classCommunicator_1_1Communicator.html", null ],
-      [ "Communicator.InputHandle", "classCommunicator_1_1InputHandle.html", null ]
+      [ "AirControl.Lidar", "classAirControl_1_1Lidar.html", null ],
+      [ "AirControl.Sun", "classAirControl_1_1Sun.html", null ],
+      [ "Communicator.InputHandle", "classCommunicator_1_1InputHandle.html", null ],
+      [ "Communicator.NetworkCommunicator", "classCommunicator_1_1NetworkCommunicator.html", null ],
+      [ "Communicator.OutputHandle", "classCommunicator_1_1OutputHandle.html", null ]
     ] ],
     [ "SQLite4Unity3d.BaseTableQuery.Ordering", "classSQLite4Unity3d_1_1BaseTableQuery_1_1Ordering.html", null ],
     [ "SQLite4Unity3d.SQLiteCommand", "classSQLite4Unity3d_1_1SQLiteCommand.html", null ],

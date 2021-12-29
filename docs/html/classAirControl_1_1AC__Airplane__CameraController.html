@@ -89,6 +89,8 @@ $(document).ready(function(){initNavTree('classAirControl_1_1AC__Airplane__Camer
 
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
+<a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
@@ -111,17 +113,48 @@ Collaboration diagram for AirControl.AC_Airplane_CameraController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__Airplane__CameraController__coll__graph.png" border="0" usemap="#AirControl_8AC__Airplane__CameraController_coll__map" alt="Collaboration graph"/></div>
 <map name="AirControl_8AC__Airplane__CameraController_coll__map" id="AirControl_8AC__Airplane__CameraController_coll__map">
-<area shape="rect" title=" " alt="" coords="5,185,176,227"/>
-<area shape="rect" title=" " alt="" coords="23,5,147,32"/>
-<area shape="rect" href="classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="107,81,309,123"/>
+<area shape="rect" title=" " alt="" coords="551,27,721,69"/>
+<area shape="rect" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" href="classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="191,27,393,69"/>
+<area shape="rect" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html" title=" " alt="" coords="179,93,405,134"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
+Classes</h2></td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html">CapturePass</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
+Public Types</h2></td></tr>
+<tr class="memitem:af1b763e78b04ca3938adba599cd69539"><td class="memItemLeft" align="right" valign="top"><a id="af1b763e78b04ca3938adba599cd69539"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>ReplacementMode</b> { <br />
+&#160;&#160;<b>ObjectId</b> = 0, 
+<b>CatergoryId</b> = 1, 
+<b>DepthCompressed</b> = 2, 
+<b>DepthMultichannel</b> = 3, 
+<br />
+&#160;&#160;<b>Normals</b> = 4
+<br />
+ }</td></tr>
+<tr class="separator:af1b763e78b04ca3938adba599cd69539"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:ac00de0e845af856a5819f46609e1621f"><td class="memItemLeft" align="right" valign="top"><a id="ac00de0e845af856a5819f46609e1621f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateCamera</b> ()</td></tr>
+<tr class="separator:ac00de0e845af856a5819f46609e1621f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4187dc58c543a130207206eaed286e2a"><td class="memItemLeft" align="right" valign="top"><a id="a4187dc58c543a130207206eaed286e2a"></a>
+byte[]&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenToBytes</b> (Camera cam, Camera mainCamera, int width, int height, bool supportsAntialiasing, bool needsRescale)</td></tr>
+<tr class="separator:a4187dc58c543a130207206eaed286e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac90dd215671fd5a5fd28b7fcc7dae3ce"><td class="memItemLeft" align="right" valign="top"><a id="ac90dd215671fd5a5fd28b7fcc7dae3ce"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>selectCamera</b> (int cameraId)</td></tr>
 <tr class="separator:ac90dd215671fd5a5fd28b7fcc7dae3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5529c3888f1d6ce6a2ae12ea8f1b435b"><td class="memItemLeft" align="right" valign="top"><a id="a5529c3888f1d6ce6a2ae12ea8f1b435b"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSceneChange</b> ()</td></tr>
+<tr class="separator:a5529c3888f1d6ce6a2ae12ea8f1b435b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f7ee324a4310869ca481ad868516ee9"><td class="memItemLeft" align="right" valign="top"><a id="a9f7ee324a4310869ca481ad868516ee9"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCameraChange</b> (Camera activeCamera)</td></tr>
+<tr class="separator:a9f7ee324a4310869ca481ad868516ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -131,9 +164,41 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:ac3f63bb72ecd39f9b70dff1cb72eb82b"><td class="memItemLeft" align="right" valign="top"><a id="ac3f63bb72ecd39f9b70dff1cb72eb82b"></a>
 List&lt; Camera &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cameras</b> = new List&lt;Camera&gt;()</td></tr>
 <tr class="separator:ac3f63bb72ecd39f9b70dff1cb72eb82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a276f6c099a48fdbce9c1af7343836195"><td class="memItemLeft" align="right" valign="top"><a id="a276f6c099a48fdbce9c1af7343836195"></a>
+List&lt; <a class="el" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html">CapturePass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CapturePassList</b> = new List&lt;<a class="el" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html">CapturePass</a>&gt;()</td></tr>
+<tr class="separator:a276f6c099a48fdbce9c1af7343836195"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a317286ef6d989e1515308e863736352b"><td class="memItemLeft" align="right" valign="top"><a id="a317286ef6d989e1515308e863736352b"></a>
-int&#160;</td><td class="memItemRight" valign="bottom"><b>startCameraIndex</b> = 0</td></tr>
+int&#160;</td><td class="memItemRight" valign="bottom"><b>startCameraIndex</b> =0</td></tr>
 <tr class="separator:a317286ef6d989e1515308e863736352b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1bd03100788bf231dd9918f897ce792f"><td class="memItemLeft" align="right" valign="top"><a id="a1bd03100788bf231dd9918f897ce792f"></a>
+Shader&#160;</td><td class="memItemRight" valign="bottom"><b>uberReplacementShader</b></td></tr>
+<tr class="separator:a1bd03100788bf231dd9918f897ce792f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7849851681f816b529fc34a1231177e8"><td class="memItemLeft" align="right" valign="top"><a id="a7849851681f816b529fc34a1231177e8"></a>
+Shader&#160;</td><td class="memItemRight" valign="bottom"><b>opticalFlowShader</b></td></tr>
+<tr class="separator:a7849851681f816b529fc34a1231177e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41e3f6b8d0954c18577e3057c67c479e"><td class="memItemLeft" align="right" valign="top"><a id="a41e3f6b8d0954c18577e3057c67c479e"></a>
+float&#160;</td><td class="memItemRight" valign="bottom"><b>opticalFlowSensitivity</b> = 1.0f</td></tr>
+<tr class="separator:a41e3f6b8d0954c18577e3057c67c479e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a17d6f639a46fe8c0b0e8ab8776f27a5b"><td class="memItemLeft" align="right" valign="top"><a id="a17d6f639a46fe8c0b0e8ab8776f27a5b"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveImage</b> = true</td></tr>
+<tr class="separator:a17d6f639a46fe8c0b0e8ab8776f27a5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a52567454c6d2f1750812a7c2213afdc5"><td class="memItemLeft" align="right" valign="top"><a id="a52567454c6d2f1750812a7c2213afdc5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveIdSegmentation</b> = true</td></tr>
+<tr class="separator:a52567454c6d2f1750812a7c2213afdc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee6ed36dfd5ee6688ea6c773fe9af3c4"><td class="memItemLeft" align="right" valign="top"><a id="aee6ed36dfd5ee6688ea6c773fe9af3c4"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveLayerSegmentation</b> = true</td></tr>
+<tr class="separator:aee6ed36dfd5ee6688ea6c773fe9af3c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a861c9d1238ae21b605c40d0d99401193"><td class="memItemLeft" align="right" valign="top"><a id="a861c9d1238ae21b605c40d0d99401193"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveDepth</b> = true</td></tr>
+<tr class="separator:a861c9d1238ae21b605c40d0d99401193"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a654eb69a252fc6de9d63efb78905bbc5"><td class="memItemLeft" align="right" valign="top"><a id="a654eb69a252fc6de9d63efb78905bbc5"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveNormals</b> = true</td></tr>
+<tr class="separator:a654eb69a252fc6de9d63efb78905bbc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a278c071dc18748ad0dcda966005e9e43"><td class="memItemLeft" align="right" valign="top"><a id="a278c071dc18748ad0dcda966005e9e43"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveOpticalFlow</b> =true</td></tr>
+<tr class="separator:a278c071dc18748ad0dcda966005e9e43"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7281aef24d4db792f22ade79deb6b69"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html">CapturePass</a>[]&#160;</td><td class="memItemRight" valign="bottom"><b>capturePasses</b></td></tr>
+<tr class="separator:ad7281aef24d4db792f22ade79deb6b69"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -141,6 +206,29 @@ Protected Member Functions</h2></td></tr>
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SwitchCamera</b> ()</td></tr>
 <tr class="separator:a1e136a720179b3de667d17ca64b76d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad7281aef24d4db792f22ade79deb6b69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad7281aef24d4db792f22ade79deb6b69">&#9670;&nbsp;</a></span>capturePasses</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html">CapturePass</a> [] AirControl.AC_Airplane_CameraController.capturePasses</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<b>Initial value:</b><div class="fragment"><div class="line">= <span class="keyword">new</span> CapturePass[] {</div>
+<div class="line">            <span class="keyword">new</span> CapturePass() { name = <span class="stringliteral">&quot;_img&quot;</span> },</div>
+<div class="line">            <span class="keyword">new</span> CapturePass() { name = <span class="stringliteral">&quot;_id&quot;</span>, supportsAntialiasing = <span class="keyword">false</span> },</div>
+<div class="line">            <span class="keyword">new</span> CapturePass() { name = <span class="stringliteral">&quot;_layer&quot;</span>, supportsAntialiasing = <span class="keyword">false</span> },</div>
+<div class="line">            <span class="keyword">new</span> CapturePass() { name = <span class="stringliteral">&quot;_depth&quot;</span> },</div>
+<div class="line">            <span class="keyword">new</span> CapturePass() { name = <span class="stringliteral">&quot;_normals&quot;</span> },</div>
+<div class="line">            <span class="keyword">new</span> CapturePass() { name = <span class="stringliteral">&quot;_flow&quot;</span>, supportsAntialiasing = <span class="keyword">false</span>, needsRescale = <span class="keyword">true</span> } </div>
+<div class="line">        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>AC_Airplane_CameraController.cs</li>
 </ul>

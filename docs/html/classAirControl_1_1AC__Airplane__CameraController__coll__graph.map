@@ -1,5 +1,6 @@
 <map id="AirControl.AC_Airplane_CameraController" name="AirControl.AC_Airplane_CameraController">
-<area shape="rect" id="node1" title=" " alt="" coords="5,185,176,227"/>
-<area shape="rect" id="node2" title=" " alt="" coords="23,5,147,32"/>
-<area shape="rect" id="node3" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="107,81,309,123"/>
+<area shape="rect" id="node1" title=" " alt="" coords="551,27,721,69"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node3" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="191,27,393,69"/>
+<area shape="rect" id="node4" href="$structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html" title=" " alt="" coords="179,93,405,134"/>
 </map>

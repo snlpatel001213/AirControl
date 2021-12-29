@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['levelcontrol_72',['LevelControl',['../classAirControl_1_1LevelControl.html',1,'AirControl']]],
-  ['listenforincommingrequests_73',['ListenForIncommingRequests',['../classCommunicator_1_1Communicator.html#a15baed662b9517c2da390b0e4b5609d6',1,'Communicator::Communicator']]]
+  ['levelcontrol_77',['LevelControl',['../classAirControl_1_1LevelControl.html',1,'AirControl']]],
+  ['lidar_78',['Lidar',['../classAirControl_1_1Lidar.html',1,'AirControl']]],
+  ['listenforincommingrequests_79',['ListenForIncommingRequests',['../classCommunicator_1_1NetworkCommunicator.html#a237b72cb55f0db853eb8332d469cb2aa',1,'Communicator::NetworkCommunicator']]]
 ];

@@ -23,19 +23,19 @@ for the JavaScript code in this file
 var NAVTREE =
 [
   [ "AirControl", "index.html", [
+    [ "how_to", "md_how_to.html", null ],
     [ "README", "md__home_supatel_Documents_AirControl_README.html", [
-      [ "Welcome to Aircontrol", "md__home_supatel_Documents_AirControl_README.html#autotoc_md0", null ],
-      [ "Demo", "md__home_supatel_Documents_AirControl_README.html#autotoc_md1", null ],
-      [ "Control Inputs", "md__home_supatel_Documents_AirControl_README.html#autotoc_md2", null ],
-      [ "Getting started", "md__home_supatel_Documents_AirControl_README.html#autotoc_md3", null ],
-      [ "Documentation", "md__home_supatel_Documents_AirControl_README.html#autotoc_md4", null ],
-      [ "Release Goals", "md__home_supatel_Documents_AirControl_README.html#autotoc_md5", null ],
-      [ "Research Inspirations", "md__home_supatel_Documents_AirControl_README.html#autotoc_md6", [
-        [ "Feel free to list your research topic you love to work on over here. Collaborate and publish.", "md__home_supatel_Documents_AirControl_README.html#autotoc_md7", null ]
+      [ "<div align=\"center\">Welcome to Aircontrol</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md0", null ],
+      [ "<div align=\"center\">Demo</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md1", null ],
+      [ "<div align=\"center\">Control Inputs</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md2", null ],
+      [ "<div align=\"center\">Getting started</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md3", null ],
+      [ "<div align=\"center\">Documentation</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md4", null ],
+      [ "<div align=\"center\">Future Release</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md5", null ],
+      [ "<div align=\"center\">Tools and Technology</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md6", null ],
+      [ "<div align=\"center\">Research Inspirations</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md7", [
+        [ "Feel free to list your research topic you love to work on over here. Collaborate and publish.", "md__home_supatel_Documents_AirControl_README.html#autotoc_md8", null ]
       ] ],
-      [ "Contribute", "md__home_supatel_Documents_AirControl_README.html#autotoc_md8", [
-        [ "Current Contributors", "md__home_supatel_Documents_AirControl_README.html#autotoc_md9", null ]
-      ] ]
+      [ "<div align=\"center\">Contribute</div>", "md__home_supatel_Documents_AirControl_README.html#autotoc_md9", null ]
     ] ],
     [ "Namespaces", "namespaces.html", [
       [ "Namespace List", "namespaces.html", "namespaces_dup" ]
@@ -56,7 +56,8 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "annotated.html",
-"classSQLite4Unity3d_1_1SQLiteConnection.html#a523505494e5fcc19042e4a5d12d7c7cd"
+"classSQLite4Unity3d_1_1CollationAttribute.html",
+"md__home_supatel_Documents_AirControl_README.html#autotoc_md7"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
