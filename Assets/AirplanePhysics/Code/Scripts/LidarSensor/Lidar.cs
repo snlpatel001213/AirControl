@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 
 namespace AirControl
 {
@@ -41,7 +41,7 @@ namespace AirControl
                     distances[indx] = maxRange;
                 }
                 Debug.DrawRay(transform.position, dir * distances[indx], Color.red);
-                DB_StaticEternalOutput.lidarPointCloud = distances;
+                StaticOutputSchema.lidarPointCloud = distances;
             }
 
         }

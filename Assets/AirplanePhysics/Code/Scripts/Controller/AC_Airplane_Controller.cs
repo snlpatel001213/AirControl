@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 
 namespace AirControl
 {
@@ -160,8 +160,8 @@ namespace AirControl
             }
 
             #region DBArea
-            DB_StaticEternalOutput.MSL = currentMSL;
-            DB_StaticEternalOutput.AGL = currentAGL;
+            StaticOutputSchema.MSL = currentMSL;
+            StaticOutputSchema.AGL = currentAGL;
             #endregion
         }
        

@@ -2,12 +2,12 @@ using System.Collections;
 using System;
 using System.Collections.Generic;
 using Commons;
-namespace SqliteDB
+namespace Communicator
 {
 	/// <summary>
 	/// Class to get input from external program
 	/// </summary>
-	public class DB_EternalInput 
+	public class InputSchema 
 	{
 		/// <summary>
 		/// Just [PrimaryKey] is added to the Id Attribute as we only want the updated value and dont want to accumulate it
@@ -46,7 +46,7 @@ namespace SqliteDB
 
 	}
 
-	public class DB_StaticEternalInput 
+	public class StaticInputSchema 
 	{
 		/// <summary>
 		/// Just [PrimaryKey] is added to the Id Attribute as we only want the updated value and dont want to accumulate it
@@ -88,7 +88,7 @@ namespace SqliteDB
 	/// <summary>
 	/// Class to output to external program
 	/// </summary>
-	public static class DB_StaticEternalOutput
+	public static class StaticOutputSchema
 	{
 		public static string MsgType  { get; set; } = "Outgoing";
 		//Version of the sceme, IT will be same as the release version
@@ -106,7 +106,7 @@ namespace SqliteDB
 		public static byte [] ScreenCapture;
 		public static float [] lidarPointCloud;
 	}
-	public class DB_EternalOutput
+	public class OutputSchema
 	{
 		public string MsgType  { get; set; } = "Outgoing";
 		//Version of the sceme, IT will be same as the release version
@@ -128,7 +128,7 @@ namespace SqliteDB
 	/// Class to just transact once to the game engine
 	/// This can be used for level releoad or setting gameplay volume etc 
 	/// </summary>
-	public class DB_Transactions
+	public class TransactionSchema
 	{	
 		public string MsgType  { get; set; } = "Transcation";
 		//Version of the sceme, IT will be same as the release version
@@ -151,7 +151,7 @@ namespace SqliteDB
 
 	}
 
-	public class DB_StaticTransactions
+	public class StaticTransactionSchema
 	{	
 		public static string MsgType  { get; set; } = "Transcation";
 		//Version of the sceme, IT will be same as the release version
@@ -177,7 +177,7 @@ namespace SqliteDB
 	/// <summary>
 	/// Properties that can be initialized at startup
 	/// </summary>
-	public class DB_StartUpSchema
+	public class StartUpSchema
 	{	
 		public string MsgType  { get; set; } = "StartUp";
 		//Version of the sceme, IT will be same as the release version
@@ -198,6 +198,28 @@ namespace SqliteDB
 		public float StartRotation_x {get; set;} = 6.1f;  
 		public float StartRotation_y {get; set;} = 6.1f;  
 		public float StartRotation_z {get; set;} = 6.1f; 
+	}
+	public static class StaticStartUpSchema
+	{	
+		public static string MsgType  { get; set; } = "StartUp";
+		//Version of the sceme, IT will be same as the release version
+		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public static string InputControlType {get;set;} = "Other";
+		//set Airplane masss
+		public static float AirplaneMass {get; set;} = 1000f; 
+		//set Airplane fuel
+		public static float Fuel {get; set;} = 61f;
+		//set Airplane fuel burnrate
+		public static float FuelBurnRate {get; set;} = 6.1f;  
+		//set Airplane start Location
+		public static float StartLocation_x {get; set;} = 6.1f;  
+		public static float StartLocation_y {get; set;} = 6.1f;  
+		public static float StartLocation_z {get; set;} = 6.1f;  
+		//set Airplane start Rotation
+		public static float StartRotation_x {get; set;} = 6.1f;  
+		public static float StartRotation_y {get; set;} = 6.1f;  
+		public static float StartRotation_z {get; set;} = 6.1f; 
 	}
 	
 

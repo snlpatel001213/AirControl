@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 namespace  AirControl
 {
     public class AC_BaseAirplane_Input : MonoBehaviour
@@ -116,18 +116,18 @@ namespace  AirControl
 
         protected void DBGetter()
         {
-            string DBInputControlType = DB_StaticEternalInput.InputControlType;
+            string DBInputControlType = StaticInputSchema.InputControlType;
             // if control type is code then lock the controls and fly it
             // else let user fly manually
              if(DBInputControlType == "Code")
              {
-                throttle = DB_StaticEternalInput.Throttle;
-                stickyThrottle = DB_StaticEternalInput.StickyThrottle;
-                pitch = DB_StaticEternalInput.Pitch;
-                roll = DB_StaticEternalInput.Roll;
-                yaw = DB_StaticEternalInput.Yaw;
-                brake = DB_StaticEternalInput.Brake;
-                flaps = DB_StaticEternalInput.Flaps;
+                throttle = StaticInputSchema.Throttle;
+                stickyThrottle = StaticInputSchema.StickyThrottle;
+                pitch = StaticInputSchema.Pitch;
+                roll = StaticInputSchema.Roll;
+                yaw = StaticInputSchema.Yaw;
+                brake = StaticInputSchema.Brake;
+                flaps = StaticInputSchema.Flaps;
              }
         }
            

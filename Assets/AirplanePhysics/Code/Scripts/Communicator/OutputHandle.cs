@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 using Newtonsoft.Json;
 using AirControl;
 using System.Linq;
@@ -17,17 +17,17 @@ namespace Communicator
         
         public string  ParseOutput()
         {
-            string output = JsonConvert.SerializeObject(new DB_EternalOutput{
-                BankAngle = DB_StaticEternalOutput.BankAngle,
-                PitchAngle = DB_StaticEternalOutput.PitchAngle,
-                AGL = DB_StaticEternalOutput.AGL,
-                MSL = DB_StaticEternalOutput.MSL,
-                CurrentRPM = DB_StaticEternalOutput.CurrentRPM,
-                MaxRPM = DB_StaticEternalOutput.MaxRPM,
-                MaxPower = DB_StaticEternalOutput.MaxPower,
-                CurrentPower = DB_StaticEternalOutput.CurrentPower,
-                CurrentSpeed = DB_StaticEternalOutput.CurrentSpeed,
-                ScreenCapture = DB_StaticEternalOutput.ScreenCapture
+            string output = JsonConvert.SerializeObject(new OutputSchema{
+                BankAngle = StaticOutputSchema.BankAngle,
+                PitchAngle = StaticOutputSchema.PitchAngle,
+                AGL = StaticOutputSchema.AGL,
+                MSL = StaticOutputSchema.MSL,
+                CurrentRPM = StaticOutputSchema.CurrentRPM,
+                MaxRPM = StaticOutputSchema.MaxRPM,
+                MaxPower = StaticOutputSchema.MaxPower,
+                CurrentPower = StaticOutputSchema.CurrentPower,
+                CurrentSpeed = StaticOutputSchema.CurrentSpeed,
+                ScreenCapture = StaticOutputSchema.ScreenCapture
             });
             
             return output;

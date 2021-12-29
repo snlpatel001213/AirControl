@@ -2,7 +2,7 @@
 using UnityEngine.Rendering;
 using System.Collections;
 using System.IO;
-using SqliteDB;
+using Communicator;
 
 // @TODO:
 // . support custom color wheels in optical flow via lookup textures
@@ -94,12 +94,12 @@ namespace AirControl
             // }
 
             #region DB
-            if(DB_StaticTransactions.IsActive)
+            if(StaticTransactionSchema.IsActive)
             {
 
-                getScreenshot(DB_StaticTransactions.ScreenCaptureType, 1920,1080);
+                getScreenshot(StaticTransactionSchema.ScreenCaptureType, 1920,1080);
                 // set is active to false to not let this loop run for all the updates
-                DB_StaticTransactions.IsActive =false;
+                StaticTransactionSchema.IsActive =false;
             }
             #endregion
 
@@ -255,22 +255,22 @@ namespace AirControl
             switch (type)
             {  
                 case 0:
-                    DB_StaticEternalOutput.ScreenCapture =  generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
+                    StaticOutputSchema.ScreenCapture =  generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
                     break;
                 case 1:
-                    DB_StaticEternalOutput.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
+                    StaticOutputSchema.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
                     break;
                 case 2:
-                    DB_StaticEternalOutput.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
+                    StaticOutputSchema.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
                     break;
                 case 3:
-                    DB_StaticEternalOutput.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
+                    StaticOutputSchema.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
                     break;
                 case 4:
-                    DB_StaticEternalOutput.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
+                    StaticOutputSchema.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
                     break;
                 case 5:
-                    DB_StaticEternalOutput.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
+                    StaticOutputSchema.ScreenCapture = generateScreenshot(pass.camera, width, height, pass.supportsAntialiasing, pass.needsRescale);
                     break;
                 default:
                     Debug.Log("Issue with the type of the scrrenshot, Type must be one of [0,1,2,3,4,5]");

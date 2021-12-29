@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 
 namespace AirControl
 {
@@ -50,8 +50,8 @@ namespace AirControl
                     }
                 }
                 #region DBArea
-                DB_StaticEternalOutput.BankAngle = BankAngle;
-                DB_StaticEternalOutput.PitchAngle = PitchAngle;
+                StaticOutputSchema.BankAngle = BankAngle;
+                StaticOutputSchema.PitchAngle = PitchAngle;
 
                 #endregion 
 

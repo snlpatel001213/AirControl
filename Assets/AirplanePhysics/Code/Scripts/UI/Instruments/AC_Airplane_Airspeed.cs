@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 
 namespace AirControl
 {
@@ -33,7 +33,7 @@ namespace AirControl
             }
 
             #region DBArea
-            DB_StaticEternalOutput.CurrentSpeed = currentKnots;
+            StaticOutputSchema.CurrentSpeed = currentKnots;
             //Set value of AGL and MSL to DB
             // DB_Functions.SetSpeed(connection, currentKnots);
             #endregion         

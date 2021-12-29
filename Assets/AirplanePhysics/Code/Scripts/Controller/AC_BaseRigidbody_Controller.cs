@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 using Commons;
-using SqliteDB;
+using Communicator;
 
 namespace AirControl
 {
@@ -22,7 +22,7 @@ namespace AirControl
         public  virtual void Awake()
         {
             // init DB
-            DB_Init.CreateDB();
+            IOInit.CreateSchema();
         }
         // Start is called before the first frame update
         public virtual void Start()

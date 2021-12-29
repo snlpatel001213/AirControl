@@ -2,17 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using SqliteDB;
+using Communicator;
 namespace AirControl
 {
     public class LevelControl:MonoBehaviour
     {
         void Update()
         {
-            if(DB_StaticTransactions.LevelReload){
+            if(StaticTransactionSchema.LevelReload){
                 RestartLevel();
                 //set back the transaction to deault to avoid multiple firing
-                DB_StaticTransactions.LevelReload = false;
+                StaticTransactionSchema.LevelReload = false;
             }
         }
         public void RestartLevel() //Restarts the level

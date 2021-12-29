@@ -4,7 +4,7 @@ using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
 using  AirControl;
-using SqliteDB;
+using Communicator;
 
 namespace Communicator
 {
@@ -40,17 +40,17 @@ namespace Communicator
 
                 // connection = DB_Init.GetConnection();
                 // insert in to static class 
-                DB_StaticEternalInput.InputControlType = inputControlType;
-                DB_StaticEternalInput.MsgType = "Incoming";
-                DB_StaticEternalInput.InputControlType = inputControlType;
+                StaticInputSchema.InputControlType = inputControlType;
+                StaticInputSchema.MsgType = "Incoming";
+                StaticInputSchema.InputControlType = inputControlType;
                 // Airplane properties
-                DB_StaticEternalInput.Throttle = throttle;
-                DB_StaticEternalInput.StickyThrottle = stickyThrottle;
-                DB_StaticEternalInput.Pitch = pitch;
-                DB_StaticEternalInput.Roll = roll;
-                DB_StaticEternalInput.Yaw = yaw;
-                DB_StaticEternalInput.Brake = brake;
-                DB_StaticEternalInput.Flaps = flaps;
+                StaticInputSchema.Throttle = throttle;
+                StaticInputSchema.StickyThrottle = stickyThrottle;
+                StaticInputSchema.Pitch = pitch;
+                StaticInputSchema.Roll = roll;
+                StaticInputSchema.Yaw = yaw;
+                StaticInputSchema.Brake = brake;
+                StaticInputSchema.Flaps = flaps;
             }
             #endregion
 
@@ -72,21 +72,21 @@ namespace Communicator
                 int screenCaptureType = int.Parse(inputJson["ScreenCaptureType"].ToString());
                 
                 //primary key
-                DB_StaticTransactions.MsgType = "Transcation";
-                DB_StaticTransactions.InputControlType = inputControlType;
+                StaticTransactionSchema.MsgType = "Transcation";
+                StaticTransactionSchema.InputControlType = inputControlType;
                 // Camrera control
-                DB_StaticTransactions.ActiveCamera = activeCamera;
+                StaticTransactionSchema.ActiveCamera = activeCamera;
                 //level reset
-                DB_StaticTransactions.LevelReload = levelReload;
+                StaticTransactionSchema.LevelReload = levelReload;
                 //set sun location
-                DB_StaticTransactions.SunLatitude = sunLatitude;
-                DB_StaticTransactions.SunLongitude =sunLongitude;
-                DB_StaticTransactions.SunHour = sunHour;
-                DB_StaticTransactions.SunMinute = sunMinute;
-                DB_StaticTransactions.IsActive = isActive;
+                StaticTransactionSchema.SunLatitude = sunLatitude;
+                StaticTransactionSchema.SunLongitude =sunLongitude;
+                StaticTransactionSchema.SunHour = sunHour;
+                StaticTransactionSchema.SunMinute = sunMinute;
+                StaticTransactionSchema.IsActive = isActive;
                 // which screen to capture
-                DB_StaticTransactions.CaptureScreen = captureScreen;
-                DB_StaticTransactions.ScreenCaptureType = screenCaptureType;
+                StaticTransactionSchema.CaptureScreen = captureScreen;
+                StaticTransactionSchema.ScreenCaptureType = screenCaptureType;
 
             }
             #endregion
@@ -98,27 +98,6 @@ namespace Communicator
             }
             #endregion
         }    
-        
-
-        // send msg out of unity
-        // this will be moved to outputHandle class
-        // public string  ParseOutput(AC_BaseAirplane_Input currentReadings)
-        // {
-        //     StructDef.OutputDataStructure outDataStruct;
-        //     // Put data to structure
-        //     outDataStruct.pitch = currentReadings.Pitch;
-        //     outDataStruct.roll = currentReadings.Roll;
-        //     outDataStruct.yaw = currentReadings.Yaw;
-        //     outDataStruct.throttle = currentReadings.Throttle;
-        //     outDataStruct.brake = currentReadings.Brake;
-        //     outDataStruct.flaps = currentReadings.Flaps;
-            
-        //     // Convert to Json and Serialize data
-        //     string outStructSerialized = JsonConvert.SerializeObject(outDataStruct);
-        //     return outStructSerialized;
-
-        //     // networkUtils.SendMessage(outStructSerialized);
-        // }
 
         #endregion
 

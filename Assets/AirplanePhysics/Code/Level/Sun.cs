@@ -2,7 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 
 namespace AirControl
 {
@@ -85,17 +85,17 @@ namespace AirControl
             //switching sun location as per the database
             #region DBSwitch
             
-            string DBTransactionControlType = DB_StaticTransactions.InputControlType;
-            if(DB_StaticTransactions.IsActive)
+            string DBTransactionControlType = StaticTransactionSchema.InputControlType;
+            if(StaticTransactionSchema.IsActive)
             {
-                float sunLatitude = DB_StaticTransactions.SunLatitude;
-                float sunLongitude = DB_StaticTransactions.SunLongitude;
-                int sunHour = DB_StaticTransactions.SunHour;
-                int sunMinute = DB_StaticTransactions.SunMinute;
+                float sunLatitude = StaticTransactionSchema.SunLatitude;
+                float sunLongitude = StaticTransactionSchema.SunLongitude;
+                int sunHour = StaticTransactionSchema.SunHour;
+                int sunMinute = StaticTransactionSchema.SunMinute;
                 SetTime(sunHour, sunMinute);
                 SetLocation(sunLatitude, sunLongitude);
                 // set is active to false to not let this loop run for all the updates
-                DB_StaticTransactions.IsActive =false;
+                StaticTransactionSchema.IsActive =false;
             }
             #endregion
 

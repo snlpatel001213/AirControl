@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 
 
 namespace AirControl
@@ -36,8 +36,8 @@ namespace AirControl
             //switching camera as per the database
             #region DBSwitch
             // Keeping Get connection in the update loop is essential to avoid the lag
-            int DBActiveCamera = DB_StaticTransactions.ActiveCamera;
-            string DBInputControlType = DB_StaticTransactions.InputControlType;
+            int DBActiveCamera = StaticTransactionSchema.ActiveCamera;
+            string DBInputControlType = StaticTransactionSchema.InputControlType;
             if (DBActiveCamera != curentCameraIndex && DBInputControlType == "Code")
             {
                 selectCamera(DBActiveCamera);

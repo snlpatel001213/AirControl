@@ -8,9 +8,9 @@ using Newtonsoft.Json;
 using AirControl;
 using Commons;
 
-namespace SqliteDB
+namespace Communicator
 {
-    public class DB_Init
+    public class IOInit
     {
         #region Variables
         static string persistentDataPath = Application.streamingAssetsPath;
@@ -37,23 +37,22 @@ namespace SqliteDB
         }
 
         /// <summary>
-        /// Create new schem if the *schema.json dont exists. 
-        /// if *schema.json exist then read the paramters and insert in the db as default parameters
-        /// if version of *schema.json and version of release dont match then existing files will be deleted and new *schema.json will be created.
+        /// Create new schem if the *schema.json if it exists or not.
+        /// These schema can be used for to format python API 
         /// </summary>
-        public static void CreateDB()
+        public static void CreateSchema()
         {
             string existingInSchemaPath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
             // Write schema to external file for reference
-            createSchema<DB_EternalInput>("inputSchema.json" );
+            createSchema<InputSchema>("inputSchema.json" );
 
             string existingTransactionSchemaPath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
            // Write schema to external file for reference
-            createSchema<DB_Transactions>("transactionSchema.json" );
+            createSchema<TransactionSchema>("transactionSchema.json" );
             
             string existingStartUpSchemaPath = System.IO.Path.Combine(persistentDataPath,"startUpSchema.json");
             // Write schema to external file for reference
-            createSchema<DB_StartUpSchema>("startUpSchema.json" );
+            createSchema<StartUpSchema>("startUpSchema.json" );
         }    
 
         #endregion

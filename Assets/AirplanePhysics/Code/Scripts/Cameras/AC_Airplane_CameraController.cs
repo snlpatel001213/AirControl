@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-using SqliteDB;
+using Communicator;
 using System.IO;
 
 
@@ -107,10 +107,10 @@ namespace AirControl
             //switching camera as per the database
             #region DBSwitch
             // Keeping Get connection in the update loop is essential to avoid the lag
-            int DBActiveCamera = DB_StaticTransactions.ActiveCamera;
-            string DBInputControlType = DB_StaticTransactions.InputControlType;
-            int screenCaptureType = DB_StaticTransactions.ScreenCaptureType;
-            bool ifCapture = DB_StaticTransactions.CaptureScreen;
+            int DBActiveCamera = StaticTransactionSchema.ActiveCamera;
+            string DBInputControlType = StaticTransactionSchema.InputControlType;
+            int screenCaptureType = StaticTransactionSchema.ScreenCaptureType;
+            bool ifCapture = StaticTransactionSchema.CaptureScreen;
             if (DBActiveCamera != curentCameraIndex && DBInputControlType == "Code")
             {
                 selectCamera(DBActiveCamera);
@@ -121,7 +121,7 @@ namespace AirControl
                 //screen capture
                 CapturePass pass = CapturePassList[screenCaptureType];
                 pass.camera.enabled =true;
-                DB_StaticEternalOutput.ScreenCapture = ScreenToBytes(pass.camera, cameras[curentCameraIndex] , 250, 200, pass.supportsAntialiasing, pass.needsRescale);
+                StaticOutputSchema.ScreenCapture = ScreenToBytes(pass.camera, cameras[curentCameraIndex] , 250, 200, pass.supportsAntialiasing, pass.needsRescale);
                 // pass.camera.enabled =false;
                 OnCameraChange(cameras[1]);// 1 indicate the outside camera
                 OnSceneChange();

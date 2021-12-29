@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SqliteDB;
+using Communicator;
 
 namespace AirControl
 {   
@@ -101,10 +101,10 @@ namespace AirControl
             #region DBArea
             //Setting Current engine paramters to DB
             // DB_Functions.SetEngineVariables(connection, maxForce, finalPower,  maxRPM, CurrentRPM);
-            DB_StaticEternalOutput.MaxPower = maxForce; // can be moved to start
-            DB_StaticEternalOutput.CurrentPower = finalPower;
-            DB_StaticEternalOutput.MaxRPM = maxRPM; // can be moved to start
-            DB_StaticEternalOutput.CurrentRPM = currentRPM;
+            StaticOutputSchema.MaxPower = maxForce; // can be moved to start
+            StaticOutputSchema.CurrentPower = finalPower;
+            StaticOutputSchema.MaxRPM = maxRPM; // can be moved to start
+            StaticOutputSchema.CurrentRPM = currentRPM;
             #endregion
 
             return finalForce;
