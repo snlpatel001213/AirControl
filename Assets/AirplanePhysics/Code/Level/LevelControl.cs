@@ -3,18 +3,16 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using SqliteDB;
-using SQLite4Unity3d;
 namespace AirControl
 {
     public class LevelControl:MonoBehaviour
     {
         void Update()
         {
-            SQLiteConnection connection = DB_Init.GetConnection();
-            if(DB_Functions.getLevelReset(connection)){
+            if(DB_StaticTransactions.LevelReload){
                 RestartLevel();
                 //set back the transaction to deault to avoid multiple firing
-                DB_Functions.resetLevelReset(connection);
+                DB_StaticTransactions.LevelReload = false;
             }
         }
         public void RestartLevel() //Restarts the level

@@ -1,7 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SQLite4Unity3d;
 using SqliteDB;
 
 namespace AirControl
@@ -28,7 +27,7 @@ namespace AirControl
 
 
         #region Interface Methods
-        public void HandleAirplaneUI(SQLiteConnection connection)
+        public void HandleAirplaneUI()
         {
             if(airplane)
             {

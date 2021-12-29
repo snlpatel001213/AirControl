@@ -3,7 +3,6 @@ using UnityEngine.Rendering;
 using System.Collections;
 using System.IO;
 using SqliteDB;
-using SQLite4Unity3d;
 
 // @TODO:
 // . support custom color wheels in optical flow via lookup textures
@@ -95,14 +94,12 @@ namespace AirControl
             // }
 
             #region DB
-            SQLiteConnection connection = DB_Init.GetConnection();
-            DB_Transactions DBRow = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
-            if(DBRow.IsActive)
+            if(DB_StaticTransactions.IsActive)
             {
 
-                getScreenshot(DBRow.ScreenCaptureType, 1920,1080);
+                getScreenshot(DB_StaticTransactions.ScreenCaptureType, 1920,1080);
                 // set is active to false to not let this loop run for all the updates
-                DB_Functions.UnsetActive(connection);
+                DB_StaticTransactions.IsActive =false;
             }
             #endregion
 

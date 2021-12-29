@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Rendering;
-using SQLite4Unity3d;
 using SqliteDB;
 using System.IO;
 
@@ -108,12 +107,10 @@ namespace AirControl
             //switching camera as per the database
             #region DBSwitch
             // Keeping Get connection in the update loop is essential to avoid the lag
-            SQLiteConnection connection = DB_Init.GetConnection();
-            DB_Transactions DBRow = connection.Table<DB_Transactions>().Where(x => x.MsgType == "Transcation").FirstOrDefault();
-            int DBActiveCamera = DBRow.ActiveCamera;
-            string DBInputControlType = DBRow.InputControlType;
-            int screenCaptureType = DBRow.ScreenCaptureType;
-            bool ifCapture = DBRow.CaptureScreen;
+            int DBActiveCamera = DB_StaticTransactions.ActiveCamera;
+            string DBInputControlType = DB_StaticTransactions.InputControlType;
+            int screenCaptureType = DB_StaticTransactions.ScreenCaptureType;
+            bool ifCapture = DB_StaticTransactions.CaptureScreen;
             if (DBActiveCamera != curentCameraIndex && DBInputControlType == "Code")
             {
                 selectCamera(DBActiveCamera);

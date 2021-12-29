@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.Linq;
-using SQLite4Unity3d;
 using SqliteDB;
 
 namespace AirControl
@@ -11,7 +10,6 @@ namespace AirControl
     {
         #region Variables
         public List<IAirplaneUI> instruments =  new List<IAirplaneUI>();
-        SQLiteConnection connection = DB_Init.GetConnection();
         #endregion
 
         #region Builtin Methods
@@ -27,7 +25,7 @@ namespace AirControl
             if(instruments.Count>0)
             {
                 foreach(IAirplaneUI instrument in instruments){
-                    instrument.HandleAirplaneUI(connection);
+                    instrument.HandleAirplaneUI();
                 }
             }
         }

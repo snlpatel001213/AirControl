@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SQLite4Unity3d;
 using SqliteDB;
 
 namespace AirControl
@@ -63,7 +62,7 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
-        public Vector3 CalculateForce(float throttle, SQLiteConnection connection)
+        public Vector3 CalculateForce(float throttle)
         {
             //Calcualte Power
             float finalThrottle = Mathf.Clamp01(throttle);
@@ -92,7 +91,7 @@ namespace AirControl
 
 
             // Process the Fuel
-            HandleFuel(finalThrottle, connection);
+            HandleFuel(finalThrottle);
 
 
             //Create Force
@@ -112,7 +111,7 @@ namespace AirControl
         }
 
 
-        void HandleFuel(float throttleValue, SQLiteConnection connection)
+        void HandleFuel(float throttleValue)
         {
             //Handle Fuel
             if(fuel)

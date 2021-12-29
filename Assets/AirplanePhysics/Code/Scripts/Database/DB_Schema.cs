@@ -1,5 +1,4 @@
 using System.Collections;
-using SQLite4Unity3d;
 using System;
 using System.Collections.Generic;
 using Commons;
@@ -16,7 +15,6 @@ namespace SqliteDB
 		/// In this case it will fill up the database. [Not supported]
 		/// </summary>
 		/// <value></value>
-		[PrimaryKey]
 		public string MsgType  { get; set; } = "Incoming";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
@@ -45,6 +43,45 @@ namespace SqliteDB
 		public float Brake  {get; set;}=0f;
 		//Control Flaps
 		public int Flaps  {get; set;}=0;
+
+	}
+
+	public class DB_StaticEternalInput 
+	{
+		/// <summary>
+		/// Just [PrimaryKey] is added to the Id Attribute as we only want the updated value and dont want to accumulate it
+		/// if one need to auto increment it the Id fielsd can be configured as [PrimaryKey, AutoIncrement]
+		/// In this case it will fill up the database. [Not supported]
+		/// </summary>
+		/// <value></value>
+		public static string MsgType  { get; set; } = "Incoming";
+		//Version of the sceme, IT will be same as the release version
+		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public static string InputControlType {get;set;} = "Other";
+		// Airplane drag 
+		public static float AirplaneDrag {get; set;} = 0.01f;
+		// Airplane Angular Drag
+		public static float AirplaneAngularDrag {get; set;} = 0.1f;
+		//Airplane Properties 
+		public static float AirplanemaxMPH {get; set;} = 150f;
+		//Airplane Properties 
+		public static float MaxLiftPower {get; set;} = 200f;
+		//Airplane Properties 
+		//Control Pitch
+		public static float Pitch  {get; set;}=0f;
+		//Control Roll
+		public static float Roll  {get; set;} = 0f;
+		//Control Yaw
+		public static float Yaw  {get; set;}=0f;
+		//Control Throttle
+		public static float Throttle  {get; set;}=0f;
+		//Control Sticky Throttle
+		public static float StickyThrottle  {get; set;}=0f;
+		//Control Brake
+		public static float Brake  {get; set;}=0f;
+		//Control Flaps
+		public static int Flaps  {get; set;}=0;
 
 	}
 
@@ -93,7 +130,6 @@ namespace SqliteDB
 	/// </summary>
 	public class DB_Transactions
 	{	
-		[PrimaryKey]
 		public string MsgType  { get; set; } = "Transcation";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
@@ -115,12 +151,34 @@ namespace SqliteDB
 
 	}
 
+	public class DB_StaticTransactions
+	{	
+		public static string MsgType  { get; set; } = "Transcation";
+		//Version of the sceme, IT will be same as the release version
+		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public static string InputControlType {get;set;} = "Other";
+		// if transaction schema is active or not this is to reduce computation load in the update loops
+		public static bool IsActive {get; set;} = false;
+		//reload the level if this is set true
+		public static bool LevelReload {get; set;} = false; 
+		// Which camera is active
+		public static int ActiveCamera { get; set; } = 0;
+		// if sun is present
+		public static float SunLatitude { get; set; } = -826.39f;
+		public static float SunLongitude { get; set; } = -1605.4f;
+		public static int SunHour { get; set; } = 10;
+		public static int SunMinute { get; set; } = 5;
+		public static bool CaptureScreen {get; set;} = false;
+		public static int ScreenCaptureType {get; set;} = 0;
+
+	}
+
 	/// <summary>
 	/// Properties that can be initialized at startup
 	/// </summary>
 	public class DB_StartUpSchema
 	{	
-		[PrimaryKey]
 		public string MsgType  { get; set; } = "StartUp";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();

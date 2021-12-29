@@ -1,3 +1,3 @@
-name = "extensiblframework"
-
-import AirControl
+name = "AirControl"
+from . import communicator
+from . import dataUtils

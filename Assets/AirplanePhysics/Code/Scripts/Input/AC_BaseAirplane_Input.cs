@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SQLite4Unity3d;
 using SqliteDB;
 namespace  AirControl
 {
@@ -70,9 +69,7 @@ namespace  AirControl
             ClampInputs();
 
              // Keeping Get connection in the update loop is essential to avoid the lag
-            SQLiteConnection connection = DB_Init.GetConnection();
-            DB_EternalInput DBRow = connection.Table<DB_EternalInput>().Where(x => x.MsgType == "Incoming").FirstOrDefault();
-            DBGetter(DBRow);
+            DBGetter();
         }
         #endregion
         
@@ -117,20 +114,20 @@ namespace  AirControl
             flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);
         }
 
-        protected void DBGetter(DB_EternalInput DBRow)
+        protected void DBGetter()
         {
-            string DBInputControlType = DB_Functions.getInputControType(DBRow);
+            string DBInputControlType = DB_StaticEternalInput.InputControlType;
             // if control type is code then lock the controls and fly it
             // else let user fly manually
              if(DBInputControlType == "Code")
              {
-                throttle = DB_Functions.getThrottle(DBRow);
-                stickyThrottle = DB_Functions.getStickyThrottle(DBRow);
-                pitch = DB_Functions.getPitch(DBRow);
-                roll = DB_Functions.getRoll(DBRow);
-                yaw = DB_Functions.getYaw(DBRow);
-                brake = DB_Functions.getBrake(DBRow);
-                flaps = DB_Functions.getFlaps(DBRow);
+                throttle = DB_StaticEternalInput.Throttle;
+                stickyThrottle = DB_StaticEternalInput.StickyThrottle;
+                pitch = DB_StaticEternalInput.Pitch;
+                roll = DB_StaticEternalInput.Roll;
+                yaw = DB_StaticEternalInput.Yaw;
+                brake = DB_StaticEternalInput.Brake;
+                flaps = DB_StaticEternalInput.Flaps;
              }
         }
            

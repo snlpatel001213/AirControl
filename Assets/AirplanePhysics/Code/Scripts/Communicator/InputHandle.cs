@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using Newtonsoft.Json;
 using Newtonsoft.Json.Linq;
-using SQLite4Unity3d;
 using  AirControl;
 using SqliteDB;
 
@@ -13,7 +12,6 @@ namespace Communicator
     public class InputHandle:MonoBehaviour
     {
         #region Builtin Methods
-        private SQLiteConnection connection;
         #endregion
 
         #region Custom Methods
@@ -40,22 +38,19 @@ namespace Communicator
                 float brake = float.Parse(inputJson["Brake"].ToString());
                 int flaps = int.Parse(inputJson["Flaps"].ToString());
 
-                connection = DB_Init.GetConnection();
-                // insert in to database
-                connection.InsertOrReplace(new DB_EternalInput{
-                    MsgType = "Incoming",
-                    InputControlType = inputControlType,
-                    // Airplane properties
-                    Throttle = throttle,
-                    StickyThrottle = stickyThrottle,
-                    Pitch = pitch,
-                    Roll = roll,
-                    Yaw = yaw,
-                    Brake = brake,
-                    Flaps = flaps,
-
-                });
-                connection.Commit();
+                // connection = DB_Init.GetConnection();
+                // insert in to static class 
+                DB_StaticEternalInput.InputControlType = inputControlType;
+                DB_StaticEternalInput.MsgType = "Incoming";
+                DB_StaticEternalInput.InputControlType = inputControlType;
+                // Airplane properties
+                DB_StaticEternalInput.Throttle = throttle;
+                DB_StaticEternalInput.StickyThrottle = stickyThrottle;
+                DB_StaticEternalInput.Pitch = pitch;
+                DB_StaticEternalInput.Roll = roll;
+                DB_StaticEternalInput.Yaw = yaw;
+                DB_StaticEternalInput.Brake = brake;
+                DB_StaticEternalInput.Flaps = flaps;
             }
             #endregion
 
@@ -76,26 +71,22 @@ namespace Communicator
                 bool captureScreen = bool.Parse(inputJson["CaptureScreen"].ToString());
                 int screenCaptureType = int.Parse(inputJson["ScreenCaptureType"].ToString());
                 
-                connection = DB_Init.GetConnection();
-                connection.InsertOrReplace(new DB_Transactions{
-                    //primary key
-                    MsgType = "Transcation",
-                    InputControlType = inputControlType,
-                    // Camrera control
-                    ActiveCamera = activeCamera,
-                    //level reset
-                    LevelReload = levelReload,
-                    //set sun location
-                    SunLatitude = sunLatitude,
-                    SunLongitude =sunLongitude,
-                    SunHour = sunHour,
-                    SunMinute = sunMinute,
-                    IsActive = isActive,
-                    // which screen to capture
-                    CaptureScreen = captureScreen,
-                    ScreenCaptureType = screenCaptureType,
-                });
-                connection.Commit();
+                //primary key
+                DB_StaticTransactions.MsgType = "Transcation";
+                DB_StaticTransactions.InputControlType = inputControlType;
+                // Camrera control
+                DB_StaticTransactions.ActiveCamera = activeCamera;
+                //level reset
+                DB_StaticTransactions.LevelReload = levelReload;
+                //set sun location
+                DB_StaticTransactions.SunLatitude = sunLatitude;
+                DB_StaticTransactions.SunLongitude =sunLongitude;
+                DB_StaticTransactions.SunHour = sunHour;
+                DB_StaticTransactions.SunMinute = sunMinute;
+                DB_StaticTransactions.IsActive = isActive;
+                // which screen to capture
+                DB_StaticTransactions.CaptureScreen = captureScreen;
+                DB_StaticTransactions.ScreenCaptureType = screenCaptureType;
 
             }
             #endregion
@@ -103,13 +94,7 @@ namespace Communicator
             # region StartUp
             else if (MsgType=="StartUp") // if operation type is transaction
             {   
-                connection = DB_Init.GetConnection();
-                connection.InsertOrReplace(new DB_StartUpSchema{
-                    MsgType = "StartUp",
-                    InputControlType = "inputControlType",
-                    // Camrera control
-                });
-                connection.Commit();
+                // blank for now
             }
             #endregion
         }    

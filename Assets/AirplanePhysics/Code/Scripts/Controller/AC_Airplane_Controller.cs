@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using SqliteDB;
-using SQLite4Unity3d;
 
 namespace AirControl
 {
@@ -93,22 +92,22 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
-        protected override void HandlePhysics(SQLiteConnection connection)
+        protected override void HandlePhysics()
         {
             if(input)
             {
-                HandleEngines(connection);
+                HandleEngines();
                 HandleCharacteristics();
                 HandleControlSurfaces();
                 HandleWheel();
-                HandleAltitude(connection);
+                HandleAltitude();
             }// handle else
 
             // DB based update
             
         }
 
-        void HandleEngines(SQLiteConnection connection)
+        void HandleEngines()
         {
             if(engines != null)
             {
@@ -116,7 +115,7 @@ namespace AirControl
                 {
                     foreach(AC_Airplane_Engine engine in engines)
                     {
-                        rb.AddForce(engine.CalculateForce(input.StickyThrottle, connection));
+                        rb.AddForce(engine.CalculateForce(input.StickyThrottle));
                     }
                 }
             }
@@ -149,7 +148,7 @@ namespace AirControl
             }
 
         }
-        void HandleAltitude(SQLiteConnection connection){
+        void HandleAltitude(){
             currentMSL  =  transform.position.y * metersToFeets;
             RaycastHit hit;
             if(Physics.Raycast(transform.position, Vector3.down, out hit))

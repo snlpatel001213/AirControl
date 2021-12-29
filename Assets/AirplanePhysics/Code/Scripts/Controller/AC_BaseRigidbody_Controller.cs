@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
-using SQLite4Unity3d;
 using Commons;
 using SqliteDB;
 
@@ -15,8 +14,6 @@ namespace AirControl
         #region Variable
         protected Rigidbody rb;
         protected AudioSource aSource;
-        protected SQLiteConnection DB_connection ;
-        SQLiteConnection connection = DB_Init.GetConnection();
         
         #endregion
 
@@ -43,7 +40,7 @@ namespace AirControl
         void FixedUpdate()
         {
             if(rb){
-                HandlePhysics(connection);
+                HandlePhysics();
             }
             // DB based operations
             
@@ -51,7 +48,7 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
-        protected virtual void HandlePhysics(SQLiteConnection connection){
+        protected virtual void HandlePhysics(){
 
         }
         #endregion
