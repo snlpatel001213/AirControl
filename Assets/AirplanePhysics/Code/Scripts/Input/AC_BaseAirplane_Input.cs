@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Communicator;
 namespace  AirControl
 {
     public class AC_BaseAirplane_Input : MonoBehaviour
@@ -18,7 +18,6 @@ namespace  AirControl
 
         protected KeyCode cameraKey = KeyCode.C;
         protected bool camerSwitch = false;
-        
 
         // Slowly move the throttle
         [Header("Sticky throttle value control how the throttle can be moved")]
@@ -62,18 +61,15 @@ namespace  AirControl
         
         
         #region Builtin Methods
-        // Start is called before the first frame update
-        void Start()
-        {
-            
-        }
-
         // Update is called once per frame
         void Update()
         {
             HandleInput();
             StickyThrottleControl();
             ClampInputs();
+
+             // Keeping Get connection in the update loop is essential to avoid the lag
+            DBGetter();
         }
         #endregion
         
@@ -84,6 +80,7 @@ namespace  AirControl
             roll =  Input.GetAxis("Horizontal");
             yaw =  Input.GetAxis("yaw");
             throttle =  Input.GetAxis("throttle");
+
             StickyThrottleControl();
             // Process brakes bool
             brake =  Input.GetKey(KeyCode.Space)?1f:0f;
@@ -116,8 +113,28 @@ namespace  AirControl
             brake = Mathf.Clamp(brake,0f,1f);
             flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);
         }
-        #endregion
+
+        protected void DBGetter()
+        {
+            string DBInputControlType = StaticInputSchema.InputControlType;
+            // if control type is code then lock the controls and fly it
+            // else let user fly manually
+             if(DBInputControlType == "Code")
+             {
+                throttle = StaticInputSchema.Throttle;
+                stickyThrottle = StaticInputSchema.StickyThrottle;
+                pitch = StaticInputSchema.Pitch;
+                roll = StaticInputSchema.Roll;
+                yaw = StaticInputSchema.Yaw;
+                brake = StaticInputSchema.Brake;
+                flaps = StaticInputSchema.Flaps;
+             }
+        }
+           
     }
 
-
+        #endregion
 }
+
+
+

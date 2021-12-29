@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Communicator;
 
 namespace AirControl
 {
@@ -12,6 +12,17 @@ namespace AirControl
         public AC_Airplane_Controller airplane;
         public RectTransform bgRect;
         public RectTransform arrowRect;
+        protected float bankAngle; 
+        protected float pitchAngle;
+        #endregion
+
+        #region Properties
+        public float BankAngle{
+            get{return bankAngle;}
+        }
+        public float PitchAngle{
+            get{return pitchAngle;}
+        }
         #endregion
 
 
@@ -21,8 +32,8 @@ namespace AirControl
             if(airplane)
             {
                 //Create Angles
-                float bankAngle = Vector3.Dot(airplane.transform.right, Vector3.up) * Mathf.Rad2Deg;
-                float pitchAngle = Vector3.Dot(airplane.transform.forward, Vector3.up) * Mathf.Rad2Deg;
+                bankAngle = Vector3.Dot(airplane.transform.right, Vector3.up) * Mathf.Rad2Deg;
+                pitchAngle = Vector3.Dot(airplane.transform.forward, Vector3.up) * Mathf.Rad2Deg;
 
                 //Handle UI Elements
                 if(bgRect)
@@ -38,6 +49,11 @@ namespace AirControl
                         arrowRect.transform.rotation = bankRotation;
                     }
                 }
+                #region DBArea
+                StaticOutputSchema.BankAngle = BankAngle;
+                StaticOutputSchema.PitchAngle = PitchAngle;
+
+                #endregion 
 
             }
         }

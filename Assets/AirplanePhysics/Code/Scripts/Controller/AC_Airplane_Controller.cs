@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using SQLite4Unity3d;
+using Communicator;
 
 namespace AirControl
 {
@@ -102,6 +102,8 @@ namespace AirControl
                 HandleWheel();
                 HandleAltitude();
             }// handle else
+
+            // DB based update
             
         }
 
@@ -119,7 +121,7 @@ namespace AirControl
             }
 
         }
-        void HandleCharacteristics()
+        void HandleCharacteristics( )
         {
             if (characteristics)
             {
@@ -127,7 +129,7 @@ namespace AirControl
             }
             
         }
-        void HandleControlSurfaces()
+        void HandleControlSurfaces( )
         {
             if(controlSurfaces.Count > 0)
             {
@@ -136,7 +138,7 @@ namespace AirControl
                 }
             }
         }
-        void HandleWheel(){
+        void HandleWheel( ){
             if (wheels.Count>0)
             {
                 foreach (AC_Airplane_Wheel wheel in wheels)
@@ -151,12 +153,18 @@ namespace AirControl
             RaycastHit hit;
             if(Physics.Raycast(transform.position, Vector3.down, out hit))
             {
-                if(hit.transform.tag == "ground" || hit.transform.tag == "building")
+                if(hit.transform.tag == "Ground" || hit.transform.tag == "Building")
                 {
                     currentAGL = (hit.distance) *metersToFeets;
                 }
             }
+
+            #region DBArea
+            StaticOutputSchema.MSL = currentMSL;
+            StaticOutputSchema.AGL = currentAGL;
+            #endregion
         }
+       
         #endregion
     }
 

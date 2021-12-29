@@ -31,7 +31,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.2</span>
+   &#160;<span id="projectnumber">0.0.3</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -107,17 +107,24 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>CreateCommand()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#ae0b1b6274d532d0f3de0c7375258277f">SQLite4Unity3d.SQLiteConnection</a>
 </li>
+<li>CreateDB()
+: <a class="el" href="classSqliteDB_1_1DB__Init.html#acb638fdeccc66c0298df84e84923c34c">SqliteDB.DB_Init</a>
+</li>
 <li>CreateIndex()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#ab8aee23bb3b823fd893bfea314e51cd3">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 <li>CreateIndex&lt; T &gt;()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#adc50d308f4a717c2089cc178c5fde10c">SQLite4Unity3d.SQLiteConnection</a>
 </li>
+<li>createSchema&lt; T &gt;()
+: <a class="el" href="classSqliteDB_1_1DB__Init.html#ab19bf2f438fe12cf27bd12e3f82c6336">SqliteDB.DB_Init</a>
+</li>
 <li>CreateTable()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a01aba09c5ace356f03f667a416017f6b">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 <li>CreateTable&lt; T &gt;()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a8e88e22239c2e4b899a5f6bbc7ecccb7">SQLite4Unity3d.SQLiteConnection</a>
+, <a class="el" href="classSqliteDB_1_1DB__Init.html#a204e602fdf2ef162fe655126c9fdc016">SqliteDB.DB_Init</a>
 </li>
 </ul>
 
@@ -138,9 +145,6 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <li>DeleteAll&lt; T &gt;()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a95dd327f91b433858bfe22e1ab42a2cf">SQLite4Unity3d.SQLiteConnection</a>
 </li>
-<li>direction
-: <a class="el" href="classDB__InputClassDefinitions.html#a9b2c3da29be825c56be489601eba0db0">DB_InputClassDefinitions</a>
-</li>
 <li>DropTable&lt; T &gt;()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a1c6061939b0edc8f4e56085b173be1e9">SQLite4Unity3d.SQLiteConnection</a>
 </li>
@@ -159,7 +163,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a251c9d8747ad100740bf16918ba7e9ee">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 <li>Find&lt; T &gt;()
-: <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#acd2d58eefe5b4cc299c568dbe3189e66">SQLite4Unity3d.SQLiteConnection</a>
+: <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a3c0e915ea1959670b35e88c60bba5705">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 </ul>
 
@@ -167,6 +171,9 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 <h3><a id="index_g"></a>- g -</h3><ul>
 <li>Get&lt; T &gt;()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a943303f56c4911727e0206feefdfff55">SQLite4Unity3d.SQLiteConnection</a>
+</li>
+<li>GetConnection()
+: <a class="el" href="classSqliteDB_1_1DB__Init.html#a3715a54becab16bf3ac4f36ab51aa4d7">SqliteDB.DB_Init</a>
 </li>
 <li>GetMapping()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a6d27d4a7d7b2f0896fd22cb09238b5b7">SQLite4Unity3d.SQLiteConnection</a>
@@ -189,7 +196,7 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#ad4d0c01f3d27e270c59394492bc57781">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 <li>InsertAll()
-: <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#aa1caf036b9a91e7736299db3ea08d030">SQLite4Unity3d.SQLiteConnection</a>
+: <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#aad5d8d2f78d47f57629c38823e1f2717">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 <li>InsertOrReplace()
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a31afbba5e236b3d3f1c2ba42fcc65cd4">SQLite4Unity3d.SQLiteConnection</a>
@@ -202,7 +209,14 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
 <li>ListenForIncommingRequests()
-: <a class="el" href="classAirControl_1_1Communicator.html#a4172be29c7b0fe44882cdda73eb0794e">AirControl.Communicator</a>
+: <a class="el" href="classCommunicator_1_1NetworkCommunicator.html#a237b72cb55f0db853eb8332d469cb2aa">Communicator.NetworkCommunicator</a>
+</li>
+</ul>
+
+
+<h3><a id="index_m"></a>- m -</h3><ul>
+<li>MsgType
+: <a class="el" href="classSqliteDB_1_1DB__EternalInput.html#a41578b77beab61f09706cbdc4a363a78">SqliteDB.DB_EternalInput</a>
 </li>
 </ul>
 
@@ -255,10 +269,10 @@ $(document).ready(function(){initNavTree('functions.html',''); initResizable(); 
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a0b8c8fcd3895677b07fc1c613fefc6f3">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 <li>SendMessage()
-: <a class="el" href="classAirControl_1_1Communicator.html#a8de444f1401cc84bb4161db8eb43825a">AirControl.Communicator</a>
+: <a class="el" href="classCommunicator_1_1NetworkCommunicator.html#a9fa57f9d151ee441e5b7fdc5f4df53aa">Communicator.NetworkCommunicator</a>
 </li>
 <li>SQLiteConnection()
-: <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#ac9bb301501b496d8a93c5c79e7edbd00">SQLite4Unity3d.SQLiteConnection</a>
+: <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#a03781f73cf0b1b2c9e85fe96182adfa1">SQLite4Unity3d.SQLiteConnection</a>
 </li>
 <li>SyncObject
 : <a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html#afedc4cba5e64cd6f0234f7a4f232c1cd">SQLite4Unity3d.SQLiteConnection</a>

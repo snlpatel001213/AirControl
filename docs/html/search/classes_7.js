@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['ordering_157',['Ordering',['../classSQLite4Unity3d_1_1BaseTableQuery_1_1Ordering.html',1,'SQLite4Unity3d::BaseTableQuery']]],
-  ['outputdatastructure_158',['OutputDataStructure',['../structAirControl_1_1StructDef_1_1OutputDataStructure.html',1,'AirControl::StructDef']]]
+  ['networkcommunicator_165',['NetworkCommunicator',['../classCommunicator_1_1NetworkCommunicator.html',1,'Communicator']]],
+  ['notnullattribute_166',['NotNullAttribute',['../classSQLite4Unity3d_1_1NotNullAttribute.html',1,'SQLite4Unity3d']]],
+  ['notnullconstraintviolationexception_167',['NotNullConstraintViolationException',['../classSQLite4Unity3d_1_1NotNullConstraintViolationException.html',1,'SQLite4Unity3d']]]
 ];

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Aircontrol
+namespace AirControl
 {
     public class AC_Airplane_EngineCutoff : MonoBehaviour
     {

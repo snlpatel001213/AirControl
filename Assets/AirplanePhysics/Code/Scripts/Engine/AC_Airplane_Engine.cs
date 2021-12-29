@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Communicator;
 
 namespace AirControl
 {   
@@ -96,7 +97,15 @@ namespace AirControl
             //Create Force
             float finalPower = finalThrottle * maxForce;
             Vector3 finalForce = transform.forward * finalPower;
-//            Debug.Log(finalForce.magnitude * 0.727f);
+
+            #region DBArea
+            //Setting Current engine paramters to DB
+            // DB_Functions.SetEngineVariables(connection, maxForce, finalPower,  maxRPM, CurrentRPM);
+            StaticOutputSchema.MaxPower = maxForce; // can be moved to start
+            StaticOutputSchema.CurrentPower = finalPower;
+            StaticOutputSchema.MaxRPM = maxRPM; // can be moved to start
+            StaticOutputSchema.CurrentRPM = currentRPM;
+            #endregion
 
             return finalForce;
         }

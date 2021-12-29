@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['direction_213',['direction',['../classDB__InputClassDefinitions.html#a9b2c3da29be825c56be489601eba0db0',1,'DB_InputClassDefinitions']]]
+  ['isintransaction_229',['IsInTransaction',['../classSQLite4Unity3d_1_1SQLiteConnection.html#a251e350a85e0caa8cf58ffccd7250a3d',1,'SQLite4Unity3d::SQLiteConnection']]]
 ];

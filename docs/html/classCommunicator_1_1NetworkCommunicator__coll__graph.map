@@ -1,0 +1,7 @@
+<map id="Communicator.NetworkCommunicator" name="Communicator.NetworkCommunicator">
+<area shape="rect" id="node1" title=" " alt="" coords="548,70,820,97"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,62,129,89"/>
+<area shape="rect" id="node3" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="183,32,385,73"/>
+<area shape="rect" id="node4" href="$classCommunicator_1_1InputHandle.html" title=" " alt="" coords="184,98,384,125"/>
+<area shape="rect" id="node5" href="$classCommunicator_1_1OutputHandle.html" title=" " alt="" coords="179,149,389,175"/>
+</map>

@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-
 namespace AirControl
 {
     public class AC_Airplane_FuelGauge : MonoBehaviour, IAirplaneUI 
