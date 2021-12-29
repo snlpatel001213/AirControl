@@ -20,14 +20,6 @@ namespace Communicator
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
 		public string InputControlType {get;set;} = "Other";
-		// Airplane drag 
-		public float AirplaneDrag {get; set;} = 0.01f;
-		// Airplane Angular Drag
-		public float AirplaneAngularDrag {get; set;} = 0.1f;
-		//Airplane Properties 
-		public float AirplanemaxMPH {get; set;} = 150f;
-		//Airplane Properties 
-		public float MaxLiftPower {get; set;} = 200f;
 		//Airplane Properties 
 		//Control Pitch
 		public float Pitch  {get; set;}=0f;
@@ -59,15 +51,6 @@ namespace Communicator
 		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
 		public static string InputControlType {get;set;} = "Other";
-		// Airplane drag 
-		public static float AirplaneDrag {get; set;} = 0.01f;
-		// Airplane Angular Drag
-		public static float AirplaneAngularDrag {get; set;} = 0.1f;
-		//Airplane Properties 
-		public static float AirplanemaxMPH {get; set;} = 150f;
-		//Airplane Properties 
-		public static float MaxLiftPower {get; set;} = 200f;
-		//Airplane Properties 
 		//Control Pitch
 		public static float Pitch  {get; set;}=0f;
 		//Control Roll
@@ -104,7 +87,7 @@ namespace Communicator
 		public static float BankAngle;
 		public static float PitchAngle;
 		public static byte [] ScreenCapture;
-		public static float [] lidarPointCloud;
+		public static float [] LidarPointCloud;
 	}
 	public class OutputSchema
 	{
@@ -122,8 +105,38 @@ namespace Communicator
 		public float BankAngle;
 		public float PitchAngle;
 		public byte [] ScreenCapture;
-		public static float [] lidarPointCloud;
+		public float [] LidarPointCloud;
 	}
+
+	public class WeatherSchema
+	{
+		public string MsgType  { get; set; } = "Weather";
+		//Version of the sceme, IT will be same as the release version
+		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//set active
+		public bool IsActive{get; set;} = false;
+		// sun location
+		public float SunLatitude { get; set; } = -826.39f;
+		public float SunLongitude { get; set; } = -1605.4f;
+		public int SunHour { get; set; } = 10;
+		public int SunMinute { get; set; } = 5;
+	}
+
+	public static class StaticWeatherSchema
+	{
+		public static string MsgType  { get; set; } = "Weather";
+		//Version of the sceme, IT will be same as the release version
+		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//set active
+		public static bool IsActive{get; set;} = false;
+		// sun location
+		public static float SunLatitude { get; set; } = -826.39f;
+		public static float SunLongitude { get; set; } = -1605.4f;
+		public static int SunHour { get; set; } = 10;
+		public static int SunMinute { get; set; } = 5;
+
+	}
+
 	/// <summary>
 	/// Class to just transact once to the game engine
 	/// This can be used for level releoad or setting gameplay volume etc 
@@ -141,11 +154,6 @@ namespace Communicator
 		public bool LevelReload {get; set;} = false; 
 		// Which camera is active
 		public int ActiveCamera { get; set; } = 0;
-		// if sun is present
-		public float SunLatitude { get; set; } = -826.39f;
-		public float SunLongitude { get; set; } = -1605.4f;
-		public int SunHour { get; set; } = 10;
-		public int SunMinute { get; set; } = 5;
 		public bool CaptureScreen {get; set;} = false;
 		public int ScreenCaptureType {get; set;} = 0;
 
@@ -158,17 +166,12 @@ namespace Communicator
 		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
 		public static string InputControlType {get;set;} = "Other";
-		// if transaction schema is active or not this is to reduce computation load in the update loops
+		// // if transaction schema is active or not this is to reduce computation load in the update loops
 		public static bool IsActive {get; set;} = false;
 		//reload the level if this is set true
 		public static bool LevelReload {get; set;} = false; 
 		// Which camera is active
 		public static int ActiveCamera { get; set; } = 0;
-		// if sun is present
-		public static float SunLatitude { get; set; } = -826.39f;
-		public static float SunLongitude { get; set; } = -1605.4f;
-		public static int SunHour { get; set; } = 10;
-		public static int SunMinute { get; set; } = 5;
 		public static bool CaptureScreen {get; set;} = false;
 		public static int ScreenCaptureType {get; set;} = 0;
 
@@ -182,9 +185,7 @@ namespace Communicator
 		public string MsgType  { get; set; } = "StartUp";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
-		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public string InputControlType {get;set;} = "Other";
-		//set Airplane masss
+		// //set Airplane masss
 		public float AirplaneMass {get; set;} = 1000f; 
 		//set Airplane fuel
 		public float Fuel {get; set;} = 61f;
@@ -204,9 +205,7 @@ namespace Communicator
 		public static string MsgType  { get; set; } = "StartUp";
 		//Version of the sceme, IT will be same as the release version
 		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
-		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public static string InputControlType {get;set;} = "Other";
-		//set Airplane masss
+		// //set Airplane masss
 		public static float AirplaneMass {get; set;} = 1000f; 
 		//set Airplane fuel
 		public static float Fuel {get; set;} = 61f;

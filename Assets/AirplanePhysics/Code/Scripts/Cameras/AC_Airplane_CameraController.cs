@@ -105,13 +105,13 @@ namespace AirControl
         void Update()
         {
             //switching camera as per the database
-            #region DBSwitch
+            #region IOSwitch
             // Keeping Get connection in the update loop is essential to avoid the lag
             int DBActiveCamera = StaticTransactionSchema.ActiveCamera;
-            string DBInputControlType = StaticTransactionSchema.InputControlType;
             int screenCaptureType = StaticTransactionSchema.ScreenCaptureType;
             bool ifCapture = StaticTransactionSchema.CaptureScreen;
-            if (DBActiveCamera != curentCameraIndex && DBInputControlType == "Code")
+            string inputControlType = StaticTransactionSchema.InputControlType;
+            if (inputControlType=="Code" && DBActiveCamera != curentCameraIndex)
             {
                 selectCamera(DBActiveCamera);
             }

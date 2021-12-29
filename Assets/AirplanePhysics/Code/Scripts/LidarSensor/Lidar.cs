@@ -41,7 +41,7 @@ namespace AirControl
                     distances[indx] = maxRange;
                 }
                 Debug.DrawRay(transform.position, dir * distances[indx], Color.red);
-                StaticOutputSchema.lidarPointCloud = distances;
+                StaticOutputSchema.LidarPointCloud = distances;
             }
 
         }

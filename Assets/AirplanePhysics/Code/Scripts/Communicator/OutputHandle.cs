@@ -17,6 +17,12 @@ namespace Communicator
         
         public string  ParseOutput()
         {
+            var screencapture = StaticOutputSchema.ScreenCapture;
+            // to avoid null retun from Screencapture
+            if (screencapture == null){
+                screencapture =  new byte[0];
+            }
+            
             string output = JsonConvert.SerializeObject(new OutputSchema{
                 BankAngle = StaticOutputSchema.BankAngle,
                 PitchAngle = StaticOutputSchema.PitchAngle,
@@ -27,7 +33,8 @@ namespace Communicator
                 MaxPower = StaticOutputSchema.MaxPower,
                 CurrentPower = StaticOutputSchema.CurrentPower,
                 CurrentSpeed = StaticOutputSchema.CurrentSpeed,
-                ScreenCapture = StaticOutputSchema.ScreenCapture
+                ScreenCapture = screencapture,
+                LidarPointCloud = StaticOutputSchema.LidarPointCloud,
             });
             
             return output;

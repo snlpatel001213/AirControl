@@ -20,7 +20,10 @@ namespace Communicator
         public void ParseInput(string receivedString)
         {
             // Parse input
-            var inputJson =  JObject.Parse(receivedString);
+        
+            Debug.Log(receivedString);
+            var inputJson =  JObject.Parse(receivedString );
+            // Debug.Log(inputJson);
             // MsgType can be Transaction or Continuous
             string MsgType = inputJson["MsgType"].ToString();
             # region Input
@@ -63,30 +66,42 @@ namespace Communicator
                 //input type
                 string inputControlType = inputJson["InputControlType"].ToString();
                 //set sun location
-                float sunLatitude = float.Parse(inputJson["SunLatitude"].ToString());
-                float sunLongitude = float.Parse(inputJson["SunLongitude"].ToString());
-                int sunHour = int.Parse(inputJson["SunHour"].ToString());
-                int sunMinute = int.Parse(inputJson["SunMinute"].ToString());
                 bool isActive = bool.Parse(inputJson["IsActive"].ToString());
                 bool captureScreen = bool.Parse(inputJson["CaptureScreen"].ToString());
                 int screenCaptureType = int.Parse(inputJson["ScreenCaptureType"].ToString());
                 
                 //primary key
                 StaticTransactionSchema.MsgType = "Transcation";
-                StaticTransactionSchema.InputControlType = inputControlType;
                 // Camrera control
+                StaticTransactionSchema.InputControlType = inputControlType; 
                 StaticTransactionSchema.ActiveCamera = activeCamera;
                 //level reset
                 StaticTransactionSchema.LevelReload = levelReload;
-                //set sun location
-                StaticTransactionSchema.SunLatitude = sunLatitude;
-                StaticTransactionSchema.SunLongitude =sunLongitude;
-                StaticTransactionSchema.SunHour = sunHour;
-                StaticTransactionSchema.SunMinute = sunMinute;
-                StaticTransactionSchema.IsActive = isActive;
                 // which screen to capture
                 StaticTransactionSchema.CaptureScreen = captureScreen;
                 StaticTransactionSchema.ScreenCaptureType = screenCaptureType;
+
+            }
+            #endregion
+
+            #region  Weather
+            else if (MsgType=="Weather") // if operation type is transaction
+            {   
+                //set sun location
+                float sunLatitude = float.Parse(inputJson["SunLatitude"].ToString());
+                float sunLongitude = float.Parse(inputJson["SunLongitude"].ToString());
+                int sunHour = int.Parse(inputJson["SunHour"].ToString());
+                int sunMinute = int.Parse(inputJson["SunMinute"].ToString());
+                bool isActive = bool.Parse(inputJson["IsActive"].ToString());
+                
+                //primary key
+                StaticTransactionSchema.MsgType = "Weather";
+                //set sun location
+                StaticWeatherSchema.SunLatitude = sunLatitude;
+                StaticWeatherSchema.SunLongitude =sunLongitude;
+                StaticWeatherSchema.SunHour = sunHour;
+                StaticWeatherSchema.SunMinute = sunMinute;
+                StaticWeatherSchema.IsActive = isActive;
 
             }
             #endregion

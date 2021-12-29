@@ -83,15 +83,14 @@ namespace AirControl
         {   
 
             //switching sun location as per the database
-            #region DBSwitch
+            #region IOSwitch
             
-            string DBTransactionControlType = StaticTransactionSchema.InputControlType;
             if(StaticTransactionSchema.IsActive)
             {
-                float sunLatitude = StaticTransactionSchema.SunLatitude;
-                float sunLongitude = StaticTransactionSchema.SunLongitude;
-                int sunHour = StaticTransactionSchema.SunHour;
-                int sunMinute = StaticTransactionSchema.SunMinute;
+                float sunLatitude = StaticWeatherSchema.SunLatitude;
+                float sunLongitude = StaticWeatherSchema.SunLongitude;
+                int sunHour = StaticWeatherSchema.SunHour;
+                int sunMinute = StaticWeatherSchema.SunMinute;
                 SetTime(sunHour, sunMinute);
                 SetLocation(sunLatitude, sunLongitude);
                 // set is active to false to not let this loop run for all the updates
