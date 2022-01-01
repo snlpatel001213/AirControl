@@ -18,7 +18,7 @@ namespace AirControl
         public List<CapturePass> CapturePassList = new List<CapturePass>();
         public int startCameraIndex =0;
         private int curentCameraIndex=0;
-
+        private int currentCaprtureCamera=0;
         [Header("Shader Setup")]
         public Shader uberReplacementShader;
         public Shader opticalFlowShader;
@@ -85,7 +85,7 @@ namespace AirControl
         {
                 for (int q = 0; q < capturePasses.Length; q++)
                 {
-                    capturePasses[q].camera = CreateHiddenCamera(capturePasses[q].name, cameras[1].transform);
+                    capturePasses[q].camera = CreateHiddenCamera(capturePasses[q].name, cameras[currentCaprtureCamera].transform);
                     CapturePassList.Add(capturePasses[q]);
                 }    
             
@@ -107,24 +107,36 @@ namespace AirControl
             //switching camera as per the database
             #region IOSwitch
             // Keeping Get connection in the update loop is essential to avoid the lag
-            int DBActiveCamera = StaticTransactionSchema.ActiveCamera;
-            int screenCaptureType = StaticTransactionSchema.ScreenCaptureType;
-            bool ifCapture = StaticTransactionSchema.CaptureScreen;
-            string inputControlType = StaticTransactionSchema.InputControlType;
-            if (inputControlType=="Code" && DBActiveCamera != curentCameraIndex)
+            int activeCamera = StaticCameraSchema.ActiveCamera;
+            int captureCamera = StaticCameraSchema.CaptureCamera;
+            int captureType = StaticCameraSchema.CaptureType;
+            bool isCapture = StaticCameraSchema.IsCapture;
+            int captureWidth = StaticCameraSchema.CaptureWidth;
+            int captureHeight = StaticCameraSchema.CaptureHeight;
+            string inputControlType = StaticCameraSchema.InputControlType;
+            if (inputControlType=="Code" && activeCamera != curentCameraIndex)
             {
-                selectCamera(DBActiveCamera);
+                selectCamera(activeCamera);
+                CreateCamera();
             }
 
-            if (ifCapture)
+            if (isCapture)
             {
                 //screen capture
-                CapturePass pass = CapturePassList[screenCaptureType];
+                CapturePass pass = CapturePassList[captureType];
                 pass.camera.enabled =true;
-                StaticOutputSchema.ScreenCapture = ScreenToBytes(pass.camera, cameras[curentCameraIndex] , 250, 200, pass.supportsAntialiasing, pass.needsRescale);
-                // pass.camera.enabled =false;
-                OnCameraChange(cameras[1]);// 1 indicate the outside camera
+                StaticOutputSchema.ScreenCapture = ScreenToBytes(pass.camera, cameras[curentCameraIndex] , captureWidth, captureHeight, pass.supportsAntialiasing, pass.needsRescale);
+                //if the camera is changed then disable all active capture camera
+                if(currentCaprtureCamera != captureCamera)
+                {
+                    ResetAllCaptureCam(capturePasses);
+                }
+                
+                currentCaprtureCamera = captureCamera;
+                pass.camera.enabled =false;
+                OnCameraChange(cameras[currentCaprtureCamera]);// 1 indicate the outside camera
                 OnSceneChange();
+                
             }
 
             #endregion
@@ -148,12 +160,25 @@ namespace AirControl
             // }  
 
         }
+
+        void ResetAllCaptureCam(CapturePass[] CapturePassList){
+            foreach(CapturePass pass in CapturePassList)
+            {
+                pass.camera.enabled =false;
+            }   
+        }
         #endregion
 
         #region Custom Methods
 
         public byte[] ScreenToBytes(Camera cam, Camera mainCamera, int width, int height, bool supportsAntialiasing, bool needsRescale)
         {
+             if (width <= 0 || height <= 0)
+            {
+                width = Screen.width;
+                height = Screen.height;
+            }
+            
             var depth = 24;
             var format = RenderTextureFormat.Default;
             var readWrite = RenderTextureReadWrite.Default;

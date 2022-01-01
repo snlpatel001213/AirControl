@@ -9,10 +9,10 @@ namespace AirControl
     {
         void Update()
         {
-            if(StaticTransactionSchema.LevelReload){
+            if(StaticLevelSchema.LevelReload){
                 RestartLevel();
                 //set back the transaction to deault to avoid multiple firing
-                StaticTransactionSchema.LevelReload = false;
+                StaticLevelSchema.LevelReload = false;
             }
         }
         public void RestartLevel() //Restarts the level

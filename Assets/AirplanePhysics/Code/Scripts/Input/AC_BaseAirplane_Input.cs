@@ -116,18 +116,18 @@ namespace  AirControl
 
         protected void DBGetter()
         {
-            string DBInputControlType = StaticInputSchema.InputControlType;
+            string DBInputControlType = StaticControlSchema.InputControlType;
             // if control type is code then lock the controls and fly it
             // else let user fly manually
              if(DBInputControlType == "Code")
              {
-                throttle = StaticInputSchema.Throttle;
-                stickyThrottle = StaticInputSchema.StickyThrottle;
-                pitch = StaticInputSchema.Pitch;
-                roll = StaticInputSchema.Roll;
-                yaw = StaticInputSchema.Yaw;
-                brake = StaticInputSchema.Brake;
-                flaps = StaticInputSchema.Flaps;
+                throttle = StaticControlSchema.Throttle;
+                stickyThrottle = StaticControlSchema.StickyThrottle;
+                pitch = StaticControlSchema.Pitch;
+                roll = StaticControlSchema.Roll;
+                yaw = StaticControlSchema.Yaw;
+                brake = StaticControlSchema.Brake;
+                flaps = StaticControlSchema.Flaps;
              }
         }
            

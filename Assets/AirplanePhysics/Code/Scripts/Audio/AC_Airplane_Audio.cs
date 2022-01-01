@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Communicator;
 
 namespace AirControl{
     public class AC_Airplane_Audio : MonoBehaviour
@@ -20,6 +21,7 @@ namespace AirControl{
         private float finalPitchValue;
         // Decrease the volume gradually when engine cutoff;
         private float fadeVolumeRate = 0.005f;
+        private float currentAudioVolume = 1f;
         #endregion
 
         #region Propeties
@@ -66,15 +68,17 @@ namespace AirControl{
         #region Custom Methods
         protected virtual void HandleAudio()
         {
+            #region IOSwitch
+            currentAudioVolume = StaticUIAudioSchema.AudioVolume;
+            #endregion
+
             fullVolumeValue = Mathf.Lerp(0f,1f,input.StickyThrottle);
             finalPitchValue = Mathf.Lerp(1f,maxPitchValue,input.StickyThrottle);
             if(fullThrottleSource)
             {
-                fullThrottleSource.volume = fullVolumeValue;
-                fullThrottleSource.pitch = finalPitchValue;
+                fullThrottleSource.volume = fullVolumeValue *currentAudioVolume;
+                fullThrottleSource.pitch = finalPitchValue * currentAudioVolume;
             }
-            
-
         }
         #endregion
     }

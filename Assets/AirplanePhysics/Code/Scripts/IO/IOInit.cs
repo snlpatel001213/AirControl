@@ -44,15 +44,15 @@ namespace Communicator
         {
             string existingInSchemaPath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
             // Write schema to external file for reference
-            createSchema<InputSchema>("inputSchema.json" );
+            createSchema<ControlSchema>("inputSchema.json" );
 
             string existingTransactionSchemaPath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
            // Write schema to external file for reference
-            createSchema<TransactionSchema>("transactionSchema.json" );
+            createSchema<CameraSchema>("transactionSchema.json" );
             
             string existingStartUpSchemaPath = System.IO.Path.Combine(persistentDataPath,"startUpSchema.json");
             // Write schema to external file for reference
-            createSchema<StartUpSchema>("startUpSchema.json" );
+            createSchema<PresetSchema>("startUpSchema.json" );
         }    
 
         #endregion

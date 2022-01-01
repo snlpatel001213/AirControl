@@ -25,6 +25,15 @@ namespace AirControl
             RaycastHit hit;
             int indx = 0;
 
+            #region IOSwitch
+            int density = StaticLidarSchema.Density;
+            float range = StaticLidarSchema.Range;
+            if (density != numberOfIncrements || maxRange == range){
+                numberOfIncrements = density;
+                maxRange =range;
+            }
+            #endregion
+
             for (int incr = 0; incr < numberOfIncrements; incr++)
             {
                 
@@ -40,7 +49,7 @@ namespace AirControl
                 {
                     distances[indx] = maxRange;
                 }
-                Debug.DrawRay(transform.position, dir * distances[indx], Color.red);
+                // Debug.DrawRay(transform.position, dir * distances[indx], Color.red);
                 StaticOutputSchema.LidarPointCloud = distances;
             }
 
