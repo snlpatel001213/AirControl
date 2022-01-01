@@ -3,7 +3,7 @@
   "Version": "0.0.4",
   "InputControlType": "Other",
   "ActiveCamera": 0,
-  "IsCapture": false,
+  "IsCapture": "false",
   "CaptureCamera": 0,
   "CaptureType": 0,
   "CaptureWidth": 256,

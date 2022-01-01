@@ -30,7 +30,7 @@ namespace Communicator
         /// <typeparam name="T"></typeparam>
         public static void createSchema<T>( string schemaName) where T : new()
         {
-            string json = JsonConvert.SerializeObject(new T(),Formatting.Indented);
+            string json = JsonConvert.SerializeObject(new T(),Formatting.Indented, new PrimitiveToStringConverter());
             string schemaFilePath = System.IO.Path.Combine(persistentDataPath,schemaName);
             File.WriteAllText(schemaFilePath, json);
             Debug.Log("Writting Default schema file to : "+ schemaFilePath);
@@ -56,8 +56,35 @@ namespace Communicator
 
         }    
 
+        
+
         #endregion
 
     }
+    /// <summary>
+    /// Converting boolena to string while serializing
+    /// </summary>
+    class PrimitiveToStringConverter : JsonConverter
+        {
+            public override bool CanConvert(Type objectType)
+            {
+                return objectType == typeof(bool);
+            }
+
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+                writer.WriteValue(value.ToString().ToLower());
+            }
+
+            public override bool CanRead
+            {
+                get { return false; }
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 }

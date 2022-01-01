@@ -2,6 +2,6 @@
   "MsgType": "UIAudio",
   "Version": "0.0.4",
   "InputControlType": "Other",
-  "ShowUIElements": false,
+  "ShowUIElements": "false",
   "AudioVolume": 1.0
 }

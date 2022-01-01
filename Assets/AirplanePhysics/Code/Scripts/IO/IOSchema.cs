@@ -137,7 +137,7 @@ namespace Communicator
 	#region  Camera
 	public class CameraSchema
 	{	
-		public string MsgType  { get; set; } = "Transcation";
+		public string MsgType  { get; set; } = "Camera";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
@@ -293,7 +293,7 @@ namespace Communicator
 	#region Fuel
 	public class FuelSchema
 	{	
-		public string MsgType  { get; set; } = "Lidar";
+		public string MsgType  { get; set; } = "Fuel";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
@@ -305,7 +305,7 @@ namespace Communicator
 
 	public static class StaticFuelSchema
 	{	
-		public static string MsgType  { get; set; } = "Lidar";
+		public static string MsgType  { get; set; } = "Fuel";
 		//Version of the sceme, IT will be same as the release version
 		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick

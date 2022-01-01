@@ -1,7 +1,7 @@
 {
   "MsgType": "TOD",
   "Version": "0.0.4",
-  "IsActive": false,
+  "IsActive": "false",
   "SunLatitude": -826.39,
   "SunLongitude": -1605.4,
   "Hour": 10,
