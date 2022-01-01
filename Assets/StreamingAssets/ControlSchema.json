@@ -1,5 +1,5 @@
 {
-  "MsgType": "Incoming",
+  "MsgType": "ControlInput",
   "Version": "0.0.4",
   "InputControlType": "Other",
   "Pitch": 0.0,

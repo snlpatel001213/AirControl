@@ -104,7 +104,7 @@ namespace Communicator
 	#endregion
 
 	#region TOD
-	public class TOD
+	public class TODSchema
 	{
 		public string MsgType  { get; set; } = "TOD";
 		//Version of the sceme, IT will be same as the release version

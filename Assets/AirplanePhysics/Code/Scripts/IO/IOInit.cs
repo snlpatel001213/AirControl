@@ -42,17 +42,18 @@ namespace Communicator
         /// </summary>
         public static void CreateSchema()
         {
-            string existingInSchemaPath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
             // Write schema to external file for reference
-            createSchema<ControlSchema>("inputSchema.json" );
+            createSchema<ControlSchema>("ControlSchema.json");
+            createSchema<OutputSchema>("OutputSchema.json");
+            createSchema<TODSchema>("TOD.json");
+            createSchema<CameraSchema>("CameraSchema.json");
+            createSchema<LevelSchema>("LevelSchema.json");
+            createSchema<WeatherSchema>("WeatherSchema.json");
+            createSchema<UIAudioSchema>("UIAudioSchema.json");
+            createSchema<LidarSchema>("LidarSchema.json");
+            createSchema<FuelSchema>("FuelSchema.json");
+            createSchema<PresetSchema>("PresetSchema.json");
 
-            string existingTransactionSchemaPath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
-           // Write schema to external file for reference
-            createSchema<CameraSchema>("transactionSchema.json" );
-            
-            string existingStartUpSchemaPath = System.IO.Path.Combine(persistentDataPath,"startUpSchema.json");
-            // Write schema to external file for reference
-            createSchema<PresetSchema>("startUpSchema.json" );
         }    
 
         #endregion

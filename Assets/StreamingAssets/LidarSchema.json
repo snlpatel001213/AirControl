@@ -1,0 +1,7 @@
+{
+  "MsgType": "Lidar",
+  "Version": "0.0.4",
+  "InputControlType": "Other",
+  "Range": 100000.0,
+  "Density": 360
+}

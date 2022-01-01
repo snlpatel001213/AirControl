@@ -1,0 +1,7 @@
+{
+  "MsgType": "Weather",
+  "Version": "0.0.4",
+  "InputControlType": "Other",
+  "IsClouds": false,
+  "IsFog": false
+}
