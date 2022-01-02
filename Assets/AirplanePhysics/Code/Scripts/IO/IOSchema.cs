@@ -103,6 +103,17 @@ namespace Communicator
 	}
 	#endregion
 
+	#region 
+	public class Logger
+	{
+		public string Log { get; set; } = "";
+	}
+	public static class StaticLogger
+	{
+		public static string Log { get; set; } = "";
+	}
+	#endregion
+
 	#region TOD
 	public class TODSchema
 	{
@@ -241,7 +252,7 @@ namespace Communicator
 		// if transaction schema is active or not this is to reduce computation load in the update loops
 		public bool ShowUIElements {get; set;} = false;
 		//reload the level if this is set true
-		public float AudioVolume {get; set;} = 1f; 
+		public bool EnableAudio {get; set;} = true; 
 
 	}
 
@@ -255,7 +266,7 @@ namespace Communicator
 		// // if transaction schema is active or not this is to reduce computation load in the update loops
 		public static bool ShowUIElements {get; set;} = false;
 		//reload the level if this is set true
-		public static float AudioVolume {get; set;} = 1f; 
+		public static bool EnableAudio {get; set;} = true; 
 
 	}
 	#endregion
@@ -272,6 +283,7 @@ namespace Communicator
 		public float Range {get; set;} = 100000f;
 		//reload the level if this is set true
 		public int Density {get; set;} = 360; 
+		public bool IsActive {get; set;} = false;
 
 	}
 
@@ -286,6 +298,7 @@ namespace Communicator
 		public static float Range {get; set;} = 100000f;
 		//reload the level if this is set true
 		public static int Density {get; set;} =  360; 
+		public static bool IsActive {get; set;} = false;
 
 	}
 	#endregion

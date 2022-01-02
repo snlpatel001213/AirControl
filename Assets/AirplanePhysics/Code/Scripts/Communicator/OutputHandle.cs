@@ -39,6 +39,15 @@ namespace Communicator
             
             return output;
         }
+
+        public string LogOutput()
+        {
+            string LogOutput = JsonConvert.SerializeObject(new Logger{ 
+                    Log =  StaticLogger.Log,
+                }
+            );
+            return LogOutput;
+        }
     }
 
 }

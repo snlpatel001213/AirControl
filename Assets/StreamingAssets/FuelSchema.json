@@ -1,5 +1,5 @@
 {
-  "MsgType": "Lidar",
+  "MsgType": "Fuel",
   "Version": "0.0.4",
   "InputControlType": "Other"
 }

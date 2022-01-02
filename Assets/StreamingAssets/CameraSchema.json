@@ -1,5 +1,5 @@
 {
-  "MsgType": "Transcation",
+  "MsgType": "Camera",
   "Version": "0.0.4",
   "InputControlType": "Other",
   "ActiveCamera": 0,

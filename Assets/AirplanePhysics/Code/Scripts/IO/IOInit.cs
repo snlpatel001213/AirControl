@@ -33,7 +33,7 @@ namespace Communicator
             string json = JsonConvert.SerializeObject(new T(),Formatting.Indented, new PrimitiveToStringConverter());
             string schemaFilePath = System.IO.Path.Combine(persistentDataPath,schemaName);
             File.WriteAllText(schemaFilePath, json);
-            Debug.Log("Writting Default schema file to : "+ schemaFilePath);
+            // Debug.Log("Writting Default schema file to : "+ schemaFilePath);
         }
 
         /// <summary>

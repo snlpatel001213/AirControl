@@ -2961,8 +2961,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longitude: -504.55
   latitude: -1650.4
-  hour: 11
-  minutes: 41
+  hour: 10
+  minutes: 53
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1835753706

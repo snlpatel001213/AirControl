@@ -21,7 +21,7 @@ namespace AirControl{
         private float finalPitchValue;
         // Decrease the volume gradually when engine cutoff;
         private float fadeVolumeRate = 0.005f;
-        private float currentAudioVolume = 1f;
+        private bool currentEnableAudio = true;
         #endregion
 
         #region Propeties
@@ -48,6 +48,20 @@ namespace AirControl{
         // Update is called once per frame
         void Update()
         {
+            #region IOSwitch
+            bool enableAudio = StaticUIAudioSchema.EnableAudio;
+            if(enableAudio != currentEnableAudio)
+            {
+                idleSource.enabled = enableAudio;
+                fullThrottleSource.enabled = enableAudio;
+                currentEnableAudio = enableAudio;
+                //logging
+                string logString = "Audio set to : "+enableAudio;
+                Debug.unityLogger.Log(logString);
+                StaticLogger.Log += logString;
+            }
+            #endregion
+
             if(input)
             {
                 if(!isShutOff)
@@ -68,16 +82,14 @@ namespace AirControl{
         #region Custom Methods
         protected virtual void HandleAudio()
         {
-            #region IOSwitch
-            currentAudioVolume = StaticUIAudioSchema.AudioVolume;
-            #endregion
+            
 
             fullVolumeValue = Mathf.Lerp(0f,1f,input.StickyThrottle);
             finalPitchValue = Mathf.Lerp(1f,maxPitchValue,input.StickyThrottle);
             if(fullThrottleSource)
             {
-                fullThrottleSource.volume = fullVolumeValue *currentAudioVolume;
-                fullThrottleSource.pitch = finalPitchValue * currentAudioVolume;
+                fullThrottleSource.volume = fullVolumeValue;
+                fullThrottleSource.pitch = finalPitchValue ;
             }
         }
         #endregion

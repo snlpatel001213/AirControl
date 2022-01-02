@@ -26,11 +26,14 @@ namespace AirControl
             int indx = 0;
 
             #region IOSwitch
-            int density = StaticLidarSchema.Density;
-            float range = StaticLidarSchema.Range;
-            if (density != numberOfIncrements || maxRange == range){
-                numberOfIncrements = density;
-                maxRange =range;
+            
+            bool isActive = StaticLidarSchema.IsActive;
+
+            if (isActive)
+            {
+                numberOfIncrements = StaticLidarSchema.Density;;
+                maxRange = StaticLidarSchema.Range;
+                StaticLidarSchema.IsActive = false;
             }
             #endregion
 

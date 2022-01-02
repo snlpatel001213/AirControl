@@ -16,9 +16,9 @@ namespace AirControl
 
         public List<Camera> cameras = new List<Camera>();
         public List<CapturePass> CapturePassList = new List<CapturePass>();
-        public int startCameraIndex =0;
-        private int curentCameraIndex=0;
-        private int currentCaprtureCamera=0;
+        public int startCameraIndex =1;
+        private int curentCameraIndex=1;
+        private int currentCaprtureCamera=1;
         [Header("Shader Setup")]
         public Shader uberReplacementShader;
         public Shader opticalFlowShader;
@@ -128,15 +128,16 @@ namespace AirControl
                 StaticOutputSchema.ScreenCapture = ScreenToBytes(pass.camera, cameras[curentCameraIndex] , captureWidth, captureHeight, pass.supportsAntialiasing, pass.needsRescale);
                 //if the camera is changed then disable all active capture camera
                 if(currentCaprtureCamera != captureCamera)
-                {
+                {  
                     ResetAllCaptureCam(capturePasses);
+                    currentCaprtureCamera = captureCamera;
+                    string logString = System.String.Format("Active scene camera - {0} Capture camera - {1} Width - {2}  Height - {3}: ",curentCameraIndex, currentCaprtureCamera, captureWidth, captureHeight);
+                    Debug.unityLogger.Log(logString);
+                    StaticLogger.Log += logString;
                 }
-                
-                currentCaprtureCamera = captureCamera;
-                pass.camera.enabled =false;
                 OnCameraChange(cameras[currentCaprtureCamera]);// 1 indicate the outside camera
                 OnSceneChange();
-                
+    
             }
 
             #endregion
@@ -151,7 +152,16 @@ namespace AirControl
             //     foreach(CapturePass pass in CapturePassList)
             //     {
             //         pass.camera.enabled =true;
-            //         Save(pass.camera, cameras[curentCameraIndex] ,"Sunil_"+ i + pass.name + ".png", 250, 200, pass.supportsAntialiasing, pass.needsRescale);
+            //         Save(pass.camera, cameras[0] ,"Sunil_"+ i + pass.name + ".png", 250, 200, pass.supportsAntialiasing, pass.needsRescale);
+            //         i++;
+            //         pass.camera.enabled =false;
+            //         OnCameraChange(cameras[0]);
+            //         OnSceneChange();
+            //     }
+            //     foreach(CapturePass pass in CapturePassList)
+            //     {
+            //         pass.camera.enabled =true;
+            //         Save(pass.camera, cameras[1] ,"Sunil_"+ i + pass.name + ".png", 250, 200, pass.supportsAntialiasing, pass.needsRescale);
             //         i++;
             //         pass.camera.enabled =false;
             //         OnCameraChange(cameras[1]);

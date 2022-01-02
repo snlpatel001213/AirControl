@@ -3,5 +3,5 @@
   "Version": "0.0.4",
   "InputControlType": "Other",
   "ShowUIElements": "false",
-  "AudioVolume": 1.0
+  "EnableAudio": "true"
 }

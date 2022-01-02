@@ -2,12 +2,13 @@ using System;
 using System.Collections; 
 using System.Collections.Generic; 
 using System.Net; 
+using Newtonsoft.Json.Linq;
 using System.Net.Sockets; 
 using System.Text; 
 using System.Threading; 
 using UnityEngine;  
-using AirControl;
 using Newtonsoft.Json;
+using AirControl;
 using Communicator;
 
 
@@ -71,16 +72,43 @@ namespace Communicator
 								// Get a stream object for reading 					
 								using (NetworkStream stream = connectedTcpClient.GetStream()) { 						
 									int length; 						
-									// Read incomming stream into byte arrary. 						
+									// Read incomming stream into byte arrary.				
 									while ((length = stream.Read(bytes, 0, bytes.Length)) != 0) { 							
 										var incommingData = new byte[length]; 							
 										Array.Copy(bytes, 0, incommingData, 0, length);  							
 										// Convert byte array to string message. 							
 										string clientMessage = Encoding.ASCII.GetString(incommingData); 
-										inputHandle.ParseInput(clientMessage);				
-										// once received the message, send message in return
-										string outputmsg = outputHandle.ParseOutput();
-										SendMessage(outputmsg);
+										
+										clientMessage = clientMessage.Replace("}{", "} | {");
+										string [] inputArray = clientMessage.Split('|');
+										foreach(string eachInput in inputArray)
+										{
+											bool isOutput = false;
+											// Debug.Log(">>>>>>>>>> "+eachInput);
+											try{
+												var inputJson =  JObject.Parse(eachInput);
+												inputHandle.ParseInput(inputJson);	
+												isOutput = bool.Parse(inputJson["IsOutput"].ToString());
+											}
+											catch (SocketException e){
+												Console.WriteLine("JsonReaderException : {0}", e.Source);
+											}
+											catch (JsonReaderException e){
+												Console.WriteLine("JsonReaderException : {0}", e.Source);
+											}	
+											// once received the message, send message in return
+											if(isOutput){
+												string outputmsg = outputHandle.ParseOutput();
+												SendMessage(outputmsg);
+											}
+											else{
+												string logOutput = outputHandle.LogOutput();
+												SendMessage(logOutput);
+											}
+											
+										}
+											
+										
 									} 					
 								} 				
 							} 			
