@@ -52,7 +52,7 @@ namespace AirControl
                 {
                     distances[indx] = maxRange;
                 }
-                // Debug.DrawRay(transform.position, dir * distances[indx], Color.red);
+                Debug.DrawRay(transform.position, dir * distances[indx], Color.red);
                 StaticOutputSchema.LidarPointCloud = distances;
             }
 

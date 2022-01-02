@@ -189,7 +189,7 @@ namespace AirControl
                 height = Screen.height;
             }
             
-            var depth = 24;
+            var depth = 8;
             var format = RenderTextureFormat.Default;
             var readWrite = RenderTextureReadWrite.Default;
             var antiAliasing = (supportsAntialiasing) ? Mathf.Max(1, QualitySettings.antiAliasing) : 1;
