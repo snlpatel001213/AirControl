@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['networkcommunicator_165',['NetworkCommunicator',['../classCommunicator_1_1NetworkCommunicator.html',1,'Communicator']]],
-  ['notnullattribute_166',['NotNullAttribute',['../classSQLite4Unity3d_1_1NotNullAttribute.html',1,'SQLite4Unity3d']]],
-  ['notnullconstraintviolationexception_167',['NotNullConstraintViolationException',['../classSQLite4Unity3d_1_1NotNullConstraintViolationException.html',1,'SQLite4Unity3d']]]
+  ['presetschema_101',['PresetSchema',['../classCommunicator_1_1PresetSchema.html',1,'Communicator']]],
+  ['primitivetostringconverter_102',['PrimitiveToStringConverter',['../classCommunicator_1_1PrimitiveToStringConverter.html',1,'Communicator']]]
 ];

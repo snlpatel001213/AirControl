@@ -6,7 +6,6 @@ var namespaceAirControl =
     [ "AC_Airplane_Audio", "classAirControl_1_1AC__Airplane__Audio.html", "classAirControl_1_1AC__Airplane__Audio" ],
     [ "AC_Airplane_Camera", "classAirControl_1_1AC__Airplane__Camera.html", "classAirControl_1_1AC__Airplane__Camera" ],
     [ "AC_Airplane_CameraController", "classAirControl_1_1AC__Airplane__CameraController.html", "classAirControl_1_1AC__Airplane__CameraController" ],
-    [ "AC_Airplane_CameraController_old", "classAirControl_1_1AC__Airplane__CameraController__old.html", "classAirControl_1_1AC__Airplane__CameraController__old" ],
     [ "AC_Airplane_Characteristics", "classAirControl_1_1AC__Airplane__Characteristics.html", "classAirControl_1_1AC__Airplane__Characteristics" ],
     [ "AC_Airplane_Controller", "classAirControl_1_1AC__Airplane__Controller.html", "classAirControl_1_1AC__Airplane__Controller" ],
     [ "AC_Airplane_ControlSurface", "classAirControl_1_1AC__Airplane__ControlSurface.html", "classAirControl_1_1AC__Airplane__ControlSurface" ],
@@ -29,7 +28,6 @@ var namespaceAirControl =
     [ "AC_XboxAirplane_Input_Editor", "classAirControl_1_1AC__XboxAirplane__Input__Editor.html", "classAirControl_1_1AC__XboxAirplane__Input__Editor" ],
     [ "ColorEncoding", "classAirControl_1_1ColorEncoding.html", null ],
     [ "IAirplaneUI", "interfaceAirControl_1_1IAirplaneUI.html", "interfaceAirControl_1_1IAirplaneUI" ],
-    [ "ImageSynthesis", "classAirControl_1_1ImageSynthesis.html", "classAirControl_1_1ImageSynthesis" ],
     [ "LevelControl", "classAirControl_1_1LevelControl.html", "classAirControl_1_1LevelControl" ],
     [ "Lidar", "classAirControl_1_1Lidar.html", "classAirControl_1_1Lidar" ],
     [ "Sun", "classAirControl_1_1Sun.html", "classAirControl_1_1Sun" ]

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['begintransaction_186',['BeginTransaction',['../classSQLite4Unity3d_1_1SQLiteConnection.html#acf7812615d2363811e7dbd3da675de0e',1,'SQLite4Unity3d::SQLiteConnection']]]
+  ['createschema_111',['CreateSchema',['../classCommunicator_1_1IOInit.html#a8b44165244122dc23ff699a469df1b4c',1,'Communicator::IOInit']]],
+  ['createschema_3c_20t_20_3e_112',['createSchema&lt; T &gt;',['../classCommunicator_1_1IOInit.html#a6b6641a25f4dda5274104b4a2fd037c3',1,'Communicator::IOInit']]]
 ];

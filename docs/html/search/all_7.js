@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['handleinput_66',['HandleInput',['../classAirControl_1_1AC__XboxAirplane__Input.html#a0cb265fac75f796a646acfdbbe1d0c28',1,'AirControl::AC_XboxAirplane_Input']]],
-  ['how_5fto_67',['how_to',['../md_how_to.html',1,'']]]
+  ['networkcommunicator_47',['NetworkCommunicator',['../classCommunicator_1_1NetworkCommunicator.html',1,'Communicator']]]
 ];

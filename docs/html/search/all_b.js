@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['networkcommunicator_82',['NetworkCommunicator',['../classCommunicator_1_1NetworkCommunicator.html',1,'Communicator']]],
-  ['newcommand_83',['NewCommand',['../classSQLite4Unity3d_1_1SQLiteConnection.html#ac93436f5fab4ca5054cabb04d89b7a23',1,'SQLite4Unity3d::SQLiteConnection']]],
-  ['notnullattribute_84',['NotNullAttribute',['../classSQLite4Unity3d_1_1NotNullAttribute.html',1,'SQLite4Unity3d']]],
-  ['notnullconstraintviolationexception_85',['NotNullConstraintViolationException',['../classSQLite4Unity3d_1_1NotNullConstraintViolationException.html',1,'SQLite4Unity3d']]]
+  ['sendmessage_53',['SendMessage',['../classCommunicator_1_1NetworkCommunicator.html#a9fa57f9d151ee441e5b7fdc5f4df53aa',1,'Communicator::NetworkCommunicator']]],
+  ['staticcontrolschema_54',['StaticControlSchema',['../classCommunicator_1_1StaticControlSchema.html',1,'Communicator']]],
+  ['sun_55',['Sun',['../classAirControl_1_1Sun.html',1,'AirControl']]]
 ];

@@ -1,8 +1,6 @@
 var searchData=
 [
-  ['db_5feternalinput_152',['DB_EternalInput',['../classSqliteDB_1_1DB__EternalInput.html',1,'SqliteDB']]],
-  ['db_5feternaloutput_153',['DB_EternalOutput',['../classSqliteDB_1_1DB__EternalOutput.html',1,'SqliteDB']]],
-  ['db_5finit_154',['DB_Init',['../classSqliteDB_1_1DB__Init.html',1,'SqliteDB']]],
-  ['db_5fstartupschema_155',['DB_StartUpSchema',['../classSqliteDB_1_1DB__StartUpSchema.html',1,'SqliteDB']]],
-  ['db_5ftransactions_156',['DB_Transactions',['../classSqliteDB_1_1DB__Transactions.html',1,'SqliteDB']]]
+  ['iairplaneui_90',['IAirplaneUI',['../interfaceAirControl_1_1IAirplaneUI.html',1,'AirControl']]],
+  ['inputhandle_91',['InputHandle',['../classCommunicator_1_1InputHandle.html',1,'Communicator']]],
+  ['ioinit_92',['IOInit',['../classCommunicator_1_1IOInit.html',1,'Communicator']]]
 ];

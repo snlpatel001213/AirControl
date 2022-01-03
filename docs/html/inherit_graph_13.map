@@ -1,5 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSQLite4Unity3d_1_1BaseTableQuery.html" title=" " alt="" coords="5,5,199,47"/>
-<area shape="rect" id="node2" href="$classSQLite4Unity3d_1_1TableQuery.html" title=" " alt="" coords="247,42,485,69"/>
-<area shape="rect" id="node3" title=" " alt="" coords="50,71,154,98"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,119,39"/>
+<area shape="rect" id="node2" href="$classCommunicator_1_1PrimitiveToStringConverter.html" title="Converting boolena to string while serializing" alt="" coords="167,5,361,47"/>
 </map>

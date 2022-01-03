@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['busytimeout_228',['BusyTimeout',['../classSQLite4Unity3d_1_1SQLiteConnection.html#a314a3f6dde6405364342ee8759ad244a',1,'SQLite4Unity3d::SQLiteConnection']]]
+  ['msgtype_116',['MsgType',['../classCommunicator_1_1StaticControlSchema.html#add37f9d2f9776ffb0c5c6e083ab761d9',1,'Communicator::StaticControlSchema']]]
 ];

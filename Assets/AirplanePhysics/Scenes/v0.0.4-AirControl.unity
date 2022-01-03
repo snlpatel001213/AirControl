@@ -1267,7 +1267,7 @@ Camera:
     width: 1
     height: 1
   near clip plane: 0.1
-  far clip plane: 100000
+  far clip plane: 10000
   field of view: 90
   orthographic: 0
   orthographic size: 5
@@ -2071,14 +2071,30 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 11c81f481a55ec59b881370b86cf7180, type: 2}
+    - target: {fileID: -5862604693938207386, guid: 03e08801ca6217a03aee6c415b1ee9ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 0def82c0e809855b2ae2f0fb33c94875, type: 2}
     - target: {fileID: 243654019818264457, guid: 03e08801ca6217a03aee6c415b1ee9ba, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 26766af7c27b90b4c92cdc15ba758c92, type: 2}
+      objectReference: {fileID: 2100000, guid: e50f564ed516d5ab6aa14731f430bfb1, type: 2}
+    - target: {fileID: 797680803888956241, guid: 03e08801ca6217a03aee6c415b1ee9ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: e50f564ed516d5ab6aa14731f430bfb1, type: 2}
+    - target: {fileID: 839811860920407473, guid: 03e08801ca6217a03aee6c415b1ee9ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c6ef86412055505fabe9efb7f66ac4bc, type: 2}
     - target: {fileID: 919132149155446097, guid: 03e08801ca6217a03aee6c415b1ee9ba, type: 3}
       propertyPath: m_Name
       value: wild town
       objectReference: {fileID: 0}
+    - target: {fileID: 4704071954014084705, guid: 03e08801ca6217a03aee6c415b1ee9ba, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: c6ef86412055505fabe9efb7f66ac4bc, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 03e08801ca6217a03aee6c415b1ee9ba, type: 3}
 --- !u!1 &1238278156
@@ -2758,7 +2774,7 @@ Camera:
     y: 0
     width: 1
     height: 1
-  near clip plane: 0.01
+  near clip plane: 0.3
   far clip plane: 100000
   field of view: 60
   orthographic: 0
@@ -2961,8 +2977,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longitude: -504.55
   latitude: -1650.4
-  hour: 14
-  minutes: 17
+  hour: 17
+  minutes: 29
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1835753706
