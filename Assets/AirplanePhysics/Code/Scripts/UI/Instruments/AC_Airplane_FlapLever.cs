@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Monitor and updates the flap position  to UI 
+    /// </summary>
     public class AC_Airplane_FlapLever : MonoBehaviour, IAirplaneUI
     {
         #region Variables
@@ -16,6 +19,9 @@ namespace AirControl
 
 
         #region Interface Methods
+        /// <summary>
+        /// Updates to UI 
+        /// </summary>
         public void HandleAirplaneUI()
         {
             if(input && parentRect && handleRect)

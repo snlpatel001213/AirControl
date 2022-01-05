@@ -5,6 +5,9 @@ using Communicator;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Monitor and updates the Attitude to UI 
+    /// </summary>
     public class AC_Airplane_Attitude : MonoBehaviour, IAirplaneUI
     {
         #region Variables
@@ -27,6 +30,9 @@ namespace AirControl
 
 
         #region Interface Methods
+        /// <summary>
+        /// Updates to UI 
+        /// </summary>
         public void HandleAirplaneUI()
         {
             if(airplane)

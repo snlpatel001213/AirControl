@@ -9,7 +9,9 @@ using Communicator;
 
 namespace Communicator
 {
-    
+    /// <summary>
+    /// Handle inbound request from the TCP socket
+    /// </summary>
     public class InputHandle:MonoBehaviour
     {
         #region Builtin Methods
@@ -17,10 +19,12 @@ namespace Communicator
 
         #region Custom Methods
         // receive msg to unity
-        
+        /// <summary>
+        /// Parse input coming from network
+        /// </summary>
+        /// <param name="inputJson">Input Json object</param>
         public void ParseInput(JObject inputJson)
         {
-
                 string MsgType = inputJson["MsgType"].ToString();
 
                 #region ControlInput

@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace  AirControl
 {
+    /// <summary>
+    /// Setup follow camera
+    /// </summary>
     public class AC_Basic_Follow_Camera : MonoBehaviour
     {
         #region Variables
@@ -37,12 +40,15 @@ namespace  AirControl
         #endregion
 
         #region Custom Methods
+        /// <summary>
+        /// Setup follow camera height and distance from the Airplane
+        /// </summary>
         protected virtual void HandleCamera()
         {
             // Camera that follow the target
             // -airplane.forward*cameraDistance Negative to bring the camera back of the airplane
             Vector3 wantedPosition =  airplane.position + (-airplane.forward*cameraDistance) + Vector3.up*cameraHeight;
-            Debug.DrawLine(airplane.position, wantedPosition, Color.blue);
+            // Debug.DrawLine(airplane.position, wantedPosition, Color.blue);
             transform.position = Vector3.SmoothDamp(transform.position, wantedPosition, ref smoothVelocity, cameraMovementSpeed);
             // Watch the airplane
             transform.LookAt(airplane);

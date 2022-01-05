@@ -5,6 +5,9 @@ using Communicator;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Creates and controls Lidar
+    /// </summary>
     public class Lidar : MonoBehaviour
     {
         public int numberOfIncrements = 360;

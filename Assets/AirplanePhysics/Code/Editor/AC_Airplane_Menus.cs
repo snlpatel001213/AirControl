@@ -5,6 +5,10 @@ using UnityEditor;
 
 namespace AirControl
 {
+    /// <summary>
+    /// creates "Create New Airplane" menu in the menubar
+    /// This helps in easy setup of new airplane
+    /// </summary>
     public static class AC_Airplane_Menus
     {
         [MenuItem("Air Control/Create New Airplane")]

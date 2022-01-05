@@ -10,6 +10,10 @@ using Commons;
 
 namespace Communicator
 {
+    /// <summary>
+    /// Input Output init
+    /// Writting schema files to the disk for reference
+    /// </summary>
     public class IOInit
     {
         #region Variables

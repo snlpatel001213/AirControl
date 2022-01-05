@@ -41,6 +41,7 @@ namespace AirControl
         {
             if(rb){
                 HandlePhysics();
+                HandleLocation();
             }
             // DB based operations
             
@@ -49,6 +50,14 @@ namespace AirControl
 
         #region Custom Methods
         protected virtual void HandlePhysics(){
+
+        }
+        /// <summary>
+        /// Provides the location of the Aircraft in 3D coordinate system
+        /// </summary>
+        void HandleLocation()
+        {
+            Vector3 currentLocation = rb.position;
 
         }
         #endregion

@@ -3,7 +3,7 @@
 </p>
 <BR>
   
-# <div align="center">Welcome to Aircontrol</div>
+# Welcome to Aircontrol
 
 **AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** Airsim offers a realistic simulation experience with a variety of airplanes. The Airsim is built on [Unity Game engine](https://unity.com). Following are the salient features of the Aircontrol:
 
@@ -15,14 +15,14 @@
 * Aircontrol allows users to take advantage of aerodynamics effects such as [Ground effect](https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)).
 * All the control surfaces (Throttle, Rudder, Ailerons, and Flaps) accepts normalized input between -1 and 1. This makes Aircontrol even more friendly with AI.
 
-# <div align="center">Demo</div>
+# Demo
 
 *Current release version v0.0.3 is a pre-release to test the air stability and controls. Python integration is still in development.*
   
 [![AirControl Basic Demo](https://img.youtube.com/vi/Lhwb4UVulMs/0.jpg)](https://www.youtube.com/watch?v=Lhwb4UVulMs)
 
 
-# <div align="center">Control Inputs</div>
+# Control Inputs
 
 ![Keyboard Mappings](docs/images/keyboard-layout.png)
 <details close>
@@ -34,7 +34,7 @@
 
 </details>
 
-# <div align="center">Getting started</div>
+# Getting started
 1. Windows - Not Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
@@ -45,15 +45,15 @@
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
 
-# <div align="center">Documentation</div>
+# Documentation
 
 1. Documentation - https://snlpatel001213.github.io/AirControl/html/index.html
 
-# <div align="center">Future Release</div>
+# Future Release
 Refer to the Project page for the future release, features and bug tracking : https://github.com/snlpatel001213/AirControl/projects/1
 ![Projects Tab Mappings](docs/images/projects_tab.png)
 
-# <div align="center">Tools and Technology</div>
+# Tools and Technology
 
 <div align="center">
         <img src="docs/images/Unity_logo.png" width="10%"/>
@@ -62,12 +62,12 @@ Refer to the Project page for the future release, features and bug tracking : ht
 
 </div>
 
-# <div align="center">Research Inspirations</div>
+# Research Inspirations
 Feel free to list your research topic you love to work on over here. Collaborate and publish.
 ---
 1. On January 15, 2009, US Airways Flight 1549, an Airbus A320 on a flight from New York City's LaGuardia Airport to Charlotte, North Carolina, struck a flock of birds shortly after take-off, losing all engine power. Unable to reach any airport for an emergency landing due to their low altitude, pilots Chesley "Sully" Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan. **Well! Sully did the best but Could we have a different outcome, If Reinforcement learning was controlling this plane?**. [Reference](https://en.wikipedia.org/wiki/US_Airways_Flight_1549)
 
-# <div align="center">Contribute</div>
+# Contribute
 If you are keen to contribute to Aircontrol, refer to the contribution guide.
 
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)

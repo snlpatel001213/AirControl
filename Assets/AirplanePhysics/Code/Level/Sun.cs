@@ -6,7 +6,9 @@ using Communicator;
 
 namespace AirControl
 {
-
+    /// <summary>
+    /// Function to change sun location and create Day and Night effects.
+    /// </summary>
     [RequireComponent(typeof(Light))]
     [ExecuteInEditMode]
     public class Sun : MonoBehaviour
@@ -37,24 +39,32 @@ namespace AirControl
 
         [SerializeField]
         DateTime date;
-
+        /// <summary>
+        /// set dun location as per Hour and Minute
+        /// </summary>
+        /// <param name="hour">Hour, limit 0-24</param>
+        /// <param name="minutes">Minutes, limit 0-60</param>
         public void SetTime(int hour, int minutes) {
             this.hour = hour;
             this.minutes = minutes;            
             OnValidate();
         }
-
+        /// <summary>
+        /// Set sun location as per the Longitude and latitude
+        /// </summary>
+        /// <param name="longitude"></param>
+        /// <param name="latitude"></param>
         public void SetLocation(float longitude, float latitude){
           this.longitude = longitude;
           this.latitude = latitude;
         }
 
-        public void SetDate(DateTime dateTime){
-         this.hour = dateTime.Hour;
-         this.minutes = dateTime.Minute;
-         this.date = dateTime.Date;
-         OnValidate();
-        }
+        // public void SetDate(DateTime dateTime){
+        //  this.hour = dateTime.Hour;
+        //  this.minutes = dateTime.Minute;
+        //  this.date = dateTime.Date;
+        //  OnValidate();
+        // }
 
         public void SetUpdateSteps(int i) {
             frameSteps = i;
@@ -63,7 +73,9 @@ namespace AirControl
         public void SetTimeSpeed(float speed) {
             timeSpeed = speed;
         }
-
+        /// <summary>
+        /// Set datetime as soon as the game starts
+        /// </summary>
         private void Awake()
         {
 
@@ -82,9 +94,11 @@ namespace AirControl
         private void FixedUpdate()
         {   
 
-            //switching sun location as per the database
+            /// <summary>
+            /// Switching sun location as per the Input/Output from communicator
+            /// </summary>
+            /// <returns></returns>
             #region IOSwitch
-            
             if(StaticTODSchema.IsActive)
             {
                 float sunLatitude = StaticTODSchema.SunLatitude;
@@ -107,7 +121,9 @@ namespace AirControl
 
 
         }
-
+        /// <summary>
+        /// Set sun location as per the provided input
+        /// </summary>
         void SetPosition()
         {
 
@@ -125,29 +141,31 @@ namespace AirControl
         
     }
 
-    /*
-     * The following source came from this blog:
-     * http://guideving.blogspot.co.uk/2010/08/sun-position-in-c.html
-     */
+    /// <summary>
+    /// Setting sun position
+    /// The following source came from this blog:
+    /// http://guideving.blogspot.co.uk/2010/08/sun-position-in-c.html
+    /// </summary>
     public static class SunPosition
     {
         private const double Deg2Rad = Math.PI / 180.0;
         private const double Rad2Deg = 180.0 / Math.PI;
 
-        /*! 
-         * \brief Calculates the sun light. 
-         * 
-         * CalcSunPosition calculates the suns "position" based on a 
-         * given date and time in local time, latitude and longitude 
-         * expressed in decimal degrees. It is based on the method 
-         * found here: 
-         * http://www.astro.uio.no/~bgranslo/aares/calculate.html 
-         * The calculation is only satisfiably correct for dates in 
-         * the range March 1 1900 to February 28 2100. 
-         * \param dateTime Time and date in local time. 
-         * \param latitude Latitude expressed in decimal degrees. 
-         * \param longitude Longitude expressed in decimal degrees. 
-         */
+       /// <summary>
+       ///  Calculates the sun light.   
+       ///  CalcSunPosition calculates the suns "position" based on a 
+       ///  given date and time in local time, latitude and longitude 
+       ///  expressed in decimal degrees. It is based on the method 
+       ///  found here: 
+       ///  http://www.astro.uio.no/~bgranslo/aares/calculate.html 
+       ///  The calculation is only satisfiably correct for dates in 
+       ///  the range March 1 1900 to February 28 2100. 
+       /// </summary>
+       /// <param name="dateTime"> dateTime Time and date in local time.</param>
+       /// <param name="latitude">latitude Latitude expressed in decimal degrees. </param>
+       /// <param name="longitude">longitude Longitude expressed in decimal degrees. </param>
+       /// <param name="outAzimuth"></param>
+       /// <param name="outAltitude"></param>
         public static void CalculateSunPosition(
             DateTime dateTime, double latitude, double longitude, out double outAzimuth, out double outAltitude)
         {
@@ -232,12 +250,11 @@ namespace AirControl
             outAzimuth = azimuth;
         }
 
-        /*! 
-        * \brief Corrects an angle. 
-        * 
-        * \param angleInRadians An angle expressed in radians. 
-        * \return An angle in the range 0 to 2*PI. 
-        */
+        /// <summary>
+        /// Corrects an angle. 
+        /// </summary>
+        /// <param name="angleInRadians">An angle expressed in radians. </param>
+        /// <returns> An angle in the range 0 to 2*PI.</returns>
         private static double CorrectAngle(double angleInRadians)
         {
             if (angleInRadians < 0)

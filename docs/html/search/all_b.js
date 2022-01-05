@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['sendmessage_53',['SendMessage',['../classCommunicator_1_1NetworkCommunicator.html#a9fa57f9d151ee441e5b7fdc5f4df53aa',1,'Communicator::NetworkCommunicator']]],
-  ['staticcontrolschema_54',['StaticControlSchema',['../classCommunicator_1_1StaticControlSchema.html',1,'Communicator']]],
-  ['sun_55',['Sun',['../classAirControl_1_1Sun.html',1,'AirControl']]]
+  ['resetfuel_74',['ResetFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#a2398e562b82d5047005b79d949a1e995',1,'AirControl::AC_Airplane_Fuel']]],
+  ['restartlevel_75',['RestartLevel',['../classAirControl_1_1LevelControl.html#a7b06d34c99cdf9eccb2c5ad9351b6e60',1,'AirControl::LevelControl']]]
 ];

@@ -11,3 +11,9 @@ sphinx-quickstart
 sphinx-quickstart
 
 http://www.keyboard-layout-editor.com/#/gists/53ac4d66840c459705d8bf8637341060
+draw.io --export --format png --uncompressed API.drawio
+
+
+Contributing 
+1. update the version : /home/supatel/Documents/AirControl_20/Assets/AirplanePhysics/Code/commons/CommonConfigs.cs
+2. 

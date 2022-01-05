@@ -4,6 +4,9 @@ using UnityEngine;
 using Communicator;
 namespace  AirControl
 {
+    /// <summary>
+    /// Base class to listen for keyboard Inputs
+    /// </summary>
     public class AC_BaseAirplane_Input : MonoBehaviour
     {
         #region Variable
@@ -69,11 +72,14 @@ namespace  AirControl
             ClampInputs();
 
              // Keeping Get connection in the update loop is essential to avoid the lag
-            DBGetter();
+            IOSwitch();
         }
         #endregion
         
         #region Custom Methods
+        /// <summary>
+        /// Take input such as Pitch, Yaw, Roll etc
+        /// </summary>
         protected virtual void HandleInput(){
             // Process pitch, roll, yaw and throttle
             pitch =  Input.GetAxis("Vertical");
@@ -98,12 +104,17 @@ namespace  AirControl
             camerSwitch = Input.GetKeyDown(cameraKey);
 
         }
-
+        /// <summary>
+        /// Implements the sticky behaviour of the throttle. Once force applied the throttle stay where it is left. 
+        /// </summary>
         void StickyThrottleControl(){
             stickyThrottle = stickyThrottle + (throttle*throttleSpeed*Time.deltaTime);
             stickyThrottle =  Mathf.Clamp01(stickyThrottle);
 
         }
+        /// <summary>
+        /// Clamping inputs between limits
+        /// </summary>
         protected void ClampInputs()
         {
             pitch = Mathf.Clamp(pitch,-1f,1f);
@@ -113,8 +124,10 @@ namespace  AirControl
             brake = Mathf.Clamp(brake,0f,1f);
             flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);
         }
-
-        protected void DBGetter()
+        /// <summary>
+        /// Receive input from external program like python
+        /// </summary>
+        protected void IOSwitch()
         {
             string DBInputControlType = StaticControlSchema.InputControlType;
             // if control type is code then lock the controls and fly it

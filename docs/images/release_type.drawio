@@ -1,0 +1,40 @@
+<mxfile host="65bd71144e">
+    <diagram id="V-EvrQ_5TE25VCxrjEQ4" name="Page-1">
+        <mxGraphModel dx="1422" dy="818" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="6" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="2" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="&lt;b&gt;Editor&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="200" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="3" target="4">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" style="edgeStyle=none;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="3" target="5">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="&lt;b&gt;Binary Releases&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
+                    <mxGeometry x="619" y="200" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="4" value="&lt;b&gt;HDRP&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="260" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="&lt;b&gt;URP&lt;br&gt;&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fontFamily=Courier New;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="360" width="120" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span style=&quot;background-color: rgb(255 , 255 , 255) ; font-family: &amp;#34;inter&amp;#34; , sans-serif ; font-size: 18px&quot;&gt;High-Definition Render Pipeline (HDRP)&lt;/span&gt;&lt;/div&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;inter&amp;#34; , sans-serif ; font-size: 18px ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(255 , 255 , 255) ; display: inline ; float: none&quot;&gt;&lt;p style=&quot;text-align: justify ; box-sizing: inherit ; margin-top: 0px ; font-family: &amp;#34;inter&amp;#34; , sans-serif&quot;&gt;HDRP targets high-end hardware such as PC, Xbox, and PlayStation. You are able to achieve realistic graphics in demanding scenarios. HDRP uses Compute Shader technology and takes advantage of GPU hardware.&lt;span style=&quot;font-size: 1.125rem ; font-family: &amp;#34;inter&amp;#34; , sans-serif&quot;&gt;Use HDRP to create high-fidelity games, automotive demos, architectural applications, and anything that prioritizes graphics quality. HDRP uses physically based Lighting and Materials, and supports both Forward and Deferred rendering paths.&lt;/span&gt;&lt;/p&gt;&lt;p style=&quot;box-sizing: inherit ; margin-top: 0px ; font-family: &amp;#34;inter&amp;#34; , sans-serif&quot;&gt;Aircontrol HDRP version can be used for following purposes:&lt;/p&gt;&lt;p style=&quot;box-sizing: inherit ; margin-top: 0px ; font-family: &amp;#34;inter&amp;#34; , sans-serif&quot;&gt;&lt;/p&gt;&lt;ol&gt;&lt;li&gt;High Fidelity Dataset Generation&lt;/li&gt;&lt;li&gt;High Resolutioon Deep Learning&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="40" y="440" width="340" height="430" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="&lt;div style=&quot;text-align: justify ; font-size: 19px&quot;&gt;Universal Render Pipeline (URP)&lt;/div&gt;&lt;span style=&quot;color: rgb(0 , 0 , 0) ; font-family: &amp;#34;inter&amp;#34; , sans-serif ; font-style: normal ; font-weight: 400 ; letter-spacing: normal ; text-indent: 0px ; text-transform: none ; word-spacing: 0px ; background-color: rgb(255 , 255 , 255) ; display: inline ; float: none ; font-size: 18px&quot;&gt;&lt;p style=&quot;text-align: justify ; box-sizing: border-box ; margin: 0px 0px 10px ; color: rgb(51 , 51 , 51) ; font-family: &amp;#34;roboto&amp;#34; , sans-serif&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;The URP is a prebuilt Scriptable Render Pipeline, made by Unity. URP provides artist-friendly workflows that let you quickly and easily create optimized graphics across a range of platforms, from mobile to high-end consoles and PCs.&lt;/font&gt;&lt;/p&gt;&lt;p style=&quot;box-sizing: border-box ; margin: 0px 0px 10px ; color: rgb(51 , 51 , 51) ; font-family: &amp;#34;roboto&amp;#34; , sans-serif&quot;&gt;&lt;/p&gt;&lt;div style=&quot;text-align: justify&quot;&gt;URP consumes less resources compared to HDRP.&amp;nbsp;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span style=&quot;text-align: left&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/div&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;span style=&quot;text-align: left&quot;&gt;Aircontrol URP version can be used for following purposes:&lt;/span&gt;&lt;/div&gt;&lt;ol&gt;&lt;p style=&quot;text-align: left ; box-sizing: inherit ; margin-top: 0px&quot;&gt;&lt;/p&gt;&lt;ol style=&quot;text-align: left&quot;&gt;&lt;/ol&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Reinforcement Learning simulations&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;text-align: left&quot;&gt;&lt;font style=&quot;font-size: 18px&quot;&gt;Data Generation&lt;/font&gt;&lt;/li&gt;&lt;/ol&gt;&lt;p&gt;&lt;/p&gt;&lt;div style=&quot;text-align: justify&quot;&gt;&lt;br&gt;&lt;/div&gt;&lt;/span&gt;" style="text;whiteSpace=wrap;html=1;align=right;" vertex="1" parent="1">
+                    <mxGeometry x="460" y="440" width="320" height="400" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

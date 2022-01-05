@@ -107,12 +107,15 @@ $(document).ready(function(){initNavTree('classAirControl_1_1AC__Airplane__Camer
 <div class="title">AirControl.AC_Airplane_CameraController Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Camera switching and capture functionality  
+ <a href="classAirControl_1_1AC__Airplane__CameraController.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AirControl.AC_Airplane_CameraController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__Airplane__CameraController__inherit__graph.png" border="0" usemap="#AirControl_8AC__Airplane__CameraController_inherit__map" alt="Inheritance graph"/></div>
 <map name="AirControl_8AC__Airplane__CameraController_inherit__map" id="AirControl_8AC__Airplane__CameraController_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,176,121"/>
+<area shape="rect" title="Camera switching and capture functionality" alt="" coords="5,80,176,121"/>
 <area shape="rect" title=" " alt="" coords="29,5,153,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -121,9 +124,9 @@ Collaboration diagram for AirControl.AC_Airplane_CameraController:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__Airplane__CameraController__coll__graph.png" border="0" usemap="#AirControl_8AC__Airplane__CameraController_coll__map" alt="Collaboration graph"/></div>
 <map name="AirControl_8AC__Airplane__CameraController_coll__map" id="AirControl_8AC__Airplane__CameraController_coll__map">
-<area shape="rect" title=" " alt="" coords="551,27,721,69"/>
+<area shape="rect" title="Camera switching and capture functionality" alt="" coords="551,27,721,69"/>
 <area shape="rect" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" href="classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="191,27,393,69"/>
+<area shape="rect" href="classAirControl_1_1AC__BaseAirplane__Input.html" title="Base class to listen for keyboard Inputs" alt="" coords="191,27,393,69"/>
 <area shape="rect" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html" title=" " alt="" coords="179,93,405,134"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -148,20 +151,20 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac00de0e845af856a5819f46609e1621f"><td class="memItemLeft" align="right" valign="top"><a id="ac00de0e845af856a5819f46609e1621f"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>CreateCamera</b> ()</td></tr>
+<tr class="memitem:ac00de0e845af856a5819f46609e1621f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__CameraController.html#ac00de0e845af856a5819f46609e1621f">CreateCamera</a> ()</td></tr>
+<tr class="memdesc:ac00de0e845af856a5819f46609e1621f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create hidden capture camera for each schene camera  <a href="classAirControl_1_1AC__Airplane__CameraController.html#ac00de0e845af856a5819f46609e1621f">More...</a><br /></td></tr>
 <tr class="separator:ac00de0e845af856a5819f46609e1621f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4187dc58c543a130207206eaed286e2a"><td class="memItemLeft" align="right" valign="top"><a id="a4187dc58c543a130207206eaed286e2a"></a>
-byte[]&#160;</td><td class="memItemRight" valign="bottom"><b>ScreenToBytes</b> (Camera cam, Camera mainCamera, int width, int height, bool supportsAntialiasing, bool needsRescale)</td></tr>
-<tr class="separator:a4187dc58c543a130207206eaed286e2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac90dd215671fd5a5fd28b7fcc7dae3ce"><td class="memItemLeft" align="right" valign="top"><a id="ac90dd215671fd5a5fd28b7fcc7dae3ce"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>selectCamera</b> (int cameraId)</td></tr>
+<tr class="memitem:aae9249af4efead508df1332a1955f964"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__CameraController.html#aae9249af4efead508df1332a1955f964">ScreenToBytes</a> (Camera cam, Camera mainCamera, int width, int height, bool supportsAntialiasing, bool needsRescale, ref byte[] screencapture)</td></tr>
+<tr class="memdesc:aae9249af4efead508df1332a1955f964"><td class="mdescLeft">&#160;</td><td class="mdescRight">Capture and return the screen as byte array  <a href="classAirControl_1_1AC__Airplane__CameraController.html#aae9249af4efead508df1332a1955f964">More...</a><br /></td></tr>
+<tr class="separator:aae9249af4efead508df1332a1955f964"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac90dd215671fd5a5fd28b7fcc7dae3ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__CameraController.html#ac90dd215671fd5a5fd28b7fcc7dae3ce">selectCamera</a> (int cameraId)</td></tr>
+<tr class="memdesc:ac90dd215671fd5a5fd28b7fcc7dae3ce"><td class="mdescLeft">&#160;</td><td class="mdescRight">select scene cameras  <a href="classAirControl_1_1AC__Airplane__CameraController.html#ac90dd215671fd5a5fd28b7fcc7dae3ce">More...</a><br /></td></tr>
 <tr class="separator:ac90dd215671fd5a5fd28b7fcc7dae3ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5529c3888f1d6ce6a2ae12ea8f1b435b"><td class="memItemLeft" align="right" valign="top"><a id="a5529c3888f1d6ce6a2ae12ea8f1b435b"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnSceneChange</b> ()</td></tr>
+<tr class="memitem:a5529c3888f1d6ce6a2ae12ea8f1b435b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__CameraController.html#a5529c3888f1d6ce6a2ae12ea8f1b435b">OnSceneChange</a> ()</td></tr>
+<tr class="memdesc:a5529c3888f1d6ce6a2ae12ea8f1b435b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deprecated Not used with API This fucntion was used to switch the screen manually  <a href="classAirControl_1_1AC__Airplane__CameraController.html#a5529c3888f1d6ce6a2ae12ea8f1b435b">More...</a><br /></td></tr>
 <tr class="separator:a5529c3888f1d6ce6a2ae12ea8f1b435b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9f7ee324a4310869ca481ad868516ee9"><td class="memItemLeft" align="right" valign="top"><a id="a9f7ee324a4310869ca481ad868516ee9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>OnCameraChange</b> (Camera activeCamera)</td></tr>
+<tr class="memitem:a9f7ee324a4310869ca481ad868516ee9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__CameraController.html#a9f7ee324a4310869ca481ad868516ee9">OnCameraChange</a> (Camera activeCamera)</td></tr>
+<tr class="memdesc:a9f7ee324a4310869ca481ad868516ee9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Refresh capture camera when active scene camera switch happens  <a href="classAirControl_1_1AC__Airplane__CameraController.html#a9f7ee324a4310869ca481ad868516ee9">More...</a><br /></td></tr>
 <tr class="separator:a9f7ee324a4310869ca481ad868516ee9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
@@ -210,10 +213,242 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>saveOpticalFlow</b> =
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a1e136a720179b3de667d17ca64b76d50"><td class="memItemLeft" align="right" valign="top"><a id="a1e136a720179b3de667d17ca64b76d50"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>SwitchCamera</b> ()</td></tr>
+<tr class="memitem:a1e136a720179b3de667d17ca64b76d50"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__CameraController.html#a1e136a720179b3de667d17ca64b76d50">SwitchCamera</a> ()</td></tr>
+<tr class="memdesc:a1e136a720179b3de667d17ca64b76d50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Switch camera  <a href="classAirControl_1_1AC__Airplane__CameraController.html#a1e136a720179b3de667d17ca64b76d50">More...</a><br /></td></tr>
 <tr class="separator:a1e136a720179b3de667d17ca64b76d50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Camera switching and capture functionality </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ac00de0e845af856a5819f46609e1621f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac00de0e845af856a5819f46609e1621f">&#9670;&nbsp;</a></span>CreateCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AirControl.AC_Airplane_CameraController.CreateCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Create hidden capture camera for each schene camera </p>
+
+</div>
+</div>
+<a id="a9f7ee324a4310869ca481ad868516ee9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9f7ee324a4310869ca481ad868516ee9">&#9670;&nbsp;</a></span>OnCameraChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AirControl.AC_Airplane_CameraController.OnCameraChange </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>activeCamera</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Refresh capture camera when active scene camera switch happens </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">activeCamera</td><td>Active scene camera</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a5529c3888f1d6ce6a2ae12ea8f1b435b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5529c3888f1d6ce6a2ae12ea8f1b435b">&#9670;&nbsp;</a></span>OnSceneChange()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AirControl.AC_Airplane_CameraController.OnSceneChange </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Deprecated Not used with API This fucntion was used to switch the screen manually </p>
+
+</div>
+</div>
+<a id="aae9249af4efead508df1332a1955f964"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aae9249af4efead508df1332a1955f964">&#9670;&nbsp;</a></span>ScreenToBytes()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AirControl.AC_Airplane_CameraController.ScreenToBytes </td>
+          <td>(</td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>cam</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">Camera&#160;</td>
+          <td class="paramname"><em>mainCamera</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>width</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>height</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>supportsAntialiasing</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>needsRescale</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">ref byte[]&#160;</td>
+          <td class="paramname"><em>screencapture</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Capture and return the screen as byte array </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cam</td><td>Hidden capture camera</td></tr>
+    <tr><td class="paramname">mainCamera</td><td>Any of scene camera</td></tr>
+    <tr><td class="paramname">width</td><td>Width of the capture</td></tr>
+    <tr><td class="paramname">height</td><td>height of the capture</td></tr>
+    <tr><td class="paramname">supportsAntialiasing</td><td>Antialiasing Property</td></tr>
+    <tr><td class="paramname">needsRescale</td><td>Rescale property</td></tr>
+    <tr><td class="paramname">screencapture</td><td>reference screencapture</td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="ac90dd215671fd5a5fd28b7fcc7dae3ce"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac90dd215671fd5a5fd28b7fcc7dae3ce">&#9670;&nbsp;</a></span>selectCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AirControl.AC_Airplane_CameraController.selectCamera </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cameraId</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>select scene cameras </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">cameraId</td><td></td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a id="a1e136a720179b3de667d17ca64b76d50"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1e136a720179b3de667d17ca64b76d50">&#9670;&nbsp;</a></span>SwitchCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AirControl.AC_Airplane_CameraController.SwitchCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Switch camera </p>
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="ad7281aef24d4db792f22ade79deb6b69"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad7281aef24d4db792f22ade79deb6b69">&#9670;&nbsp;</a></span>capturePasses</h2>

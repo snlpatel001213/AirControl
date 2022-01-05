@@ -4,6 +4,10 @@ using UnityEngine;
 using Communicator;
 
 namespace AirControl{
+
+    /// <summary>
+    /// Setup airplane audio component
+    /// </summary>
     public class AC_Airplane_Audio : MonoBehaviour
     {
         #region Variables
@@ -48,6 +52,9 @@ namespace AirControl{
         // Update is called once per frame
         void Update()
         {
+            /// <summary>
+            /// Switching audio as per the Input/Output from communicator
+            /// </summary>
             #region IOSwitch
             bool enableAudio = StaticUIAudioSchema.EnableAudio;
             if(enableAudio != currentEnableAudio)

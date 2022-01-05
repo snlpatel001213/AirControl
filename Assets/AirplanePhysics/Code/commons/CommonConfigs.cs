@@ -12,11 +12,11 @@ namespace Commons
     public static class CommonFunctions
     {
         /// <summary>
-        /// Get current dev version
+        /// Get current dev version please update this version before each build and relases
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "0.0.4";
+            string VERSION = "0.0.5";
             return VERSION;
         } 
         /// <summary>
@@ -41,7 +41,12 @@ namespace Commons
                 Debug.Log(ioExp.Message);    
             } 
         }
-
+        /// <summary>
+        /// Template function - Deserialize Json file
+        /// </summary>
+        /// <param name="path">Path to the file </param>
+        /// <typeparam name="T">Class to which it will be serialized</typeparam>
+        /// <returns></returns>
         public static T DeserializeJson<T>(string path)
         {
             T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));

@@ -8,6 +8,9 @@ using System.IO;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Camera switching and capture functionality
+    /// </summary>
     public class AC_Airplane_CameraController : MonoBehaviour
     {
         #region Variables
@@ -31,7 +34,7 @@ namespace AirControl
         public bool saveDepth = true;
         public bool saveNormals = true;
         public bool saveOpticalFlow=true;
-        // pass configuration
+        // camera pass configuration
         public CapturePass[] capturePasses = new CapturePass[] {
             new CapturePass() { name = "_img" },
             new CapturePass() { name = "_id", supportsAntialiasing = false },
@@ -40,7 +43,7 @@ namespace AirControl
             new CapturePass() { name = "_normals" },
             new CapturePass() { name = "_flow", supportsAntialiasing = false, needsRescale = true } // (see issue with Motion Vectors in @KNOWN ISSUES)
         };
-
+        // Capture pass struct
         public struct CapturePass
         {
             // configuration
@@ -55,7 +58,7 @@ namespace AirControl
 
         // cached materials
         private Material opticalFlowMaterial;
-
+        // Type of capture
         public enum ReplacementMode
         {
             ObjectId = 0,
@@ -81,6 +84,9 @@ namespace AirControl
             CreateCamera();
         }
 
+        /// <summary>
+        /// Create hidden capture camera for each schene camera
+        /// </summary>
         public void CreateCamera()
         {
                 for (int q = 0; q < capturePasses.Length; q++)
@@ -90,6 +96,12 @@ namespace AirControl
                 }    
             
         }
+        /// <summary>
+        /// When called by the `CreateCamera` function  
+        /// </summary>
+        /// <param name="name">Capture pass name</param>
+        /// <param name="parentCamera">Scene camera to which the hidden camera will be attached</param>
+        /// <returns> New hidden camera</returns>
         private Camera CreateHiddenCamera(string name, Transform parentCamera)
         {
             var go = new GameObject(name, typeof(Camera));
@@ -125,7 +137,7 @@ namespace AirControl
                 //screen capture
                 CapturePass pass = CapturePassList[captureType];
                 pass.camera.enabled =true;
-                StaticOutputSchema.ScreenCapture = ScreenToBytes(pass.camera, cameras[curentCameraIndex] , captureWidth, captureHeight, pass.supportsAntialiasing, pass.needsRescale);
+                ScreenToBytes(pass.camera, cameras[curentCameraIndex] , captureWidth, captureHeight, pass.supportsAntialiasing, pass.needsRescale, ref StaticOutputSchema.ScreenCapture);
                 //if the camera is changed then disable all active capture camera
                 if(currentCaprtureCamera != captureCamera)
                 {  
@@ -170,7 +182,12 @@ namespace AirControl
             // }  
 
         }
-
+        /// <summary>
+        /// Reset all the capture camers to prevent constant capture from released cameras
+        /// This is required for the compute optimization
+        /// This function restart all cams and set them inactive
+        /// </summary>
+        /// <param name="CapturePassList">Capture pass struct</param>
         void ResetAllCaptureCam(CapturePass[] CapturePassList){
             foreach(CapturePass pass in CapturePassList)
             {
@@ -180,8 +197,17 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
-
-        public byte[] ScreenToBytes(Camera cam, Camera mainCamera, int width, int height, bool supportsAntialiasing, bool needsRescale)
+        /// <summary>
+        /// Capture and return the screen as byte array
+        /// </summary>
+        /// <param name="cam">Hidden capture camera</param>
+        /// <param name="mainCamera">Any of scene camera</param>
+        /// <param name="width">Width of the capture</param>
+        /// <param name="height">height of the capture</param>
+        /// <param name="supportsAntialiasing">Antialiasing Property</param>
+        /// <param name="needsRescale">Rescale property</param>
+        /// <param name="screencapture">reference screencapture</param>
+        public void ScreenToBytes(Camera cam, Camera mainCamera, int width, int height, bool supportsAntialiasing, bool needsRescale, ref byte[] screencapture)
         {
              if (width <= 0 || height <= 0)
             {
@@ -222,9 +248,20 @@ namespace AirControl
             tex.Apply();
 
             // encode texture into PNG
-            return  tex.EncodeToPNG();
+            screencapture =  tex.EncodeToPNG();
             
         }
+
+        /// <summary>
+        /// Save function just for debugging
+        /// </summary>
+        /// <param name="cam">Hidden capture camera</param>
+        /// <param name="mainCamera">Any of scene camera</param>
+        /// <param name="width">Width of the capture</param>
+        /// <param name="height">height of the capture</param>
+        /// <param name="supportsAntialiasing">Antialiasing Property</param>
+        /// <param name="needsRescale">Rescale property</param>
+        /// <param name="screencapture">reference screencapture</param>
 
         private void Save(Camera cam, Camera mainCamera, string filename, int width, int height, bool supportsAntialiasing, bool needsRescale)
         {
@@ -272,6 +309,9 @@ namespace AirControl
             RenderTexture.ReleaseTemporary(finalRT);
         }
 
+        /// <summary>
+        /// Switch camera
+        /// </summary>
         protected virtual void SwitchCamera()
         {
             // chnage the camera index as we chaneg the camera
@@ -285,6 +325,10 @@ namespace AirControl
             cameras[curentCameraIndex].GetComponent<AudioListener>().enabled = true;
         }
 
+        /// <summary>
+        /// select scene cameras
+        /// </summary>
+        /// <param name="cameraId"></param>
         public void selectCamera(int cameraId)
         {
             DisableAllCameras();
@@ -296,6 +340,9 @@ namespace AirControl
             }
         }
 
+        /// <summary>
+        /// Disable camera when scene camera switches
+        /// </summary>
         void DisableAllCameras()
         {
             if(cameras.Count > 0)
@@ -308,6 +355,13 @@ namespace AirControl
             }
         }
 
+        /// <summary>
+        /// Replacing shader accroding to active capture camera
+        /// </summary>
+        /// <param name="cam">Capture Camera</param>
+        /// <param name="shader">Shader</param>
+        /// <param name="mode">Replacement mode</param>
+        /// <param name="clearColor">backgroundColor</param>
         static private void SetupCameraWithReplacementShader(Camera cam, Shader shader, ReplacementMode mode, Color clearColor)
         {
             var cb = new CommandBuffer();
@@ -320,6 +374,10 @@ namespace AirControl
             cam.allowHDR = false;
             cam.allowMSAA = false;
         }
+        /// <summary>
+        /// Deprecated Not used with API
+        /// This fucntion was used to switch the screen manually
+        /// </summary>
         public void OnSceneChange()
         {
             var renderers = Object.FindObjectsOfType<Renderer>();
@@ -335,7 +393,10 @@ namespace AirControl
                 r.SetPropertyBlock(mpb);
             }
         }
-
+        /// <summary>
+        /// Refresh capture camera when active scene camera switch happens
+        /// </summary>
+        /// <param name="activeCamera">Active scene camera</param>
         public void OnCameraChange(Camera activeCamera)
         {
             int targetDisplay = 1;
@@ -367,6 +428,12 @@ namespace AirControl
             SetupCameraWithPostShader(capturePasses[5].camera, opticalFlowMaterial, DepthTextureMode.Depth | DepthTextureMode.MotionVectors);
         }
 
+        /// <summary>
+        /// Setup shader for the capture camera
+        /// </summary>
+        /// <param name="cam">Capture camera</param>
+        /// <param name="material">Shader Material</param>
+        /// <param name="depthTextureMode">Depth capture setting</param>
         static private void SetupCameraWithPostShader(Camera cam, Material material, DepthTextureMode depthTextureMode = DepthTextureMode.None)
         {
             var cb = new CommandBuffer();

@@ -1,4 +1,4 @@
 <map id="AirControl.AC_BaseAirplane_Input" name="AirControl.AC_BaseAirplane_Input">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,208,121"/>
+<area shape="rect" id="node1" title="Base class to listen for keyboard Inputs" alt="" coords="5,80,208,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="45,5,169,32"/>
 </map>

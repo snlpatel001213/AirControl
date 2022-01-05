@@ -6,6 +6,9 @@ using Communicator;
 
 namespace AirControl
 {
+    /// <summary>
+    /// UI element controller
+    /// </summary>
     public class AC_AirplaneUI_Controller : MonoBehaviour
     {
         #region Variables

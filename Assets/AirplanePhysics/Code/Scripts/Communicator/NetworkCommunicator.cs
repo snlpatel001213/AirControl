@@ -10,10 +10,14 @@ using UnityEngine;
 using Newtonsoft.Json;
 using AirControl;
 using Communicator;
+using Commons;
 
 
 namespace Communicator
 {
+	/// <summary>
+	/// Class to manage the TCP network function
+	/// </summary>
 	public class NetworkCommunicator : MonoBehaviour
 	{
 		
@@ -57,11 +61,10 @@ namespace Communicator
 		/// <summary>
 		/// Runs in background TcpServerThread; Handles incomming TcpClient requests 
 		/// </summary>
-		
 		public void ListenForIncommingRequests () { 		
 			try { 			
 				// Create listener on localhost port 8052. 			
-				tcpListener = new TcpListener(IPAddress.Parse("127.0.0.1"), 8053); 			
+				tcpListener = new TcpListener(IPAddress.Parse("0.0.0.0"), 8053); 			
 				tcpListener.Start();              
 				Debug.Log("Server is listening");              
 				Byte[] bytes = new Byte[1024];

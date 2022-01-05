@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Monitor and updates the tachometer to UI 
+    /// </summary>
     public class AC_Airplane_Tachometer : MonoBehaviour, IAirplaneUI
     {
         #region Variables
@@ -21,6 +24,9 @@ namespace AirControl
         #endregion
 
         #region Interface Methods
+        /// <summary>
+        /// Updates to UI 
+        /// </summary>
         public void HandleAirplaneUI()
         {
             if(engine && pointer)

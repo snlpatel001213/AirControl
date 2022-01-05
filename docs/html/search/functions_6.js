@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['handleinput_208',['HandleInput',['../classAirControl_1_1AC__XboxAirplane__Input.html#a0cb265fac75f796a646acfdbbe1d0c28',1,'AirControl::AC_XboxAirplane_Input']]]
+  ['parseinput_162',['ParseInput',['../classCommunicator_1_1InputHandle.html#adfb21fe5928d971a3f69c8b910b4ac2b',1,'Communicator::InputHandle']]],
+  ['parseoutput_163',['ParseOutput',['../classCommunicator_1_1OutputHandle.html#a32de13ec8013c9158ecae31b7972d113',1,'Communicator::OutputHandle']]]
 ];

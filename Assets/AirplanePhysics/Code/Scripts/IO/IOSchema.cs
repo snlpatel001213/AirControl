@@ -5,6 +5,9 @@ using Commons;
 namespace Communicator
 {
 	#region ControlInput
+	/// <summary>
+	/// Input control class for serialization deserialization
+	/// </summary>
 	public class ControlSchema 
 	{
 
@@ -30,7 +33,11 @@ namespace Communicator
 		public int Flaps  {get; set;}=0;
 
 	}
-
+	/// <summary>
+	/// Input control class, acts a dictionary. 
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public class StaticControlSchema 
 	{
 		/// <summary>
@@ -63,6 +70,11 @@ namespace Communicator
 	#endregion
 
 	#region Output
+	/// <summary>
+	/// Output control class, acts a dictionary. 
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticOutputSchema
 	{
 		public static string MsgType  { get; set; } = "Output";
@@ -82,6 +94,9 @@ namespace Communicator
 		public static float [] LidarPointCloud;
 		public static string log;
 	}
+	/// <summary>
+	/// Output control class for serialization deserialization
+	/// </summary>
 	public class OutputSchema
 	{
 		public string MsgType  { get; set; } = "Output";
@@ -104,10 +119,18 @@ namespace Communicator
 	#endregion
 
 	#region 
+	/// <summary>
+	/// Logger class for serialization deserialization
+	/// </summary>
 	public class Logger
 	{
 		public string Log { get; set; } = "";
 	}
+	/// <summary>
+	/// Logging the activity per call and outputting the same.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticLogger
 	{
 		public static string Log { get; set; } = "";
@@ -128,7 +151,11 @@ namespace Communicator
 		public int Hour { get; set; } = 10;
 		public int Minute { get; set; } = 5;
 	}
-
+	/// <summary>
+	/// Time of Day related settings
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticTODSchema
 	{
 		public static string MsgType  { get; set; } = "TOD";
@@ -146,6 +173,9 @@ namespace Communicator
 	#endregion
 
 	#region  Camera
+	/// <summary>
+	/// Camera class for serialization deserialization
+	/// </summary>
 	public class CameraSchema
 	{	
 		public string MsgType  { get; set; } = "Camera";
@@ -162,7 +192,11 @@ namespace Communicator
 		public int CaptureHeight {get; set;} = 256;
 
 	}
-
+	/// <summary>
+	/// Scene camera and capture.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticCameraSchema
 	{	
 		public static string MsgType  { get; set; } = "Camera";
@@ -182,6 +216,9 @@ namespace Communicator
 	#endregion
 
 	#region Level
+	/// <summary>
+	///Level reset class for serialization deserialization
+	/// </summary>
 	public class LevelSchema
 	{	
 		public string MsgType  { get; set; } = "Level";
@@ -195,7 +232,11 @@ namespace Communicator
 		public bool LevelReload {get; set;} = false; 
 
 	}
-
+	/// <summary>
+	/// Level reset/related triggers.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticLevelSchema
 	{	
 		public static string MsgType  { get; set; } = "Level";
@@ -212,6 +253,9 @@ namespace Communicator
 	#endregion
 
 	#region WeatherSchema
+	/// <summary>
+	///weather class for serialization deserialization
+	/// </summary>
 	public class WeatherSchema
 	{	
 		public string MsgType  { get; set; } = "Weather";
@@ -225,7 +269,11 @@ namespace Communicator
 		public bool IsFog {get; set;} = false; 
 
 	}
-
+	/// <summary>
+	/// Weather switching
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticWeatherSchema
 	{	
 		public static string MsgType  { get; set; } = "Weather";
@@ -242,6 +290,9 @@ namespace Communicator
 	#endregion
 
 	#region UIAudioSchema
+	/// <summary>
+	///Ui and Audio class for serialization deserialization
+	/// </summary>
 	public class UIAudioSchema
 	{	
 		public string MsgType  { get; set; } = "UIAudio";
@@ -255,7 +306,11 @@ namespace Communicator
 		public bool EnableAudio {get; set;} = true; 
 
 	}
-
+	/// <summary>
+	/// UI and audio control.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticUIAudioSchema
 	{	
 		public static string MsgType  { get; set; } = "UIAudio";
@@ -272,6 +327,9 @@ namespace Communicator
 	#endregion
 
 	#region Lidar
+	/// <summary>
+	///Lidar class for serialization deserialization
+	/// </summary>
 	public class LidarSchema
 	{	
 		public string MsgType  { get; set; } = "Lidar";
@@ -286,7 +344,11 @@ namespace Communicator
 		public bool IsActive {get; set;} = false;
 
 	}
-
+	/// <summary>
+	/// Lidar controls.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticLidarSchema
 	{	
 		public static string MsgType  { get; set; } = "Lidar";
@@ -304,6 +366,9 @@ namespace Communicator
 	#endregion
 
 	#region Fuel
+	/// <summary>
+	///Fuel class for serialization deserialization
+	/// </summary>
 	public class FuelSchema
 	{	
 		public string MsgType  { get; set; } = "Fuel";
@@ -315,7 +380,11 @@ namespace Communicator
 
 
 	}
-
+	/// <summary>
+	/// Fuel settings
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticFuelSchema
 	{	
 		public static string MsgType  { get; set; } = "Fuel";
@@ -329,6 +398,9 @@ namespace Communicator
 	#endregion
 
 	#region Preset
+	/// <summary>
+	/// Starup paramter setting, class for serialization deserialization
+	/// </summary>
 	public class PresetSchema
 	{	
 		public string MsgType  { get; set; } = "StartUp";
@@ -349,6 +421,11 @@ namespace Communicator
 		public float StartRotation_y {get; set;} = 6.1f;  
 		public float StartRotation_z {get; set;} = 6.1f; 
 	}
+	/// <summary>
+	/// Starup paramter setting, acts a dictionary. 
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
 	public static class StaticStartUpSchema
 	{	
 		public static string MsgType  { get; set; } = "StartUp";

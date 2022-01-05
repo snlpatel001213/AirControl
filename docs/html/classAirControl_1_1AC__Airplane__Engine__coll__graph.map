@@ -1,5 +1,5 @@
 <map id="AirControl.AC_Airplane_Engine" name="AirControl.AC_Airplane_Engine">
-<area shape="rect" id="node1" title=" " alt="" coords="5,185,176,227"/>
+<area shape="rect" id="node1" title="Engine controls" alt="" coords="5,185,176,227"/>
 <area shape="rect" id="node2" title=" " alt="" coords="23,5,147,32"/>
 <area shape="rect" id="node3" href="$classAirControl_1_1AC__Airplane__Propeller.html" title=" " alt="" coords="107,81,277,123"/>
 </map>
