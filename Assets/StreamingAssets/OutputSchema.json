@@ -12,5 +12,5 @@
   "ScreenCapture": null,
   "LidarPointCloud": null,
   "MsgType": "Output",
-  "Version": "0.0.4"
+  "Version": "0.0.5"
 }

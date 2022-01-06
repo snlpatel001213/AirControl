@@ -11,7 +11,7 @@ Working with binaries with Aircontrol is really-really easy. Here are few steps 
 
 3. Start Aircontrol with executable you just downloaded
 
-# Starting with Python API
+## Starting with Python API
 
 1. Clone Aircontrol Repository Github
    
@@ -27,4 +27,3 @@ Working with binaries with Aircontrol is really-really easy. Here are few steps 
 4. Get started with python notebooks
 
    `cd Aircontrol/Python/client_examples`
-
