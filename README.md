@@ -2,7 +2,16 @@
   <img src="docs/images/logo_original.png" height="200"/>
 </p>
 <BR>
-  
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/snlpatel001213/AirControl)
+![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl?style=plastic)
+[![Documentation Status](https://readthedocs.org/projects/aircontrol/badge/?version=master)](https://aircontrol.readthedocs.io/en/master/?badge=master)
+![GitHub issues](https://img.shields.io/github/issues/snlpatel001213/AirControl)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/snlpatel001213/Aircontrol)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/snlpatel001213/aircontrol)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/snlpatel001213/AirControl)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
+ 
 # Welcome to Aircontrol
 
 **AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** Airsim offers a realistic simulation experience with a variety of airplanes. The Airsim is built on [Unity Game engine](https://unity.com). Following are the salient features of the Aircontrol:
@@ -84,4 +93,4 @@ Feel free to list your research topic you love to work on over here. Collaborate
 ## Contribute
 If you are keen to contribute to Aircontrol, refer to the contribution guide - `CONTRIBUTING.md`.
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
+
