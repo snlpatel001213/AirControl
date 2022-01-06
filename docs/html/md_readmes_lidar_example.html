@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('md_readmes_lidar_example.html',''); in
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>The Aircontrol Lidar API facilitates communication with simulated LIDAR in Unity. The lidar script uses the Raycast feature of Unity Game Engine. The distance array, of float type, consists of 360 members, the ith member storing the distance at which the ray hit an object at the ith degree.</p>
-<h1><a class="anchor" id="autotoc_md20"></a>
+<h1><a class="anchor" id="autotoc_md24"></a>
 Importing Requirements</h1>
 <div class="fragment"><div class="line">from AirControl.communicator import Communicator</div>
 <div class="line">from AirControl import schemaDef</div>
@@ -114,10 +114,10 @@ Importing Requirements</h1>
 <div class="line">import matplotlib.pyplot as plt</div>
 <div class="line"> </div>
 <div class="line">connection = Communicator()</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md21"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md25"></a>
 Lidar Placement</h1>
 <p>Lidar is placed in the cockpit, Attached to the cockpit camera. This ensures that all the distance are measured with respect to the cockpit.</p>
-<h1><a class="anchor" id="autotoc_md22"></a>
+<h1><a class="anchor" id="autotoc_md26"></a>
 Python API</h1>
 <ul>
 <li>InputControlType (str, optional): It can be either <code>Code</code> or <code>Other</code>. This is to control the internal mechanism and prevent repeated calling in already set variables. \ If <code>InputControlType</code> is set to 'Code', the camera cannot be controlled from Keyboard or Joystick. If <code>InputControlType</code> is set to 'Other', the camera can be only controlled from Keyboard or Joystick. Defaults to "Code".</li>

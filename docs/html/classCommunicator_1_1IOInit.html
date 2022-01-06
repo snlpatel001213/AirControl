@@ -118,6 +118,8 @@ Static Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Input Output init Writting schema files to the disk for reference </p>
+
+<p class="definition">Definition at line <a class="el" href="IOInit_8cs_source.html#l00017">17</a> of file <a class="el" href="IOInit_8cs_source.html">IOInit.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a8b44165244122dc23ff699a469df1b4c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b44165244122dc23ff699a469df1b4c">&#9670;&nbsp;</a></span>CreateSchema()</h2>
@@ -144,6 +146,22 @@ Static Public Member Functions</h2></td></tr>
 
 <p>Create new schem if the *schema.json if it exists or not. These schema can be used for to format python API </p>
 
+<p class="definition">Definition at line <a class="el" href="IOInit_8cs_source.html#l00047">47</a> of file <a class="el" href="IOInit_8cs_source.html">IOInit.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// Write schema to external file for reference</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            createSchema&lt;ControlSchema&gt;(<span class="stringliteral">&quot;ControlSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            createSchema&lt;OutputSchema&gt;(<span class="stringliteral">&quot;OutputSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            createSchema&lt;TODSchema&gt;(<span class="stringliteral">&quot;TOD.json&quot;</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            createSchema&lt;CameraSchema&gt;(<span class="stringliteral">&quot;CameraSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            createSchema&lt;LevelSchema&gt;(<span class="stringliteral">&quot;LevelSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            createSchema&lt;WeatherSchema&gt;(<span class="stringliteral">&quot;WeatherSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            createSchema&lt;UIAudioSchema&gt;(<span class="stringliteral">&quot;UIAudioSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            createSchema&lt;LidarSchema&gt;(<span class="stringliteral">&quot;LidarSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            createSchema&lt;FuelSchema&gt;(<span class="stringliteral">&quot;FuelSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            createSchema&lt;PresetSchema&gt;(<span class="stringliteral">&quot;PresetSchema.json&quot;</span>);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }    </div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a6b6641a25f4dda5274104b4a2fd037c3"></a>
@@ -193,10 +211,19 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 </div>
 
+<p class="definition">Definition at line <a class="el" href="IOInit_8cs_source.html#l00035">35</a> of file <a class="el" href="IOInit_8cs_source.html">IOInit.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                                                                       : <span class="keyword">new</span>()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordtype">string</span> json = JsonConvert.SerializeObject(<span class="keyword">new</span> T(),Formatting.Indented, <span class="keyword">new</span> PrimitiveToStringConverter());</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordtype">string</span> schemaFilePath = System.IO.Path.Combine(persistentDataPath,schemaName);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            File.WriteAllText(schemaFilePath, json);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">// Debug.Log(&quot;Writting Default schema file to : &quot;+ schemaFilePath);</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>IOInit.cs</li>
+<li><a class="el" href="IOInit_8cs_source.html">IOInit.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -205,9 +232,10 @@ Static Public Member Functions</h2></td></tr>
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceCommunicator.html">Communicator</a></li><li class="navelem"><a class="el" href="classCommunicator_1_1IOInit.html">IOInit</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

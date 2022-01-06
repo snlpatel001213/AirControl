@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Working With Sources</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Aircontrol Input API" href="input_output.html" />
+  <link rel="prev" title="Working With Binaries" href="working_with_binaries.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Aircontrol</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#guide">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="doxygen_readme.html" class="reference internal ">System Requirement</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_binaries.html" class="reference internal ">Working With Binaries</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Working With Sources</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#clone-the-source-code" class="reference internal">Clone the source code</a></li>
+                
+                  <li class="toctree-l2"><a href="#download-unity-engine" class="reference internal">Download Unity Engine</a></li>
+                
+                  <li class="toctree-l2"><a href="#add-aircontrol-project-to-unity" class="reference internal">Add Aircontrol Project to Unity</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="input_output.html" class="reference internal ">Aircontrol Input API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="time_of_day.html" class="reference internal ">Aircontrol time of Day API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="lidar_example.html" class="reference internal ">Aircontrol Lidar API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="camera_example.html" class="reference internal ">Aircontrol Camera API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="other_API.html" class="reference internal ">Aircontrol Other API</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Working With Sources</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="working_with_binaries.html"
+       title="previous chapter">← Working With Binaries</a>
+  </li>
+  <li class="next">
+    <a href="input_output.html"
+       title="next chapter">Aircontrol Input API →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="working-with-sources">
+<h1>Working With Sources<a class="headerlink" href="#working-with-sources" title="Permalink to this headline">¶</a></h1>
+<section id="clone-the-source-code">
+<h2>Clone the source code<a class="headerlink" href="#clone-the-source-code" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic">
+<li><p>Clone Aircontrol Repository Github</p>
+<p><code class="docutils literal notranslate"><span class="pre">https://github.com/snlpatel001213/AirControl.git</span></code></p>
+</li>
+<li><p>Go to Aircontrol_20/Assets/Python</p>
+<p><code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">Aircontrol/Python</span></code></p>
+</li>
+<li><p>Install Aircontrol python package</p>
+<p><code class="docutils literal notranslate"><span class="pre">path/to/python</span> <span class="pre">setup.py</span> <span class="pre">install</span></code></p>
+</li>
+</ol>
+</section>
+<section id="download-unity-engine">
+<h2>Download Unity Engine<a class="headerlink" href="#download-unity-engine" title="Permalink to this headline">¶</a></h2>
+<p>Follow the instruction given at : <a class="reference external" href="https://unity.com/download">https://unity.com/download</a></p>
+<ol class="arabic simple">
+<li><p>Download the Unity Hub : Follow the instructions onscreen for
+guidance through the installation process and setup. <img alt="image0" src="_images/git_clone.png" /></p></li>
+<li><p>Choose your Unity version Aircontrol is developed on Unity version
+<code class="docutils literal notranslate"><span class="pre">2021.2.7f1</span></code> <img alt="image1" src="_images/unity_release.png" /></p></li>
+<li><p>on pressing next, select Linux, Mac or Windows support, you may
+select all or one according to your OS. <img alt="image2" src="_images/unity_addons.png" /></p></li>
+</ol>
+</section>
+<section id="add-aircontrol-project-to-unity">
+<h2>Add Aircontrol Project to Unity<a class="headerlink" href="#add-aircontrol-project-to-unity" title="Permalink to this headline">¶</a></h2>
+<ol class="arabic simple">
+<li><p>Start Unity Hub and add new project to it <img alt="image3" src="_images/unity-select-project.png" /></p></li>
+<li><p>Once added Aircontrol project to Hub, launch it. <img alt="image4" src="_images/unity_launch.png" /></p></li>
+<li><p>Finally you will see the project loaded to the Unity. <img alt="image5" src="_images/unity_new_project.png" /></p></li>
+</ol>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="working_with_binaries.html"
+       title="previous chapter">← Working With Binaries</a>
+  </li>
+  <li class="next">
+    <a href="input_output.html"
+       title="next chapter">Aircontrol Input API →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Sunil Patel.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

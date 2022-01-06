@@ -100,7 +100,7 @@ $(document).ready(function(){initNavTree('md_readmes_other_API.html',''); initRe
 <div class="title">Aircontrol Other API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md28"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md32"></a>
 Importing requirements</h1>
 <div class="fragment"><div class="line">from AirControl.communicator import Communicator</div>
 <div class="line">from AirControl import schemaDef</div>
@@ -113,11 +113,11 @@ Importing requirements</h1>
 <div class="line">import matplotlib.pyplot as plt</div>
 <div class="line"> </div>
 <div class="line">connection = Communicator()</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md29"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
 UI and Audio</h1>
 <p><b>UI API</b> - helps in enabling and disabling the UI components like Airplane controls on screen</p>
 <p><b>Audio API</b> - Helps in enabling and disabling Audio.</p>
-<h1><a class="anchor" id="autotoc_md30"></a>
+<h1><a class="anchor" id="autotoc_md34"></a>
 Python API</h1>
 <ul>
 <li>InputControlType (str, optional): It can be either <code>Code</code> or <code>Other</code>. This is to control the internal mechanism and prevent repeted calling in already set variables. \ If <code>InputControlType</code> is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If <code>InputControlType</code> is set to 'Other', camera can be only controlled from Keyboard or Joystick. Defaults to "Code".</li>
@@ -127,10 +127,10 @@ Python API</h1>
 <div class="fragment"><div class="line">ui_audio_schema = schemaDef.set_uiaudio( ShowUIElements=False,EnableAudio=True,IsOutput=False)</div>
 <div class="line">connection.send_data(ui_audio_schema)</div>
 <div class="line">output =  connection.receive_data()</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md31"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md35"></a>
 Level Reset</h1>
 <p>Can be used to reset the level at each iteration. Typically Reinforcement learning loops requires hundreds and thousands environment reset</p>
-<h1><a class="anchor" id="autotoc_md32"></a>
+<h1><a class="anchor" id="autotoc_md36"></a>
 Python API</h1>
 <ul>
 <li>InputControlType (str, optional): It can be either <code>Code</code> or <code>Other</code>. This is to control the internal mechanism and prevent repeted calling in already set variables. \ If <code>InputControlType</code> is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If <code>InputControlType</code> is set to 'Other', camera can be only controlled from Keyboard or Joystick. Defaults to "Code".</li>
@@ -141,15 +141,15 @@ Python API</h1>
 <div class="fragment"><div class="line">level_reset_schema = schemaDef.reset_level( IsActive=True, LevelReload=True,IsOutput=False)</div>
 <div class="line">connection.send_data(level_reset_schema)</div>
 <div class="line">output =  connection.receive_data()</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md33"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md37"></a>
 Work In Progress</h1>
-<h2><a class="anchor" id="autotoc_md34"></a>
+<h2><a class="anchor" id="autotoc_md38"></a>
 Fuel API</h2>
 <p>Can be used to control initial fuel amount and fuel consumption rate.</p>
-<h2><a class="anchor" id="autotoc_md35"></a>
+<h2><a class="anchor" id="autotoc_md39"></a>
 Weather API</h2>
 <p>Can be used to control environmantal fog and clouds. Planned for HDRP release only.</p>
-<h2><a class="anchor" id="autotoc_md36"></a>
+<h2><a class="anchor" id="autotoc_md40"></a>
 Collision Detection</h2>
 <p>Will provide information about collision and object with which it collided </p>
 </div></div><!-- contents -->

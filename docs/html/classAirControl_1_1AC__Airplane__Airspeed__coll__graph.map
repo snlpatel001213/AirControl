@@ -1,5 +1,5 @@
 <map id="AirControl.AC_Airplane_Airspeed" name="AirControl.AC_Airplane_Airspeed">
-<area shape="rect" id="node1" title=" " alt="" coords="89,185,259,227"/>
+<area shape="rect" id="node1" title="Monitor and updates the Airspeed to UI" alt="" coords="89,185,259,227"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,129,32"/>
 <area shape="rect" id="node4" href="$classAirControl_1_1AC__Airplane__Characteristics.html" title="Main class defines the Airplane Characteristics" alt="" coords="89,81,259,123"/>
 <area shape="rect" id="node3" href="$interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="284,89,379,115"/>

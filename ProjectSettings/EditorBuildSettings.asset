@@ -6,7 +6,7 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/AirplanePhysics/Scenes/v0.0.4-AirControl.unity
-    guid: 262c6f3e53f0221c0af5900637a59757
+    path: Assets/AirplanePhysics/Scenes/v0.0.5-AirControl.unity
+    guid: 136e6e941aee84728bc7242e20c11fa4
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: be7517225352ea2eca267b955b06308b, type: 2}

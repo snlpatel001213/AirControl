@@ -3,6 +3,7 @@ var hierarchy =
     [ "Communicator.CameraSchema", "classCommunicator_1_1CameraSchema.html", null ],
     [ "AirControl.AC_Airplane_CameraController.CapturePass", "structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html", null ],
     [ "AirControl.ColorEncoding", "classAirControl_1_1ColorEncoding.html", null ],
+    [ "AirControl.communicator.Communicator", "classAirControl_1_1communicator_1_1Communicator.html", null ],
     [ "Communicator.ControlSchema", "classCommunicator_1_1ControlSchema.html", null ],
     [ "Editor", null, [
       [ "AirControl.AC_BaseAirplane_Input_Editor", "classAirControl_1_1AC__BaseAirplane__Input__Editor.html", null ],

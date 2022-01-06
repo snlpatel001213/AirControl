@@ -193,6 +193,8 @@ AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>aSource</b></t
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Master Controller, controls the entire Airplane it implements function to Handle Engines, Handle Characteristics, Handle ControlSurfaces, Handle Wheel and Handle Altitude </p>
+
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00015">15</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acabf1bb24aebddea20a7a52fcff4d1bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acabf1bb24aebddea20a7a52fcff4d1bc">&#9670;&nbsp;</a></span>HandlePhysics()</h2>
@@ -221,6 +223,21 @@ AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>aSource</b></t
 
 <p>Reimplemented from <a class="el" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AirControl.AC_BaseRigidbody_Controller</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00105">105</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">if</span>(input)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                HandleEngines();</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                HandleCharacteristics();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                HandleControlSurfaces();</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                HandleWheel();</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                HandleAltitude();</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            }<span class="comment">// handle else</span></div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="comment">// DB based update</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            </div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a059d8e34e70e381a15f1f6bdb8a39312"></a>
@@ -250,21 +267,54 @@ AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>aSource</b></t
 
 <p>Reimplemented from <a class="el" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AirControl.AC_BaseRigidbody_Controller</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00069">69</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            base.Start();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">//calculate final mass in kilos</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordtype">float</span> finalMass =  airplaneWeight * poundToKilos;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="comment">// if rigid body added then add center of mass</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">if</span> (rb){</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                rb.mass = finalMass;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">if</span>(centerOfGravity){</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    rb.centerOfMass = centerOfGravity.localPosition;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                } <span class="comment">// handel exception </span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="comment">// Initialize Airplane characteristics  </span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                characteristics = GetComponent&lt;AC_Airplane_Characteristics&gt;();  </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="keywordflow">if</span>(characteristics){</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    characteristics.<a class="code" href="classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05">InitCharacteristics</a>(rb, input);</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="comment">// Initialize Wheels</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">if</span> (wheels != <span class="keyword">null</span>){</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">if</span>(wheels.Count&gt;0){</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    <span class="keywordflow">foreach</span>(AC_Airplane_Wheel wheel <span class="keywordflow">in</span> wheels){</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        wheel.initWheel();</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            }  </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>AC_Airplane_Controller.cs</li>
+<li><a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassAirControl_1_1AC__Airplane__Characteristics_html_a06dce47f65a8f8d7dc6c3f18027afc05"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05">AirControl.AC_Airplane_Characteristics.InitCharacteristics</a></div><div class="ttdeci">void InitCharacteristics(Rigidbody curRB, AC_BaseAirplane_Input curInput)</div><div class="ttdoc">Initialize Airplane Charatceristics</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Characteristics_8cs_source.html#l00072">AC_Airplane_Characteristics.cs:72</a></div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceAirControl.html">AirControl</a></li><li class="navelem"><a class="el" href="classAirControl_1_1AC__Airplane__Controller.html">AC_Airplane_Controller</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

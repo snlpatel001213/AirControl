@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['addfuel_144',['AddFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#a6e7d2c70dd87623e65de8e46dfccce76',1,'AirControl::AC_Airplane_Fuel']]]
+  ['_5f_5finit_5f_5f_143',['__init__',['../classAirControl_1_1communicator_1_1Communicator.html#a51791082fb558db19b2072d76d6e5bec',1,'AirControl::communicator::Communicator']]]
 ];

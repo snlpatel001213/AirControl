@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['listenforincommingrequests_158',['ListenForIncommingRequests',['../classCommunicator_1_1NetworkCommunicator.html#a237b72cb55f0db853eb8332d469cb2aa',1,'Communicator::NetworkCommunicator']]],
-  ['logoutput_159',['LogOutput',['../classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177',1,'Communicator::OutputHandle']]]
+  ['initcharacteristics_157',['InitCharacteristics',['../classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05',1,'AirControl::AC_Airplane_Characteristics']]],
+  ['initfuel_158',['InitFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#ac01a62283c1aa07d29caee2089ce9d0c',1,'AirControl::AC_Airplane_Fuel']]],
+  ['initwheel_159',['initWheel',['../classAirControl_1_1AC__Airplane__Wheel.html#a6488dff41e3e90d5d219438fb85e9d51',1,'AirControl::AC_Airplane_Wheel']]],
+  ['ioswitch_160',['IOSwitch',['../classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962',1,'AirControl::AC_BaseAirplane_Input']]]
 ];

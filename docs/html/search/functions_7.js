@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['resetfuel_164',['ResetFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#a2398e562b82d5047005b79d949a1e995',1,'AirControl::AC_Airplane_Fuel']]],
-  ['restartlevel_165',['RestartLevel',['../classAirControl_1_1LevelControl.html#a7b06d34c99cdf9eccb2c5ad9351b6e60',1,'AirControl::LevelControl']]]
+  ['parseinput_165',['ParseInput',['../classCommunicator_1_1InputHandle.html#adfb21fe5928d971a3f69c8b910b4ac2b',1,'Communicator::InputHandle']]],
+  ['parseoutput_166',['ParseOutput',['../classCommunicator_1_1OutputHandle.html#a32de13ec8013c9158ecae31b7972d113',1,'Communicator::OutputHandle']]]
 ];

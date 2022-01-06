@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Aircontrol Other API</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="prev" title="Aircontrol Camera API" href="camera_example.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Aircontrol</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#guide">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="doxygen_readme.html" class="reference internal ">System Requirement</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_binaries.html" class="reference internal ">Working With Binaries</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_source.html" class="reference internal ">Working With Sources</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="input_output.html" class="reference internal ">Aircontrol Input API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="time_of_day.html" class="reference internal ">Aircontrol time of Day API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="lidar_example.html" class="reference internal ">Aircontrol Lidar API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="camera_example.html" class="reference internal ">Aircontrol Camera API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Aircontrol Other API</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#aircontrol-other-api" class="reference internal">Aircontrol Other API</a></li>
+                
+                  <li class="toctree-l2"><a href="#work-in-progress" class="reference internal">Work In Progress</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Aircontrol Other API</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="camera_example.html"
+       title="previous chapter">← Aircontrol Camera API</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="aircontrol-other-api">
+<h1>Aircontrol Other API<a class="headerlink" href="#aircontrol-other-api" title="Permalink to this headline">¶</a></h1>
+<section id="importing-requirements">
+<h2>Importing requirements<a class="headerlink" href="#importing-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">AirControl.communicator</span> <span class="kn">import</span> <span class="n">Communicator</span>
+<span class="kn">from</span> <span class="nn">AirControl</span> <span class="kn">import</span> <span class="n">schemaDef</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">PIL.Image</span> <span class="k">as</span> <span class="nn">Image</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span>  <span class="n">imshow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">Communicator</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="ui-and-audio">
+<h2>UI and Audio<a class="headerlink" href="#ui-and-audio" title="Permalink to this headline">¶</a></h2>
+<p><strong>UI API</strong> - helps in enabling and disabling the UI components like
+Airplane controls on screen</p>
+<p><strong>Audio API</strong> - Helps in enabling and disabling Audio.</p>
+</section>
+<section id="python-api">
+<h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>InputControlType (str, optional): It can be either <code class="docutils literal notranslate"><span class="pre">Code</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Other</span></code>. This is to control the internal mechanism and prevent
+repeted calling in already set variables.
+If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set to ‘Code’, camera cannot be controlled
+from Keyboard or Joystick. If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set to ‘Other’,
+camera can be only controlled from Keyboard or Joystick. Defaults to
+“Code”.</p></li>
+<li><p>ShowUIElements (bool, optional): Show UI elements if <code class="docutils literal notranslate"><span class="pre">True</span></code>, hide
+otherwise. Defaults to True.</p></li>
+<li><p>EnableAudio (float, optional): Enable audio if <code class="docutils literal notranslate"><span class="pre">True</span></code>, mute
+otherwise.. Defaults to 1.0.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">ui_audio_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_uiaudio</span><span class="p">(</span> <span class="n">ShowUIElements</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">EnableAudio</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">ui_audio_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="level-reset">
+<h2>Level Reset<a class="headerlink" href="#level-reset" title="Permalink to this headline">¶</a></h2>
+<p>Can be used to reset the level at each iteration. Typically
+Reinforcement learning loops requires hundreds and thousands environment
+reset</p>
+</section>
+<section id="python-api-1">
+<span id="id1"></span><h2>Python API<a class="headerlink" href="#python-api-1" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>InputControlType (str, optional): It can be either <code class="docutils literal notranslate"><span class="pre">Code</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Other</span></code>. This is to control the internal mechanism and prevent
+repeted calling in already set variables.
+If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set to ‘Code’, camera cannot be controlled
+from Keyboard or Joystick. If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set to ‘Other’,
+camera can be only controlled from Keyboard or Joystick. Defaults to
+“Code”.</p></li>
+<li><p>IsActive (bool, optional): Internal mechanism to save compute, set to
+<code class="docutils literal notranslate"><span class="pre">True</span></code> when level reset required</p></li>
+<li><p>LevelReload (bool, optional): set to <code class="docutils literal notranslate"><span class="pre">True</span></code> to reset the level.
+Defaults to False.</p></li>
+<li><p>IsOutput (bool, optional): By default <code class="docutils literal notranslate"><span class="pre">reset_level</span></code> function only
+sets the internal state. <code class="docutils literal notranslate"><span class="pre">reset_level</span></code> only provide log outout and
+not the actual captured image. <code class="docutils literal notranslate"><span class="pre">set_control</span></code> when called it returns
+actual output. IF you want to force <code class="docutils literal notranslate"><span class="pre">reset_level</span></code> to return image,
+set <code class="docutils literal notranslate"><span class="pre">IsOutput</span></code> to True. Defaults to False.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">level_reset_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">reset_level</span><span class="p">(</span> <span class="n">IsActive</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">LevelReload</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">level_reset_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="work-in-progress">
+<h1>Work In Progress<a class="headerlink" href="#work-in-progress" title="Permalink to this headline">¶</a></h1>
+<p>Following API are still in development</p>
+<section id="fuel-api">
+<h2>Fuel API<a class="headerlink" href="#fuel-api" title="Permalink to this headline">¶</a></h2>
+<p>Can be used to control initial fuel amount and fuel consumption rate.</p>
+</section>
+<section id="weather-api">
+<h2>Weather API<a class="headerlink" href="#weather-api" title="Permalink to this headline">¶</a></h2>
+<p>Can be used to control environmantal fog and clouds. Planned for HDRP
+release only.</p>
+</section>
+<section id="collision-detection">
+<h2>Collision Detection<a class="headerlink" href="#collision-detection" title="Permalink to this headline">¶</a></h2>
+<p>Will provide information about collision and object with which it
+collided</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="camera_example.html"
+       title="previous chapter">← Aircontrol Camera API</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Sunil Patel.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -208,6 +208,8 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CameraSwitch</b><code
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Child class listens to xbox Inputs </p>
+
+<p class="definition">Definition at line <a class="el" href="AC__XboxAirplane__Input_8cs_source.html#l00009">9</a> of file <a class="el" href="AC__XboxAirplane__Input_8cs_source.html">AC_XboxAirplane_Input.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a0cb265fac75f796a646acfdbbe1d0c28"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0cb265fac75f796a646acfdbbe1d0c28">&#9670;&nbsp;</a></span>HandleInput()</h2>
@@ -240,10 +242,37 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CameraSwitch</b><code
 
 <p>Reimplemented from <a class="el" href="classAirControl_1_1AC__BaseAirplane__Input.html#a11051fe1627e915ee5e2be703c880904">AirControl.AC_BaseAirplane_Input</a>.</p>
 
+<p class="definition">Definition at line <a class="el" href="AC__XboxAirplane__Input_8cs_source.html#l00027">27</a> of file <a class="el" href="AC__XboxAirplane__Input_8cs_source.html">AC_XboxAirplane_Input.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            base.HandleInput();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            base.ClampInputs();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">// Process pitch, roll, yaw and throttle</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            pitch +=  Input.GetAxis(<span class="stringliteral">&quot;Vertical&quot;</span>);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            roll +=  Input.GetAxis(<span class="stringliteral">&quot;Horizontal&quot;</span>);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            yaw +=  Input.GetAxis(<span class="stringliteral">&quot;X_RH_Stick&quot;</span>);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            throttle +=  Input.GetAxis(<span class="stringliteral">&quot;X_RV_Stick&quot;</span>);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="comment">// Process brakes bool</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            brake =  Input.GetAxis(<span class="stringliteral">&quot;Fire1&quot;</span>);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="comment">// Process flaps</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="comment">// get GetKeyDown is used because it fires only once when key pressed. GetKey constantly fire events</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keywordflow">if</span>(Input.GetButtonDown(<span class="stringliteral">&quot;X_R_Bumper&quot;</span>)){</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                flaps+=1;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span>(Input.GetButtonDown(<span class="stringliteral">&quot;X_L_Bumper&quot;</span>)){</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                flaps-=1;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            flaps =   Mathf.Clamp(flaps, 0,maxFlapIncrements);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// camera swith button</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// camerSwitch =  Input.GetButtonDown(&quot;X_Y_Button&quot;) || Input.GetKeyDown(cameraKey);</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>AC_XboxAirplane_Input.cs</li>
+<li><a class="el" href="AC__XboxAirplane__Input_8cs_source.html">AC_XboxAirplane_Input.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -252,9 +281,10 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CameraSwitch</b><code
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceAirControl.html">AirControl</a></li><li class="navelem"><a class="el" href="classAirControl_1_1AC__XboxAirplane__Input.html">AC_XboxAirplane_Input</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

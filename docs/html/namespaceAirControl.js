@@ -1,5 +1,8 @@
 var namespaceAirControl =
 [
+    [ "communicator", null, [
+      [ "Communicator", "classAirControl_1_1communicator_1_1Communicator.html", "classAirControl_1_1communicator_1_1Communicator" ]
+    ] ],
     [ "AC_Airplane_Airspeed", "classAirControl_1_1AC__Airplane__Airspeed.html", "classAirControl_1_1AC__Airplane__Airspeed" ],
     [ "AC_Airplane_Altimeter", "classAirControl_1_1AC__Airplane__Altimeter.html", "classAirControl_1_1AC__Airplane__Altimeter" ],
     [ "AC_Airplane_Attitude", "classAirControl_1_1AC__Airplane__Attitude.html", "classAirControl_1_1AC__Airplane__Attitude" ],

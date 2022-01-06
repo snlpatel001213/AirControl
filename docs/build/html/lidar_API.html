@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Aircontrol Lidar API</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Aircontrol Camera API" href="camera_API.html" />
+  <link rel="prev" title="Aircontrol time of Day API" href="time_of_day_API.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Aircontrol</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-aircontrol-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="doxygen_readme.html" class="reference internal ">System Requirement</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_binaries.html" class="reference internal ">Working With Binaries</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_source.html" class="reference internal ">Working With Sources</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="input_output_API.html" class="reference internal ">Aircontrol Input API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="time_of_day_API.html" class="reference internal ">Aircontrol time of Day API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Aircontrol Lidar API</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#importing-requirements" class="reference internal">Importing Requirements</a></li>
+                
+                  <li class="toctree-l2"><a href="#lidar-placement" class="reference internal">Lidar Placement</a></li>
+                
+                  <li class="toctree-l2"><a href="#python-api" class="reference internal">Python API</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="camera_API.html" class="reference internal ">Aircontrol Camera API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="other_API.html" class="reference internal ">Aircontrol Other API</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Aircontrol Lidar API</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="time_of_day_API.html"
+       title="previous chapter">← Aircontrol time of Day API</a>
+  </li>
+  <li class="next">
+    <a href="camera_API.html"
+       title="next chapter">Aircontrol Camera API →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="aircontrol-lidar-api">
+<h1>Aircontrol Lidar API<a class="headerlink" href="#aircontrol-lidar-api" title="Permalink to this headline">¶</a></h1>
+<p>The Aircontrol Lidar API facilitates communication with simulated LIDAR
+in Unity. The lidar script uses the Raycast feature of Unity Game
+Engine. The distance array, of float type, consists of 360 members, the
+ith member storing the distance at which the ray hit an object at the
+ith degree.</p>
+<section id="importing-requirements">
+<h2>Importing Requirements<a class="headerlink" href="#importing-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">AirControl.communicator</span> <span class="kn">import</span> <span class="n">Communicator</span>
+<span class="kn">from</span> <span class="nn">AirControl</span> <span class="kn">import</span> <span class="n">schemaDef</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">PIL.Image</span> <span class="k">as</span> <span class="nn">Image</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span>  <span class="n">imshow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">Communicator</span><span class="p">()</span>
+</pre></div>
+</div>
+</section>
+<section id="lidar-placement">
+<h2>Lidar Placement<a class="headerlink" href="#lidar-placement" title="Permalink to this headline">¶</a></h2>
+<p>Lidar is placed in the cockpit, Attached to the cockpit camera. This
+ensures that all the distance are measured with respect to the cockpit.</p>
+</section>
+<section id="python-api">
+<h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>InputControlType (str, optional): It can be either <code class="docutils literal notranslate"><span class="pre">Code</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Other</span></code>. This is to control the internal mechanism and prevent
+repeated calling in already set variables.
+If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set to ‘Code’, the camera cannot be
+controlled from Keyboard or Joystick. If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set
+to ‘Other’, the camera can be only controlled from Keyboard or
+Joystick. Defaults to “Code”.</p></li>
+<li><p>Range (float, optional): Range of the Lidar. Defaults to 100000.0.</p></li>
+<li><p>Density (int, optional): Number of Raycast spread across 360 degrees.
+Defaults to 360.</p></li>
+<li><p>IsActive (bool, optional): If lidar is set to active or not. Defaults
+to False.</p></li>
+<li><p>IsOutput (bool, optional): By default <code class="docutils literal notranslate"><span class="pre">set_lidar</span></code> function only
+sets the internal state. <code class="docutils literal notranslate"><span class="pre">set_lidar</span></code> only provides log output and
+not the actual captured image. <code class="docutils literal notranslate"><span class="pre">set_control</span></code> when called it returns
+the actual output. IF you want to force <code class="docutils literal notranslate"><span class="pre">set_lidar</span></code> to return the
+image, set <code class="docutils literal notranslate"><span class="pre">IsOutput</span></code> to True. Defaults to False.</p></li>
+</ul>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lidar_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_lidar</span><span class="p">(</span><span class="n">InputControlType</span><span class="o">=</span><span class="s2">&quot;Code&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="o">=</span><span class="mf">100000.0</span><span class="p">,</span> <span class="n">Density</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span> <span class="n">IsActive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">lidar_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">lidar_output</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;LidarPointCloud&#39;</span><span class="p">]</span> <span class="c1"># get lidar output</span>
+</pre></div>
+</div>
+<p>Alternatively one can specify <code class="docutils literal notranslate"><span class="pre">IsOutput</span></code> to <code class="docutils literal notranslate"><span class="pre">False</span></code> and get output
+using reply to <code class="docutils literal notranslate"><span class="pre">schemaDef.set_control</span></code> function call.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">lidar_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_lidar</span><span class="p">(</span><span class="n">InputControlType</span><span class="o">=</span><span class="s2">&quot;Code&quot;</span><span class="p">,</span> <span class="n">Range</span><span class="o">=</span><span class="mf">100000.0</span><span class="p">,</span> <span class="n">Density</span><span class="o">=</span><span class="mi">360</span><span class="p">,</span> <span class="n">IsActive</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">lidar_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span> <span class="c1"># just log output</span>
+<span class="c1"># use set_control function</span>
+<span class="n">control_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_control</span><span class="p">(</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">control_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span> <span class="c1"># returns the output</span>
+<span class="n">lidar_output</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;LidarPointCloud&#39;</span><span class="p">]</span> <span class="c1"># get lidar output</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">lidar_output</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">3541.46948</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">4579.34229</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">4252.557</span><span class="p">,</span> <span class="mf">4228.008</span><span class="p">,</span> <span class="mf">3195.66162</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">3383.261</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">3064.81274</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">3247.62964</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">2304.10059</span><span class="p">,</span> <span class="mf">1537.2821</span><span class="p">,</span> <span class="mf">1147.36169</span><span class="p">,</span> <span class="mf">883.810669</span><span class="p">,</span> <span class="mf">735.712463</span><span class="p">,</span> <span class="mf">623.99176</span><span class="p">,</span> <span class="mf">543.328064</span><span class="p">,</span> <span class="mf">483.7483</span><span class="p">,</span> <span class="mf">430.048248</span><span class="p">,</span> <span class="mf">387.699951</span><span class="p">,</span> <span class="mf">357.491638</span><span class="p">,</span> <span class="mf">331.899872</span><span class="p">,</span> <span class="mf">309.815643</span><span class="p">,</span> <span class="mf">290.2349</span><span class="p">,</span> <span class="mf">272.333374</span><span class="p">,</span> <span class="mf">256.70813</span><span class="p">,</span> <span class="mf">242.8495</span><span class="p">,</span> <span class="mf">230.4774</span><span class="p">,</span> <span class="mf">219.368225</span><span class="p">,</span> <span class="mf">209.341675</span><span class="p">,</span> <span class="mf">200.162781</span><span class="p">,</span> <span class="mf">191.678848</span><span class="p">,</span> <span class="mf">183.938644</span><span class="p">,</span> <span class="mf">176.851074</span><span class="p">,</span> <span class="mf">170.385757</span><span class="p">,</span> <span class="mf">164.598373</span><span class="p">,</span> <span class="mf">159.238022</span><span class="p">,</span> <span class="mf">154.2614</span><span class="p">,</span> <span class="mf">149.630539</span><span class="p">,</span> <span class="mf">145.312668</span><span class="p">,</span> <span class="mf">141.2788</span><span class="p">,</span> <span class="mf">137.50354</span><span class="p">,</span> <span class="mf">133.9558</span><span class="p">,</span> <span class="mf">130.569443</span><span class="p">,</span> <span class="mf">127.387962</span><span class="p">,</span> <span class="mf">124.3948</span><span class="p">,</span> <span class="mf">121.575249</span><span class="p">,</span> <span class="mf">118.91613</span><span class="p">,</span> <span class="mf">116.4055</span><span class="p">,</span> <span class="mf">114.032768</span><span class="p">,</span> <span class="mf">111.788139</span><span class="p">,</span> <span class="mf">109.662941</span><span class="p">,</span> <span class="mf">107.649239</span><span class="p">,</span> <span class="mf">105.739754</span><span class="p">,</span> <span class="mf">103.927971</span><span class="p">,</span> <span class="mf">102.207817</span><span class="p">,</span> <span class="mf">100.573868</span><span class="p">,</span> <span class="mf">99.02093</span><span class="p">,</span> <span class="mf">97.54457</span><span class="p">,</span> <span class="mf">96.1403961</span><span class="p">,</span> <span class="mf">94.80456</span><span class="p">,</span> <span class="mf">93.5334549</span><span class="p">,</span> <span class="mf">92.3236847</span><span class="p">,</span> <span class="mf">91.17226</span><span class="p">,</span> <span class="mf">90.07631</span><span class="p">,</span> <span class="mf">89.033165</span><span class="p">,</span> <span class="mf">88.04089</span><span class="p">,</span> <span class="mf">87.097374</span><span class="p">,</span> <span class="mf">86.19983</span><span class="p">,</span> <span class="mf">85.34636</span><span class="p">,</span> <span class="mf">84.53507</span><span class="p">,</span> <span class="mf">83.7643661</span><span class="p">,</span> <span class="mf">83.03264</span><span class="p">,</span> <span class="mf">82.3384857</span><span class="p">,</span> <span class="mf">81.68048</span><span class="p">,</span> <span class="mf">80.00795</span><span class="p">,</span> <span class="mf">79.42381</span><span class="p">,</span> <span class="mf">78.87199</span><span class="p">,</span> <span class="mf">78.2124252</span><span class="p">,</span> <span class="mf">2.16294813</span><span class="p">,</span> <span class="mf">2.10318685</span><span class="p">,</span> <span class="mf">2.07182956</span><span class="p">,</span> <span class="mf">2.05951929</span><span class="p">,</span> <span class="mf">1.93164361</span><span class="p">,</span> <span class="mf">1.93017209</span><span class="p">,</span> <span class="mf">1.92929</span><span class="p">,</span> <span class="mf">1.92899632</span><span class="p">,</span> <span class="mf">1.92929018</span><span class="p">,</span> <span class="mf">1.93017209</span><span class="p">,</span> <span class="mf">74.47046</span><span class="p">,</span> <span class="mf">74.2700653</span><span class="p">,</span> <span class="mf">74.09329</span><span class="p">,</span> <span class="mf">73.93981</span><span class="p">,</span> <span class="mf">73.80942</span><span class="p">,</span> <span class="mf">73.70189</span><span class="p">,</span> <span class="mf">73.6170654</span><span class="p">,</span> <span class="mf">73.5548</span><span class="p">,</span> <span class="mf">73.51503</span><span class="p">,</span> <span class="mf">73.49767</span><span class="p">,</span> <span class="mf">74.5169144</span><span class="p">,</span> <span class="mf">74.5467</span><span class="p">,</span> <span class="mf">74.59924</span><span class="p">,</span> <span class="mf">74.67463</span><span class="p">,</span> <span class="mf">74.77298</span><span class="p">,</span> <span class="mf">74.89441</span><span class="p">,</span> <span class="mf">75.04424</span><span class="p">,</span> <span class="mf">75.22162</span><span class="p">,</span> <span class="mf">75.42285</span><span class="p">,</span> <span class="mf">75.64827</span><span class="p">,</span> <span class="mf">75.89823</span><span class="p">,</span> <span class="mf">76.17313</span><span class="p">,</span> <span class="mf">76.47339</span><span class="p">,</span> <span class="mf">76.7995453</span><span class="p">,</span> <span class="mf">77.15207</span><span class="p">,</span> <span class="mf">77.53157</span><span class="p">,</span> <span class="mf">77.93868</span><span class="p">,</span> <span class="mf">78.37412</span><span class="p">,</span> <span class="mf">78.83857</span><span class="p">,</span> <span class="mf">79.33288</span><span class="p">,</span> <span class="mf">79.8579</span><span class="p">,</span> <span class="mf">80.41457</span><span class="p">,</span> <span class="mf">81.0039</span><span class="p">,</span> <span class="mf">81.62701</span><span class="p">,</span> <span class="mf">82.28501</span><span class="p">,</span> <span class="mf">82.9791946</span><span class="p">,</span> <span class="mf">83.71092</span><span class="p">,</span> <span class="mf">84.4816</span><span class="p">,</span> <span class="mf">85.29285</span><span class="p">,</span> <span class="mf">86.1463242</span><span class="p">,</span> <span class="mf">87.04383</span><span class="p">,</span> <span class="mf">87.9873047</span><span class="p">,</span> <span class="mf">88.9788742</span><span class="p">,</span> <span class="mf">90.02076</span><span class="p">,</span> <span class="mf">91.11543</span><span class="p">,</span> <span class="mf">92.26549</span><span class="p">,</span> <span class="mf">93.4738159</span><span class="p">,</span> <span class="mf">94.74348</span><span class="p">,</span> <span class="mf">94.20772</span><span class="p">,</span> <span class="mf">95.55958</span><span class="p">,</span> <span class="mf">96.98076</span><span class="p">,</span> <span class="mf">98.47532</span><span class="p">,</span> <span class="mf">100.047653</span><span class="p">,</span> <span class="mf">101.702431</span><span class="p">,</span> <span class="mf">103.444923</span><span class="p">,</span> <span class="mf">105.280815</span><span class="p">,</span> <span class="mf">107.216248</span><span class="p">,</span> <span class="mf">109.2582</span><span class="p">,</span> <span class="mf">111.406357</span><span class="p">,</span> <span class="mf">113.6918</span><span class="p">,</span> <span class="mf">118.931969</span><span class="p">,</span> <span class="mf">121.601372</span><span class="p">,</span> <span class="mf">124.4321</span><span class="p">,</span> <span class="mf">127.437485</span><span class="p">,</span> <span class="mf">130.632385</span><span class="p">,</span> <span class="mf">134.033508</span><span class="p">,</span> <span class="mf">137.6596</span><span class="p">,</span> <span class="mf">141.5316</span><span class="p">,</span> <span class="mf">145.67334</span><span class="p">,</span> <span class="mf">150.088135</span><span class="p">,</span> <span class="mf">154.8046</span><span class="p">,</span> <span class="mf">159.877563</span><span class="p">,</span> <span class="mf">165.346115</span><span class="p">,</span> <span class="mf">171.152832</span><span class="p">,</span> <span class="mf">177.261459</span><span class="p">,</span> <span class="mf">183.866272</span><span class="p">,</span> <span class="mf">191.042969</span><span class="p">,</span> <span class="mf">198.8655</span><span class="p">,</span> <span class="mf">207.421921</span><span class="p">,</span> <span class="mf">216.8167</span><span class="p">,</span> <span class="mf">227.191147</span><span class="p">,</span> <span class="mf">239.23407</span><span class="p">,</span> <span class="mf">252.7061</span><span class="p">,</span> <span class="mf">267.872559</span><span class="p">,</span> <span class="mf">283.752716</span><span class="p">,</span> <span class="mf">301.516571</span><span class="p">,</span> <span class="mf">321.7583</span><span class="p">,</span> <span class="mf">347.208282</span><span class="p">,</span> <span class="mf">378.6034</span><span class="p">,</span> <span class="mf">415.9193</span><span class="p">,</span> <span class="mf">458.241028</span><span class="p">,</span> <span class="mf">508.348938</span><span class="p">,</span> <span class="mf">571.6979</span><span class="p">,</span> <span class="mf">656.359253</span><span class="p">,</span> <span class="mf">770.511841</span><span class="p">,</span> <span class="mf">984.6023</span><span class="p">,</span> <span class="mf">1231.24841</span><span class="p">,</span> <span class="mf">1627.99158</span><span class="p">,</span> <span class="mf">2449.77759</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">,</span> <span class="mf">100000.0</span><span class="p">]</span>
+</pre></div>
+</div>
+<p>As the Airplane is a tail dagger, the backside rays of lidar interact
+with a ground plane. Due to this hit distance for some of the rays in
+the above-shown lidar output is very near to airplane.</p>
+<p><img alt="image0" src="_images/5.png" /></p>
+<p>Similarly, lidar interacts with buildings and provides a sense of
+nearness.</p>
+<p><img alt="image1" src="_images/9.png" /></p>
+<ol class="arabic simple">
+<li><p><a class="reference external" href="https://docs.unity3d.com/ScriptReference/Physics.Raycast.html">Physics.Raycast</a></p></li>
+</ol>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="time_of_day_API.html"
+       title="previous chapter">← Aircontrol time of Day API</a>
+  </li>
+  <li class="next">
+    <a href="camera_API.html"
+       title="next chapter">Aircontrol Camera API →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Sunil Patel.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -46,6 +46,18 @@ namespace AirControl
             // DB based operations
             
         }
+        /// <summary>
+        /// Collision detection if plane comes in contact with anyother thing then runway.
+        /// Airplane belongs to runway and air!
+        /// </summary>
+        /// <param name="col">collision object</param>
+        void OnCollisionEnter(Collision col)
+        {
+            // future support
+            // if(col.gameObject.tag!= "runway"){
+            //     Debug.Log("object collided");
+            // }
+        }
         #endregion
 
         #region Custom Methods
@@ -57,7 +69,9 @@ namespace AirControl
         /// </summary>
         void HandleLocation()
         {
+            //future functionality to provide the xyz location of the plane
             Vector3 currentLocation = rb.position;
+            // Add location to static function
 
         }
         #endregion

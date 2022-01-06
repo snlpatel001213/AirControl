@@ -136,6 +136,8 @@ Public Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Handle outbound request from the TCP socket </p>
+
+<p class="definition">Definition at line <a class="el" href="OutputHandle_8cs_source.html#l00015">15</a> of file <a class="el" href="OutputHandle_8cs_source.html">OutputHandle.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae01d18027a01710a34d822b191962177"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae01d18027a01710a34d822b191962177">&#9670;&nbsp;</a></span>LogOutput()</h2>
@@ -163,6 +165,15 @@ Public Member Functions</h2></td></tr>
 <p>Just Log output if the entire output is not required </p>
 <dl class="section return"><dt>Returns</dt><dd>Prepare output object and return json string to be dispatched</dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="OutputHandle_8cs_source.html#l00052">52</a> of file <a class="el" href="OutputHandle_8cs_source.html">OutputHandle.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">string</span> <a class="code" href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">LogOutput</a> = JsonConvert.SerializeObject(<span class="keyword">new</span> <a class="code" href="classCommunicator_1_1Logger.html">Logger</a>{ </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    Log =  StaticLogger.Log,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            );</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">LogOutput</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <a id="a32de13ec8013c9158ecae31b7972d113"></a>
@@ -191,21 +202,50 @@ Public Member Functions</h2></td></tr>
 <p>Prepare output object and return json string to be dispatched </p>
 <dl class="section return"><dt>Returns</dt><dd>Output json string</dd></dl>
 
+<p class="definition">Definition at line <a class="el" href="OutputHandle_8cs_source.html#l00024">24</a> of file <a class="el" href="OutputHandle_8cs_source.html">OutputHandle.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            ref var screencapture = ref StaticOutputSchema.ScreenCapture;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="comment">// to avoid null retun from Screencapture</span></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (screencapture == <span class="keyword">null</span>){</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                screencapture =  <span class="keyword">new</span> <span class="keywordtype">byte</span>[0];</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordtype">string</span> output = JsonConvert.SerializeObject(<span class="keyword">new</span> <a class="code" href="classCommunicator_1_1OutputSchema.html">OutputSchema</a>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                BankAngle = StaticOutputSchema.BankAngle,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                PitchAngle = StaticOutputSchema.PitchAngle,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                AGL = StaticOutputSchema.AGL,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                MSL = StaticOutputSchema.MSL,</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                CurrentRPM = StaticOutputSchema.CurrentRPM,</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                MaxRPM = StaticOutputSchema.MaxRPM,</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                MaxPower = StaticOutputSchema.MaxPower,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                CurrentPower = StaticOutputSchema.CurrentPower,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                CurrentSpeed = StaticOutputSchema.CurrentSpeed,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                ScreenCapture = screencapture,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                LidarPointCloud = StaticOutputSchema.LidarPointCloud,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            });</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        }</div>
+</div><!-- fragment -->
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>OutputHandle.cs</li>
+<li><a class="el" href="OutputHandle_8cs_source.html">OutputHandle.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
+<div class="ttc" id="aclassCommunicator_1_1OutputSchema_html"><div class="ttname"><a href="classCommunicator_1_1OutputSchema.html">Communicator.OutputSchema</a></div><div class="ttdoc">Output control class for serialization deserialization</div><div class="ttdef"><b>Definition:</b> <a href="IOSchema_8cs_source.html#l00100">IOSchema.cs:100</a></div></div>
+<div class="ttc" id="aclassCommunicator_1_1OutputHandle_html_ae01d18027a01710a34d822b191962177"><div class="ttname"><a href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">Communicator.OutputHandle.LogOutput</a></div><div class="ttdeci">string LogOutput()</div><div class="ttdoc">Just Log output if the entire output is not required</div><div class="ttdef"><b>Definition:</b> <a href="OutputHandle_8cs_source.html#l00052">OutputHandle.cs:52</a></div></div>
+<div class="ttc" id="aclassCommunicator_1_1Logger_html"><div class="ttname"><a href="classCommunicator_1_1Logger.html">Communicator.Logger</a></div><div class="ttdoc">Logger class for serialization deserialization</div><div class="ttdef"><b>Definition:</b> <a href="IOSchema_8cs_source.html#l00125">IOSchema.cs:125</a></div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceCommunicator.html">Communicator</a></li><li class="navelem"><a class="el" href="classCommunicator_1_1OutputHandle.html">OutputHandle</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

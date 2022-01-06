@@ -101,7 +101,7 @@ $(document).ready(function(){initNavTree('md_readmes_input_output.html',''); ini
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><p>Aircontrol provides fine control over inputs via python API. Following properties can be controlled using <code>set_control</code> function.</p>
-<h1><a class="anchor" id="autotoc_md6"></a>
+<h1><a class="anchor" id="autotoc_md10"></a>
 Python API</h1>
 <ul>
 <li>InputControlType (str, optional): It can be either <code>Code</code> or <code>Other</code>. This is to control the internal mechanism and prevent repeted calling in already set variables. \ If <code>InputControlType</code> is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If <code>InputControlType</code> is set to 'Other', camera can be only controlled from Keyboard or Joystick. Defaults to "Code".</li>
@@ -113,7 +113,7 @@ Python API</h1>
 <li>Brake (int, optional): Applies brake to wheels, to control ground movement. Defaults to 0.</li>
 <li>Flaps (int, optional): A flap is a high-lift device used to reduce the stalling speed of an aircraft wing at a given weight. Flaps helps in controlling descent. Defaults to 0.</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md7"></a>
+<h1><a class="anchor" id="autotoc_md11"></a>
 Limits</h1>
 <table class="markdownTable">
 <tr class="markdownTableHead">
@@ -126,7 +126,7 @@ Limits</h1>
 <td class="markdownTableBodyNone">Roll </td><td class="markdownTableBodyNone">float </td><td class="markdownTableBodyNone">Between -1.0 and 1.0  </td></tr>
 </table>
 <p>| Sticky Throttle | float | Between 0.0 and 1.0 | | | Brake | int | 0 : Dis-engaged, 1 : Engaged | | Flaps | int | 0 : None, 1 : 15 Degree, 2 : 30 Degree |</p>
-<h1><a class="anchor" id="autotoc_md8"></a>
+<h1><a class="anchor" id="autotoc_md12"></a>
 Importing Requirements</h1>
 <div class="fragment"><div class="line">from AirControl.communicator import Communicator</div>
 <div class="line">from AirControl import schemaDef</div>
@@ -515,7 +515,7 @@ Importing Requirements</h1>
  'PitchAngle': 1.66752621e-08,
  'ScreenCapture': '',
  'Version': '0.0.4'}
-</pre><h1><a class="anchor" id="autotoc_md9"></a>
+</pre><h1><a class="anchor" id="autotoc_md13"></a>
 Output</h1>
 <p>When <code>IsOutput</code> is set to <code>True</code>, the Aircontrol reply with the following output.</p>
 <div class="fragment"><div class="line">{&#39;AGL&#39;: 0.0,</div>
@@ -552,7 +552,7 @@ Output</h1>
 <p>Angle between vertical component of the Airplane w.r.t global vertical.<a href="https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_aircraft)">Source</a></p>
 <p><img src="../../docs/images/pitchAngle.png" alt="Pitch Angle" class="inline"/></p>
 <p>Angle between vertical component of the Airplane w.r.t global vertical.<a href="https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_aircraft)">Source</a></p>
-<h1><a class="anchor" id="autotoc_md10"></a>
+<h1><a class="anchor" id="autotoc_md14"></a>
 Glossary</h1>
 <p><b>AGL</b> : Above Ground Level, or AGL, describes the literal height above the ground over which you’re flying.This also accounts for the building and mounntain heights</p>
 <p><b>MSL</b> : Mean Sea Level, or MSL, is your true altitude or elevation. This is measured as differrence of current height and 0.0 in XZ plane</p>

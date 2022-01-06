@@ -100,10 +100,10 @@ $(document).ready(function(){initNavTree('md_readmes_camera_example.html',''); i
 <div class="title">Aircontrol Camera API </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><h1><a class="anchor" id="autotoc_md12"></a>
+<div class="textblock"><h1><a class="anchor" id="autotoc_md16"></a>
 Camera Placement</h1>
 <p><a class="el" href="namespaceAirControl.html">AirControl</a> Airplane has two cameras. One is in the Cockpit and another is a follow camera. Both the camera can be used for capturing screenshots while in flight.</p>
-<h1><a class="anchor" id="autotoc_md13"></a>
+<h1><a class="anchor" id="autotoc_md17"></a>
 Python API</h1>
 <p>Python API has a <code>set_camera</code> function to set the camera properties. <code>set_camera</code> function takes the following arguments:</p><ul>
 <li>InputControlType (str, optional): It can be either <code>Code</code> or <code>Other</code>. This is to control the internal mechanism and prevent repeated calling in already set variables. \ If <code>InputControlType</code> is set to 'Code', the camera cannot be controlled from Keyboard or Joystick. If <code>InputControlType</code> is set to 'Other', the camera can be only controlled from Keyboard or Joystick. Defaults to "Code".</li>
@@ -134,13 +134,13 @@ Python API</h1>
 <tr class="markdownTableRowEven">
 <td class="markdownTableBodyNone">5 </td><td class="markdownTableBodyNone">Optical Flow </td><td class="markdownTableBodyNone">Pixels are colored according to their distance from the camera (Only visible when Airplane or Object in reference are moving)  </td></tr>
 </table>
-<h1><a class="anchor" id="autotoc_md14"></a>
+<h1><a class="anchor" id="autotoc_md18"></a>
 Implementation details</h1>
 <p>First of all <code>AC_Airplane_CameraController.OnSceneChange()</code> calls ColorEncoding class to encode unique object idenitifier and layer as RGB color. These colors are stored in MaterialPropertyBlock for each object and are automatically passed into the shaders when rendering.</p>
 <p>Upon start <code>AC_Airplane_CameraController</code> component creates hidden camera for every single pass of output data (image segmentation, optical flow, depth, etc). These cameras allow to override usual rendering of the scene and instead use custom shaders to generate the output. These cameras are attached to different scene camera using <code>Camera.targetDisplay property</code> - handy for preview in the Editor.</p>
 <p>For Image segmentation and Object categorization pass special replacement shader is set with `Camera.SetReplacementShader(). It overrides shaders that would be otherwise used for rendering and instead outputs encoded object id or layer.</p>
 <p>Optical flow and Depth pass cameras request additional data to be rendered with <code>DepthTextureMode.Depth</code> and <code>DepthTextureMode.MotionVectors</code> flags. Rendering of these cameras is followed by drawing full screen quad <code>CommandBuffer.Blit()</code> with custom shaders that convert 24/16bit-per-channel data into the 8-bit RGB encoding.</p>
-<h1><a class="anchor" id="autotoc_md15"></a>
+<h1><a class="anchor" id="autotoc_md19"></a>
 Importing Requirements</h1>
 <div class="fragment"><div class="line">from AirControl.communicator import Communicator</div>
 <div class="line">from AirControl import schemaDef</div>
@@ -153,7 +153,7 @@ Importing Requirements</h1>
 <div class="line">import matplotlib.pyplot as plt</div>
 <div class="line"> </div>
 <div class="line">connection = Communicator()</div>
-</div><!-- fragment --><h1><a class="anchor" id="autotoc_md16"></a>
+</div><!-- fragment --><h1><a class="anchor" id="autotoc_md20"></a>
 Examples (Cockpit Camera)</h1>
 <p><b>Scene Capture</b></p>
 <div class="fragment"><div class="line">camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)</div>
@@ -215,7 +215,7 @@ Examples (Cockpit Camera)</h1>
 <div class="line">    imshow(np.asarray(im))</div>
 <div class="line">    plt.axis(&#39;off&#39;)</div>
 </div><!-- fragment --><p><img src="../images/camera_example_files/camera_example_17_0.png" alt="png" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md17"></a>
+<h1><a class="anchor" id="autotoc_md21"></a>
 Example (External Camera)</h1>
 <p><b>Scene Capture</b></p>
 <div class="fragment"><div class="line">camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)</div>
@@ -278,7 +278,7 @@ Example (External Camera)</h1>
 <div class="line">    imshow(np.asarray(im))</div>
 <div class="line">    plt.axis(&#39;off&#39;)</div>
 </div><!-- fragment --><p><img src="../images/camera_example_files/camera_example_30_0.png" alt="png" class="inline"/></p>
-<h1><a class="anchor" id="autotoc_md18"></a>
+<h1><a class="anchor" id="autotoc_md22"></a>
 Reference</h1>
 <ol type="1">
 <li><a href="https://docs.unity3d.com/Manual/SL-ShaderReplacement.html">Replacement Shaders</a></li>

@@ -1,5 +1,5 @@
 <map id="AirControl.AC_Airplane_ThrottleLever" name="AirControl.AC_Airplane_ThrottleLever">
-<area shape="rect" id="node1" title=" " alt="" coords="49,80,219,121"/>
+<area shape="rect" id="node1" title="Monitor and updates the Throttle lever to UI" alt="" coords="49,80,219,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,129,32"/>
 <area shape="rect" id="node3" href="$interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="153,5,248,32"/>
 </map>
