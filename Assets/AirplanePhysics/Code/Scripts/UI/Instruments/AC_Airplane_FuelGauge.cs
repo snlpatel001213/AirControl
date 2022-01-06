@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Monitor and updates the Fuel level to UI 
+    /// </summary>
     public class AC_Airplane_FuelGauge : MonoBehaviour, IAirplaneUI 
     {
         #region Variables
@@ -15,6 +18,9 @@ namespace AirControl
 
 
         #region Custom Methods
+        /// <summary>
+        /// Updates to UI 
+        /// </summary>
         public void HandleAirplaneUI()
         {
             if(fuel && pointer)

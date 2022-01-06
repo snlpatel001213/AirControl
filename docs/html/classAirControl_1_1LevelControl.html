@@ -21,6 +21,14 @@
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CGYFWBL33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5CGYFWBL33');
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -31,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.5</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -95,12 +103,15 @@ $(document).ready(function(){initNavTree('classAirControl_1_1LevelControl.html',
 <div class="title">AirControl.LevelControl Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Level related controls  
+ <a href="classAirControl_1_1LevelControl.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AirControl.LevelControl:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1LevelControl__inherit__graph.png" border="0" usemap="#AirControl_8LevelControl_inherit__map" alt="Inheritance graph"/></div>
 <map name="AirControl_8LevelControl_inherit__map" id="AirControl_8LevelControl_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,179,107"/>
+<area shape="rect" title="Level related controls" alt="" coords="5,80,179,107"/>
 <area shape="rect" title=" " alt="" coords="30,5,154,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -109,19 +120,56 @@ Collaboration diagram for AirControl.LevelControl:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1LevelControl__coll__graph.png" border="0" usemap="#AirControl_8LevelControl_coll__map" alt="Collaboration graph"/></div>
 <map name="AirControl_8LevelControl_coll__map" id="AirControl_8LevelControl_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,179,107"/>
+<area shape="rect" title="Level related controls" alt="" coords="5,80,179,107"/>
 <area shape="rect" title=" " alt="" coords="30,5,154,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7b06d34c99cdf9eccb2c5ad9351b6e60"><td class="memItemLeft" align="right" valign="top"><a id="a7b06d34c99cdf9eccb2c5ad9351b6e60"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>RestartLevel</b> ()</td></tr>
+<tr class="memitem:a7b06d34c99cdf9eccb2c5ad9351b6e60"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1LevelControl.html#a7b06d34c99cdf9eccb2c5ad9351b6e60">RestartLevel</a> ()</td></tr>
+<tr class="memdesc:a7b06d34c99cdf9eccb2c5ad9351b6e60"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the level to startover  <a href="classAirControl_1_1LevelControl.html#a7b06d34c99cdf9eccb2c5ad9351b6e60">More...</a><br /></td></tr>
 <tr class="separator:a7b06d34c99cdf9eccb2c5ad9351b6e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Level related controls </p>
+
+<p class="definition">Definition at line <a class="el" href="LevelControl_8cs_source.html#l00011">11</a> of file <a class="el" href="LevelControl_8cs_source.html">LevelControl.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a7b06d34c99cdf9eccb2c5ad9351b6e60"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b06d34c99cdf9eccb2c5ad9351b6e60">&#9670;&nbsp;</a></span>RestartLevel()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AirControl.LevelControl.RestartLevel </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Reset the level to startover </p>
+
+<p class="definition">Definition at line <a class="el" href="LevelControl_8cs_source.html#l00027">27</a> of file <a class="el" href="LevelControl_8cs_source.html">LevelControl.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            SceneManager.LoadScene(SceneManager.GetActiveScene().name); </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>LevelControl.cs</li>
+<li><a class="el" href="LevelControl_8cs_source.html">LevelControl.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -130,9 +178,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>RestartLevel</b> ()</
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceAirControl.html">AirControl</a></li><li class="navelem"><a class="el" href="classAirControl_1_1LevelControl.html">LevelControl</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

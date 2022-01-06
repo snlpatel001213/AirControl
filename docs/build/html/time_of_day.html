@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Aircontrol time of Day API</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Aircontrol</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-aircontrol-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="doxygen_readme.html" class="reference internal ">System Requirement</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_binaries.html" class="reference internal ">Working With Binaries</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_source.html" class="reference internal ">Working With Sources</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="other_API.html" class="reference internal ">Aircontrol Other API</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Aircontrol time of Day API</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="aircontrol-time-of-day-api">
+<h1>Aircontrol time of Day API<a class="headerlink" href="#aircontrol-time-of-day-api" title="Permalink to this headline">¶</a></h1>
+<section id="time-of-day">
+<h2>Time of Day<a class="headerlink" href="#time-of-day" title="Permalink to this headline">¶</a></h2>
+<p>Aircontrol allow to control sun position. By controlling the sun
+position Day and night scenarios can be generated.</p>
+</section>
+<section id="python-api">
+<h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline">¶</a></h2>
+<p>Python API has a <code class="docutils literal notranslate"><span class="pre">set_TOD</span></code> function to set the time of day properties.
+<code class="docutils literal notranslate"><span class="pre">set_TOD</span></code> function takes the following arguments: - IsActive (bool,
+optional): Active if set to <code class="docutils literal notranslate"><span class="pre">True</span></code>. Internal effective compute
+mechanism. Defaults to False. - SunLatitude (float, optional): Controls
+sun Latitude. Defaults to -826.39. - SunLongitude (float, optional):
+Controls sun Longitude. Defaults to -1605.4. - Hour (int, optional): Set
+Hour. Defaults to 10. - Minute (int, optional): Set Minutes. Defaults to
+5.</p>
+</section>
+<section id="importing-requirement">
+<h2>Importing Requirement<a class="headerlink" href="#importing-requirement" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">AirControl.communicator</span> <span class="kn">import</span> <span class="n">Communicator</span>
+<span class="kn">from</span> <span class="nn">AirControl</span> <span class="kn">import</span> <span class="n">schemaDef</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">PIL.Image</span> <span class="k">as</span> <span class="nn">Image</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span>  <span class="n">imshow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">Communicator</span><span class="p">()</span>
+</pre></div>
+</div>
+<p><strong>Abundant sun light</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TOD_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_TOD</span><span class="p">(</span><span class="n">IsActive</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Minute</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Hour</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span><span class="n">SunLatitude</span><span class="o">=-</span><span class="mf">2391.933347</span><span class="p">,</span> <span class="n">SunLongitude</span><span class="o">=-</span><span class="mi">2958</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">TOD_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">camera_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_camera</span><span class="p">(</span><span class="n">ActiveCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">IsCapture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">CaptureCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">CaptureType</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">CaptureHeight</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span><span class="n">CaptureWidth</span><span class="o">=</span><span class="mi">256</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">camera_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;ScreenCapture&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">image</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">image</span><span class="p">)))</span>
+    <span class="c1"># im.show()</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">im</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id1">
+<img alt="png" src="_images/output_5_0.png" />
+<figcaption>
+<p><span class="caption-text">png</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Sunset light</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TOD_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_TOD</span><span class="p">(</span><span class="n">IsActive</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Minute</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Hour</span><span class="o">=</span><span class="mi">13</span><span class="p">,</span><span class="n">SunLatitude</span><span class="o">=</span><span class="mf">25.933347</span><span class="p">,</span> <span class="n">SunLongitude</span><span class="o">=</span><span class="mf">72.712092</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">TOD_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">camera_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_camera</span><span class="p">(</span><span class="n">ActiveCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">IsCapture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">CaptureCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">CaptureType</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">CaptureHeight</span><span class="o">=</span><span class="mi">1080</span><span class="p">,</span><span class="n">CaptureWidth</span><span class="o">=</span><span class="mi">1280</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">camera_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;ScreenCapture&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">image</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">image</span><span class="p">)))</span>
+    <span class="c1"># im.show()</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">im</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id2">
+<img alt="png" src="_images/output_7_0.png" />
+<figcaption>
+<p><span class="caption-text">png</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Noon - Sun at vertical angle</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TOD_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_TOD</span><span class="p">(</span><span class="n">IsActive</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Minute</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Hour</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">SunLatitude</span><span class="o">=-</span><span class="mf">481.9</span><span class="p">,</span> <span class="n">SunLongitude</span><span class="o">=-</span><span class="mi">1517</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">TOD_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">camera_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_camera</span><span class="p">(</span><span class="n">ActiveCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">IsCapture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">CaptureCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">CaptureType</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">CaptureHeight</span><span class="o">=</span><span class="mi">1080</span><span class="p">,</span><span class="n">CaptureWidth</span><span class="o">=</span><span class="mi">1280</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">camera_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;ScreenCapture&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">image</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">image</span><span class="p">)))</span>
+    <span class="c1"># im.show()</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">im</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id3">
+<img alt="png" src="_images/output_9_0.png" />
+<figcaption>
+<p><span class="caption-text">png</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Night</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TOD_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_TOD</span><span class="p">(</span><span class="n">IsActive</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Minute</span><span class="o">=</span><span class="mi">59</span><span class="p">,</span> <span class="n">Hour</span><span class="o">=</span><span class="mi">20</span><span class="p">,</span><span class="n">SunLatitude</span><span class="o">=-</span><span class="mi">2563</span><span class="p">,</span> <span class="n">SunLongitude</span><span class="o">=-</span><span class="mf">2939.9</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">TOD_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">camera_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_camera</span><span class="p">(</span><span class="n">ActiveCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">IsCapture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">CaptureCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">CaptureType</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">CaptureHeight</span><span class="o">=</span><span class="mi">1080</span><span class="p">,</span><span class="n">CaptureWidth</span><span class="o">=</span><span class="mi">1280</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">camera_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;ScreenCapture&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">image</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">image</span><span class="p">)))</span>
+    <span class="c1"># im.show()</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">im</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id4">
+<img alt="png" src="_images/output_11_0.png" />
+<figcaption>
+<p><span class="caption-text">png</span><a class="headerlink" href="#id4" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p><strong>Surshine at side angle</strong></p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">TOD_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_TOD</span><span class="p">(</span><span class="n">IsActive</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Minute</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">Hour</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">SunLatitude</span><span class="o">=-</span><span class="mi">2391</span><span class="p">,</span> <span class="n">SunLongitude</span><span class="o">=-</span><span class="mi">2958</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">TOD_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">camera_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_camera</span><span class="p">(</span><span class="n">ActiveCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">IsCapture</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span><span class="n">CaptureCamera</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span><span class="n">CaptureType</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">CaptureHeight</span><span class="o">=</span><span class="mi">1080</span><span class="p">,</span><span class="n">CaptureWidth</span><span class="o">=</span><span class="mi">1280</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">camera_schema</span><span class="p">)</span>
+<span class="n">output</span> <span class="o">=</span>  <span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">()</span>
+<span class="n">image</span> <span class="o">=</span> <span class="n">output</span><span class="p">[</span><span class="s1">&#39;ScreenCapture&#39;</span><span class="p">]</span>
+<span class="k">if</span> <span class="n">image</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+    <span class="n">im</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">BytesIO</span><span class="p">(</span><span class="n">base64</span><span class="o">.</span><span class="n">b64decode</span><span class="p">(</span><span class="n">image</span><span class="p">)))</span>
+    <span class="c1"># im.show()</span>
+    <span class="n">imshow</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">asarray</span><span class="p">(</span><span class="n">im</span><span class="p">))</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s1">&#39;off&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id5">
+<img alt="png" src="_images/output_13_0.png" />
+<figcaption>
+<p><span class="caption-text">png</span><a class="headerlink" href="#id5" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Sunil Patel.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

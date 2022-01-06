@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classSqliteDB_1_1DB__EternalInput.html" title="Class to get input from external program" alt="" coords="5,5,192,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="5,13,119,39"/>
+<area shape="rect" id="node2" href="$classCommunicator_1_1PrimitiveToStringConverter.html" title="Converting boolena to string while serializing" alt="" coords="167,5,361,47"/>
 </map>

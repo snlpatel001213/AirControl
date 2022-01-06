@@ -21,6 +21,14 @@
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CGYFWBL33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5CGYFWBL33');
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -31,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.5</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -97,13 +105,16 @@ $(document).ready(function(){initNavTree('classAirControl_1_1AC__Basic__Follow__
 <div class="title">AirControl.AC_Basic_Follow_Camera Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Setup follow camera  
+ <a href="classAirControl_1_1AC__Basic__Follow__Camera.html#details">More...</a></p>
 <div class="dynheader">
 Inheritance diagram for AirControl.AC_Basic_Follow_Camera:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__Basic__Follow__Camera__inherit__graph.png" border="0" usemap="#AirControl_8AC__Basic__Follow__Camera_inherit__map" alt="Inheritance graph"/></div>
 <map name="AirControl_8AC__Basic__Follow__Camera_inherit__map" id="AirControl_8AC__Basic__Follow__Camera_inherit__map">
-<area shape="rect" title=" " alt="" coords="15,80,166,121"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__Camera.html" title=" " alt="" coords="5,169,176,211"/>
+<area shape="rect" title="Setup follow camera" alt="" coords="15,80,166,121"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__Camera.html" title="Basic follow camera implementation" alt="" coords="5,169,176,211"/>
 <area shape="rect" title=" " alt="" coords="29,5,153,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -112,7 +123,7 @@ Collaboration diagram for AirControl.AC_Basic_Follow_Camera:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__Basic__Follow__Camera__coll__graph.png" border="0" usemap="#AirControl_8AC__Basic__Follow__Camera_coll__map" alt="Collaboration graph"/></div>
 <map name="AirControl_8AC__Basic__Follow__Camera_coll__map" id="AirControl_8AC__Basic__Follow__Camera_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,156,121"/>
+<area shape="rect" title="Setup follow camera" alt="" coords="5,80,156,121"/>
 <area shape="rect" title=" " alt="" coords="19,5,143,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
@@ -134,8 +145,8 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>cameraMovementSpeed<
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a324d4aa9d922af9c09cb5f7f91c4f8c3"><td class="memItemLeft" align="right" valign="top"><a id="a324d4aa9d922af9c09cb5f7f91c4f8c3"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleCamera</b> ()</td></tr>
+<tr class="memitem:a324d4aa9d922af9c09cb5f7f91c4f8c3"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Basic__Follow__Camera.html#a324d4aa9d922af9c09cb5f7f91c4f8c3">HandleCamera</a> ()</td></tr>
+<tr class="memdesc:a324d4aa9d922af9c09cb5f7f91c4f8c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup follow camera height and distance from the Airplane  <a href="classAirControl_1_1AC__Basic__Follow__Camera.html#a324d4aa9d922af9c09cb5f7f91c4f8c3">More...</a><br /></td></tr>
 <tr class="separator:a324d4aa9d922af9c09cb5f7f91c4f8c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
@@ -144,8 +155,53 @@ Protected Attributes</h2></td></tr>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>originalCamraHeight</b></td></tr>
 <tr class="separator:a9ccada7c993a92548c8f181a09d40950"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Setup follow camera </p>
+
+<p class="definition">Definition at line <a class="el" href="AC__Basic__Follow__Camera_8cs_source.html#l00010">10</a> of file <a class="el" href="AC__Basic__Follow__Camera_8cs_source.html">AC_Basic_Follow_Camera.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a324d4aa9d922af9c09cb5f7f91c4f8c3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a324d4aa9d922af9c09cb5f7f91c4f8c3">&#9670;&nbsp;</a></span>HandleCamera()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AirControl.AC_Basic_Follow_Camera.HandleCamera </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Setup follow camera height and distance from the Airplane </p>
+
+<p>Reimplemented in <a class="el" href="classAirControl_1_1AC__Airplane__Camera.html#ad3973eeff27aa8ebc149dc72668fc9f4">AirControl.AC_Airplane_Camera</a>.</p>
+
+<p class="definition">Definition at line <a class="el" href="AC__Basic__Follow__Camera_8cs_source.html#l00046">46</a> of file <a class="el" href="AC__Basic__Follow__Camera_8cs_source.html">AC_Basic_Follow_Camera.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">// Camera that follow the target</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// -airplane.forward*cameraDistance Negative to bring the camera back of the airplane</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            Vector3 wantedPosition =  airplane.position + (-airplane.forward*cameraDistance) + Vector3.up*cameraHeight;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// Debug.DrawLine(airplane.position, wantedPosition, Color.blue);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            transform.position = Vector3.SmoothDamp(transform.position, wantedPosition, ref smoothVelocity, cameraMovementSpeed);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="comment">// Watch the airplane</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            transform.LookAt(airplane);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>AC_Basic_Follow_Camera.cs</li>
+<li><a class="el" href="AC__Basic__Follow__Camera_8cs_source.html">AC_Basic_Follow_Camera.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -154,9 +210,10 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>originalCamraHeight<
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceAirControl.html">AirControl</a></li><li class="navelem"><a class="el" href="classAirControl_1_1AC__Basic__Follow__Camera.html">AC_Basic_Follow_Camera</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

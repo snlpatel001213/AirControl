@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Handle wheel braking and steering
+    /// </summary>
     public class AC_Airplane_Wheel : MonoBehaviour
     {
         #region Variables 
@@ -31,6 +34,9 @@ namespace AirControl
         #endregion
 
         #region Custom Method
+        /// <summary>
+        /// Init wheel set the motor torque to very small nuber to allow it to roll freely
+        /// </summary>
         public void initWheel(){
 
             if (wheelCol){
@@ -38,6 +44,10 @@ namespace AirControl
                 wheelCol.motorTorque = 0.0000000001f;
             }
         }
+        /// <summary>
+        /// Handle whele graphics, and steering 
+        /// </summary>
+        /// <param name="input">Airplane Input</param>
         public void HandleWheel(AC_BaseAirplane_Input input)
         {
             if(wheelCol)

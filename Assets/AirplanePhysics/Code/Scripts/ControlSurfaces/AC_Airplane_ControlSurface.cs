@@ -9,6 +9,9 @@ namespace AirControl
     Flaps, 
     Alerons
     }
+    /// <summary>
+    /// Handle control surfaces including Rudder, Elevator, Flaps,and Alerons
+    /// </summary>
     public class AC_Airplane_ControlSurface : MonoBehaviour
 {
     #region Variables
@@ -23,11 +26,6 @@ namespace AirControl
     #endregion
 
     #region Builtin Methods
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
@@ -41,6 +39,10 @@ namespace AirControl
     #endregion
 
     #region Custom Methods
+    /// <summary>
+    /// Main function to handle Control Surface
+    /// </summary>
+    /// <param name="input">Airplane Input</param>
     public void HandleControlSurface(AC_BaseAirplane_Input input)
     {
         float inputValue = 0f;

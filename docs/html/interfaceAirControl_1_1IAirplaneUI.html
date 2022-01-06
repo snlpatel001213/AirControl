@@ -21,6 +21,14 @@
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CGYFWBL33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5CGYFWBL33');
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -31,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.5</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -101,24 +109,27 @@ Inheritance diagram for AirControl.IAirplaneUI:</div>
 <div class="center"><img src="interfaceAirControl_1_1IAirplaneUI__inherit__graph.png" border="0" usemap="#AirControl_8IAirplaneUI_inherit__map" alt="Inheritance graph"/></div>
 <map name="AirControl_8IAirplaneUI_inherit__map" id="AirControl_8IAirplaneUI_inherit__map">
 <area shape="rect" title=" " alt="" coords="5,209,168,235"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__Airspeed.html" title=" " alt="" coords="216,5,387,47"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__Altimeter.html" title=" " alt="" coords="216,71,387,112"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__Attitude.html" title=" " alt="" coords="216,136,387,177"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__FlapLever.html" title=" " alt="" coords="216,201,387,243"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__FuelGauge.html" title=" " alt="" coords="216,267,387,308"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__Tachometer.html" title=" " alt="" coords="216,332,387,373"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__ThrottleLever.html" title=" " alt="" coords="216,397,387,439"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__Airspeed.html" title="Monitor and updates the Airspeed to UI" alt="" coords="216,5,387,47"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__Altimeter.html" title="Monitor and updates the Altimeter to UI" alt="" coords="216,71,387,112"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__Attitude.html" title="Monitor and updates the Attitude to UI" alt="" coords="216,136,387,177"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__FlapLever.html" title="Monitor and updates the flap position to UI" alt="" coords="216,201,387,243"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__FuelGauge.html" title="Monitor and updates the Fuel level to UI" alt="" coords="216,267,387,308"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__Tachometer.html" title="Monitor and updates the tachometer to UI" alt="" coords="216,332,387,373"/>
+<area shape="rect" href="classAirControl_1_1AC__Airplane__ThrottleLever.html" title="Monitor and updates the Throttle lever to UI" alt="" coords="216,397,387,439"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a519a03fe6582433d19875241db816e15"><td class="memItemLeft" align="right" valign="top"><a id="a519a03fe6582433d19875241db816e15"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleAirplaneUI</b> (<a class="el" href="classSQLite4Unity3d_1_1SQLiteConnection.html">SQLiteConnection</a> connection)</td></tr>
-<tr class="separator:a519a03fe6582433d19875241db816e15"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abbbf40d9f005fce0a0d9d691ec15747d"><td class="memItemLeft" align="right" valign="top"><a id="abbbf40d9f005fce0a0d9d691ec15747d"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleAirplaneUI</b> ()</td></tr>
+<tr class="separator:abbbf40d9f005fce0a0d9d691ec15747d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>The documentation for this interface was generated from the following file:<ul>
-<li>IAirplaneUI.cs</li>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="IAirplaneUI_8cs_source.html#l00008">8</a> of file <a class="el" href="IAirplaneUI_8cs_source.html">IAirplaneUI.cs</a>.</p>
+</div><hr/>The documentation for this interface was generated from the following file:<ul>
+<li><a class="el" href="IAirplaneUI_8cs_source.html">IAirplaneUI.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -127,9 +138,10 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleAirplaneUI</b> 
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceAirControl.html">AirControl</a></li><li class="navelem"><a class="el" href="interfaceAirControl_1_1IAirplaneUI.html">IAirplaneUI</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

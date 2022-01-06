@@ -9,15 +9,21 @@ using System.Linq;
 
 namespace Communicator
 {
+    /// <summary>
+    ///  Handle outbound request from the TCP socket 
+    /// </summary>
     public class OutputHandle:MonoBehaviour
     {
         #region Builtin Methods
         // private SQLiteConnection connection;
         #endregion
-        
+        /// <summary>
+        /// Prepare output object and return json string to be dispatched
+        /// </summary>
+        /// <returns>Output json string</returns>
         public string  ParseOutput()
         {
-            var screencapture = StaticOutputSchema.ScreenCapture;
+            ref var screencapture = ref StaticOutputSchema.ScreenCapture;
             // to avoid null retun from Screencapture
             if (screencapture == null){
                 screencapture =  new byte[0];
@@ -38,6 +44,18 @@ namespace Communicator
             });
             
             return output;
+        }
+        /// <summary>
+        /// Just Log output if the entire output is not required
+        /// </summary>
+        /// <returns>Prepare output object and return json string to be dispatched</returns>
+        public string LogOutput()
+        {
+            string LogOutput = JsonConvert.SerializeObject(new Logger{ 
+                    Log =  StaticLogger.Log,
+                }
+            );
+            return LogOutput;
         }
     }
 

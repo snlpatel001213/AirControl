@@ -1,6 +1,9 @@
 ﻿using UnityEngine;
 namespace AirControl
 {
+    /// <summary>
+    /// Capture camera settings
+    /// </summary>
     public class ColorEncoding
     {
         public static byte ReverseBits(byte value)

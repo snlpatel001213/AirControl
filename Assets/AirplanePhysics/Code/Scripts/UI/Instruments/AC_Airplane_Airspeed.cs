@@ -5,6 +5,9 @@ using Communicator;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Monitor and updates the Airspeed to UI 
+    /// </summary>
     public class AC_Airplane_Airspeed : MonoBehaviour, IAirplaneUI
     {
         #region Variables
@@ -20,6 +23,9 @@ namespace AirControl
 
 
         #region Interface Methods
+        /// <summary>
+        /// Updates to UI 
+        /// </summary>
         public void HandleAirplaneUI()
         {
             if(characteristics && pointer)

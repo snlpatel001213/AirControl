@@ -21,6 +21,14 @@
 <link href="doxygen-awesome.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only.css" rel="stylesheet" type="text/css"/>
 <link href="doxygen-awesome-sidebar-only-darkmode-toggle.css" rel="stylesheet" type="text/css"/>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5CGYFWBL33"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5CGYFWBL33');
+</script>
 </head>
 <body>
 <div id="top"><!-- do not remove this div, it is closed by doxygen! -->
@@ -31,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.3</span>
+   &#160;<span id="projectnumber">0.0.5</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -129,12 +137,63 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>maxSpeed</b> = 15f</
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:ae4b18e4e4a6d6d78dee4a284befae91f"><td class="memItemLeft" align="right" valign="top"><a id="ae4b18e4e4a6d6d78dee4a284befae91f"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleGroundEffect</b> ()</td></tr>
+<tr class="memitem:ae4b18e4e4a6d6d78dee4a284befae91f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__GroundEffect.html#ae4b18e4e4a6d6d78dee4a284befae91f">HandleGroundEffect</a> ()</td></tr>
+<tr class="memdesc:ae4b18e4e4a6d6d78dee4a284befae91f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Creates the Ground effect - <a href="https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)">https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)</a>  <a href="classAirControl_1_1AC__Airplane__GroundEffect.html#ae4b18e4e4a6d6d78dee4a284befae91f">More...</a><br /></td></tr>
 <tr class="separator:ae4b18e4e4a6d6d78dee4a284befae91f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock">
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html#l00006">6</a> of file <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html">AC_Airplane_GroundEffect.cs</a>.</p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="ae4b18e4e4a6d6d78dee4a284befae91f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae4b18e4e4a6d6d78dee4a284befae91f">&#9670;&nbsp;</a></span>HandleGroundEffect()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void AirControl.AC_Airplane_GroundEffect.HandleGroundEffect </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Creates the Ground effect - <a href="https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)">https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)</a> </p>
+
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html#l00041">41</a> of file <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html">AC_Airplane_GroundEffect.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            RaycastHit hit;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span>(Physics.Raycast(transform.position, Vector3.down, out hit))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">if</span>(hit.distance &lt; groundDistance &amp;&amp; hit.transform.tag==<span class="stringliteral">&quot;ground&quot;</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="keywordtype">float</span> currentSpeed = rb.velocity.magnitude;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordtype">float</span> normalizedSpeed = currentSpeed/maxSpeed;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    normalizedSpeed = Mathf.Clamp01(normalizedSpeed);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keywordtype">float</span> distance = groundDistance - hit.distance;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordtype">float</span> finalForce = liftForce *distance *normalizedSpeed;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    rb.AddForce(Vector3.up*finalForce);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+</div><!-- fragment -->
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>AC_Airplane_GroundEffect.cs</li>
+<li><a class="el" href="AC__Airplane__GroundEffect_8cs_source.html">AC_Airplane_GroundEffect.cs</a></li>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
@@ -143,9 +202,10 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>HandleGroundE
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
     <li class="navelem"><a class="el" href="namespaceAirControl.html">AirControl</a></li><li class="navelem"><a class="el" href="classAirControl_1_1AC__Airplane__GroundEffect.html">AC_Airplane_GroundEffect</a></li>
-    <li class="footer">Generated by
-    <a href="http://www.doxygen.org/index.html">
-    <img class="footer" src="doxygen.png" alt="doxygen"/></a> 1.8.17 </li>
+    <li class="footer"> 
+      <a href="https://github.com/snlpatel001213/AirControl/" target="_blank"> Github </a> |
+      <a href="https://aircontrol.readthedocs.io/" target="_blank"> About </a> |
+       Developed with ❤️ in India</li>
   </ul>
 </div>
 </body>

@@ -4,12 +4,20 @@ using UnityEngine;
 using UnityEditor;
 
 namespace AirControl{
+    /// <summary>
+    /// Setting up new Airplane
+    /// Automating new Airplane setup
+    /// </summary>
     public static class AC_Airplane_Setuptools
     {
         # region Variables
         #endregion
         
         #region Custom Methods
+        /// <summary>
+        /// Main fucntion that invoke component creation for new Airplane
+        /// </summary>
+        /// <param name="airplaneName">Name of the new Airplane</param>
         public static void buildNewAirplane(string airplaneName)
         {
             //create root object
@@ -58,20 +66,31 @@ namespace AirControl{
 
             }
         }
+        /// <summary>
+        /// creat collision group in the hierarchy
+        /// </summary>
+        /// <param name="Collision_GRP">new GameObject("Collision_GRP")</param>
         static void setupCollisionGRP(GameObject Collision_GRP){
             GameObject Airplane = new GameObject("Airplane"); 
             GameObject Wheel_GRP = new GameObject("Wheel_GRP"); 
             Airplane.transform.SetParent(Collision_GRP.transform);
             Wheel_GRP.transform.SetParent(Collision_GRP.transform);
         }
-        
+        /// <summary>
+        /// Create Engine Gameobject
+        /// </summary>
+        /// <param name="root">Root gameobject (Airplane)</param>
+        /// <param name="controller"> Airplane controller game object</param>
         static void setupEngine(GameObject root, AC_Airplane_Controller controller){
             GameObject engineGO = new GameObject("Engine", typeof(AC_Airplane_Engine));
             AC_Airplane_Engine engine = engineGO.GetComponent<AC_Airplane_Engine>();
             controller.engines.Add(engine);
             engineGO.transform.SetParent(root.transform, false);
         }
-
+        /// <summary>
+        /// Create Audio gameobject group
+        /// </summary>
+        /// <param name="root">Root gameobject (Airplane)</param>
         static void setupAudio(GameObject root){
             GameObject Audio_GRP = new GameObject("Audio_GRP");
             Audio_GRP.transform.SetParent(root.transform, false);
@@ -83,7 +102,10 @@ namespace AirControl{
             FullThrottle.transform.SetParent(Audio_GRP.transform, false);
 
         }
-
+        /// <summary>
+        /// Creates control surfaces
+        /// </summary>
+        /// <param name="root">Root gameobject (Airplane)</param>
         static void setupControlSurfaces(GameObject root){
             
             // Create control surfaces
@@ -104,7 +126,10 @@ namespace AirControl{
             RightFlaps.transform.SetParent(Control_Surfaces_GRP.transform);
 
         }
-        
+        /// <summary>
+        /// Create UI control group
+        /// </summary>
+        /// <param name="root">Root gameobject (Airplane)</param>
         static void setupUIGRP(GameObject root){
             //setup UI hierarchy
             GameObject UI_GRP = new GameObject("UI_GRP");

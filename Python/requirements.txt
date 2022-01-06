@@ -1,0 +1,6 @@
+matplotlib==3.5.1
+numpy==1.21.4
+Pillow==9.0.0
+setuptools==59.2.0
+sphinx_rtd_theme==0.4.3
+sphinx-press-theme

@@ -1,0 +1,7 @@
+{
+  "MsgType": "Level",
+  "Version": "0.0.5",
+  "InputControlType": "Other",
+  "IsActive": "false",
+  "LevelReload": "false"
+}

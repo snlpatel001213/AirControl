@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Getting Started</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Working With Binaries" href="working_with_binaries.html" />
+  <link rel="prev" title="System Requirement" href="doxygen_readme.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Aircontrol</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#guide">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="doxygen_readme.html" class="reference internal ">System Requirement</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Getting Started</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#hdrp-and-urp" class="reference internal">HDRP and URP</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_binaries.html" class="reference internal ">Working With Binaries</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_source.html" class="reference internal ">Working With Sources</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="input_output.html" class="reference internal ">Aircontrol Input API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="time_of_day.html" class="reference internal ">Aircontrol time of Day API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="lidar_example.html" class="reference internal ">Aircontrol Lidar API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="camera_example.html" class="reference internal ">Aircontrol Camera API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="other_API.html" class="reference internal ">Aircontrol Other API</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Getting Started</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="doxygen_readme.html"
+       title="previous chapter">← System Requirement</a>
+  </li>
+  <li class="next">
+    <a href="working_with_binaries.html"
+       title="next chapter">Working With Binaries →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="getting-started">
+<h1>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<p>Aircontrol is made simple to use yet powerful. Aircontrol source code
+and binaries will be available for Unity URL and Unity HDRP.
+Aircontrol-Airplane can be controlled through Keyboard, Python API.</p>
+<p>The Joystick control mechanism is a work in progress.</p>
+<section id="hdrp-and-urp">
+<h2>HDRP and URP<a class="headerlink" href="#hdrp-and-urp" title="Permalink to this headline">¶</a></h2>
+<p>HDRP targets high-end hardware such as PC, Xbox, and PlayStation. You
+can achieve realistic graphics in demanding scenarios. HDRP uses Compute
+Shader technology and takes advantage of GPU hardware.</p>
+<p>Use HDRP to create high-fidelity games, automotive demos, architectural
+applications, and anything that prioritizes graphics quality. HDRP uses
+physically-based Lighting and Materials and supports both Forward and
+Deferred rendering paths.</p>
+<p>The Universal Render Pipeline (URP) is a prebuilt Scriptable Render
+Pipeline, made by Unity. URP provides artist-friendly workflows that let
+you quickly and easily create optimized graphics across a range of
+platforms, from mobile to high-end consoles and PCs.</p>
+<p>The Universal Render Pipeline (URP) is a prebuilt Scriptable Render
+Pipeline, made by Unity. URP provides artist-friendly workflows that let
+you quickly and easily create optimized graphics across a range of
+platforms, from mobile to high-end consoles and PCs.</p>
+<p>HDRP can be used for Dataset generation as well as for High-Resolution
+deep learning.</p>
+<p>URP takes less compute resources compared to the HDRP. Hence it can be
+used for long-lasting simulations. URP{also can be used for data
+generation.}</p>
+<p>Generally, HDRP is used for data generation and users might want to
+change the environment and bring more assets. Due to this HDRP source
+code is available and not the builds.</p>
+<p><strong>Linux, Windows, and Mac builds will be only available for the URP
+pipeline.</strong></p>
+<p><img alt="image0" src="_images/release_type.png" /></p>
+<p>We have already seen when to choose the HDRP and URP paths.</p>
+<p>Within URP again you have two choices: 1. <strong>Source Code</strong>:if you know
+Unity Engine and you want to change the base functionality go ahead with
+the source code. Please refer to the source code usage guide. 2.
+<strong>Binary Releases</strong>: If you are interested in performing the
+Reinforcement Learning tasks you can go ahead with the binary releases.
+Please refer to the binary usage guide.</p>
+<p><img alt="image1" src="_images/usage_guide.png" /></p>
+<p>Once you have a sufficient understanding of how Aircontrol works, Please
+contribute to the AirControl.</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="doxygen_readme.html"
+       title="previous chapter">← System Requirement</a>
+  </li>
+  <li class="next">
+    <a href="working_with_binaries.html"
+       title="next chapter">Working With Binaries →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Sunil Patel.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -5,6 +5,9 @@ using Communicator;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Creates and controls Lidar
+    /// </summary>
     public class Lidar : MonoBehaviour
     {
         public int numberOfIncrements = 360;
@@ -24,6 +27,18 @@ namespace AirControl
             Vector3 dir;
             RaycastHit hit;
             int indx = 0;
+
+            #region IOSwitch
+            
+            bool isActive = StaticLidarSchema.IsActive;
+
+            if (isActive)
+            {
+                numberOfIncrements = StaticLidarSchema.Density;;
+                maxRange = StaticLidarSchema.Range;
+                StaticLidarSchema.IsActive = false;
+            }
+            #endregion
 
             for (int incr = 0; incr < numberOfIncrements; incr++)
             {

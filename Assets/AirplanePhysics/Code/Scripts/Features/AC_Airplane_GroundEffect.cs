@@ -35,6 +35,9 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
+        /// <summary>
+        /// Creates the Ground effect - https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)
+        /// </summary>
         protected virtual void HandleGroundEffect()
         {
             RaycastHit hit;

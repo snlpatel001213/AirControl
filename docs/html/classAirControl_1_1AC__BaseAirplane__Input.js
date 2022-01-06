@@ -1,8 +1,8 @@
 var classAirControl_1_1AC__BaseAirplane__Input =
 [
     [ "ClampInputs", "classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0", null ],
-    [ "DBGetter", "classAirControl_1_1AC__BaseAirplane__Input.html#a86e35b8be99ba855e3b87cd62a453204", null ],
     [ "HandleInput", "classAirControl_1_1AC__BaseAirplane__Input.html#a11051fe1627e915ee5e2be703c880904", null ],
+    [ "IOSwitch", "classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962", null ],
     [ "brake", "classAirControl_1_1AC__BaseAirplane__Input.html#a439ac565b5f91277a328efeed7be840c", null ],
     [ "cameraKey", "classAirControl_1_1AC__BaseAirplane__Input.html#ac52b877995233273d1c37ec96fadb7a8", null ],
     [ "camerSwitch", "classAirControl_1_1AC__BaseAirplane__Input.html#a0fab72a2b65f8a0e699df830f64bfe82", null ],

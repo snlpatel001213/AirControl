@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace AirControl
 {
+    /// <summary>
+    /// Child class listens to xbox Inputs
+    /// </summary>
     public class AC_XboxAirplane_Input : AC_BaseAirplane_Input
     {
         #region Variable
@@ -13,11 +16,14 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
+        /// <summary>
+        /// Handle Xbox input, override the keyboard behavior
         /// make sure you update input settings in Unity
         /// Then Only Xbox will work properly 
         /// Refer to resources for setup
-        // 1. https://answers.unity.com/questions/1350081/xbox-one-controller-mapping-solved.html
-        // 2. https://www.udemy.com/course/intro-to-airplane-physics-in-unity-3d/learn/lecture/10348654#questions
+        /// 1. https://answers.unity.com/questions/1350081/xbox-one-controller-mapping-solved.html
+        /// 2. https://www.udemy.com/course/intro-to-airplane-physics-in-unity-3d/learn/lecture/10348654#questions
+        /// </summary>
         protected override void HandleInput()
         {
             base.HandleInput();

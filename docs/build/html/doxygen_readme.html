@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>System Requirement</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Getting Started" href="getting_started.html" />
+  <link rel="prev" title="Welcome to Aircontrol’s Documentation!" href="index.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Aircontrol</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#guide">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">System Requirement</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#system-requirement" class="reference internal">System Requirement</a></li>
+                
+                  <li class="toctree-l2"><a href="#demo" class="reference internal">Demo</a></li>
+                
+                  <li class="toctree-l2"><a href="#getting-started" class="reference internal">Getting started</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_binaries.html" class="reference internal ">Working With Binaries</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_source.html" class="reference internal ">Working With Sources</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="input_output.html" class="reference internal ">Aircontrol Input API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="time_of_day.html" class="reference internal ">Aircontrol time of Day API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="lidar_example.html" class="reference internal ">Aircontrol Lidar API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="camera_example.html" class="reference internal ">Aircontrol Camera API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="other_API.html" class="reference internal ">Aircontrol Other API</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>System Requirement</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to Aircontrol’s Documentation!</a>
+  </li>
+  <li class="next">
+    <a href="getting_started.html"
+       title="next chapter">Getting Started →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <p><strong>AirControl is an Open Source, Modular, Cross-Platform, and Extensible
+Flight Simulator For Deep Learning Research.</strong> Airsim offers a realistic
+simulation experience with a variety of airplanes. The Airsim is built
+on <a class="reference external" href="https://unity.com">Unity Game engine</a>. Following are the salient
+features of the Aircontrol:</p>
+<ul class="simple">
+<li><p>Built with <strong>C#</strong>, it has <strong>Python</strong> API to control it from your
+favorite Deep learning Framework.</p></li>
+<li><p>Complete source code is open on Github.</p></li>
+<li><p>Aircontrol takes full advantage of object-oriented programming.
+Developed fully modular from day one. You can easily introduce new
+features such as <strong>vertical takeoff</strong>. you can bring your own <strong>alien
+plane to AirCotrol</strong>.</p></li>
+<li><p>AirControl is truly cross-platform, can be compiled on Linux, macOS,
+and Windows. Binary will be released for all the platforms.</p></li>
+<li><p>The AirControl uses Nvidia
+<a class="reference external" href="https://en.wikipedia.org/wiki/PhysX">Physx</a> for the best possible
+Newtonian physics simulation.</p></li>
+<li><p>Aircontrol allows users to take advantage of aerodynamics effects
+such as <a class="reference external" href="https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)">Ground
+effect</a>.</p></li>
+<li><p>All the control surfaces (Throttle, Rudder, Ailerons, and Flaps)
+accepts normalized input between -1 and 1. This makes Aircontrol even
+more friendly with AI.</p></li>
+</ul>
+<section id="system-requirement">
+<h1>System Requirement<a class="headerlink" href="#system-requirement" title="Permalink to this headline">¶</a></h1>
+<p>It depends on how big your Unity Environment is. The environmant which
+comes with the Aircontrol is basic tested with following config:</p>
+<ol class="arabic simple">
+<li><p>Operating system : Ubuntu, Windows, Mac</p></li>
+<li><p>CPU: Intel Core i7</p></li>
+<li><p>GPU: Nvidia 1070 or Higher</p></li>
+<li><p>RAM: 16 GB</p></li>
+<li><p>Flight Controller: xbox [WIP]</p></li>
+</ol>
+<p>Aircontrol may work with lower than the specified requirements, but its
+not tested.</p>
+<p>You can run Aircontrol in server client mode in 2 different machines or
+both in the single machine.</p>
+</section>
+<section id="demo">
+<h1>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h1>
+<p><em>Current release version v0.0.3 is a pre-release to test the air
+stability and controls. Python integration is still in development.</em></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Lhwb4UVulMs"><img alt="AirControl Basic Demo" src="https://i9.ytimg.com/vi_webp/Lhwb4UVulMs/mqdefault.webp?v=61d6839b&amp;sqp=CIiG2o4G&amp;rs=AOn4CLAEMOJnr4S9jciZ-CBKH26yIQivow" /></a></p>
+</section>
+<section id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><p>Windows - Not Tested</p>
+<ol class="arabic simple">
+<li><p>Download Binaries -
+<a class="reference external" href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</a></p></li>
+<li><p>Build it</p></li>
+</ol>
+</li>
+<li><p>Linux - Tested</p>
+<ol class="arabic simple">
+<li><p>Download Binaries -
+<a class="reference external" href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</a></p></li>
+<li><p>Build it</p></li>
+</ol>
+</li>
+<li><p>macOS - Not Tested</p>
+<ol class="arabic simple">
+<li><p>Download Binaries -
+<a class="reference external" href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</a></p></li>
+<li><p>Build it</p></li>
+</ol>
+</li>
+</ol>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="index.html"
+       title="previous chapter">← Welcome to Aircontrol’s Documentation!</a>
+  </li>
+  <li class="next">
+    <a href="getting_started.html"
+       title="next chapter">Getting Started →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Sunil Patel.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Main class defines the Airplane Characteristics
+    /// </summary>
     public class AC_Airplane_Characteristics : MonoBehaviour 
     {
         #region Varaibles
@@ -61,6 +64,11 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
+        /// <summary>
+        /// Initialize Airplane Charatceristics
+        /// </summary>
+        /// <param name="curRB">Rigid body reference to Airplane</param>
+        /// <param name="curInput">Airplane Inputs</param>
         public void InitCharacteristics(Rigidbody curRB, AC_BaseAirplane_Input curInput)
         {
             //Basic Initialization
@@ -73,7 +81,9 @@ namespace AirControl
             maxMPS = maxMPH / mpsToMph;
         }
 
-        //Update all the Flight Characteristics methods
+        /// <summary>
+        /// Update all the Flight Characteristics methods
+        /// </summary>
         public void UpdateCharacteristics()
         {
             if(rb)
@@ -95,9 +105,9 @@ namespace AirControl
             }
         }
 
-
-
-        //Get the local forward speed in Meters per second and convert it to Miles Per Hour
+        /// <summary>
+        /// Get the local forward speed in Meters per second and convert it to Miles Per Hour
+        /// </summary>
         void CalculateForwardSpeed()
         {
             //Transform the Rigidbody velocity vector from world space to local space
@@ -112,7 +122,9 @@ namespace AirControl
         }
 
 
-        //Build a lift force strong enough to lift he plane off the ground
+        /// <summary>
+        /// Build a lift force strong enough to lift he plane off the ground
+        /// </summary>
         void CalculateLift()
         {
             //Get the angle of Attack
@@ -131,9 +143,9 @@ namespace AirControl
             rb.AddForce(finalLiftForce);
         }
 
-
-
-        //Get a Drag force to keep the plane relatively stable in the air
+        /// <summary>
+        /// Get a Drag force to keep the plane relatively stable in the air
+        /// </summary>
         void CalculateDrag()
         {
             //Speed Drag
@@ -149,7 +161,9 @@ namespace AirControl
             rb.angularDrag = startAngularDrag * forwardSpeed;
         }
 
-
+        /// <summary>
+        /// Control Airplane stabilization
+        /// </summary>
         void HandleRigidbodyTransform()
         {
             if(rb.velocity.magnitude > 1f)
@@ -163,12 +177,17 @@ namespace AirControl
             }
         }
 
-
+        /// <summary>
+        /// Control surface effciency mapping
+        /// </summary>
         void HandleControlSurfaceEfficiency()
         {
             csEfficiencyValue = controlSurfaceEfficiency.Evaluate(normalizeMPH);
         }
 
+        /// <summary>
+        /// Handle Airplane Pitch
+        /// </summary>
         void HandlePitch()
         {
             Vector3 flatForward = transform.forward;
@@ -181,6 +200,9 @@ namespace AirControl
             rb.AddTorque(pitchTorque);
         }
 
+        /// <summary>
+        /// Handle Airplane Roll
+        /// </summary>
         void HandleRoll()
         {
             Vector3 flatRight = transform.right;
@@ -193,12 +215,18 @@ namespace AirControl
             rb.AddTorque(rollTorque);
         }
 
+        /// <summary>
+        /// Handle Airplane Yaw
+        /// </summary>
         void HandleYaw()
         {
             Vector3 yawTorque = input.Yaw * yawSpeed * transform.up * csEfficiencyValue;
             rb.AddTorque(yawTorque);
         }
 
+        /// <summary>
+        /// Handle Airplane Braking
+        /// </summary>
         void HandleBanking()
         {
             float bankSide = Mathf.InverseLerp(-90f, 90f, rollAngle);

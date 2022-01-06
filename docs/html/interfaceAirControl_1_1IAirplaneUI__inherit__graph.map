@@ -1,10 +1,10 @@
 <map id="AirControl.IAirplaneUI" name="AirControl.IAirplaneUI">
 <area shape="rect" id="node1" title=" " alt="" coords="5,209,168,235"/>
-<area shape="rect" id="node2" href="$classAirControl_1_1AC__Airplane__Airspeed.html" title=" " alt="" coords="216,5,387,47"/>
-<area shape="rect" id="node3" href="$classAirControl_1_1AC__Airplane__Altimeter.html" title=" " alt="" coords="216,71,387,112"/>
-<area shape="rect" id="node4" href="$classAirControl_1_1AC__Airplane__Attitude.html" title=" " alt="" coords="216,136,387,177"/>
-<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__FlapLever.html" title=" " alt="" coords="216,201,387,243"/>
-<area shape="rect" id="node6" href="$classAirControl_1_1AC__Airplane__FuelGauge.html" title=" " alt="" coords="216,267,387,308"/>
-<area shape="rect" id="node7" href="$classAirControl_1_1AC__Airplane__Tachometer.html" title=" " alt="" coords="216,332,387,373"/>
-<area shape="rect" id="node8" href="$classAirControl_1_1AC__Airplane__ThrottleLever.html" title=" " alt="" coords="216,397,387,439"/>
+<area shape="rect" id="node2" href="$classAirControl_1_1AC__Airplane__Airspeed.html" title="Monitor and updates the Airspeed to UI" alt="" coords="216,5,387,47"/>
+<area shape="rect" id="node3" href="$classAirControl_1_1AC__Airplane__Altimeter.html" title="Monitor and updates the Altimeter to UI" alt="" coords="216,71,387,112"/>
+<area shape="rect" id="node4" href="$classAirControl_1_1AC__Airplane__Attitude.html" title="Monitor and updates the Attitude to UI" alt="" coords="216,136,387,177"/>
+<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__FlapLever.html" title="Monitor and updates the flap position to UI" alt="" coords="216,201,387,243"/>
+<area shape="rect" id="node6" href="$classAirControl_1_1AC__Airplane__FuelGauge.html" title="Monitor and updates the Fuel level to UI" alt="" coords="216,267,387,308"/>
+<area shape="rect" id="node7" href="$classAirControl_1_1AC__Airplane__Tachometer.html" title="Monitor and updates the tachometer to UI" alt="" coords="216,332,387,373"/>
+<area shape="rect" id="node8" href="$classAirControl_1_1AC__Airplane__ThrottleLever.html" title="Monitor and updates the Throttle lever to UI" alt="" coords="216,397,387,439"/>
 </map>

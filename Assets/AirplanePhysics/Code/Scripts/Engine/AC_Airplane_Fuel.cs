@@ -6,6 +6,9 @@ using UnityEngine.Events;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Control fuel consumption
+    /// </summary>
     public class AC_Airplane_Fuel : MonoBehaviour
     {
         #region Variables
@@ -36,11 +39,17 @@ namespace AirControl
 
 
         #region Custom Methods
+        /// <summary>
+        /// Initialize full to full capacity
+        /// </summary>
         public void InitFuel()
         {
             currentFuel = fuelCapacity;
         }
-
+        /// <summary>
+        /// Add fuel in case of mid airfueling facility
+        /// </summary>
+        /// <param name="aFuelAmount"></param>
         public void AddFuel(float aFuelAmount)
         {
             currentFuel += aFuelAmount;
@@ -54,12 +63,17 @@ namespace AirControl
                 }
             }
         }
-
+        /// <summary>
+        /// Reset fuel in case of mid airfueling facility
+        /// </summary>
         public void ResetFuel()
         {
             currentFuel = fuelCapacity;
         }
-
+        /// <summary>
+        /// Fuel burnout calculations
+        /// </summary>
+        /// <param name="aPrecentage"></param>
         public void UpdateFuel(float aPrecentage)
         {
             float currentBurn = ((fuelBurnRate * aPrecentage) / 3600f) * Time.deltaTime;

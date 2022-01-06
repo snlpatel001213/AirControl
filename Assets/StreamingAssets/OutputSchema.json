@@ -1,0 +1,16 @@
+{
+  "AGL": 0.0,
+  "MSL": 0.0,
+  "CurrentRPM": 0.0,
+  "MaxRPM": 0.0,
+  "MaxPower": 0.0,
+  "CurrentPower": 0.0,
+  "CurrentFuel": 0.0,
+  "CurrentSpeed": 0.0,
+  "BankAngle": 0.0,
+  "PitchAngle": 0.0,
+  "ScreenCapture": null,
+  "LidarPointCloud": null,
+  "MsgType": "Output",
+  "Version": "0.0.5"
+}

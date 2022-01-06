@@ -1,9 +1,7 @@
 <map id="AirControl.AC_Airplane_Controller" name="AirControl.AC_Airplane_Controller">
-<area shape="rect" id="node1" title=" " alt="" coords="908,66,1079,107"/>
-<area shape="rect" id="node2" href="$classAirControl_1_1AC__BaseRigidbody__Controller.html" title=" " alt="" coords="545,15,760,41"/>
-<area shape="rect" id="node3" title=" " alt="" coords="213,83,337,109"/>
-<area shape="rect" id="node6" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title=" " alt="" coords="551,66,754,107"/>
-<area shape="rect" id="node7" href="$classAirControl_1_1AC__Airplane__Characteristics.html" title=" " alt="" coords="567,131,738,173"/>
-<area shape="rect" id="node4" href="$classSQLite4Unity3d_1_1SQLiteConnection.html" title="Represents an open connection to a SQLite database." alt="" coords="153,5,396,32"/>
-<area shape="rect" id="node5" title=" " alt="" coords="5,5,104,32"/>
+<area shape="rect" id="node1" title="Master Controller, controls the entire Airplane it implements function to Handle Engines,..." alt="" coords="541,57,712,98"/>
+<area shape="rect" id="node2" href="$classAirControl_1_1AC__BaseRigidbody__Controller.html" title=" " alt="" coords="179,5,393,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,64,129,91"/>
+<area shape="rect" id="node4" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title="Base class to listen for keyboard Inputs" alt="" coords="185,57,387,98"/>
+<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__Characteristics.html" title="Main class defines the Airplane Characteristics" alt="" coords="201,122,371,163"/>
 </map>

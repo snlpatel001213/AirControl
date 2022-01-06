@@ -1,0 +1,12 @@
+{
+  "MsgType": "ControlInput",
+  "Version": "0.0.5",
+  "InputControlType": "Other",
+  "Pitch": 0.0,
+  "Roll": 0.0,
+  "Yaw": 0.0,
+  "Throttle": 0.0,
+  "StickyThrottle": 0.0,
+  "Brake": 0.0,
+  "Flaps": 0
+}

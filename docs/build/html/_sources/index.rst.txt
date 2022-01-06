@@ -1,15 +1,24 @@
-.. AirControl documentation master file, created by
-   sphinx-quickstart on Wed Dec  8 15:38:40 2021.
+.. Aircontrol documentation master file, created by
+   sphinx-quickstart on Thu Jan  6 14:25:15 2022.
    You can adapt this file completely to your liking, but it should at least
    contain the root `toctree` directive.
 
-Welcome to AirControl's documentation!
+Welcome to Aircontrol's Documentation!
 ======================================
 
 .. toctree::
    :maxdepth: 2
    :caption: Contents:
 
+   doxygen_readme.rst
+   getting_started
+   working_with_binaries
+   working_with_source
+   input_output_API
+   time_of_day_API
+   lidar_API
+   camera_API
+   other_API
 
 
 Indices and tables

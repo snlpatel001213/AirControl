@@ -1,4 +1,4 @@
 <map id="AirControl.AC_Basic_Follow_Camera" name="AirControl.AC_Basic_Follow_Camera">
-<area shape="rect" id="node1" title=" " alt="" coords="5,80,156,121"/>
+<area shape="rect" id="node1" title="Setup follow camera" alt="" coords="5,80,156,121"/>
 <area shape="rect" id="node2" title=" " alt="" coords="19,5,143,32"/>
 </map>

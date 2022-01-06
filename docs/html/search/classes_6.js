@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['maxlengthattribute_164',['MaxLengthAttribute',['../classSQLite4Unity3d_1_1MaxLengthAttribute.html',1,'SQLite4Unity3d']]]
+  ['outputhandle_131',['OutputHandle',['../classCommunicator_1_1OutputHandle.html',1,'Communicator']]],
+  ['outputschema_132',['OutputSchema',['../classCommunicator_1_1OutputSchema.html',1,'Communicator']]]
 ];

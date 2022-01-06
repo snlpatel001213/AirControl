@@ -5,6 +5,9 @@ using Communicator;
 
 namespace AirControl
 {   
+    /// <summary>
+    /// Engine controls
+    /// </summary>
     [RequireComponent(typeof(AC_Airplane_Propeller))]
     [RequireComponent(typeof(AC_Airplane_Fuel))]
     [RequireComponent(typeof(AC_Airplane_Audio))]
@@ -48,6 +51,9 @@ namespace AirControl
 
 
         #region BuiltIn Methods
+        /// <summary>
+        /// init fuel
+        /// </summary>
         void Start()
         {
             if(!fuel)
@@ -62,6 +68,13 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
+        /// <summary>
+        /// Calculate the force created by engine
+        /// Calculate Engine RPM 
+        /// Calculate fuel consumption
+        /// </summary>
+        /// <param name="throttle">Input throttle value</param>
+        /// <returns>Final Engine force</returns>
         public Vector3 CalculateForce(float throttle)
         {
             //Calcualte Power
@@ -110,7 +123,10 @@ namespace AirControl
             return finalForce;
         }
 
-
+        /// <summary>
+        /// Shutdown the engine if fuel not avialble
+        /// </summary>
+        /// <param name="throttleValue">input throttle</param>
         void HandleFuel(float throttleValue)
         {
             //Handle Fuel

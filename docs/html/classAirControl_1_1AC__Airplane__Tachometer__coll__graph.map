@@ -1,7 +1,7 @@
 <map id="AirControl.AC_Airplane_Tachometer" name="AirControl.AC_Airplane_Tachometer">
-<area shape="rect" id="node1" title=" " alt="" coords="54,289,225,331"/>
+<area shape="rect" id="node1" title="Monitor and updates the tachometer to UI" alt="" coords="54,289,225,331"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" id="node4" href="$classAirControl_1_1AC__Airplane__Engine.html" title=" " alt="" coords="54,185,225,227"/>
-<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__Propeller.html" title=" " alt="" coords="105,81,275,123"/>
+<area shape="rect" id="node4" href="$classAirControl_1_1AC__Airplane__Engine.html" title="Engine controls" alt="" coords="54,185,225,227"/>
+<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__Propeller.html" title="Control propeller rotation" alt="" coords="105,81,275,123"/>
 <area shape="rect" id="node3" href="$interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="249,193,344,219"/>
 </map>

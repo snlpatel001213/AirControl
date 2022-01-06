@@ -1,0 +1,777 @@
+<!DOCTYPE html>
+<html >
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+      <title>Aircontrol Input API</title>
+    
+          <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+          <link rel="stylesheet" href="_static/theme.css " type="text/css" />
+      
+      <!-- sphinx script_files -->
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+
+      
+      <!-- bundled in js (rollup iife) -->
+      <!-- <script src="_static/theme-vendors.js"></script> -->
+      <script src="_static/theme.js" defer></script>
+    
+  <link rel="index" title="Index" href="genindex.html" />
+  <link rel="search" title="Search" href="search.html" />
+  <link rel="next" title="Aircontrol time of Day API" href="time_of_day_API.html" />
+  <link rel="prev" title="Working With Sources" href="working_with_source.html" /> 
+  </head>
+
+  <body>
+    <div id="app">
+    <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
+  <router-link to="index.html" class="home-link">
+    
+      <span class="site-name">Aircontrol</span>
+    
+  </router-link>
+
+  <div class="links">
+    <navlinks class="can-hide">
+
+
+
+    </navlinks>
+  </div>
+</navbar>
+
+      
+      <div class="sidebar-mask" @click="toggleSidebar(false)">
+      </div>
+        <sidebar @toggle-sidebar="toggleSidebar">
+          
+          <navlinks>
+            
+
+
+
+            
+          </navlinks><div id="searchbox" class="searchbox" role="search">
+  <div class="caption"><span class="caption-text">Quick search</span>
+    <div class="searchformwrapper">
+      <form class="search" action="search.html" method="get">
+        <input type="text" name="q" />
+        <input type="submit" value="Search" />
+        <input type="hidden" name="check_keywords" value="yes" />
+        <input type="hidden" name="area" value="default" />
+      </form>
+    </div>
+  </div>
+</div><div class="sidebar-links" role="navigation" aria-label="main navigation">
+  
+    <div class="sidebar-group">
+      <p class="caption">
+        <span class="caption-text"><a href="index.html#welcome-to-aircontrol-s-documentation">Contents:</a></span>
+      </p>
+      <ul class="current">
+        
+          <li class="toctree-l1 ">
+            
+              <a href="doxygen_readme.html" class="reference internal ">System Requirement</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="getting_started.html" class="reference internal ">Getting Started</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_binaries.html" class="reference internal ">Working With Binaries</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="working_with_source.html" class="reference internal ">Working With Sources</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 current">
+            
+              <a href="#" class="reference internal current">Aircontrol Input API</a>
+            
+
+            
+              <ul>
+                
+                  <li class="toctree-l2"><a href="#python-api" class="reference internal">Python API</a></li>
+                
+                  <li class="toctree-l2"><a href="#limits" class="reference internal">Limits</a></li>
+                
+                  <li class="toctree-l2"><a href="#importing-requirements" class="reference internal">Importing Requirements</a></li>
+                
+                  <li class="toctree-l2"><a href="#output" class="reference internal">Output</a></li>
+                
+                  <li class="toctree-l2"><a href="#glossary" class="reference internal">Glossary</a></li>
+                
+              </ul>
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="time_of_day_API.html" class="reference internal ">Aircontrol time of Day API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="lidar_API.html" class="reference internal ">Aircontrol Lidar API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="camera_API.html" class="reference internal ">Aircontrol Camera API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="other_API.html" class="reference internal ">Aircontrol Other API</a>
+            
+
+            
+          </li>
+
+        
+      </ul>
+    </div>
+  
+</div>
+        </sidebar>
+
+      <page>
+          <div class="body-header" role="navigation" aria-label="navigation">
+  
+  <ul class="breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+    
+    <li>Aircontrol Input API</li>
+  </ul>
+  
+
+  <ul class="page-nav">
+  <li class="prev">
+    <a href="working_with_source.html"
+       title="previous chapter">← Working With Sources</a>
+  </li>
+  <li class="next">
+    <a href="time_of_day_API.html"
+       title="next chapter">Aircontrol time of Day API →</a>
+  </li>
+</ul>
+  
+</div>
+<hr>
+          <div class="content" role="main" v-pre>
+            
+  <section id="aircontrol-input-api">
+<h1>Aircontrol Input API<a class="headerlink" href="#aircontrol-input-api" title="Permalink to this headline">¶</a></h1>
+<p>Aircontrol provides fine control over inputs via python API. Following
+properties can be controlled using <code class="docutils literal notranslate"><span class="pre">set_control</span></code> function.</p>
+<section id="python-api">
+<h2>Python API<a class="headerlink" href="#python-api" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><p>InputControlType (str, optional): It can be either <code class="docutils literal notranslate"><span class="pre">Code</span></code> or
+<code class="docutils literal notranslate"><span class="pre">Other</span></code>. This is to control the internal mechanism and prevent
+repeted calling in already set variables.
+If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set to ‘Code’, camera cannot be controlled
+from Keyboard or Joystick. If <code class="docutils literal notranslate"><span class="pre">InputControlType</span></code> is set to ‘Other’,
+camera can be only controlled from Keyboard or Joystick. Defaults to
+“Code”.</p></li>
+<li><p>Pitch (float, optional): The aircraft nose can rotate up and down
+about the y-axis, a motion known as pitch. Pitch control is typically
+accomplished using an elevator on the horizontal tail. Defaults to
+0.0.</p></li>
+<li><p>Roll (float, optional): The wingtips can rotate up and down about the
+x-axis, a motion known as roll. Roll control is usually provided
+using ailerons located at each wingtip.. Defaults to 0.0.</p></li>
+<li><p>Yaw (float, optional): The nose can rotate left and right about the
+z-axis, a motion known as yaw.Yaw control is most often accomplished
+using a rudder located on the vertical tail.. Defaults to 0.0.</p></li>
+<li><p>Throttle (float, optional): Controls the engine power (Deprecated),
+Use sticky Throttle. Defaults to 0.0.</p></li>
+<li><p>StickyThrottle (float, optional): Tyoically Airplane have sticky
+throttles. Throttle values stay same unless moved. Defaults to 0.0.</p></li>
+<li><p>Brake (int, optional): Applies brake to wheels, to control ground
+movement. Defaults to 0.</p></li>
+<li><p>Flaps (int, optional): A flap is a high-lift device used to reduce
+the stalling speed of an aircraft wing at a given weight. Flaps helps
+in controlling descent. Defaults to 0.</p></li>
+</ul>
+</section>
+<section id="limits">
+<h2>Limits<a class="headerlink" href="#limits" title="Permalink to this headline">¶</a></h2>
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 26%" />
+<col style="width: 9%" />
+<col style="width: 66%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Control</p></th>
+<th class="head"><p>type</p></th>
+<th class="head"><p>Limit</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Pitch</p></td>
+<td><p>float</p></td>
+<td><p>Between -1.0 and 1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Yaw</p></td>
+<td><p>float</p></td>
+<td><p>Between -1.0 and 1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Roll</p></td>
+<td><p>float</p></td>
+<td><p>Between -1.0 and 1.0</p></td>
+</tr>
+<tr class="row-odd"><td><p>Sticky Throttle</p></td>
+<td><p>float</p></td>
+<td><p>Between 0.0 and 1.0</p></td>
+</tr>
+<tr class="row-even"><td><p>Brake</p></td>
+<td><p>int</p></td>
+<td><p>0 : Dis-engaged, 1 : Engaged</p></td>
+</tr>
+<tr class="row-odd"><td><p>Flaps</p></td>
+<td><p>int</p></td>
+<td><p>0 : None, 1 : 15 Degree, 2 : 30 Degree</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="importing-requirements">
+<h2>Importing Requirements<a class="headerlink" href="#importing-requirements" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">AirControl.communicator</span> <span class="kn">import</span> <span class="n">Communicator</span>
+<span class="kn">from</span> <span class="nn">AirControl</span> <span class="kn">import</span> <span class="n">schemaDef</span>
+<span class="kn">from</span> <span class="nn">pprint</span> <span class="kn">import</span> <span class="n">pprint</span>
+<span class="kn">import</span> <span class="nn">PIL.Image</span> <span class="k">as</span> <span class="nn">Image</span>
+<span class="kn">import</span> <span class="nn">base64</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">from</span> <span class="nn">io</span> <span class="kn">import</span> <span class="n">BytesIO</span>
+<span class="kn">from</span> <span class="nn">matplotlib.pyplot</span> <span class="kn">import</span>  <span class="n">imshow</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">connection</span> <span class="o">=</span> <span class="n">Communicator</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">control_schema</span> <span class="o">=</span> <span class="n">schemaDef</span><span class="o">.</span><span class="n">set_control</span><span class="p">(</span><span class="n">Pitch</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">Roll</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">Yaw</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span><span class="n">Throttle</span><span class="o">=</span><span class="mf">0.0</span><span class="p">,</span> <span class="n">StickyThrottle</span><span class="o">=</span><span class="mf">0.5</span><span class="p">,</span> <span class="n">Brake</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span> <span class="n">Flaps</span><span class="o">=</span><span class="mi">0</span><span class="p">,</span><span class="n">IsOutput</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">connection</span><span class="o">.</span><span class="n">send_data</span><span class="p">(</span><span class="n">control_schema</span><span class="p">)</span>
+<span class="n">pprint</span><span class="p">(</span><span class="n">connection</span><span class="o">.</span><span class="n">receive_data</span><span class="p">())</span>
+</pre></div>
+</div>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;AGL&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;BankAngle&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.93484618e-07</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentFuel&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentPower&#39;</span><span class="p">:</span> <span class="mf">4666.8457</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentRPM&#39;</span><span class="p">:</span> <span class="mf">2333.42285</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentSpeed&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;LidarPointCloud&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">26.1899033</span><span class="p">,</span>
+                     <span class="mf">25.8373413</span><span class="p">,</span>
+                     <span class="mf">25.501812</span><span class="p">,</span>
+                     <span class="mf">25.1824684</span><span class="p">,</span>
+                     <span class="mf">24.8784943</span><span class="p">,</span>
+                     <span class="mf">24.58918</span><span class="p">,</span>
+                     <span class="mf">24.3138351</span><span class="p">,</span>
+                     <span class="mf">24.05183</span><span class="p">,</span>
+                     <span class="mf">23.8025932</span><span class="p">,</span>
+                     <span class="mf">23.5655651</span><span class="p">,</span>
+                     <span class="mf">23.3402615</span><span class="p">,</span>
+                     <span class="mf">23.1261883</span><span class="p">,</span>
+                     <span class="mf">22.9229374</span><span class="p">,</span>
+                     <span class="mf">22.73009</span><span class="p">,</span>
+                     <span class="mf">22.5472622</span><span class="p">,</span>
+                     <span class="mf">22.3741283</span><span class="p">,</span>
+                     <span class="mf">22.2103329</span><span class="p">,</span>
+                     <span class="mf">22.0555973</span><span class="p">,</span>
+                     <span class="mf">21.9096222</span><span class="p">,</span>
+                     <span class="mf">21.7721653</span><span class="p">,</span>
+                     <span class="mf">21.6429653</span><span class="p">,</span>
+                     <span class="mf">21.5218048</span><span class="p">,</span>
+                     <span class="mf">21.4084873</span><span class="p">,</span>
+                     <span class="mf">21.302803</span><span class="p">,</span>
+                     <span class="mf">21.2045918</span><span class="p">,</span>
+                     <span class="mf">21.113678</span><span class="p">,</span>
+                     <span class="mf">21.0299244</span><span class="p">,</span>
+                     <span class="mf">20.95319</span><span class="p">,</span>
+                     <span class="mf">20.8833466</span><span class="p">,</span>
+                     <span class="mf">20.8202953</span><span class="p">,</span>
+                     <span class="mf">2.16295123</span><span class="p">,</span>
+                     <span class="mf">2.10318828</span><span class="p">,</span>
+                     <span class="mf">2.07183218</span><span class="p">,</span>
+                     <span class="mf">2.05952</span><span class="p">,</span>
+                     <span class="mf">1.93164682</span><span class="p">,</span>
+                     <span class="mf">1.93017542</span><span class="p">,</span>
+                     <span class="mf">1.92929351</span><span class="p">,</span>
+                     <span class="mf">1.92899966</span><span class="p">,</span>
+                     <span class="mf">1.92929351</span><span class="p">,</span>
+                     <span class="mf">1.9301753</span><span class="p">,</span>
+                     <span class="mf">20.5536346</span><span class="p">,</span>
+                     <span class="mf">20.5672379</span><span class="p">,</span>
+                     <span class="mf">20.58713</span><span class="p">,</span>
+                     <span class="mf">20.613348</span><span class="p">,</span>
+                     <span class="mf">20.6459274</span><span class="p">,</span>
+                     <span class="mf">20.6849289</span><span class="p">,</span>
+                     <span class="mf">20.7303963</span><span class="p">,</span>
+                     <span class="mf">20.7824154</span><span class="p">,</span>
+                     <span class="mf">20.8410511</span><span class="p">,</span>
+                     <span class="mf">20.906414</span><span class="p">,</span>
+                     <span class="mf">20.9785957</span><span class="p">,</span>
+                     <span class="mf">21.05771</span><span class="p">,</span>
+                     <span class="mf">21.1438961</span><span class="p">,</span>
+                     <span class="mf">21.2372818</span><span class="p">,</span>
+                     <span class="mf">21.3380241</span><span class="p">,</span>
+                     <span class="mf">21.4462948</span><span class="p">,</span>
+                     <span class="mf">21.56226</span><span class="p">,</span>
+                     <span class="mf">21.6861439</span><span class="p">,</span>
+                     <span class="mf">21.8181286</span><span class="p">,</span>
+                     <span class="mf">21.9584751</span><span class="p">,</span>
+                     <span class="mf">22.1074066</span><span class="p">,</span>
+                     <span class="mf">22.2652</span><span class="p">,</span>
+                     <span class="mf">22.432148</span><span class="p">,</span>
+                     <span class="mf">22.6085567</span><span class="p">,</span>
+                     <span class="mf">22.7947559</span><span class="p">,</span>
+                     <span class="mf">22.9911118</span><span class="p">,</span>
+                     <span class="mf">23.1980152</span><span class="p">,</span>
+                     <span class="mf">23.4158649</span><span class="p">,</span>
+                     <span class="mf">23.6451187</span><span class="p">,</span>
+                     <span class="mf">23.8862572</span><span class="p">,</span>
+                     <span class="mf">24.13979</span><span class="p">,</span>
+                     <span class="mf">24.4062767</span><span class="p">,</span>
+                     <span class="mf">24.6863136</span><span class="p">,</span>
+                     <span class="mf">24.9805546</span><span class="p">,</span>
+                     <span class="mf">25.28969</span><span class="p">,</span>
+                     <span class="mf">25.6144676</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">77.71343</span><span class="p">,</span>
+                     <span class="mf">83.01117</span><span class="p">,</span>
+                     <span class="mf">89.11312</span><span class="p">,</span>
+                     <span class="mf">96.21514</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">],</span>
+ <span class="s1">&#39;MSL&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">4.151844</span><span class="p">,</span>
+ <span class="s1">&#39;MaxPower&#39;</span><span class="p">:</span> <span class="mf">5000.0</span><span class="p">,</span>
+ <span class="s1">&#39;MaxRPM&#39;</span><span class="p">:</span> <span class="mf">2500.0</span><span class="p">,</span>
+ <span class="s1">&#39;MsgType&#39;</span><span class="p">:</span> <span class="s1">&#39;Output&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;PitchAngle&#39;</span><span class="p">:</span> <span class="mf">1.66752621e-08</span><span class="p">,</span>
+ <span class="s1">&#39;ScreenCapture&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.0.4&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+</section>
+<section id="output">
+<h2>Output<a class="headerlink" href="#output" title="Permalink to this headline">¶</a></h2>
+<p>When <code class="docutils literal notranslate"><span class="pre">IsOutput</span></code> is set to <code class="docutils literal notranslate"><span class="pre">True</span></code>, the Aircontrol reply with the
+following output.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="s1">&#39;AGL&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;BankAngle&#39;</span><span class="p">:</span> <span class="o">-</span><span class="mf">2.93484618e-07</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentFuel&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentPower&#39;</span><span class="p">:</span> <span class="mf">4666.8457</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentRPM&#39;</span><span class="p">:</span> <span class="mf">2333.42285</span><span class="p">,</span>
+ <span class="s1">&#39;CurrentSpeed&#39;</span><span class="p">:</span> <span class="mf">0.0</span><span class="p">,</span>
+ <span class="s1">&#39;LidarPointCloud&#39;</span><span class="p">:</span> <span class="p">[</span><span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+                     <span class="mf">100000.0</span><span class="p">,</span>
+ <span class="s1">&#39;MaxRPM&#39;</span><span class="p">:</span> <span class="mf">2500.0</span><span class="p">,</span>
+ <span class="s1">&#39;MsgType&#39;</span><span class="p">:</span> <span class="s1">&#39;Output&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;PitchAngle&#39;</span><span class="p">:</span> <span class="mf">1.66752621e-08</span><span class="p">,</span>
+ <span class="s1">&#39;ScreenCapture&#39;</span><span class="p">:</span> <span class="s1">&#39;&#39;</span><span class="p">,</span>
+ <span class="s1">&#39;Version&#39;</span><span class="p">:</span> <span class="s1">&#39;0.0.4&#39;</span><span class="p">}</span>
+</pre></div>
+</div>
+<figure class="align-default" id="id1">
+<img alt="Bank Angle" src="_images/bankAngle.png" />
+<figcaption>
+<p><span class="caption-text">Bank Angle</span><a class="headerlink" href="#id1" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Angle between vertical component of the Airplane w.r.t global
+vertical.<a class="reference external" href="https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_aircraft)">Source</a></p>
+<figure class="align-default" id="id2">
+<img alt="Pitch Angle" src="_images/pitchAngle.png" />
+<figcaption>
+<p><span class="caption-text">Pitch Angle</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</figcaption>
+</figure>
+<p>Angle between vertical component of the Airplane w.r.t global
+vertical.<a class="reference external" href="https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_aircraft)">Source</a></p>
+</section>
+<section id="glossary">
+<h2>Glossary<a class="headerlink" href="#glossary" title="Permalink to this headline">¶</a></h2>
+<p><strong>AGL</strong> : Above Ground Level, or AGL, describes the literal height above
+the ground over which you’re flying.This also accounts for the building
+and mounntain heights</p>
+<p><strong>MSL</strong> : Mean Sea Level, or MSL, is your true altitude or elevation.
+This is measured as differrence of current height and 0.0 in XZ plane</p>
+<p><strong>BankAngle</strong> : The roll angle is also known as bank angle on a
+fixed-wing aircraft, which usually “banks” to change the horizontal
+direction of flight</p>
+<p><strong>PitchAngle</strong> : angle between the aircraft longitudinal axis and
+horizontal;</p>
+<p><strong>CurrentFuel</strong> [WIP] : Current fuel in gallons</p>
+<p><strong>CurrentPower</strong> : Current engine power</p>
+<p><strong>CurrentRPM</strong> : Current Engine RPM</p>
+<p><strong>CurrentSpeed</strong> : Current Airplane Speed in Knots</p>
+<p><strong>MaxRPM</strong> : Max engine RPM</p>
+<p><strong>ScreenCapture</strong> : Captured Screenshot, if proper trigger set from
+<code class="docutils literal notranslate"><span class="pre">set_camera</span></code> function</p>
+<p><strong>LidarPointCloud</strong> : Captured Lidar point cloud, if proper trigger set
+from <code class="docutils literal notranslate"><span class="pre">set_lidar</span></code> function</p>
+</section>
+</section>
+
+
+          </div>
+          <div class="page-nav">
+            <div class="inner"><ul class="page-nav">
+  <li class="prev">
+    <a href="working_with_source.html"
+       title="previous chapter">← Working With Sources</a>
+  </li>
+  <li class="next">
+    <a href="time_of_day_API.html"
+       title="next chapter">Aircontrol time of Day API →</a>
+  </li>
+</ul><div class="footer" role="contentinfo">
+      &#169; Copyright 2022, Sunil Patel.
+    <br>
+    Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1 with <a href="https://github.com/schettino72/sphinx_press_theme">Press Theme</a> 0.8.0.
+</div>
+            </div>
+          </div>
+      </page>
+    </div></div>
+    
+    
+  </body>
+</html>

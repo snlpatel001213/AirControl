@@ -26,6 +26,9 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
+        /// <summary>
+        /// Engine cutoff if no fuel or cutoff switch os pressed
+        /// </summary>
         void HandleEngineCutoff()
         {   if(onEngineCutoff != null)
             {

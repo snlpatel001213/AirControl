@@ -4,6 +4,9 @@ using UnityEngine;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Control propeller rotation
+    /// </summary>
     public class AC_Airplane_Propeller : MonoBehaviour
     {
         #region Variables

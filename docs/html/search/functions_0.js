@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['begintransaction_186',['BeginTransaction',['../classSQLite4Unity3d_1_1SQLiteConnection.html#acf7812615d2363811e7dbd3da675de0e',1,'SQLite4Unity3d::SQLiteConnection']]]
+  ['_5f_5finit_5f_5f_143',['__init__',['../classAirControl_1_1communicator_1_1Communicator.html#a51791082fb558db19b2072d76d6e5bec',1,'AirControl::communicator::Communicator']]]
 ];

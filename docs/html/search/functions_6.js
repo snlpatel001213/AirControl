@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['handleinput_208',['HandleInput',['../classAirControl_1_1AC__XboxAirplane__Input.html#a0cb265fac75f796a646acfdbbe1d0c28',1,'AirControl::AC_XboxAirplane_Input']]]
+  ['oncamerachange_163',['OnCameraChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a9f7ee324a4310869ca481ad868516ee9',1,'AirControl::AC_Airplane_CameraController']]],
+  ['onscenechange_164',['OnSceneChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a5529c3888f1d6ce6a2ae12ea8f1b435b',1,'AirControl::AC_Airplane_CameraController']]]
 ];

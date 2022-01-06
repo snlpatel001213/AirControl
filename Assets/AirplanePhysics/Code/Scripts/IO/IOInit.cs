@@ -10,6 +10,10 @@ using Commons;
 
 namespace Communicator
 {
+    /// <summary>
+    /// Input Output init
+    /// Writting schema files to the disk for reference
+    /// </summary>
     public class IOInit
     {
         #region Variables
@@ -30,10 +34,10 @@ namespace Communicator
         /// <typeparam name="T"></typeparam>
         public static void createSchema<T>( string schemaName) where T : new()
         {
-            string json = JsonConvert.SerializeObject(new T(),Formatting.Indented);
+            string json = JsonConvert.SerializeObject(new T(),Formatting.Indented, new PrimitiveToStringConverter());
             string schemaFilePath = System.IO.Path.Combine(persistentDataPath,schemaName);
             File.WriteAllText(schemaFilePath, json);
-            Debug.Log("Writting Default schema file to : "+ schemaFilePath);
+            // Debug.Log("Writting Default schema file to : "+ schemaFilePath);
         }
 
         /// <summary>
@@ -42,21 +46,49 @@ namespace Communicator
         /// </summary>
         public static void CreateSchema()
         {
-            string existingInSchemaPath = System.IO.Path.Combine(persistentDataPath,"inputSchema.json");
             // Write schema to external file for reference
-            createSchema<InputSchema>("inputSchema.json" );
+            createSchema<ControlSchema>("ControlSchema.json");
+            createSchema<OutputSchema>("OutputSchema.json");
+            createSchema<TODSchema>("TOD.json");
+            createSchema<CameraSchema>("CameraSchema.json");
+            createSchema<LevelSchema>("LevelSchema.json");
+            createSchema<WeatherSchema>("WeatherSchema.json");
+            createSchema<UIAudioSchema>("UIAudioSchema.json");
+            createSchema<LidarSchema>("LidarSchema.json");
+            createSchema<FuelSchema>("FuelSchema.json");
+            createSchema<PresetSchema>("PresetSchema.json");
 
-            string existingTransactionSchemaPath = System.IO.Path.Combine(persistentDataPath,"transactionSchema.json");
-           // Write schema to external file for reference
-            createSchema<TransactionSchema>("transactionSchema.json" );
-            
-            string existingStartUpSchemaPath = System.IO.Path.Combine(persistentDataPath,"startUpSchema.json");
-            // Write schema to external file for reference
-            createSchema<StartUpSchema>("startUpSchema.json" );
         }    
+
+        
 
         #endregion
 
     }
+    /// <summary>
+    /// Converting boolena to string while serializing
+    /// </summary>
+    class PrimitiveToStringConverter : JsonConverter
+        {
+            public override bool CanConvert(Type objectType)
+            {
+                return objectType == typeof(bool);
+            }
+
+            public override void WriteJson(JsonWriter writer, object value, JsonSerializer serializer)
+            {
+                writer.WriteValue(value.ToString().ToLower());
+            }
+
+            public override bool CanRead
+            {
+                get { return false; }
+            }
+
+            public override object ReadJson(JsonReader reader, Type objectType, object existingValue, JsonSerializer serializer)
+            {
+                throw new NotImplementedException();
+            }
+        }
 
 }

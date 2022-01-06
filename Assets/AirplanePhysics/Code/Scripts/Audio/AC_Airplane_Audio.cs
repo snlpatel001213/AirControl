@@ -1,8 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Communicator;
 
 namespace AirControl{
+
+    /// <summary>
+    /// Setup airplane audio component
+    /// </summary>
     public class AC_Airplane_Audio : MonoBehaviour
     {
         #region Variables
@@ -20,6 +25,7 @@ namespace AirControl{
         private float finalPitchValue;
         // Decrease the volume gradually when engine cutoff;
         private float fadeVolumeRate = 0.005f;
+        private bool currentEnableAudio = true;
         #endregion
 
         #region Propeties
@@ -46,6 +52,23 @@ namespace AirControl{
         // Update is called once per frame
         void Update()
         {
+            /// <summary>
+            /// Switching audio as per the Input/Output from communicator
+            /// </summary>
+            #region IOSwitch
+            bool enableAudio = StaticUIAudioSchema.EnableAudio;
+            if(enableAudio != currentEnableAudio)
+            {
+                idleSource.enabled = enableAudio;
+                fullThrottleSource.enabled = enableAudio;
+                currentEnableAudio = enableAudio;
+                //logging
+                string logString = "Audio set to : "+enableAudio;
+                Debug.unityLogger.Log(logString);
+                StaticLogger.Log += logString;
+            }
+            #endregion
+
             if(input)
             {
                 if(!isShutOff)
@@ -66,15 +89,15 @@ namespace AirControl{
         #region Custom Methods
         protected virtual void HandleAudio()
         {
+            
+
             fullVolumeValue = Mathf.Lerp(0f,1f,input.StickyThrottle);
             finalPitchValue = Mathf.Lerp(1f,maxPitchValue,input.StickyThrottle);
             if(fullThrottleSource)
             {
                 fullThrottleSource.volume = fullVolumeValue;
-                fullThrottleSource.pitch = finalPitchValue;
+                fullThrottleSource.pitch = finalPitchValue ;
             }
-            
-
         }
         #endregion
     }

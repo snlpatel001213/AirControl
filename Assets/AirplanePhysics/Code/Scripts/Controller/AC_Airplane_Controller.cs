@@ -5,6 +5,10 @@ using Communicator;
 
 namespace AirControl
 {
+    /// <summary>
+    /// Master Controller, controls the entire Airplane
+    /// it implements function to Handle Engines,   Handle Characteristics,  Handle ControlSurfaces,  Handle Wheel and  Handle Altitude
+    /// </summary>
     [RequireComponent(typeof(AC_Airplane_Characteristics))]
     [RequireComponent(typeof(AC_BaseAirplane_Input))]
     [RequireComponent(typeof(AC_XboxAirplane_Input))]
@@ -59,6 +63,9 @@ namespace AirControl
         #endregion
 
         #region Builtin Methods
+        /// <summary>
+        /// Regulate initilaization like mass of the Vehicle, Gravity, Wheels and Characteristics
+        /// </summary>
         public override void Start()
         {
             base.Start();
@@ -92,6 +99,9 @@ namespace AirControl
         #endregion
 
         #region Custom Methods
+        /// <summary>
+        /// Handles physics related to Engine, Characteristics, Control surfaces wheel and Altitude
+        /// </summary>
         protected override void HandlePhysics()
         {
             if(input)
@@ -107,6 +117,9 @@ namespace AirControl
             
         }
 
+        /// <summary>
+        /// Handle all the Engine
+        /// </summary>
         void HandleEngines()
         {
             if(engines != null)
@@ -121,6 +134,9 @@ namespace AirControl
             }
 
         }
+        /// <summary>
+        /// Handle Airplane characteristics
+        /// </summary>
         void HandleCharacteristics( )
         {
             if (characteristics)
@@ -129,6 +145,9 @@ namespace AirControl
             }
             
         }
+        /// <summary>
+        /// Handle control surfaces such as rudder, alurone, Flaps etc
+        /// </summary>
         void HandleControlSurfaces( )
         {
             if(controlSurfaces.Count > 0)
@@ -138,6 +157,9 @@ namespace AirControl
                 }
             }
         }
+        /// <summary>
+        /// Handle all the wheels
+        /// </summary>
         void HandleWheel( ){
             if (wheels.Count>0)
             {
@@ -148,6 +170,9 @@ namespace AirControl
             }
 
         }
+        /// <summary>
+        /// Calculate altitude of the Airplane
+        /// </summary>
         void HandleAltitude(){
             currentMSL  =  transform.position.y * metersToFeets;
             RaycastHit hit;
@@ -164,7 +189,8 @@ namespace AirControl
             StaticOutputSchema.AGL = currentAGL;
             #endregion
         }
-       
+
+      
         #endregion
     }
 
