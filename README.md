@@ -38,8 +38,6 @@ Aircontrol may work with lower than the specified requirements, but its not test
 You can run Aircontrol in server-client mode in two different machines or both in the single machine.
 
 ## Demo
-
-*Current release version v0.0.3 is a pre-release to test the air stability and controls. Python integration is still in development.*
   
 [![AirControl Basic Demo](https://i9.ytimg.com/vi_webp/Lhwb4UVulMs/mqdefault.webp?v=61d6839b&sqp=CIiG2o4G&rs=AOn4CLAEMOJnr4S9jciZ-CBKH26yIQivow)](https://www.youtube.com/watch?v=Lhwb4UVulMs)
 
