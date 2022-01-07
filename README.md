@@ -84,8 +84,9 @@ Refer to the Project page for the future release, features and bug tracking : ht
 </div>
 
 ## Research Inspirations
-Feel free to list your research topic you love to work on over here. Collaborate and publish.
----
+  
+**Feel free to list your research topic you love to work on over here. Collaborate and publish.**
+  
 1. On January 15, 2009, US Airways Flight 1549, an Airbus A320 on a flight from New York City's LaGuardia Airport to Charlotte, North Carolina, struck a flock of birds shortly after take-off, losing all engine power. Unable to reach any airport for an emergency landing due to their low altitude, pilots Chesley "Sully" Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan. **Well! Sully did the best but Could we have a different outcome, If Reinforcement learning was controlling this plane?**. [Reference](https://en.wikipedia.org/wiki/US_Airways_Flight_1549)
 
 ## Contribute
