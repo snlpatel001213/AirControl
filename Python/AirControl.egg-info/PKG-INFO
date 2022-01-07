@@ -26,7 +26,16 @@ Description-Content-Type: text/markdown
   <img src="docs/images/logo_original.png" height="200"/>
 </p>
 <BR>
-  
+
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/snlpatel001213/AirControl)
+![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl?style=plastic)
+[![Documentation Status](https://readthedocs.org/projects/aircontrol/badge/?version=master)](https://aircontrol.readthedocs.io/en/master/?badge=master)
+![GitHub issues](https://img.shields.io/github/issues/snlpatel001213/AirControl)
+![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/snlpatel001213/Aircontrol)
+![GitHub closed pull requests](https://img.shields.io/github/issues-pr-closed-raw/snlpatel001213/aircontrol)
+![GitHub commit activity](https://img.shields.io/github/commit-activity/m/snlpatel001213/AirControl)
+![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
+ 
 # Welcome to Aircontrol
 
 **AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** Airsim offers a realistic simulation experience with a variety of airplanes. The Airsim is built on [Unity Game engine](https://unity.com). Following are the salient features of the Aircontrol:
@@ -53,8 +62,6 @@ Aircontrol may work with lower than the specified requirements, but its not test
 You can run Aircontrol in server-client mode in two different machines or both in the single machine.
 
 ## Demo
-
-*Current release version v0.0.3 is a pre-release to test the air stability and controls. Python integration is still in development.*
   
 [![AirControl Basic Demo](https://i9.ytimg.com/vi_webp/Lhwb4UVulMs/mqdefault.webp?v=61d6839b&sqp=CIiG2o4G&rs=AOn4CLAEMOJnr4S9jciZ-CBKH26yIQivow)](https://www.youtube.com/watch?v=Lhwb4UVulMs)
 
@@ -101,13 +108,14 @@ Refer to the Project page for the future release, features and bug tracking : ht
 </div>
 
 ## Research Inspirations
-Feel free to list your research topic you love to work on over here. Collaborate and publish.
----
+  
+**Feel free to list your research topic you love to work on over here. Collaborate and publish.**
+  
 1. On January 15, 2009, US Airways Flight 1549, an Airbus A320 on a flight from New York City's LaGuardia Airport to Charlotte, North Carolina, struck a flock of birds shortly after take-off, losing all engine power. Unable to reach any airport for an emergency landing due to their low altitude, pilots Chesley "Sully" Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan. **Well! Sully did the best but Could we have a different outcome, If Reinforcement learning was controlling this plane?**. [Reference](https://en.wikipedia.org/wiki/US_Airways_Flight_1549)
 
 ## Contribute
 If you are keen to contribute to Aircontrol, refer to the contribution guide - `CONTRIBUTING.md`.
 
-![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
+
 
 

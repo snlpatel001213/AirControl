@@ -53,10 +53,13 @@ namespace AirControl
         /// <param name="col">collision object</param>
         void OnCollisionEnter(Collision col)
         {
-            // future support
-            // if(col.gameObject.tag!= "runway"){
-            //     Debug.Log("object collided");
-            // }
+            if(col.gameObject.tag!= "runway"){
+                StaticOutputSchema.IfCollision=true;
+            }
+            else
+            {
+                StaticOutputSchema.IfCollision=false;
+            }
         }
         #endregion
 
@@ -72,7 +75,9 @@ namespace AirControl
             //future functionality to provide the xyz location of the plane
             Vector3 currentLocation = rb.position;
             // Add location to static function
-
+            StaticOutputSchema.currentLocation_x = currentLocation.x;
+            StaticOutputSchema.currentLocation_y = currentLocation.y;
+            StaticOutputSchema.currentLocation_z = currentLocation.z;
         }
         #endregion
     }
