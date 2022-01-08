@@ -143,6 +143,21 @@ def set_fuel(InputControlType="Code", IsOutput=False):
     # communicator.send_data(data_dict=fuel_schema, sock=socket)
     return eval(str(fuel_schema))
 
+def get_output():
+    """
+    Get output
+    Typically used to get test output and then design the reset of the code according to data dimentions
+
+    Args:
+        InputControlType (str, optional): [description]. Defaults to "Code".
+    """
+    output_schema = {
+        "MsgType": "Output",
+        "IsOutput": bool2string(True),
+    }
+    # communicator.send_data(data_dict=fuel_schema, sock=socket)
+    return eval(str(output_schema))
+
 
 def reset_level(
     InputControlType="Code", IsActive=False, LevelReload=False, IsOutput=False

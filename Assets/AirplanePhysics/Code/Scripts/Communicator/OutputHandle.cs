@@ -41,8 +41,8 @@ namespace Communicator
                 CurrentSpeed = StaticOutputSchema.CurrentSpeed,
                 ScreenCapture = screencapture,
                 LidarPointCloud = StaticOutputSchema.LidarPointCloud,
-                currentLocation_x = StaticOutputSchema.currentLocation_x,
-                currentLocation_y = StaticOutputSchema.currentLocation_y,
+                Latitude = StaticOutputSchema.Latitude,
+                Longitude = StaticOutputSchema.Longitude,
                 currentLocation_z = StaticOutputSchema.currentLocation_z,
                 IfCollision = StaticOutputSchema.IfCollision
             }, new PrimitiveToStringConverter());

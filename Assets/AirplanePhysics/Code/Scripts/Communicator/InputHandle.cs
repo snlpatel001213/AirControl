@@ -191,6 +191,15 @@ namespace Communicator
                 }
                 #endregion
 
+                // gived output if called
+                #region Output
+                else if (MsgType=="Output") // if operation type is transaction
+                {   
+                    // Do nothing output API will receive output
+                }
+                #endregion
+
+
             
         }    
 

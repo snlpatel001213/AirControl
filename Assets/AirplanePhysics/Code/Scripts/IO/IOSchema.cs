@@ -91,8 +91,8 @@ namespace Communicator
 		public static float BankAngle;
 		public static float PitchAngle;
 		public static bool IfCollision;
-		public static float currentLocation_x;
-		public static float currentLocation_y;
+		public static float Latitude;
+		public static float Longitude;
 		public static float currentLocation_z;
 		public static byte [] ScreenCapture;
 		public static float [] LidarPointCloud;
@@ -117,8 +117,8 @@ namespace Communicator
 		public float CurrentSpeed;
 		public float BankAngle;
 		public bool IfCollision;
-		public float currentLocation_x;
-		public float currentLocation_y;
+		public float Latitude;
+		public float Longitude;
 		public float currentLocation_z;
 		public float PitchAngle;
 		public byte [] ScreenCapture;

@@ -14,6 +14,7 @@ namespace AirControl
         #region Variable
         protected Rigidbody rb;
         protected AudioSource aSource;
+
         
         #endregion
 
@@ -41,7 +42,7 @@ namespace AirControl
         {
             if(rb){
                 HandlePhysics();
-                HandleLocation();
+                // HandleLocation();
             }
             // DB based operations
             
@@ -63,23 +64,10 @@ namespace AirControl
         }
         #endregion
 
-        #region Custom Methods
         protected virtual void HandlePhysics(){
 
         }
-        /// <summary>
-        /// Provides the location of the Aircraft in 3D coordinate system
-        /// </summary>
-        void HandleLocation()
-        {
-            //future functionality to provide the xyz location of the plane
-            Vector3 currentLocation = rb.position;
-            // Add location to static function
-            StaticOutputSchema.currentLocation_x = currentLocation.x;
-            StaticOutputSchema.currentLocation_y = currentLocation.y;
-            StaticOutputSchema.currentLocation_z = currentLocation.z;
-        }
-        #endregion
+        
     }
 
 }
