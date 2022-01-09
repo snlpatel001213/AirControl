@@ -1,7 +1,7 @@
 setup.py
 AirControl/__init__.py
+AirControl/actions.py
 AirControl/communicator.py
-AirControl/schemaDef.py
 AirControl.egg-info/PKG-INFO
 AirControl.egg-info/SOURCES.txt
 AirControl.egg-info/dependency_links.txt

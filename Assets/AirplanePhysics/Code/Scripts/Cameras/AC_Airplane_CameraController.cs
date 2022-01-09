@@ -128,11 +128,15 @@ namespace AirControl
             string inputControlType = StaticCameraSchema.InputControlType;
             if (inputControlType=="Code" && activeCamera != curentCameraIndex)
             {
+                curentCameraIndex = activeCamera;
                 selectCamera(activeCamera);
                 CreateCamera();
+                string logString = System.String.Format("Active scene camera - {0} Capture camera - {1} Width - {2}  Height - {3}: ",curentCameraIndex, currentCaprtureCamera, captureWidth, captureHeight);
+                Debug.unityLogger.Log(logString);
+                StaticLogger.Log += logString;
             }
 
-            if (isCapture)
+            if (inputControlType=="Code" && isCapture)
             {
                 //screen capture
                 CapturePass pass = CapturePassList[captureType];

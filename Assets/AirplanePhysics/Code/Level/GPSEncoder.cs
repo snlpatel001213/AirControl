@@ -4,6 +4,11 @@ using UnityEngine;
 using Communicator;
 namespace AirControl
 {   
+    
+    //Copyright 2013 MichaelTaylor3D
+    //www.michaeltaylor3d.com
+    //https://github.com/MichaelTaylor3D/UnityGPSConverter/
+    
     public class GPSEncoder : MonoBehaviour
     {
         

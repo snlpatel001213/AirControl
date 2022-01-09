@@ -1,3 +1,3 @@
 name = "AirControl"
 from . import communicator
-from . import schemaDef
+from . import actions

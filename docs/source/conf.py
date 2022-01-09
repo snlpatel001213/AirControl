@@ -12,6 +12,7 @@
 #
 import os
 import sys
+
 sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -66,6 +67,6 @@ html_logo = '../images/logo/logo_original_large-128_x_128.png'
 html_theme_options = {
   "external_links": [
       ("Github", "https://github.com/snlpatel001213/AirControl/" ),
-    #   ("Other", "https://bla.com")
+      ("Project Dashboard", "https://github.com/snlpatel001213/AirControl/projects/1")
   ]
 }
