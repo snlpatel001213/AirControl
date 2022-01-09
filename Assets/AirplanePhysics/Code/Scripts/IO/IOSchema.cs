@@ -302,15 +302,45 @@ namespace Communicator
 	/// <summary>
 	///Ui and Audio class for serialization deserialization
 	/// </summary>
-	public class UIAudioSchema
+	public class UISchema
 	{	
-		public string MsgType  { get; set; } = "UIAudio";
+		public string MsgType  { get; set; } = "UI";
 		//Version of the sceme, IT will be same as the release version
 		public string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public string InputControlType {get;set;} = "Other";
+		public bool IsActive {get; set;} = false;
 		// if transaction schema is active or not this is to reduce computation load in the update loops
 		public bool ShowUIElements {get; set;} = false;
+
+	}
+	/// <summary>
+	/// UI and audio control.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
+	public static class StaticUISchema
+	{	
+		public static string MsgType  { get; set; } = "UI";
+		//Version of the sceme, IT will be same as the release version
+		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public static bool IsActive {get; set;} = false;
+		// // if transaction schema is active or not this is to reduce computation load in the update loops
+		public static bool ShowUIElements {get; set;} = true;
+	}
+	#endregion
+
+	#region UIAudioSchema
+	/// <summary>
+	///Ui and Audio class for serialization deserialization
+	/// </summary>
+	public class AudioSchema
+	{	
+		public string MsgType  { get; set; } = "Audio";
+		//Version of the sceme, IT will be same as the release version
+		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public bool IsActive {get; set;} = false;
 		//reload the level if this is set true
 		public bool EnableAudio {get; set;} = true; 
 
@@ -320,20 +350,19 @@ namespace Communicator
 	/// This class can be accessed anywhere in the code as dict.
 	/// used for getting/setting input/outout received from python API.
 	/// </summary>
-	public static class StaticUIAudioSchema
+	public static class StaticAudioSchema
 	{	
-		public static string MsgType  { get; set; } = "UIAudio";
+		public static string MsgType  { get; set; } = "Audio";
 		//Version of the sceme, IT will be same as the release version
 		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public static string InputControlType {get;set;} = "Other";
-		// // if transaction schema is active or not this is to reduce computation load in the update loops
-		public static bool ShowUIElements {get; set;} = false;
+		public static bool IsActive {get; set;} = false;
 		//reload the level if this is set true
 		public static bool EnableAudio {get; set;} = true; 
 
 	}
 	#endregion
+
 
 	#region Lidar
 	/// <summary>

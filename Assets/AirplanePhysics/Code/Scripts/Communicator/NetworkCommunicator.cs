@@ -87,7 +87,6 @@ namespace Communicator
 										foreach(string eachInput in inputArray)
 										{
 											bool isOutput = false;
-											// Debug.Log(">>>>>>>>>> "+eachInput);
 											try{
 												var inputJson =  JObject.Parse(eachInput);
 												inputHandle.ParseInput(inputJson);	

@@ -258,8 +258,7 @@ class Actions:
         return output
 
 
-    def set_uiaudio(self,
-        InputControlType="Code", ShowUIElements=True, EnableAudio=True, IsOutput=False
+    def set_ui(self, IsActive=False, ShowUIElements=True, IsOutput=False
     ):
         """[summary]
 
@@ -269,15 +268,33 @@ class Actions:
             ShowUIElements (bool, optional): Show UI elements if true, hide otherwise. Defaults to True.
             EnableAudio (float, optional): Enable audio if true, mute otherwise.. Defaults to 1.0.
         """
-        self.check_input_type(InputControlType)
-        uiaudio_schema = {
-            "MsgType": "UIAudio",
-            "InputControlType": InputControlType,
+        ui_schema = {
+            "MsgType": "UI",
+            "IsActive": self.bool2string(IsActive),
             "ShowUIElements": self.bool2string(ShowUIElements),
+            "IsOutput": self.bool2string(IsOutput),
+        }
+        self.connection.send_data(ui_schema)
+        output =  self.connection.receive_data()
+        return output
+    
+    def set_audio(self, IsActive=False, EnableAudio=True, IsOutput=False
+    ):
+        """[summary]
+
+        Args:
+            InputControlType (str, optional): It can be either `Code` or `Other`. This is to control the internal mechanism and prevent repeted calling in already set variables. \
+            If `InputControlType` is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If `InputControlType` is set to 'Other', camera can be only controlled from Keyboard or Joystick.  Defaults to "Code". 
+            ShowUIElements (bool, optional): Show UI elements if true, hide otherwise. Defaults to True.
+            EnableAudio (float, optional): Enable audio if true, mute otherwise.. Defaults to 1.0.
+        """
+        audio_schema = {
+            "MsgType": "Audio",
+            "IsActive": self.bool2string(IsActive),
             "EnableAudio": self.bool2string(EnableAudio),
             "IsOutput": self.bool2string(IsOutput),
         }
-        self.connection.send_data(uiaudio_schema)
+        self.connection.send_data(audio_schema)
         output =  self.connection.receive_data()
         return output
 

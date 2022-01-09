@@ -56,16 +56,19 @@ namespace AirControl{
             /// Switching audio as per the Input/Output from communicator
             /// </summary>
             #region IOSwitch
-            bool enableAudio = StaticUIAudioSchema.EnableAudio;
-            if(enableAudio != currentEnableAudio)
+            
+            bool isActive = StaticAudioSchema.IsActive;
+            if(isActive)
             {
+                bool enableAudio = StaticAudioSchema.EnableAudio;
                 idleSource.enabled = enableAudio;
                 fullThrottleSource.enabled = enableAudio;
                 currentEnableAudio = enableAudio;
                 //logging
-                string logString = "Audio set to : "+enableAudio;
+                string logString = " Audio set to : "+enableAudio;
                 Debug.unityLogger.Log(logString);
-                StaticLogger.Log += logString;
+                StaticLogger.Log = logString;
+                StaticAudioSchema.IsActive = false;
             }
             #endregion
 

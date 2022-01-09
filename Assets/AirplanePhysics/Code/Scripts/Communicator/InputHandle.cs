@@ -142,24 +142,39 @@ namespace Communicator
                 }
                 #endregion
                 
-                #region UIAudio
-                else if (MsgType=="UIAudio") // if operation type is transaction
+                #region Audio
+                else if (MsgType=="Audio") // if operation type is transaction
                 {   
                     //input type
-                    string inputControlType = inputJson["InputControlType"].ToString();
-                    bool showUIElements = bool.Parse(inputJson["ShowUIElements"].ToString());
+                    bool isActive = bool.Parse(inputJson["IsActive"].ToString());
                     bool enableAudio = bool.Parse(inputJson["EnableAudio"].ToString());
                     
                     //primary key
-                    StaticUIAudioSchema.MsgType = "UIAudio";
+                    StaticAudioSchema.MsgType = "Audio";
                      // Camrera control
-                    StaticCameraSchema.InputControlType = inputControlType; 
-                    //set if clouds are enabled
-                    StaticUIAudioSchema.ShowUIElements = showUIElements;
+                    StaticAudioSchema.IsActive = isActive; 
                     //set if fog ia enabled
-                    StaticUIAudioSchema.EnableAudio =enableAudio;
+                    StaticAudioSchema.EnableAudio =enableAudio;
                 }
                 #endregion
+
+                #region UI
+                else if (MsgType=="UI") // if operation type is transaction
+                {   
+                    //input type
+                    bool isActive = bool.Parse(inputJson["IsActive"].ToString());
+                    bool showUIElements = bool.Parse(inputJson["ShowUIElements"].ToString());
+                    
+                    //primary key
+                    StaticUISchema.MsgType = "UI";
+                     // Camrera control
+                    StaticUISchema.IsActive = isActive; 
+                    //set if clouds are enabled
+                    StaticUISchema.ShowUIElements = showUIElements;
+                }
+                #endregion
+
+
 
                 #region Lidar
                 else if (MsgType=="Lidar") // if operation type is transaction

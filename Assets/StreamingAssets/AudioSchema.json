@@ -1,7 +1,6 @@
 {
-  "MsgType": "UIAudio",
+  "MsgType": "Audio",
   "Version": "0.0.5",
   "IsActive": "false",
-  "ShowUIElements": "false",
   "EnableAudio": "true"
 }
