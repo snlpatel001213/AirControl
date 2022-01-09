@@ -62,7 +62,6 @@ namespace AirControl
                 #region DBArea
                 StaticOutputSchema.BankAngle = bankAngleRad;
                 StaticOutputSchema.PitchAngle = pitchAngleRad;
-
                 #endregion 
 
             }

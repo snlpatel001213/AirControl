@@ -80,7 +80,6 @@ namespace AirControl
             // Add location to static function
             StaticOutputSchema.Latitude = normalizedLatitude;
             StaticOutputSchema.Longitude = normalizedLongitude;
-            StaticOutputSchema.currentLocation_z = currentLocation.z;
         }
         #endregion
     }

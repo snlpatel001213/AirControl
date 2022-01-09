@@ -93,7 +93,6 @@ namespace Communicator
 		public static bool IfCollision;
 		public static float Latitude;
 		public static float Longitude;
-		public static float currentLocation_z;
 		public static byte [] ScreenCapture;
 		public static float [] LidarPointCloud;
 
