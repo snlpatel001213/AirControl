@@ -17,6 +17,8 @@ namespace AirControl
         public RectTransform arrowRect;
         protected float bankAngle; 
         protected float pitchAngle;
+        protected float bankAngleRad; 
+        protected float pitchAngleRad;
         #endregion
 
         #region Properties
@@ -38,8 +40,10 @@ namespace AirControl
             if(airplane)
             {
                 //Create Angles
-                bankAngle = Vector3.Dot(airplane.transform.right, Vector3.up) * Mathf.Rad2Deg;
-                pitchAngle = Vector3.Dot(airplane.transform.forward, Vector3.up) * Mathf.Rad2Deg;
+                bankAngleRad = Vector3.Dot(airplane.transform.right, Vector3.up); // value from -1 to 1
+                bankAngle =  bankAngleRad * Mathf.Rad2Deg;
+                pitchAngleRad =  Vector3.Dot(airplane.transform.forward, Vector3.up); // value from -1 to 1
+                pitchAngle = pitchAngleRad * Mathf.Rad2Deg;
 
                 //Handle UI Elements
                 if(bgRect)
@@ -56,8 +60,8 @@ namespace AirControl
                     }
                 }
                 #region DBArea
-                StaticOutputSchema.BankAngle = BankAngle;
-                StaticOutputSchema.PitchAngle = PitchAngle;
+                StaticOutputSchema.BankAngle = bankAngleRad;
+                StaticOutputSchema.PitchAngle = pitchAngleRad;
 
                 #endregion 
 
