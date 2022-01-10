@@ -101,7 +101,7 @@ class Actions:
 
 
     
-    def set_control(self,
+    def step(self,
         InputControlType="Code",
         Pitch=0.0,
         Roll=0.0,
@@ -189,8 +189,8 @@ class Actions:
         return  self.process_output(output)
 
 
-    def reset_level(self,
-        InputControlType="Code", IsActive=False, LevelReload=False, IsOutput=False
+    def reset(self,
+        InputControlType="Code", IsOutput=True
     ):
         """[summary]
 
@@ -205,8 +205,8 @@ class Actions:
         level_schema = {
             "MsgType": "Level",
             "InputControlType": InputControlType,
-            "IsActive": self.bool2string(IsActive),
-            "LevelReload": self.bool2string(LevelReload),
+            "IsActive": self.bool2string(True),
+            "LevelReload": self.bool2string(True),
             "IsOutput": self.bool2string(IsOutput),
         }
         self.connection.send_data(level_schema)

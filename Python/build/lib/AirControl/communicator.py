@@ -2,7 +2,7 @@ import socket
 import json
 import numpy as np
 
-class NpEncoder(self, json.JSONEncoder):
+class NpEncoder(json.JSONEncoder):
     def default(self, obj):
         if isinstance(obj, np.integer):
             return int(obj)
