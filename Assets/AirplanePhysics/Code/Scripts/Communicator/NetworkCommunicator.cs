@@ -88,6 +88,7 @@ namespace Communicator
 										{
 											bool isOutput = false;
 											try{
+												// Debug.Log("|||||||||||| > "+eachInput);
 												var inputJson =  JObject.Parse(eachInput);
 												inputHandle.ParseInput(inputJson);	
 												isOutput = bool.Parse(inputJson["IsOutput"].ToString());

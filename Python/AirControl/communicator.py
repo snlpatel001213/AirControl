@@ -1,5 +1,16 @@
 import socket
 import json
+import numpy as np
+
+class NpEncoder(self, json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.integer):
+            return int(obj)
+        if isinstance(obj, np.floating):
+            return float(obj)
+        if isinstance(obj, np.ndarray):
+            return obj.tolist()
+        return super(NpEncoder, self).default(obj)
 
 class Communicator:
     def __init__(self, host="127.0.0.1", port=8053):
@@ -27,7 +38,7 @@ class Communicator:
             data_dict (dict): Dict with data
             sock (socket): Socket connection aquired from `get_socket` method
         """
-        data = json.dumps(data_dict)
+        data = json.dumps(data_dict, cls=NpEncoder)
         self.sock.sendall(data.encode("utf-8"))
 
     def receive_data(self):

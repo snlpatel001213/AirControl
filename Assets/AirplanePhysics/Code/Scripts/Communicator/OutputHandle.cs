@@ -43,7 +43,6 @@ namespace Communicator
                 LidarPointCloud = StaticOutputSchema.LidarPointCloud,
                 Latitude = StaticOutputSchema.Latitude,
                 Longitude = StaticOutputSchema.Longitude,
-                currentLocation_z = StaticOutputSchema.currentLocation_z,
                 IfCollision = StaticOutputSchema.IfCollision
             }, new PrimitiveToStringConverter());
             

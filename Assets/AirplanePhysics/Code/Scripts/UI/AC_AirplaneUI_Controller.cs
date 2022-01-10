@@ -33,8 +33,8 @@ namespace AirControl
             {
                 transform.gameObject.SetActive(showUIElements);
                 string logString = System.String.Format("Changed the UI visibility from - {0} to {1} ",currentVisibility,showUIElements);
-                Debug.unityLogger.Log(logString);
                 StaticLogger.Log = logString;
+                Debug.unityLogger.Log(logString);
                 StaticUISchema.IsActive = false;
             }
             #endregion

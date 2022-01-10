@@ -125,18 +125,19 @@ namespace AirControl
             bool isCapture = StaticCameraSchema.IsCapture;
             int captureWidth = StaticCameraSchema.CaptureWidth;
             int captureHeight = StaticCameraSchema.CaptureHeight;
-            string inputControlType = StaticCameraSchema.InputControlType;
-            if (inputControlType=="Code" && activeCamera != curentCameraIndex)
+            bool isActive = StaticCameraSchema.IsActive;
+            if (isActive)
             {
                 curentCameraIndex = activeCamera;
                 selectCamera(activeCamera);
                 CreateCamera();
                 string logString = System.String.Format("Active scene camera - {0} Capture camera - {1} Width - {2}  Height - {3}: ",curentCameraIndex, currentCaprtureCamera, captureWidth, captureHeight);
+                StaticLogger.Log = logString;
                 Debug.unityLogger.Log(logString);
-                StaticLogger.Log += logString;
+                StaticCameraSchema.IsActive = false;
             }
 
-            if (inputControlType=="Code" && isCapture)
+            if (isCapture)
             {
                 //screen capture
                 CapturePass pass = CapturePassList[captureType];
@@ -148,8 +149,8 @@ namespace AirControl
                     ResetAllCaptureCam(capturePasses);
                     currentCaprtureCamera = captureCamera;
                     string logString = System.String.Format("Active scene camera - {0} Capture camera - {1} Width - {2}  Height - {3}: ",curentCameraIndex, currentCaprtureCamera, captureWidth, captureHeight);
+                    StaticLogger.Log = logString;
                     Debug.unityLogger.Log(logString);
-                    StaticLogger.Log += logString;
                 }
                 OnCameraChange(cameras[currentCaprtureCamera]);// 1 indicate the outside camera
                 OnSceneChange();

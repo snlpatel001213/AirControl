@@ -66,8 +66,8 @@ namespace AirControl{
                 currentEnableAudio = enableAudio;
                 //logging
                 string logString = " Audio set to : "+enableAudio;
-                Debug.unityLogger.Log(logString);
                 StaticLogger.Log = logString;
+                Debug.unityLogger.Log(logString);
                 StaticAudioSchema.IsActive = false;
             }
             #endregion

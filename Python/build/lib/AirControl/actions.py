@@ -1,9 +1,13 @@
 import json
 import socket
+from typing import Dict
 import numpy as np
 from . import communicator
 
 INPUT_CONTROL_TYPE = ["Code", "Other"]
+
+
+
 
 class Actions:
     def __init__(self):
@@ -29,6 +33,16 @@ class Actions:
         else:
             return "false"
 
+    def process_output(self,output:Dict):
+        output = eval(str(output))
+        for (k,v) in output.items():
+            if (v=="true"):
+                output[k]=True;
+            elif(v=="false"):
+                output[k]=False;
+        return output
+
+        
 
     def check_input_type(self,InputControlType: str):
         # proper input control type not provided
@@ -39,9 +53,10 @@ class Actions:
                 )
             )
 
+    
 
     def set_camera(self,
-        InputControlType="Code",
+        IsActive=False,
         ActiveCamera=1,
         IsCapture=False,
         CaptureCamera=1,
@@ -67,11 +82,10 @@ class Actions:
             [type]: [description]
         """
 
-        self.check_input_type(InputControlType)
 
         camera_schema = {
             "MsgType": "Camera",
-            "InputControlType": InputControlType,
+            "IsActive": self.bool2string(IsActive),
             "ActiveCamera": ActiveCamera,
             "IsCapture": self.bool2string(IsCapture),
             "CaptureCamera": CaptureCamera,
@@ -83,9 +97,10 @@ class Actions:
         # communicator.send_data(data_dict=camera_schema, sock=socket)
         self.connection.send_data(camera_schema)
         output =  self.connection.receive_data()
-        return eval(str(output))
+        return self.process_output(output)
 
 
+    
     def set_control(self,
         InputControlType="Code",
         Pitch=0.0,
@@ -132,9 +147,11 @@ class Actions:
             "Flaps": Flaps,
             "IsOutput": self.bool2string(IsOutput),
         }
+        print(control_schema)
         self.connection.send_data(control_schema)
+        
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
 
 
     def set_fuel(self,InputControlType="Code", IsOutput=False):
@@ -153,7 +170,7 @@ class Actions:
         # communicator.send_data(data_dict=fuel_schema, sock=socket)
         self.connection.send_data(fuel_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
 
     def get_output(self):
         """
@@ -169,7 +186,7 @@ class Actions:
         }
         self.connection.send_data(output_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
 
 
     def reset_level(self,
@@ -194,7 +211,7 @@ class Actions:
         }
         self.connection.send_data(level_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
 
 
     def set_lidar(self,
@@ -223,7 +240,7 @@ class Actions:
         }
         self.connection.send_data(lidar_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
 
 
     def set_TOD(self,
@@ -255,7 +272,7 @@ class Actions:
         }
         self.connection.send_data(tod_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
 
 
     def set_ui(self, IsActive=False, ShowUIElements=True, IsOutput=False
@@ -276,7 +293,7 @@ class Actions:
         }
         self.connection.send_data(ui_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
     
     def set_audio(self, IsActive=False, EnableAudio=True, IsOutput=False
     ):
@@ -296,7 +313,7 @@ class Actions:
         }
         self.connection.send_data(audio_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)
 
 
     def set_weather(self,InputControlType="Code", IsClouds=False, IsFog=False, IsOutput=False):
@@ -318,4 +335,4 @@ class Actions:
         }
         self.connection.send_data(weather_schema)
         output =  self.connection.receive_data()
-        return output
+        return  self.process_output(output)

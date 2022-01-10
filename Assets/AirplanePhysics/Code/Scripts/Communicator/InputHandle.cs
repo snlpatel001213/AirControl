@@ -61,9 +61,9 @@ namespace Communicator
                 #region  Camera
                 else if (MsgType=="Camera") // if operation type is transaction
                 {   
-                    
+                    Debug.Log("Registered under camera section");
                     //input type
-                    string inputControlType = inputJson["InputControlType"].ToString();
+                    bool isActive = bool.Parse(inputJson["IsActive"].ToString());
                     //Scene Camera
                     int activeCamera = int.Parse(inputJson["ActiveCamera"].ToString());
                     bool isCapture = bool.Parse(inputJson["IsCapture"].ToString());
@@ -75,7 +75,7 @@ namespace Communicator
                     //primary key
                     StaticCameraSchema.MsgType = "Camera";
                     // Camrera control
-                    StaticCameraSchema.InputControlType = inputControlType; 
+                    StaticCameraSchema.IsActive = isActive; 
                     StaticCameraSchema.ActiveCamera = activeCamera;
                     // which screen to capture
                     StaticCameraSchema.IsCapture = isCapture;
