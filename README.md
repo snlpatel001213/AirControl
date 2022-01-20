@@ -3,7 +3,7 @@
 </p>
 <BR>
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/snlpatel001213/AirControl)
+![GitHub release (latest by date)](https://img.shields.io/badge/Release-0.0.5-orange)
 ![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl?style=plastic)
 [![Documentation Status](https://readthedocs.org/projects/aircontrol/badge/?version=master)](https://aircontrol.readthedocs.io/en/master/?badge=master)
 ![GitHub issues](https://img.shields.io/github/issues/snlpatel001213/AirControl)
