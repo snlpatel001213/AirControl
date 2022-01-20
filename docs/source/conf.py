@@ -57,3 +57,15 @@ html_theme = 'press'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# If defined shows an image instead of project name on page top-left (link to index page).
+html_logo = '../images/logo/logo_original_large-128_x_128.png'
+
+# If provided, creates external links (e.g. Github) in the top right corner:
+
+html_theme_options = {
+  "external_links": [
+      ("Github", "https://github.com/snlpatel001213/AirControl/" ),
+      ("Project Dashboard", "https://github.com/snlpatel001213/AirControl/projects/1")
+  ]
+}
