@@ -108,7 +108,7 @@ namespace AirControl
         }
         void update()
         {
-            rewardCalculator();
+            // rewardCalculator();
         }
 
         /// <summary>
@@ -116,50 +116,50 @@ namespace AirControl
         /// Airplane belongs to runway and air!
         /// </summary>
         /// <param name="col">collision object</param>
-        void OnCollisionEnter(Collision col)
-        {
-            if(col.gameObject.tag!= "Runway")
-            {
-                bool triggerEntered =true;
-                while (triggerEntered)
-                {
-                    MaxR -=10f;
-                    Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
-                    col.gameObject.active = false;
-                    StaticOutputSchema.IfCollision=true;
-                    triggerEntered=false;
-                }
+        // void OnCollisionEnter(Collision col)
+        // {
+        //     if(col.gameObject.tag!= "Runway")
+        //     {
+        //         bool triggerEntered =true;
+        //         while (triggerEntered)
+        //         {
+        //             MaxR -=10f;
+        //             Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
+        //             col.gameObject.active = false;
+        //             StaticOutputSchema.IfCollision=true;
+        //             triggerEntered=false;
+        //         }
                 
-            }
-        }
+        //     }
+        // }
 
-        void OnTriggerEnter(Collider col)
-        {
-           if(col.CompareTag("Fence"))
-            {
-                bool triggerEntered =true;
-                while (triggerEntered)
-                {
-                    MaxR -=10f;
-                    Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.attachedRigidbody.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
-                    col.gameObject.active = false;
-                    StaticOutputSchema.IfCollision=true;
-                    triggerEntered=false;
-                }
-            }
-        }
-        void rewardCalculator(){
-            float Height = 100f;
-            float Base = start_y;
-            float RateOfInclination = 230f;
-            float Angle = 3f;
-            double ideal_height= Height+((Base-Height)/(1.0f+Math.Pow(rb.position.z/RateOfInclination,Angle)));
-            double Penalty = Math.Pow(ideal_height-rb.position.y, 2);
-            MaxR -= Penalty;
-            StaticOutputSchema.Reward = MaxR;
-            // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
+        // void OnTriggerEnter(Collider col)
+        // {
+        //    if(col.CompareTag("Fence"))
+        //     {
+        //         bool triggerEntered =true;
+        //         while (triggerEntered)
+        //         {
+        //             MaxR -=10f;
+        //             Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.attachedRigidbody.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
+        //             col.gameObject.active = false;
+        //             StaticOutputSchema.IfCollision=true;
+        //             triggerEntered=false;
+        //         }
+        //     }
+        // }
+        // void rewardCalculator(){
+        //     float Height = 100f;
+        //     float Base = start_y;
+        //     float RateOfInclination = 230f;
+        //     float Angle = 3f;
+        //     double ideal_height= Height+((Base-Height)/(1.0f+Math.Pow(rb.position.z/RateOfInclination,Angle)));
+        //     double Penalty = Math.Pow(ideal_height-rb.position.y, 2);
+        //     MaxR -= Penalty;
+        //     StaticOutputSchema.Reward = MaxR;
+        //     // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
 
-        }
+        // }
         #endregion
 
         #region Custom Methods
