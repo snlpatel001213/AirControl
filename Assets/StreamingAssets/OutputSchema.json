@@ -14,6 +14,9 @@
   "PitchAngle": 0.0,
   "ScreenCapture": null,
   "LidarPointCloud": null,
+  "Counter": 0,
+  "log": "",
+  "Reward": 0.0,
   "MsgType": "Output",
   "Version": "0.0.5"
 }

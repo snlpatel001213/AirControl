@@ -76,41 +76,49 @@ namespace Communicator
 								using (NetworkStream stream = connectedTcpClient.GetStream()) { 						
 									int length; 						
 									// Read incomming stream into byte arrary.				
-									while ((length = stream.Read(bytes, 0, bytes.Length)) != 0) { 							
-										var incommingData = new byte[length]; 							
-										Array.Copy(bytes, 0, incommingData, 0, length);  							
-										// Convert byte array to string message. 							
-										string clientMessage = Encoding.ASCII.GetString(incommingData); 
-										
-										clientMessage = clientMessage.Replace("}{", "} | {");
-										string [] inputArray = clientMessage.Split('|');
-										foreach(string eachInput in inputArray)
+									while ((length = stream.Read(bytes, 0, bytes.Length)) != 0) 
+									{ 							
+										try
 										{
-											bool isOutput = false;
-											try{
-												// Debug.Log("|||||||||||| > "+eachInput);
-												var inputJson =  JObject.Parse(eachInput);
-												inputHandle.ParseInput(inputJson);	
-												isOutput = bool.Parse(inputJson["IsOutput"].ToString());
-											}
-											catch (SocketException e){
-												Console.WriteLine("JsonReaderException : {0}", e.Source);
-											}
-											catch (JsonReaderException e){
-												Console.WriteLine("JsonReaderException : {0}", e.Source);
-											}	
-											// once received the message, send message in return
-											if(isOutput){
-												string outputmsg = outputHandle.ParseOutput();
-												SendMessage(outputmsg);
-											}
-											else{
-												string logOutput = outputHandle.LogOutput();
-												SendMessage(logOutput);
-											}
+											var incommingData = new byte[length]; 							
+											Array.Copy(bytes, 0, incommingData, 0, length);  							
+											// Convert byte array to string message. 							
+											string clientMessage = Encoding.ASCII.GetString(incommingData); 
 											
+											clientMessage = clientMessage.Replace("}{", "} | {");
+											string [] inputArray = clientMessage.Split('|');
+											foreach(string eachInput in inputArray)
+											{
+												bool isOutput = false;
+												try{
+													// Debug.Log("|||||||||||| > "+eachInput);
+													var inputJson =  JObject.Parse(eachInput);
+													inputHandle.ParseInput(inputJson);	
+													isOutput = bool.Parse(inputJson["IsOutput"].ToString());
+												}
+												catch (SocketException e){
+													Console.WriteLine("JsonReaderException : {0}", e.Source);
+												}
+												catch (JsonReaderException e){
+													Console.WriteLine("JsonReaderException : {0}", e.Source);
+												}	
+												// once received the message, send message in return
+												if(isOutput){
+
+													string outputmsg = outputHandle.ParseOutput();
+													SendMessage(outputmsg);
+												}
+												else{
+													string logOutput = outputHandle.LogOutput();
+													SendMessage(logOutput);
+												}
+												ResetThings();											
+											}
 										}
-											
+										catch(Exception ex)
+										{
+											Debug.Log("RandomException " + ex.ToString());
+										}
 										
 									} 					
 								} 				
@@ -119,15 +127,21 @@ namespace Communicator
 				}
 				else
 				{
-					Debug.Log("InputHandle is detached in from Network manager. Go to Unity Hierarchy, look at inspeector, drag and drop InputHandle onto Network communicator");
+					Debug.Log("InputHandle is detached in from Network manager. Go to Unity Hierarchy, look at inspector, drag and drop InputHandle onto Network communicator");
 				}		
-				
-						
 			} 		
 			catch (SocketException socketException) { 			
-				Debug.Log("SocketException " + socketException.ToString()); 		
+				Debug.Log("SocketException " + socketException.ToString());
 			}     
-		}  	
+		}
+		/// <summary>
+		/// Reset things after the response is sent
+		/// </summary>
+		public void ResetThings()
+		{
+			StaticOutputSchema.IfCollision = false;
+		}
+
 		/// <summary> 	
 		/// Send message to client using socket connection. 	
 		/// </summary> 	

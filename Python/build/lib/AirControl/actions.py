@@ -147,7 +147,6 @@ class Actions:
             "Flaps": Flaps,
             "IsOutput": self.bool2string(IsOutput),
         }
-        print(control_schema)
         self.connection.send_data(control_schema)
         
         output =  self.connection.receive_data()

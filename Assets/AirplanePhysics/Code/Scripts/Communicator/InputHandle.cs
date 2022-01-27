@@ -61,7 +61,6 @@ namespace Communicator
                 #region  Camera
                 else if (MsgType=="Camera") // if operation type is transaction
                 {   
-                    Debug.Log("Registered under camera section");
                     //input type
                     bool isActive = bool.Parse(inputJson["IsActive"].ToString());
                     //Scene Camera

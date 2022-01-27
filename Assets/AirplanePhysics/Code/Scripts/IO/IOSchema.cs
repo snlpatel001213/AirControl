@@ -95,8 +95,10 @@ namespace Communicator
 		public static float Longitude;
 		public static byte [] ScreenCapture;
 		public static float [] LidarPointCloud;
+		public static int Counter;
 
-		public static string log;
+		public static string log = "";
+		public static double Reward;
 	}
 	/// <summary>
 	/// Output control class for serialization deserialization
@@ -121,7 +123,9 @@ namespace Communicator
 		public float PitchAngle;
 		public byte [] ScreenCapture;
 		public float [] LidarPointCloud;
-		public static string log;
+		public int Counter;
+		public string log = "";
+		public double Reward;
 	}
 	#endregion
 

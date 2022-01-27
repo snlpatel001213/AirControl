@@ -5,7 +5,7 @@ using Communicator;
 using Newtonsoft.Json;
 using AirControl;
 using System.Linq;
-
+using Commons;
 
 namespace Communicator
 {
@@ -29,6 +29,7 @@ namespace Communicator
                 screencapture =  new byte[0];
             }
             
+            CommonFunctions.Counter ++; 
             string output = JsonConvert.SerializeObject(new OutputSchema{
                 BankAngle = StaticOutputSchema.BankAngle,
                 PitchAngle = StaticOutputSchema.PitchAngle,
@@ -43,9 +44,15 @@ namespace Communicator
                 LidarPointCloud = StaticOutputSchema.LidarPointCloud,
                 Latitude = StaticOutputSchema.Latitude,
                 Longitude = StaticOutputSchema.Longitude,
-                IfCollision = StaticOutputSchema.IfCollision
+                IfCollision = StaticOutputSchema.IfCollision,
+                Reward = StaticOutputSchema.Reward,
+                Counter = CommonFunctions.Counter 
+                
             }, new PrimitiveToStringConverter());
-            
+            if(StaticOutputSchema.IfCollision)
+            {
+                Debug.Log(output);
+            }
             return output;
         }
         /// <summary>

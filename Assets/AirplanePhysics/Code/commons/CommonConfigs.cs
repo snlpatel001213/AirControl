@@ -11,6 +11,7 @@ namespace Commons
 
     public static class CommonFunctions
     {
+        static int counter=0;
         /// <summary>
         /// Get current dev version please update this version before each build and relases
         /// </summary>
@@ -51,7 +52,12 @@ namespace Commons
         {
             T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
             return data;
-        }   
+        } 
+
+        public static int Counter{
+            get{return counter;}
+            set{counter = value;}
+        }
                 
     }
 

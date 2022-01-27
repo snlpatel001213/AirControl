@@ -22,128 +22,118 @@ Hour. Defaults to 10. - Minute (int, optional): Set Minutes. Defaults to
 Importing Requirement
 ---------------------
 
-.. code:: python
+.. code:: ipython3
 
-   from AirControl.communicator import Communicator
-   from AirControl import schemaDef
-   from pprint import pprint
-   import PIL.Image as Image
-   import base64
-   import numpy as np
+    from AirControl import actions
+    
+    from pprint import pprint
+    import PIL.Image as Image
+    import base64
+    import numpy as np
+    
+    from io import BytesIO
+    from matplotlib.pyplot import  imshow
+    import matplotlib.pyplot as plt
+    A =  actions.Actions()
 
-   from io import BytesIO
-   from matplotlib.pyplot import  imshow
-   import matplotlib.pyplot as plt
 
-   connection = Communicator()
+.. parsed-literal::
+
+    Now play the environment and call call method `Action.get_connected` to get connected
+
+
+.. code:: ipython3
+
+    # get connected to server
+    A.get_connected()
 
 **Abundant sun light**
 
-.. code:: python
+.. code:: ipython3
 
-   TOD_schema = schemaDef.set_TOD(IsActive=1, Minute=1, Hour=13,SunLatitude=-2391.933347, SunLongitude=-2958)
-   connection.send_data(TOD_schema)
-   output =  connection.receive_data()
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       # im.show()
-       imshow(np.asarray(im))
-       plt.axis('off')
+    TOD_output = A.set_TOD(IsActive=1, Minute=1, Hour=13,SunLatitude=-2391.933347, SunLongitude=-2958)
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        # im.show()
+        imshow(np.asarray(im))
+        plt.axis('off')
+        
 
-.. figure:: ../images/time_of_day/output_5_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/time_of_day_API_files/time_of_day_API_6_0.png
+
 
 **Sunset light**
 
-.. code:: python
+.. code:: ipython3
 
-   TOD_schema = schemaDef.set_TOD(IsActive=1, Minute=1, Hour=13,SunLatitude=25.933347, SunLongitude=72.712092)
-   connection.send_data(TOD_schema)
-   output =  connection.receive_data()
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       # im.show()
-       imshow(np.asarray(im))
-       plt.axis('off')
-      
+    TOD_output = A.set_TOD(IsActive=1, Minute=1, Hour=13,SunLatitude=25.933347, SunLongitude=72.712092)
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        # im.show()
+        imshow(np.asarray(im))
+        plt.axis('off')
+       
 
-.. figure:: ../images/time_of_day/output_7_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/time_of_day_API_files/time_of_day_API_8_0.png
+
 
 **Noon - Sun at vertical angle**
 
-.. code:: python
+.. code:: ipython3
 
-   TOD_schema = schemaDef.set_TOD(IsActive=1, Minute=1, Hour=1,SunLatitude=-481.9, SunLongitude=-1517)
-   connection.send_data(TOD_schema)
-   output =  connection.receive_data()
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       # im.show()
-       imshow(np.asarray(im))
-       plt.axis('off')
+    TOD_output = A.set_TOD(IsActive=1, Minute=1, Hour=1,SunLatitude=-481.9, SunLongitude=-1517)
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":d
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        # im.show()
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/time_of_day/output_9_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/time_of_day_API_files/time_of_day_API_10_0.png
+
 
 **Night**
 
-.. code:: python
+.. code:: ipython3
 
-   TOD_schema = schemaDef.set_TOD(IsActive=1, Minute=59, Hour=20,SunLatitude=-2563, SunLongitude=-2939.9)
-   connection.send_data(TOD_schema)
-   output =  connection.receive_data()
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       # im.show()
-       imshow(np.asarray(im))
-       plt.axis('off')
+    TOD_output = A.set_TOD(IsActive=1, Minute=59, Hour=20,SunLatitude=-500, SunLongitude=-2939.9)
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        # im.show()
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/time_of_day/output_11_0.png
-   :alt: png
 
-   png
 
-**Surshine at side angle**
+.. image:: ../images/time_of_day_API_files/time_of_day_API_12_0.png
 
-.. code:: python
 
-   TOD_schema = schemaDef.set_TOD(IsActive=1, Minute=1, Hour=1,SunLatitude=-2391, SunLongitude=-2958)
-   connection.send_data(TOD_schema)
-   output =  connection.receive_data()
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       # im.show()
-       imshow(np.asarray(im))
-       plt.axis('off')
+.. code:: ipython3
 
-.. figure:: ../images/time_of_day/output_13_0.png
-   :alt: png
+    TOD_output = A.set_TOD(IsActive=1, Minute=1, Hour=1,SunLatitude=-2391, SunLongitude=-2958)
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=1080,CaptureWidth=1280,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        # im.show()
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-   png
+
+
+.. image:: ../images/time_of_day_API_files/time_of_day_API_13_0.png
+
+

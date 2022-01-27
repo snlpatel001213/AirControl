@@ -1,10 +1,14 @@
 import random
+import traceback
 from collections import deque, namedtuple
 
 import numpy as np
 import torch
 import torch.nn.functional as F
 import torch.optim as optim
+from AirControl import sample_generator
+
+sample = sample_generator.samples()
 
 from model import QNetwork
 
@@ -16,6 +20,8 @@ LR = 5e-4               # learning rate
 UPDATE_EVERY = 4        # how often to update the network
 
 device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
+device = torch.device("cpu")
+
 
 class Agent():
     """Interacts with and learns from the environment."""
@@ -53,6 +59,7 @@ class Agent():
             # If enough samples are available in memory, get random subset and learn
             if len(self.memory) > BATCH_SIZE:
                 experiences = self.memory.sample()
+                # print("Experiences : ", experiences )
                 self.learn(experiences, GAMMA)
 
     def act(self, state, eps=0.):
@@ -71,10 +78,11 @@ class Agent():
 
         # Epsilon-greedy action selection
         if random.random() > eps:
-            return action_values.cpu().tolist()
+            # print("From random policy")
+            return action_values.cpu().tolist()[0]
         else:
-            return action_values.cpu().tolist()
-            # return np.random.uniform(-1, 1, self.action_size)
+            # print("deterministic policy")
+            return [sample.get_random_pitch(), sample.get_random_yaw(), sample.get_random_roll(), sample.get_random_stickythrottle()]
 
     def learn(self, experiences, gamma):
         """Update value parameters using given batch of experience tuples.
@@ -91,8 +99,8 @@ class Agent():
         Q_targets = rewards + (gamma * Q_targets_next * (1 - dones))
 
         # Get expected Q values from local model
-        Q_expected = self.qnetwork_local(states).gather(1, actions)
-
+        x = self.qnetwork_local(states)
+        Q_expected = self.qnetwork_local(states)
         # Compute loss
         loss = F.mse_loss(Q_expected, Q_targets)
         # Minimize the loss

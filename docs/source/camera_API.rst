@@ -11,31 +11,30 @@ screenshots while in flight.
 Python API
 ----------
 
-| Python API has a ``set_camera`` function to set the camera properties.
-  ``set_camera`` function takes the following arguments: -
-  InputControlType (str, optional): It can be either ``Code`` or
-  ``Other``. This is to control the internal mechanism and prevent
-  repeated calling in already set variables.
-| If ``InputControlType`` is set to ‘Code’, the camera cannot be
-  controlled from Keyboard or Joystick. If ``InputControlType`` is set
-  to ‘Other’, the camera can be only controlled from Keyboard or
-  Joystick. Defaults to “Code”. - ActiveCamera (int, optional):
-  Aircontrol Airplane has two cameras inside the Cockpit and outside the
-  Airplane. The Camera inside the Cockpit is indexed as 0. The outside
-  of the Airplane is indexed as 1. ``ActiveCamera`` can be used to
-  select the scene camera. Defaults to 1. - IsCapture (bool, optional):
-  ``Iscapture`` if true the screenshot will be captured. Defaults to
-  False. - CaptureCamera (int, optional): ``CaptureCamera`` defines
-  which camera should be used for capturing the scene. Defaults to 1. -
-  CaptureType (int, optional): Choose between different capture types.
-  Defaults to 1. - CaptureWidth (int, optional): Width of the captured
-  image. Defaults to 256. - CaptureHeight (int, optional): Height of the
-  captured image. Defaults to 256. - IsOutput (bool, optional): By
-  default ``set_camera`` function only sets the internal state.
-  ``set_camera`` only provides log output and not the actual captured
-  image. ``set_control`` when called it returns the actual output. IF
-  you want to force ``set_camera`` to return the image, set ``IsOutput``
-  to True. Defaults to False.
+Python API has a ``set_camera`` function to set the camera properties.
+``set_camera`` function takes the following arguments: -
+InputControlType (str, optional): It can be either ``Code`` or
+``Other``. This is to control the internal mechanism and prevent
+repeated calling in already set variables. - If ``InputControlType`` is
+set to ‘Code’, the camera cannot be controlled from Keyboard or
+Joystick. If ``InputControlType`` is set to ‘Other’, the camera can be
+only controlled from Keyboard or Joystick. Defaults to “Code”. -
+ActiveCamera (int, optional): Aircontrol Airplane has two cameras inside
+the Cockpit and outside the Airplane. The Camera inside the Cockpit is
+indexed as 0. The outside of the Airplane is indexed as 1.
+``ActiveCamera`` can be used to select the scene camera. Defaults to 1.
+- IsCapture (bool, optional): ``Iscapture`` if true the screenshot will
+be captured. Defaults to False. - CaptureCamera (int, optional):
+``CaptureCamera`` defines which camera should be used for capturing the
+scene. Defaults to 1. - CaptureType (int, optional): Choose between
+different capture types. Defaults to 1. - CaptureWidth (int, optional):
+Width of the captured image. Defaults to 256. - CaptureHeight (int,
+optional): Height of the captured image. Defaults to 256. - IsOutput
+(bool, optional): By default ``set_camera`` function only sets the
+internal state. ``set_camera`` only provides log output and not the
+actual captured image. ``set_control`` when called it returns the actual
+output. IF you want to force ``set_camera`` to return the image, set
+``IsOutput`` to True. Defaults to False.
 
 **Capture Types**
 
@@ -49,24 +48,24 @@ categorization, optical flow, etc
 ``Capture Types`` can be set to the following:
 
 +-----+---------+------------------------------------------------------+
-| C   | Type    | Details                                              |
-| apt |         |                                                      |
-| ure |         |                                                      |
-| T   |         |                                                      |
-| ype |         |                                                      |
+| Cap | Type    | Details                                              |
+| tur |         |                                                      |
+| e   |         |                                                      |
+| Typ |         |                                                      |
+| e   |         |                                                      |
 +=====+=========+======================================================+
 | 0   | Scene   | Capture from scene Camera                            |
 |     | Capture |                                                      |
 +-----+---------+------------------------------------------------------+
-| 1   | I       | Each object in the scene gets unique color           |
-|     | nstance |                                                      |
-|     | Segme   |                                                      |
-|     | ntation |                                                      |
+| 1   | Instanc | Each object in the scene gets unique color           |
+|     | e       |                                                      |
+|     | Segment |                                                      |
+|     | ation   |                                                      |
 +-----+---------+------------------------------------------------------+
-| 2   | S       | Objects are assigned color based on their category   |
-|     | emantic |                                                      |
-|     | segme   |                                                      |
-|     | ntation |                                                      |
+| 2   | Semanti | Objects are assigned color based on their category   |
+|     | c       |                                                      |
+|     | segment |                                                      |
+|     | ation   |                                                      |
 +-----+---------+------------------------------------------------------+
 | 3   | Depth   | Pixels are colored according to their motion in the  |
 |     |         | relation to the camera                               |
@@ -109,242 +108,228 @@ encoding.
 Importing Requirements
 ----------------------
 
-.. code:: python
+.. code:: ipython3
 
-   from AirControl.communicator import Communicator
-   from AirControl import schemaDef
-   from pprint import pprint
-   import PIL.Image as Image
-   import base64
-   import numpy as np
-   from io import BytesIO
-   from matplotlib.pyplot import  imshow
-   import matplotlib.pyplot as plt
+    from AirControl import actions
+    from pprint import pprint
+    import PIL.Image as Image
+    import base64
+    import numpy as np
+    from io import BytesIO
+    from matplotlib.pyplot import  imshow
+    import matplotlib.pyplot as plt
+    
+    A =  actions.Actions()
 
-   connection = Communicator()
+
+.. parsed-literal::
+
+    Now play the environment and call call method `Action.get_connected` to get connected
+
+
+.. code:: ipython3
+
+    # get connected to server
+    A.get_connected()
 
 Examples (Cockpit Camera)
 -------------------------
 
 **Scene Capture**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_7_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_8_0.png
+
 
 **Instance Segmentation**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=1,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=1,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_9_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_10_0.png
+
 
 **Semantic segmentation**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=2,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=2,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_11_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_12_0.png
+
 
 **Depth**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=3,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=3,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_13_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_14_0.png
+
 
 **Normals**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=4,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=4,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_15_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_16_0.png
+
 
 **Optical Flow**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=5,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=5,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_17_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_18_0.png
+
 
 Example (External Camera)
 -------------------------
 
 **Scene Capture**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_7_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_21_0.png
+
 
 **Instance Segmentation**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=1,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=1,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_22_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_23_0.png
+
 
 **Semantic segmentation**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=2,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=2,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_24_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_25_0.png
+
 
 **Depth**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=3,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=3,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_26_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_27_0.png
+
 
 **Normals**
 
-.. code:: python
+.. code:: ipython3
 
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=4,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=4,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_28_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_29_0.png
+
 
 **Optical Flow**
 
-.. code:: python
+.. code:: ipython3
 
-   ## no movement no optcal flow
-   camera_schema = schemaDef.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=5,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
-   connection.send_data(camera_schema)
-   output =  connection.receive_data()
-   image = output['ScreenCapture']
-   if image != "":
-       im = Image.open(BytesIO(base64.b64decode(image)))
-       imshow(np.asarray(im))
-       plt.axis('off')
+    ## no movement no optcal flow
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=5,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    image = output['ScreenCapture']
+    if image != "":
+        im = Image.open(BytesIO(base64.b64decode(image)))
+        imshow(np.asarray(im))
+        plt.axis('off')
 
-.. figure:: ../images/camera_example_files/camera_example_30_0.png
-   :alt: png
 
-   png
+
+.. image:: ../images/camera_API_files/camera_API_31_0.png
+
 
 Reference
 =========
