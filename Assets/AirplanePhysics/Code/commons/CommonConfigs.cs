@@ -17,7 +17,7 @@ namespace Commons
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "0.0.5";
+            string VERSION = "0.1.0";
             return VERSION;
         } 
         /// <summary>
@@ -57,6 +57,23 @@ namespace Commons
         public static int Counter{
             get{return counter;}
             set{counter = value;}
+        }
+
+        
+        public static void clearFolder(string FolderName)
+        {
+            DirectoryInfo dir = new DirectoryInfo(FolderName);
+
+            foreach(FileInfo fi in dir.GetFiles())
+            {
+                fi.Delete();
+            }
+
+            foreach (DirectoryInfo di in dir.GetDirectories())
+            {
+                clearFolder(di.FullName);
+                di.Delete();
+            }
         }
                 
     }
