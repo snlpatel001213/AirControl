@@ -8,6 +8,8 @@ TagManager:
   - Ground
   - Runway
   - ground
+  - Fence
+  - Airplane
   layers:
   - Default
   - TransparentFX

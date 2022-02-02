@@ -36,10 +36,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -145,6 +145,9 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>maxRPM</b> = 3000f</
 <tr class="memitem:ad97c0923303d2b2ea425414e983d1eb7"><td class="memItemLeft" align="right" valign="top"><a id="ad97c0923303d2b2ea425414e983d1eb7"></a>
 AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><b>powerCurve</b> = AnimationCurve.Linear(0f, 0f, 1f, 1f)</td></tr>
 <tr class="separator:ad97c0923303d2b2ea425414e983d1eb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a20fbd507100349c12d76fd8f0a31a400"><td class="memItemLeft" align="right" valign="top"><a id="a20fbd507100349c12d76fd8f0a31a400"></a>
+AnimationCurve&#160;</td><td class="memItemRight" valign="bottom"><b>liftOff</b> = AnimationCurve.Linear(0f, 0f, 1000f, 1000f)</td></tr>
+<tr class="separator:a20fbd507100349c12d76fd8f0a31a400"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0e5d4e8e227aa3b5a794334b9ff1b6e9"><td class="memItemLeft" align="right" valign="top"><a id="a0e5d4e8e227aa3b5a794334b9ff1b6e9"></a>
 <a class="el" href="classAirControl_1_1AC__Airplane__Propeller.html">AC_Airplane_Propeller</a>&#160;</td><td class="memItemRight" valign="bottom"><b>propeller</b></td></tr>
 <tr class="separator:a0e5d4e8e227aa3b5a794334b9ff1b6e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -196,53 +199,53 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentRPM</b><code>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Final Engine force</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__Engine_8cs_source.html#l00078">78</a> of file <a class="el" href="AC__Airplane__Engine_8cs_source.html">AC_Airplane_Engine.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">//Calcualte Power</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keywordtype">float</span> finalThrottle = Mathf.Clamp01(throttle);</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Engine_8cs_source.html#l00079">79</a> of file <a class="el" href="AC__Airplane__Engine_8cs_source.html">AC_Airplane_Engine.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">//Calcualte Power</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordtype">float</span> finalThrottle = Mathf.Clamp01(throttle);</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">if</span>(!isShutOff)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                finalThrottle = powerCurve.Evaluate(finalThrottle);</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="comment">//keep eye on last throttle value, In case of engine cutoff we can use this value to slowly decrease the engine power</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                lastThrottleValue = finalThrottle;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                lastThrottleValue -= Time.deltaTime * shutOffSpeed;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                lastThrottleValue = Mathf.Clamp01(lastThrottleValue);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                finalThrottle = powerCurve.Evaluate(lastThrottleValue);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordflow">if</span>(!isShutOff)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                finalThrottle = powerCurve.Evaluate(finalThrottle);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="comment">//keep eye on last throttle value, In case of engine cutoff we can use this value to slowly decrease the engine power</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                lastThrottleValue = finalThrottle;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                lastThrottleValue -= Time.deltaTime * shutOffSpeed;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                lastThrottleValue = Mathf.Clamp01(lastThrottleValue);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                finalThrottle = powerCurve.Evaluate(lastThrottleValue);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            <span class="comment">//Calculate RPM&#39;s</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            currentRPM = finalThrottle * maxRPM;</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            <span class="keywordflow">if</span>(propeller)</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            {</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                propeller.HandlePropeller(currentRPM);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="comment">//Calculate RPM&#39;s</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            currentRPM = finalThrottle * maxRPM;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            <span class="keywordflow">if</span>(propeller)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                propeller.HandlePropeller(currentRPM);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            }</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160; </div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            <span class="comment">// Process the Fuel</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            HandleFuel(finalThrottle);</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="comment">// Process the Fuel</span></div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            HandleFuel(finalThrottle);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            <span class="comment">//Create Force</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="keywordtype">float</span> finalPower = finalThrottle * maxForce;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            Vector3 finalForce = transform.forward * finalPower;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;<span class="preprocessor">            #region DBArea</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="comment">//Setting Current engine paramters to DB</span></div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="comment">// DB_Functions.SetEngineVariables(connection, maxForce, finalPower,  maxRPM, CurrentRPM);</span></div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            StaticOutputSchema.MaxPower = maxForce; <span class="comment">// can be moved to start</span></div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            StaticOutputSchema.CurrentPower = finalPower;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            StaticOutputSchema.MaxRPM = maxRPM; <span class="comment">// can be moved to start</span></div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            StaticOutputSchema.CurrentRPM = currentRPM;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;<span class="preprocessor">            #endregion</span></div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            <span class="keywordflow">return</span> finalForce;</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        }</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            <span class="comment">//Create Force</span></div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="keywordtype">float</span> finalPower = finalThrottle * maxForce;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            Vector3 finalForce = transform.forward * finalPower;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;<span class="preprocessor">            #region DBArea</span></div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="comment">//Setting Current engine paramters to DB</span></div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="comment">// DB_Functions.SetEngineVariables(connection, maxForce, finalPower,  maxRPM, CurrentRPM);</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            StaticOutputSchema.MaxPower = maxForce; <span class="comment">// can be moved to start</span></div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            StaticOutputSchema.CurrentPower = finalPower;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            StaticOutputSchema.MaxRPM = maxRPM; <span class="comment">// can be moved to start</span></div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            StaticOutputSchema.CurrentRPM = currentRPM;</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;<span class="preprocessor">            #endregion</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="keywordflow">return</span> finalForce;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>

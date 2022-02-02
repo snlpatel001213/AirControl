@@ -11,12 +11,13 @@ namespace Commons
 
     public static class CommonFunctions
     {
+        static int counter=0;
         /// <summary>
         /// Get current dev version please update this version before each build and relases
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "0.0.5";
+            string VERSION = "0.1.0";
             return VERSION;
         } 
         /// <summary>
@@ -51,7 +52,36 @@ namespace Commons
         {
             T data = JsonConvert.DeserializeObject<T>(File.ReadAllText(path));
             return data;
-        }   
+        } 
+
+        /// <summary>
+        /// Input output counter for debug only
+        /// </summary>
+        /// <value></value>
+        public static int Counter{
+            get{return counter;}
+            set{counter = value;}
+        }
+
+        /// <summary>
+        /// To delete the files and then the folder 
+        /// </summary>
+        /// <param name="FolderName"></param>
+        public static void clearFolder(string FolderName)
+        {
+            DirectoryInfo dir = new DirectoryInfo(FolderName);
+
+            foreach(FileInfo fi in dir.GetFiles())
+            {
+                fi.Delete();
+            }
+
+            foreach (DirectoryInfo di in dir.GetDirectories())
+            {
+                clearFolder(di.FullName);
+                di.Delete();
+            }
+        }
                 
     }
 

@@ -1,5 +1,6 @@
 var namespaceCommunicator =
 [
+    [ "AudioSchema", "classCommunicator_1_1AudioSchema.html", "classCommunicator_1_1AudioSchema" ],
     [ "CameraSchema", "classCommunicator_1_1CameraSchema.html", "classCommunicator_1_1CameraSchema" ],
     [ "ControlSchema", "classCommunicator_1_1ControlSchema.html", "classCommunicator_1_1ControlSchema" ],
     [ "FuelSchema", "classCommunicator_1_1FuelSchema.html", "classCommunicator_1_1FuelSchema" ],
@@ -15,6 +16,6 @@ var namespaceCommunicator =
     [ "PrimitiveToStringConverter", "classCommunicator_1_1PrimitiveToStringConverter.html", "classCommunicator_1_1PrimitiveToStringConverter" ],
     [ "StaticControlSchema", "classCommunicator_1_1StaticControlSchema.html", null ],
     [ "TODSchema", "classCommunicator_1_1TODSchema.html", "classCommunicator_1_1TODSchema" ],
-    [ "UIAudioSchema", "classCommunicator_1_1UIAudioSchema.html", "classCommunicator_1_1UIAudioSchema" ],
+    [ "UISchema", "classCommunicator_1_1UISchema.html", "classCommunicator_1_1UISchema" ],
     [ "WeatherSchema", "classCommunicator_1_1WeatherSchema.html", "classCommunicator_1_1WeatherSchema" ]
 ];

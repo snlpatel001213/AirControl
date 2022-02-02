@@ -22,6 +22,7 @@ namespace AirControl
         public float maxRPM = 3000f;
         
         public AnimationCurve powerCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
+        public AnimationCurve liftOff = AnimationCurve.Linear(0f, 0f, 1000f, 1000f);
 
         [Header("Propellers")]
         public AC_Airplane_Propeller propeller;

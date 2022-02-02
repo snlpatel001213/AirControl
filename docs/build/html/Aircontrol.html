@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1"><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-      <title>&lt;no title&gt;</title>
+      <title>System Requirement</title>
     
           <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
           <link rel="stylesheet" href="_static/theme.css " type="text/css" />
@@ -29,7 +29,7 @@
     <div class="theme-container" :class="pageClasses"><navbar @toggle-sidebar="toggleSidebar">
   <router-link to="index.html" class="home-link">
     
-      <span class="site-name">Aircontrol</span>
+      <img class="logo" src="_static/logo_original_large-128_x_128.png" alt="logo"/>
     
   </router-link>
 
@@ -37,6 +37,15 @@
     <navlinks class="can-hide">
 
 
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/snlpatel001213/AirControl/"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
 
     </navlinks>
   </div>
@@ -51,6 +60,15 @@
             
 
 
+
+  
+    <div class="nav-item">
+      <a href="https://github.com/snlpatel001213/AirControl/"
+        class="nav-link external">
+          Github <outboundlink></outboundlink>
+      </a>
+    </div>
+  
 
             
           </navlinks><div id="searchbox" class="searchbox" role="search">
@@ -110,6 +128,42 @@
         
           <li class="toctree-l1 ">
             
+              <a href="input_output_API.html" class="reference internal ">Aircontrol Input API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="time_of_day_API.html" class="reference internal ">Aircontrol time of Day API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="lidar_API.html" class="reference internal ">Aircontrol Lidar API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
+              <a href="camera_API.html" class="reference internal ">Aircontrol Camera API</a>
+            
+
+            
+          </li>
+
+        
+          <li class="toctree-l1 ">
+            
               <a href="other_API.html" class="reference internal ">Aircontrol Other API</a>
             
 
@@ -129,7 +183,7 @@
   <ul class="breadcrumbs">
     <li><a href="index.html">Docs</a> &raquo;</li>
     
-    <li>&lt;no title&gt;</li>
+    <li>System Requirement</li>
   </ul>
   
 
@@ -140,7 +194,84 @@
 <hr>
           <div class="content" role="main" v-pre>
             
-  
+  <p><strong>AirControl is an Open Source, Modular, Cross-Platform, and Extensible
+Flight Simulator For Deep Learning Research.</strong> Airsim offers a realistic
+simulation experience with a variety of airplanes. The Airsim is built
+on <a class="reference external" href="https://unity.com">Unity Game engine</a>. Following are the salient
+features of the Aircontrol:</p>
+<ul class="simple">
+<li><p>Built with <strong>C#</strong>, it has <strong>Python</strong> API to control it from your
+favorite Deep learning Framework.</p></li>
+<li><p>Complete source code is open on Github.</p></li>
+<li><p>Aircontrol takes full advantage of object-oriented programming.
+Developed fully modular from day one. You can easily introduce new
+features such as <strong>vertical takeoff</strong>. you can bring your own <strong>alien
+plane to AirCotrol</strong>.</p></li>
+<li><p>AirControl is truly cross-platform, can be compiled on Linux, macOS,
+and Windows. Binary will be released for all the platforms.</p></li>
+<li><p>The AirControl uses Nvidia
+<a class="reference external" href="https://en.wikipedia.org/wiki/PhysX">Physx</a> for the best possible
+Newtonian physics simulation.</p></li>
+<li><p>Aircontrol allows users to take advantage of aerodynamics effects
+such as <a class="reference external" href="https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)">Ground
+effect</a>.</p></li>
+<li><p>All the control surfaces (Throttle, Rudder, Ailerons, and Flaps)
+accepts normalized input between -1 and 1. This makes Aircontrol even
+more friendly with AI.</p></li>
+</ul>
+<section id="system-requirement">
+<h1>System Requirement<a class="headerlink" href="#system-requirement" title="Permalink to this headline">¶</a></h1>
+<p>It depends on how big your Unity Environment is. The environmant which
+comes with the Aircontrol is basic tested with following config:</p>
+<ol class="arabic simple">
+<li><p>Operating system : Ubuntu, Windows, Mac</p></li>
+<li><p>CPU: Intel Core i7</p></li>
+<li><p>GPU: Nvidia 1070 or Higher</p></li>
+<li><p>RAM: 16 GB</p></li>
+<li><p>Flight Controller: xbox [WIP]</p></li>
+</ol>
+<p>Aircontrol may work with lower than the specified requirements, but its
+not tested.</p>
+<p>You can run Aircontrol in server client mode in 2 different machines or
+both in the single machine.</p>
+</section>
+<section id="demo">
+<h1>Demo<a class="headerlink" href="#demo" title="Permalink to this headline">¶</a></h1>
+<p><em>Current release version v0.0.3 is a pre-release to test the air
+stability and controls. Python integration is still in development.</em></p>
+<p><a class="reference external" href="https://www.youtube.com/watch?v=Lhwb4UVulMs"><img alt="AirControl Basic Demo" src="https://i9.ytimg.com/vi_webp/Lhwb4UVulMs/mqdefault.webp?v=61d6839b&amp;sqp=CIiG2o4G&amp;rs=AOn4CLAEMOJnr4S9jciZ-CBKH26yIQivow" /></a></p>
+</section>
+<section id="getting-started">
+<h1>Getting started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h1>
+<ol class="arabic simple">
+<li><p>Windows - Not Tested</p>
+<ol class="arabic simple">
+<li><p>Download Binaries -
+<a class="reference external" href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</a></p></li>
+<li><p>Build it</p></li>
+</ol>
+</li>
+<li><p>Linux - Tested</p>
+<ol class="arabic simple">
+<li><p>Download Binaries -
+<a class="reference external" href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</a></p></li>
+<li><p>Build it</p></li>
+</ol>
+</li>
+<li><p>macOS - Not Tested</p>
+<ol class="arabic simple">
+<li><p>Download Binaries -
+<a class="reference external" href="https://github.com/snlpatel001213/AirControl/releases">https://github.com/snlpatel001213/AirControl/releases</a></p></li>
+<li><p>Build it</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="api-documentation">
+<h1>API Documentation<a class="headerlink" href="#api-documentation" title="Permalink to this headline">¶</a></h1>
+<p>For C# and Python API Documentation, refer to - <a class="reference external" href="https://snlpatel001213.github.io/AirControl/html/index.html">https://snlpatel001213.github.io/AirControl/html/index.html</a></p>
+</section>
+
 
           </div>
           <div class="page-nav">

@@ -1,7 +1,7 @@
 {
   "MsgType": "Camera",
   "Version": "0.0.5",
-  "InputControlType": "Other",
+  "IsActive": "false",
   "ActiveCamera": 0,
   "IsCapture": "false",
   "CaptureCamera": 0,

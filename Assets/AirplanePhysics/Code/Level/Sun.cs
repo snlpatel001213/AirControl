@@ -28,7 +28,7 @@ namespace AirControl
         int minutes;
 
         DateTime time;
-        Light light;
+        new Light light;
 
         [SerializeField]
         float timeSpeed = 1;

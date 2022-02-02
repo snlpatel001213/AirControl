@@ -2,6 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
+using Commons;
+using System.IO;
+using System;
+
 
 namespace AirControl
 {
@@ -54,12 +58,14 @@ namespace AirControl
         public float CurrentAGL{
             get{return currentAGL;}
         }
-
         #endregion
 
         #region Constants
         const float poundToKilos = 0.453592f;
         const float metersToFeets = 3.28084f;
+        private float start_x; 
+        private float start_y;
+        private float start_z;
         #endregion
 
         #region Builtin Methods
@@ -72,7 +78,10 @@ namespace AirControl
 
             //calculate final mass in kilos
             float finalMass =  airplaneWeight * poundToKilos;
-            
+            start_x = rb.position.x;
+            start_y = rb.position.y; 
+            start_z = rb.position.z;
+            Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",start_x, start_y, start_z );
             // if rigid body added then add center of mass
             if (rb){
                 rb.mass = finalMass;
@@ -96,6 +105,25 @@ namespace AirControl
                 }
             }  
         }
+        void update()
+        {
+            // rewardCalculator();
+        }
+
+        
+
+        // void rewardCalculator(){
+        //     float Height = 100f;
+        //     float Base = start_y;
+        //     float RateOfInclination = 230f;
+        //     float Angle = 3f;
+        //     double ideal_height= Height+((Base-Height)/(1.0f+Math.Pow(rb.position.z/RateOfInclination,Angle)));
+        //     double Penalty = Math.Pow(ideal_height-rb.position.y, 2);
+        //     MaxR -= Penalty;
+        //     StaticOutputSchema.Reward = MaxR;
+        //     // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
+
+        // // }
         #endregion
 
         #region Custom Methods

@@ -8,9 +8,16 @@
   "CurrentFuel": 0.0,
   "CurrentSpeed": 0.0,
   "BankAngle": 0.0,
+  "IfCollision": "false",
+  "collisionObject": "",
+  "Latitude": 0.0,
+  "Longitude": 0.0,
   "PitchAngle": 0.0,
   "ScreenCapture": null,
   "LidarPointCloud": null,
+  "Counter": 0,
+  "log": "",
+  "Reward": 0.0,
   "MsgType": "Output",
   "Version": "0.0.5"
 }

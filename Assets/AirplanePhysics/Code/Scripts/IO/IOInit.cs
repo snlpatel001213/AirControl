@@ -53,7 +53,8 @@ namespace Communicator
             createSchema<CameraSchema>("CameraSchema.json");
             createSchema<LevelSchema>("LevelSchema.json");
             createSchema<WeatherSchema>("WeatherSchema.json");
-            createSchema<UIAudioSchema>("UIAudioSchema.json");
+            createSchema<UISchema>("UISchema.json");
+            createSchema<AudioSchema>("AudioSchema.json");
             createSchema<LidarSchema>("LidarSchema.json");
             createSchema<FuelSchema>("FuelSchema.json");
             createSchema<PresetSchema>("PresetSchema.json");

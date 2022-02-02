@@ -1,7 +1,14 @@
 var namespaceAirControl =
 [
+    [ "actions", null, [
+      [ "Actions", "classAirControl_1_1actions_1_1Actions.html", "classAirControl_1_1actions_1_1Actions" ]
+    ] ],
     [ "communicator", null, [
-      [ "Communicator", "classAirControl_1_1communicator_1_1Communicator.html", "classAirControl_1_1communicator_1_1Communicator" ]
+      [ "Communicator", "classAirControl_1_1communicator_1_1Communicator.html", "classAirControl_1_1communicator_1_1Communicator" ],
+      [ "NpEncoder", "classAirControl_1_1communicator_1_1NpEncoder.html", "classAirControl_1_1communicator_1_1NpEncoder" ]
+    ] ],
+    [ "sample_generator", null, [
+      [ "samples", "classAirControl_1_1sample__generator_1_1samples.html", "classAirControl_1_1sample__generator_1_1samples" ]
     ] ],
     [ "AC_Airplane_Airspeed", "classAirControl_1_1AC__Airplane__Airspeed.html", "classAirControl_1_1AC__Airplane__Airspeed" ],
     [ "AC_Airplane_Altimeter", "classAirControl_1_1AC__Airplane__Altimeter.html", "classAirControl_1_1AC__Airplane__Altimeter" ],
@@ -30,6 +37,7 @@ var namespaceAirControl =
     [ "AC_XboxAirplane_Input", "classAirControl_1_1AC__XboxAirplane__Input.html", "classAirControl_1_1AC__XboxAirplane__Input" ],
     [ "AC_XboxAirplane_Input_Editor", "classAirControl_1_1AC__XboxAirplane__Input__Editor.html", "classAirControl_1_1AC__XboxAirplane__Input__Editor" ],
     [ "ColorEncoding", "classAirControl_1_1ColorEncoding.html", null ],
+    [ "GPSEncoder", "classAirControl_1_1GPSEncoder.html", "classAirControl_1_1GPSEncoder" ],
     [ "IAirplaneUI", "interfaceAirControl_1_1IAirplaneUI.html", "interfaceAirControl_1_1IAirplaneUI" ],
     [ "LevelControl", "classAirControl_1_1LevelControl.html", "classAirControl_1_1LevelControl" ],
     [ "Lidar", "classAirControl_1_1Lidar.html", "classAirControl_1_1Lidar" ],

@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System.IO;
 using Commons;
 using Communicator;
 
@@ -14,7 +13,10 @@ namespace AirControl
         #region Variable
         protected Rigidbody rb;
         protected AudioSource aSource;
-        
+        private double MaxR = 100;
+        private bool hasEntered;
+
+                
         #endregion
 
         #region Builtin Methods
@@ -23,11 +25,13 @@ namespace AirControl
         {
             // init DB
             IOInit.CreateSchema();
+            
         }
         // Start is called before the first frame update
         public virtual void Start()
         {
             rb = GetComponent<Rigidbody>();
+            
             aSource = GetComponent<AudioSource>();
             // Dont allow audio to play on start 
             if(aSource){
@@ -41,40 +45,48 @@ namespace AirControl
         {
             if(rb){
                 HandlePhysics();
-                HandleLocation();
+                // HandleLocation();
+                
             }
-            // DB based operations
+            // detect if airplane turns upside down
             
         }
-        /// <summary>
-        /// Collision detection if plane comes in contact with anyother thing then runway.
-        /// Airplane belongs to runway and air!
-        /// </summary>
-        /// <param name="col">collision object</param>
-        void OnCollisionEnter(Collision col)
+
+        void OnCollisionExit(Collision col)
         {
-            // future support
-            // if(col.gameObject.tag!= "runway"){
-            //     Debug.Log("object collided");
+            // if(col.gameObject.tag!= "Runway" )
+            // {
+                // hasEntered = true;
+                MaxR -=10f;
+                Debug.LogFormat("Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
+                StaticOutputSchema.IfCollision=true;
+                StaticOutputSchema.collisionObject = col.gameObject.tag;
             // }
+            return;
         }
+
+        void OnTriggerExit(Collider col)
+        {
+           if(col.CompareTag("Fence"))
+            {
+                // hasEntered = true;
+                MaxR -=10f;
+                Debug.LogFormat("Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
+                StaticOutputSchema.IfCollision=true;
+                StaticOutputSchema.collisionObject = col.gameObject.tag;
+            }
+            return;
+        }
+
+        
         #endregion
 
-        #region Custom Methods
         protected virtual void HandlePhysics(){
 
         }
-        /// <summary>
-        /// Provides the location of the Aircraft in 3D coordinate system
-        /// </summary>
-        void HandleLocation()
-        {
-            //future functionality to provide the xyz location of the plane
-            Vector3 currentLocation = rb.position;
-            // Add location to static function
 
-        }
-        #endregion
+        
+        
     }
 
 }

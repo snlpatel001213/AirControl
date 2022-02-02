@@ -27,10 +27,15 @@ namespace AirControl
         void Update()
         {
             #region IOSwitch
-            bool showUIElements = StaticUIAudioSchema.ShowUIElements;
-            if(currentVisibility != showUIElements){
+            bool showUIElements = StaticUISchema.ShowUIElements;
+            bool isActive  =  StaticUISchema.IsActive;
+            if(isActive)
+            {
                 transform.gameObject.SetActive(showUIElements);
-                currentVisibility = showUIElements;
+                string logString = System.String.Format("Changed the UI visibility from - {0} to {1} ",currentVisibility,showUIElements);
+                StaticLogger.Log = logString;
+                Debug.unityLogger.Log(logString);
+                StaticUISchema.IsActive = false;
             }
             #endregion
 

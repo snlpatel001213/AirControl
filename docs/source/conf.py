@@ -12,6 +12,7 @@
 #
 import os
 import sys
+
 sys.path.insert(0, os.path.abspath('.'))
 
 
@@ -22,7 +23,7 @@ copyright = '2022, Sunil Patel'
 author = 'Sunil Patel'
 
 # The full version, including alpha/beta/rc tags
-release = '0.0.5'
+release = '0.1.0'
 
 
 # -- General configuration ---------------------------------------------------

@@ -36,10 +36,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="logo_55.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.0.5</span>
+   &#160;<span id="projectnumber">0.1.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -103,70 +103,99 @@ $(document).ready(function(){initNavTree('AC__BaseRigidbody__Controller_8cs_sour
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Collections;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> System.IO;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceCommons.html">Commons</a>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceCommunicator.html">Communicator</a>;</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAirControl.html">AirControl</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [RequireComponent(typeof(Rigidbody))]</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    [RequireComponent(typeof(AudioSource))]</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AC_BaseRigidbody_Controller</a> : MonoBehaviour</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">        #region Variable</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">protected</span> Rigidbody rb;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">protected</span> AudioSource aSource;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">        #region Builtin Methods</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="comment">// Methods to be called before start goes here</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Awake()</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">// init DB</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <a class="code" href="classCommunicator_1_1IOInit.html">IOInit</a>.<a class="code" href="classCommunicator_1_1IOInit.html#a8b44165244122dc23ff699a469df1b4c">CreateSchema</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="comment">// Start is called before the first frame update</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Start()</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            rb = GetComponent&lt;Rigidbody&gt;();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            aSource = GetComponent&lt;AudioSource&gt;();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="comment">// Dont allow audio to play on start </span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordflow">if</span>(aSource){</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                aSource.playOnAwake = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordtype">void</span> FixedUpdate()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">if</span>(rb){</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                HandlePhysics();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                HandleLocation();</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment">// DB based operations</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">        #region Custom Methods</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandlePhysics(){</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">void</span> HandleLocation()</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            Vector3 currentLocation = rb.position;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceCommons.html">Commons</a>;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceCommunicator.html">Communicator</a>;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAirControl.html">AirControl</a></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    [RequireComponent(typeof(Rigidbody))]</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    [RequireComponent(typeof(AudioSource))]</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AC_BaseRigidbody_Controller</a> : MonoBehaviour</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">        #region Variable</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">protected</span> Rigidbody rb;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">protected</span> AudioSource aSource;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">double</span> MaxR = 100;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">bool</span> hasEntered;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;                </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="preprocessor">        #region Builtin Methods</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="comment">// Methods to be called before start goes here</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">public</span>  <span class="keyword">virtual</span> <span class="keywordtype">void</span> Awake()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="comment">// init DB</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <a class="code" href="classCommunicator_1_1IOInit.html">IOInit</a>.<a class="code" href="classCommunicator_1_1IOInit.html#a8b44165244122dc23ff699a469df1b4c">CreateSchema</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="comment">// Start is called before the first frame update</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">public</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> Start()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            rb = GetComponent&lt;Rigidbody&gt;();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            aSource = GetComponent&lt;AudioSource&gt;();</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">// Dont allow audio to play on start </span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordflow">if</span>(aSource){</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                aSource.playOnAwake = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">void</span> FixedUpdate()</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">if</span>(rb){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                HandlePhysics();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="comment">// HandleLocation();</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// detect if airplane turns upside down</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordtype">void</span> OnCollisionExit(Collision col)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// if(col.gameObject.tag!= &quot;Runway&quot; )</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">// {</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="comment">// hasEntered = true;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                MaxR -=10f;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                Debug.LogFormat(<span class="stringliteral">&quot;Collided with : {0} , Counter : {1}&quot;</span>,col.gameObject.tag, CommonFunctions.Counter);  </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                StaticOutputSchema.IfCollision=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                StaticOutputSchema.collisionObject = col.gameObject.tag;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">// }</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordtype">void</span> OnTriggerExit(Collider col)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;           <span class="keywordflow">if</span>(col.CompareTag(<span class="stringliteral">&quot;Fence&quot;</span>))</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="comment">// hasEntered = true;</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                MaxR -=10f;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                Debug.LogFormat(<span class="stringliteral">&quot;Collided with : {0} , Counter :{1}&quot;</span>,col.gameObject.tag, CommonFunctions.Counter);  </div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                StaticOutputSchema.IfCollision=<span class="keyword">true</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                StaticOutputSchema.collisionObject = col.gameObject.tag;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        }</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandlePhysics(){</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    }</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassCommunicator_1_1IOInit_html"><div class="ttname"><a href="classCommunicator_1_1IOInit.html">Communicator.IOInit</a></div><div class="ttdoc">Input Output init Writting schema files to the disk for reference</div><div class="ttdef"><b>Definition:</b> <a href="IOInit_8cs_source.html#l00017">IOInit.cs:17</a></div></div>
-<div class="ttc" id="aclassAirControl_1_1AC__BaseRigidbody__Controller_html"><div class="ttname"><a href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AirControl.AC_BaseRigidbody_Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseRigidbody__Controller_8cs_source.html#l00012">AC_BaseRigidbody_Controller.cs:12</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1AC__BaseRigidbody__Controller_html"><div class="ttname"><a href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AirControl.AC_BaseRigidbody_Controller</a></div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseRigidbody__Controller_8cs_source.html#l00011">AC_BaseRigidbody_Controller.cs:11</a></div></div>
 <div class="ttc" id="aclassCommunicator_1_1IOInit_html_a8b44165244122dc23ff699a469df1b4c"><div class="ttname"><a href="classCommunicator_1_1IOInit.html#a8b44165244122dc23ff699a469df1b4c">Communicator.IOInit.CreateSchema</a></div><div class="ttdeci">static void CreateSchema()</div><div class="ttdoc">Create new schem if the *schema.json if it exists or not. These schema can be used for to format pyth...</div><div class="ttdef"><b>Definition:</b> <a href="IOInit_8cs_source.html#l00047">IOInit.cs:47</a></div></div>
 <div class="ttc" id="anamespaceAirControl_html"><div class="ttname"><a href="namespaceAirControl.html">AirControl</a></div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Menus_8cs_source.html#l00006">AC_Airplane_Menus.cs:6</a></div></div>
 <div class="ttc" id="anamespaceCommunicator_html"><div class="ttname"><a href="namespaceCommunicator.html">Communicator</a></div><div class="ttdef"><b>Definition:</b> <a href="InputHandle_8cs_source.html#l00010">InputHandle.cs:10</a></div></div>

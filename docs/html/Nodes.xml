@@ -54,6 +54,98 @@
             <Path>namespaceAirControl.html</Path>
             <Subnodes>
              <Node>
+              <Name>actions</Name>
+              <Path></Path>
+              <Subnodes>
+               <Node>
+                <Name>Actions</Name>
+                <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>a979bb1c35e4e55eb48387d490f13958d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>bool2string</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>a12e2959d094b606edf72ab1905006756</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>check_input_type</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>abc726dde8b254552ec5b8fef79f0e3f4</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_connected</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>ac731086c7a9d82dee8b262c9c13fcca7</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_output</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>a7d7d4906e4e06cf46a9531d1c61a0916</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>process_output</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>af8c31c458a522b44bb1081656aba09b3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>acf02d647d5c27bff77e70964d857bc8c</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_audio</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>a2238f87cc242fe62598cf4e8fb21597b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_camera</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>a26620c40d731d7adee8c33d1ff135822</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_fuel</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>a6fcbf31d553806c3685273b8c135c421</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_lidar</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>a8be4d27b7213f145d49fe1034ae61190</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_TOD</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>aecc1524b1eb38c7b5d7625fd8cd19dea</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_ui</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>ad99c59ecaf8c310f5819e1e1b4fb1ce3</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_weather</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>ae093f98d391701986b233ec5686607f5</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>step</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>abaaf5a51023b0e6784125e85f4fcd22b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>connection</Name>
+                  <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+                  <Anchor>ae33f82075b37d7e2bb9f2aba1ef52f53</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
               <Name>communicator</Name>
               <Path></Path>
               <Subnodes>
@@ -80,6 +172,59 @@
                   <Name>sock</Name>
                   <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
                   <Anchor>a2b854fa916b956973d05a0c424074697</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>NpEncoder</Name>
+                <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>default</Name>
+                  <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+                  <Anchor>a268d5aa51489b6355b20300e2c8bf09d</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>sample_generator</Name>
+              <Path></Path>
+              <Subnodes>
+               <Node>
+                <Name>samples</Name>
+                <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>get_random_bankangle</Name>
+                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>a1d6e1b9b4715d4a287578f665e80bb84</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_pitch</Name>
+                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>a30f2e85e6ca803d7515e5ab960f140fb</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_pitchangle</Name>
+                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>af0cc8b9c1c826d20780870394e7b40f6</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_roll</Name>
+                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>ac2996f76439fdd35efa5971d99e669d4</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_stickythrottle</Name>
+                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>ad5a56a424c78fb00c2e9109f676aff03</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_yaw</Name>
+                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>af5e84f861a22051be34d9ef6fe2bf371</Anchor>
                  </Node>
                 </Subnodes>
                </Node>
@@ -162,6 +307,11 @@
                 <Anchor>a4644d32deb16511e1f0f4a491f9a0bfa</Anchor>
                </Node>
                <Node>
+                <Name>bankAngleRad</Name>
+                <Path>classAirControl_1_1AC__Airplane__Attitude.html</Path>
+                <Anchor>a57f2950c5d2958639a4bd6095e4b9d28</Anchor>
+               </Node>
+               <Node>
                 <Name>bgRect</Name>
                 <Path>classAirControl_1_1AC__Airplane__Attitude.html</Path>
                 <Anchor>ae28687568998fa9fb7e416e475afeca9</Anchor>
@@ -170,6 +320,11 @@
                 <Name>pitchAngle</Name>
                 <Path>classAirControl_1_1AC__Airplane__Attitude.html</Path>
                 <Anchor>a0887205706c7ccbe593f35b46a2adc20</Anchor>
+               </Node>
+               <Node>
+                <Name>pitchAngleRad</Name>
+                <Path>classAirControl_1_1AC__Airplane__Attitude.html</Path>
+                <Anchor>a001a1a412f92aeb8b06434792a0766b6</Anchor>
                </Node>
                <Node>
                 <Name>BankAngle</Name>
@@ -590,6 +745,11 @@
                 <Name>CalculateForce</Name>
                 <Path>classAirControl_1_1AC__Airplane__Engine.html</Path>
                 <Anchor>a726327c717c65e4d221eab37699c2015</Anchor>
+               </Node>
+               <Node>
+                <Name>liftOff</Name>
+                <Path>classAirControl_1_1AC__Airplane__Engine.html</Path>
+                <Anchor>a20fbd507100349c12d76fd8f0a31a400</Anchor>
                </Node>
                <Node>
                 <Name>maxForce</Name>
@@ -1111,6 +1271,42 @@
               </Subnodes>
              </Node>
              <Node>
+              <Name>GPSEncoder</Name>
+              <Path>classAirControl_1_1GPSEncoder.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>ConvertGPStoUCS</Name>
+                <Path>classAirControl_1_1GPSEncoder.html</Path>
+                <Anchor>a07d50b8b133687007184d8bfe5f8c571</Anchor>
+               </Node>
+               <Node>
+                <Name>ConvertUCStoGPS</Name>
+                <Path>classAirControl_1_1GPSEncoder.html</Path>
+                <Anchor>a82213a931a0de967d609ec2642cafe06</Anchor>
+               </Node>
+               <Node>
+                <Name>FindMetersPerLat</Name>
+                <Path>classAirControl_1_1GPSEncoder.html</Path>
+                <Anchor>af0ca9b204779c6968e583033b6611125</Anchor>
+               </Node>
+               <Node>
+                <Name>rb</Name>
+                <Path>classAirControl_1_1GPSEncoder.html</Path>
+                <Anchor>ae9bfa7ca68e1a5900b7ae99d3e48b275</Anchor>
+               </Node>
+               <Node>
+                <Name>_LatOrigin</Name>
+                <Path>classAirControl_1_1GPSEncoder.html</Path>
+                <Anchor>a979a536fea3427ce2da9c2ae564ca8fa</Anchor>
+               </Node>
+               <Node>
+                <Name>_LonOrigin</Name>
+                <Path>classAirControl_1_1GPSEncoder.html</Path>
+                <Anchor>ae6290827b5746f85b3a21e452ae6c967</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
               <Name>IAirplaneUI</Name>
               <Path>interfaceAirControl_1_1IAirplaneUI.html</Path>
               <Subnodes>
@@ -1181,6 +1377,32 @@
             <Path>namespaceCommunicator.html</Path>
             <Subnodes>
              <Node>
+              <Name>AudioSchema</Name>
+              <Path>classCommunicator_1_1AudioSchema.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>EnableAudio</Name>
+                <Path>classCommunicator_1_1AudioSchema.html</Path>
+                <Anchor>a9ac9913b4c8259e0401a2c64f8a40e5d</Anchor>
+               </Node>
+               <Node>
+                <Name>IsActive</Name>
+                <Path>classCommunicator_1_1AudioSchema.html</Path>
+                <Anchor>ad582a471a0ee1acad209c1e765fcae38</Anchor>
+               </Node>
+               <Node>
+                <Name>MsgType</Name>
+                <Path>classCommunicator_1_1AudioSchema.html</Path>
+                <Anchor>a6bed49e873fe5ef7c441140d4942624a</Anchor>
+               </Node>
+               <Node>
+                <Name>Version</Name>
+                <Path>classCommunicator_1_1AudioSchema.html</Path>
+                <Anchor>a0a37a4e9efc54145e121f02b2f41d32b</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
               <Name>CameraSchema</Name>
               <Path>classCommunicator_1_1CameraSchema.html</Path>
               <Subnodes>
@@ -1210,9 +1432,9 @@
                 <Anchor>af3c93b2b3335eb6cc0915c492effa8d7</Anchor>
                </Node>
                <Node>
-                <Name>InputControlType</Name>
+                <Name>IsActive</Name>
                 <Path>classCommunicator_1_1CameraSchema.html</Path>
-                <Anchor>ab7e358020b78824dc6ead2713f6f20ad</Anchor>
+                <Anchor>ad55fb4814d16f35e7349022987c70b7a</Anchor>
                </Node>
                <Node>
                 <Name>IsCapture</Name>
@@ -1413,6 +1635,16 @@
                 <Anchor>a237b72cb55f0db853eb8332d469cb2aa</Anchor>
                </Node>
                <Node>
+                <Name>MyAction</Name>
+                <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
+                <Anchor>a3733cbd8ba357d67bfec13564e9b0f3b</Anchor>
+               </Node>
+               <Node>
+                <Name>ResetThings</Name>
+                <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
+                <Anchor>ab0f57236ef14536ba79b447e663757be</Anchor>
+               </Node>
+               <Node>
                 <Name>SendMessage</Name>
                 <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
                 <Anchor>a9fa57f9d151ee441e5b7fdc5f4df53aa</Anchor>
@@ -1465,6 +1697,16 @@
                 <Anchor>a097df01104ecac3e9ef837c7b18d0fd9</Anchor>
                </Node>
                <Node>
+                <Name>collisionObject</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a4b5944dfb21fffc416628619c6bc2619</Anchor>
+               </Node>
+               <Node>
+                <Name>Counter</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>ad6dff929a6507ac9ded43b60570d0635</Anchor>
+               </Node>
+               <Node>
                 <Name>CurrentFuel</Name>
                 <Path>classCommunicator_1_1OutputSchema.html</Path>
                 <Anchor>a6c61051ef379af91f3b7d424af6bc1a9</Anchor>
@@ -1485,9 +1727,29 @@
                 <Anchor>adb731c5b26ea0e096380948b51c98fc3</Anchor>
                </Node>
                <Node>
+                <Name>IfCollision</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a213ed6557eb6733243aa37bb83adfdc1</Anchor>
+               </Node>
+               <Node>
+                <Name>Latitude</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>ab33425fb33cebd402c8ceca0b2d12be1</Anchor>
+               </Node>
+               <Node>
                 <Name>LidarPointCloud</Name>
                 <Path>classCommunicator_1_1OutputSchema.html</Path>
                 <Anchor>a2b76247b5e3f2edbbea9aa19ca4e0510</Anchor>
+               </Node>
+               <Node>
+                <Name>log</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a164c96c87e53a5d8bc601cd261d6ec89</Anchor>
+               </Node>
+               <Node>
+                <Name>Longitude</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a5dbd8a6e9b1ccd7410be63ed859b0d83</Anchor>
                </Node>
                <Node>
                 <Name>MaxPower</Name>
@@ -1508,6 +1770,11 @@
                 <Name>PitchAngle</Name>
                 <Path>classCommunicator_1_1OutputSchema.html</Path>
                 <Anchor>a4b3864b95c826394e405f36694ec86e1</Anchor>
+               </Node>
+               <Node>
+                <Name>Reward</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a2b111bcd93b19d8cb1a7c59218646120</Anchor>
                </Node>
                <Node>
                 <Name>ScreenCapture</Name>
@@ -1661,33 +1928,28 @@
               </Subnodes>
              </Node>
              <Node>
-              <Name>UIAudioSchema</Name>
-              <Path>classCommunicator_1_1UIAudioSchema.html</Path>
+              <Name>UISchema</Name>
+              <Path>classCommunicator_1_1UISchema.html</Path>
               <Subnodes>
                <Node>
-                <Name>EnableAudio</Name>
-                <Path>classCommunicator_1_1UIAudioSchema.html</Path>
-                <Anchor>a2af491a2df59ea1059e63fc12c3671e2</Anchor>
-               </Node>
-               <Node>
-                <Name>InputControlType</Name>
-                <Path>classCommunicator_1_1UIAudioSchema.html</Path>
-                <Anchor>a47f8fb9cb398ff2ccb694d9c4034645d</Anchor>
+                <Name>IsActive</Name>
+                <Path>classCommunicator_1_1UISchema.html</Path>
+                <Anchor>a63bbd2e64b38881dee25ccea604eb9f9</Anchor>
                </Node>
                <Node>
                 <Name>MsgType</Name>
-                <Path>classCommunicator_1_1UIAudioSchema.html</Path>
-                <Anchor>a38d086bfee8b7bbeb512a0c56ffcffb9</Anchor>
+                <Path>classCommunicator_1_1UISchema.html</Path>
+                <Anchor>aedf545035fe16ed2f1444757f51ef318</Anchor>
                </Node>
                <Node>
                 <Name>ShowUIElements</Name>
-                <Path>classCommunicator_1_1UIAudioSchema.html</Path>
-                <Anchor>addedfa50ae2408b34f65ae8210affd09</Anchor>
+                <Path>classCommunicator_1_1UISchema.html</Path>
+                <Anchor>a4c0b395abd1ec8001186be15d8633522</Anchor>
                </Node>
                <Node>
                 <Name>Version</Name>
-                <Path>classCommunicator_1_1UIAudioSchema.html</Path>
-                <Anchor>a590b7b1c10a4d316f3c5a10df018c57f</Anchor>
+                <Path>classCommunicator_1_1UISchema.html</Path>
+                <Anchor>a50c644d4fc9b2a65f12530a941375588</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -1724,6 +1986,12 @@
              </Node>
             </Subnodes>
            </Node>
+           <Node>
+            <Name>AutomatedBuild</Name>
+            <Path>classAutomatedBuild.html</Path>
+            <Subnodes>
+            </Subnodes>
+           </Node>
           </Subnodes>
          </Node>
          <Node>
@@ -1734,6 +2002,14 @@
           <Name>Class Hierarchy</Name>
           <Path>hierarchy.html</Path>
           <Subnodes>
+           <Node>
+            <Name>AirControl.actions.Actions</Name>
+            <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+           </Node>
+           <Node>
+            <Name>Communicator.AudioSchema</Name>
+            <Path>classCommunicator_1_1AudioSchema.html</Path>
+           </Node>
            <Node>
             <Name>Communicator.CameraSchema</Name>
             <Path>classCommunicator_1_1CameraSchema.html</Path>
@@ -1817,6 +2093,16 @@
              <Node>
               <Name>Communicator.PrimitiveToStringConverter</Name>
               <Path>classCommunicator_1_1PrimitiveToStringConverter.html</Path>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>JSONEncoder</Name>
+            <Path></Path>
+            <Subnodes>
+             <Node>
+              <Name>AirControl.communicator.NpEncoder</Name>
+              <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
              </Node>
             </Subnodes>
            </Node>
@@ -1939,6 +2225,10 @@
               </Subnodes>
              </Node>
              <Node>
+              <Name>AirControl.GPSEncoder</Name>
+              <Path>classAirControl_1_1GPSEncoder.html</Path>
+             </Node>
+             <Node>
               <Name>AirControl.LevelControl</Name>
               <Path>classAirControl_1_1LevelControl.html</Path>
              </Node>
@@ -1949,6 +2239,10 @@
              <Node>
               <Name>AirControl.Sun</Name>
               <Path>classAirControl_1_1Sun.html</Path>
+             </Node>
+             <Node>
+              <Name>AutomatedBuild</Name>
+              <Path>classAutomatedBuild.html</Path>
              </Node>
              <Node>
               <Name>Communicator.InputHandle</Name>
@@ -1973,6 +2267,10 @@
             <Path>classCommunicator_1_1PresetSchema.html</Path>
            </Node>
            <Node>
+            <Name>AirControl.sample_generator.samples</Name>
+            <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+           </Node>
+           <Node>
             <Name>Communicator.StaticControlSchema</Name>
             <Path>classCommunicator_1_1StaticControlSchema.html</Path>
            </Node>
@@ -1981,8 +2279,8 @@
             <Path>classCommunicator_1_1TODSchema.html</Path>
            </Node>
            <Node>
-            <Name>Communicator.UIAudioSchema</Name>
-            <Path>classCommunicator_1_1UIAudioSchema.html</Path>
+            <Name>Communicator.UISchema</Name>
+            <Path>classCommunicator_1_1UISchema.html</Path>
            </Node>
            <Node>
             <Name>Communicator.WeatherSchema</Name>
@@ -2135,6 +2433,14 @@
             <Path>AC__XboxAirplane__Input__Editor_8cs_source.html</Path>
            </Node>
            <Node>
+            <Name>actions.py</Name>
+            <Path>actions_8py_source.html</Path>
+           </Node>
+           <Node>
+            <Name>AutomatedBuild.cs</Name>
+            <Path>AutomatedBuild_8cs_source.html</Path>
+           </Node>
+           <Node>
             <Name>ColorEncoding.cs</Name>
             <Path>ColorEncoding_8cs_source.html</Path>
            </Node>
@@ -2147,8 +2453,8 @@
             <Path>communicator_8py_source.html</Path>
            </Node>
            <Node>
-            <Name>dataUtils.py</Name>
-            <Path>dataUtils_8py_source.html</Path>
+            <Name>GPSEncoder.cs</Name>
+            <Path>GPSEncoder_8cs_source.html</Path>
            </Node>
            <Node>
             <Name>IAirplaneUI.cs</Name>
@@ -2183,8 +2489,8 @@
             <Path>OutputHandle_8cs_source.html</Path>
            </Node>
            <Node>
-            <Name>schemaDef.py</Name>
-            <Path>schemaDef_8py_source.html</Path>
+            <Name>sample_generator.py</Name>
+            <Path>sample__generator_8py_source.html</Path>
            </Node>
            <Node>
             <Name>Sun.cs</Name>

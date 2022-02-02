@@ -1,9 +1,9 @@
-﻿{
+{
     "files.exclude":
     {
         "**/.DS_Store":true,
         "**/.git":true,
-        "**/.gitignore":true,
+        "**/.gitignore":false,
         "**/.gitmodules":true,
         "**/*.booproj":true,
         "**/*.pidb":true,
@@ -17,11 +17,6 @@
         "**/*.mid":true,
         "**/*.midi":true,
         "**/*.wav":true,
-        "**/*.gif":true,
-        "**/*.ico":true,
-        "**/*.jpg":true,
-        "**/*.jpeg":true,
-        "**/*.png":true,
         "**/*.psd":true,
         "**/*.tga":true,
         "**/*.tif":true,
@@ -36,15 +31,14 @@
         "**/*.MA":true,
         "**/*.obj":true,
         "**/*.OBJ":true,
-        "**/*.asset":true,
         "**/*.cubemap":true,
         "**/*.flare":true,
         "**/*.mat":true,
         "**/*.meta":true,
         "**/*.prefab":true,
-        "**/*.unity":true,
+        "**/*.unity":false,
         "build/":true,
-        "Build/":true,
+        "Build/":false,
         "Library/":true,
         "library/":true,
         "obj/":true,
@@ -52,5 +46,8 @@
         "ProjectSettings/":true,
         "temp/":true,
         "Temp/":true
+    },
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": true
     }
 }

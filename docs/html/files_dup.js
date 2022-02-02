@@ -29,10 +29,12 @@ var files_dup =
     [ "AC_Basic_Follow_Camera.cs", "AC__Basic__Follow__Camera_8cs_source.html", null ],
     [ "AC_XboxAirplane_Input.cs", "AC__XboxAirplane__Input_8cs_source.html", null ],
     [ "AC_XboxAirplane_Input_Editor.cs", "AC__XboxAirplane__Input__Editor_8cs_source.html", null ],
+    [ "actions.py", "actions_8py_source.html", null ],
+    [ "AutomatedBuild.cs", "AutomatedBuild_8cs_source.html", null ],
     [ "ColorEncoding.cs", "ColorEncoding_8cs_source.html", null ],
     [ "CommonConfigs.cs", "CommonConfigs_8cs_source.html", null ],
     [ "communicator.py", "communicator_8py_source.html", null ],
-    [ "dataUtils.py", "dataUtils_8py_source.html", null ],
+    [ "GPSEncoder.cs", "GPSEncoder_8cs_source.html", null ],
     [ "IAirplaneUI.cs", "IAirplaneUI_8cs_source.html", null ],
     [ "InputHandle.cs", "InputHandle_8cs_source.html", null ],
     [ "IOInit.cs", "IOInit_8cs_source.html", null ],
@@ -41,6 +43,6 @@ var files_dup =
     [ "Lidar.cs", "Lidar_8cs_source.html", null ],
     [ "NetworkCommunicator.cs", "NetworkCommunicator_8cs_source.html", null ],
     [ "OutputHandle.cs", "OutputHandle_8cs_source.html", null ],
-    [ "schemaDef.py", "schemaDef_8py_source.html", null ],
+    [ "sample_generator.py", "sample__generator_8py_source.html", null ],
     [ "Sun.cs", "Sun_8cs_source.html", null ]
 ];

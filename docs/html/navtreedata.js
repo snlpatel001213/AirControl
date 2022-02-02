@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classCommunicator_1_1CameraSchema.html"
+"classAirControl_1_1LevelControl.html"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';
