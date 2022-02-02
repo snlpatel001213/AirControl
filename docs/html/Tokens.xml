@@ -2,6 +2,75 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
+      <Name>AutomatedBuild</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BuildAll</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>a4ec0f96f33e7d566593891584b619c96</Anchor>
+    <Abstract>Buld for all the platforms</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BuildLinux</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>a5bc349d227a0874cdb1d7f4fde2e86ad</Anchor>
+    <Abstract>Build for Linux</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BuildWindows</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>a588ccf88ff239be19cebcec54e23d9f5</Anchor>
+    <Abstract>Build for Windows</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BuildMac</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>ab90a3247483ef9c0bacbae3cf2495ce5</Anchor>
+    <Abstract>Build for Mac</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BuildWebGL</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>a2b40898ce2e896ce07cc5b329c88a025</Anchor>
+    <Abstract>Build for WebGL</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl</Name>
       <APILanguage>csharp</APILanguage>
       <Type>ns</Type>
@@ -693,6 +762,15 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>AirControl::GPSEncoder</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.GPSEncoder</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1GPSEncoder.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl::IAirplaneUI</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
@@ -768,6 +846,136 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>AirControl::actions::Actions</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>bool2string</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>a12e2959d094b606edf72ab1905006756</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set_camera</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>a26620c40d731d7adee8c33d1ff135822</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>step</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>abaaf5a51023b0e6784125e85f4fcd22b</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set_fuel</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>a6fcbf31d553806c3685273b8c135c421</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_output</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>a7d7d4906e4e06cf46a9531d1c61a0916</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>reset</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>acf02d647d5c27bff77e70964d857bc8c</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set_lidar</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>a8be4d27b7213f145d49fe1034ae61190</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set_TOD</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>aecc1524b1eb38c7b5d7625fd8cd19dea</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set_ui</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>ad99c59ecaf8c310f5819e1e1b4fb1ce3</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set_audio</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>a2238f87cc242fe62598cf4e8fb21597b</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>set_weather</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>ae093f98d391701986b233ec5686607f5</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl::communicator::Communicator</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -810,6 +1018,24 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>AirControl::communicator::NpEncoder</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.communicator.NpEncoder</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AirControl::sample_generator::samples</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Commons</Name>
       <APILanguage>csharp</APILanguage>
       <Type>ns</Type>
@@ -825,6 +1051,16 @@
       <Scope>Communicator</Scope>
     </TokenIdentifier>
     <Path>namespaceCommunicator.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Communicator::AudioSchema</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Communicator.AudioSchema</Scope>
+    </TokenIdentifier>
+    <Path>classCommunicator_1_1AudioSchema.html</Path>
+    <Abstract>Ui and Audio class for serialization deserialization</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -966,6 +1202,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>MyAction</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Communicator.NetworkCommunicator</Scope>
+    </TokenIdentifier>
+    <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
+    <Anchor>a3733cbd8ba357d67bfec13564e9b0f3b</Anchor>
+    <DeclaredIn>NetworkCommunicator.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>SendMessage</Name>
       <APILanguage>csharp</APILanguage>
       <Type>instm</Type>
@@ -1072,12 +1319,12 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>Communicator::UIAudioSchema</Name>
+      <Name>Communicator::UISchema</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
-      <Scope>Communicator.UIAudioSchema</Scope>
+      <Scope>Communicator.UISchema</Scope>
     </TokenIdentifier>
-    <Path>classCommunicator_1_1UIAudioSchema.html</Path>
+    <Path>classCommunicator_1_1UISchema.html</Path>
     <Abstract>Ui and Audio class for serialization deserialization</Abstract>
   </Token>
   <Token>

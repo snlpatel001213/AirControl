@@ -21,6 +21,7 @@ namespace AirControl
                 StaticLevelSchema.LevelReload = false;
             }
         }
+        
         /// <summary>
         /// Reset the level to startover
         /// </summary>
@@ -28,6 +29,7 @@ namespace AirControl
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
         }
+
         /// <summary>
         /// Function to quit  the application from Python API 
         /// To be added in v0.2.0

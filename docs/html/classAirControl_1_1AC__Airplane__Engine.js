@@ -1,6 +1,7 @@
 var classAirControl_1_1AC__Airplane__Engine =
 [
     [ "CalculateForce", "classAirControl_1_1AC__Airplane__Engine.html#a726327c717c65e4d221eab37699c2015", null ],
+    [ "liftOff", "classAirControl_1_1AC__Airplane__Engine.html#a20fbd507100349c12d76fd8f0a31a400", null ],
     [ "maxForce", "classAirControl_1_1AC__Airplane__Engine.html#a78477c13a54178da3f7fe3efc7a61bee", null ],
     [ "maxRPM", "classAirControl_1_1AC__Airplane__Engine.html#a4bb6c703292d24f6a99fcbc7908a638f", null ],
     [ "powerCurve", "classAirControl_1_1AC__Airplane__Engine.html#ad97c0923303d2b2ea425414e983d1eb7", null ],

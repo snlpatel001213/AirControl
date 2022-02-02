@@ -54,12 +54,19 @@ namespace Commons
             return data;
         } 
 
+        /// <summary>
+        /// Input output counter for debug only
+        /// </summary>
+        /// <value></value>
         public static int Counter{
             get{return counter;}
             set{counter = value;}
         }
 
-        
+        /// <summary>
+        /// To delete the files and then the folder 
+        /// </summary>
+        /// <param name="FolderName"></param>
         public static void clearFolder(string FolderName)
         {
             DirectoryInfo dir = new DirectoryInfo(FolderName);

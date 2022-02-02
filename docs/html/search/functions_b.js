@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['query_215',['Query',['../classSQLite4Unity3d_1_1SQLiteConnection.html#a68c2252c8e361a19326c8d24291b5f68',1,'SQLite4Unity3d::SQLiteConnection']]],
-  ['query_3c_20t_20_3e_216',['Query&lt; T &gt;',['../classSQLite4Unity3d_1_1SQLiteConnection.html#afdd39fb5cf238d6efe3d6dbdef05c2bd',1,'SQLite4Unity3d::SQLiteConnection']]]
+  ['receive_5fdata_204',['receive_data',['../classAirControl_1_1communicator_1_1Communicator.html#ae766f39eb5471e6c0aff191ec5127d58',1,'AirControl::communicator::Communicator']]],
+  ['reset_205',['reset',['../classAirControl_1_1actions_1_1Actions.html#acf02d647d5c27bff77e70964d857bc8c',1,'AirControl::actions::Actions']]],
+  ['resetfuel_206',['ResetFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#a2398e562b82d5047005b79d949a1e995',1,'AirControl::AC_Airplane_Fuel']]],
+  ['restartlevel_207',['RestartLevel',['../classAirControl_1_1LevelControl.html#a7b06d34c99cdf9eccb2c5ad9351b6e60',1,'AirControl::LevelControl']]]
 ];

@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['receive_5fdata_72',['receive_data',['../classAirControl_1_1communicator_1_1Communicator.html#ae766f39eb5471e6c0aff191ec5127d58',1,'AirControl::communicator::Communicator']]],
-  ['resetfuel_73',['ResetFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#a2398e562b82d5047005b79d949a1e995',1,'AirControl::AC_Airplane_Fuel']]],
-  ['restartlevel_74',['RestartLevel',['../classAirControl_1_1LevelControl.html#a7b06d34c99cdf9eccb2c5ad9351b6e60',1,'AirControl::LevelControl']]]
+  ['oncamerachange_77',['OnCameraChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a9f7ee324a4310869ca481ad868516ee9',1,'AirControl::AC_Airplane_CameraController']]],
+  ['onscenechange_78',['OnSceneChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a5529c3888f1d6ce6a2ae12ea8f1b435b',1,'AirControl::AC_Airplane_CameraController']]],
+  ['outputhandle_79',['OutputHandle',['../classCommunicator_1_1OutputHandle.html',1,'Communicator']]],
+  ['outputschema_80',['OutputSchema',['../classCommunicator_1_1OutputSchema.html',1,'Communicator']]]
 ];

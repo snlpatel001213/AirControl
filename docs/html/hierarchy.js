@@ -1,5 +1,7 @@
 var hierarchy =
 [
+    [ "AirControl.actions.Actions", "classAirControl_1_1actions_1_1Actions.html", null ],
+    [ "Communicator.AudioSchema", "classCommunicator_1_1AudioSchema.html", null ],
     [ "Communicator.CameraSchema", "classCommunicator_1_1CameraSchema.html", null ],
     [ "AirControl.AC_Airplane_CameraController.CapturePass", "structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html", null ],
     [ "AirControl.ColorEncoding", "classAirControl_1_1ColorEncoding.html", null ],
@@ -22,6 +24,9 @@ var hierarchy =
     [ "Communicator.IOInit", "classCommunicator_1_1IOInit.html", null ],
     [ "JsonConverter", null, [
       [ "Communicator.PrimitiveToStringConverter", "classCommunicator_1_1PrimitiveToStringConverter.html", null ]
+    ] ],
+    [ "JSONEncoder", null, [
+      [ "AirControl.communicator.NpEncoder", "classAirControl_1_1communicator_1_1NpEncoder.html", null ]
     ] ],
     [ "Communicator.LevelSchema", "classCommunicator_1_1LevelSchema.html", null ],
     [ "Communicator.LidarSchema", "classCommunicator_1_1LidarSchema.html", null ],
@@ -54,17 +59,20 @@ var hierarchy =
       [ "AirControl.AC_Basic_Follow_Camera", "classAirControl_1_1AC__Basic__Follow__Camera.html", [
         [ "AirControl.AC_Airplane_Camera", "classAirControl_1_1AC__Airplane__Camera.html", null ]
       ] ],
+      [ "AirControl.GPSEncoder", "classAirControl_1_1GPSEncoder.html", null ],
       [ "AirControl.LevelControl", "classAirControl_1_1LevelControl.html", null ],
       [ "AirControl.Lidar", "classAirControl_1_1Lidar.html", null ],
       [ "AirControl.Sun", "classAirControl_1_1Sun.html", null ],
+      [ "AutomatedBuild", "classAutomatedBuild.html", null ],
       [ "Communicator.InputHandle", "classCommunicator_1_1InputHandle.html", null ],
       [ "Communicator.NetworkCommunicator", "classCommunicator_1_1NetworkCommunicator.html", null ],
       [ "Communicator.OutputHandle", "classCommunicator_1_1OutputHandle.html", null ]
     ] ],
     [ "Communicator.OutputSchema", "classCommunicator_1_1OutputSchema.html", null ],
     [ "Communicator.PresetSchema", "classCommunicator_1_1PresetSchema.html", null ],
+    [ "AirControl.sample_generator.samples", "classAirControl_1_1sample__generator_1_1samples.html", null ],
     [ "Communicator.StaticControlSchema", "classCommunicator_1_1StaticControlSchema.html", null ],
     [ "Communicator.TODSchema", "classCommunicator_1_1TODSchema.html", null ],
-    [ "Communicator.UIAudioSchema", "classCommunicator_1_1UIAudioSchema.html", null ],
+    [ "Communicator.UISchema", "classCommunicator_1_1UISchema.html", null ],
     [ "Communicator.WeatherSchema", "classCommunicator_1_1WeatherSchema.html", null ]
 ];
