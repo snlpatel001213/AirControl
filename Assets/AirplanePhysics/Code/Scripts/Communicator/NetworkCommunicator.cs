@@ -45,6 +45,7 @@ namespace Communicator
 
 		public InputHandle inputHandle;
 		public OutputHandle outputHandle;
+		bool isOutput;
 		#endregion 	
 		
 		#region  Default Methods
@@ -77,52 +78,61 @@ namespace Communicator
 									int length; 						
 									// Read incomming stream into byte arrary.				
 									while ((length = stream.Read(bytes, 0, bytes.Length)) != 0) 
-									{ 							
+									{
+										// Debug.Log("In loop0");
 										try
 										{
+											// Debug.Log("In loop1");
 											var incommingData = new byte[length]; 							
 											Array.Copy(bytes, 0, incommingData, 0, length);  							
 											// Convert byte array to string message. 							
 											string clientMessage = Encoding.ASCII.GetString(incommingData); 
-											
+											// Debug.Log("In loop2");
 											clientMessage = clientMessage.Replace("}{", "} | {");
 											string [] inputArray = clientMessage.Split('|');
 											foreach(string eachInput in inputArray)
 											{
-												bool isOutput = false;
+												isOutput = false;
 												try{
 													// Debug.Log("|||||||||||| > "+eachInput);
 													var inputJson =  JObject.Parse(eachInput);
 													inputHandle.ParseInput(inputJson);	
 													isOutput = bool.Parse(inputJson["IsOutput"].ToString());
+													// Debug.Log("Received input <<<<<<<<<<<<<<<");
 												}
 												catch (SocketException e){
 													Console.WriteLine("JsonReaderException : {0}", e.Source);
+													isOutput = true;
 												}
 												catch (JsonReaderException e){
 													Console.WriteLine("JsonReaderException : {0}", e.Source);
+													isOutput = true;
 												}	
 												// once received the message, send message in return
 												if(isOutput){
 
 													string outputmsg = outputHandle.ParseOutput();
 													SendMessage(outputmsg);
+													// Debug.Log(outputmsg);
+													// Debug.Log("Sent Output >>>>>>>>>>>>>>>>>");
 												}
 												else{
 													string logOutput = outputHandle.LogOutput();
 													SendMessage(logOutput);
-												}
-												ResetThings();											
+												}							
 											}
 										}
 										catch(Exception ex)
 										{
 											Debug.Log("RandomException " + ex.ToString());
+											isOutput = true;
 										}
+										ResetThings();
 										
 									} 					
 								} 				
-							} 			
+							}
+								
 						} 
 				}
 				else
@@ -132,33 +142,58 @@ namespace Communicator
 			} 		
 			catch (SocketException socketException) { 			
 				Debug.Log("SocketException " + socketException.ToString());
+				tcpListener.Stop();
+				isOutput = true;
 			}     
 		}
-		/// <summary>
-		/// Reset things after the response is sent
-		/// </summary>
+		// /// <summary>
+		// /// Reset things after the response is sent
+		// /// </summary>
 		public void ResetThings()
 		{
-			StaticOutputSchema.IfCollision = false;
+			if(StaticOutputSchema.IfCollision)
+			{
+				StaticOutputSchema.IfCollision = false;
+			}
+			
+		}
+
+		/// <summary>
+		/// 
+		/// Usage : UnityEvent m_MyEvent = new UnityEvent();
+    	/// public NetworkCommunicator ns;
+		/// m_MyEvent.AddListener(ns.MyAction);
+        /// m_MyEvent.Invoke();
+		/// </summary>
+		public void MyAction()
+		{
+			string outputmsg = outputHandle.ParseOutput();
+			Debug.Log("Event Tgriggered");
+			SendMessage(outputmsg);
+			Debug.Log(outputmsg);
 		}
 
 		/// <summary> 	
 		/// Send message to client using socket connection. 	
 		/// </summary> 	
 		public new void SendMessage(String outStructSerialized) { 		
-			if (connectedTcpClient == null) {             
+			if (connectedTcpClient == null) {  
+				// Debug.Log("Writting Out0");	           
 				return;         
 			}  		
 			try { 			
-				// Get a stream object for writing. 			
+				// Get a stream object for writing. 
+				// Debug.Log("Writting Out1");			
 				NetworkStream stream = connectedTcpClient.GetStream(); 			
-				if (stream.CanWrite) {                 
+				if (stream.CanWrite) {  
+					// Debug.Log("Writting Out2");			               
 					// string serverMessage = "This is a message from your server."; 			
 					// Convert string message to byte array.                 
 					byte[] serverMessageAsByteArray = Encoding.ASCII.GetBytes(outStructSerialized); 				
 					// Write byte array to socketConnection stream.               
 					stream.Write(serverMessageAsByteArray, 0, serverMessageAsByteArray.Length);               
-					// Debug.Log("Server sent his message - should be received by client");           
+					// Debug.Log("Server sent his message - should be received by client");          
+					// Debug.Log("Writting Out3");			 
 				}       
 			} 		
 			catch (SocketException socketException) {             

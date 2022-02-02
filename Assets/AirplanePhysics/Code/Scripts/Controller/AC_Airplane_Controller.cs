@@ -63,7 +63,6 @@ namespace AirControl
         #region Constants
         const float poundToKilos = 0.453592f;
         const float metersToFeets = 3.28084f;
-        private double MaxR = 100;
         private float start_x; 
         private float start_y;
         private float start_z;
@@ -111,43 +110,8 @@ namespace AirControl
             // rewardCalculator();
         }
 
-        /// <summary>
-        /// Collision detection if plane comes in contact with anyother thing then runway.
-        /// Airplane belongs to runway and air!
-        /// </summary>
-        /// <param name="col">collision object</param>
-        // void OnCollisionEnter(Collision col)
-        // {
-        //     if(col.gameObject.tag!= "Runway")
-        //     {
-        //         bool triggerEntered =true;
-        //         while (triggerEntered)
-        //         {
-        //             MaxR -=10f;
-        //             Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
-        //             col.gameObject.active = false;
-        //             StaticOutputSchema.IfCollision=true;
-        //             triggerEntered=false;
-        //         }
-                
-        //     }
-        // }
+        
 
-        // void OnTriggerEnter(Collider col)
-        // {
-        //    if(col.CompareTag("Fence"))
-        //     {
-        //         bool triggerEntered =true;
-        //         while (triggerEntered)
-        //         {
-        //             MaxR -=10f;
-        //             Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.attachedRigidbody.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
-        //             col.gameObject.active = false;
-        //             StaticOutputSchema.IfCollision=true;
-        //             triggerEntered=false;
-        //         }
-        //     }
-        // }
         // void rewardCalculator(){
         //     float Height = 100f;
         //     float Base = start_y;
@@ -159,7 +123,7 @@ namespace AirControl
         //     StaticOutputSchema.Reward = MaxR;
         //     // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
 
-        // }
+        // // }
         #endregion
 
         #region Custom Methods

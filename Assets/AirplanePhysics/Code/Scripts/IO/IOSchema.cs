@@ -91,6 +91,7 @@ namespace Communicator
 		public static float BankAngle;
 		public static float PitchAngle;
 		public static bool IfCollision;
+		public static string collisionObject = ""; 
 		public static float Latitude;
 		public static float Longitude;
 		public static byte [] ScreenCapture;
@@ -118,6 +119,7 @@ namespace Communicator
 		public float CurrentSpeed;
 		public float BankAngle;
 		public bool IfCollision;
+		public string collisionObject = ""; 
 		public float Latitude;
 		public float Longitude;
 		public float PitchAngle;

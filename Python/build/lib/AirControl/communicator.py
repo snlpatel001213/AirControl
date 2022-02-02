@@ -1,6 +1,9 @@
-import socket
 import json
+import socket
+import time
+
 import numpy as np
+
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -26,7 +29,8 @@ class Communicator:
         """
         try:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-            self.sock.connect((host, port))
+            self.sock.connect((host, port))   
+            # self.sock.settimeout(0.5)      
         except Exception as e:
             print(e)
 
@@ -39,6 +43,7 @@ class Communicator:
             sock (socket): Socket connection aquired from `get_socket` method
         """
         data = json.dumps(data_dict, cls=NpEncoder)
+
         self.sock.sendall(data.encode("utf-8"))
 
     def receive_data(self):
@@ -50,7 +55,10 @@ class Communicator:
         Returns:
             data(dict): Data Received from the server
         """
-        BUFF_SIZE = 4096  # 4 KiB
+        # sleep stabilizes the TCP connection and bring in oder
+        # if not used then the operations will be hightly unstable and event will be missed
+        time.sleep(0.05)
+        BUFF_SIZE = 1024  # 1 MB
         data = b""
         while True:
             part = self.sock.recv(BUFF_SIZE)

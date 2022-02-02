@@ -28,6 +28,21 @@ namespace AirControl
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
         }
+        /// <summary>
+        /// Function to quit  the application from Python API 
+        /// To be added in v0.2.0
+        /// </summary>
+        void applicationQuit()
+        {
+            #if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+            #elif UNITY_WEBPLAYER
+            Application.OpenURL(webplayerQuitURL);
+            #else
+            Application.Quit();
+            #endif
+        }
+
     }
 }
 
