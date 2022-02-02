@@ -44,6 +44,11 @@ namespace AirControl
             // DB_Functions.SetSpeed(connection, currentKnots);
             #endregion         
         }
+
+        /// <summary>
+        /// Detect if the Airplane turn upside down on runway
+        /// Then it will be also considered as collision
+        /// </summary>
         #endregion
     }
 }

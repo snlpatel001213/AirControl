@@ -48,41 +48,44 @@ namespace AirControl
                 // HandleLocation();
                 
             }
-            // DB based operations
+            // detect if airplane turns upside down
             
         }
 
         void OnCollisionExit(Collision col)
         {
-            if(col.gameObject.tag!= "Runway" &&  !hasEntered)
-            {
-                hasEntered = true;
+            // if(col.gameObject.tag!= "Runway" )
+            // {
+                // hasEntered = true;
                 MaxR -=10f;
-                Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
+                Debug.LogFormat("Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
+                StaticOutputSchema.IfCollision=true;
+                StaticOutputSchema.collisionObject = col.gameObject.tag;
+            // }
+            return;
+        }
+
+        void OnTriggerExit(Collider col)
+        {
+           if(col.CompareTag("Fence"))
+            {
+                // hasEntered = true;
+                MaxR -=10f;
+                Debug.LogFormat("Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
                 StaticOutputSchema.IfCollision=true;
                 StaticOutputSchema.collisionObject = col.gameObject.tag;
             }
             return;
         }
 
-        void OnTriggerExit(Collider col)
-        {
-           if(col.CompareTag("Fence") &&  !hasEntered)
-            {
-                hasEntered = true;
-                MaxR -=10f;
-                Debug.LogFormat("Collided with {0} {1} , Counter {2}",col.attachedRigidbody.gameObject.name,col.gameObject.tag, CommonFunctions.Counter);  
-                StaticOutputSchema.IfCollision=true;
-                StaticOutputSchema.collisionObject = col.gameObject.tag;
-            }
-            return;
-        }
         
         #endregion
 
         protected virtual void HandlePhysics(){
 
         }
+
+        
         
     }
 

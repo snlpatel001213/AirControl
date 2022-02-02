@@ -46,7 +46,8 @@ namespace Communicator
                 Longitude = StaticOutputSchema.Longitude,
                 IfCollision = StaticOutputSchema.IfCollision,
                 Reward = StaticOutputSchema.Reward,
-                Counter = CommonFunctions.Counter 
+                Counter = CommonFunctions.Counter,
+                collisionObject = StaticOutputSchema.collisionObject,
                 
             }, new PrimitiveToStringConverter());
             if(StaticOutputSchema.IfCollision)

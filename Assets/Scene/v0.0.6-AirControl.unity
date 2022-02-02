@@ -1797,7 +1797,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &735263633
 Transform:
   m_ObjectHideFlags: 0
@@ -3298,7 +3298,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1597193023
 Transform:
   m_ObjectHideFlags: 0
@@ -3889,8 +3889,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longitude: -504.55
   latitude: -1650.4
-  hour: 14
-  minutes: 1
+  hour: 15
+  minutes: 51
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1835753706
@@ -4142,7 +4142,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2053993362
 Transform:
   m_ObjectHideFlags: 0

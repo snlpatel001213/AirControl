@@ -30,7 +30,7 @@ class Communicator:
         try:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.sock.connect((host, port))   
-            # self.sock.settimeout(0.5)      
+            self.sock.settimeout(10)      
         except Exception as e:
             print(e)
 
