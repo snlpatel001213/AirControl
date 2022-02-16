@@ -71,6 +71,33 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>NewInputControls</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>NewInputControls</Scope>
+    </TokenIdentifier>
+    <Path>classNewInputControls.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>NewInputControls::AirplaneActions</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>NewInputControls.AirplaneActions</Scope>
+    </TokenIdentifier>
+    <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>NewInputControls::IAirplaneActions</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>NewInputControls.IAirplaneActions</Scope>
+    </TokenIdentifier>
+    <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl</Name>
       <APILanguage>csharp</APILanguage>
       <Type>ns</Type>
@@ -621,13 +648,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>HandleInput</Name>
+      <Name>HandleInputOld</Name>
       <APILanguage>csharp</APILanguage>
       <Type>instm</Type>
       <Scope>AirControl.AC_BaseAirplane_Input</Scope>
     </TokenIdentifier>
     <Path>classAirControl_1_1AC__BaseAirplane__Input.html</Path>
-    <Anchor>a11051fe1627e915ee5e2be703c880904</Anchor>
+    <Anchor>ae2a9fc11da267eb2d5383578a95be667</Anchor>
     <Abstract>Take input such as Pitch, Yaw, Roll etc</Abstract>
     <DeclaredIn>AC_BaseAirplane_Input.cs</DeclaredIn>
   </Token>
@@ -707,13 +734,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>HandleInput</Name>
+      <Name>HandleInputOld</Name>
       <APILanguage>csharp</APILanguage>
       <Type>instm</Type>
       <Scope>AirControl.AC_XboxAirplane_Input</Scope>
     </TokenIdentifier>
     <Path>classAirControl_1_1AC__XboxAirplane__Input.html</Path>
-    <Anchor>a0cb265fac75f796a646acfdbbe1d0c28</Anchor>
+    <Anchor>aa9f2421c44d1b1f4e09e9b6fcf634fde</Anchor>
     <Abstract>Handle Xbox input, override the keyboard behavior make sure you update input settings in Unity Then O...</Abstract>
     <DeclaredIn>AC_XboxAirplane_Input.cs</DeclaredIn>
   </Token>
@@ -1336,5 +1363,23 @@
     </TokenIdentifier>
     <Path>classCommunicator_1_1WeatherSchema.html</Path>
     <Abstract>weather class for serialization deserialization</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>UnityTemplateProjects</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>ns</Type>
+      <Scope>UnityTemplateProjects</Scope>
+    </TokenIdentifier>
+    <Path>namespaceUnityTemplateProjects.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>UnityTemplateProjects::SimpleCameraController</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>UnityTemplateProjects.SimpleCameraController</Scope>
+    </TokenIdentifier>
+    <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
   </Token>
 </Tokens>

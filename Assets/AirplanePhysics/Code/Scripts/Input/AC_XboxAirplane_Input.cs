@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
+
 namespace AirControl
 {
     /// <summary>
@@ -9,7 +11,7 @@ namespace AirControl
     public class AC_XboxAirplane_Input : AC_BaseAirplane_Input
     {
         #region Variable
-
+        
         #endregion
 
         #region Builtin Methods
@@ -24,16 +26,17 @@ namespace AirControl
         /// 1. https://answers.unity.com/questions/1350081/xbox-one-controller-mapping-solved.html
         /// 2. https://www.udemy.com/course/intro-to-airplane-physics-in-unity-3d/learn/lecture/10348654#questions
         /// </summary>
-        protected override void HandleInput()
+
+        protected override void HandleInputOld()
         {
-            base.HandleInput();
+            base.HandleInputOld();
             base.ClampInputs();
             // Process pitch, roll, yaw and throttle
             pitch +=  Input.GetAxis("Vertical");
             roll +=  Input.GetAxis("Horizontal");
-            yaw +=  Input.GetAxis("X_RH_Stick");
+            yaw +=  Input.GetAxis("RS_h");
             
-            throttle +=  Input.GetAxis("X_RV_Stick");
+            throttle +=  Input.GetAxis("RS_v");
             // Process brakes bool
             brake =  Input.GetAxis("Fire1");
             // Process flaps
@@ -50,6 +53,14 @@ namespace AirControl
             // camerSwitch =  Input.GetButtonDown("X_Y_Button") || Input.GetKeyDown(cameraKey);
 
         }
+        
+        protected override void HandleInputNew()
+        {
+            // base.HandleInputNew();
+            // control.Airplane.Brake += ctx => brake = ctx.ReadValue<float>();
+            // Debug.Log("brake  : " +  brake);
+        }
+
         #endregion
 
     }

@@ -43,7 +43,7 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
-        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName+".x86_64"), BuildTarget.StandaloneLinux64, BuildOptions.None);
+        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".x86_64"), BuildTarget.StandaloneLinux64, BuildOptions.None);
     }
 
     /// <summary>
@@ -64,7 +64,7 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
-        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName+".exe"), BuildTarget.StandaloneWindows, BuildOptions.None);
+        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".exe"), BuildTarget.StandaloneWindows, BuildOptions.None);
     }
 
     /// <summary>
@@ -85,7 +85,7 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
-        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName+".app"), BuildTarget.StandaloneOSX, BuildOptions.None);
+        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".app"), BuildTarget.StandaloneOSX, BuildOptions.None);
     }
 
     /// <summary>
@@ -106,7 +106,7 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
-        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName), BuildTarget.WebGL, BuildOptions.None);
+        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName), BuildTarget.WebGL, BuildOptions.None);
     }
 
 

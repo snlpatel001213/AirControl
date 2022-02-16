@@ -1,6 +1,7 @@
 var hierarchy =
 [
     [ "AirControl.actions.Actions", "classAirControl_1_1actions_1_1Actions.html", null ],
+    [ "NewInputControls.AirplaneActions", "structNewInputControls_1_1AirplaneActions.html", null ],
     [ "Communicator.AudioSchema", "classCommunicator_1_1AudioSchema.html", null ],
     [ "Communicator.CameraSchema", "classCommunicator_1_1CameraSchema.html", null ],
     [ "AirControl.AC_Airplane_CameraController.CapturePass", "structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html", null ],
@@ -12,6 +13,7 @@ var hierarchy =
       [ "AirControl.AC_XboxAirplane_Input_Editor", "classAirControl_1_1AC__XboxAirplane__Input__Editor.html", null ]
     ] ],
     [ "Communicator.FuelSchema", "classCommunicator_1_1FuelSchema.html", null ],
+    [ "NewInputControls.IAirplaneActions", "interfaceNewInputControls_1_1IAirplaneActions.html", null ],
     [ "AirControl.IAirplaneUI", "interfaceAirControl_1_1IAirplaneUI.html", [
       [ "AirControl.AC_Airplane_Airspeed", "classAirControl_1_1AC__Airplane__Airspeed.html", null ],
       [ "AirControl.AC_Airplane_Altimeter", "classAirControl_1_1AC__Airplane__Altimeter.html", null ],
@@ -20,6 +22,12 @@ var hierarchy =
       [ "AirControl.AC_Airplane_FuelGauge", "classAirControl_1_1AC__Airplane__FuelGauge.html", null ],
       [ "AirControl.AC_Airplane_Tachometer", "classAirControl_1_1AC__Airplane__Tachometer.html", null ],
       [ "AirControl.AC_Airplane_ThrottleLever", "classAirControl_1_1AC__Airplane__ThrottleLever.html", null ]
+    ] ],
+    [ "IDisposable", null, [
+      [ "NewInputControls", "classNewInputControls.html", null ]
+    ] ],
+    [ "IInputActionCollection2", null, [
+      [ "NewInputControls", "classNewInputControls.html", null ]
     ] ],
     [ "Communicator.IOInit", "classCommunicator_1_1IOInit.html", null ],
     [ "JsonConverter", null, [
@@ -66,7 +74,8 @@ var hierarchy =
       [ "AutomatedBuild", "classAutomatedBuild.html", null ],
       [ "Communicator.InputHandle", "classCommunicator_1_1InputHandle.html", null ],
       [ "Communicator.NetworkCommunicator", "classCommunicator_1_1NetworkCommunicator.html", null ],
-      [ "Communicator.OutputHandle", "classCommunicator_1_1OutputHandle.html", null ]
+      [ "Communicator.OutputHandle", "classCommunicator_1_1OutputHandle.html", null ],
+      [ "UnityTemplateProjects.SimpleCameraController", "classUnityTemplateProjects_1_1SimpleCameraController.html", null ]
     ] ],
     [ "Communicator.OutputSchema", "classCommunicator_1_1OutputSchema.html", null ],
     [ "Communicator.PresetSchema", "classCommunicator_1_1PresetSchema.html", null ],

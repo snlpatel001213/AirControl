@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classAirControl_1_1LevelControl.html"
+"classAirControl_1_1GPSEncoder.html#a82213a931a0de967d609ec2642cafe06"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

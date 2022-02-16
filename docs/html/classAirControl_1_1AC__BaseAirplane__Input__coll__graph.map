@@ -1,4 +1,8 @@
 <map id="AirControl.AC_BaseAirplane_Input" name="AirControl.AC_BaseAirplane_Input">
-<area shape="rect" id="node1" title="Base class to listen for keyboard Inputs" alt="" coords="5,80,208,121"/>
-<area shape="rect" id="node2" title=" " alt="" coords="45,5,169,32"/>
+<area shape="rect" id="node1" title="Base class to listen for keyboard Inputs" alt="" coords="16,199,219,240"/>
+<area shape="rect" id="node2" title=" " alt="" coords="34,109,158,136"/>
+<area shape="rect" id="node3" href="$classNewInputControls.html" title=" " alt="" coords="183,109,321,136"/>
+<area shape="rect" id="node4" title=" " alt="" coords="5,13,179,39"/>
+<area shape="rect" id="node5" title=" " alt="" coords="203,13,301,39"/>
+<area shape="rect" id="node6" href="$structNewInputControls_1_1AirplaneActions.html" title=" " alt="" coords="326,5,522,47"/>
 </map>

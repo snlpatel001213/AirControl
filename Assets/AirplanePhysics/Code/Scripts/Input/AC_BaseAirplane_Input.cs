@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
+using UnityEngine.InputSystem;
+
 namespace  AirControl
 {
     /// <summary>
@@ -11,6 +13,7 @@ namespace  AirControl
     {
         #region Variable
 
+        
         protected float pitch = 0f;
         protected float roll = 0f;
         protected float yaw = 0f;
@@ -22,11 +25,12 @@ namespace  AirControl
         protected KeyCode cameraKey = KeyCode.C;
         protected bool camerSwitch = false;
 
+        public NewInputControls control;
         // Slowly move the throttle
+          
         [Header("Sticky throttle value control how the throttle can be moved")]
         public float throttleSpeed = 0.5f;
         protected float stickyThrottle;
-        
 
         #endregion
 
@@ -65,9 +69,13 @@ namespace  AirControl
         
         #region Builtin Methods
         // Update is called once per frame
+        void Start(){
+            control = new NewInputControls();
+        }
         void Update()
         {
-            HandleInput();
+            // HandleInputOld();
+            HandleInputOld();
             StickyThrottleControl();
             ClampInputs();
 
@@ -80,7 +88,7 @@ namespace  AirControl
         /// <summary>
         /// Take input such as Pitch, Yaw, Roll etc
         /// </summary>
-        protected virtual void HandleInput(){
+        protected virtual void HandleInputOld(){
             // Process pitch, roll, yaw and throttle
             pitch =  Input.GetAxis("Vertical");
             roll =  Input.GetAxis("Horizontal");
@@ -104,6 +112,12 @@ namespace  AirControl
             camerSwitch = Input.GetKeyDown(cameraKey);
 
         }
+        
+        protected virtual void HandleInputNew(){
+
+        }
+
+       
         /// <summary>
         /// Implements the sticky behaviour of the throttle. Once force applied the throttle stay where it is left. 
         /// </summary>
