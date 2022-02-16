@@ -2,5 +2,7 @@ var annotated_dup =
 [
     [ "AirControl", "namespaceAirControl.html", "namespaceAirControl" ],
     [ "Communicator", "namespaceCommunicator.html", "namespaceCommunicator" ],
-    [ "AutomatedBuild", "classAutomatedBuild.html", null ]
+    [ "UnityTemplateProjects", "namespaceUnityTemplateProjects.html", "namespaceUnityTemplateProjects" ],
+    [ "AutomatedBuild", "classAutomatedBuild.html", null ],
+    [ "NewInputControls", "classNewInputControls.html", "classNewInputControls" ]
 ];

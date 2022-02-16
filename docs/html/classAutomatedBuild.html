@@ -226,7 +226,7 @@ static String&#160;</td><td class="memItemRight" valign="bottom"><b>releaseVersi
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        DirectoryInfo di  = Directory.CreateDirectory(buildPath);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">// Build player.</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName+<span class="stringliteral">&quot;.x86_64&quot;</span>), BuildTarget.StandaloneLinux64, BuildOptions.None);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+<span class="stringliteral">&quot;.x86_64&quot;</span>), BuildTarget.StandaloneLinux64, BuildOptions.None);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
@@ -270,7 +270,7 @@ static String&#160;</td><td class="memItemRight" valign="bottom"><b>releaseVersi
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        DirectoryInfo di  = Directory.CreateDirectory(buildPath);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="comment">// Build player.</span></div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName+<span class="stringliteral">&quot;.app&quot;</span>), BuildTarget.StandaloneOSX, BuildOptions.None);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+<span class="stringliteral">&quot;.app&quot;</span>), BuildTarget.StandaloneOSX, BuildOptions.None);</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
@@ -314,7 +314,7 @@ static String&#160;</td><td class="memItemRight" valign="bottom"><b>releaseVersi
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        }</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        DirectoryInfo di  = Directory.CreateDirectory(buildPath);</div>
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        <span class="comment">// Build player.</span></div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName), BuildTarget.WebGL, BuildOptions.None);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName), BuildTarget.WebGL, BuildOptions.None);</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
@@ -358,7 +358,7 @@ static String&#160;</td><td class="memItemRight" valign="bottom"><b>releaseVersi
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        DirectoryInfo di  = Directory.CreateDirectory(buildPath);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">// Build player.</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        BuildPipeline.BuildPlayer(levels, Path.Join(buildPath,appName+<span class="stringliteral">&quot;.exe&quot;</span>), BuildTarget.StandaloneWindows, BuildOptions.None);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+<span class="stringliteral">&quot;.exe&quot;</span>), BuildTarget.StandaloneWindows, BuildOptions.None);</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>

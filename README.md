@@ -2,9 +2,15 @@
   <img src="docs/images/logo/logo_original_large-256_x_256.png" height="200"/>
 </p>
 <BR>
+<div align="center">
+<h1>AirControl</h1>
+</div>
+
+<div align="center">
 
 ![GitHub release (latest by date)](https://img.shields.io/badge/Release-0.1.0-orange)
-![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl?style=plastic)
+![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl)
+![GitHub repo size](https://badgen.net/github/license/micromatch/micromatch)
 [![Documentation Status](https://readthedocs.org/projects/aircontrol/badge/?version=master)](https://aircontrol.readthedocs.io/en/master/?badge=master)
 ![GitHub issues](https://img.shields.io/github/issues/snlpatel001213/AirControl)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr-raw/snlpatel001213/Aircontrol)
@@ -12,6 +18,24 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/snlpatel001213/AirControl)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
 [![Gitter](https://badges.gitter.im/Aircontrol-chat/community.svg)](https://gitter.im/Aircontrol-chat/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+
+Supported OS
+
+![Apple](https://img.shields.io/badge/iOS-000000?style=for-the-badge&logo=ios&logoColor=white)
+![Windows](https://img.shields.io/badge/Windows-0078D6?style=for-the-badge&logo=windows&logoColor=white)
+![Linux](https://img.shields.io/badge/Ubuntu-E95420?style=for-the-badge&logo=ubuntu&logoColor=white)
+
+Supported Language
+
+![CSharp](https://img.shields.io/badge/C%23-239120?style=for-the-badge&logo=c-sharp&logoColor=white)
+![Python](https://img.shields.io/badge/Python-14354C?style=for-the-badge&logo=python&logoColor=white)
+![Jupyter Notebook](https://img.shields.io/badge/jupyter-%23FA0F00.svg?style=for-the-badge&logo=jupyter&logoColor=white)
+
+<!-- ![Python](https://img.shields.io/badge/NVIDIA-GTX1070-76B900?style=for-the-badge&logo=nvidia&logoColor=white) -->
+
+<!-- ![Youtube](https://img.shields.io/badge/YouTube-FF0000?style=for-the-badge&logo=youtube&logoColor=white) -->
+
+</div>
  
 # Welcome to Aircontrol
 
@@ -56,13 +80,30 @@ You can run Aircontrol in server-client mode in two different machines or both i
 </details>
 
 ## Getting started
-1. Windows - Not Tested
+
+```mermaid
+%%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'edgeLabelBackground':'#ffffee', 'tertiaryColor': '#fff0f0'}}}%%
+graph TD
+    A[Skills] --> C[Not Familier with Unity Engine]
+    C --> C_1[Use Binaries]
+    C_1 --> D[Windows]
+    C_1 --> E[Ubuntu]
+    C_1 --> F[Mac]
+    A[Skills] --> B[Familier with Unity Engine]
+    B --> H[Wants to Add/Edit Airplane/Assets etc..]
+    H --> I[yes]
+    H --> J[No]
+    I --> K[Build from source]
+    J --> C_1
+```
+
+1. Windows - Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
 2. Linux - Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
-3. macOS - Not Tested
+3. macOS - Not Tested [`Need Contributors`]
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it
 
@@ -91,6 +132,10 @@ Refer to the Project page for the future release, features and bug tracking : ht
 1. On January 15, 2009, US Airways Flight 1549, an Airbus A320 on a flight from New York City's LaGuardia Airport to Charlotte, North Carolina, struck a flock of birds shortly after take-off, losing all engine power. Unable to reach any airport for an emergency landing due to their low altitude, pilots Chesley "Sully" Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan. **Well! Sully did the best but Could we have a different outcome, If Reinforcement learning was controlling this plane?**. [Reference](https://en.wikipedia.org/wiki/US_Airways_Flight_1549)
 
 ## Contribute
-If you are keen to contribute to Aircontrol, refer to the contribution guide - `CONTRIBUTING.md`.
+We love your input! We want to make contributing to AirControl as easy and transparent as possible. Please see our Contributing Guide `CONTRIBUTING.md` to get started. Thank you to all our contributors!
+### Current Contributors
+<a href = "https://github.com/snlpatel001213/AirControl/graphs/contributors">
+<img src = "https://contrib.rocks/image?repo=snlpatel001213/AirControl"/>
+</a>
 
 

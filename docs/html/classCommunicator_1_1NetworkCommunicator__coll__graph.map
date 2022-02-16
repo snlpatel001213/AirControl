@@ -1,7 +1,11 @@
 <map id="Communicator.NetworkCommunicator" name="Communicator.NetworkCommunicator">
-<area shape="rect" id="node1" title="Class to manage the TCP network function" alt="" coords="548,70,820,97"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,62,129,89"/>
-<area shape="rect" id="node3" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title="Base class to listen for keyboard Inputs" alt="" coords="183,32,385,73"/>
-<area shape="rect" id="node4" href="$classCommunicator_1_1InputHandle.html" title="Handle inbound request from the TCP socket" alt="" coords="184,98,384,125"/>
-<area shape="rect" id="node5" href="$classCommunicator_1_1OutputHandle.html" title="Handle outbound request from the TCP socket" alt="" coords="179,149,389,175"/>
+<area shape="rect" id="node1" title="Class to manage the TCP network function" alt="" coords="913,73,1185,100"/>
+<area shape="rect" id="node2" title=" " alt="" coords="315,75,439,101"/>
+<area shape="rect" id="node3" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title="Base class to listen for keyboard Inputs" alt="" coords="548,158,751,199"/>
+<area shape="rect" id="node8" href="$classCommunicator_1_1InputHandle.html" title="Handle inbound request from the TCP socket" alt="" coords="549,107,749,133"/>
+<area shape="rect" id="node9" href="$classCommunicator_1_1OutputHandle.html" title="Handle outbound request from the TCP socket" alt="" coords="544,5,755,32"/>
+<area shape="rect" id="node4" href="$classNewInputControls.html" title=" " alt="" coords="308,165,447,192"/>
+<area shape="rect" id="node5" title=" " alt="" coords="17,115,190,141"/>
+<area shape="rect" id="node6" title=" " alt="" coords="54,165,153,192"/>
+<area shape="rect" id="node7" href="$structNewInputControls_1_1AirplaneActions.html" title=" " alt="" coords="5,217,201,258"/>
 </map>

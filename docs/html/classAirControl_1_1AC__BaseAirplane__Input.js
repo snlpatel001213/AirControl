@@ -1,11 +1,13 @@
 var classAirControl_1_1AC__BaseAirplane__Input =
 [
     [ "ClampInputs", "classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0", null ],
-    [ "HandleInput", "classAirControl_1_1AC__BaseAirplane__Input.html#a11051fe1627e915ee5e2be703c880904", null ],
+    [ "HandleInputNew", "classAirControl_1_1AC__BaseAirplane__Input.html#a54efbfcd74cca2fd3ef5e0d015c00078", null ],
+    [ "HandleInputOld", "classAirControl_1_1AC__BaseAirplane__Input.html#ae2a9fc11da267eb2d5383578a95be667", null ],
     [ "IOSwitch", "classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962", null ],
     [ "brake", "classAirControl_1_1AC__BaseAirplane__Input.html#a439ac565b5f91277a328efeed7be840c", null ],
     [ "cameraKey", "classAirControl_1_1AC__BaseAirplane__Input.html#ac52b877995233273d1c37ec96fadb7a8", null ],
     [ "camerSwitch", "classAirControl_1_1AC__BaseAirplane__Input.html#a0fab72a2b65f8a0e699df830f64bfe82", null ],
+    [ "control", "classAirControl_1_1AC__BaseAirplane__Input.html#a81f64249fb4441e042c0c55c5d37ff01", null ],
     [ "flaps", "classAirControl_1_1AC__BaseAirplane__Input.html#ae0eab120cdd214b8380f54925d340c3d", null ],
     [ "maxFlapIncrements", "classAirControl_1_1AC__BaseAirplane__Input.html#a13ad113359881bde74cd39d0c9c45d0a", null ],
     [ "pitch", "classAirControl_1_1AC__BaseAirplane__Input.html#a70a642fbfb1709c0e964600214cf3f11", null ],

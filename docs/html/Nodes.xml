@@ -37,6 +37,10 @@
             <Name>Communicator</Name>
             <Path>namespaceCommunicator.html</Path>
            </Node>
+           <Node>
+            <Name>UnityTemplateProjects</Name>
+            <Path>namespaceUnityTemplateProjects.html</Path>
+           </Node>
           </Subnodes>
          </Node>
         </Subnodes>
@@ -1053,9 +1057,14 @@
                 <Anchor>a2b880c1486afc1588c6e9d2057b3cba0</Anchor>
                </Node>
                <Node>
-                <Name>HandleInput</Name>
+                <Name>HandleInputNew</Name>
                 <Path>classAirControl_1_1AC__BaseAirplane__Input.html</Path>
-                <Anchor>a11051fe1627e915ee5e2be703c880904</Anchor>
+                <Anchor>a54efbfcd74cca2fd3ef5e0d015c00078</Anchor>
+               </Node>
+               <Node>
+                <Name>HandleInputOld</Name>
+                <Path>classAirControl_1_1AC__BaseAirplane__Input.html</Path>
+                <Anchor>ae2a9fc11da267eb2d5383578a95be667</Anchor>
                </Node>
                <Node>
                 <Name>IOSwitch</Name>
@@ -1076,6 +1085,11 @@
                 <Name>camerSwitch</Name>
                 <Path>classAirControl_1_1AC__BaseAirplane__Input.html</Path>
                 <Anchor>a0fab72a2b65f8a0e699df830f64bfe82</Anchor>
+               </Node>
+               <Node>
+                <Name>control</Name>
+                <Path>classAirControl_1_1AC__BaseAirplane__Input.html</Path>
+                <Anchor>a81f64249fb4441e042c0c55c5d37ff01</Anchor>
                </Node>
                <Node>
                 <Name>flaps</Name>
@@ -1247,9 +1261,14 @@
               <Path>classAirControl_1_1AC__XboxAirplane__Input.html</Path>
               <Subnodes>
                <Node>
-                <Name>HandleInput</Name>
+                <Name>HandleInputNew</Name>
                 <Path>classAirControl_1_1AC__XboxAirplane__Input.html</Path>
-                <Anchor>a0cb265fac75f796a646acfdbbe1d0c28</Anchor>
+                <Anchor>a05e9ea42fbcb119f01f932c1ced2adc9</Anchor>
+               </Node>
+               <Node>
+                <Name>HandleInputOld</Name>
+                <Path>classAirControl_1_1AC__XboxAirplane__Input.html</Path>
+                <Anchor>aa9f2421c44d1b1f4e09e9b6fcf634fde</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -1987,9 +2006,249 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>UnityTemplateProjects</Name>
+            <Path>namespaceUnityTemplateProjects.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>SimpleCameraController</Name>
+              <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>boost</Name>
+                <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
+                <Anchor>a10837e7d6130729fa1a3aacf83e40f99</Anchor>
+               </Node>
+               <Node>
+                <Name>invertY</Name>
+                <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
+                <Anchor>ad51f554076f0f3c227a5b865f96c5ce5</Anchor>
+               </Node>
+               <Node>
+                <Name>mouseSensitivity</Name>
+                <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
+                <Anchor>a0fed9301ab833d46c0740666ee05c1a8</Anchor>
+               </Node>
+               <Node>
+                <Name>mouseSensitivityCurve</Name>
+                <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
+                <Anchor>acc3108e7c3e9b684c44ea728c8177747</Anchor>
+               </Node>
+               <Node>
+                <Name>positionLerpTime</Name>
+                <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
+                <Anchor>a036fd7d0359c4010f5f1f667d782e429</Anchor>
+               </Node>
+               <Node>
+                <Name>rotationLerpTime</Name>
+                <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
+                <Anchor>a4b8acc62cd20ada031234bdc9c612126</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>AutomatedBuild</Name>
             <Path>classAutomatedBuild.html</Path>
             <Subnodes>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>NewInputControls</Name>
+            <Path>classNewInputControls.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>AirplaneActions</Name>
+              <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>AirplaneActions</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a81fbf913f1c24c77a45de57cf3ee6faa</Anchor>
+               </Node>
+               <Node>
+                <Name>Disable</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a5f5911573c9cbf48605764322baa1203</Anchor>
+               </Node>
+               <Node>
+                <Name>Enable</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a9554656870e9deb702ad1c5900a18d59</Anchor>
+               </Node>
+               <Node>
+                <Name>Get</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a20647e2ee3e08d297cfde2d3fa8af7f3</Anchor>
+               </Node>
+               <Node>
+                <Name>SetCallbacks</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a206357409832cce45e29454914ff7fb0</Anchor>
+               </Node>
+               <Node>
+                <Name>Brake</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>abb10424d290348f6336800fd44b6944a</Anchor>
+               </Node>
+               <Node>
+                <Name>CameraSwitch</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a16736542e31cbbfab6d0467b2e970387</Anchor>
+               </Node>
+               <Node>
+                <Name>enabled</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>aeb52f9a322ca38462d16cd2081156a7e</Anchor>
+               </Node>
+               <Node>
+                <Name>EngineCut</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>adcb082c894d37bb60a89dc1ae9359f27</Anchor>
+               </Node>
+               <Node>
+                <Name>Flaps</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>ab30a7878cac0953377484afb6919f445</Anchor>
+               </Node>
+               <Node>
+                <Name>Pitch</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a1522c3cff3d851a41afe5abdf1581fef</Anchor>
+               </Node>
+               <Node>
+                <Name>Roll</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a5e04ab72dd60eb6f483c20e942dcc5c8</Anchor>
+               </Node>
+               <Node>
+                <Name>Throttle</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a18403ab7ecdc34d212011b16dde0460a</Anchor>
+               </Node>
+               <Node>
+                <Name>Yaw</Name>
+                <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+                <Anchor>a89e67fd435e5db7526519fbff87c6ca8</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>IAirplaneActions</Name>
+              <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+              <Subnodes>
+               <Node>
+                <Name>OnBrake</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>a6d412be0466b679c527b9b51cbddce16</Anchor>
+               </Node>
+               <Node>
+                <Name>OnCameraSwitch</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>a23034a5fd7a4c2696cbb31b52e61c1cc</Anchor>
+               </Node>
+               <Node>
+                <Name>OnEngineCut</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>a69f50ba684862a9019b5af36d8a0d66d</Anchor>
+               </Node>
+               <Node>
+                <Name>OnFlaps</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>aa428524479ee04e5f389b0003cda82af</Anchor>
+               </Node>
+               <Node>
+                <Name>OnPitch</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>a20c2c265a42d953e22b984e32d83f9df</Anchor>
+               </Node>
+               <Node>
+                <Name>OnRoll</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>a31f63e972af131ce4c114cb63b404061</Anchor>
+               </Node>
+               <Node>
+                <Name>OnThrottle</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>ac69b4efbd3ea404c23e54a262a29fc15</Anchor>
+               </Node>
+               <Node>
+                <Name>OnYaw</Name>
+                <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+                <Anchor>a10a50b8f0e91487e1ae316106b21d881</Anchor>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>NewInputControls</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a8e2f40923c93785c94cfb132d23f121d</Anchor>
+             </Node>
+             <Node>
+              <Name>Contains</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a7ae0e5ecc0d8265dee517b3cac53cecc</Anchor>
+             </Node>
+             <Node>
+              <Name>Disable</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a039939611679f5e3a0a4d8482db8b941</Anchor>
+             </Node>
+             <Node>
+              <Name>Dispose</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a586045fab0c0043e2380e3eb89b47cd7</Anchor>
+             </Node>
+             <Node>
+              <Name>Enable</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>af46b6a53876b7cff2a1c868e2875b391</Anchor>
+             </Node>
+             <Node>
+              <Name>FindAction</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a481e4880e82afdf206c42594bb2747ae</Anchor>
+             </Node>
+             <Node>
+              <Name>FindBinding</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a64580162cd03404b33d94196b3259a6b</Anchor>
+             </Node>
+             <Node>
+              <Name>GetEnumerator</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a09f6d3357c27b3e8267088ca6e653d44</Anchor>
+             </Node>
+             <Node>
+              <Name>Airplane</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a624d64fee58c5f77369d5d2f87cdc98b</Anchor>
+             </Node>
+             <Node>
+              <Name>bindings</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a33747b8820df3d28382e16990aa84652</Anchor>
+             </Node>
+             <Node>
+              <Name>controlSchemes</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a88a58efe31425533cae620866a97632c</Anchor>
+             </Node>
+             <Node>
+              <Name>asset</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>ac6b3930b3456f4e3f5cbaeb2f20b71a2</Anchor>
+             </Node>
+             <Node>
+              <Name>bindingMask</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a2766787b2ffbfe203546f5662e1d3a69</Anchor>
+             </Node>
+             <Node>
+              <Name>devices</Name>
+              <Path>classNewInputControls.html</Path>
+              <Anchor>a463790d326a4d5ade0ef4bb054ea7608</Anchor>
+             </Node>
             </Subnodes>
            </Node>
           </Subnodes>
@@ -2005,6 +2264,10 @@
            <Node>
             <Name>AirControl.actions.Actions</Name>
             <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+           </Node>
+           <Node>
+            <Name>NewInputControls.AirplaneActions</Name>
+            <Path>structNewInputControls_1_1AirplaneActions.html</Path>
            </Node>
            <Node>
             <Name>Communicator.AudioSchema</Name>
@@ -2049,6 +2312,10 @@
             <Path>classCommunicator_1_1FuelSchema.html</Path>
            </Node>
            <Node>
+            <Name>NewInputControls.IAirplaneActions</Name>
+            <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+           </Node>
+           <Node>
             <Name>AirControl.IAirplaneUI</Name>
             <Path>interfaceAirControl_1_1IAirplaneUI.html</Path>
             <Subnodes>
@@ -2079,6 +2346,26 @@
              <Node>
               <Name>AirControl.AC_Airplane_ThrottleLever</Name>
               <Path>classAirControl_1_1AC__Airplane__ThrottleLever.html</Path>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>IDisposable</Name>
+            <Path></Path>
+            <Subnodes>
+             <Node>
+              <Name>NewInputControls</Name>
+              <Path>classNewInputControls.html</Path>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>IInputActionCollection2</Name>
+            <Path></Path>
+            <Subnodes>
+             <Node>
+              <Name>NewInputControls</Name>
+              <Path>classNewInputControls.html</Path>
              </Node>
             </Subnodes>
            </Node>
@@ -2255,6 +2542,10 @@
              <Node>
               <Name>Communicator.OutputHandle</Name>
               <Path>classCommunicator_1_1OutputHandle.html</Path>
+             </Node>
+             <Node>
+              <Name>UnityTemplateProjects.SimpleCameraController</Name>
+              <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
              </Node>
             </Subnodes>
            </Node>
@@ -2485,12 +2776,20 @@
             <Path>NetworkCommunicator_8cs_source.html</Path>
            </Node>
            <Node>
+            <Name>NewInputControls.cs</Name>
+            <Path>NewInputControls_8cs_source.html</Path>
+           </Node>
+           <Node>
             <Name>OutputHandle.cs</Name>
             <Path>OutputHandle_8cs_source.html</Path>
            </Node>
            <Node>
             <Name>sample_generator.py</Name>
             <Path>sample__generator_8py_source.html</Path>
+           </Node>
+           <Node>
+            <Name>SimpleCameraController.cs</Name>
+            <Path>SimpleCameraController_8cs_source.html</Path>
            </Node>
            <Node>
             <Name>Sun.cs</Name>

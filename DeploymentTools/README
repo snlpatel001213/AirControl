@@ -1,0 +1,3 @@
+Run `/PrePushRun.py` from `DeploymentTools` dir to perform
+   1. `Requirement.txt` file update
+   2. C# documentation generation via `doxygen`
