@@ -9,7 +9,7 @@
   "CurrentSpeed": 0.0,
   "BankAngle": 0.0,
   "IfCollision": "false",
-  "collisionObject": "",
+  "CollisionObject": "",
   "Latitude": 0.0,
   "Longitude": 0.0,
   "PitchAngle": 0.0,
