@@ -47,7 +47,7 @@ namespace Communicator
                 IfCollision = StaticOutputSchema.IfCollision,
                 Reward = StaticOutputSchema.Reward,
                 Counter = CommonFunctions.Counter,
-                collisionObject = StaticOutputSchema.collisionObject,
+                CollisionObject = StaticOutputSchema.CollisionObject,
                 
             }, new PrimitiveToStringConverter());
             if(StaticOutputSchema.IfCollision)

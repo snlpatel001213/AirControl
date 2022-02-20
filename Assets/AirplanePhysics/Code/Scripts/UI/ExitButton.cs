@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Communicator;
 
 public class ExitButton : MonoBehaviour
 {
@@ -13,7 +14,10 @@ public class ExitButton : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        // control through API
+        if (StaticUIControlsSchema.ifExit){
+            Exit();
+        }
     }
     public void Exit(){
         Debug.Log("Exit Triggered");

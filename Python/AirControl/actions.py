@@ -11,9 +11,12 @@ INPUT_CONTROL_TYPE = ["Code", "Other"]
 
 class Actions:
     def __init__(self):
-        print("Now play the environment and call call method `Action.get_connected` to get connected")
+        print("Now call method `Action.get_connected` to get connected")
         
     def get_connected(self):
+        """
+        Get connected to the simulation host
+        """
         self.connection = communicator.Communicator()
         
     def bool2string(self,booltype):
@@ -65,8 +68,8 @@ class Actions:
         CaptureHeight=256,
         IsOutput=False,
     ):
-        """[summary]
-
+        """
+        Set camera and capure controls
         Args:
             InputControlType (str, optional): It can be either `Code` or `Other`. This is to control the internal mechanism and prevent repeted calling in already set variables. \
             If `InputControlType` is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If `InputControlType` is set to 'Other', camera can be only controlled from Keyboard or Joystick.  Defaults to "Code". 
@@ -112,8 +115,8 @@ class Actions:
         Flaps=0,
         IsOutput=True,
     ):
-        """[summary]
-
+        """
+        Step with new controls
         Args:
             InputControlType (str, optional): It can be either `Code` or `Other`. This is to control the internal mechanism and prevent repeted calling in already set variables. \
             If `InputControlType` is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If `InputControlType` is set to 'Other', camera can be only controlled from Keyboard or Joystick.  Defaults to "Code". 
@@ -154,8 +157,8 @@ class Actions:
 
 
     def set_fuel(self,InputControlType="Code", IsOutput=False):
-        """[summary]
-
+        """
+        Set fuel to the airplane
         Args:
             socket (socket): [description]
             InputControlType (str, optional): [description]. Defaults to "Code".
@@ -191,8 +194,8 @@ class Actions:
     def reset(self,
         InputControlType="Code", IsOutput=True
     ):
-        """[summary]
-
+        """
+        Reset scene and restart the simulation
         Args:
             InputControlType (str, optional): It can be either `Code` or `Other`. This is to control the internal mechanism and prevent repeted calling in already set variables. \
             If `InputControlType` is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If `InputControlType` is set to 'Other', camera can be only controlled from Keyboard or Joystick.  Defaults to "Code". 
@@ -216,8 +219,8 @@ class Actions:
     def set_lidar(self,
         InputControlType="Code", Range=100000.0, Density=360, IsActive=False, IsOutput=False
     ):
-        """[summary]
-
+        """
+        Set lidar range and density
         Args:
             InputControlType (str, optional): It can be either `Code` or `Other`. This is to control the internal mechanism and prevent repeated calling in already set variables. \
             If `InputControlType` is set to 'Code', the camera cannot be controlled from Keyboard or Joystick. If `InputControlType` is set to 'Other', the camera can be only controlled from Keyboard or Joystick.  Defaults to "Code". 
@@ -250,14 +253,16 @@ class Actions:
         Minute=5,
         IsOutput=False,
     ):
-        """[summary]
-
+        """
+        Set time of the day.
         Args:
             IsActive (bool, optional): Active if set to `True`. Internal effective compute mechanism. Defaults to False.
             SunLatitude (float, optional): Controls sun Latitude. Defaults to -826.39.
             SunLongitude (float, optional): Controls sun Longitude. Defaults to -1605.4.
             Hour (int, optional): Set Hour. Defaults to 10.
             Minute (int, optional): Set Minutes. Defaults to 5.
+            IsOutput (bool, optional): By default `reset_level` function only sets the internal state. `reset_level` only provide log outout and not the actual captured image. `set_control` when called it returns actual output. IF you want to force `reset_level` to return image, set `IsOutput` to True. Defaults to False.
+
         """
 
         tod_schema = {
@@ -276,13 +281,14 @@ class Actions:
 
     def set_ui(self, IsActive=False, ShowUIElements=True, IsOutput=False
     ):
-        """[summary]
-
+        """
+        on/off Airplane controls
         Args:
             InputControlType (str, optional): It can be either `Code` or `Other`. This is to control the internal mechanism and prevent repeted calling in already set variables. \
             If `InputControlType` is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If `InputControlType` is set to 'Other', camera can be only controlled from Keyboard or Joystick.  Defaults to "Code". 
             ShowUIElements (bool, optional): Show UI elements if true, hide otherwise. Defaults to True.
             EnableAudio (float, optional): Enable audio if true, mute otherwise.. Defaults to 1.0.
+            IsOutput (bool, optional): By default `reset_level` function only sets the internal state. `reset_level` only provide log outout and not the actual captured image. `set_control` when called it returns actual output. IF you want to force `reset_level` to return image, set `IsOutput` to True. Defaults to False.
         """
         ui_schema = {
             "MsgType": "UI",
@@ -296,13 +302,14 @@ class Actions:
     
     def set_audio(self, IsActive=False, EnableAudio=True, IsOutput=False
     ):
-        """[summary]
-
+        """
+        Set audio on  and off
         Args:
             InputControlType (str, optional): It can be either `Code` or `Other`. This is to control the internal mechanism and prevent repeted calling in already set variables. \
             If `InputControlType` is set to 'Code', camera cannot be controlled from Keyboard or Joystick. If `InputControlType` is set to 'Other', camera can be only controlled from Keyboard or Joystick.  Defaults to "Code". 
             ShowUIElements (bool, optional): Show UI elements if true, hide otherwise. Defaults to True.
             EnableAudio (float, optional): Enable audio if true, mute otherwise.. Defaults to 1.0.
+            IsOutput (bool, optional): By default `reset_level` function only sets the internal state. `reset_level` only provide log outout and not the actual captured image. `set_control` when called it returns actual output. IF you want to force `reset_level` to return image, set `IsOutput` to True. Defaults to False.
         """
         audio_schema = {
             "MsgType": "Audio",
@@ -316,13 +323,15 @@ class Actions:
 
 
     def set_weather(self,InputControlType="Code", IsClouds=False, IsFog=False, IsOutput=False):
-        """[summary]
-
+        """
+        Set weather like clouds
+        Not supported currently. Unity URP don't support clouds and fogs.
         Args:
             socket (socket): [description]
             InputControlType (str, optional): [description]. Defaults to "Code".
             IsClouds (bool, optional): [description]. Defaults to False.
             IsFog (bool, optional): [description]. Defaults to False.
+            IsOutput (bool, optional): By default `reset_level` function only sets the internal state. `reset_level` only provide log outout and not the actual captured image. `set_control` when called it returns actual output. IF you want to force `reset_level` to return image, set `IsOutput` to True. Defaults to False.
         """
         self.check_input_type(InputControlType)
         weather_schema = {
@@ -333,5 +342,25 @@ class Actions:
             "IsOutput": self.bool2string(IsOutput),
         }
         self.connection.send_data(weather_schema)
+        output =  self.connection.receive_data()
+        return  self.process_output(output)
+    
+    def set_uicontrol(self,InputControlType="Code", IsExit=False, IsOutput=False):
+        """
+        To set UI control.
+        Exit is currently supported
+        Args:
+            InputControlType (str, optional): [description]. Defaults to "Code".
+            IsExit (bool, optional): [description]. Defaults to False.
+            IsOutput (bool, optional): By default `reset_level` function only sets the internal state. `reset_level` only provide log outout and not the actual captured image. `set_control` when called it returns actual output. IF you want to force `reset_level` to return image, set `IsOutput` to True. Defaults to False.
+        """
+        self.check_input_type(InputControlType)
+        uicontrol_schema = {
+            "MsgType": "UIControls",
+            "InputControlType": InputControlType,
+            "IsClouds": self.bool2string(IsExit),
+            "IsOutput": self.bool2string(IsOutput),
+        }
+        self.connection.send_data(uicontrol_schema)
         output =  self.connection.receive_data()
         return  self.process_output(output)
