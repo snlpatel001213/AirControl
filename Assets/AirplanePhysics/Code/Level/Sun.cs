@@ -39,6 +39,7 @@ namespace AirControl
 
         [SerializeField]
         DateTime date;
+
         /// <summary>
         /// set dun location as per Hour and Minute
         /// </summary>
@@ -118,7 +119,6 @@ namespace AirControl
                 SetPosition();
             }
             frameStep = (frameStep + 1) % frameSteps;
-
 
         }
         /// <summary>

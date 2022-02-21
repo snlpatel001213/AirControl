@@ -2,11 +2,11 @@ Metadata-Version: 2.1
 Name: AirControl
 Version: 0.1.1
 Summary: AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.
-Home-page: https://snlpatel001213.github.io/AirControl/html/
+Home-page: https://snlpatel001213.github.io/AirControl/Python
 Author: Sunil Patel
 Author-email: snlpatel001213@hotmail.com
 License: UNKNOWN
-Keywords: Airplane Simulation,Unity,C#
+Keywords: Airplane Simulation,Unity,C#,Python
 Platform: UNKNOWN
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.5
@@ -18,9 +18,9 @@ Classifier: Operating System :: OS Independent
 Classifier: Topic :: Software Development :: Libraries
 Classifier: Topic :: Software Development :: Libraries :: Python Modules
 Classifier: Topic :: Scientific/Engineering :: Artificial Intelligence
-Classifier: Topic :: Scientific/Engineering :: Airplane Simulator
 Requires-Python: >=3.7.*
 Description-Content-Type: text/markdown
+License-File: ../LICENSE
 
 <p align="center">
   <img src="docs/images/logo/logo_original_large-256_x_256.png" height="200"/>
