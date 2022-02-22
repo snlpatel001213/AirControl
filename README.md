@@ -39,7 +39,7 @@ Supported Language
  
 # Welcome to Aircontrol
 
-**AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** Airsim offers a realistic simulation experience with a variety of airplanes. The Airsim is built on [Unity Game engine](https://unity.com). Following are the salient features of the Aircontrol:
+**AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** AirControl offers a realistic simulation experience with a variety of airplanes. The AirControl is built on [Unity Game engine](https://unity.com). Following are the salient features of the Aircontrol:
 
 * Built with **C#**, it has **Python** API to control it from your favorite Deep learning Framework.
 * Complete source code is open on Github.
