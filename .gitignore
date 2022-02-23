@@ -72,3 +72,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+# ipython notebook checkpoint 
+.ipynb_checkpoints
+*/.ipynb_checkpoints/*
+
+# unity meta files
+.meta
