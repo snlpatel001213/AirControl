@@ -91,7 +91,7 @@ namespace Communicator
 		public static float BankAngle;
 		public static float PitchAngle;
 		public static bool IfCollision;
-		public static string collisionObject = ""; 
+		public static string CollisionObject = ""; 
 		public static float Latitude;
 		public static float Longitude;
 		public static byte [] ScreenCapture;
@@ -119,7 +119,7 @@ namespace Communicator
 		public float CurrentSpeed;
 		public float BankAngle;
 		public bool IfCollision;
-		public string collisionObject = ""; 
+		public string CollisionObject = ""; 
 		public float Latitude;
 		public float Longitude;
 		public float PitchAngle;
@@ -302,7 +302,7 @@ namespace Communicator
 	}
 	#endregion
 
-	#region UIAudioSchema
+	#region UISchema
 	/// <summary>
 	///Ui and Audio class for serialization deserialization
 	/// </summary>
@@ -407,6 +407,34 @@ namespace Communicator
 	}
 	#endregion
 
+	#region UIControls
+	/// <summary>
+	///UI control class for serialization deserialization
+	/// </summary>
+	public class UIControlsSchema
+	{	
+		public string MsgType  { get; set; } = "UIControls";
+		//Version of the sceme, IT will be same as the release version
+		public string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public bool ifExit {get;set;} = false;
+		// if transaction schema is active or not this is to reduce computation load in the update loops
+	}
+	/// <summary>
+	///UI control class for serialization deserialization
+	/// </summary>
+	public class StaticUIControlsSchema
+	{	
+		public static string MsgType  { get; set; } = "UIControls";
+		//Version of the sceme, IT will be same as the release version
+		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
+		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
+		public static bool ifExit {get;set;} = false;
+		// if transaction schema is active or not this is to reduce computation load in the update loops
+	}
+
+	#endregion
+
 	#region Fuel
 	/// <summary>
 	///Fuel class for serialization deserialization
@@ -420,21 +448,6 @@ namespace Communicator
 		public string InputControlType {get;set;} = "Other";
 		// if transaction schema is active or not this is to reduce computation load in the update loops
 
-
-	}
-	/// <summary>
-	/// Fuel settings
-	/// This class can be accessed anywhere in the code as dict.
-	/// used for getting/setting input/outout received from python API.
-	/// </summary>
-	public static class StaticFuelSchema
-	{	
-		public static string MsgType  { get; set; } = "Fuel";
-		//Version of the sceme, IT will be same as the release version
-		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
-		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public static string InputControlType {get;set;} = "Other";
-		// // if transaction schema is active or not this is to reduce computation load in the update loops
 
 	}
 	#endregion

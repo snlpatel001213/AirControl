@@ -60,7 +60,7 @@ namespace AirControl
                 MaxR -=10f;
                 Debug.LogFormat("Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
                 StaticOutputSchema.IfCollision=true;
-                StaticOutputSchema.collisionObject = col.gameObject.tag;
+                StaticOutputSchema.CollisionObject = col.gameObject.tag;
             // }
             return;
         }
@@ -73,7 +73,7 @@ namespace AirControl
                 MaxR -=10f;
                 Debug.LogFormat("Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
                 StaticOutputSchema.IfCollision=true;
-                StaticOutputSchema.collisionObject = col.gameObject.tag;
+                StaticOutputSchema.CollisionObject = col.gameObject.tag;
             }
             return;
         }
