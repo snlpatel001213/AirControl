@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="docs/images/logo/banner.png" height="100"/>
+  <img src="https://github.com/snlpatel001213/AirControl/blob/master/docs/images/logo/banner.png?raw=true" height="100"/>
 </p>
 
 <div align="center">
@@ -59,12 +59,12 @@ Aircontrol may work with lower than the specified requirements, but its not test
 You can run Aircontrol in server-client mode in two different machines or both in the single machine.
 
 <p align="center">
-  <img src="/docs/images/FrontImage.png" height="400"/>
+  <img src="https://github.com/snlpatel001213/AirControl/blob/master/docs/images/FrontImage.png?raw=true" height="400"/>
 </p>
 
 ## Control Inputs
 
-![Keyboard Mappings](docs/images/keyboard-layout.png)
+![Keyboard Mappings](https://github.com/snlpatel001213/AirControl/blob/master/docs/images/keyboard-layout.png?raw=true)
 <details close>
 <summary></summary>
 
@@ -109,14 +109,14 @@ graph TD
 
 ## Future Release
 Refer to the Project page for the future release, features and bug tracking : https://github.com/snlpatel001213/AirControl/projects/1
-![Projects Tab Mappings](docs/images/projects_tab.png)
+![Projects Tab Mappings](https://github.com/snlpatel001213/AirControl/blob/master/docs/images/projects_tab.png)
 
 ## Tools and Technology
 
 <div align="center">
-        <img src="docs/images/Unity_logo.png" width="10%"/>
-        <img src="docs/images/Python_logo.png" width="10%"/>
-        <img src="docs/images/CSharp_logo.png" width="10%"/>
+        <img src="https://github.com/snlpatel001213/AirControl/blob/master/docs/images/Unity_logo.png?raw=true" width="10%"/>
+        <img src="https://github.com/snlpatel001213/AirControl/blob/master/docs/images/Python_logo.png?raw=true" width="10%"/>
+        <img src="https://github.com/snlpatel001213/AirControl/blob/master/docs/images/CSharp_logo.png?raw=true" width="10%"/>
 
 </div>
 
