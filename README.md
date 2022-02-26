@@ -1,10 +1,6 @@
 <p align="center">
-  <img src="docs/images/logo/logo_original_large-256_x_256.png" height="200"/>
+  <img src="docs/images/logo/banner.png" height="100"/>
 </p>
-<BR>
-<div align="center">
-<h1>AirControl</h1>
-</div>
 
 <div align="center">
 
