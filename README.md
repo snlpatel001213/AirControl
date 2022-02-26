@@ -94,13 +94,22 @@ graph TD
 
 1. Windows - Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
-   2. Build it
+   2. Build it from source
 2. Linux - Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
-   2. Build it
+   2. Build it from source
 3. macOS - Not Tested [`Need Contributors`]
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
-   2. Build it
+   2. Build it from source
+
+Pypi Release-Alpha [![PyPI version](https://badge.fury.io/py/aircontrol-python.svg)](https://badge.fury.io/py/aircontrol-python) : https://pypi.org/project/aircontrol-python/
+```bash
+pip install aircontrol-python==<LatestVersion>
+```
+Snap Release-Alpha (May face issue with capturing controls)
+```bash
+snap install aircontrol
+```
 
 ## Documentation
 
