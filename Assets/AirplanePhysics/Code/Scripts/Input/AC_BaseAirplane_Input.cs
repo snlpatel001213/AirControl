@@ -12,7 +12,6 @@ namespace  AirControl
     public class AC_BaseAirplane_Input : MonoBehaviour
     {
         #region Variable
-
         
         protected float pitch = 0f;
         protected float roll = 0f;
@@ -71,6 +70,10 @@ namespace  AirControl
         // Update is called once per frame
         void Start(){
             control = new NewInputControls();
+#if !UNITY_EDITOR && UNITY_WEBGL
+    // disable WebGLInput.captureAllKeyboardInput so elements in web page can handle keabord inputs
+    WebGLInput.captureAllKeyboardInput = false;
+#endif
         }
         void Update()
         {
@@ -124,7 +127,6 @@ namespace  AirControl
         void StickyThrottleControl(){
             stickyThrottle = stickyThrottle + (throttle*throttleSpeed*Time.deltaTime);
             stickyThrottle =  Mathf.Clamp01(stickyThrottle);
-
         }
         /// <summary>
         /// Clamping inputs between limits

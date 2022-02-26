@@ -33,7 +33,7 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "linux";
-        // Debug.log("Starting build for - "+OS);
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Linux";
         string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
@@ -55,7 +55,7 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "windows";
-        // Debug.log("Starting build for - "+OS);
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Windows";
         string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
@@ -77,7 +77,7 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "mac";
-        // Debug.log("Starting build for - "+OS);
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Mac";
         string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
@@ -99,7 +99,7 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "webgl";
-        // Debug.log("Starting build for - "+OS);
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/WebGL";
         string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
