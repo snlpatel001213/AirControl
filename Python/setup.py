@@ -46,4 +46,7 @@ setup(
         "Topic :: Scientific/Engineering :: Artificial Intelligence"
     ],
     keywords="Airplane Simulation, Unity, C#, Python",
+    data_files=[
+        ('version',['VERSION']),
+    ]
 )

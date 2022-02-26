@@ -1,5 +1,6 @@
 LICENSE
 README.md
+VERSION
 setup.cfg
 setup.py
 ../LICENSE

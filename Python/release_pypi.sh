@@ -4,4 +4,4 @@ cp ../LICENSE .
 cp ../VERSION .
 pip install twine
 python setup.py sdist
-twine upload dist/* --verbose --skip-existing 
+twine upload dist/* --verbose

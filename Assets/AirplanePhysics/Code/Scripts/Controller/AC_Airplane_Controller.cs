@@ -94,6 +94,7 @@ namespace AirControl
                 if(characteristics){
                     characteristics.InitCharacteristics(rb, input);
                 }
+                
             }
             
             // Initialize Wheels
@@ -108,6 +109,13 @@ namespace AirControl
         void update()
         {
             // rewardCalculator();
+        }
+
+        /// WIP
+        // to detect if the Airplane is stuck, if this happens then rload the scene
+        ///
+        void DetectIfStuck(){
+
         }
 
         
