@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
-using UnityEngine.InputSystem;
 
 namespace  AirControl
 {
@@ -24,7 +23,6 @@ namespace  AirControl
         protected KeyCode cameraKey = KeyCode.C;
         protected bool camerSwitch = false;
 
-        public NewInputControls control;
         // Slowly move the throttle
           
         [Header("Sticky throttle value control how the throttle can be moved")]
@@ -69,7 +67,6 @@ namespace  AirControl
         #region Builtin Methods
         // Update is called once per frame
         void Start(){
-            control = new NewInputControls();
 #if !UNITY_EDITOR && UNITY_WEBGL
     // disable WebGLInput.captureAllKeyboardInput so elements in web page can handle keabord inputs
     WebGLInput.captureAllKeyboardInput = false;

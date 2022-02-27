@@ -1,7 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
 namespace AirControl
 {
@@ -34,9 +33,9 @@ namespace AirControl
             // Process pitch, roll, yaw and throttle
             pitch +=  Input.GetAxis("Vertical");
             roll +=  Input.GetAxis("Horizontal");
-            yaw +=  Input.GetAxis("RS_h");
+            yaw +=  Input.GetAxis("X_RH_Stick");
             
-            throttle +=  Input.GetAxis("RS_v");
+            throttle +=  Input.GetAxis("X_RV_Stick");
             // Process brakes bool
             brake =  Input.GetAxis("Fire1");
             // Process flaps

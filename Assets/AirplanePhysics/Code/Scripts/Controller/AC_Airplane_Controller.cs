@@ -114,9 +114,9 @@ namespace AirControl
         /// WIP
         // to detect if the Airplane is stuck, if this happens then rload the scene
         ///
-        void DetectIfStuck(){
+        // void DetectIfStuck(){
 
-        }
+        // }
 
         
 
