@@ -2,7 +2,7 @@ var classCommunicator_1_1OutputSchema =
 [
     [ "AGL", "classCommunicator_1_1OutputSchema.html#a6db6dfe62e094ea06d9d94c38853de59", null ],
     [ "BankAngle", "classCommunicator_1_1OutputSchema.html#a097df01104ecac3e9ef837c7b18d0fd9", null ],
-    [ "collisionObject", "classCommunicator_1_1OutputSchema.html#a4b5944dfb21fffc416628619c6bc2619", null ],
+    [ "CollisionObject", "classCommunicator_1_1OutputSchema.html#ad8012526689ef38f71014ee9d1896a8b", null ],
     [ "Counter", "classCommunicator_1_1OutputSchema.html#ad6dff929a6507ac9ded43b60570d0635", null ],
     [ "CurrentFuel", "classCommunicator_1_1OutputSchema.html#a6c61051ef379af91f3b7d424af6bc1a9", null ],
     [ "CurrentPower", "classCommunicator_1_1OutputSchema.html#a140703c600c4d63fd8f312bca0e524b9", null ],

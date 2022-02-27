@@ -14,6 +14,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/snlpatel001213/AirControl)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
 [![Gitter](https://badges.gitter.im/Aircontrol-chat/community.svg)](https://gitter.im/Aircontrol-chat/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
+[![PyPI version](https://badge.fury.io/py/aircontrol-python.svg)](https://badge.fury.io/py/aircontrol-python)
 
 Supported OS
 
@@ -94,13 +95,22 @@ graph TD
 
 1. Windows - Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
-   2. Build it
+   2. Build it from source
 2. Linux - Tested
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
-   2. Build it
+   2. Build it from source
 3. macOS - Not Tested [`Need Contributors`]
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
-   2. Build it
+   2. Build it from source
+
+Pypi Release-Alpha [![PyPI version](https://badge.fury.io/py/aircontrol-python.svg)](https://badge.fury.io/py/aircontrol-python) : https://pypi.org/project/aircontrol-python/
+```bash
+pip install aircontrol-python==<LatestVersion>
+```
+Snap Release-Alpha (May face issue with capturing controls)
+```bash
+snap install aircontrol
+```
 
 ## Documentation
 

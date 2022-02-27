@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['networkcommunicator_77',['NetworkCommunicator',['../classCommunicator_1_1NetworkCommunicator.html',1,'Communicator']]],
-  ['newinputcontrols_78',['NewInputControls',['../classNewInputControls.html',1,'']]],
-  ['npencoder_79',['NpEncoder',['../classAirControl_1_1communicator_1_1NpEncoder.html',1,'AirControl::communicator']]]
+  ['msgtype_78',['MsgType',['../classCommunicator_1_1StaticControlSchema.html#add37f9d2f9776ffb0c5c6e083ab761d9',1,'Communicator::StaticControlSchema']]],
+  ['myaction_79',['MyAction',['../classCommunicator_1_1NetworkCommunicator.html#a3733cbd8ba357d67bfec13564e9b0f3b',1,'Communicator::NetworkCommunicator']]]
 ];

@@ -104,72 +104,72 @@ $(document).ready(function(){initNavTree('AC__BaseAirplane__Input_8cs_source.htm
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceCommunicator.html">Communicator</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> UnityEngine.InputSystem;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace  </span><a class="code" href="namespaceAirControl.html">AirControl</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseAirplane__Input.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html">AC_BaseAirplane_Input</a> : MonoBehaviour</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">        #region Variable</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> pitch = 0f;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> roll = 0f;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> yaw = 0f;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> throttle = 0f;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> brake = 0f;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> maxFlapIncrements=2; <span class="comment">// maximum increment allowed to flaps</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">int</span> flaps = 0;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">protected</span> KeyCode cameraKey = KeyCode.C;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">bool</span> camerSwitch = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">public</span> <a class="code" href="classNewInputControls.html">NewInputControls</a> control;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// Slowly move the throttle</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        [Header(<span class="stringliteral">&quot;Sticky throttle value control how the throttle can be moved&quot;</span>)]</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> throttleSpeed = 0.5f;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> stickyThrottle;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">        #region Properties</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Pitch{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> pitch;}</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace  </span><a class="code" href="namespaceAirControl.html">AirControl</a></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseAirplane__Input.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html">AC_BaseAirplane_Input</a> : MonoBehaviour</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">        #region Variable</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> pitch = 0f;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> roll = 0f;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> yaw = 0f;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> throttle = 0f;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> brake = 0f;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> maxFlapIncrements=2; <span class="comment">// maximum increment allowed to flaps</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">int</span> flaps = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">protected</span> KeyCode cameraKey = KeyCode.C;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">bool</span> camerSwitch = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="comment">// Slowly move the throttle</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        [Header(<span class="stringliteral">&quot;Sticky throttle value control how the throttle can be moved&quot;</span>)]</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> throttleSpeed = 0.5f;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">float</span> stickyThrottle;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">        #region Properties</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Pitch{</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> pitch;}</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Roll{</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> roll;}</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Roll{</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> roll;}</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Yaw{</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> yaw;}</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Yaw{</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> yaw;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Throttle{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> throttle;}</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Throttle{</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> throttle;}</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> Flaps{</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> flaps;}</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">int</span> Flaps{</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> flaps;}</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> NormalizedFlaps{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">get</span>{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)flaps / maxFlapIncrements;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> NormalizedFlaps{</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="keyword">get</span>{</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)flaps / maxFlapIncrements;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Brake{</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> brake;}</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Brake{</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> brake;}</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> StickyThrottle {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> stickyThrottle;}</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> StickyThrottle {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> stickyThrottle;}</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> CameraSwitch{</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> camerSwitch;}</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> CameraSwitch{</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keyword">get</span>{<span class="keywordflow">return</span> camerSwitch;}</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">        #region Builtin Methods</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordtype">void</span> Start(){</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            control = <span class="keyword">new</span> <a class="code" href="classNewInputControls.html">NewInputControls</a>();</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;<span class="preprocessor">        #region Builtin Methods</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keywordtype">void</span> Start(){</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#if !UNITY_EDITOR &amp;&amp; UNITY_WEBGL</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    <span class="comment">// disable WebGLInput.captureAllKeyboardInput so elements in web page can handle keabord inputs</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    WebGLInput.captureAllKeyboardInput = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">#endif</span></div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        }</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordtype">void</span> Update()</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        {</div>
@@ -217,47 +217,45 @@ $(document).ready(function(){initNavTree('AC__BaseAirplane__Input_8cs_source.htm
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordtype">void</span> StickyThrottleControl(){</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            stickyThrottle = stickyThrottle + (throttle*throttleSpeed*Time.deltaTime);</div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            stickyThrottle =  Mathf.Clamp01(stickyThrottle);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        }</div>
-<div class="line"><a name="l00132"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0">  132</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0">ClampInputs</a>()</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            pitch = Mathf.Clamp(pitch,-1f,1f);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            roll = Mathf.Clamp(roll,-1f,1f);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            yaw = Mathf.Clamp(yaw,-1f,1f);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            throttle = Mathf.Clamp(throttle,-1f,1f);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            brake = Mathf.Clamp(brake,0f,1f);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
-<div class="line"><a name="l00144"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962">  144</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962">IOSwitch</a>()</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordtype">string</span> DBInputControlType = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.InputControlType;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="comment">// if control type is code then lock the controls and fly it</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="comment">// else let user fly manually</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;             <span class="keywordflow">if</span>(DBInputControlType == <span class="stringliteral">&quot;Code&quot;</span>)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;             {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                throttle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Throttle;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                stickyThrottle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.StickyThrottle;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                pitch = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Pitch;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                roll = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Roll;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                yaw = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Yaw;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                brake = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Brake;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                flaps = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Flaps;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;             }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;           </div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;}</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
+<div class="line"><a name="l00131"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0">  131</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0">ClampInputs</a>()</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            pitch = Mathf.Clamp(pitch,-1f,1f);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            roll = Mathf.Clamp(roll,-1f,1f);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            yaw = Mathf.Clamp(yaw,-1f,1f);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            throttle = Mathf.Clamp(throttle,-1f,1f);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            brake = Mathf.Clamp(brake,0f,1f);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
+<div class="line"><a name="l00143"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962">  143</a></span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962">IOSwitch</a>()</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordtype">string</span> DBInputControlType = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.InputControlType;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="comment">// if control type is code then lock the controls and fly it</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="comment">// else let user fly manually</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;             <span class="keywordflow">if</span>(DBInputControlType == <span class="stringliteral">&quot;Code&quot;</span>)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;             {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                throttle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Throttle;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                stickyThrottle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.StickyThrottle;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                pitch = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Pitch;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                roll = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Roll;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                yaw = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Yaw;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                brake = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Brake;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                flaps = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Flaps;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;             }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;           </div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    }</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160; </div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160; </div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html_ad3f05ebbbc823b2f38a43e168d577962"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962">AirControl.AC_BaseAirplane_Input.IOSwitch</a></div><div class="ttdeci">void IOSwitch()</div><div class="ttdoc">Receive input from external program like python</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00144">AC_BaseAirplane_Input.cs:144</a></div></div>
-<div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html">AirControl.AC_BaseAirplane_Input</a></div><div class="ttdoc">Base class to listen for keyboard Inputs</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00012">AC_BaseAirplane_Input.cs:12</a></div></div>
-<div class="ttc" id="aclassNewInputControls_html"><div class="ttname"><a href="classNewInputControls.html">NewInputControls</a></div><div class="ttdef"><b>Definition:</b> <a href="NewInputControls_8cs_source.html#l00018">NewInputControls.cs:18</a></div></div>
-<div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html_a2b880c1486afc1588c6e9d2057b3cba0"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0">AirControl.AC_BaseAirplane_Input.ClampInputs</a></div><div class="ttdeci">void ClampInputs()</div><div class="ttdoc">Clamping inputs between limits</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00132">AC_BaseAirplane_Input.cs:132</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html_ad3f05ebbbc823b2f38a43e168d577962"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962">AirControl.AC_BaseAirplane_Input.IOSwitch</a></div><div class="ttdeci">void IOSwitch()</div><div class="ttdoc">Receive input from external program like python</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00143">AC_BaseAirplane_Input.cs:143</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html">AirControl.AC_BaseAirplane_Input</a></div><div class="ttdoc">Base class to listen for keyboard Inputs</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00011">AC_BaseAirplane_Input.cs:11</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html_a2b880c1486afc1588c6e9d2057b3cba0"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html#a2b880c1486afc1588c6e9d2057b3cba0">AirControl.AC_BaseAirplane_Input.ClampInputs</a></div><div class="ttdeci">void ClampInputs()</div><div class="ttdoc">Clamping inputs between limits</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00131">AC_BaseAirplane_Input.cs:131</a></div></div>
 <div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html_ae2a9fc11da267eb2d5383578a95be667"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html#ae2a9fc11da267eb2d5383578a95be667">AirControl.AC_BaseAirplane_Input.HandleInputOld</a></div><div class="ttdeci">virtual void HandleInputOld()</div><div class="ttdoc">Take input such as Pitch, Yaw, Roll etc</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00091">AC_BaseAirplane_Input.cs:91</a></div></div>
 <div class="ttc" id="anamespaceAirControl_html"><div class="ttname"><a href="namespaceAirControl.html">AirControl</a></div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Menus_8cs_source.html#l00006">AC_Airplane_Menus.cs:6</a></div></div>
 <div class="ttc" id="aclassCommunicator_1_1StaticControlSchema_html"><div class="ttname"><a href="classCommunicator_1_1StaticControlSchema.html">Communicator.StaticControlSchema</a></div><div class="ttdoc">Input control class, acts a dictionary. This class can be accessed anywhere in the code as dict....</div><div class="ttdef"><b>Definition:</b> <a href="IOSchema_8cs_source.html#l00041">IOSchema.cs:41</a></div></div>

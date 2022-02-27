@@ -29,7 +29,6 @@ var searchData=
   ['actions_27',['Actions',['../classAirControl_1_1actions_1_1Actions.html',1,'AirControl::actions']]],
   ['addfuel_28',['AddFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#a6e7d2c70dd87623e65de8e46dfccce76',1,'AirControl::AC_Airplane_Fuel']]],
   ['aircontrol_29',['AirControl',['../namespaceAirControl.html',1,'']]],
-  ['airplaneactions_30',['AirplaneActions',['../structNewInputControls_1_1AirplaneActions.html',1,'NewInputControls']]],
-  ['audioschema_31',['AudioSchema',['../classCommunicator_1_1AudioSchema.html',1,'Communicator']]],
-  ['automatedbuild_32',['AutomatedBuild',['../classAutomatedBuild.html',1,'']]]
+  ['audioschema_30',['AudioSchema',['../classCommunicator_1_1AudioSchema.html',1,'Communicator']]],
+  ['automatedbuild_31',['AutomatedBuild',['../classAutomatedBuild.html',1,'']]]
 ];

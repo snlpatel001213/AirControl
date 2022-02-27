@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['gpsencoder_154',['GPSEncoder',['../classAirControl_1_1GPSEncoder.html',1,'AirControl']]]
+  ['fuelschema_158',['FuelSchema',['../classCommunicator_1_1FuelSchema.html',1,'Communicator']]]
 ];

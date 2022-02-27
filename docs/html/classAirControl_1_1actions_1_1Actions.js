@@ -13,6 +13,7 @@ var classAirControl_1_1actions_1_1Actions =
     [ "set_lidar", "classAirControl_1_1actions_1_1Actions.html#a8be4d27b7213f145d49fe1034ae61190", null ],
     [ "set_TOD", "classAirControl_1_1actions_1_1Actions.html#aecc1524b1eb38c7b5d7625fd8cd19dea", null ],
     [ "set_ui", "classAirControl_1_1actions_1_1Actions.html#ad99c59ecaf8c310f5819e1e1b4fb1ce3", null ],
+    [ "set_uicontrol", "classAirControl_1_1actions_1_1Actions.html#aed9400d2983ef3309622d306ac848952", null ],
     [ "set_weather", "classAirControl_1_1actions_1_1Actions.html#ae093f98d391701986b233ec5686607f5", null ],
     [ "step", "classAirControl_1_1actions_1_1Actions.html#abaaf5a51023b0e6784125e85f4fcd22b", null ],
     [ "connection", "classAirControl_1_1actions_1_1Actions.html#ae33f82075b37d7e2bb9f2aba1ef52f53", null ]

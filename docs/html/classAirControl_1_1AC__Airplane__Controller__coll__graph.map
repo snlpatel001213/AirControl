@@ -1,11 +1,7 @@
 <map id="AirControl.AC_Airplane_Controller" name="AirControl.AC_Airplane_Controller">
-<area shape="rect" id="node1" title="Master Controller, controls the entire Airplane it implements function to Handle Engines,..." alt="" coords="907,64,1077,105"/>
-<area shape="rect" id="node2" href="$classAirControl_1_1AC__BaseRigidbody__Controller.html" title=" " alt="" coords="544,71,759,98"/>
-<area shape="rect" id="node3" title=" " alt="" coords="315,66,439,93"/>
-<area shape="rect" id="node4" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title="Base class to listen for keyboard Inputs" alt="" coords="550,123,753,164"/>
-<area shape="rect" id="node9" href="$classAirControl_1_1AC__Airplane__Characteristics.html" title="Main class defines the Airplane Characteristics" alt="" coords="566,5,737,47"/>
-<area shape="rect" id="node5" href="$classNewInputControls.html" title=" " alt="" coords="308,134,447,161"/>
-<area shape="rect" id="node6" title=" " alt="" coords="17,83,190,110"/>
-<area shape="rect" id="node7" title=" " alt="" coords="54,134,153,161"/>
-<area shape="rect" id="node8" href="$structNewInputControls_1_1AirplaneActions.html" title=" " alt="" coords="5,185,201,227"/>
+<area shape="rect" id="node1" title="Master Controller, controls the entire Airplane it implements function to Handle Engines,..." alt="" coords="541,57,712,98"/>
+<area shape="rect" id="node2" href="$classAirControl_1_1AC__BaseRigidbody__Controller.html" title=" " alt="" coords="179,5,393,32"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,64,129,91"/>
+<area shape="rect" id="node4" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title="Base class to listen for keyboard Inputs" alt="" coords="185,57,387,98"/>
+<area shape="rect" id="node5" href="$classAirControl_1_1AC__Airplane__Characteristics.html" title="Main class defines the Airplane Characteristics" alt="" coords="201,122,371,163"/>
 </map>

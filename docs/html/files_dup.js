@@ -34,6 +34,7 @@ var files_dup =
     [ "ColorEncoding.cs", "ColorEncoding_8cs_source.html", null ],
     [ "CommonConfigs.cs", "CommonConfigs_8cs_source.html", null ],
     [ "communicator.py", "communicator_8py_source.html", null ],
+    [ "ExitButton.cs", "ExitButton_8cs_source.html", null ],
     [ "GPSEncoder.cs", "GPSEncoder_8cs_source.html", null ],
     [ "IAirplaneUI.cs", "IAirplaneUI_8cs_source.html", null ],
     [ "InputHandle.cs", "InputHandle_8cs_source.html", null ],
@@ -41,10 +42,12 @@ var files_dup =
     [ "IOSchema.cs", "IOSchema_8cs_source.html", null ],
     [ "LevelControl.cs", "LevelControl_8cs_source.html", null ],
     [ "Lidar.cs", "Lidar_8cs_source.html", null ],
+    [ "logging_utils.py", "logging__utils_8py_source.html", null ],
     [ "NetworkCommunicator.cs", "NetworkCommunicator_8cs_source.html", null ],
-    [ "NewInputControls.cs", "NewInputControls_8cs_source.html", null ],
     [ "OutputHandle.cs", "OutputHandle_8cs_source.html", null ],
     [ "sample_generator.py", "sample__generator_8py_source.html", null ],
-    [ "SimpleCameraController.cs", "SimpleCameraController_8cs_source.html", null ],
-    [ "Sun.cs", "Sun_8cs_source.html", null ]
+    [ "SnapToGround.cs", "SnapToGround_8cs_source.html", null ],
+    [ "Sun.cs", "Sun_8cs_source.html", null ],
+    [ "TakeScreenshot.cs", "TakeScreenshot_8cs_source.html", null ],
+    [ "utils.py", "utils_8py_source.html", null ]
 ];

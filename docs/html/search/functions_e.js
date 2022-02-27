@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['table_3c_20t_20_3e_225',['Table&lt; T &gt;',['../classSQLite4Unity3d_1_1SQLiteConnection.html#a0ac854700a9cbad7c32f72800f06b24c',1,'SQLite4Unity3d::SQLiteConnection']]]
+  ['validate_5fenvironment_5fpath_245',['validate_environment_path',['../classAirControl_1_1utils_1_1Launch.html#a1159f24254b250a14b656b2f67a10bb7',1,'AirControl::utils::Launch']]]
 ];

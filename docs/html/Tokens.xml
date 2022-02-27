@@ -71,30 +71,21 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>NewInputControls</Name>
+      <Name>ExitButton</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
-      <Scope>NewInputControls</Scope>
+      <Scope>ExitButton</Scope>
     </TokenIdentifier>
-    <Path>classNewInputControls.html</Path>
+    <Path>classExitButton.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>NewInputControls::AirplaneActions</Name>
+      <Name>TakeScreenshot</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
-      <Scope>NewInputControls.AirplaneActions</Scope>
+      <Scope>TakeScreenshot</Scope>
     </TokenIdentifier>
-    <Path>structNewInputControls_1_1AirplaneActions.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>NewInputControls::IAirplaneActions</Name>
-      <APILanguage>csharp</APILanguage>
-      <Type>cl</Type>
-      <Scope>NewInputControls.IAirplaneActions</Scope>
-    </TokenIdentifier>
-    <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+    <Path>classTakeScreenshot.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -359,7 +350,7 @@
     </TokenIdentifier>
     <Path>classAirControl_1_1AC__Airplane__Controller.html</Path>
     <Anchor>acabf1bb24aebddea20a7a52fcff4d1bc</Anchor>
-    <Abstract>Handles physics related to Engine, Characteristics, Control surfaces wheel and Altitude</Abstract>
+    <Abstract>WIP.</Abstract>
     <DeclaredIn>AC_Airplane_Controller.cs</DeclaredIn>
   </Token>
   <Token>
@@ -882,6 +873,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>get_connected</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>ac731086c7a9d82dee8b262c9c13fcca7</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>bool2string</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -1003,6 +1005,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>set_uicontrol</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>aed9400d2983ef3309622d306ac848952</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl::communicator::Communicator</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -1060,6 +1073,48 @@
       <Scope>AirControl.sample_generator.samples</Scope>
     </TokenIdentifier>
     <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AirControl::utils::Launch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>launch_executable</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+    <Anchor>a233ee02e40e319c7b81c5a72136a11ba</Anchor>
+    <DeclaredIn>utils.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_platform</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+    <Anchor>af6cfc58907e00ab9b4aff9597e69de08</Anchor>
+    <DeclaredIn>utils.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>validate_environment_path</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+    <Anchor>a1159f24254b250a14b656b2f67a10bb7</Anchor>
+    <DeclaredIn>utils.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1337,12 +1392,32 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>Communicator::StaticUIControlsSchema</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Communicator.StaticUIControlsSchema</Scope>
+    </TokenIdentifier>
+    <Path>classCommunicator_1_1StaticUIControlsSchema.html</Path>
+    <Abstract>UI control class for serialization deserialization</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Communicator::TODSchema</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
       <Scope>Communicator.TODSchema</Scope>
     </TokenIdentifier>
     <Path>classCommunicator_1_1TODSchema.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Communicator::UIControlsSchema</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Communicator.UIControlsSchema</Scope>
+    </TokenIdentifier>
+    <Path>classCommunicator_1_1UIControlsSchema.html</Path>
+    <Abstract>UI control class for serialization deserialization</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1363,23 +1438,5 @@
     </TokenIdentifier>
     <Path>classCommunicator_1_1WeatherSchema.html</Path>
     <Abstract>weather class for serialization deserialization</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>UnityTemplateProjects</Name>
-      <APILanguage>csharp</APILanguage>
-      <Type>ns</Type>
-      <Scope>UnityTemplateProjects</Scope>
-    </TokenIdentifier>
-    <Path>namespaceUnityTemplateProjects.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>UnityTemplateProjects::SimpleCameraController</Name>
-      <APILanguage>csharp</APILanguage>
-      <Type>cl</Type>
-      <Scope>UnityTemplateProjects.SimpleCameraController</Scope>
-    </TokenIdentifier>
-    <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
   </Token>
 </Tokens>

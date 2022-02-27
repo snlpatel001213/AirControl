@@ -15,7 +15,9 @@ var namespaceCommunicator =
     [ "PresetSchema", "classCommunicator_1_1PresetSchema.html", "classCommunicator_1_1PresetSchema" ],
     [ "PrimitiveToStringConverter", "classCommunicator_1_1PrimitiveToStringConverter.html", "classCommunicator_1_1PrimitiveToStringConverter" ],
     [ "StaticControlSchema", "classCommunicator_1_1StaticControlSchema.html", null ],
+    [ "StaticUIControlsSchema", "classCommunicator_1_1StaticUIControlsSchema.html", null ],
     [ "TODSchema", "classCommunicator_1_1TODSchema.html", "classCommunicator_1_1TODSchema" ],
+    [ "UIControlsSchema", "classCommunicator_1_1UIControlsSchema.html", "classCommunicator_1_1UIControlsSchema" ],
     [ "UISchema", "classCommunicator_1_1UISchema.html", "classCommunicator_1_1UISchema" ],
     [ "WeatherSchema", "classCommunicator_1_1WeatherSchema.html", "classCommunicator_1_1WeatherSchema" ]
 ];
