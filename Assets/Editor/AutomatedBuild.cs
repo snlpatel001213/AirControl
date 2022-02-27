@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
 using System.Diagnostics;
+using UnityEngine.SceneManagement;
 using System;
 using System.IO;
 using Commons;
@@ -33,9 +34,11 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "linux";
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Linux";
-        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
+        string sceneName = SceneManager.GetActiveScene().name;
+        string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -54,9 +57,11 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "windows";
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Windows";
-        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
+        string sceneName = SceneManager.GetActiveScene().name;
+        string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -75,9 +80,11 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "mac";
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Mac";
-        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
+        string sceneName = SceneManager.GetActiveScene().name;
+        string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -96,9 +103,11 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "webgl";
+        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/WebGL";
-        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
+        string sceneName = SceneManager.GetActiveScene().name;
+        string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
