@@ -27,13 +27,13 @@ namespace AirControl
         public Shader opticalFlowShader;
         public float opticalFlowSensitivity = 1.0f;
 
-        // [Header("Save Image Capture")]
-        // public bool saveImage = true;
-        // public bool saveIdSegmentation = true;
-        // public bool saveLayerSegmentation = true;
-        // public bool saveDepth = true;
-        // public bool saveNormals = true;
-        // public bool saveOpticalFlow=true;
+        [Header("Save Image Capture")]
+        public bool saveImage = true;
+        public bool saveIdSegmentation = true;
+        public bool saveLayerSegmentation = true;
+        public bool saveDepth = true;
+        public bool saveNormals = true;
+        public bool saveOpticalFlow=true;
         // camera pass configuration
         public CapturePass[] capturePasses = new CapturePass[] {
             new CapturePass() { name = "_img" },

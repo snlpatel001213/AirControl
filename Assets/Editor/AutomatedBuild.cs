@@ -33,10 +33,9 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "linux";
-        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Linux";
-        string[] levels = new string[] {"Assets/Scene/v"+releaseVersion+"-AirControl.unity"};
+        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -55,10 +54,9 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "windows";
-        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Windows";
-        string[] levels = new string[] {"Assets/Scene/v"+releaseVersion+"-AirControl.unity"};
+        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -77,10 +75,9 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "mac";
-        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/Mac";
-        string[] levels = new string[] {"Assets/Scene/v"+releaseVersion+"-AirControl.unity"};
+        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -99,10 +96,9 @@ public class AutomatedBuild : MonoBehaviour
     {
         // Get filename.
         String OS = "webgl";
-        UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
         string buildPath = "Build/WebGL";
-        string[] levels = new string[] {"Assets/Scene/v"+releaseVersion+"-AirControl.unity"};
+        string[] levels = new string[] {"Assets/Scene/v0.0.6-AirControl.unity"};
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -111,28 +107,6 @@ public class AutomatedBuild : MonoBehaviour
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
         BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName), BuildTarget.WebGL, BuildOptions.None);
-    }
-
-    public static void createUnityPackage()
-    {
-             GameObject obj = GameObject.CreatePrimitive(PrimitiveType.Cube); 
-     
-              Instantiate(obj, new Vector3(0, 0, 0), Quaternion.identity);
-             string filePath = "Assets/Prefabs/";
-             FileInfo file = new FileInfo(filePath);
-             file.Directory.Create();
-     
-             string  prefabfilename = filePath + obj.name + ".prefab";
-             UnityEngine.Object prefab = PrefabUtility.CreateEmptyPrefab(prefabfilename);
-     
-             PrefabUtility.ReplacePrefab(obj, prefab, ReplacePrefabOptions.ConnectToPrefab);
-     
-             string exportPath = "Assets/" + obj.name + ".unitypackage";
-             
-             AssetDatabase.ExportPackage(prefabfilename, exportPath, 
-            ExportPackageOptions.IncludeDependencies | ExportPackageOptions.Recurse);
-       
-     
     }
 
 
