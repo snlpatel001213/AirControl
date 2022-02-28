@@ -23,8 +23,11 @@ namespace AirControl
         // Methods to be called before start goes here
         public  virtual void Awake()
         {
+#if !UNITY_WEBGL
             // init DB
+            // not applicable to unity webGL deployment as this is not supported
             IOInit.CreateSchema();
+#endif
             
         }
         // Start is called before the first frame update
