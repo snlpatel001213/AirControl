@@ -6,6 +6,7 @@ using System.Diagnostics;
 using UnityEngine.SceneManagement;
 using System;
 using System.IO;
+using System.Text;
 using Commons;
 
 public class AutomatedBuild : MonoBehaviour
@@ -24,6 +25,7 @@ public class AutomatedBuild : MonoBehaviour
         BuildWindows();
         BuildMac();
         BuildWebGL();
+        SwitchBuild2Default();
     }
     
     /// <summary>
@@ -46,6 +48,7 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneLinux64);
         BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".x86_64"), BuildTarget.StandaloneLinux64, BuildOptions.None);
     }
 
@@ -69,6 +72,7 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
         BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".exe"), BuildTarget.StandaloneWindows, BuildOptions.None);
     }
 
@@ -92,7 +96,9 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneOSX);
         BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".app"), BuildTarget.StandaloneOSX, BuildOptions.None);
+
     }
 
     /// <summary>
@@ -115,7 +121,53 @@ public class AutomatedBuild : MonoBehaviour
         }
         DirectoryInfo di  = Directory.CreateDirectory(buildPath);
         // Build player.
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.WebGL);
         BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName), BuildTarget.WebGL, BuildOptions.None);
+    }
+    
+    [MenuItem("Air Control/Build/Unitypackage")]
+    static void GetAllDependenciesForScenes()
+    {
+        String OS = "UnityPackage";
+        String appName = releaseVersion;
+        string buildPath = "Build/UnityPackage";
+        //Create directory , remove existing
+        if (Directory.Exists(buildPath))
+        {
+            CommonFunctions.clearFolder(buildPath);
+        }
+        DirectoryInfo di  = Directory.CreateDirectory(buildPath);
+        string sceneName = SceneManager.GetActiveScene().name;
+        var dependencies = AssetDatabase.GetDependencies("Assets/Scene/"+sceneName+".unity");
+
+        var dependenciesString =  new List<string>();
+
+        foreach (var curDependency in dependencies)
+        {
+            dependenciesString.Add(curDependency);
+        }
+
+        UnityEngine.Debug.Log("All dependencies for Scenes in Project: " + dependenciesString);
+        AssetDatabase.ExportPackage(dependenciesString.ToArray(), System.IO.Path.Combine(buildPath,appName+".unitypackage"),
+            ExportPackageOptions.Recurse | ExportPackageOptions.IncludeDependencies);
+        UnityEngine.Debug.Log("Completed build for - "+OS );
+    }
+
+    /// <summary>
+    /// After build switch back to the original edior plat form based on the os
+    /// </summary>
+    public static void SwitchBuild2Default(){
+        #if UNITY_EDITOR_LINUX
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneLinux64);
+        #endif
+        #if UNITY_EDITOR_OSX
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneOSX);
+        #endif
+        #if UNITY_EDITOR_WIN
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneWindows);
+        #endif
+
+
     }
 
 
