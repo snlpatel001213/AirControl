@@ -97,6 +97,9 @@ namespace Communicator
 		public static byte [] ScreenCapture;
 		public static float [] LidarPointCloud;
 		public static int Counter;
+		public static bool IsGrounded;
+		public static bool IsFlying;
+		public static bool IsLanded;
 
 		public static string log = "";
 		public static double Reward;
@@ -128,6 +131,9 @@ namespace Communicator
 		public int Counter;
 		public string log = "";
 		public double Reward;
+		public bool IsGrounded;
+		public bool IsFlying;
+		public bool IsLanded;
 	}
 	#endregion
 

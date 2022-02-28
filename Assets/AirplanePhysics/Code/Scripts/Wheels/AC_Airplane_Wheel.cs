@@ -9,6 +9,14 @@ namespace AirControl
     /// </summary>
     public class AC_Airplane_Wheel : MonoBehaviour
     {
+        #region Properties
+        public bool isGrounded = false;
+        public bool IsGrounded
+        {
+            get{ return isGrounded; }
+        }
+        #endregion
+        
         #region Variables 
         [Header("Wheel Properties")]
         public Transform wheelGraphic;
@@ -82,6 +90,9 @@ namespace AirControl
                 {
                     wheelCol.steerAngle = -input.Yaw * steerAngle;
                 }
+
+                // check to see if the wheels are grounded
+                isGrounded = wheelCol.isGrounded;
                 
             }
         }

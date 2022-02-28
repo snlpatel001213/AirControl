@@ -9,6 +9,11 @@ using System;
 
 namespace AirControl
 {
+    public enum AirplaneState{
+        LANDED, 
+        GROUNDED, 
+        FLYING,
+    }
     /// <summary>
     /// Master Controller, controls the entire Airplane
     /// it implements function to Handle Engines,   Handle Characteristics,  Handle ControlSurfaces,  Handle Wheel and  Handle Altitude
@@ -44,7 +49,13 @@ namespace AirControl
         [Header("Control Surfaces")]
         [Tooltip("Initialize empty control surfaces. Add AC_Airplane_ControlSurface script to that object. Hook wheels object here")]
         public List<AC_Airplane_ControlSurface> controlSurfaces = new List<AC_Airplane_ControlSurface>();
-        
+
+        // Starting from ground
+        private AirplaneState airplaneState =  AirplaneState.LANDED;
+        [SerializeField] private bool isGrounded =  true;
+        [SerializeField] private bool isLanded =  true;
+        [SerializeField] private bool isFlying =  false;
+
         // Meadian sea level
         private float currentMSL;
         // Above Ground Level
@@ -104,7 +115,9 @@ namespace AirControl
                         wheel.initWheel();
                     }
                 }
-            }  
+            } 
+
+            InvokeRepeating("CheckGrounded", 1f, 1f); 
         }
         void update()
         {
@@ -224,6 +237,59 @@ namespace AirControl
             StaticOutputSchema.MSL = currentMSL;
             StaticOutputSchema.AGL = currentAGL;
             #endregion
+        }
+
+        /// <summary>
+        /// Check if all the Airplane wheel are grounded and determine the current state
+        /// </summary>
+        void CheckGrounded()
+        {
+            if(wheels.Count > 0){
+                int groundedCount = 0;
+                foreach(AC_Airplane_Wheel wheel in wheels)
+                {
+                    if(wheel.isGrounded)
+                    {
+                        groundedCount++;
+                    }
+                }
+                if(groundedCount ==  wheels.Count)
+                {
+                    isGrounded = true;
+                    isFlying = false;
+                    isLanded = false;                    
+                    // update to API
+                    StaticOutputSchema.IsGrounded = isGrounded;
+                    StaticOutputSchema.IsLanded = isLanded;
+                    StaticOutputSchema.IsFlying = isLanded;
+                    if(rb.velocity.magnitude < 1f){
+                        isLanded = true;
+                        isGrounded = false;
+                        isFlying = false;
+                        // update to API
+                        StaticOutputSchema.IsGrounded = isGrounded;
+                        StaticOutputSchema.IsLanded = isLanded;
+                        StaticOutputSchema.IsFlying = isLanded;
+                    }
+                    else{
+                        isLanded = false;
+                        isGrounded = true;
+                        isFlying = false;
+                        StaticOutputSchema.IsLanded = isLanded;
+                        StaticOutputSchema.IsGrounded = isGrounded;
+                    }
+                }
+                else
+                {
+                    isLanded = false;
+                    isGrounded = false;
+                    isFlying = true;
+                    StaticOutputSchema.IsGrounded = isGrounded;
+                    StaticOutputSchema.IsLanded = isLanded;
+                    StaticOutputSchema.IsFlying = isLanded;
+                }
+
+            }
         }
 
       
