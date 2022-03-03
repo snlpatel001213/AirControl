@@ -100,4 +100,3 @@ class Communicator:
         
         #join all parts to make final string
         return eval(total_data)
-
