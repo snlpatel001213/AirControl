@@ -53,7 +53,7 @@ namespace Communicator
 		void Start () { 		
 			// Start TcpServer background thread 		
 			tcpListenerThread = new Thread (new ThreadStart(ListenForIncommingRequests)); 		
-			tcpListenerThread.IsBackground = false; 		
+			tcpListenerThread.IsBackground = true; 
 			tcpListenerThread.Start(); 	
 		}  	
 		#endregion
@@ -65,7 +65,8 @@ namespace Communicator
 		public void ListenForIncommingRequests () { 		
 			try { 			
 				// Create listener on localhost port 8052. 			
-				tcpListener = new TcpListener(IPAddress.Parse("0.0.0.0"), 8053); 			
+				tcpListener = new TcpListener(IPAddress.Parse("0.0.0.0"), 8053); 	
+					
 				tcpListener.Start();              
 				Debug.Log("Server is listening");              
 				Byte[] bytes = new Byte[1024];
@@ -73,7 +74,8 @@ namespace Communicator
 				{
 					while (true) { 				
 							using (connectedTcpClient = tcpListener.AcceptTcpClient()) { 					
-								// Get a stream object for reading 					
+								// Get a stream object for reading 	
+											
 								using (NetworkStream stream = connectedTcpClient.GetStream()) { 						
 									int length; 						
 									// Read incomming stream into byte arrary.				
@@ -129,8 +131,8 @@ namespace Communicator
 										}
 										ResetThings();
 										
-									} 					
-								} 				
+									}					
+								} 			
 							}
 								
 						} 
@@ -142,7 +144,7 @@ namespace Communicator
 			} 		
 			catch (SocketException socketException) { 			
 				Debug.Log("SocketException " + socketException.ToString());
-				tcpListener.Stop();
+				// tcpListener.Stop();
 				isOutput = true;
 			}     
 		}
@@ -153,6 +155,7 @@ namespace Communicator
 		{
 			if(StaticOutputSchema.IfCollision)
 			{
+				Debug.Log("Reset things called");
 				StaticOutputSchema.IfCollision = false;
 			}
 			
@@ -178,13 +181,20 @@ namespace Communicator
 		/// </summary> 	
 		public new void SendMessage(String outStructSerialized) { 		
 			if (connectedTcpClient == null) {  
-				// Debug.Log("Writting Out0");	           
+				// DateTime now = DateTime.Now;
+				// Debug.LogError(now + " - connectedTcpClient became null ");     
 				return;         
 			}  		
 			try { 			
 				// Get a stream object for writing. 
 				// Debug.Log("Writting Out1");			
-				NetworkStream stream = connectedTcpClient.GetStream(); 			
+				NetworkStream stream = connectedTcpClient.GetStream(); 	
+				// if (stream.CanWrite==false)
+				// {
+				// 	DateTime now = DateTime.Now;
+				// 	Debug.Log(now + " - stream.CanWrite - "+ stream.CanWrite);
+				// }	
+				
 				if (stream.CanWrite) {  
 					// Debug.Log("Writting Out2");			               
 					// string serverMessage = "This is a message from your server."; 			
@@ -192,8 +202,9 @@ namespace Communicator
 					byte[] serverMessageAsByteArray = Encoding.ASCII.GetBytes(outStructSerialized); 				
 					// Write byte array to socketConnection stream.               
 					stream.Write(serverMessageAsByteArray, 0, serverMessageAsByteArray.Length);               
-					// Debug.Log("Server sent his message - should be received by client");          
-					// Debug.Log("Writting Out3");			 
+					// Debug.Log("Server sent his message - should be received by client");     
+					Debug.Log("sent : " +  Commons.CommonFunctions.Counter );	
+					// Debug.Log(outStructSerialized);		 
 				}       
 			} 		
 			catch (SocketException socketException) {             

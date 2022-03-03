@@ -3907,8 +3907,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   longitude: -504.55
   latitude: -1650.4
-  hour: 11
-  minutes: 2
+  hour: 10
+  minutes: 52
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1835753706
@@ -5014,6 +5014,24 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+--- !u!1 &605216745383547910 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 604458725687717458, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+  m_PrefabInstance: {fileID: 605216745383547909}
+  m_PrefabAsset: {fileID: 0}
+--- !u!135 &605216745383547911
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 605216745383547910}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1.2652221
+  m_Center: {x: -0.014987335, y: -0.29552257, z: -0.003377676}
 --- !u!114 &755010503212096062 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 152136542231531067, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}

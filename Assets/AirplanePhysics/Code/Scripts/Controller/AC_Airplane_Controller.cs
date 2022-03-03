@@ -1,14 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Communicator;
 using Commons;
 using System.IO;
 using System;
+using Commons;
 
 
 namespace AirControl
 {
+
     public enum AirplaneState{
         LANDED, 
         GROUNDED, 
@@ -60,6 +63,13 @@ namespace AirControl
         private float currentMSL;
         // Above Ground Level
         private float currentAGL;
+
+        // To detect if the Airplane is stuck 
+        private Vector3 lastAirplanePosition;
+        private Vector3 currAirplanePosition;
+
+        // private int lastCommCounter=0;
+        // private int currCommCounter=0;
         #endregion
 
         #region Properties
@@ -118,6 +128,8 @@ namespace AirControl
             } 
 
             InvokeRepeating("CheckGrounded", 1f, 1f); 
+            InvokeRepeating("DetectAirplaneStuck", 5f, 5f); 
+            // InvokeRepeating("DetectCounterStuck", 5f, 5f); 
         }
         void update()
         {
@@ -291,6 +303,37 @@ namespace AirControl
 
             }
         }
+
+        private void DetectAirplaneStuck()
+        {
+            currAirplanePosition = rb.transform.localPosition;
+            if(currAirplanePosition == lastAirplanePosition)
+            {
+                StaticOutputSchema.log = "Airplane was stuck";
+                Debug.Log("Airplane was stuck");
+                
+                // Relaod the level 
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
+                StaticOutputSchema.IfCollision = true;
+                StaticOutputSchema.CollisionObject = "Stuck";
+            }
+            lastAirplanePosition = currAirplanePosition;
+            
+        }
+        // private void DetectCounterStuck()
+        // {
+        //     lastCommCounter = Commons.CommonFunctions.Counter;
+        //     if(currCommCounter == lastCommCounter)
+        //     {
+        //         StaticOutputSchema.log = "Counter was stuck";
+        //         Debug.Log("Counter was stuck");
+        //         //Relaod the level 
+        //         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+        //     }
+        //     lastCommCounter = currCommCounter;
+            
+        // }
 
       
         #endregion

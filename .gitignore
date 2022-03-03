@@ -79,3 +79,7 @@ crashlytics-build.properties
 
 # unity meta files
 .meta
+
+# Experiments
+ReinforcementLearningExample/DQN/
+ReinforcementLearningExample/Experiment/

@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Communicator;
 
 namespace AirControl
 {
@@ -36,6 +37,17 @@ namespace AirControl
         void Start()
         {
             wheelCol = GetComponent<WheelCollider>();
+        }
+
+        void OnCollisionExit(Collision other) {
+
+            string colliderObjectTag = other.gameObject.tag;
+            Debug.Log("Wheel collided with : " + colliderObjectTag);
+            if ( colliderObjectTag != "Runway") {
+                StaticOutputSchema.IfCollision = true;
+                StaticOutputSchema.CollisionObject = colliderObjectTag;
+            }
+
         }
 
         // Update is called once per frame

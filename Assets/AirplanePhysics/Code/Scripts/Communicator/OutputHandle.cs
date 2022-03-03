@@ -52,7 +52,7 @@ namespace Communicator
             }, new PrimitiveToStringConverter());
             if(StaticOutputSchema.IfCollision)
             {
-                Debug.Log(output);
+                // Debug.Log(output);
             }
             return output;
         }
