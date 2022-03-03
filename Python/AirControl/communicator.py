@@ -42,7 +42,7 @@ class Communicator:
             self.sock.connect((host, port))   
             self.sock.settimeout(10)      
         except Exception as e:
-            print("Faced Error while establishing serverclient connect.",e)
+            print("Faced Error while establishing server-client connect.",e)
 
     def send_data(self, data_dict: dict):
         """

@@ -303,7 +303,9 @@ namespace AirControl
 
             }
         }
-
+        /// <summary>
+        /// Checking if the airplane is stuck in the same position. If it is stuck, it will reload the level.
+        /// </summary>
         private void DetectAirplaneStuck()
         {
             currAirplanePosition = rb.transform.localPosition;
@@ -321,19 +323,6 @@ namespace AirControl
             lastAirplanePosition = currAirplanePosition;
             
         }
-        // private void DetectCounterStuck()
-        // {
-        //     lastCommCounter = Commons.CommonFunctions.Counter;
-        //     if(currCommCounter == lastCommCounter)
-        //     {
-        //         StaticOutputSchema.log = "Counter was stuck";
-        //         Debug.Log("Counter was stuck");
-        //         //Relaod the level 
-        //         SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
-        //     }
-        //     lastCommCounter = currCommCounter;
-            
-        // }
 
       
         #endregion

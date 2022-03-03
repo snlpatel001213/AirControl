@@ -48,6 +48,9 @@ namespace Communicator
                 Reward = StaticOutputSchema.Reward,
                 Counter = CommonFunctions.Counter,
                 CollisionObject = StaticOutputSchema.CollisionObject,
+                IsFlying =  StaticOutputSchema.IsFlying,
+                IsGrounded =  StaticOutputSchema.IsGrounded,
+                IsLanded =  StaticOutputSchema.IsLanded,
                 
             }, new PrimitiveToStringConverter());
             if(StaticOutputSchema.IfCollision)

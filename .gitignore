@@ -75,7 +75,8 @@ crashlytics-build.properties
 
 # ipython notebook checkpoint 
 .ipynb_checkpoints
-*/.ipynb_checkpoints/*
+*/.ipynb_checkpoints/**
+*/*/.ipynb_checkpoints
 
 # unity meta files
 .meta
@@ -83,3 +84,4 @@ crashlytics-build.properties
 # Experiments
 ReinforcementLearningExample/DQN/
 ReinforcementLearningExample/Experiment/
+Python/client_examples/.ipynb_checkpoints
