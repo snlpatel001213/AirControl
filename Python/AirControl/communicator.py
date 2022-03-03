@@ -7,6 +7,14 @@ import numpy as np
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
+        """
+        If the object is a numpy integer, return an integer. If the object is a numpy float, return a
+        float. If the object is a numpy array, return the array. If the object is none of the above,
+        return the super of the function
+        
+        :param obj: The object to serialize
+        :return: A JSON object with the data from the DataFrame
+        """
         if isinstance(obj, np.integer):
             return int(obj)
         if isinstance(obj, np.floating):
@@ -31,26 +39,6 @@ class Communicator:
         self.RECV_BUF_SIZE = 4096 
         try:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-
-            # Get the size of the socket's send buffer 
-            # bufsize = self.sock.getsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF) 
-            # print ("Buffer size [Before]:%d" %bufsize) 
-            
-            # self.sock.setsockopt(socket.SOL_TCP, 
-            #                 socket.TCP_NODELAY, 1) 
-            
-            # self.sock.setsockopt( 
-            #         socket.SOL_SOCKET, 
-            #         socket.SO_SNDBUF, 
-            #         self.SEND_BUF_SIZE) 
-            # self.sock.setsockopt( 
-            #         socket.SOL_SOCKET, 
-            #         socket.SO_RCVBUF, 
-            #         self.RECV_BUF_SIZE) 
-            # bufsize = self.sock.getsockopt(socket.SOL_SOCKET, socket.SO_SNDBUF) 
-            # print ("Buffer size [After]:%d" %bufsize) 
-
-            # self.setblocking(1) 
             self.sock.connect((host, port))   
             self.sock.settimeout(10)      
         except Exception as e:
@@ -69,7 +57,12 @@ class Communicator:
 
     def receive_data(self, timeout=0.1):
         """
-        To receive data partwise
+        Receive data partwise
+    
+        :param timeout: The timeout parameter specifies the time-out as a floating point number in
+        seconds
+        :return: A list of dictionaries. Each dictionary is a question.
+        
         """
         self.sock.setblocking(0)
         #total data partwise in an array
