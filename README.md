@@ -34,30 +34,29 @@ Supported Language
 
 </div>
  
-# Welcome to Aircontrol
+# Welcome to AirControl
 
-**AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** AirControl offers a realistic simulation experience with a variety of airplanes. The AirControl is built on [Unity Game engine](https://unity.com). Following are the salient features of the Aircontrol:
+**AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.** AirControl offers a realistic simulation experience with a variety of airplanes. The AirControl is built on [Unity Game engine](https://unity.com). Following are the salient features of the AirControl:
 
 * Built with **C#**, it has **Python** API to control it from your favorite Deep learning Framework.
 * Complete source code is open on Github.
-* Aircontrol takes full advantage of object-oriented programming. Developed fully modular from day one. You can easily introduce new features such as **vertical takeoff**. you can bring your own **alien plane to AirCotrol**. 
+* Aircontrol takes full advantage of object-oriented programming. It is developed fully modular from day one. You can easily introduce new features such as **vertical takeoff**. You can bring your own **alien plane to AirCotrol**. 
 * AirControl is truly cross-platform, can be compiled on Linux, macOS, and Windows. Binary will be released for all the platforms.
 * The AirControl uses Nvidia [Physx](https://en.wikipedia.org/wiki/PhysX) for the best possible Newtonian physics simulation.
-* Aircontrol allows users to take advantage of aerodynamics effects such as [Ground effect](https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)).
-* All the control surfaces (Throttle, Rudder, Ailerons, and Flaps) accepts normalized input between -1 and 1. This makes Aircontrol even more friendly with AI.
+* AirControl allows users to take advantage of aerodynamics effects such as [Ground effect](https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)).
+* All the control surfaces (Throttle, Rudder, Ailerons, and Flaps) accept normalized input between -1 and 1. This makes AirControl even more friendly with AI.
 
 ## System Requirement
-It depends on how big your Unity Environment is. The environmant which comes with the Aircontrol binary releases is the basic one and tested with following config:
+It depends on how big your Unity environment is. The environment which comes with the AirControl binary releases is the basic one and tested with the following config:
 
-- Operating system : Ubuntu, Windows, Mac
+- Operating System : Ubuntu, Windows, Mac
 - CPU: Intel Core i7
 - GPU: Nvidia 1070 or Higher
 - RAM: 16 GB
-- Flight Controller: xbox [WIP] expected release v0.0.7
 
-Aircontrol may work with lower than the specified requirements, but its not tested.
+AirControl may work with lower than the specified requirements, but it's not tested.
 
-You can run Aircontrol in server-client mode in two different machines or both in the single machine.
+You can run AirControl in server-client mode with two different machines or both in a single machine.
 
 <p align="center">
   <img src="https://github.com/snlpatel001213/AirControl/blob/master/docs/images/FrontImage.png?raw=true" height="400"/>
@@ -123,8 +122,19 @@ snap install aircontrol
 1. AirControl Documentation : https://aircontrol.readthedocs.io/
 2. C#/Python API Documentation - https://snlpatel001213.github.io/AirControl/html/index.html
 
+## Client examples
+
+| Sr. No.  |  Client Example | Details |
+|---|---|---|
+| 1 | [Primitive API](https://github.com/snlpatel001213/AirControl/blob/master/Python/client_examples/primitive_API.ipynb)   |  Simple Client to interact with the server. It does not require the AirControl Pypi package. Just for unit test, not for long runs |
+| 2 | [Primitive API - 2](https://github.com/snlpatel001213/AirControl/blob/master/Python/client_examples/primitive_API_2.ipynb)   |  Simple Client to interact with server. More detailed than the previous one. End to end flight loop is demonstrated. It does not require AirControl Pypi package. Just for unit test, not for long runs |
+| 3 | [Lidar Controls](https://github.com/snlpatel001213/AirControl/blob/master/Python/client_examples/lidar_API.ipynb)   |  Demonstrate how to control lidar from the python client.|
+| 4 | [Camera Controls](https://github.com/snlpatel001213/AirControl/blob/master/Python/client_examples/camera_API.ipynb)   |  Demonstrate how to control Camera from the python client. It allows switching the camera. It allows capturing Depth, Semantic segmentation, Object segmentation, Optical flow variant of the scene.|
+| 4 | [Time of Day Controls](https://github.com/snlpatel001213/AirControl/blob/master/Python/client_examples/time_of_day_API.ipynb)   | Allows controlling the time of day and light conditions. It allows controlling sun position based on Longitude, Latitude, Hour, and Minutes.|
+| 5 | [UI and Audio Controls](https://github.com/snlpatel001213/AirControl/blob/master/Python/client_examples/other_API.ipynb)   | Allows controlling visibility of Airplane control on UI and Airplane Audio.|
+
 ## Future Release
-Refer to the Project page for the future release, features and bug tracking : https://github.com/snlpatel001213/AirControl/projects/1
+Refer to the Project page for the future release, features, and bug tracking : https://github.com/snlpatel001213/AirControl/projects/1
 ![Projects Tab Mappings](https://github.com/snlpatel001213/AirControl/blob/master/docs/images/projects_tab.png)
 
 ## Tools and Technology
@@ -135,12 +145,6 @@ Refer to the Project page for the future release, features and bug tracking : ht
         <img src="https://github.com/snlpatel001213/AirControl/blob/master/docs/images/CSharp_logo.png?raw=true" width="10%"/>
 
 </div>
-
-## Research Inspirations
-  
-**Feel free to list your research topic you love to work on over here. Collaborate and publish.**
-  
-1. On January 15, 2009, US Airways Flight 1549, an Airbus A320 on a flight from New York City's LaGuardia Airport to Charlotte, North Carolina, struck a flock of birds shortly after take-off, losing all engine power. Unable to reach any airport for an emergency landing due to their low altitude, pilots Chesley "Sully" Sullenberger and Jeffrey Skiles glided the plane to a ditching in the Hudson River off Midtown Manhattan. **Well! Sully did the best but Could we have a different outcome, If Reinforcement learning was controlling this plane?**. [Reference](https://en.wikipedia.org/wiki/US_Airways_Flight_1549)
 
 ## Contribute
 We love your input! We want to make contributing to AirControl as easy and transparent as possible. Please see our Contributing Guide `CONTRIBUTING.md` to get started. Thank you to all our contributors!
