@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![GitHub release (latest by date)](https://img.shields.io/badge/Release-0.1.5-orange)
+![GitHub release (latest by date)](https://img.shields.io/badge/Release-1.0.0-orange)
 ![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl)
 ![GitHub repo size](https://badgen.net/github/license/micromatch/micromatch)
 [![Documentation Status](https://readthedocs.org/projects/aircontrol/badge/?version=master)](https://aircontrol.readthedocs.io/en/master/?badge=master)
