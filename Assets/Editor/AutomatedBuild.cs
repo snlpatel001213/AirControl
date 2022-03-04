@@ -165,6 +165,46 @@ public class AutomatedBuild : MonoBehaviour
         UnityEngine.Debug.Log("Completed build for - "+OS );
     }
 
+   
+    // [MenuItem("Air Control/Build/CreateGitZip")]
+    // public static void CreateGitZip()
+    // {
+    //     try
+    //     {
+    //         ProcessStartInfo procStartInfo = new ProcessStartInfo("/usr/bin/git", "archive HEAD -o ${PWD##*/}.zip");
+
+    //         procStartInfo.RedirectStandardError = procStartInfo.RedirectStandardInput = procStartInfo.RedirectStandardOutput = true;
+    //         procStartInfo.UseShellExecute = false;
+    //         procStartInfo.CreateNoWindow = true;
+
+    //         procStartInfo.WorkingDirectory = "/home/supatel/Games/New_AirControl_2020/";
+            
+
+    //         Process proc = new Process();
+    //         proc.StartInfo = procStartInfo;
+    //         proc.Start();
+
+    //         StringBuilder sb = new StringBuilder();
+    //         proc.OutputDataReceived += delegate (object sender, DataReceivedEventArgs e)
+    //         {
+    //             sb.AppendLine(e.Data);
+    //         };
+    //         proc.ErrorDataReceived += delegate (object sender, DataReceivedEventArgs e)
+    //         {
+    //             sb.AppendLine(e.Data);
+    //         };
+
+    //         proc.BeginOutputReadLine();
+    //         proc.BeginErrorReadLine();
+    //         proc.WaitForExit();
+    //         UnityEngine.Debug.Log($"Error in command: {sb.ToString()}");
+    //     }
+    //     catch (Exception objException)
+    //     {
+    //         UnityEngine.Debug.Log($"Error in command: {objException.Message}");
+    //     }
+    // }
+
     /// <summary>
     /// After build switch back to the original edior plat form based on the os
     /// </summary>
