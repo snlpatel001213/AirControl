@@ -57,17 +57,13 @@ namespace AirControl{
             /// </summary>
             #region IOSwitch
             
-            bool isActive = StaticAudioSchema.IsActive;
-            if(isActive)
+            if(StaticAudioSchema.IsActive)
             {
-                bool enableAudio = StaticAudioSchema.EnableAudio;
-                idleSource.enabled = enableAudio;
-                fullThrottleSource.enabled = enableAudio;
-                currentEnableAudio = enableAudio;
+                idleSource.enabled = StaticAudioSchema.EnableAudio;
+                fullThrottleSource.enabled = StaticAudioSchema.EnableAudio;
+                currentEnableAudio = StaticAudioSchema.EnableAudio;
                 //logging
-                string logString = " Audio set to : "+enableAudio;
-                StaticLogger.Log = logString;
-                Debug.unityLogger.Log(logString);
+                Debug.unityLogger.Log(" Audio set to : "+ StaticAudioSchema.EnableAudio);
                 StaticAudioSchema.IsActive = false;
             }
             #endregion

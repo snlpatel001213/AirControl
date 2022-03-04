@@ -3,7 +3,6 @@ README.md
 VERSION
 setup.cfg
 setup.py
-../LICENSE
 AirControl/aircontrol_python.egg-info/PKG-INFO
 AirControl/aircontrol_python.egg-info/SOURCES.txt
 AirControl/aircontrol_python.egg-info/dependency_links.txt

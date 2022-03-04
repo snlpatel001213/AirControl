@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using System;
 using Commons;
 using Communicator;
 
@@ -23,8 +24,11 @@ namespace AirControl
         // Methods to be called before start goes here
         public  virtual void Awake()
         {
+#if !UNITY_WEBGL
             // init DB
+            // not applicable to unity webGL deployment as this is not supported
             IOInit.CreateSchema();
+#endif
             
         }
         // Start is called before the first frame update
@@ -46,9 +50,7 @@ namespace AirControl
             if(rb){
                 HandlePhysics();
                 // HandleLocation();
-                
             }
-            // detect if airplane turns upside down
             
         }
 
@@ -57,8 +59,9 @@ namespace AirControl
             // if(col.gameObject.tag!= "Runway" )
             // {
                 // hasEntered = true;
+                DateTime now = DateTime.Now;
                 MaxR -=10f;
-                Debug.LogFormat("Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
+                Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
                 StaticOutputSchema.IfCollision=true;
                 StaticOutputSchema.CollisionObject = col.gameObject.tag;
             // }
@@ -70,8 +73,9 @@ namespace AirControl
            if(col.CompareTag("Fence"))
             {
                 // hasEntered = true;
+                DateTime now = DateTime.Now;
                 MaxR -=10f;
-                Debug.LogFormat("Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
+                Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
                 StaticOutputSchema.IfCollision=true;
                 StaticOutputSchema.CollisionObject = col.gameObject.tag;
             }

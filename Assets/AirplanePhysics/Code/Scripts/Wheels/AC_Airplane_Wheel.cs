@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Communicator;
 
 namespace AirControl
 {
@@ -9,6 +10,14 @@ namespace AirControl
     /// </summary>
     public class AC_Airplane_Wheel : MonoBehaviour
     {
+        #region Properties
+        public bool isGrounded = false;
+        public bool IsGrounded
+        {
+            get{ return isGrounded; }
+        }
+        #endregion
+        
         #region Variables 
         [Header("Wheel Properties")]
         public Transform wheelGraphic;
@@ -28,6 +37,17 @@ namespace AirControl
         void Start()
         {
             wheelCol = GetComponent<WheelCollider>();
+        }
+
+        void OnCollisionExit(Collision other) {
+
+            string colliderObjectTag = other.gameObject.tag;
+            Debug.Log("Wheel collided with : " + colliderObjectTag);
+            if ( colliderObjectTag != "Runway") {
+                StaticOutputSchema.IfCollision = true;
+                StaticOutputSchema.CollisionObject = colliderObjectTag;
+            }
+
         }
 
         // Update is called once per frame
@@ -82,6 +102,9 @@ namespace AirControl
                 {
                     wheelCol.steerAngle = -input.Yaw * steerAngle;
                 }
+
+                // check to see if the wheels are grounded
+                isGrounded = wheelCol.isGrounded;
                 
             }
         }

@@ -7,11 +7,15 @@ Please note we have a code of conduct, please follow it in all your interactions
 
 ## Pull Request Process
 
-1. if you have changed the version of the project update the same at the following locations
+1. If you have changed the version of the project update the same at the following locations
    1. file `VERSION` at the root
    2. file `Assets/AirplanePhysics/Code/commons/CommonConfigs.cs` in the `GET_VERSION()` function
-2. Make sure if any third-party plugins are used then it also supports open usage.
-3. Make sure if any third-party plugins are used then Windows, Linux, and MacOS build are tested.
+2. Make sure if any third-party plugins are used then it also supports open usage and compile for following Platform.
+    1. Windows
+    2. Mac 
+    3. Ubuntu
+    4, WebGl
+3. Make sure if any third-party plugins are used then Windows, Linux, and MacOS build are tested manually.
 4. Make sure to add a docstring to any new python and C# function.
 5. update requirements.txt file for any additional python requirement
 6. Update the README.md with details of changes to the interface, this includes new environment 

@@ -111,18 +111,24 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a51791082fb558db19b2072d76d6e5bec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab72a682f3cb0c1fdf9f60c45b96b2d03"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1communicator_1_1Communicator.html#ab72a682f3cb0c1fdf9f60c45b96b2d03">send_data</a> (self, dict data_dict)</td></tr>
 <tr class="separator:ab72a682f3cb0c1fdf9f60c45b96b2d03"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae766f39eb5471e6c0aff191ec5127d58"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1communicator_1_1Communicator.html#ae766f39eb5471e6c0aff191ec5127d58">receive_data</a> (self)</td></tr>
-<tr class="separator:ae766f39eb5471e6c0aff191ec5127d58"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a472eb6e6285c6fa39bcbccc49654682c"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1communicator_1_1Communicator.html#a472eb6e6285c6fa39bcbccc49654682c">receive_data</a> (self, timeout=0.1)</td></tr>
+<tr class="separator:a472eb6e6285c6fa39bcbccc49654682c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
+<tr class="memitem:a2900470e4d90430957c0c203978fa69d"><td class="memItemLeft" align="right" valign="top"><a id="a2900470e4d90430957c0c203978fa69d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>SEND_BUF_SIZE</b></td></tr>
+<tr class="separator:a2900470e4d90430957c0c203978fa69d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac752e89897185e0ab4619b162558f00d"><td class="memItemLeft" align="right" valign="top"><a id="ac752e89897185e0ab4619b162558f00d"></a>
+&#160;</td><td class="memItemRight" valign="bottom"><b>RECV_BUF_SIZE</b></td></tr>
+<tr class="separator:ac752e89897185e0ab4619b162558f00d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2b854fa916b956973d05a0c424074697"><td class="memItemLeft" align="right" valign="top"><a id="a2b854fa916b956973d05a0c424074697"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>sock</b></td></tr>
 <tr class="separator:a2b854fa916b956973d05a0c424074697"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00018">18</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
+<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00026">26</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a51791082fb558db19b2072d76d6e5bec"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a51791082fb558db19b2072d76d6e5bec">&#9670;&nbsp;</a></span>__init__()</h2>
@@ -164,31 +170,33 @@ Args:
 Returns:
     Socket: socket connection to the server
 </pre> 
-<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00019">19</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">def </span>__init__(self, host=&quot;127.0.0.1&quot;, port=8053):</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="stringliteral">        Get scoket connection to the host</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="stringliteral">        Args:</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="stringliteral">            host (str, optional): IP address of the server. Defaults to &quot;127.0.0.1&quot;.</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="stringliteral">            port (int, optional): Port of the server. Defaults to 8053.</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="stringliteral"></span> </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="stringliteral">        Returns:</span></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="stringliteral">            Socket: socket connection to the server</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">try</span>:</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            self.sock.connect((host, port))   </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            self.sock.settimeout(10)      </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordflow">except</span> Exception <span class="keyword">as</span> e:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            print(e)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00027">27</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">def </span>__init__(self, host=&quot;127.0.0.1&quot;, port=8053):</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="stringliteral">        Get scoket connection to the host</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="stringliteral">        Args:</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="stringliteral">            host (str, optional): IP address of the server. Defaults to &quot;127.0.0.1&quot;.</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;<span class="stringliteral">            port (int, optional): Port of the server. Defaults to 8053.</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="stringliteral"></span> </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="stringliteral">        Returns:</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="stringliteral">            Socket: socket connection to the server</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        self.SEND_BUF_SIZE = 4096 </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        self.RECV_BUF_SIZE = 4096 </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            self.sock.connect((host, port))   </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            self.sock.settimeout(10)      </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">except</span> Exception <span class="keyword">as</span> e:</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            print(<span class="stringliteral">&quot;Faced Error while establishing server-client connect.&quot;</span>,e)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ae766f39eb5471e6c0aff191ec5127d58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae766f39eb5471e6c0aff191ec5127d58">&#9670;&nbsp;</a></span>receive_data()</h2>
+<a id="a472eb6e6285c6fa39bcbccc49654682c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a472eb6e6285c6fa39bcbccc49654682c">&#9670;&nbsp;</a></span>receive_data()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,41 +205,65 @@ Returns:
           <td class="memname">def AirControl.communicator.Communicator.receive_data </td>
           <td>(</td>
           <td class="paramtype">&#160;</td>
-          <td class="paramname"><em>self</em></td><td>)</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>timeout</em> = <code>0.1</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<pre class="fragment">Receives data from server
-
-Args:
-    sock (socket): Socket connection aquired from `get_socket` method
-Returns:
-    data(dict): Data Received from the server
-</pre> 
-<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00049">49</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">def </span>receive_data(self):</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral">        Receives data from server</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral">        </span></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">        Args:</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral">            sock (socket): Socket connection aquired from `get_socket` method</span></div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="stringliteral">        Returns:</span></div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="stringliteral">            data(dict): Data Received from the server</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="comment"># sleep stabilizes the TCP connection and bring in oder</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment"># if not used then the operations will be hightly unstable and event will be missed</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        time.sleep(0.05)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        BUFF_SIZE = 1024  <span class="comment"># 1 MB</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        data = b<span class="stringliteral">&quot;&quot;</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">while</span> <span class="keyword">True</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            part = self.sock.recv(BUFF_SIZE)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            data += part</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordflow">if</span> len(part) &lt; BUFF_SIZE:</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="comment"># either 0 or end of data</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordflow">break</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        data = eval(data)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> data</div>
+<pre class="fragment">Receive data partwise
+    
+:param timeout: The timeout parameter specifies the time-out as a floating point number in
+seconds
+:return: A list of dictionaries. Each dictionary is a question.</pre> 
+<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00058">58</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">def </span>receive_data(self, timeout=0.1):</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="stringliteral">        Receive data partwise</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="stringliteral">    </span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="stringliteral">        :param timeout: The timeout parameter specifies the time-out as a floating point number in</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="stringliteral">        seconds</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="stringliteral">        :return: A list of dictionaries. Each dictionary is a question.</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="stringliteral">        </span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        self.sock.setblocking(0)</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="comment">#total data partwise in an array</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        total_data=b<span class="stringliteral">&quot;&quot;</span>;        </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">#beginning time</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        begin=time.time()</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">while</span> 1:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">#if you got some data, then break after timeout</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="keywordflow">if</span> total_data <span class="keywordflow">and</span> time.time()-begin &gt; timeout:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                <span class="keywordflow">break</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            </div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="comment">#if you got no data at all, wait a little longer, twice the timeout</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            <span class="keywordflow">elif</span> time.time()-begin &gt; timeout*2:</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">break</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="comment">#recv something</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            <span class="keywordflow">try</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                data = self.sock.recv(1024)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                <span class="keywordflow">if</span> data:</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    total_data += data</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    <span class="comment">#change the beginning time for measurement</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                    begin=time.time()</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">else</span>:</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                    <span class="comment">#sleep for sometime to indicate a gap</span></div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    time.sleep(0.01)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            <span class="keywordflow">except</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">pass</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        </div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="comment">#join all parts to make final string</span></div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">return</span> eval(total_data)</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,19 +298,18 @@ Args:
     data_dict (dict): Dict with data
     sock (socket): Socket connection aquired from `get_socket` method
 </pre> 
-<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00037">37</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">def </span>send_data(self, data_dict: dict):</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;<span class="stringliteral">        Send all data to the server</span></div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="stringliteral">        </span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="stringliteral">        Args:</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;<span class="stringliteral">            data_dict (dict): Dict with data</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="stringliteral">            sock (socket): Socket connection aquired from `get_socket` method</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        data = json.dumps(data_dict, cls=NpEncoder)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        self.sock.sendall(data.encode(<span class="stringliteral">&quot;utf-8&quot;</span>))</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00047">47</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">def </span>send_data(self, data_dict: dict):</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="stringliteral">        Send all data to the server</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="stringliteral">        </span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="stringliteral">        Args:</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="stringliteral">            data_dict (dict): Dict with data</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="stringliteral">            sock (socket): Socket connection aquired from `get_socket` method</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        data = json.dumps(data_dict, cls=NpEncoder)</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        self.sock.sendall(data.encode(<span class="stringliteral">&quot;utf-8&quot;</span>))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -5,7 +5,6 @@ using Communicator;
 
 public class TakeScreenshot: MonoBehaviour {
     
-    private bool takeHiResShot = false;
  
     public static string ScreenShotName(int width, int height) {
          return string.Format("{0}/screen_{1}x{2}_{3}.png", 

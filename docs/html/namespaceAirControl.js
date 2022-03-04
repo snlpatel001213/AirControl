@@ -10,6 +10,9 @@ var namespaceAirControl =
     [ "sample_generator", null, [
       [ "samples", "classAirControl_1_1sample__generator_1_1samples.html", "classAirControl_1_1sample__generator_1_1samples" ]
     ] ],
+    [ "utils", null, [
+      [ "Launch", "classAirControl_1_1utils_1_1Launch.html", "classAirControl_1_1utils_1_1Launch" ]
+    ] ],
     [ "AC_Airplane_Airspeed", "classAirControl_1_1AC__Airplane__Airspeed.html", "classAirControl_1_1AC__Airplane__Airspeed" ],
     [ "AC_Airplane_Altimeter", "classAirControl_1_1AC__Airplane__Altimeter.html", "classAirControl_1_1AC__Airplane__Altimeter" ],
     [ "AC_Airplane_Attitude", "classAirControl_1_1AC__Airplane__Attitude.html", "classAirControl_1_1AC__Airplane__Attitude" ],

@@ -1,14 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Communicator;
 using Commons;
 using System.IO;
 using System;
 
-
 namespace AirControl
 {
+
+    public enum AirplaneState{
+        LANDED, 
+        GROUNDED, 
+        FLYING,
+    }
     /// <summary>
     /// Master Controller, controls the entire Airplane
     /// it implements function to Handle Engines,   Handle Characteristics,  Handle ControlSurfaces,  Handle Wheel and  Handle Altitude
@@ -44,11 +50,24 @@ namespace AirControl
         [Header("Control Surfaces")]
         [Tooltip("Initialize empty control surfaces. Add AC_Airplane_ControlSurface script to that object. Hook wheels object here")]
         public List<AC_Airplane_ControlSurface> controlSurfaces = new List<AC_Airplane_ControlSurface>();
-        
+
+        // Starting from ground
+        private AirplaneState airplaneState =  AirplaneState.LANDED;
+        [SerializeField] private bool isGrounded =  true;
+        [SerializeField] private bool isLanded =  true;
+        [SerializeField] private bool isFlying =  false;
+
         // Meadian sea level
         private float currentMSL;
         // Above Ground Level
         private float currentAGL;
+
+        // To detect if the Airplane is stuck 
+        private Vector3 lastAirplanePosition;
+        private Vector3 currAirplanePosition;
+
+        // private int lastCommCounter=0;
+        // private int currCommCounter=0;
         #endregion
 
         #region Properties
@@ -82,6 +101,7 @@ namespace AirControl
             start_y = rb.position.y; 
             start_z = rb.position.z;
             Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",start_x, start_y, start_z );
+            
             // if rigid body added then add center of mass
             if (rb){
                 rb.mass = finalMass;
@@ -104,21 +124,16 @@ namespace AirControl
                         wheel.initWheel();
                     }
                 }
-            }  
+            } 
+
+            InvokeRepeating("CheckGrounded", 1f, 1f); 
+            InvokeRepeating("DetectAirplaneStuck", 5f, 5f); 
+            // InvokeRepeating("DetectCounterStuck", 5f, 5f); 
         }
         void update()
         {
             // rewardCalculator();
         }
-
-        /// WIP
-        // to detect if the Airplane is stuck, if this happens then rload the scene
-        ///
-        void DetectIfStuck(){
-
-        }
-
-        
 
         // void rewardCalculator(){
         //     float Height = 100f;
@@ -224,6 +239,79 @@ namespace AirControl
             StaticOutputSchema.MSL = currentMSL;
             StaticOutputSchema.AGL = currentAGL;
             #endregion
+        }
+
+        /// <summary>
+        /// Check if all the Airplane wheel are grounded and determine the current state
+        /// </summary>
+        void CheckGrounded()
+        {
+            if(wheels.Count > 0){
+                int groundedCount = 0;
+                foreach(AC_Airplane_Wheel wheel in wheels)
+                {
+                    if(wheel.isGrounded)
+                    {
+                        groundedCount++;
+                    }
+                }
+                if(groundedCount ==  wheels.Count)
+                {
+                    isGrounded = true;
+                    isFlying = false;
+                    isLanded = false;                    
+                    // update to API
+                    StaticOutputSchema.IsGrounded = isGrounded;
+                    StaticOutputSchema.IsLanded = isLanded;
+                    StaticOutputSchema.IsFlying = isLanded;
+                    if(rb.velocity.magnitude < 1f){
+                        isLanded = true;
+                        isGrounded = false;
+                        isFlying = false;
+                        // update to API
+                        StaticOutputSchema.IsGrounded = isGrounded;
+                        StaticOutputSchema.IsLanded = isLanded;
+                        StaticOutputSchema.IsFlying = isLanded;
+                    }
+                    else{
+                        isLanded = false;
+                        isGrounded = true;
+                        isFlying = false;
+                        StaticOutputSchema.IsLanded = isLanded;
+                        StaticOutputSchema.IsGrounded = isGrounded;
+                    }
+                }
+                else
+                {
+                    isLanded = false;
+                    isGrounded = false;
+                    isFlying = true;
+                    StaticOutputSchema.IsGrounded = isGrounded;
+                    StaticOutputSchema.IsLanded = isLanded;
+                    StaticOutputSchema.IsFlying = isLanded;
+                }
+
+            }
+        }
+        /// <summary>
+        /// Checking if the airplane is stuck in the same position. If it is stuck, it will reload the level.
+        /// </summary>
+        private void DetectAirplaneStuck()
+        {
+            currAirplanePosition = rb.transform.localPosition;
+            if(currAirplanePosition == lastAirplanePosition)
+            {
+                StaticOutputSchema.log = "Airplane was stuck";
+                Debug.LogError("Airplane was stuck");
+                
+                // Relaod the level 
+                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
+                StaticOutputSchema.IfCollision = true;
+                StaticOutputSchema.CollisionObject = "Stuck";
+            }
+            lastAirplanePosition = currAirplanePosition;
+            
         }
 
       

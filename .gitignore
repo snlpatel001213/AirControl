@@ -5,8 +5,8 @@
 /[Ll]ibrary/
 /[Tt]emp/
 /[Oo]bj/
-/[Bb]uild/
-/[Bb]uilds/
+/[Bb]uild/**
+/[Bb]uilds/**
 /[Ll]ogs/
 /[Uu]ser[Ss]ettings/
 
@@ -75,7 +75,12 @@ crashlytics-build.properties
 
 # ipython notebook checkpoint 
 .ipynb_checkpoints
-*/.ipynb_checkpoints/*
+*/.ipynb_checkpoints/**
+*/*/.ipynb_checkpoints
 
 # unity meta files
 .meta
+
+# Experiments
+ReinforcementLearningExample/
+Python/client_examples/.ipynb_checkpoints

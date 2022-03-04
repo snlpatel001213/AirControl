@@ -124,12 +124,8 @@ Collaboration diagram for AirControl.AC_BaseAirplane_Input:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__BaseAirplane__Input__coll__graph.png" border="0" usemap="#AirControl_8AC__BaseAirplane__Input_coll__map" alt="Collaboration graph"/></div>
 <map name="AirControl_8AC__BaseAirplane__Input_coll__map" id="AirControl_8AC__BaseAirplane__Input_coll__map">
-<area shape="rect" title="Base class to listen for keyboard Inputs" alt="" coords="16,199,219,240"/>
-<area shape="rect" title=" " alt="" coords="34,109,158,136"/>
-<area shape="rect" href="classNewInputControls.html" title=" " alt="" coords="183,109,321,136"/>
-<area shape="rect" title=" " alt="" coords="5,13,179,39"/>
-<area shape="rect" title=" " alt="" coords="203,13,301,39"/>
-<area shape="rect" href="structNewInputControls_1_1AirplaneActions.html" title=" " alt="" coords="326,5,522,47"/>
+<area shape="rect" title="Base class to listen for keyboard Inputs" alt="" coords="5,80,208,121"/>
+<area shape="rect" title=" " alt="" coords="45,5,169,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -138,9 +134,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a13ad113359881bde74cd39d0c9c45d0a"><td class="memItemLeft" align="right" valign="top"><a id="a13ad113359881bde74cd39d0c9c45d0a"></a>
 int&#160;</td><td class="memItemRight" valign="bottom"><b>maxFlapIncrements</b> =2</td></tr>
 <tr class="separator:a13ad113359881bde74cd39d0c9c45d0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a81f64249fb4441e042c0c55c5d37ff01"><td class="memItemLeft" align="right" valign="top"><a id="a81f64249fb4441e042c0c55c5d37ff01"></a>
-<a class="el" href="classNewInputControls.html">NewInputControls</a>&#160;</td><td class="memItemRight" valign="bottom"><b>control</b></td></tr>
-<tr class="separator:a81f64249fb4441e042c0c55c5d37ff01"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a619c4a6a0edaf53f4dd7fe4afd45148f"><td class="memItemLeft" align="right" valign="top"><a id="a619c4a6a0edaf53f4dd7fe4afd45148f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>throttleSpeed</b> = 0.5f</td></tr>
 <tr class="separator:a619c4a6a0edaf53f4dd7fe4afd45148f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -223,7 +216,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CameraSwitch</b><code
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base class to listen for keyboard Inputs </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__BaseAirplane__Input_8cs_source.html#l00012">12</a> of file <a class="el" href="AC__BaseAirplane__Input_8cs_source.html">AC_BaseAirplane_Input.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AC__BaseAirplane__Input_8cs_source.html#l00011">11</a> of file <a class="el" href="AC__BaseAirplane__Input_8cs_source.html">AC_BaseAirplane_Input.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a2b880c1486afc1588c6e9d2057b3cba0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a2b880c1486afc1588c6e9d2057b3cba0">&#9670;&nbsp;</a></span>ClampInputs()</h2>
@@ -250,15 +243,15 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CameraSwitch</b><code
 
 <p>Clamping inputs between limits </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__BaseAirplane__Input_8cs_source.html#l00132">132</a> of file <a class="el" href="AC__BaseAirplane__Input_8cs_source.html">AC_BaseAirplane_Input.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;        {</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            pitch = Mathf.Clamp(pitch,-1f,1f);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            roll = Mathf.Clamp(roll,-1f,1f);</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            yaw = Mathf.Clamp(yaw,-1f,1f);</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            throttle = Mathf.Clamp(throttle,-1f,1f);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            brake = Mathf.Clamp(brake,0f,1f);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__BaseAirplane__Input_8cs_source.html#l00131">131</a> of file <a class="el" href="AC__BaseAirplane__Input_8cs_source.html">AC_BaseAirplane_Input.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;        {</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            pitch = Mathf.Clamp(pitch,-1f,1f);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            roll = Mathf.Clamp(roll,-1f,1f);</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            yaw = Mathf.Clamp(yaw,-1f,1f);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            throttle = Mathf.Clamp(throttle,-1f,1f);</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            brake = Mathf.Clamp(brake,0f,1f);</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            flaps = Mathf.Clamp(flaps, 0, maxFlapIncrements);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -342,22 +335,22 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>CameraSwitch</b><code
 
 <p>Receive input from external program like python </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__BaseAirplane__Input_8cs_source.html#l00144">144</a> of file <a class="el" href="AC__BaseAirplane__Input_8cs_source.html">AC_BaseAirplane_Input.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;        {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordtype">string</span> DBInputControlType = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.InputControlType;</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="comment">// if control type is code then lock the controls and fly it</span></div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="comment">// else let user fly manually</span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;             <span class="keywordflow">if</span>(DBInputControlType == <span class="stringliteral">&quot;Code&quot;</span>)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;             {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                throttle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Throttle;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                stickyThrottle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.StickyThrottle;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                pitch = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Pitch;</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                roll = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Roll;</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                yaw = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Yaw;</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                brake = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Brake;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                flaps = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Flaps;</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;             }</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__BaseAirplane__Input_8cs_source.html#l00143">143</a> of file <a class="el" href="AC__BaseAirplane__Input_8cs_source.html">AC_BaseAirplane_Input.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;        {</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordtype">string</span> DBInputControlType = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.InputControlType;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="comment">// if control type is code then lock the controls and fly it</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            <span class="comment">// else let user fly manually</span></div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;             <span class="keywordflow">if</span>(DBInputControlType == <span class="stringliteral">&quot;Code&quot;</span>)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;             {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                throttle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Throttle;</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                stickyThrottle = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.StickyThrottle;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                pitch = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Pitch;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                roll = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Roll;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                yaw = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Yaw;</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                brake = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Brake;</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                flaps = <a class="code" href="classCommunicator_1_1StaticControlSchema.html">StaticControlSchema</a>.Flaps;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;             }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>

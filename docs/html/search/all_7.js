@@ -1,11 +1,7 @@
 var searchData=
 [
-  ['iairplaneactions_60',['IAirplaneActions',['../interfaceNewInputControls_1_1IAirplaneActions.html',1,'NewInputControls']]],
-  ['iairplaneui_61',['IAirplaneUI',['../interfaceAirControl_1_1IAirplaneUI.html',1,'AirControl']]],
-  ['initcharacteristics_62',['InitCharacteristics',['../classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05',1,'AirControl::AC_Airplane_Characteristics']]],
-  ['initfuel_63',['InitFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#ac01a62283c1aa07d29caee2089ce9d0c',1,'AirControl::AC_Airplane_Fuel']]],
-  ['initwheel_64',['initWheel',['../classAirControl_1_1AC__Airplane__Wheel.html#a6488dff41e3e90d5d219438fb85e9d51',1,'AirControl::AC_Airplane_Wheel']]],
-  ['inputhandle_65',['InputHandle',['../classCommunicator_1_1InputHandle.html',1,'Communicator']]],
-  ['ioinit_66',['IOInit',['../classCommunicator_1_1IOInit.html',1,'Communicator']]],
-  ['ioswitch_67',['IOSwitch',['../classAirControl_1_1AC__BaseAirplane__Input.html#ad3f05ebbbc823b2f38a43e168d577962',1,'AirControl::AC_BaseAirplane_Input']]]
+  ['get_5fconnected_54',['get_connected',['../classAirControl_1_1actions_1_1Actions.html#ac731086c7a9d82dee8b262c9c13fcca7',1,'AirControl::actions::Actions']]],
+  ['get_5foutput_55',['get_output',['../classAirControl_1_1actions_1_1Actions.html#a7d7d4906e4e06cf46a9531d1c61a0916',1,'AirControl::actions::Actions']]],
+  ['get_5fplatform_56',['get_platform',['../classAirControl_1_1utils_1_1Launch.html#af6cfc58907e00ab9b4aff9597e69de08',1,'AirControl::utils::Launch']]],
+  ['gpsencoder_57',['GPSEncoder',['../classAirControl_1_1GPSEncoder.html',1,'AirControl']]]
 ];

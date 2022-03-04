@@ -27,7 +27,8 @@ namespace AirControl
         /// </summary>
         public void RestartLevel() //Restarts the level
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name); 
+            SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
         }
 
         /// <summary>

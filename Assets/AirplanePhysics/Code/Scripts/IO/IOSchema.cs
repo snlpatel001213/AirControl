@@ -97,6 +97,9 @@ namespace Communicator
 		public static byte [] ScreenCapture;
 		public static float [] LidarPointCloud;
 		public static int Counter;
+		public static bool IsGrounded;
+		public static bool IsFlying;
+		public static bool IsLanded;
 
 		public static string log = "";
 		public static double Reward;
@@ -128,6 +131,9 @@ namespace Communicator
 		public int Counter;
 		public string log = "";
 		public double Reward;
+		public bool IsGrounded;
+		public bool IsFlying;
+		public bool IsLanded;
 	}
 	#endregion
 
@@ -360,9 +366,9 @@ namespace Communicator
 		//Version of the sceme, IT will be same as the release version
 		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public static bool IsActive {get; set;} = false;
+		public static bool IsActive {get; set;}
 		//reload the level if this is set true
-		public static bool EnableAudio {get; set;} = true; 
+		public static bool EnableAudio {get; set;}
 
 	}
 	#endregion

@@ -1,7 +1,5 @@
 var searchData=
 [
-  ['oncamerachange_80',['OnCameraChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a9f7ee324a4310869ca481ad868516ee9',1,'AirControl::AC_Airplane_CameraController']]],
-  ['onscenechange_81',['OnSceneChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a5529c3888f1d6ce6a2ae12ea8f1b435b',1,'AirControl::AC_Airplane_CameraController']]],
-  ['outputhandle_82',['OutputHandle',['../classCommunicator_1_1OutputHandle.html',1,'Communicator']]],
-  ['outputschema_83',['OutputSchema',['../classCommunicator_1_1OutputSchema.html',1,'Communicator']]]
+  ['msgtype_82',['MsgType',['../classCommunicator_1_1StaticControlSchema.html#add37f9d2f9776ffb0c5c6e083ab761d9',1,'Communicator::StaticControlSchema']]],
+  ['myaction_83',['MyAction',['../classCommunicator_1_1NetworkCommunicator.html#a3733cbd8ba357d67bfec13564e9b0f3b',1,'Communicator::NetworkCommunicator']]]
 ];

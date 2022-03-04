@@ -47,7 +47,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 ".html",
-"classAirControl_1_1GPSEncoder.html#a82213a931a0de967d609ec2642cafe06"
+"classAirControl_1_1AC__XboxAirplane__Input.html#a05e9ea42fbcb119f01f932c1ced2adc9"
 ];
 
 var SYNCONMSG = 'click to disable panel synchronisation';

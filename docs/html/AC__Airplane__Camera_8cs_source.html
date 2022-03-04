@@ -123,7 +123,7 @@ $(document).ready(function(){initNavTree('AC__Airplane__Camera_8cs_source.html',
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="comment">// Ray cast hit the ground</span></div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            RaycastHit hit;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">if</span>(Physics.Raycast(transform.position, Vector3.down, out hit)){</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">if</span>(hit.distance &lt; minHeaightFromGround &amp;&amp; hit.transform.tag == <span class="stringliteral">&quot;ground&quot;</span>){</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">if</span>(hit.distance &lt; minHeaightFromGround &amp;&amp; hit.transform.tag == <span class="stringliteral">&quot;Ground&quot;</span>){</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    <span class="keywordtype">float</span> wantedHeight =  originalCamraHeight + (minHeaightFromGround - hit.distance);</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    cameraHeight = wantedHeight;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                }</div>

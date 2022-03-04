@@ -43,7 +43,7 @@ namespace AirControl
             RaycastHit hit;
             if(Physics.Raycast(transform.position, Vector3.down, out hit))
             {
-                if(hit.distance < groundDistance && hit.transform.tag=="ground")
+                if(hit.distance < groundDistance && hit.transform.tag=="Ground")
                 {
                     
                     float currentSpeed = rb.velocity.magnitude;

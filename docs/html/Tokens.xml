@@ -2,6 +2,16 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
+      <Name>AC_Airplane_Magnetometer</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AC_Airplane_Magnetometer</Scope>
+    </TokenIdentifier>
+    <Path>classAC__Airplane__Magnetometer.html</Path>
+    <Abstract>https://gamedev-resources.com/create-a-compass-with-ugui/</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AutomatedBuild</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
@@ -71,30 +81,64 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>NewInputControls</Name>
+      <Name>SwitchBuild2Default</Name>
       <APILanguage>csharp</APILanguage>
-      <Type>cl</Type>
-      <Scope>NewInputControls</Scope>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
     </TokenIdentifier>
-    <Path>classNewInputControls.html</Path>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>ac4b121418c9571ba4a851a63c151797e</Anchor>
+    <Abstract>After build switch back to the original edior plat form based on the os</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>NewInputControls::AirplaneActions</Name>
+      <Name>ExitButton</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
-      <Scope>NewInputControls.AirplaneActions</Scope>
+      <Scope>ExitButton</Scope>
     </TokenIdentifier>
-    <Path>structNewInputControls_1_1AirplaneActions.html</Path>
+    <Path>classExitButton.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>NewInputControls::IAirplaneActions</Name>
+      <Name>FPSDisplay</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
-      <Scope>NewInputControls.IAirplaneActions</Scope>
+      <Scope>FPSDisplay</Scope>
     </TokenIdentifier>
-    <Path>interfaceNewInputControls_1_1IAirplaneActions.html</Path>
+    <Path>classFPSDisplay.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>OnScreenConsole</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>OnScreenConsole</Scope>
+    </TokenIdentifier>
+    <Path>classOnScreenConsole.html</Path>
+    <Abstract>Show log On screen https://answers.unity.com/questions/125049/is-there-any-way-to-view-the-console-in...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Log</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instm</Type>
+      <Scope>OnScreenConsole</Scope>
+    </TokenIdentifier>
+    <Path>classOnScreenConsole.html</Path>
+    <Anchor>ac5022e42f1c74f4a8713565fce7f2a4a</Anchor>
+    <Abstract>This is a simple logging function that will write to the console and to a file.</Abstract>
+    <DeclaredIn>OnScreenConsole.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>TakeScreenshot</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>TakeScreenshot</Scope>
+    </TokenIdentifier>
+    <Path>classTakeScreenshot.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -882,6 +926,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>get_connected</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>ac731086c7a9d82dee8b262c9c13fcca7</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>bool2string</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -1003,6 +1058,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>set_uicontrol</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.actions.Actions</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1actions_1_1Actions.html</Path>
+    <Anchor>aed9400d2983ef3309622d306ac848952</Anchor>
+    <DeclaredIn>actions.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl::communicator::Communicator</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
@@ -1040,7 +1106,7 @@
       <Scope>AirControl.communicator.Communicator</Scope>
     </TokenIdentifier>
     <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-    <Anchor>ae766f39eb5471e6c0aff191ec5127d58</Anchor>
+    <Anchor>a472eb6e6285c6fa39bcbccc49654682c</Anchor>
     <DeclaredIn>communicator.py</DeclaredIn>
   </Token>
   <Token>
@@ -1054,12 +1120,65 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>default</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.communicator.NpEncoder</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+    <Anchor>a268d5aa51489b6355b20300e2c8bf09d</Anchor>
+    <DeclaredIn>communicator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl::sample_generator::samples</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
       <Scope>AirControl.sample_generator.samples</Scope>
     </TokenIdentifier>
     <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AirControl::utils::Launch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>launch_executable</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+    <Anchor>a233ee02e40e319c7b81c5a72136a11ba</Anchor>
+    <DeclaredIn>utils.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_platform</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+    <Anchor>af6cfc58907e00ab9b4aff9597e69de08</Anchor>
+    <DeclaredIn>utils.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>validate_environment_path</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.utils.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+    <Anchor>a1159f24254b250a14b656b2f67a10bb7</Anchor>
+    <DeclaredIn>utils.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1236,6 +1355,7 @@
     </TokenIdentifier>
     <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
     <Anchor>a3733cbd8ba357d67bfec13564e9b0f3b</Anchor>
+    <Abstract>Depricated Usage : UnityEvent m_MyEvent = new UnityEvent(); public NetworkCommunicator ns; m_MyEvent....</Abstract>
     <DeclaredIn>NetworkCommunicator.cs</DeclaredIn>
   </Token>
   <Token>
@@ -1337,12 +1457,32 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>Communicator::StaticUIControlsSchema</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Communicator.StaticUIControlsSchema</Scope>
+    </TokenIdentifier>
+    <Path>classCommunicator_1_1StaticUIControlsSchema.html</Path>
+    <Abstract>UI control class for serialization deserialization</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>Communicator::TODSchema</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
       <Scope>Communicator.TODSchema</Scope>
     </TokenIdentifier>
     <Path>classCommunicator_1_1TODSchema.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Communicator::UIControlsSchema</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Communicator.UIControlsSchema</Scope>
+    </TokenIdentifier>
+    <Path>classCommunicator_1_1UIControlsSchema.html</Path>
+    <Abstract>UI control class for serialization deserialization</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1363,23 +1503,5 @@
     </TokenIdentifier>
     <Path>classCommunicator_1_1WeatherSchema.html</Path>
     <Abstract>weather class for serialization deserialization</Abstract>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>UnityTemplateProjects</Name>
-      <APILanguage>csharp</APILanguage>
-      <Type>ns</Type>
-      <Scope>UnityTemplateProjects</Scope>
-    </TokenIdentifier>
-    <Path>namespaceUnityTemplateProjects.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>UnityTemplateProjects::SimpleCameraController</Name>
-      <APILanguage>csharp</APILanguage>
-      <Type>cl</Type>
-      <Scope>UnityTemplateProjects.SimpleCameraController</Scope>
-    </TokenIdentifier>
-    <Path>classUnityTemplateProjects_1_1SimpleCameraController.html</Path>
   </Token>
 </Tokens>

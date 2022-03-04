@@ -11,7 +11,7 @@ INPUT_CONTROL_TYPE = ["Code", "Other"]
 
 class Actions:
     def __init__(self):
-        print("Now call method `Action.get_connected` to get connected")
+        print("Now call method `Action.get_connected()` to get connected")
         
     def get_connected(self):
         """

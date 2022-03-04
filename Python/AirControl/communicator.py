@@ -7,6 +7,14 @@ import numpy as np
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
+        """
+        If the object is a numpy integer, return an integer. If the object is a numpy float, return a
+        float. If the object is a numpy array, return the array. If the object is none of the above,
+        return the super of the function
+        
+        :param obj: The object to serialize
+        :return: A JSON object with the data from the DataFrame
+        """
         if isinstance(obj, np.integer):
             return int(obj)
         if isinstance(obj, np.floating):
@@ -27,12 +35,14 @@ class Communicator:
         Returns:
             Socket: socket connection to the server
         """
+        self.SEND_BUF_SIZE = 4096 
+        self.RECV_BUF_SIZE = 4096 
         try:
             self.sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
             self.sock.connect((host, port))   
             self.sock.settimeout(10)      
         except Exception as e:
-            print(e)
+            print("Faced Error while establishing server-client connect.",e)
 
     def send_data(self, data_dict: dict):
         """
@@ -43,28 +53,43 @@ class Communicator:
             sock (socket): Socket connection aquired from `get_socket` method
         """
         data = json.dumps(data_dict, cls=NpEncoder)
-
         self.sock.sendall(data.encode("utf-8"))
 
-    def receive_data(self):
+    def receive_data(self, timeout=0.1):
         """
-        Receives data from server
+        Receive data partwise
+    
+        :param timeout: The timeout parameter specifies the time-out as a floating point number in
+        seconds
+        :return: A list of dictionaries. Each dictionary is a question.
         
-        Args:
-            sock (socket): Socket connection aquired from `get_socket` method
-        Returns:
-            data(dict): Data Received from the server
         """
-        # sleep stabilizes the TCP connection and bring in oder
-        # if not used then the operations will be hightly unstable and event will be missed
-        time.sleep(0.05)
-        BUFF_SIZE = 1024  # 1 MB
-        data = b""
-        while True:
-            part = self.sock.recv(BUFF_SIZE)
-            data += part
-            if len(part) < BUFF_SIZE:
-                # either 0 or end of data
+        self.sock.setblocking(0)
+        #total data partwise in an array
+        total_data=b"";        
+        #beginning time
+        begin=time.time()
+        while 1:
+            #if you got some data, then break after timeout
+            if total_data and time.time()-begin > timeout:
                 break
-        data = eval(data)
-        return data
+            
+            #if you got no data at all, wait a little longer, twice the timeout
+            elif time.time()-begin > timeout*2:
+                break
+            
+            #recv something
+            try:
+                data = self.sock.recv(1024)
+                if data:
+                    total_data += data
+                    #change the beginning time for measurement
+                    begin=time.time()
+                else:
+                    #sleep for sometime to indicate a gap
+                    time.sleep(0.01)
+            except:
+                pass
+        
+        #join all parts to make final string
+        return eval(total_data)
