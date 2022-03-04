@@ -26,7 +26,6 @@ namespace Communicator
         public void ParseInput(JObject inputJson)
         {
                 string MsgType = inputJson["MsgType"].ToString();
-                Debug.Log(">>>>>>>>>>>>>>"+inputJson);
                 #region ControlInput
                 if (MsgType=="ControlInput")
                 {
