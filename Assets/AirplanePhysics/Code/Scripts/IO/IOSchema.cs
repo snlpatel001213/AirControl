@@ -366,9 +366,9 @@ namespace Communicator
 		//Version of the sceme, IT will be same as the release version
 		public static string Version {get;set;} = CommonFunctions.GET_VERSION();
 		//Control type can be one out of "Comminocator","Other". Other methods means Keyboard or Joystick
-		public static bool IsActive {get; set;} = false;
+		public static bool IsActive {get; set;}
 		//reload the level if this is set true
-		public static bool EnableAudio {get; set;} = true; 
+		public static bool EnableAudio {get; set;}
 
 	}
 	#endregion

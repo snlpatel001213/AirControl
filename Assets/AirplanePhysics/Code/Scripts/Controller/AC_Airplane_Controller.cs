@@ -6,8 +6,6 @@ using Communicator;
 using Commons;
 using System.IO;
 using System;
-using Commons;
-
 
 namespace AirControl
 {
@@ -103,6 +101,7 @@ namespace AirControl
             start_y = rb.position.y; 
             start_z = rb.position.z;
             Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",start_x, start_y, start_z );
+            
             // if rigid body added then add center of mass
             if (rb){
                 rb.mass = finalMass;
@@ -135,15 +134,6 @@ namespace AirControl
         {
             // rewardCalculator();
         }
-
-        /// WIP
-        // to detect if the Airplane is stuck, if this happens then rload the scene
-        ///
-        // void DetectIfStuck(){
-
-        // }
-
-        
 
         // void rewardCalculator(){
         //     float Height = 100f;
@@ -312,7 +302,7 @@ namespace AirControl
             if(currAirplanePosition == lastAirplanePosition)
             {
                 StaticOutputSchema.log = "Airplane was stuck";
-                Debug.Log("Airplane was stuck");
+                Debug.LogError("Airplane was stuck");
                 
                 // Relaod the level 
                 SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);

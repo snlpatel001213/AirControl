@@ -80,7 +80,7 @@ Version number (MAJOR.MINOR.PATCH) follows Semantic Versioning 2.0.0. Version nu
 1. MAJOR version when making incompatible API changes
 2. MINOR version when adding API in a backward-compatible manner
 3. PATCH version when making backward-compatible bug fixes
-Note that semantic versioning also applies to the Pypi release, Git release and Snap releases.
+Note that semantic versioning also applies to the Pypi release, Git release, and Snap releases.
 
 ```mermaid
 %%{init: {'theme': 'base', 'themeVariables': { 'primaryColor': '#ffcccc', 'edgeLabelBackground':'#ffffee', 'tertiaryColor': '#fff0f0'}}}%%
