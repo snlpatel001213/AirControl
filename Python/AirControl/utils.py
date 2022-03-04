@@ -1,10 +1,8 @@
 import subprocess
 import glob
 import os
-from .logging_utils import get_logger, DEBUG
 from sys import platform
 
-logger = get_logger(__name__)
 
 class Launch:
     def launch_executable(self, file_name: str) -> subprocess.Popen:
@@ -20,10 +18,9 @@ class Launch:
                 f"Couldn't launch the {file_name} environment. Provided filename does not match any environments."
             )
         else:
-            subprocess_args = [launch_string] + args
+            subprocess_args = [launch_string] 
             # std_out_option = DEVNULL means the outputs will not be displayed on terminal.
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
-            std_out_option = subprocess.DEVNULL if logger.level > DEBUG else None
             try:
                 return subprocess.Popen(
                     subprocess_args,
@@ -33,8 +30,6 @@ class Launch:
                     # but may be undesirable in come cases; if so, we'll add a command-line toggle.
                     # Note that on Windows, the CTRL_C signal will still be sent.
                     start_new_session=True,
-                    stdout=std_out_option,
-                    stderr=std_out_option,
                 )
             except PermissionError as perm:
                 # This is likely due to missing read or execute permissions on file.

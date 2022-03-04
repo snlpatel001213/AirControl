@@ -124,14 +124,67 @@ Collaboration diagram for AirControl.communicator.NpEncoder:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a268d5aa51489b6355b20300e2c8bf09d"><td class="memItemLeft" align="right" valign="top"><a id="a268d5aa51489b6355b20300e2c8bf09d"></a>
-def&#160;</td><td class="memItemRight" valign="bottom"><b>default</b> (self, obj)</td></tr>
+<tr class="memitem:a268d5aa51489b6355b20300e2c8bf09d"><td class="memItemLeft" align="right" valign="top">def&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1communicator_1_1NpEncoder.html#a268d5aa51489b6355b20300e2c8bf09d">default</a> (self, obj)</td></tr>
 <tr class="separator:a268d5aa51489b6355b20300e2c8bf09d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
 <p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00008">8</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a id="a268d5aa51489b6355b20300e2c8bf09d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a268d5aa51489b6355b20300e2c8bf09d">&#9670;&nbsp;</a></span>default()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">def AirControl.communicator.NpEncoder.default </td>
+          <td>(</td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>self</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">&#160;</td>
+          <td class="paramname"><em>obj</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<pre class="fragment">If the object is a numpy integer, return an integer. If the object is a numpy float, return a
+float. If the object is a numpy array, return the array. If the object is none of the above,
+return the super of the function
+
+:param obj: The object to serialize
+:return: A JSON object with the data from the DataFrame
+</pre> 
+<p class="definition">Definition at line <a class="el" href="communicator_8py_source.html#l00009">9</a> of file <a class="el" href="communicator_8py_source.html">communicator.py</a>.</p>
+<div class="fragment"><div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">def </span>default(self, obj):</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="stringliteral">&quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="stringliteral">        If the object is a numpy integer, return an integer. If the object is a numpy float, return a</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="stringliteral">        float. If the object is a numpy array, return the array. If the object is none of the above,</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="stringliteral">        return the super of the function</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="stringliteral">        </span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="stringliteral">        :param obj: The object to serialize</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="stringliteral">        :return: A JSON object with the data from the DataFrame</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="stringliteral">        &quot;&quot;&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> isinstance(obj, np.integer):</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="keywordflow">return</span> int(obj)</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordflow">if</span> isinstance(obj, np.floating):</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordflow">return</span> float(obj)</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keywordflow">if</span> isinstance(obj, np.ndarray):</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keywordflow">return</span> obj.tolist()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> super(NpEncoder, self).default(obj)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+</div><!-- fragment -->
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li><a class="el" href="communicator_8py_source.html">communicator.py</a></li>
 </ul>
 </div><!-- contents -->

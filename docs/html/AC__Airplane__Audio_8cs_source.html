@@ -153,55 +153,51 @@ $(document).ready(function(){initNavTree('AC__Airplane__Audio_8cs_source.html','
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="preprocessor">            #region IOSwitch</span></div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordtype">bool</span> isActive = StaticAudioSchema.IsActive;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordflow">if</span>(isActive)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordtype">bool</span> enableAudio = StaticAudioSchema.EnableAudio;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                idleSource.enabled = enableAudio;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                fullThrottleSource.enabled = enableAudio;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                currentEnableAudio = enableAudio;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="comment">//logging</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="keywordtype">string</span> logString = <span class="stringliteral">&quot; Audio set to : &quot;</span>+enableAudio;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                StaticLogger.Log = logString;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                Debug.unityLogger.Log(logString);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                StaticAudioSchema.IsActive = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">            #endregion</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">if</span>(input)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">if</span>(!isShutOff)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">if</span>(StaticAudioSchema.IsActive)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                idleSource.enabled = StaticAudioSchema.EnableAudio;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                fullThrottleSource.enabled = StaticAudioSchema.EnableAudio;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                currentEnableAudio = StaticAudioSchema.EnableAudio;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="comment">//logging</span></div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                Debug.unityLogger.Log(<span class="stringliteral">&quot; Audio set to : &quot;</span>+ StaticAudioSchema.EnableAudio);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                StaticAudioSchema.IsActive = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="preprocessor">            #endregion</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <span class="keywordflow">if</span>(input)</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">if</span>(!isShutOff)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    HandleAudio();</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keywordflow">else</span></div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                {</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    HandleAudio();</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                    <span class="comment">//cutting off audio when engine cutoff</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    fullThrottleSource.volume -= fullThrottleSource.volume * fadeVolumeRate;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    idleSource.volume -=  idleSource.volume * fadeVolumeRate;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                }</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            }</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        }</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="preprocessor">        #region Custom Methods</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleAudio()</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            fullVolumeValue = Mathf.Lerp(0f,1f,input.StickyThrottle);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;            finalPitchValue = Mathf.Lerp(1f,maxPitchValue,input.StickyThrottle);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            <span class="keywordflow">if</span>(fullThrottleSource)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                fullThrottleSource.volume = fullVolumeValue;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                fullThrottleSource.pitch = finalPitchValue ;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;}</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                    <span class="comment">//cutting off audio when engine cutoff</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                    fullThrottleSource.volume -= fullThrottleSource.volume * fadeVolumeRate;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    idleSource.volume -=  idleSource.volume * fadeVolumeRate;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            }</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;<span class="preprocessor">        #region Custom Methods</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> <span class="keywordtype">void</span> HandleAudio()</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            fullVolumeValue = Mathf.Lerp(0f,1f,input.StickyThrottle);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            finalPitchValue = Mathf.Lerp(1f,maxPitchValue,input.StickyThrottle);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <span class="keywordflow">if</span>(fullThrottleSource)</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            {</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                fullThrottleSource.volume = fullVolumeValue;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                fullThrottleSource.pitch = finalPitchValue ;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;            }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html">AirControl.AC_BaseAirplane_Input</a></div><div class="ttdoc">Base class to listen for keyboard Inputs</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00011">AC_BaseAirplane_Input.cs:11</a></div></div>

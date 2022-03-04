@@ -2,6 +2,16 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
+      <Name>AC_Airplane_Magnetometer</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AC_Airplane_Magnetometer</Scope>
+    </TokenIdentifier>
+    <Path>classAC__Airplane__Magnetometer.html</Path>
+    <Abstract>https://gamedev-resources.com/create-a-compass-with-ugui/</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AutomatedBuild</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
@@ -71,12 +81,55 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>SwitchBuild2Default</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>ac4b121418c9571ba4a851a63c151797e</Anchor>
+    <Abstract>After build switch back to the original edior plat form based on the os</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>ExitButton</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
       <Scope>ExitButton</Scope>
     </TokenIdentifier>
     <Path>classExitButton.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>FPSDisplay</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>FPSDisplay</Scope>
+    </TokenIdentifier>
+    <Path>classFPSDisplay.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>OnScreenConsole</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>OnScreenConsole</Scope>
+    </TokenIdentifier>
+    <Path>classOnScreenConsole.html</Path>
+    <Abstract>Show log On screen https://answers.unity.com/questions/125049/is-there-any-way-to-view-the-console-in...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Log</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instm</Type>
+      <Scope>OnScreenConsole</Scope>
+    </TokenIdentifier>
+    <Path>classOnScreenConsole.html</Path>
+    <Anchor>ac5022e42f1c74f4a8713565fce7f2a4a</Anchor>
+    <Abstract>This is a simple logging function that will write to the console and to a file.</Abstract>
+    <DeclaredIn>OnScreenConsole.cs</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -350,7 +403,7 @@
     </TokenIdentifier>
     <Path>classAirControl_1_1AC__Airplane__Controller.html</Path>
     <Anchor>acabf1bb24aebddea20a7a52fcff4d1bc</Anchor>
-    <Abstract>WIP.</Abstract>
+    <Abstract>Handles physics related to Engine, Characteristics, Control surfaces wheel and Altitude</Abstract>
     <DeclaredIn>AC_Airplane_Controller.cs</DeclaredIn>
   </Token>
   <Token>
@@ -1053,7 +1106,7 @@
       <Scope>AirControl.communicator.Communicator</Scope>
     </TokenIdentifier>
     <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-    <Anchor>ae766f39eb5471e6c0aff191ec5127d58</Anchor>
+    <Anchor>a472eb6e6285c6fa39bcbccc49654682c</Anchor>
     <DeclaredIn>communicator.py</DeclaredIn>
   </Token>
   <Token>
@@ -1064,6 +1117,17 @@
       <Scope>AirControl.communicator.NpEncoder</Scope>
     </TokenIdentifier>
     <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>default</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.communicator.NpEncoder</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+    <Anchor>a268d5aa51489b6355b20300e2c8bf09d</Anchor>
+    <DeclaredIn>communicator.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1291,6 +1355,7 @@
     </TokenIdentifier>
     <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
     <Anchor>a3733cbd8ba357d67bfec13564e9b0f3b</Anchor>
+    <Abstract>Depricated Usage : UnityEvent m_MyEvent = new UnityEvent(); public NetworkCommunicator ns; m_MyEvent....</Abstract>
     <DeclaredIn>NetworkCommunicator.cs</DeclaredIn>
   </Token>
   <Token>

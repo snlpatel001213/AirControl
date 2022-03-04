@@ -1,4 +1,7 @@
 var searchData=
 [
-  ['validate_5fenvironment_5fpath_121',['validate_environment_path',['../classAirControl_1_1utils_1_1Launch.html#a1159f24254b250a14b656b2f67a10bb7',1,'AirControl::utils::Launch']]]
+  ['uicontrolsschema_123',['UIControlsSchema',['../classCommunicator_1_1UIControlsSchema.html',1,'Communicator']]],
+  ['uischema_124',['UISchema',['../classCommunicator_1_1UISchema.html',1,'Communicator']]],
+  ['updatecharacteristics_125',['UpdateCharacteristics',['../classAirControl_1_1AC__Airplane__Characteristics.html#a640a3e09356681418c0f9350ff8b4a68',1,'AirControl::AC_Airplane_Characteristics']]],
+  ['updatefuel_126',['UpdateFuel',['../classAirControl_1_1AC__Airplane__Fuel.html#a5d0893d028933066e37ef8d2b0ab0f9c',1,'AirControl::AC_Airplane_Fuel']]]
 ];

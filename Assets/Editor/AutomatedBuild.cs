@@ -24,7 +24,7 @@ public class AutomatedBuild : MonoBehaviour
         BuildLinux();
         BuildWindows();
         BuildMac();
-        BuildWebGL();
+        // BuildWebGL();
         SwitchBuild2Default();
     }
     

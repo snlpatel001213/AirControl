@@ -33,6 +33,7 @@ var hierarchy =
     [ "Communicator.LidarSchema", "classCommunicator_1_1LidarSchema.html", null ],
     [ "Communicator.Logger", "classCommunicator_1_1Logger.html", null ],
     [ "MonoBehaviour", null, [
+      [ "AC_Airplane_Magnetometer", "classAC__Airplane__Magnetometer.html", null ],
       [ "AirControl.AC_Airplane_Airspeed", "classAirControl_1_1AC__Airplane__Airspeed.html", null ],
       [ "AirControl.AC_Airplane_Altimeter", "classAirControl_1_1AC__Airplane__Altimeter.html", null ],
       [ "AirControl.AC_Airplane_Attitude", "classAirControl_1_1AC__Airplane__Attitude.html", null ],
@@ -69,6 +70,8 @@ var hierarchy =
       [ "Communicator.NetworkCommunicator", "classCommunicator_1_1NetworkCommunicator.html", null ],
       [ "Communicator.OutputHandle", "classCommunicator_1_1OutputHandle.html", null ],
       [ "ExitButton", "classExitButton.html", null ],
+      [ "FPSDisplay", "classFPSDisplay.html", null ],
+      [ "OnScreenConsole", "classOnScreenConsole.html", null ],
       [ "TakeScreenshot", "classTakeScreenshot.html", null ]
     ] ],
     [ "Communicator.OutputSchema", "classCommunicator_1_1OutputSchema.html", null ],

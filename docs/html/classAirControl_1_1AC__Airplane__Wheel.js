@@ -4,7 +4,9 @@ var classAirControl_1_1AC__Airplane__Wheel =
     [ "initWheel", "classAirControl_1_1AC__Airplane__Wheel.html#a6488dff41e3e90d5d219438fb85e9d51", null ],
     [ "brakePower", "classAirControl_1_1AC__Airplane__Wheel.html#a05a726bdaa5d9dad66b53cc4b54bdcbe", null ],
     [ "isBraking", "classAirControl_1_1AC__Airplane__Wheel.html#a923064d989d429d4958a7b4579c347b0", null ],
+    [ "isGrounded", "classAirControl_1_1AC__Airplane__Wheel.html#a11024f0affe5d61e83a88d4c9b98280a", null ],
     [ "isSteering", "classAirControl_1_1AC__Airplane__Wheel.html#ad630a287907a2c334502271c9c390248", null ],
     [ "steerAngle", "classAirControl_1_1AC__Airplane__Wheel.html#a728aa87d98f1634357fedb8a21a2c96a", null ],
-    [ "wheelGraphic", "classAirControl_1_1AC__Airplane__Wheel.html#a9acc6c783f8c819f301f5e298fcd9f98", null ]
+    [ "wheelGraphic", "classAirControl_1_1AC__Airplane__Wheel.html#a9acc6c783f8c819f301f5e298fcd9f98", null ],
+    [ "IsGrounded", "classAirControl_1_1AC__Airplane__Wheel.html#ad5eb40a77a6b38956749e7b069ebd28c", null ]
 ];

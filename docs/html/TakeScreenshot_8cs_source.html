@@ -107,38 +107,37 @@ $(document).ready(function(){initNavTree('TakeScreenshot_8cs_source.html',''); i
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classTakeScreenshot.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classTakeScreenshot.html">TakeScreenshot</a>: MonoBehaviour {</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> takeHiResShot = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> ScreenShotName(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height) {</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;         <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;{0}/screen_{1}x{2}_{3}.png&quot;</span>, </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                              Application.dataPath, </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                              width, height, </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;                              System.DateTime.Now.ToString(<span class="stringliteral">&quot;yyyy-MM-dd_HH-mm-ss&quot;</span>));</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;     }</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> CaptureIt() {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keywordtype">int</span> count = Camera.allCameras.Length;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            print(<span class="stringliteral">&quot;We&#39;ve got &quot;</span> + count + <span class="stringliteral">&quot; cameras&quot;</span>);</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">int</span> resWidth = 1920; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keywordtype">int</span> resHeight = 1200;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            Camera camera = Camera.allCameras[0];</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            RenderTexture rt = <span class="keyword">new</span> RenderTexture(resWidth, resHeight, 24);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            camera.targetTexture = rt;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            Texture2D screenShot = <span class="keyword">new</span> Texture2D(resWidth, resHeight, TextureFormat.RGB24, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            camera.Render();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            RenderTexture.active = rt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            screenShot.ReadPixels(<span class="keyword">new</span> Rect(0, 0, resWidth, resHeight), 0, 0);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            camera.targetTexture = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            RenderTexture.active = <span class="keyword">null</span>; <span class="comment">// JC: added to avoid errors</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            Destroy(rt);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordtype">byte</span>[] bytes = screenShot.EncodeToPNG();</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordtype">string</span> filename = ScreenShotName(resWidth, resHeight);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            System.IO.File.WriteAllBytes(filename, bytes);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            Debug.Log(<span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;Took screenshot to: {0}&quot;</span>, filename));</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;     }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; }</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">string</span> ScreenShotName(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height) {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;         <span class="keywordflow">return</span> <span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;{0}/screen_{1}x{2}_{3}.png&quot;</span>, </div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;                              Application.dataPath, </div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;                              width, height, </div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;                              System.DateTime.Now.ToString(<span class="stringliteral">&quot;yyyy-MM-dd_HH-mm-ss&quot;</span>));</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;     }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> CaptureIt() {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keywordtype">int</span> count = Camera.allCameras.Length;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            print(<span class="stringliteral">&quot;We&#39;ve got &quot;</span> + count + <span class="stringliteral">&quot; cameras&quot;</span>);</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keywordtype">int</span> resWidth = 1920; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keywordtype">int</span> resHeight = 1200;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            Camera camera = Camera.allCameras[0];</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            RenderTexture rt = <span class="keyword">new</span> RenderTexture(resWidth, resHeight, 24);</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            camera.targetTexture = rt;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            Texture2D screenShot = <span class="keyword">new</span> Texture2D(resWidth, resHeight, TextureFormat.RGB24, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            camera.Render();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            RenderTexture.active = rt;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            screenShot.ReadPixels(<span class="keyword">new</span> Rect(0, 0, resWidth, resHeight), 0, 0);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            camera.targetTexture = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            RenderTexture.active = <span class="keyword">null</span>; <span class="comment">// JC: added to avoid errors</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            Destroy(rt);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordtype">byte</span>[] bytes = screenShot.EncodeToPNG();</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordtype">string</span> filename = ScreenShotName(resWidth, resHeight);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            System.IO.File.WriteAllBytes(filename, bytes);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            Debug.Log(<span class="keywordtype">string</span>.Format(<span class="stringliteral">&quot;Took screenshot to: {0}&quot;</span>, filename));</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;     }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; }</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassTakeScreenshot_html"><div class="ttname"><a href="classTakeScreenshot.html">TakeScreenshot</a></div><div class="ttdef"><b>Definition:</b> <a href="TakeScreenshot_8cs_source.html#l00006">TakeScreenshot.cs:6</a></div></div>

@@ -166,12 +166,22 @@
                  <Node>
                   <Name>receive_data</Name>
                   <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                  <Anchor>ae766f39eb5471e6c0aff191ec5127d58</Anchor>
+                  <Anchor>a472eb6e6285c6fa39bcbccc49654682c</Anchor>
                  </Node>
                  <Node>
                   <Name>send_data</Name>
                   <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
                   <Anchor>ab72a682f3cb0c1fdf9f60c45b96b2d03</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>RECV_BUF_SIZE</Name>
+                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>ac752e89897185e0ab4619b162558f00d</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>SEND_BUF_SIZE</Name>
+                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>a2900470e4d90430957c0c203978fa69d</Anchor>
                  </Node>
                  <Node>
                   <Name>sock</Name>
@@ -1048,6 +1058,11 @@
                 <Anchor>a923064d989d429d4958a7b4579c347b0</Anchor>
                </Node>
                <Node>
+                <Name>isGrounded</Name>
+                <Path>classAirControl_1_1AC__Airplane__Wheel.html</Path>
+                <Anchor>a11024f0affe5d61e83a88d4c9b98280a</Anchor>
+               </Node>
+               <Node>
                 <Name>isSteering</Name>
                 <Path>classAirControl_1_1AC__Airplane__Wheel.html</Path>
                 <Anchor>ad630a287907a2c334502271c9c390248</Anchor>
@@ -1061,6 +1076,11 @@
                 <Name>wheelGraphic</Name>
                 <Path>classAirControl_1_1AC__Airplane__Wheel.html</Path>
                 <Anchor>a9acc6c783f8c819f301f5e298fcd9f98</Anchor>
+               </Node>
+               <Node>
+                <Name>IsGrounded</Name>
+                <Path>classAirControl_1_1AC__Airplane__Wheel.html</Path>
+                <Anchor>ad5eb40a77a6b38956749e7b069ebd28c</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -1774,6 +1794,21 @@
                 <Anchor>a213ed6557eb6733243aa37bb83adfdc1</Anchor>
                </Node>
                <Node>
+                <Name>IsFlying</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>ad3975f8dcb024b84c085c12e1cb76478</Anchor>
+               </Node>
+               <Node>
+                <Name>IsGrounded</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>afa0bfa7c8cb5280f66c73e73ab2b47e4</Anchor>
+               </Node>
+               <Node>
+                <Name>IsLanded</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a643e672313f490287cdda24630403550</Anchor>
+               </Node>
+               <Node>
                 <Name>Latitude</Name>
                 <Path>classCommunicator_1_1OutputSchema.html</Path>
                 <Anchor>ab33425fb33cebd402c8ceca0b2d12be1</Anchor>
@@ -2056,6 +2091,10 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>AC_Airplane_Magnetometer</Name>
+            <Path>classAC__Airplane__Magnetometer.html</Path>
+           </Node>
+           <Node>
             <Name>AutomatedBuild</Name>
             <Path>classAutomatedBuild.html</Path>
             <Subnodes>
@@ -2069,6 +2108,28 @@
               <Name>Exit</Name>
               <Path>classExitButton.html</Path>
               <Anchor>a83ff8f5c3417183dde6f36c3d87840d9</Anchor>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>FPSDisplay</Name>
+            <Path>classFPSDisplay.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>fpsText</Name>
+              <Path>classFPSDisplay.html</Path>
+              <Anchor>af85ae096a02cc84d8f0d007adb23594d</Anchor>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
+            <Name>OnScreenConsole</Name>
+            <Path>classOnScreenConsole.html</Path>
+            <Subnodes>
+             <Node>
+              <Name>Log</Name>
+              <Path>classOnScreenConsole.html</Path>
+              <Anchor>ac5022e42f1c74f4a8713565fce7f2a4a</Anchor>
              </Node>
             </Subnodes>
            </Node>
@@ -2218,6 +2279,10 @@
             <Path></Path>
             <Subnodes>
              <Node>
+              <Name>AC_Airplane_Magnetometer</Name>
+              <Path>classAC__Airplane__Magnetometer.html</Path>
+             </Node>
+             <Node>
               <Name>AirControl.AC_Airplane_Airspeed</Name>
               <Path>classAirControl_1_1AC__Airplane__Airspeed.html</Path>
              </Node>
@@ -2356,6 +2421,14 @@
               <Path>classExitButton.html</Path>
              </Node>
              <Node>
+              <Name>FPSDisplay</Name>
+              <Path>classFPSDisplay.html</Path>
+             </Node>
+             <Node>
+              <Name>OnScreenConsole</Name>
+              <Path>classOnScreenConsole.html</Path>
+             </Node>
+             <Node>
               <Name>TakeScreenshot</Name>
               <Path>classTakeScreenshot.html</Path>
              </Node>
@@ -2492,6 +2565,10 @@
             <Path>AC__Airplane__GroundEffect_8cs_source.html</Path>
            </Node>
            <Node>
+            <Name>AC_Airplane_Magnetometer.cs</Name>
+            <Path>AC__Airplane__Magnetometer_8cs_source.html</Path>
+           </Node>
+           <Node>
             <Name>AC_Airplane_Menus.cs</Name>
             <Path>AC__Airplane__Menus_8cs_source.html</Path>
            </Node>
@@ -2568,6 +2645,10 @@
             <Path>ExitButton_8cs_source.html</Path>
            </Node>
            <Node>
+            <Name>FPSDisplay.cs</Name>
+            <Path>FPSDisplay_8cs_source.html</Path>
+           </Node>
+           <Node>
             <Name>GPSEncoder.cs</Name>
             <Path>GPSEncoder_8cs_source.html</Path>
            </Node>
@@ -2596,12 +2677,12 @@
             <Path>Lidar_8cs_source.html</Path>
            </Node>
            <Node>
-            <Name>logging_utils.py</Name>
-            <Path>logging__utils_8py_source.html</Path>
-           </Node>
-           <Node>
             <Name>NetworkCommunicator.cs</Name>
             <Path>NetworkCommunicator_8cs_source.html</Path>
+           </Node>
+           <Node>
+            <Name>OnScreenConsole.cs</Name>
+            <Path>OnScreenConsole_8cs_source.html</Path>
            </Node>
            <Node>
             <Name>OutputHandle.cs</Name>

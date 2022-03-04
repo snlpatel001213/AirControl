@@ -82,6 +82,5 @@ crashlytics-build.properties
 .meta
 
 # Experiments
-ReinforcementLearningExample/DQN/
-ReinforcementLearningExample/Experiment/
+ReinforcementLearningExample/
 Python/client_examples/.ipynb_checkpoints
