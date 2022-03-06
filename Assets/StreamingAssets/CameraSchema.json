@@ -1,6 +1,6 @@
 {
   "MsgType": "Camera",
-  "Version": "0.1.5",
+  "Version": "1.0.0",
   "IsActive": "false",
   "ActiveCamera": 0,
   "IsCapture": "false",

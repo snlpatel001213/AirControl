@@ -3,9 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
+using UnityEngine.UI;
 
 namespace AirControl
 {
+    
     /// <summary>
     /// Function to change sun location and create Day and Night effects.
     /// </summary>
@@ -13,6 +15,14 @@ namespace AirControl
     [ExecuteInEditMode]
     public class Sun : MonoBehaviour
     {
+        //UI slider
+        public GameObject sliderAndText;
+        public Toggle sunLocationControl;
+        public Slider longitudeSlider;
+        public Slider latitudeSlider;
+        public Slider sunHourSlider;
+        public Slider sunMinuteSlider;
+
         [SerializeField]
         float longitude;
 
@@ -98,17 +108,38 @@ namespace AirControl
             /// Switching sun location as per the Input/Output from communicator
             /// </summary>
             /// <returns></returns>
+            
+
+            float sunLatitude=-66f;
+            float sunLongitude=-45f;
+            int sunHour=1;
+            int sunMinute=1;
+            bool isActive =  sunLocationControl.isOn;
+            sliderAndText.SetActive(isActive);
+            if(isActive)
+            {  
+                /// from UI slider
+                sunLatitude = longitudeSlider.value;
+                sunLongitude = latitudeSlider.value;
+                sunHour = (int)sunHourSlider.value;
+                sunMinute = (int)sunMinuteSlider.value;
+                SetTime(sunHour, sunMinute);
+                SetLocation(sunLatitude, sunLongitude);
+            }
             #region IOSwitch
-            if(StaticTODSchema.IsActive)
-            {
-                float sunLatitude = StaticTODSchema.SunLatitude;
-                float sunLongitude = StaticTODSchema.SunLongitude;
-                int sunHour = StaticTODSchema.Hour;
-                int sunMinute = StaticTODSchema.Minute;
+            if(StaticTODSchema.IsActive )
+            {   
+                sunLocationControl.isOn = false;
+                Debug.Log("UI Control is set to " + sunLocationControl.isOn);
+                sunLatitude = StaticTODSchema.SunLatitude;
+                sunLongitude = StaticTODSchema.SunLongitude;
+                sunHour = StaticTODSchema.Hour;
+                sunMinute = StaticTODSchema.Minute;
                 SetTime(sunHour, sunMinute);
                 SetLocation(sunLatitude, sunLongitude);
                 // set is active to false to not let this loop run for all the updates
                 StaticTODSchema.IsActive =false;
+                
             }
             #endregion
 
