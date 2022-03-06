@@ -3504,11 +3504,11 @@ Terrain:
   m_HeightmapPixelError: 5
   m_SplatMapDistance: 1000
   m_HeightmapMaximumLOD: 0
-  m_ShadowCastingMode: 2
+  m_ShadowCastingMode: 1
   m_DrawHeightmap: 1
   m_DrawInstanced: 0
   m_DrawTreesAndFoliage: 1
-  m_ReflectionProbeUsage: 1
+  m_ReflectionProbeUsage: 3
   m_MaterialTemplate: {fileID: 2100000, guid: 11c81f481a55ec59b881370b86cf7180, type: 2}
   m_BakeLightProbesForTrees: 1
   m_PreserveTreePrototypeLayers: 0
@@ -6404,8 +6404,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 11
-  minutes: 31
+  hour: 16
+  minutes: 12
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1835753706
