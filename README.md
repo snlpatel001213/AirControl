@@ -112,10 +112,12 @@ Pypi Release-Alpha [![PyPI version](https://badge.fury.io/py/aircontrol-python.s
 ```bash
 pip install aircontrol-python==<LatestVersion>
 ```
-Snap Release-Alpha (May face issue with capturing controls)
-```bash
-snap install aircontrol
-```
+Snap Release-Alpha
+
+1. Install : `snap install aircontrol`
+2. Invoke: `aircontrol.AirControl`
+3. Fly manually or use python API.
+
 
 ## Documentation
 
