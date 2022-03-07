@@ -13,8 +13,8 @@ namespace Commons
     {
         // max reward 
         // if you chnage this value, put the same value at Scripts/Communicator/NetworkCommunicator.cs
-        static float maxR = 0;
-        static int counter=0;
+        public static float maxR = 0;
+        public static int counter=0;
 
         #region Properties
         public static float MaxR{
