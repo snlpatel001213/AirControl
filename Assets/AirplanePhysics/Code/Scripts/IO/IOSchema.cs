@@ -97,12 +97,13 @@ namespace Communicator
 		public static byte [] ScreenCapture;
 		public static float [] LidarPointCloud;
 		public static int Counter;
+		public static double Reward;
 		public static bool IsGrounded;
 		public static bool IsFlying;
-		public static bool IsLanded;
+		public static bool IsTaxiing;
 
 		public static string log = "";
-		public static double Reward;
+		
 	}
 	/// <summary>
 	/// Output control class for serialization deserialization
@@ -133,7 +134,7 @@ namespace Communicator
 		public double Reward;
 		public bool IsGrounded;
 		public bool IsFlying;
-		public bool IsLanded;
+		public bool IsTaxiing;
 	}
 	#endregion
 

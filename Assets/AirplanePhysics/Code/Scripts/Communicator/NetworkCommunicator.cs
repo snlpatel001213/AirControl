@@ -149,6 +149,8 @@ namespace Communicator
 			if(StaticOutputSchema.IfCollision)
 			{	
 				StaticOutputSchema.IfCollision = false;
+				// Resetting max reward after each reload
+				CommonFunctions.MaxR=0;
 			}
 			
 		}

@@ -20,7 +20,7 @@
   "Reward": 0.0,
   "IsGrounded": "false",
   "IsFlying": "false",
-  "IsLanded": "false",
+  "IsTaxiing": "false",
   "MsgType": "Output",
   "Version": "1.0.0"
 }

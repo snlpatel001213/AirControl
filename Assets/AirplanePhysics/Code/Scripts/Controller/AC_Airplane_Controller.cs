@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Communicator;
 using Commons;
-using System.IO;
+using UnityEngine.UI;
 using System;
+using UnityEditor;
 
 namespace AirControl
 {
 
     public enum AirplaneState{
-        LANDED, 
+        Taxiing, 
         GROUNDED, 
         FLYING,
     }
@@ -52,10 +53,17 @@ namespace AirControl
         public List<AC_Airplane_ControlSurface> controlSurfaces = new List<AC_Airplane_ControlSurface>();
 
         // Starting from ground
-        private AirplaneState airplaneState =  AirplaneState.LANDED;
+        private AirplaneState airplaneState =  AirplaneState.Taxiing;
         [SerializeField] private bool isGrounded =  true;
-        [SerializeField] private bool isLanded =  true;
+        [SerializeField] private bool isTaxiing =  true;
         [SerializeField] private bool isFlying =  false;
+
+        [Header("Airplane States")]
+        [Tooltip("Attach Airplane state gameobject from UI canvas here")]
+        public Toggle IsGroundedObject;
+        public Toggle IsFlyingObject;
+        public Toggle IsTaxiingObject;
+        
 
         // Meadian sea level
         private float currentMSL;
@@ -127,27 +135,37 @@ namespace AirControl
                     }
                 }
             } 
-
             InvokeRepeating("CheckGrounded", 1f, 1f); 
             InvokeRepeating("DetectAirplaneStuck", 5f, 5f); 
-            // InvokeRepeating("DetectCounterStuck", 5f, 5f); 
         }
-        void update()
+        void Update()
         {
-            // rewardCalculator();
+            rewardCalculator();
         }
 
+        /// <summary>
+        /// Calculates reward for RL optimization
+        /// </summary>
+        // void rewardCalculator(){
+        //     float Height = 100f;
+        //     float Base = start_y;
+        //     float RateOfInclination = 230f;
+        //     float Angle = 3f;
+        //     float ideal_height= Height+((Base-Height)/(1.0f+ (float)Math.Pow(rb.position.z/RateOfInclination,Angle)));
+        //     float Penalty = (float)Math.Pow(ideal_height-rb.position.y, 2);
+        //     CommonFunctions.MaxR -= Penalty;
+        //     Debug.Log("Reward : "+CommonFunctions.MaxR );
+        //     StaticOutputSchema.Reward = CommonFunctions.MaxR;
+        //     // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
+        // }
         void rewardCalculator(){
-            float Height = 100f;
-            float Base = start_y;
-            float RateOfInclination = 230f;
-            float Angle = 3f;
-            double ideal_height= Height+((Base-Height)/(1.0f+Math.Pow(rb.position.z/RateOfInclination,Angle)));
-            double Penalty = Math.Pow(ideal_height-rb.position.y, 2);
-            MaxR -= Penalty;
-            StaticOutputSchema.Reward = MaxR;
-            // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
+            // Wait for airplane to reach 100 mtr
+            if ((rb.position.y - start_y) >= 100){
+                CommonFunctions.MaxR += 100;
+            }
+            // Debug.Log("Reward : "+CommonFunctions.MaxR );
         }
+
         #endregion
 
         #region Custom Methods
@@ -258,38 +276,34 @@ namespace AirControl
                 }
                 if(groundedCount ==  wheels.Count)
                 {
-                    isGrounded = true;
-                    isFlying = false;
-                    isLanded = false;                    
-                    // update to API
-                    StaticOutputSchema.IsGrounded = isGrounded;
-                    StaticOutputSchema.IsLanded = isLanded;
-                    StaticOutputSchema.IsFlying = isLanded;
-                    if(rb.velocity.magnitude < 1f){
-                        isLanded = true;
+                    if(rb.velocity.magnitude > 1f){
+                        isTaxiing = true;
                         isGrounded = false;
                         isFlying = false;
-                        // update to API
-                        StaticOutputSchema.IsGrounded = isGrounded;
-                        StaticOutputSchema.IsLanded = isLanded;
-                        StaticOutputSchema.IsFlying = isLanded;
+                        // update to API and UI
+                        IsGroundedObject.isOn = StaticOutputSchema.IsGrounded = isGrounded;
+                        IsTaxiingObject.isOn = StaticOutputSchema.IsTaxiing = isTaxiing;
+                        IsFlyingObject.isOn = StaticOutputSchema.IsFlying = isFlying;
                     }
                     else{
-                        isLanded = false;
+                        isTaxiing = false;
                         isGrounded = true;
                         isFlying = false;
-                        StaticOutputSchema.IsLanded = isLanded;
-                        StaticOutputSchema.IsGrounded = isGrounded;
+                        // update to API and UI
+                        IsGroundedObject.isOn = StaticOutputSchema.IsGrounded = isGrounded;
+                        IsTaxiingObject.isOn = StaticOutputSchema.IsTaxiing = isTaxiing;
+                        IsFlyingObject.isOn = StaticOutputSchema.IsFlying = isFlying;
                     }
                 }
                 else
                 {
-                    isLanded = false;
+                    isTaxiing = false;
                     isGrounded = false;
                     isFlying = true;
-                    StaticOutputSchema.IsGrounded = isGrounded;
-                    StaticOutputSchema.IsLanded = isLanded;
-                    StaticOutputSchema.IsFlying = isLanded;
+                    // update to API and UI
+                    IsGroundedObject.isOn = StaticOutputSchema.IsGrounded = isGrounded;
+                    IsTaxiingObject.isOn = StaticOutputSchema.IsTaxiing = isTaxiing;
+                    IsFlyingObject.isOn = StaticOutputSchema.IsFlying = isFlying;
                 }
 
             }

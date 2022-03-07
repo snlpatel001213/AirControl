@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
-
+using Commons;
 namespace AirControl
 {
     /// <summary>
@@ -58,7 +58,9 @@ namespace AirControl
             WheelHit hit;
             if (wheelCol.GetGroundHit(out hit)) {
                 string surface = hit.collider.tag;
+                float wheelPenalty = 10.0f;
                 if(hit.collider.tag != "Runway"){
+                    CommonFunctions.MaxR -= wheelPenalty;
                     StaticOutputSchema.IfCollision = true;
                     StaticOutputSchema.CollisionObject = surface;
                 }

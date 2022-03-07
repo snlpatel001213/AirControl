@@ -50,7 +50,7 @@ namespace Communicator
                 CollisionObject = StaticOutputSchema.CollisionObject,
                 IsFlying =  StaticOutputSchema.IsFlying,
                 IsGrounded =  StaticOutputSchema.IsGrounded,
-                IsLanded =  StaticOutputSchema.IsLanded,
+                IsTaxiing =  StaticOutputSchema.IsTaxiing,
                 
             }, new PrimitiveToStringConverter());
             if(StaticOutputSchema.IfCollision)
