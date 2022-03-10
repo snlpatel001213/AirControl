@@ -8,11 +8,14 @@
 ######################################
 
 import os
-from setuptools import setup, find_packages
+
+from setuptools import find_packages, setup
+
 
 # load the README file and use it as the long_description for PyPI
 with open("README.md", "r") as f:
     readme = f.read()
+
 
 # package configuration - for reference see:
 # https://setuptools.readthedocs.io/en/latest/setuptools.html#id9
@@ -24,16 +27,18 @@ setup(
     version=open("VERSION", "r").read().strip(),
     author="Sunil Patel",
     author_email="snlpatel001213@hotmail.com",
-    packages=find_packages('Python'),
+    packages=find_packages('AirControl'),
     package_dir={'': 'AirControl'},
     url="https://aircontrol.readthedocs.io",
-    include_package_data=True,
     python_requires=">=3.7.*",
     install_requires=["numpy", "requests"],
-    license="",
+    license="MIT",
+    include_package_data=True,
     zip_safe=True,
     entry_points={"console_scripts": ["py-package-template=py_pkg.entry_points:main"]},
     classifiers=[
+        "License :: OSI Approved :: MIT License",
+        "Programming Language :: Python :: 3",
         "Programming Language :: Python :: 3.6",
         "Programming Language :: Python :: 3.5",
         "Programming Language :: Python :: 3.4",

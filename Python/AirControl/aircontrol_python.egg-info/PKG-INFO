@@ -5,9 +5,11 @@ Summary: AirControl is an Open Source, Modular, Cross-Platform, and Extensible F
 Home-page: https://aircontrol.readthedocs.io
 Author: Sunil Patel
 Author-email: snlpatel001213@hotmail.com
-License: UNKNOWN
+License: MIT
 Keywords: Airplane Simulation,Unity,C#,Python
 Platform: UNKNOWN
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3
 Classifier: Programming Language :: Python :: 3.6
 Classifier: Programming Language :: Python :: 3.5
 Classifier: Programming Language :: Python :: 3.4

@@ -8,6 +8,7 @@
 using System.Collections;
 using UnityEngine;
 using Commons;
+using System;
 
 namespace XCharts.Examples
 {
@@ -16,8 +17,6 @@ namespace XCharts.Examples
     {
         private LineChart chart;
         private Serie serie;
-        private int m_DataNum = 8;
-
 
         void Start()
         {
@@ -25,14 +24,17 @@ namespace XCharts.Examples
             chart = gameObject.GetComponent<LineChart>();
             if (chart == null) chart = gameObject.AddComponent<LineChart>();
             chart.title.text = "Reward";
+            chart.RefreshAxisMinMaxValue();
             chart.yAxis0.minMaxType = Axis.AxisMinMaxType.Custom;
             chart.RemoveData();
             serie = chart.AddSerie(SerieType.Line, "Line");
+
         }
 
         void Update()
         {   
-            chart.AddData(0, CommonFunctions.maxR+50);
+            Double fc = Math.Round(CommonFunctions.maxR,1);
+            chart.AddData(0, fc);
         }
 
 

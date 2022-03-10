@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['networkcommunicator_177',['NetworkCommunicator',['../classCommunicator_1_1NetworkCommunicator.html',1,'Communicator']]],
-  ['npencoder_178',['NpEncoder',['../classAirControl_1_1communicator_1_1NpEncoder.html',1,'AirControl::communicator']]]
+  ['heatmapchart_1061',['HeatmapChart',['../classXCharts_1_1HeatmapChart.html',1,'XCharts']]],
+  ['heatmapcharteditor_1062',['HeatmapChartEditor',['../classXCharts_1_1HeatmapChartEditor.html',1,'XCharts']]]
 ];

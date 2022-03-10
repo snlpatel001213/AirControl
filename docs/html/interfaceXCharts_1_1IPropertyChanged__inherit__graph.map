@@ -1,0 +1,6 @@
+<map id="XCharts.IPropertyChanged" name="XCharts.IPropertyChanged">
+<area shape="rect" id="node1" title="属性变更接口" alt="" coords="121,5,313,32"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1Legend.html" title="Legend component.The legend component shows different sets of tags, colors, and names...." alt="" coords="5,80,128,107"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1Location.html" title="Location type. Quick to set the general location. 位置类型。通过Align快速设置大体位置，再通过left，right，top，bottom微调具体位置..." alt="" coords="152,80,283,107"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1Title.html" title="Title component, including main title and subtitle. 标题组件，包含主标题和副标题。" alt="" coords="307,80,413,107"/>
+</map>

@@ -1,0 +1,47 @@
+var classXCharts_1_1SerieLabel =
+[
+    [ "LineType", "classXCharts_1_1SerieLabel.html#ad81d352b33b76167ddbbea154567a865", [
+      [ "BrokenLine", "classXCharts_1_1SerieLabel.html#ad81d352b33b76167ddbbea154567a865a15c75139bae3fcdda7fccde7990b123d", null ],
+      [ "Curves", "classXCharts_1_1SerieLabel.html#ad81d352b33b76167ddbbea154567a865a56e7bebbcd38b821d0c781ad5014cc5e", null ],
+      [ "HorizontalLine", "classXCharts_1_1SerieLabel.html#ad81d352b33b76167ddbbea154567a865aed4f1d667416c1a8b3393107c004a3dc", null ]
+    ] ],
+    [ "Position", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12e", [
+      [ "Outside", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12ea76fbf0ccd7fcd64879c2ff2119dc15a4", null ],
+      [ "Inside", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12ea9b6d3000134648fc9f1e71094ae0847d", null ],
+      [ "Center", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12ea4f1f6016fc9f3f2353c0cc7c67b292bd", null ],
+      [ "Top", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12eaa4ffdcf0dc1f31b9acaf295d75b51d00", null ],
+      [ "Bottom", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12ea2ad9d63b69c4a10a5cc9cad923133bc4", null ],
+      [ "Left", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12ea945d5e233cf7d6240f6b783b36a374ff", null ],
+      [ "Right", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12ea92b09c7c48c520c3c55e497875da437c", null ],
+      [ "Start", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12eaa6122a65eaa676f700ae68d393054a37", null ],
+      [ "Middle", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12eab1ca34f82e83c52b010f86955f264e05", null ],
+      [ "End", "classXCharts_1_1SerieLabel.html#a46a0d21bdd9e227e1177175b0c9af12ea87557f11575c0ad78e4e28abedc13b6e", null ]
+    ] ],
+    [ "GetAutoAlignment", "classXCharts_1_1SerieLabel.html#a2e4f11be93beb8532f2e8371c6f2d5c4", null ],
+    [ "GetColor", "classXCharts_1_1SerieLabel.html#adf44c8bb0915722843d02043a5262589", null ],
+    [ "IsInside", "classXCharts_1_1SerieLabel.html#a9f69201131a41d54a045223d666e0192", null ],
+    [ "Reset", "classXCharts_1_1SerieLabel.html#a4ad481fddb50848f7288155de335f6bf", null ],
+    [ "autoOffset", "classXCharts_1_1SerieLabel.html#aa4eb71edfffa6ea90238b0783f5e1cba", null ],
+    [ "backgroundHeight", "classXCharts_1_1SerieLabel.html#a5061994622aff4c944f6efe7943ffec2", null ],
+    [ "backgroundWidth", "classXCharts_1_1SerieLabel.html#accfa71537521776e7ca7209095fcc7fe", null ],
+    [ "border", "classXCharts_1_1SerieLabel.html#a98b636e38b1c6329a00971a4b5214f53", null ],
+    [ "borderColor", "classXCharts_1_1SerieLabel.html#a0a709326c8feca6ab6f3b253221ec251", null ],
+    [ "borderWidth", "classXCharts_1_1SerieLabel.html#a8d87301203a6a12642b5150072ffe59c", null ],
+    [ "formatter", "classXCharts_1_1SerieLabel.html#a049027e87d8e9e92e38a17c388b8bdac", null ],
+    [ "formatterFunction", "classXCharts_1_1SerieLabel.html#a032106e3ec0d46c50078b243c4085ab8", null ],
+    [ "line", "classXCharts_1_1SerieLabel.html#ae1eb2f5947cc49c6a77c816966389276", null ],
+    [ "lineColor", "classXCharts_1_1SerieLabel.html#a487abda19b89f1ca87445f8845911f2e", null ],
+    [ "lineGap", "classXCharts_1_1SerieLabel.html#ac8a883232428e9c239f1e85318e4d92f", null ],
+    [ "lineLength1", "classXCharts_1_1SerieLabel.html#af194e1de14fa5111e8e9a9d418c9f096", null ],
+    [ "lineLength2", "classXCharts_1_1SerieLabel.html#a8a1296c9e94b657a9e45e796d43fc974", null ],
+    [ "lineType", "classXCharts_1_1SerieLabel.html#a3399b3c6d518389c7b126ea05f4a35ff", null ],
+    [ "lineWidth", "classXCharts_1_1SerieLabel.html#a4d46070834e6d3485f52344ce764589b", null ],
+    [ "margin", "classXCharts_1_1SerieLabel.html#aa735aac94d986fbb9d17265f5326f8f0", null ],
+    [ "numericFormatter", "classXCharts_1_1SerieLabel.html#ad29a62417fef2c6bd49f463d7fc3fd7b", null ],
+    [ "offset", "classXCharts_1_1SerieLabel.html#ac757f8a87feee5ea5d78a4985f024aac", null ],
+    [ "paddingLeftRight", "classXCharts_1_1SerieLabel.html#a010b850416b14e90074040a4ef5a245e", null ],
+    [ "paddingTopBottom", "classXCharts_1_1SerieLabel.html#a77c8dd3e5334fc68342ec11f07f275b8", null ],
+    [ "position", "classXCharts_1_1SerieLabel.html#a66a4d546d7f1cf48f13c27e309afc57b", null ],
+    [ "show", "classXCharts_1_1SerieLabel.html#a54a2dfd4b157ad18849574e760320390", null ],
+    [ "textStyle", "classXCharts_1_1SerieLabel.html#ad2623891352b6c0bc678106bebddd383", null ]
+];

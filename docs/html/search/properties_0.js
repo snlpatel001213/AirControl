@@ -1,4 +1,28 @@
 var searchData=
 [
-  ['msgtype_258',['MsgType',['../classCommunicator_1_1StaticControlSchema.html#add37f9d2f9776ffb0c5c6e083ab761d9',1,'Communicator::StaticControlSchema']]]
+  ['actualduration_1502',['actualDuration',['../classXCharts_1_1SerieAnimation.html#a5c34c85d02746da366f79770f6567df3',1,'XCharts::SerieAnimation']]],
+  ['align_1503',['align',['../classXCharts_1_1Serie.html#a5d4333e703a113455afeee6bc0b90be9',1,'XCharts.Serie.align()'],['../classXCharts_1_1IconStyle.html#a361d86de56e46e2dba58cb4696472fc9',1,'XCharts.IconStyle.align()'],['../classXCharts_1_1Location.html#a035c4dad25c004c1b94c7cf0a8aa7937',1,'XCharts.Location.align()']]],
+  ['alignment_1504',['alignment',['../classXCharts_1_1TextStyle.html#a586bd0ed46aa81137644e986c8f2ed21',1,'XCharts::TextStyle']]],
+  ['alignwithlabel_1505',['alignWithLabel',['../classXCharts_1_1AxisTick.html#a4e04da5e752170006fead07ee378bc45',1,'XCharts::AxisTick']]],
+  ['alongwithlinepath_1506',['alongWithLinePath',['../classXCharts_1_1SerieAnimation.html#a52cffe71acd9b1ca3d0e73a20d97b1fb',1,'XCharts::SerieAnimation']]],
+  ['alwayshow_1507',['alwayShow',['../classXCharts_1_1Tooltip.html#a56f35520d4655b02b8eae1c7143eb9e1',1,'XCharts::Tooltip']]],
+  ['angleaxis_1508',['angleAxis',['../classXCharts_1_1BaseChart.html#abb715a624d8401a86681e57d6821ca4c',1,'XCharts::BaseChart']]],
+  ['animation_1509',['animation',['../classXCharts_1_1Serie.html#ad62dcfd305860744a184e19b83d4b224',1,'XCharts.Serie.animation()'],['../classXCharts_1_1MarkLine.html#a81f000648d395611cd00765c05792ae7',1,'XCharts.MarkLine.animation()']]],
+  ['animationsize_1510',['animationSize',['../classXCharts_1_1SerieSymbol.html#a239ee4b391f176d12ee3679cf51c0556',1,'XCharts::SerieSymbol']]],
+  ['anydirty_1511',['anyDirty',['../classXCharts_1_1ChartComponent.html#ae49e99ea42b2803107a50308c505cafe',1,'XCharts::ChartComponent']]],
+  ['areacolor_1512',['areaColor',['../classXCharts_1_1TooltipTheme.html#a00ffb9150368d0d74389b424f833a953',1,'XCharts::TooltipTheme']]],
+  ['areastyle_1513',['areaStyle',['../classXCharts_1_1DataZoom.html#a3d1f6aa04689d0d0e3b555f28ce15957',1,'XCharts.DataZoom.areaStyle()'],['../classXCharts_1_1Serie.html#a2fca0526ebcb045fb3cdd7f0043f4400',1,'XCharts.Serie.areaStyle()']]],
+  ['arrow_1514',['arrow',['../classXCharts_1_1AxisLine.html#aa4728c3d514188426904bee8831dfa4f',1,'XCharts.AxisLine.arrow()'],['../classXCharts_1_1LineArrow.html#a7fee8f17c280d0ca282f5cc810bec58a',1,'XCharts.LineArrow.arrow()']]],
+  ['autoalign_1515',['autoAlign',['../classXCharts_1_1TextStyle.html#ab760bac6775269a678de06c968941ac7',1,'XCharts::TextStyle']]],
+  ['autocolor_1516',['autoColor',['../classXCharts_1_1Vessel.html#a61003d094abaded5b454d4d94046d3a8',1,'XCharts::Vessel']]],
+  ['autohidewhenlabelempty_1517',['autoHideWhenLabelEmpty',['../classXCharts_1_1IconStyle.html#ad51527e9bdac3262b00b4628cf9d1f67',1,'XCharts::IconStyle']]],
+  ['autominmax_1518',['autoMinMax',['../classXCharts_1_1VisualMap.html#ab456c321ebaf7e18dc84ba75cc879197',1,'XCharts::VisualMap']]],
+  ['autooffset_1519',['autoOffset',['../classXCharts_1_1SerieLabel.html#aa4eb71edfffa6ea90238b0783f5e1cba',1,'XCharts::SerieLabel']]],
+  ['autowrap_1520',['autoWrap',['../classXCharts_1_1TextStyle.html#aa70addb0f11c156ef73d31e856f6f47a',1,'XCharts::TextStyle']]],
+  ['avoidlabeloverlap_1521',['avoidLabelOverlap',['../classXCharts_1_1Serie.html#abdd039c84f7a34dd4b3d47b008d9b5d0',1,'XCharts::Serie']]],
+  ['axislabel_1522',['axisLabel',['../classXCharts_1_1Axis.html#a0e044c6ac801d8102b712104a41b49f3',1,'XCharts.Axis.axisLabel()'],['../classXCharts_1_1GaugeAxis.html#a77a66db90389e1e32784e1fce9929def',1,'XCharts.GaugeAxis.axisLabel()']]],
+  ['axislabeltext_1523',['axisLabelText',['../classXCharts_1_1GaugeAxis.html#a010b95aa2d5a14bb3ddfd059751d3f7f',1,'XCharts::GaugeAxis']]],
+  ['axisline_1524',['axisLine',['../classXCharts_1_1Axis.html#a1aff27e5248387c8a566e09cdee29d0f',1,'XCharts.Axis.axisLine()'],['../classXCharts_1_1Radar.html#a8942d2ea7d732ab810d1a0cacfd2427a',1,'XCharts.Radar.axisLine()'],['../classXCharts_1_1GaugeAxis.html#a74ebe4baaa0df5055a9f252664d5123e',1,'XCharts.GaugeAxis.axisLine()']]],
+  ['axisname_1525',['axisName',['../classXCharts_1_1Axis.html#a1fc8af53a1dcb8506f04ecb533da70b7',1,'XCharts::Axis']]],
+  ['axistick_1526',['axisTick',['../classXCharts_1_1Axis.html#a3bc5d0037543d00cf9b063fdd50ff713',1,'XCharts.Axis.axisTick()'],['../classXCharts_1_1GaugeAxis.html#abd8924c2380e4eadc8355cbfa2c03802',1,'XCharts.GaugeAxis.axisTick()']]]
 ];

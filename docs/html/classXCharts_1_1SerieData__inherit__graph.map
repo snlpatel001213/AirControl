@@ -1,0 +1,5 @@
+<map id="XCharts.SerieData" name="XCharts.SerieData">
+<area shape="rect" id="node1" title="A data item of serie. 系列中的一个数据项。可存储数据名和1&#45;n维的数据。" alt="" coords="5,155,145,181"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="15,80,136,107"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="9,5,141,32"/>
+</map>

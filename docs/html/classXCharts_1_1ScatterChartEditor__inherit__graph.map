@@ -1,0 +1,6 @@
+<map id="XCharts.ScatterChartEditor" name="XCharts.ScatterChartEditor">
+<area shape="rect" id="node1" title="Editor class used to edit UI ScatterChart." alt="" coords="5,229,200,256"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1CoordinateChartEditor.html" title="Editor class used to edit UI CoordinateChart." alt="" coords="19,155,186,181"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1BaseChartEditor.html" title="Editor class used to edit UI BaseChart." alt="" coords="39,80,166,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="73,5,133,32"/>
+</map>

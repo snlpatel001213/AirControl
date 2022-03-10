@@ -1,0 +1,5 @@
+<map id="XCharts.Series" name="XCharts.Series">
+<area shape="rect" id="node1" title="the list of series. 系列列表。每个系列通过 type 决定自己的图表类型。" alt="" coords="13,155,129,181"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="7,80,136,107"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="5,5,137,32"/>
+</map>

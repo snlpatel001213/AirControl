@@ -141,6 +141,23 @@ namespace AirControl
         void Update()
         {
             rewardCalculator();
+            UpdatePosition();
+        }
+
+        /// <summary>
+        /// calculate abolute and relative position of the Airplane. 
+        /// Absolute -  w.r.t. world
+        /// Relative - w.r.t initila position
+        /// </summary>
+        void UpdatePosition(){
+            Vector3 absolutePosition = rb.position;
+            StaticOutputSchema.PosXAbs = absolutePosition.x;
+            StaticOutputSchema.PosYAbs = absolutePosition.y;
+            StaticOutputSchema.PosZAbs = absolutePosition.z;
+            Vector3 relativePosition = rb.position - new Vector3(start_x, start_y, start_z);
+            StaticOutputSchema.PosXRel =  relativePosition.x;
+            StaticOutputSchema.PosYRel =  relativePosition.x;
+            StaticOutputSchema.PosZRel =  relativePosition.x;
         }
 
         /// <summary>
@@ -160,10 +177,30 @@ namespace AirControl
         // }
         void rewardCalculator(){
             // Wait for airplane to reach 100 mtr
-            if ((rb.position.y - start_y) >= 100){
-                CommonFunctions.MaxR += 100;
-            }
+            // if ((rb.position.y - start_y) >= 100){
+            //     CommonFunctions.MaxR += 100;
+            // }
             // Debug.Log("Reward : "+CommonFunctions.MaxR );
+            if (isTaxiing){
+                Debug.DrawLine(rb.transform.forward,rb.velocity);
+                float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward);
+                // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
+                float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
+                float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
+                CommonFunctions.MaxR = forward_velocity+l2_up-l2_side;
+            }
+            if (isFlying){
+                Debug.DrawLine(rb.transform.forward,rb.velocity);
+                float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward);
+                // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
+                float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
+                float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
+                CommonFunctions.MaxR = forward_velocity+currentMSL-l2_side; ;
+            }
+            
+        
         }
 
         #endregion

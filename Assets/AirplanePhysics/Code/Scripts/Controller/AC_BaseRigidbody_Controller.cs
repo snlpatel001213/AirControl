@@ -49,9 +49,12 @@ namespace AirControl
             if(rb){
                 HandlePhysics();
                 // HandleLocation();
+                
             }
             
         }
+
+        
 
         void OnCollisionExit(Collision col)
         {
@@ -59,7 +62,7 @@ namespace AirControl
             CommonFunctions.MaxR -=50f;
             // Collision detection
             DateTime now = DateTime.Now;
-            Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
+            // Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
             StaticOutputSchema.IfCollision=true;
             StaticOutputSchema.CollisionObject = col.gameObject.tag;
             return;
@@ -73,7 +76,7 @@ namespace AirControl
                 CommonFunctions.MaxR -=50f;
                 // Collision detection
                 DateTime now = DateTime.Now;
-                Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
+                // Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
                 StaticOutputSchema.IfCollision=true;
                 StaticOutputSchema.CollisionObject = col.gameObject.tag;
             }

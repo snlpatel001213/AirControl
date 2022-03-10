@@ -1,11 +1,11 @@
 var namespaceAirControl =
 [
-    [ "actions", null, [
-      [ "Actions", "classAirControl_1_1actions_1_1Actions.html", "classAirControl_1_1actions_1_1Actions" ]
-    ] ],
     [ "communicator", null, [
       [ "Communicator", "classAirControl_1_1communicator_1_1Communicator.html", "classAirControl_1_1communicator_1_1Communicator" ],
       [ "NpEncoder", "classAirControl_1_1communicator_1_1NpEncoder.html", "classAirControl_1_1communicator_1_1NpEncoder" ]
+    ] ],
+    [ "environment", null, [
+      [ "Trigger", "classAirControl_1_1environment_1_1Trigger.html", "classAirControl_1_1environment_1_1Trigger" ]
     ] ],
     [ "sample_generator", null, [
       [ "samples", "classAirControl_1_1sample__generator_1_1samples.html", "classAirControl_1_1sample__generator_1_1samples" ]

@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -98,6 +98,7 @@ $(document).ready(function(){initNavTree('classAirControl_1_1Sun.html',''); init
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="classAirControl_1_1Sun-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">AirControl.Sun Class Reference</div>  </div>
@@ -139,11 +140,32 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetUpdateSteps</b> (i
 <tr class="memitem:a7041e55b4430fbfa796f7003e48128ce"><td class="memItemLeft" align="right" valign="top"><a id="a7041e55b4430fbfa796f7003e48128ce"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTimeSpeed</b> (float speed)</td></tr>
 <tr class="separator:a7041e55b4430fbfa796f7003e48128ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:a63fabae8531b7aec64781b6f7fe7c9dc"><td class="memItemLeft" align="right" valign="top"><a id="a63fabae8531b7aec64781b6f7fe7c9dc"></a>
+GameObject&#160;</td><td class="memItemRight" valign="bottom"><b>sliderAndText</b></td></tr>
+<tr class="separator:a63fabae8531b7aec64781b6f7fe7c9dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a72fa5e425d121e35c0a98a7c0b15919c"><td class="memItemLeft" align="right" valign="top"><a id="a72fa5e425d121e35c0a98a7c0b15919c"></a>
+Toggle&#160;</td><td class="memItemRight" valign="bottom"><b>sunLocationControl</b></td></tr>
+<tr class="separator:a72fa5e425d121e35c0a98a7c0b15919c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a273fd28cb68a09360eda20f412a5d8f5"><td class="memItemLeft" align="right" valign="top"><a id="a273fd28cb68a09360eda20f412a5d8f5"></a>
+Slider&#160;</td><td class="memItemRight" valign="bottom"><b>longitudeSlider</b></td></tr>
+<tr class="separator:a273fd28cb68a09360eda20f412a5d8f5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b9254cebd11f4c32f15f8318c305bff"><td class="memItemLeft" align="right" valign="top"><a id="a9b9254cebd11f4c32f15f8318c305bff"></a>
+Slider&#160;</td><td class="memItemRight" valign="bottom"><b>latitudeSlider</b></td></tr>
+<tr class="separator:a9b9254cebd11f4c32f15f8318c305bff"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7708d86137389f69b4f8d35dd068111a"><td class="memItemLeft" align="right" valign="top"><a id="a7708d86137389f69b4f8d35dd068111a"></a>
+Slider&#160;</td><td class="memItemRight" valign="bottom"><b>sunHourSlider</b></td></tr>
+<tr class="separator:a7708d86137389f69b4f8d35dd068111a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6755215f38a6f0f9fc2327953a808073"><td class="memItemLeft" align="right" valign="top"><a id="a6755215f38a6f0f9fc2327953a808073"></a>
+Slider&#160;</td><td class="memItemRight" valign="bottom"><b>sunMinuteSlider</b></td></tr>
+<tr class="separator:a6755215f38a6f0f9fc2327953a808073"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Function to change sun location and create Day and Night effects. </p>
 
-<p class="definition">Definition at line <a class="el" href="Sun_8cs_source.html#l00014">14</a> of file <a class="el" href="Sun_8cs_source.html">Sun.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="Sun_8cs_source.html#l00016">16</a> of file <a class="el" href="Sun_8cs_source.html">Sun.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a4ee38be8ec854626fe7b959242175521"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4ee38be8ec854626fe7b959242175521">&#9670;&nbsp;</a></span>SetLocation()</h2>
@@ -188,11 +210,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTimeSpeed</b> (flo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Sun_8cs_source.html#l00057">57</a> of file <a class="el" href="Sun_8cs_source.html">Sun.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                                {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          this.longitude = longitude;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          this.latitude = latitude;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="Sun_8cs_source.html#l00067">67</a> of file <a class="el" href="Sun_8cs_source.html">Sun.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                                                                {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          this.longitude = longitude;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          this.latitude = latitude;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -239,12 +261,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><b>SetTimeSpeed</b> (flo
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="Sun_8cs_source.html#l00047">47</a> of file <a class="el" href="Sun_8cs_source.html">Sun.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                                                   {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            this.hour = hour;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            this.minutes = minutes;            </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            OnValidate();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="Sun_8cs_source.html#l00057">57</a> of file <a class="el" href="Sun_8cs_source.html">Sun.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                                                   {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            this.hour = hour;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            this.minutes = minutes;            </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            OnValidate();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>

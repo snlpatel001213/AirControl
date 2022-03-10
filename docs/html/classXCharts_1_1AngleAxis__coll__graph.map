@@ -1,0 +1,17 @@
+<map id="XCharts.AngleAxis" name="XCharts.AngleAxis">
+<area shape="rect" id="node1" title="Angle axis of Polar Coordinate. 极坐标系的角度轴。" alt="" coords="1916,145,2057,172"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1Axis.html" title="The axis in rectangular coordinate. 直角坐标系的坐标轴组件。" alt="" coords="1816,145,1867,172"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="755,5,884,32"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="428,85,560,112"/>
+<area shape="rect" id="node8" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="609,119,731,145"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="189,85,311,112"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,85,140,112"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1AxisName.html" title="the name of axis. 坐标轴名称。" alt="" coords="1068,48,1211,75"/>
+<area shape="rect" id="node10" href="$classXCharts_1_1BaseLine.html" title="Settings related to base line. 线条基础配置。" alt="" coords="1235,145,1316,172"/>
+<area shape="rect" id="node11" href="$classXCharts_1_1LineStyle.html" title="The style of line. 线条样式。 注： 修改 lineStyle 中的颜色不会影响图例颜色，如果需要图例颜色和折线图颜色一致，需修改 itemStyle...." alt="" coords="908,152,1044,179"/>
+<area shape="rect" id="node12" href="$classXCharts_1_1AxisSplitArea.html" title="Split area of axis in grid area, not shown by default. 坐标轴在 grid 区域中的分隔区域，默认不显示。" alt="" coords="1340,237,1503,264"/>
+<area shape="rect" id="node14" href="$classXCharts_1_1AxisLabel.html" title="Settings related to axis label. 坐标轴刻度标签的相关设置。" alt="" coords="1070,279,1209,305"/>
+<area shape="rect" id="node9" href="$classXCharts_1_1AxisLine.html" title="Settings related to axis line. 坐标轴轴线。" alt="" coords="1541,95,1672,121"/>
+<area shape="rect" id="node13" href="$classXCharts_1_1AxisSplitLine.html" title="Split line of axis in grid area. 坐标轴在 grid 区域中的分隔线。" alt="" coords="1527,145,1687,172"/>
+<area shape="rect" id="node15" href="$classXCharts_1_1AxisTick.html" title="Settings related to axis tick. 坐标轴刻度相关设置。" alt="" coords="1541,196,1672,223"/>
+</map>

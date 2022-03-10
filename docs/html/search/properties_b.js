@@ -1,0 +1,5 @@
+var searchData=
+[
+  ['name_1719',['name',['../classXCharts_1_1Radar_1_1Indicator.html#af4105eb942c646c83a87fb29c099f127',1,'XCharts.Radar.Indicator.name()'],['../classXCharts_1_1Serie.html#afe87ca8901ad0681495ad8b3a0291e77',1,'XCharts.Serie.name()'],['../classXCharts_1_1AxisName.html#ac2fd531fc4d37f1bf1e9c75e86c89e37',1,'XCharts.AxisName.name()'],['../classXCharts_1_1MarkLineData.html#ad805af224ae09a43ad92e44b3ac485af',1,'XCharts.MarkLineData.name()'],['../classXCharts_1_1SerieData.html#a0fdd93a2b664cc1f99c4c1a58ca15fe9',1,'XCharts.SerieData.name()']]],
+  ['numericformatter_1720',['numericFormatter',['../classXCharts_1_1Tooltip.html#ae6820c22f1a9b3339fa19039a652988e',1,'XCharts.Tooltip.numericFormatter()'],['../classXCharts_1_1AxisLabel.html#ac59d4649be555f69b9f517a149b8f220',1,'XCharts.AxisLabel.numericFormatter()'],['../classXCharts_1_1ItemStyle.html#a50e4b67fa86f05d02cb9b6df14e5ed1c',1,'XCharts.ItemStyle.numericFormatter()'],['../classXCharts_1_1SerieLabel.html#ad29a62417fef2c6bd49f463d7fc3fd7b',1,'XCharts.SerieLabel.numericFormatter()']]]
+];

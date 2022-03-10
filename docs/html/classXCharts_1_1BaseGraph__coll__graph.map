@@ -1,0 +1,8 @@
+<map id="XCharts.BaseGraph" name="XCharts.BaseGraph">
+<area shape="rect" id="node1" title="The base class of all graphs or components. 所有图形的基类。" alt="" coords="5,412,152,439"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1Background.html" title="Background component. Due to the limitations of the framework, there are two limitations to the use o..." alt="" coords="117,323,270,349"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="151,247,281,273"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="122,171,254,197"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="18,81,139,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="11,5,146,32"/>
+</map>

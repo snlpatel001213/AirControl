@@ -23,10 +23,16 @@ namespace Communicator
         /// <returns>Output json string</returns>
         public string  ParseOutput()
         {
-            ref var screencapture = ref StaticOutputSchema.ScreenCapture;
             // to avoid null retun from Screencapture
+            ref var screencapture = ref StaticOutputSchema.ScreenCapture;
             if (screencapture == null){
                 screencapture =  new byte[0];
+            }
+
+            // to avoid null retun from Screencapture
+            var lidarPointCloud = StaticOutputSchema.LidarPointCloud;
+            if (lidarPointCloud == null){
+                lidarPointCloud =  new float[0];
             }
             
             CommonFunctions.Counter ++; 
@@ -41,16 +47,22 @@ namespace Communicator
                 CurrentPower = StaticOutputSchema.CurrentPower,
                 CurrentSpeed = StaticOutputSchema.CurrentSpeed,
                 ScreenCapture = screencapture,
-                LidarPointCloud = StaticOutputSchema.LidarPointCloud,
+                LidarPointCloud = lidarPointCloud,
                 Latitude = StaticOutputSchema.Latitude,
                 Longitude = StaticOutputSchema.Longitude,
                 IfCollision = StaticOutputSchema.IfCollision,
-                Reward = StaticOutputSchema.Reward,
+                Reward = CommonFunctions.MaxR,
                 Counter = CommonFunctions.Counter,
                 CollisionObject = StaticOutputSchema.CollisionObject,
                 IsFlying =  StaticOutputSchema.IsFlying,
                 IsGrounded =  StaticOutputSchema.IsGrounded,
                 IsTaxiing =  StaticOutputSchema.IsTaxiing,
+                PosXAbs =  StaticOutputSchema.PosXAbs,
+                PosYAbs =  StaticOutputSchema.PosYAbs,
+                PosZAbs =  StaticOutputSchema.PosZAbs,
+                PosXRel =  StaticOutputSchema.PosXRel,
+                PosYRel =  StaticOutputSchema.PosYRel,
+                PosZRel =  StaticOutputSchema.PosZRel,
                 
             }, new PrimitiveToStringConverter());
             if(StaticOutputSchema.IfCollision)

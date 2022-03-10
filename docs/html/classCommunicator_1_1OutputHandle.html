@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -165,14 +165,14 @@ Public Member Functions</h2></td></tr>
 <p>Just Log output if the entire output is not required </p>
 <dl class="section return"><dt>Returns</dt><dd>Prepare output object and return json string to be dispatched</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="OutputHandle_8cs_source.html#l00066">66</a> of file <a class="el" href="OutputHandle_8cs_source.html">OutputHandle.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">string</span> <a class="code" href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">LogOutput</a> = JsonConvert.SerializeObject(<span class="keyword">new</span> <a class="code" href="classCommunicator_1_1Logger.html">Logger</a>{ </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    Log =  StaticLogger.Log,</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                }, <span class="keyword">new</span> <a class="code" href="classCommunicator_1_1PrimitiveToStringConverter.html">PrimitiveToStringConverter</a>()</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            );</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">LogOutput</a>;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="OutputHandle_8cs_source.html#l00078">78</a> of file <a class="el" href="OutputHandle_8cs_source.html">OutputHandle.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="keywordtype">string</span> <a class="code" href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">LogOutput</a> = JsonConvert.SerializeObject(<span class="keyword">new</span> <a class="code" href="classCommunicator_1_1Logger.html">Logger</a>{ </div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                    Log =  StaticLogger.Log,</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                }, <span class="keyword">new</span> <a class="code" href="classCommunicator_1_1PrimitiveToStringConverter.html">PrimitiveToStringConverter</a>()</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            );</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <span class="keywordflow">return</span> <a class="code" href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">LogOutput</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -204,42 +204,54 @@ Public Member Functions</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="OutputHandle_8cs_source.html#l00024">24</a> of file <a class="el" href="OutputHandle_8cs_source.html">OutputHandle.cs</a>.</p>
 <div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            ref var screencapture = ref StaticOutputSchema.ScreenCapture;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="comment">// to avoid null retun from Screencapture</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="comment">// to avoid null retun from Screencapture</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            ref var screencapture = ref StaticOutputSchema.ScreenCapture;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keywordflow">if</span> (screencapture == <span class="keyword">null</span>){</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                screencapture =  <span class="keyword">new</span> <span class="keywordtype">byte</span>[0];</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            CommonFunctions.Counter ++; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keywordtype">string</span> output = JsonConvert.SerializeObject(<span class="keyword">new</span> <a class="code" href="classCommunicator_1_1OutputSchema.html">OutputSchema</a>{</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                BankAngle = StaticOutputSchema.BankAngle,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                PitchAngle = StaticOutputSchema.PitchAngle,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                AGL = StaticOutputSchema.AGL,</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                MSL = StaticOutputSchema.MSL,</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                CurrentRPM = StaticOutputSchema.CurrentRPM,</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                MaxRPM = StaticOutputSchema.MaxRPM,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                MaxPower = StaticOutputSchema.MaxPower,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                CurrentPower = StaticOutputSchema.CurrentPower,</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                CurrentSpeed = StaticOutputSchema.CurrentSpeed,</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                ScreenCapture = screencapture,</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                LidarPointCloud = StaticOutputSchema.LidarPointCloud,</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                Latitude = StaticOutputSchema.Latitude,</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                Longitude = StaticOutputSchema.Longitude,</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                IfCollision = StaticOutputSchema.IfCollision,</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                Reward = StaticOutputSchema.Reward,</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                Counter = CommonFunctions.Counter,</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                CollisionObject = StaticOutputSchema.CollisionObject,</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                IsFlying =  StaticOutputSchema.IsFlying,</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                IsGrounded =  StaticOutputSchema.IsGrounded,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                IsLanded =  StaticOutputSchema.IsLanded,</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }, <span class="keyword">new</span> <a class="code" href="classCommunicator_1_1PrimitiveToStringConverter.html">PrimitiveToStringConverter</a>());</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keywordflow">if</span>(StaticOutputSchema.IfCollision)</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="comment">// Debug.Log(output);</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordflow">return</span> output;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="comment">// to avoid null retun from Screencapture</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            var lidarPointCloud = StaticOutputSchema.LidarPointCloud;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordflow">if</span> (lidarPointCloud == <span class="keyword">null</span>){</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                lidarPointCloud =  <span class="keyword">new</span> <span class="keywordtype">float</span>[0];</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            </div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            CommonFunctions.Counter ++; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keywordtype">string</span> output = JsonConvert.SerializeObject(<span class="keyword">new</span> <a class="code" href="classCommunicator_1_1OutputSchema.html">OutputSchema</a>{</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                BankAngle = StaticOutputSchema.BankAngle,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                PitchAngle = StaticOutputSchema.PitchAngle,</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                AGL = StaticOutputSchema.AGL,</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                MSL = StaticOutputSchema.MSL,</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                CurrentRPM = StaticOutputSchema.CurrentRPM,</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                MaxRPM = StaticOutputSchema.MaxRPM,</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                MaxPower = StaticOutputSchema.MaxPower,</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                CurrentPower = StaticOutputSchema.CurrentPower,</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                CurrentSpeed = StaticOutputSchema.CurrentSpeed,</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                ScreenCapture = screencapture,</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                LidarPointCloud = lidarPointCloud,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                Latitude = StaticOutputSchema.Latitude,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                Longitude = StaticOutputSchema.Longitude,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                IfCollision = StaticOutputSchema.IfCollision,</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                Reward = CommonFunctions.MaxR,</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                Counter = CommonFunctions.Counter,</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                CollisionObject = StaticOutputSchema.CollisionObject,</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                IsFlying =  StaticOutputSchema.IsFlying,</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                IsGrounded =  StaticOutputSchema.IsGrounded,</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                IsTaxiing =  StaticOutputSchema.IsTaxiing,</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                PosXAbs =  StaticOutputSchema.PosXAbs,</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                PosYAbs =  StaticOutputSchema.PosYAbs,</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                PosZAbs =  StaticOutputSchema.PosZAbs,</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                PosXRel =  StaticOutputSchema.PosXRel,</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                PosYRel =  StaticOutputSchema.PosYRel,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                PosZRel =  StaticOutputSchema.PosZRel,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }, <span class="keyword">new</span> <a class="code" href="classCommunicator_1_1PrimitiveToStringConverter.html">PrimitiveToStringConverter</a>());</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span>(StaticOutputSchema.IfCollision)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="comment">// Debug.Log(output);</span></div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="keywordflow">return</span> output;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -248,10 +260,10 @@ Public Member Functions</h2></td></tr>
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassCommunicator_1_1OutputSchema_html"><div class="ttname"><a href="classCommunicator_1_1OutputSchema.html">Communicator.OutputSchema</a></div><div class="ttdoc">Output control class for serialization deserialization</div><div class="ttdef"><b>Definition:</b> <a href="IOSchema_8cs_source.html#l00110">IOSchema.cs:110</a></div></div>
+<div class="ttc" id="aclassCommunicator_1_1OutputSchema_html"><div class="ttname"><a href="classCommunicator_1_1OutputSchema.html">Communicator.OutputSchema</a></div><div class="ttdoc">Output control class for serialization deserialization</div><div class="ttdef"><b>Definition:</b> <a href="IOSchema_8cs_source.html#l00117">IOSchema.cs:117</a></div></div>
 <div class="ttc" id="aclassCommunicator_1_1PrimitiveToStringConverter_html"><div class="ttname"><a href="classCommunicator_1_1PrimitiveToStringConverter.html">Communicator.PrimitiveToStringConverter</a></div><div class="ttdoc">Converting boolena to string while serializing</div><div class="ttdef"><b>Definition:</b> <a href="IOInit_8cs_source.html#l00072">IOInit.cs:72</a></div></div>
-<div class="ttc" id="aclassCommunicator_1_1OutputHandle_html_ae01d18027a01710a34d822b191962177"><div class="ttname"><a href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">Communicator.OutputHandle.LogOutput</a></div><div class="ttdeci">string LogOutput()</div><div class="ttdoc">Just Log output if the entire output is not required</div><div class="ttdef"><b>Definition:</b> <a href="OutputHandle_8cs_source.html#l00066">OutputHandle.cs:66</a></div></div>
-<div class="ttc" id="aclassCommunicator_1_1Logger_html"><div class="ttname"><a href="classCommunicator_1_1Logger.html">Communicator.Logger</a></div><div class="ttdoc">Logger class for serialization deserialization</div><div class="ttdef"><b>Definition:</b> <a href="IOSchema_8cs_source.html#l00144">IOSchema.cs:144</a></div></div>
+<div class="ttc" id="aclassCommunicator_1_1OutputHandle_html_ae01d18027a01710a34d822b191962177"><div class="ttname"><a href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">Communicator.OutputHandle.LogOutput</a></div><div class="ttdeci">string LogOutput()</div><div class="ttdoc">Just Log output if the entire output is not required</div><div class="ttdef"><b>Definition:</b> <a href="OutputHandle_8cs_source.html#l00078">OutputHandle.cs:78</a></div></div>
+<div class="ttc" id="aclassCommunicator_1_1Logger_html"><div class="ttname"><a href="classCommunicator_1_1Logger.html">Communicator.Logger</a></div><div class="ttdoc">Logger class for serialization deserialization</div><div class="ttdef"><b>Definition:</b> <a href="IOSchema_8cs_source.html#l00157">IOSchema.cs:157</a></div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

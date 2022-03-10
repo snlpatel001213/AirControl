@@ -1,0 +1,33 @@
+<map id="XCharts.SubComponent" name="XCharts.SubComponent">
+<area shape="rect" id="node1" title=" " alt="" coords="185,563,360,589"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1AreaStyle.html" title="The style of area. 区域填充样式。" alt="" coords="427,5,565,32"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1Arrow.html" title=" " alt="" coords="439,56,553,83"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1AxisLabel.html" title="Settings related to axis label. 坐标轴刻度标签的相关设置。" alt="" coords="427,107,565,133"/>
+<area shape="rect" id="node6" href="$classXCharts_1_1AxisName.html" title="the name of axis. 坐标轴名称。" alt="" coords="425,157,567,184"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1AxisSplitArea.html" title="Split area of axis in grid area, not shown by default. 坐标轴在 grid 区域中的分隔区域，默认不显示。" alt="" coords="415,208,577,235"/>
+<area shape="rect" id="node8" href="$classXCharts_1_1BaseLine.html" title="Settings related to base line. 线条基础配置。" alt="" coords="429,259,563,285"/>
+<area shape="rect" id="node15" href="$classXCharts_1_1Emphasis.html" title="高亮的图形样式和文本标签样式。" alt="" coords="427,309,565,336"/>
+<area shape="rect" id="node16" href="$classXCharts_1_1GaugeAxis.html" title="Settings related to gauge axis line. 仪表盘轴线相关设置。" alt="" coords="423,360,569,387"/>
+<area shape="rect" id="node17" href="$classXCharts_1_1GaugePointer.html" title="Settings related to gauge pointer. 仪表盘指针相关设置。" alt="" coords="414,411,578,437"/>
+<area shape="rect" id="node18" href="$classXCharts_1_1IconStyle.html" title=" " alt="" coords="428,461,564,488"/>
+<area shape="rect" id="node19" href="$classXCharts_1_1ItemStyle.html" title="图形样式。" alt="" coords="427,512,565,539"/>
+<area shape="rect" id="node20" href="$classXCharts_1_1LineArrow.html" title=" " alt="" coords="425,563,567,589"/>
+<area shape="rect" id="node21" href="$classXCharts_1_1LineStyle.html" title="The style of line. 线条样式。 注： 修改 lineStyle 中的颜色不会影响图例颜色，如果需要图例颜色和折线图颜色一致，需修改 itemStyle...." alt="" coords="428,613,564,640"/>
+<area shape="rect" id="node22" href="$classXCharts_1_1Location.html" title="Location type. Quick to set the general location. 位置类型。通过Align快速设置大体位置，再通过left，right，top，bottom微调具体位置..." alt="" coords="431,664,561,691"/>
+<area shape="rect" id="node23" href="$classXCharts_1_1MarkLine.html" title="Use a line in the chart to illustrate. 图表标线。" alt="" coords="428,715,564,741"/>
+<area shape="rect" id="node24" href="$classXCharts_1_1MarkLineData.html" title="Data of marking line. 图表标线的数据。" alt="" coords="413,765,579,792"/>
+<area shape="rect" id="node25" href="$classXCharts_1_1SerieAnimation.html" title="the animation of serie. 动画表现。" alt="" coords="408,816,584,843"/>
+<area shape="rect" id="node26" href="$classXCharts_1_1SerieData.html" title="A data item of serie. 系列中的一个数据项。可存储数据名和1&#45;n维的数据。" alt="" coords="426,867,566,893"/>
+<area shape="rect" id="node27" href="$classXCharts_1_1SerieLabel.html" title="Text label of chart, to explain some data information about graphic item like value,..." alt="" coords="424,917,568,944"/>
+<area shape="rect" id="node28" href="$classXCharts_1_1SerieSymbol.html" title="系列数据项的标记的图形" alt="" coords="417,968,575,995"/>
+<area shape="rect" id="node29" href="$classXCharts_1_1TextLimit.html" title="Text character limitation and adaptation component. When the length of the text exceeds the set lengt..." alt="" coords="428,1019,564,1045"/>
+<area shape="rect" id="node30" href="$classXCharts_1_1TextStyle.html" title="Settings related to text. 文本的相关设置。" alt="" coords="428,1069,564,1096"/>
+<area shape="rect" id="node31" href="$classXCharts_1_1TitleStyle.html" title="the title of serie. 标题相关设置。" alt="" coords="427,1120,565,1147"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="5,563,137,589"/>
+<area shape="rect" id="node9" href="$classXCharts_1_1AxisLine.html" title="Settings related to axis line. 坐标轴轴线。" alt="" coords="668,132,799,159"/>
+<area shape="rect" id="node10" href="$classXCharts_1_1AxisSplitLine.html" title="Split line of axis in grid area. 坐标轴在 grid 区域中的分隔线。" alt="" coords="653,183,813,209"/>
+<area shape="rect" id="node11" href="$classXCharts_1_1AxisTick.html" title="Settings related to axis tick. 坐标轴刻度相关设置。" alt="" coords="668,233,799,260"/>
+<area shape="rect" id="node12" href="$classXCharts_1_1GaugeAxisLine.html" title=" " alt="" coords="647,284,820,311"/>
+<area shape="rect" id="node13" href="$classXCharts_1_1GaugeAxisSplitLine.html" title="分割线" alt="" coords="632,335,835,361"/>
+<area shape="rect" id="node14" href="$classXCharts_1_1GaugeAxisTick.html" title="刻度" alt="" coords="647,385,820,412"/>
+</map>

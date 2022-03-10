@@ -1,0 +1,5 @@
+<map id="XCharts.LineStyle" name="XCharts.LineStyle">
+<area shape="rect" id="node1" title="The style of line. 线条样式。 注： 修改 lineStyle 中的颜色不会影响图例颜色，如果需要图例颜色和折线图颜色一致，需修改 itemStyle...." alt="" coords="5,155,141,181"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="13,80,134,107"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="7,5,139,32"/>
+</map>

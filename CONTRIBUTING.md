@@ -3,13 +3,14 @@
 When contributing to this repository, please first discuss the change you wish to make via issue,
 email, or any other method with the owners of this repository before making a change. 
 
-Please note we have a code of conduct, please follow it in all your interactions with the project.
+Please note we have a code of conduct,please follow it in all your interactions with the project.
 
 ## Pull Request Process
 
 1. If you have changed the version of the project update the same at the following locations
    1. file `VERSION` at the root
    2. file `Assets/AirplanePhysics/Code/commons/CommonConfigs.cs` in the `GET_VERSION()` function
+   3. Change `PROJECT_NUMBER` in docs/doxygen.conf file, 
 2. Make sure if any third-party plugins are used then it also supports open usage and compile for following Platform.
     1. Windows
     2. Mac 
@@ -25,7 +26,7 @@ Please note we have a code of conduct, please follow it in all your interactions
    2. Build documentation `make html -b coverage` 
 8. Regenerate C#/Python API documentation
    1. Go to `docs` Directory `cd docs`
-   2. Build API documentation ` doxygen  doxygen.conf` 
+   2. Build API documentation `doxygen  doxygen.conf` 
 9. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
    do not have permission to do that, you may request the second reviewer to merge it for you.
 

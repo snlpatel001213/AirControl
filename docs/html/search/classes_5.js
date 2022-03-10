@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['iairplaneui_168',['IAirplaneUI',['../interfaceAirControl_1_1IAirplaneUI.html',1,'AirControl']]],
-  ['inputhandle_169',['InputHandle',['../classCommunicator_1_1InputHandle.html',1,'Communicator']]],
-  ['ioinit_170',['IOInit',['../classCommunicator_1_1IOInit.html',1,'Communicator']]]
+  ['fpsdisplay_1041',['FPSDisplay',['../classFPSDisplay.html',1,'']]],
+  ['fuelschema_1042',['FuelSchema',['../classCommunicator_1_1FuelSchema.html',1,'Communicator']]]
 ];

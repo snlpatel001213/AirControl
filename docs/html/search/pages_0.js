@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['aircontrol_20camera_20api_189',['Aircontrol Camera API',['../md_readmes_camera_example.html',1,'']]],
-  ['aircontrol_20input_20api_190',['Aircontrol Input API',['../md_readmes_input_output.html',1,'']]],
-  ['aircontrol_20lidar_20api_191',['Aircontrol Lidar API',['../md_readmes_lidar_example.html',1,'']]],
-  ['aircontrol_20other_20api_192',['Aircontrol Other API',['../md_readmes_other_API.html',1,'']]],
-  ['aircontrol_20time_20of_20day_20api_193',['Aircontrol time of Day API',['../md_readmes_time_of_day.html',1,'']]]
+  ['xcharts_20api_1919',['XCharts API',['../md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html',1,'']]],
+  ['xcharts_20configuration_1920',['XCharts Configuration',['../md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html',1,'']]],
+  ['xcharts_20q_26a_1921',['XCharts Q&amp;A',['../md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html',1,'']]],
+  ['xcharts_20api_1922',['XCharts API',['../md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html',1,'']]],
+  ['xcharts问答_1923',['XCharts问答',['../md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html',1,'']]]
 ];

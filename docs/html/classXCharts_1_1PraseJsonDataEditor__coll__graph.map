@@ -1,0 +1,12 @@
+<map id="XCharts.PraseJsonDataEditor" name="XCharts.PraseJsonDataEditor">
+<area shape="rect" id="node1" title=" " alt="" coords="5,501,213,528"/>
+<area shape="rect" id="node2" title=" " alt="" coords="32,412,144,439"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1BaseChart.html" title="The base class of all charts. 所有Chart的基类。" alt="" coords="167,412,310,439"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="14,81,135,108"/>
+<area shape="rect" id="node8" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="151,171,283,197"/>
+<area shape="rect" id="node5" title=" " alt="" coords="7,5,142,32"/>
+<area shape="rect" id="node6" href="$classXCharts_1_1Settings.html" title="Global parameter setting component. The default value can be used in general, and can be adjusted whe..." alt="" coords="91,323,221,349"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="214,247,343,273"/>
+<area shape="rect" id="node9" href="$classXCharts_1_1ChartTheme.html" title="Theme. 主题相关配置。" alt="" coords="245,323,401,349"/>
+<area shape="rect" id="node10" href="$classXCharts_1_1Series.html" title="the list of series. 系列列表。每个系列通过 type 决定自己的图表类型。" alt="" coords="425,323,541,349"/>
+</map>

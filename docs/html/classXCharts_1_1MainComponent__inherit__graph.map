@@ -1,0 +1,38 @@
+<map id="XCharts.MainComponent" name="XCharts.MainComponent">
+<area shape="rect" id="node1" title=" " alt="" coords="185,588,368,615"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1Axis.html" title="The axis in rectangular coordinate. 直角坐标系的坐标轴组件。" alt="" coords="462,107,566,133"/>
+<area shape="rect" id="node8" href="$classXCharts_1_1Background.html" title="Background component. Due to the limitations of the framework, there are two limitations to the use o..." alt="" coords="437,233,591,260"/>
+<area shape="rect" id="node9" href="$classXCharts_1_1ChartTheme.html" title="Theme. 主题相关配置。" alt="" coords="436,284,592,311"/>
+<area shape="rect" id="node10" href="$classXCharts_1_1ComponentTheme.html" title=" " alt="" coords="416,335,612,361"/>
+<area shape="rect" id="node24" href="$classXCharts_1_1DataZoom.html" title="DataZoom component is used for zooming a specific area, which enables user to investigate data in det..." alt="" coords="441,385,587,412"/>
+<area shape="rect" id="node25" href="$classXCharts_1_1Grid.html" title="Grid component. Drawing grid in rectangular coordinate. In a single grid, at most two X and Y axes ea..." alt="" coords="463,436,565,463"/>
+<area shape="rect" id="node26" href="$classXCharts_1_1Legend.html" title="Legend component.The legend component shows different sets of tags, colors, and names...." alt="" coords="453,487,575,513"/>
+<area shape="rect" id="node27" href="$classXCharts_1_1Polar.html" title="Polar coordinate can be used in scatter and line chart. Every polar coordinate has an angleAxis and a..." alt="" coords="459,537,569,564"/>
+<area shape="rect" id="node28" href="$classXCharts_1_1Radar.html" title="Radar coordinate conponnet for radar charts. 雷达图坐标系组件，只适用于雷达图。" alt="" coords="457,588,571,615"/>
+<area shape="rect" id="node29" href="$classXCharts_1_1Serie.html" title="系列。每个系列通过 type 决定自己的图表类型。" alt="" coords="459,639,569,665"/>
+<area shape="rect" id="node30" href="$classXCharts_1_1Series.html" title="the list of series. 系列列表。每个系列通过 type 决定自己的图表类型。" alt="" coords="456,689,572,716"/>
+<area shape="rect" id="node31" href="$classXCharts_1_1SerieTheme.html" title=" " alt="" coords="437,740,591,767"/>
+<area shape="rect" id="node32" href="$classXCharts_1_1Settings.html" title="Global parameter setting component. The default value can be used in general, and can be adjusted whe..." alt="" coords="449,791,579,817"/>
+<area shape="rect" id="node33" href="$classXCharts_1_1Title.html" title="Title component, including main title and subtitle. 标题组件，包含主标题和副标题。" alt="" coords="461,841,567,868"/>
+<area shape="rect" id="node34" href="$classXCharts_1_1Tooltip.html" title="Tooltip component. 提示框组件。" alt="" coords="455,892,573,919"/>
+<area shape="rect" id="node35" href="$classXCharts_1_1Vessel.html" title="Vessel component for liquid chart. There can be multiple vessels in a Chart, which can be matched by ..." alt="" coords="455,943,573,969"/>
+<area shape="rect" id="node36" href="$classXCharts_1_1VisualMap.html" title="VisualMap component. Mapping data to visual elements such as colors. 视觉映射组件。用于进行『视觉编码』，也就是将数据映射到视觉元素（..." alt="" coords="442,993,586,1020"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="5,588,137,615"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1AngleAxis.html" title="Angle axis of Polar Coordinate. 极坐标系的角度轴。" alt="" coords="685,5,826,32"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1RadiusAxis.html" title="Radial axis of polar coordinate. 极坐标系的径向轴。" alt="" coords="681,56,829,83"/>
+<area shape="rect" id="node6" href="$classXCharts_1_1XAxis.html" title="The x axis in cartesian(rectangular) coordinate. a grid component can place at most 2 x axis,..." alt="" coords="699,107,812,133"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1YAxis.html" title="The x axis in cartesian(rectangular) coordinate. a grid component can place at most 2 x axis,..." alt="" coords="700,157,811,184"/>
+<area shape="rect" id="node11" href="$classXCharts_1_1BaseAxisTheme.html" title=" " alt="" coords="665,208,846,235"/>
+<area shape="rect" id="node18" href="$classXCharts_1_1DataZoomTheme.html" title=" " alt="" coords="660,259,851,285"/>
+<area shape="rect" id="node19" href="$classXCharts_1_1LegendTheme.html" title=" " alt="" coords="671,309,839,336"/>
+<area shape="rect" id="node20" href="$classXCharts_1_1SubTitleTheme.html" title=" " alt="" coords="668,360,843,387"/>
+<area shape="rect" id="node21" href="$classXCharts_1_1TitleTheme.html" title=" " alt="" coords="680,411,831,437"/>
+<area shape="rect" id="node22" href="$classXCharts_1_1TooltipTheme.html" title=" " alt="" coords="673,461,837,488"/>
+<area shape="rect" id="node23" href="$classXCharts_1_1VisualMapTheme.html" title=" " alt="" coords="661,512,850,539"/>
+<area shape="rect" id="node12" href="$classXCharts_1_1AngleAxisTheme.html" title=" " alt="" coords="902,81,1089,108"/>
+<area shape="rect" id="node13" href="$classXCharts_1_1AxisTheme.html" title=" " alt="" coords="921,132,1070,159"/>
+<area shape="rect" id="node14" href="$classXCharts_1_1GaugeAxisTheme.html" title=" " alt="" coords="900,183,1091,209"/>
+<area shape="rect" id="node15" href="$classXCharts_1_1PolarAxisTheme.html" title=" " alt="" coords="904,233,1087,260"/>
+<area shape="rect" id="node16" href="$classXCharts_1_1RadarAxisTheme.html" title=" " alt="" coords="902,284,1089,311"/>
+<area shape="rect" id="node17" href="$classXCharts_1_1RadiusAxisTheme.html" title=" " alt="" coords="899,335,1092,361"/>
+</map>

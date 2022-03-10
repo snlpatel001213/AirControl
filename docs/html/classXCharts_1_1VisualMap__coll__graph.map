@@ -1,0 +1,7 @@
+<map id="XCharts.VisualMap" name="XCharts.VisualMap">
+<area shape="rect" id="node1" title="VisualMap component. Mapping data to visual elements such as colors. 视觉映射组件。用于进行『视觉编码』，也就是将数据映射到视觉元素（..." alt="" coords="5,323,149,349"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="13,247,142,273"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="11,171,143,197"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="17,81,138,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="10,5,145,32"/>
+</map>

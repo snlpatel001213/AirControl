@@ -101,6 +101,12 @@ namespace Communicator
 		public static bool IsGrounded;
 		public static bool IsFlying;
 		public static bool IsTaxiing;
+		public static float PosXAbs;
+		public static float PosYAbs;
+		public static float PosZAbs;
+		public static float PosXRel;
+		public static float PosYRel;
+		public static float PosZRel;
 
 		public static string log = "";
 		
@@ -135,6 +141,12 @@ namespace Communicator
 		public bool IsGrounded;
 		public bool IsFlying;
 		public bool IsTaxiing;
+		public float PosXAbs;
+		public float PosYAbs;
+		public float PosZAbs;
+		public float PosXRel;
+		public float PosYRel;
+		public float PosZRel;
 	}
 	#endregion
 

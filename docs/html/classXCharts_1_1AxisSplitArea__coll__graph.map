@@ -1,0 +1,7 @@
+<map id="XCharts.AxisSplitArea" name="XCharts.AxisSplitArea">
+<area shape="rect" id="node1" title="Split area of axis in grid area, not shown by default. 坐标轴在 grid 区域中的分隔区域，默认不显示。" alt="" coords="5,323,168,349"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="26,247,147,273"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="21,171,153,197"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="26,81,147,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="19,5,154,32"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="XCharts.GaugePointer" name="XCharts.GaugePointer">
+<area shape="rect" id="node1" title="Settings related to gauge pointer. 仪表盘指针相关设置。" alt="" coords="5,155,169,181"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="27,80,148,107"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="21,5,153,32"/>
+</map>

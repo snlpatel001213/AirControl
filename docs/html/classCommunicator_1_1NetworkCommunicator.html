@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">1.0.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -296,13 +296,13 @@ Public Attributes</h2></td></tr>
 
 <p>Depricated Usage : UnityEvent m_MyEvent = new UnityEvent(); public <a class="el" href="classCommunicator_1_1NetworkCommunicator.html" title="Class to manage the TCP network function">NetworkCommunicator</a> ns; m_MyEvent.AddListener(ns.MyAction); m_MyEvent.Invoke(); </p>
 
-<p class="definition">Definition at line <a class="el" href="NetworkCommunicator_8cs_source.html#l00163">163</a> of file <a class="el" href="NetworkCommunicator_8cs_source.html">NetworkCommunicator.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;        {</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            <span class="keywordtype">string</span> outputmsg = outputHandle.<a class="code" href="classCommunicator_1_1OutputHandle.html#a32de13ec8013c9158ecae31b7972d113">ParseOutput</a>();</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            Debug.Log(<span class="stringliteral">&quot;Event Tgriggered&quot;</span>);</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <a class="code" href="classCommunicator_1_1NetworkCommunicator.html#a9fa57f9d151ee441e5b7fdc5f4df53aa">SendMessage</a>(outputmsg);</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            Debug.Log(outputmsg);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="NetworkCommunicator_8cs_source.html#l00165">165</a> of file <a class="el" href="NetworkCommunicator_8cs_source.html">NetworkCommunicator.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="keywordtype">string</span> outputmsg = outputHandle.<a class="code" href="classCommunicator_1_1OutputHandle.html#a32de13ec8013c9158ecae31b7972d113">ParseOutput</a>();</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            Debug.Log(<span class="stringliteral">&quot;Event Tgriggered&quot;</span>);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            <a class="code" href="classCommunicator_1_1NetworkCommunicator.html#a9fa57f9d151ee441e5b7fdc5f4df53aa">SendMessage</a>(outputmsg);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            Debug.Log(outputmsg);</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -336,25 +336,25 @@ Public Attributes</h2></td></tr>
 <p><br  />
  </p>
 
-<p class="definition">Definition at line <a class="el" href="NetworkCommunicator_8cs_source.html#l00174">174</a> of file <a class="el" href="NetworkCommunicator_8cs_source.html">NetworkCommunicator.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                                                                {       </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">if</span> (connectedTcpClient == <span class="keyword">null</span>) {  </div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keywordflow">return</span>;         </div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            }       </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            <span class="keywordflow">try</span> {                   </div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                NetworkStream stream = connectedTcpClient.GetStream();  </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">if</span> (stream.CanWrite) {  </div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                    <span class="comment">// string serverMessage = &quot;This is a message from your server.&quot;;            </span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                    <span class="comment">// Convert string message to byte array.                 </span></div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    <span class="keywordtype">byte</span>[] serverMessageAsByteArray = Encoding.ASCII.GetBytes(outStructSerialized);                 </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    <span class="comment">// Write byte array to socketConnection stream.               </span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    stream.Write(serverMessageAsByteArray, 0, serverMessageAsByteArray.Length);               </div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                }       </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            }       </div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="keywordflow">catch</span> (SocketException socketException) {             </div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                Debug.LogWarning(<span class="stringliteral">&quot;Socket exception: &quot;</span> + socketException);         </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            }   </div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;        } </div>
+<p class="definition">Definition at line <a class="el" href="NetworkCommunicator_8cs_source.html#l00176">176</a> of file <a class="el" href="NetworkCommunicator_8cs_source.html">NetworkCommunicator.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                                                                {       </div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;            <span class="keywordflow">if</span> (connectedTcpClient == <span class="keyword">null</span>) {  </div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">return</span>;         </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }       </div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">try</span> {                   </div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                NetworkStream stream = connectedTcpClient.GetStream();  </div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;                <span class="keywordflow">if</span> (stream.CanWrite) {  </div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                    <span class="comment">// string serverMessage = &quot;This is a message from your server.&quot;;            </span></div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                    <span class="comment">// Convert string message to byte array.                 </span></div>
+<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                    <span class="keywordtype">byte</span>[] serverMessageAsByteArray = Encoding.ASCII.GetBytes(outStructSerialized);                 </div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                    <span class="comment">// Write byte array to socketConnection stream.               </span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                    stream.Write(serverMessageAsByteArray, 0, serverMessageAsByteArray.Length);               </div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                }       </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            }       </div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">catch</span> (SocketException socketException) {             </div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                Debug.LogWarning(<span class="stringliteral">&quot;Socket exception: &quot;</span> + socketException);         </div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            }   </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        } </div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -365,8 +365,8 @@ Public Attributes</h2></td></tr>
 </div><!-- doc-content -->
 <div class="ttc" id="aclassCommunicator_1_1InputHandle_html_adfb21fe5928d971a3f69c8b910b4ac2b"><div class="ttname"><a href="classCommunicator_1_1InputHandle.html#adfb21fe5928d971a3f69c8b910b4ac2b">Communicator.InputHandle.ParseInput</a></div><div class="ttdeci">void ParseInput(JObject inputJson)</div><div class="ttdoc">Parse input coming from network</div><div class="ttdef"><b>Definition:</b> <a href="InputHandle_8cs_source.html#l00026">InputHandle.cs:26</a></div></div>
 <div class="ttc" id="aclassCommunicator_1_1OutputHandle_html_a32de13ec8013c9158ecae31b7972d113"><div class="ttname"><a href="classCommunicator_1_1OutputHandle.html#a32de13ec8013c9158ecae31b7972d113">Communicator.OutputHandle.ParseOutput</a></div><div class="ttdeci">string ParseOutput()</div><div class="ttdoc">Prepare output object and return json string to be dispatched</div><div class="ttdef"><b>Definition:</b> <a href="OutputHandle_8cs_source.html#l00024">OutputHandle.cs:24</a></div></div>
-<div class="ttc" id="aclassCommunicator_1_1NetworkCommunicator_html_a9fa57f9d151ee441e5b7fdc5f4df53aa"><div class="ttname"><a href="classCommunicator_1_1NetworkCommunicator.html#a9fa57f9d151ee441e5b7fdc5f4df53aa">Communicator.NetworkCommunicator.SendMessage</a></div><div class="ttdeci">new void SendMessage(String outStructSerialized)</div><div class="ttdoc">Send message to client using socket connection.</div><div class="ttdef"><b>Definition:</b> <a href="NetworkCommunicator_8cs_source.html#l00174">NetworkCommunicator.cs:174</a></div></div>
-<div class="ttc" id="aclassCommunicator_1_1OutputHandle_html_ae01d18027a01710a34d822b191962177"><div class="ttname"><a href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">Communicator.OutputHandle.LogOutput</a></div><div class="ttdeci">string LogOutput()</div><div class="ttdoc">Just Log output if the entire output is not required</div><div class="ttdef"><b>Definition:</b> <a href="OutputHandle_8cs_source.html#l00066">OutputHandle.cs:66</a></div></div>
+<div class="ttc" id="aclassCommunicator_1_1NetworkCommunicator_html_a9fa57f9d151ee441e5b7fdc5f4df53aa"><div class="ttname"><a href="classCommunicator_1_1NetworkCommunicator.html#a9fa57f9d151ee441e5b7fdc5f4df53aa">Communicator.NetworkCommunicator.SendMessage</a></div><div class="ttdeci">new void SendMessage(String outStructSerialized)</div><div class="ttdoc">Send message to client using socket connection.</div><div class="ttdef"><b>Definition:</b> <a href="NetworkCommunicator_8cs_source.html#l00176">NetworkCommunicator.cs:176</a></div></div>
+<div class="ttc" id="aclassCommunicator_1_1OutputHandle_html_ae01d18027a01710a34d822b191962177"><div class="ttname"><a href="classCommunicator_1_1OutputHandle.html#ae01d18027a01710a34d822b191962177">Communicator.OutputHandle.LogOutput</a></div><div class="ttdeci">string LogOutput()</div><div class="ttdoc">Just Log output if the entire output is not required</div><div class="ttdef"><b>Definition:</b> <a href="OutputHandle_8cs_source.html#l00078">OutputHandle.cs:78</a></div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
