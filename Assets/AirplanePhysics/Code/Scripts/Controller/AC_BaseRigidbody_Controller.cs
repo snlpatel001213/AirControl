@@ -59,7 +59,7 @@ namespace AirControl
         void OnCollisionExit(Collision col)
         {
             //reward function
-            CommonFunctions.MaxR -=50f;
+            CommonFunctions.MaxR -=100f;
             // Collision detection
             DateTime now = DateTime.Now;
             // Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
@@ -73,7 +73,7 @@ namespace AirControl
            if(col.CompareTag("Fence"))
             {
                 //reward function
-                CommonFunctions.MaxR -=50f;
+                CommonFunctions.MaxR -=100f;
                 // Collision detection
                 DateTime now = DateTime.Now;
                 // Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  

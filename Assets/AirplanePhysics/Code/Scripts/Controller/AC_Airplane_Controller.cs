@@ -141,7 +141,7 @@ namespace AirControl
         void Update()
         {
             rewardCalculator();
-            UpdatePosition();
+            broadcastPosition();
         }
 
         /// <summary>
@@ -149,15 +149,15 @@ namespace AirControl
         /// Absolute -  w.r.t. world
         /// Relative - w.r.t initila position
         /// </summary>
-        void UpdatePosition(){
+        void broadcastPosition(){
             Vector3 absolutePosition = rb.position;
             StaticOutputSchema.PosXAbs = absolutePosition.x;
             StaticOutputSchema.PosYAbs = absolutePosition.y;
             StaticOutputSchema.PosZAbs = absolutePosition.z;
             Vector3 relativePosition = rb.position - new Vector3(start_x, start_y, start_z);
             StaticOutputSchema.PosXRel =  relativePosition.x;
-            StaticOutputSchema.PosYRel =  relativePosition.x;
-            StaticOutputSchema.PosZRel =  relativePosition.x;
+            StaticOutputSchema.PosYRel =  relativePosition.y;
+            StaticOutputSchema.PosZRel =  relativePosition.z;
         }
 
         /// <summary>

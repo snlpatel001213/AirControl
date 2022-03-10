@@ -21,6 +21,12 @@
   "IsGrounded": "false",
   "IsFlying": "false",
   "IsTaxiing": "false",
+  "PosXAbs": 0.0,
+  "PosYAbs": 0.0,
+  "PosZAbs": 0.0,
+  "PosXRel": 0.0,
+  "PosYRel": 0.0,
+  "PosZRel": 0.0,
   "MsgType": "Output",
   "Version": "1.0.0"
 }

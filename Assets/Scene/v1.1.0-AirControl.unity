@@ -3419,7 +3419,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 403296593}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c9b3e738b44e0701fb888d375c6a8d00, type: 3}
   m_Name: 
@@ -11453,8 +11453,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 9
-  minutes: 52
+  hour: 17
+  minutes: 5
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
