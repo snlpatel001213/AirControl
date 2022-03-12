@@ -14,7 +14,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/snlpatel001213/AirControl)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
 [![Gitter](https://badges.gitter.im/Aircontrol-chat/community.svg)](https://gitter.im/Aircontrol-chat/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![PyPI version](https://badge.fury.io/py/aircontrol-python.svg)](https://badge.fury.io/py/aircontrol-python)
+[![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/aircontrol-python)
 
 Supported OS
 
@@ -108,14 +108,19 @@ graph TD
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it from source
 
-Python Package Installation
+**Python Package Installation**
 ```bash
   cd Python
   Python3 setup.py install
   OR 
   Use relative imports
 ```
-Snap Release-Alpha
+**Pypi Release-Alpha** `Not Tested` [![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/airctrl) : https://pypi.org/project/aircontrol-python/
+```
+  pip install airctrl
+```
+
+**Snap Release-Alpha**
 
 1. Install : `snap install aircontrol`
 2. Invoke: `aircontrol.AirControl`
