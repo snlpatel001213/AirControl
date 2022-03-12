@@ -46,6 +46,7 @@ namespace Communicator
 		public InputHandle inputHandle;
 		public OutputHandle outputHandle;
 		bool isOutput;
+		string outputmsg;
 		#endregion 	
 		
 		#region  Default Methods
@@ -108,13 +109,13 @@ namespace Communicator
 												// once received the message, send message in return
 												if(isOutput){
 
-													string outputmsg = outputHandle.ParseOutput();
-													SendMessage(outputmsg);
+													outputHandle.ParseOutput(ref  outputmsg);
+ 													SendMessage(ref outputmsg);
 												}
 												else{
 													string logOutput = outputHandle.LogOutput();
-													SendMessage(logOutput);
-												}							
+													SendMessage(ref logOutput);
+												}
 											}
 										}
 										catch(Exception ex)
@@ -123,11 +124,9 @@ namespace Communicator
 											isOutput = true;
 										}
 										ResetThings();
-										
 									}					
 								} 			
 							}
-								
 						} 
 				}
 				else
@@ -149,31 +148,14 @@ namespace Communicator
 			if(StaticOutputSchema.IfCollision)
 			{	
 				StaticOutputSchema.IfCollision = false;
-				// Resetting max reward after each reload
-				CommonFunctions.MaxR=0;
 			}
 			
-		}
-
-		/// <summary>
-		/// Depricated
-		/// Usage : UnityEvent m_MyEvent = new UnityEvent();
-    	/// public NetworkCommunicator ns;
-		/// m_MyEvent.AddListener(ns.MyAction);
-        /// m_MyEvent.Invoke();
-		/// </summary>
-		public void MyAction()
-		{
-			string outputmsg = outputHandle.ParseOutput();
-			Debug.Log("Event Tgriggered");
-			SendMessage(outputmsg);
-			Debug.Log(outputmsg);
 		}
 
 		/// <summary> 	
 		/// Send message to client using socket connection. 	
 		/// </summary> 	
-		public new void SendMessage(String outStructSerialized) { 		
+		public void SendMessage(ref String outStructSerialized) { 		
 			if (connectedTcpClient == null) {  
 				return;         
 			}  		
@@ -192,6 +174,7 @@ namespace Communicator
 			} 	
 		} 
 		#endregion
+	
 	}
 
 }

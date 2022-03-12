@@ -9,6 +9,7 @@ using System.Collections;
 using UnityEngine;
 using Commons;
 using System;
+using Communicator;
 
 namespace XCharts.Examples
 {
@@ -33,7 +34,7 @@ namespace XCharts.Examples
 
         void Update()
         {   
-            Double fc = Math.Round(CommonFunctions.maxR,1);
+            Double fc = Math.Round(StaticOutputSchema.Reward,1);
             chart.AddData(0, fc);
         }
 

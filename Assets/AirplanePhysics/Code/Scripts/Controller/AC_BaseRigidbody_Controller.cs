@@ -47,40 +47,38 @@ namespace AirControl
         void FixedUpdate()
         {
             if(rb){
-                HandlePhysics();
-                // HandleLocation();
-                
+                HandlePhysics();                
             }
             
         }
 
-        
-
-        void OnCollisionExit(Collision col)
+        void OnCollisionStay(Collision col)
         {
+
             //reward function
-            CommonFunctions.MaxR -=100f;
+            StaticOutputSchema.Reward -= 100f;
             // Collision detection
             DateTime now = DateTime.Now;
-            // Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
+            Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
             StaticOutputSchema.IfCollision=true;
             StaticOutputSchema.CollisionObject = col.gameObject.tag;
-            return;
+        
+            
         }
 
-        void OnTriggerExit(Collider col)
+        void OnTriggerStay(Collider col)
         {
-           if(col.CompareTag("Fence"))
-            {
-                //reward function
-                CommonFunctions.MaxR -=100f;
-                // Collision detection
-                DateTime now = DateTime.Now;
-                // Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
-                StaticOutputSchema.IfCollision=true;
-                StaticOutputSchema.CollisionObject = col.gameObject.tag;
-            }
-            return;
+              if(col.CompareTag("Fence"))
+                {
+                    //reward function
+                    StaticOutputSchema.Reward -= 100f;
+                    // Collision detection
+                    DateTime now = DateTime.Now;
+                    Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
+                    StaticOutputSchema.IfCollision=true;
+                    StaticOutputSchema.CollisionObject = col.gameObject.tag;
+                }
+           
         }      
         #endregion
 

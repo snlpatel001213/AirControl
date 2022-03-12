@@ -38,17 +38,6 @@ namespace AirControl
         {
             wheelCol = GetComponent<WheelCollider>();
         }
-
-        // void OnCollisionExit(Collision other) {
-
-        //     string colliderObjectTag = other.gameObject.tag;
-        //     Debug.Log("Wheel collided with : " + colliderObjectTag);
-        //     if ( colliderObjectTag != "Runway") {
-        //         StaticOutputSchema.IfCollision = true;
-        //         StaticOutputSchema.CollisionObject = colliderObjectTag;
-        //     }
-        // }
-
         /// <summary>
         /// This is checking if the wheel is grounded. If it is grounded, 
         /// it will check to see if the collider is not the runway. If it is not the runway, it will set the IfCollision to true and
@@ -56,11 +45,11 @@ namespace AirControl
         /// </summary>
         void Update(){
             WheelHit hit;
-            if (wheelCol.GetGroundHit(out hit)) {
+            if (wheelCol.GetGroundHit(out hit) && (StaticOutputSchema.IfCollision == false)){
                 string surface = hit.collider.tag;
                 float wheelPenalty = 100.0f;
                 if(hit.collider.tag != "Runway"){
-                    CommonFunctions.MaxR -= wheelPenalty;
+                    StaticOutputSchema.Reward -= wheelPenalty;
                     StaticOutputSchema.IfCollision = true;
                     StaticOutputSchema.CollisionObject = surface;
                 }

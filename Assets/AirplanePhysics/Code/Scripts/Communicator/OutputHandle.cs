@@ -21,7 +21,7 @@ namespace Communicator
         /// Prepare output object and return json string to be dispatched
         /// </summary>
         /// <returns>Output json string</returns>
-        public string  ParseOutput()
+        public void  ParseOutput(ref string outputmsg)
         {
             // to avoid null retun from Screencapture
             ref var screencapture = ref StaticOutputSchema.ScreenCapture;
@@ -35,8 +35,8 @@ namespace Communicator
                 lidarPointCloud =  new float[0];
             }
             
-            CommonFunctions.Counter ++; 
-            string output = JsonConvert.SerializeObject(new OutputSchema{
+            
+            outputmsg = JsonConvert.SerializeObject(new OutputSchema{
                 BankAngle = StaticOutputSchema.BankAngle,
                 PitchAngle = StaticOutputSchema.PitchAngle,
                 AGL = StaticOutputSchema.AGL,
@@ -51,8 +51,8 @@ namespace Communicator
                 Latitude = StaticOutputSchema.Latitude,
                 Longitude = StaticOutputSchema.Longitude,
                 IfCollision = StaticOutputSchema.IfCollision,
-                Reward = CommonFunctions.MaxR,
-                Counter = CommonFunctions.Counter,
+                Reward = StaticOutputSchema.Reward,
+                Counter = StaticOutputSchema.Counter,
                 CollisionObject = StaticOutputSchema.CollisionObject,
                 IsFlying =  StaticOutputSchema.IsFlying,
                 IsGrounded =  StaticOutputSchema.IsGrounded,
@@ -65,11 +65,8 @@ namespace Communicator
                 PosZRel =  StaticOutputSchema.PosZRel,
                 
             }, new PrimitiveToStringConverter());
-            if(StaticOutputSchema.IfCollision)
-            {
-                // Debug.Log(output);
-            }
-            return output;
+            Debug.LogFormat(" --> Counter : {0}, reward : {1}", StaticOutputSchema.Counter, StaticOutputSchema.Reward);
+            StaticOutputSchema.Counter ++; 
         }
         /// <summary>
         /// Just Log output if the entire output is not required

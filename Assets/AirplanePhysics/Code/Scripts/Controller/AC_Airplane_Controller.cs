@@ -136,7 +136,7 @@ namespace AirControl
                 }
             } 
             InvokeRepeating("CheckGrounded", 1f, 1f); 
-            InvokeRepeating("DetectAirplaneStuck", 5f, 5f); 
+            // InvokeRepeating("DetectAirplaneStuck", 5f, 5f); 
         }
         void Update()
         {
@@ -175,29 +175,34 @@ namespace AirControl
         //     StaticOutputSchema.Reward = CommonFunctions.MaxR;
         //     // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
         // }
+
+        /// <summary>
+        /// Calculates reward for RL optimization
+        /// </summary>
         void rewardCalculator(){
-            // Wait for airplane to reach 100 mtr
-            // if ((rb.position.y - start_y) >= 100){
-            //     CommonFunctions.MaxR += 100;
-            // }
-            // Debug.Log("Reward : "+CommonFunctions.MaxR );
-            if (isTaxiing){
-                Debug.DrawLine(rb.transform.forward,rb.velocity);
-                float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward);
-                // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
-                float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
-                float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
-                // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
-                CommonFunctions.MaxR = forward_velocity+l2_up-l2_side;
-            }
-            if (isFlying){
-                Debug.DrawLine(rb.transform.forward,rb.velocity);
-                float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward);
-                // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
-                float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
-                float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
-                // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
-                CommonFunctions.MaxR = forward_velocity+currentMSL-l2_side; ;
+
+            /// Don't call once the collision is registered, 
+            /// This will help in 
+            if (StaticOutputSchema.IfCollision == false)
+            {
+                if (isTaxiing){
+                    Debug.DrawLine(rb.transform.forward,rb.velocity);
+                    float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward)*0.1f;
+                    // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
+                    float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
+                    float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                    // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
+                    StaticOutputSchema.Reward = forward_velocity+l2_up-l2_side;
+                }
+                if (isFlying){
+                    Debug.DrawLine(rb.transform.forward,rb.velocity);
+                    float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward);
+                    // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
+                    float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
+                    float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                    // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
+                    StaticOutputSchema.Reward = forward_velocity+currentMSL-l2_side; ;
+                }
             }
             
         
@@ -348,23 +353,23 @@ namespace AirControl
         /// <summary>
         /// Checking if the airplane is stuck in the same position. If it is stuck, it will reload the level.
         /// </summary>
-        private void DetectAirplaneStuck()
-        {
-            currAirplanePosition = rb.transform.localPosition;
-            if(currAirplanePosition == lastAirplanePosition)
-            {
-                StaticOutputSchema.log = "Airplane was stuck";
-                Debug.LogError("Airplane was stuck");
+        // private void DetectAirplaneStuck()
+        // {
+        //     currAirplanePosition = rb.transform.localPosition;
+        //     if(currAirplanePosition == lastAirplanePosition)
+        //     {
+        //         StaticOutputSchema.log = "Airplane was stuck";
+        //         Debug.LogError("Airplane was stuck");
                 
-                // Relaod the level 
-                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
-                StaticOutputSchema.IfCollision = true;
-                StaticOutputSchema.CollisionObject = "Stuck";
-            }
-            lastAirplanePosition = currAirplanePosition;
+        //         // Relaod the level 
+        //         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        //         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
+        //         StaticOutputSchema.IfCollision = true;
+        //         StaticOutputSchema.CollisionObject = "Stuck";
+        //     }
+        //     lastAirplanePosition = currAirplanePosition;
             
-        }
+        // }
 
       
         #endregion
