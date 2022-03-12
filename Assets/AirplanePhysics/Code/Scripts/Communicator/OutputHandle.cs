@@ -65,7 +65,6 @@ namespace Communicator
                 PosZRel =  StaticOutputSchema.PosZRel,
                 
             }, new PrimitiveToStringConverter());
-            Debug.LogFormat(" --> Counter : {0}, reward : {1}", StaticOutputSchema.Counter, StaticOutputSchema.Reward);
             StaticOutputSchema.Counter ++; 
         }
         /// <summary>

@@ -54,32 +54,38 @@ namespace AirControl
 
         void OnCollisionStay(Collision col)
         {
-
-            //reward function
-            StaticOutputSchema.Reward -= 100f;
-            // Collision detection
-            DateTime now = DateTime.Now;
-            Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
-            StaticOutputSchema.IfCollision=true;
-            StaticOutputSchema.CollisionObject = col.gameObject.tag;
+            //Allow collision penality once
+            if (StaticOutputSchema.IfCollision == false)
+            {
+                //reward function
+                StaticOutputSchema.Reward -= 100f;
+                // Collision detection
+                DateTime now = DateTime.Now;
+                // Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
+                StaticOutputSchema.IfCollision=true;
+                StaticOutputSchema.CollisionObject = col.gameObject.tag;
+            }
         
             
         }
 
-        void OnTriggerStay(Collider col)
-        {
-              if(col.CompareTag("Fence"))
-                {
-                    //reward function
-                    StaticOutputSchema.Reward -= 100f;
-                    // Collision detection
-                    DateTime now = DateTime.Now;
-                    Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
-                    StaticOutputSchema.IfCollision=true;
-                    StaticOutputSchema.CollisionObject = col.gameObject.tag;
-                }
+        // void OnTriggerStay(Collider col)
+        // {
+        //     if (StaticOutputSchema.IfCollision == false)
+        //     {
+        //       if(col.CompareTag("Fence"))
+        //         {
+        //             //reward function
+        //             StaticOutputSchema.Reward -= 100f;
+        //             // Collision detection
+        //             DateTime now = DateTime.Now;
+        //             Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
+        //             StaticOutputSchema.IfCollision=true;
+        //             StaticOutputSchema.CollisionObject = col.gameObject.tag;
+        //         }
+        //     }
            
-        }      
+        // }      
         #endregion
 
         protected virtual void HandlePhysics(){

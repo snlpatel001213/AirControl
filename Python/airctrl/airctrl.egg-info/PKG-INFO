@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
-Name: aircontrol-python
-Version: 1.0.0
+Name: airctrl
+Version: 1.0.1
 Summary: AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.
 Home-page: https://aircontrol.readthedocs.io
 Author: Sunil Patel

@@ -27,13 +27,17 @@ namespace AirControl
         /// </summary>
         public void RestartLevel() //Restarts the level
         {
+            //resetting rewards before reload
+            StaticOutputSchema.Reward=0;
             SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
             SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
+            //resetting rewards after reload
+            StaticOutputSchema.Reward=0;
         }
 
         /// <summary>
         /// Function to quit  the application from Python API 
-        /// To be added in v0.2.0
+        /// To be added in v2.0.0
         /// </summary>
         void applicationQuit()
         {

@@ -1,0 +1,12 @@
+LICENSE
+README.md
+VERSION
+setup.cfg
+setup.py
+airctrl/airctrl.egg-info/PKG-INFO
+airctrl/airctrl.egg-info/SOURCES.txt
+airctrl/airctrl.egg-info/dependency_links.txt
+airctrl/airctrl.egg-info/entry_points.txt
+airctrl/airctrl.egg-info/requires.txt
+airctrl/airctrl.egg-info/top_level.txt
+airctrl/airctrl.egg-info/zip-safe

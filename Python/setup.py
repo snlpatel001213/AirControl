@@ -20,15 +20,15 @@ with open("README.md", "r") as f:
 # package configuration - for reference see:
 # https://setuptools.readthedocs.io/en/latest/setuptools.html#id9
 setup(
-    name="aircontrol-python",
+    name="airctrl",
     description="AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.",
     long_description=readme,
     long_description_content_type="text/markdown",
     version=open("VERSION", "r").read().strip(),
     author="Sunil Patel",
     author_email="snlpatel001213@hotmail.com",
-    packages=find_packages('AirControl'),
-    package_dir={'': 'AirControl'},
+    packages=find_packages('airctrl'),
+    package_dir={'': 'airctrl'},
     url="https://aircontrol.readthedocs.io",
     python_requires=">=3.7.*",
     install_requires=["numpy", "requests"],

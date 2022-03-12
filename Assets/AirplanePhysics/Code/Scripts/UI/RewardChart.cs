@@ -29,6 +29,9 @@ namespace XCharts.Examples
             chart.yAxis0.minMaxType = Axis.AxisMinMaxType.Custom;
             chart.RemoveData();
             serie = chart.AddSerie(SerieType.Line, "Line");
+            //resetting the reward in the chart
+            chart.AddData(0, 0.0f);
+            StaticOutputSchema.Reward = 0;
 
         }
 

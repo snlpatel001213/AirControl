@@ -148,6 +148,7 @@ namespace Communicator
 			if(StaticOutputSchema.IfCollision)
 			{	
 				StaticOutputSchema.IfCollision = false;
+				
 			}
 			
 		}
