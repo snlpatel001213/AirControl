@@ -108,9 +108,12 @@ graph TD
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it from source
 
-Pypi Release-Alpha [![PyPI version](https://badge.fury.io/py/aircontrol-python.svg)](https://badge.fury.io/py/aircontrol-python) : https://pypi.org/project/aircontrol-python/
+Python Package Installation
 ```bash
-pip install aircontrol-python==<LatestVersion>
+  cd Python
+  Python3 setup.py install
+  OR 
+  Use relative imports
 ```
 Snap Release-Alpha
 
