@@ -121,7 +121,7 @@ graph TD
   pip install airctrl
 ```
 
-**Snap Release-Alpha** [![AirControl on the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/aircontrol)
+**Snap Release-Alpha** [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/aircontrol)
 
 1. Install : `snap install aircontrol`
 2. Invoke: `aircontrol.AirControl`
@@ -163,5 +163,3 @@ We love your input! We want to make contributing to AirControl as easy and trans
 <a href = "https://github.com/snlpatel001213/AirControl/graphs/contributors">
 <img src = "https://contrib.rocks/image?repo=snlpatel001213/AirControl"/>
 </a>
-
-
