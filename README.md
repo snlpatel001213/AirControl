@@ -15,6 +15,7 @@
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
 [![Gitter](https://badges.gitter.im/Aircontrol-chat/community.svg)](https://gitter.im/Aircontrol-chat/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
 [![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/aircontrol-python)
+[![aircontrol](https://snapcraft.io/aircontrol/badge.svg)](https://snapcraft.io/aircontrol)
 
 Supported OS
 
@@ -120,7 +121,7 @@ graph TD
   pip install airctrl
 ```
 
-**Snap Release-Alpha**
+**Snap Release-Alpha** [![AirControl on the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-white.svg)](https://snapcraft.io/aircontrol)
 
 1. Install : `snap install aircontrol`
 2. Invoke: `aircontrol.AirControl`
