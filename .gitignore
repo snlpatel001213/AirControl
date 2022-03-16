@@ -79,7 +79,8 @@ crashlytics-build.properties
 */*/.ipynb_checkpoints
 
 # unity meta files
-.meta
+*.meta
+
 
 # Experiments
 ReinforcementLearningExample/

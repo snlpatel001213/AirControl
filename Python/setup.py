@@ -1,57 +1,87 @@
-#!/usr/bin/env python3
+"""A setuptools based setup module.
 
-#####################################\
-# cd Python
-# python setup.py sdist
-# twine upload dist/* --verbose
-# pip install twine
-######################################
+See:
+https://packaging.python.org/guides/distributing-packages-using-setuptools/
+https://github.com/pypa/sampleproject
+"""
 
-import os
+import pathlib
+import re
 
-from setuptools import find_packages, setup
+# Always prefer setuptools over distutils
+from setuptools import setup, find_packages
+
+here = pathlib.Path(__file__).parent.resolve()  # current path
+long_description = (here / 'README.md').read_text(encoding='utf-8')  # Get the long description from the README file
+with open(here / 'requirements.txt') as fp:  # read requirements.txt
+    install_reqs = [r.rstrip() for r in fp.readlines() if not r.startswith('#')]
 
 
-# load the README file and use it as the long_description for PyPI
-with open("README.md", "r") as f:
-    readme = f.read()
+def get_version():
+    file = here / 'src/airctrl/__init__.py'
+    return re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]', file.read_text(), re.M).group(1)
 
 
-# package configuration - for reference see:
-# https://setuptools.readthedocs.io/en/latest/setuptools.html#id9
 setup(
-    name="airctrl",
-    description="AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.",
-    long_description=readme,
-    long_description_content_type="text/markdown",
-    version=open("VERSION", "r").read().strip(),
-    author="Sunil Patel",
-    author_email="snlpatel001213@hotmail.com",
-    packages=find_packages('airctrl'),
-    package_dir={'': 'airctrl'},
-    url="https://aircontrol.readthedocs.io",
-    python_requires=">=3.7.*",
-    install_requires=["numpy", "requests"],
-    license="MIT",
-    include_package_data=True,
-    zip_safe=True,
-    entry_points={"console_scripts": ["py-package-template=py_pkg.entry_points:main"]},
-    classifiers=[
-        "License :: OSI Approved :: MIT License",
-        "Programming Language :: Python :: 3",
-        "Programming Language :: Python :: 3.6",
-        "Programming Language :: Python :: 3.5",
-        "Programming Language :: Python :: 3.4",
-        "Environment :: Console",
-        "Intended Audience :: Science/Research",
-        "License :: OSI Approved :: GNU General Public License v3 or later (GPLv3+)",
-        "Operating System :: OS Independent",
-        "Topic :: Software Development :: Libraries",
-        "Topic :: Software Development :: Libraries :: Python Modules",
-        "Topic :: Scientific/Engineering :: Artificial Intelligence"
-    ],
-    keywords="Airplane Simulation, Unity, C#, Python",
-    data_files=[
-        ('version',['VERSION']),
-    ]
+    name='airctrl',  # Required https://packaging.python.org/specifications/core-metadata/#name
+    version=get_version(),  # Required https://packaging.python.org/en/latest/single_source_version.html
+    description='AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research.',  # Optional
+    long_description=long_description,  # Optional
+    long_description_content_type='text/markdown',  # Optional
+    url='https://aircontrol.readthedocs.io',  # Optional, project's main homepage
+    author='Sunil Patel',  # Optional, name or the name of the organization which owns the project
+    author_email='snlpatel001213@hotmail.com',  # Optional
+    classifiers=['Development Status :: 5 - Production/Stable',  # 3 - Alpha, 4 - Beta, 5 - Production/Stable
+                 'Intended Audience :: Developers',  # Indicate who your project is intended for
+                 'Operating System :: OS Independent',  # Operation system
+                 'Topic :: Education',  # Topics
+                 'Topic :: Scientific/Engineering',
+                 'Topic :: Scientific/Engineering :: Artificial Intelligence',
+                 'Topic :: Scientific/Engineering :: Image Recognition',
+                 'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',  # Pick your license as you wish
+                 'Programming Language :: Python :: 3.7',  # Python version support
+                 'Programming Language :: Python :: 3.8',
+                 'Programming Language :: Python :: 3.9',
+                 ],  # Classifiers help users find your project by categorizing it https://pypi.org/classifiers/
+    keywords='Airplane Simulation, Unity, C#, Python',  # Optional
+    package_dir={'': 'src'},  # Optional, use if source code is in a subdirectory under the project root, i.e. `src/`
+    packages=find_packages(where='src'),  # Required
+    python_requires='>=3.7, <4',
+
+    # For an analysis of "install_requires" vs pip's requirements files see:
+    # https://packaging.python.org/en/latest/requirements.html
+    install_requires=install_reqs,  # Optional, additional pip packeges to be installed by this pacakge installation
+
+    # List additional groups of dependencies here (e.g. development
+    # dependencies). Users will be able to install these using the "extras"
+    # syntax, for example: $ pip install sampleproject[dev]
+    # Similar to `install_requires` above, these must be valid existing projects
+    extras_require={'dev': ['check-manifest'],
+                    'test': ['coverage'],
+                    },  # Optional
+
+    package_data={'airctrl': ['package_data.dat'],
+                  },  # Optional, Data files included in your packages that need to be installed
+
+    # Although 'package_data' is the preferred approach, in some case you may
+    # need to place data files outside of your packages. See:
+    # http://docs.python.org/distutils/setupscript.html#installing-additional-files
+    #
+    # In this case, 'data_file' will be installed into '<sys.prefix>/my_data'
+    # data_files=[('my_data', ['data/data_file'])],  # Optional
+
+    # To provide executable scripts, use entry points in preference to the
+    # "scripts" keyword. Entry points provide cross-platform support and allow
+    # `pip` to create the appropriate form of executable for the target
+    # platform.
+    #
+    # For example, the following would provide a command called `airctrl` which
+    # executes the function `main` from this package when invoked:
+    entry_points={'console_scripts': ['airctrl=airctrl.console:main', ],
+                  },  # Optional
+
+    project_urls={'Bug Reports': 'https://github.com/snlpatel001213/AirControl/issues',
+                  'Release Plan': 'https://github.com/snlpatel001213/AirControl/projects/1',
+                  'Source': 'https://github.com/snlpatel001213/AirControl/',
+                  },  # Optional https://packaging.python.org/specifications/core-metadata/#project-url-multiple-use
 )
