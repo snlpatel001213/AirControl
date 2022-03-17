@@ -1,8 +1,6 @@
-"""A setuptools based setup module.
-
-See:
-https://packaging.python.org/guides/distributing-packages-using-setuptools/
-https://github.com/pypa/sampleproject
+"""
+A setuptools based setup module.
+Adapted from : https://github.com/ultralytics/pip
 """
 
 import pathlib
@@ -80,8 +78,8 @@ setup(
     entry_points={'console_scripts': ['airctrl=airctrl.console:main', ],
                   },  # Optional
 
-    project_urls={'Bug Reports': 'https://github.com/snlpatel001213/AirControl/issues',
+    project_urls={'Source': 'https://github.com/snlpatel001213/AirControl/',
+                  'Bug Reports': 'https://github.com/snlpatel001213/AirControl/issues',
                   'Release Plan': 'https://github.com/snlpatel001213/AirControl/projects/1',
-                  'Source': 'https://github.com/snlpatel001213/AirControl/',
                   },  # Optional https://packaging.python.org/specifications/core-metadata/#project-url-multiple-use
 )
