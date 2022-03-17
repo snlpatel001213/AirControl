@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=AirControl
+Comment=AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research. 
+Exec=mygame
+Icon=${SNAP}/local/meta/gui/AirControl.png
+Type=Application
+Terminal=false
+Categories=Game;

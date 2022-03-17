@@ -10,7 +10,8 @@ Please note we have a code of conduct,please follow it in all your interactions 
 1. If you have changed the version of the project update the same at the following locations
    1. file `VERSION` at the root
    2. file `Assets/AirplanePhysics/Code/commons/CommonConfigs.cs` in the `GET_VERSION()` function
-   3. Change `PROJECT_NUMBER` in docs/doxygen.conf file, 
+   3. Change `PROJECT_NUMBER` in `docs/doxygen.conf file`
+   4. Chnage `version` in `snap/snap/snapcraft.yaml`
 2. Make sure if any third-party plugins are used then it also supports open usage and compile for following Platform.
     1. Windows
     2. Mac 
