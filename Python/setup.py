@@ -54,9 +54,9 @@ setup(
     # dependencies). Users will be able to install these using the "extras"
     # syntax, for example: $ pip install sampleproject[dev]
     # Similar to `install_requires` above, these must be valid existing projects
-    extras_require={'dev': ['check-manifest'],
-                    'test': ['coverage'],
-                    },  # Optional
+    # extras_require={'dev': ['check-manifest'],
+    #                 'test': ['coverage'],
+    #                 },  # Optional
 
     package_data={'airctrl': ['package_data.dat'],
                   },  # Optional, Data files included in your packages that need to be installed
