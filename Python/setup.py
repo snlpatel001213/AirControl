@@ -16,8 +16,9 @@ with open(here / 'requirements.txt') as fp:  # read requirements.txt
 
 
 def get_version():
-    file = here / 'src/airctrl/__init__.py'
-    return re.search(r'^__version__ = [\'"]([^\'"]*)[\'"]', file.read_text(), re.M).group(1)
+    version = open("VERSION","r").readline().strip()
+    print("################Version {0}#################".format(version))
+    return version    
 
 
 setup(

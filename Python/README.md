@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![GitHub release (latest by date)](https://img.shields.io/badge/Release-0.1.5-orange)
+![GitHub release (latest by date)](https://img.shields.io/badge/Release-1.0.0-orange)
 ![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl)
 ![GitHub repo size](https://badgen.net/github/license/micromatch/micromatch)
 [![Documentation Status](https://readthedocs.org/projects/aircontrol/badge/?version=master)](https://aircontrol.readthedocs.io/en/master/?badge=master)
@@ -14,7 +14,8 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/snlpatel001213/AirControl)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
 [![Gitter](https://badges.gitter.im/Aircontrol-chat/community.svg)](https://gitter.im/Aircontrol-chat/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![PyPI version](https://badge.fury.io/py/aircontrol-python.svg)](https://badge.fury.io/py/aircontrol-python)
+[![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/aircontrol-python)
+[![aircontrol](https://snapcraft.io/aircontrol/badge.svg)](https://snapcraft.io/aircontrol)
 
 Supported OS
 
@@ -108,14 +109,24 @@ graph TD
    1. Download Binaries - https://github.com/snlpatel001213/AirControl/releases
    2. Build it from source
 
-Pypi Release-Alpha [![PyPI version](https://badge.fury.io/py/aircontrol-python.svg)](https://badge.fury.io/py/aircontrol-python) : https://pypi.org/project/aircontrol-python/
+**Python Package Installation**
 ```bash
-pip install aircontrol-python==<LatestVersion>
+  cd Python
+  Python3 setup.py install
+  OR 
+  Use relative imports
 ```
-Snap Release-Alpha (May face issue with capturing controls)
-```bash
-snap install aircontrol
+**Pypi Release-Alpha** `Not Tested` [![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/airctrl) : https://pypi.org/project/aircontrol-python/
 ```
+  pip install airctrl
+```
+
+**Snap Release-Alpha** [![Get it from the Snap Store](https://snapcraft.io/static/images/badges/en/snap-store-black.svg)](https://snapcraft.io/aircontrol)
+
+1. Install : `snap install aircontrol`
+2. Invoke: `aircontrol.AirControl`
+3. Fly manually or use python API.
+
 
 ## Documentation
 
@@ -152,5 +163,3 @@ We love your input! We want to make contributing to AirControl as easy and trans
 <a href = "https://github.com/snlpatel001213/AirControl/graphs/contributors">
 <img src = "https://contrib.rocks/image?repo=snlpatel001213/AirControl"/>
 </a>
-
-
