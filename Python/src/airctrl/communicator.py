@@ -53,9 +53,10 @@ class Communicator:
             sock (socket): Socket connection aquired from `get_socket` method
         """
         data = json.dumps(data_dict, cls=NpEncoder)
+        # print("sent : ", data)
         self.sock.sendall(data.encode("utf-8"))
 
-    def receive_data(self, timeout=0.1):
+    def receive_data(self, timeout=0.5):
         """
         Receive data partwise
     
@@ -88,8 +89,10 @@ class Communicator:
                 else:
                     #sleep for sometime to indicate a gap
                     time.sleep(0.1)
-            except:
+            except Exception as e: 
+                # print("Exception : ", e)
                 pass
         
         #join all parts to make final string
+        # print("recived : ", total_data)
         return eval(total_data)

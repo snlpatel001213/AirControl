@@ -1,11 +1,12 @@
 import subprocess
 import glob
 import os
+import time
 from sys import platform
 
 
 class Launch:
-    def launch_executable(self, file_name: str) -> subprocess.Popen:
+    def launch_executable(self, file_name: str, sleeptime=5) -> subprocess.Popen:
         """
         Launches a Unity executable and returns the process handle for it.
         :param file_name: the name of the executable
@@ -22,7 +23,7 @@ class Launch:
             # std_out_option = DEVNULL means the outputs will not be displayed on terminal.
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
             try:
-                return subprocess.Popen(
+                process  = subprocess.Popen(
                     subprocess_args,
                     # start_new_session=True means that signals to the parent python process
                     # (e.g. SIGINT from keyboard interrupt) will not be sent to the new process on POSIX platforms.
@@ -31,6 +32,9 @@ class Launch:
                     # Note that on Windows, the CTRL_C signal will still be sent.
                     start_new_session=True,
                 )
+                print("Sleeping for {0} seconds to allow environment load".format(sleeptime))
+                time.sleep(sleeptime)
+                return process
             except PermissionError as perm:
                 # This is likely due to missing read or execute permissions on file.
                 raise (

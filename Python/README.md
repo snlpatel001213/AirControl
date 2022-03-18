@@ -130,7 +130,7 @@ graph TD
 
 ## Documentation
 
-1. AirControl Documentation : https://aircontrol.readthedocs.io/
+1. AirControl Documentation: https://aircontrol.readthedocs.io/
 2. C#/Python API Documentation - https://snlpatel001213.github.io/AirControl/html/index.html
 
 ## Client examples
