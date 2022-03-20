@@ -10231,6 +10231,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1604601162}
+  - component: {fileID: 1604601161}
   m_Layer: 0
   m_Name: _xcharts_
   m_TagString: Untagged
@@ -10238,6 +10239,25 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1604601161
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1604601160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 953f0e846565c4086a4bcdc6bc14cf85, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NowVersion: 2.6.0-20211230
+  m_NewVersion: 
+  m_ChartList: []
+  m_ThemeNames:
+  - Default
+  - Light
+  - Dark
 --- !u!4 &1604601162
 Transform:
   m_ObjectHideFlags: 0
@@ -11518,8 +11538,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 19
-  minutes: 1
+  hour: 21
+  minutes: 28
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731

@@ -16,14 +16,14 @@ import random
 # | Flaps            | int   | 0 : None, 1 : 15 Degree, 2 : 30 Degree  |
 class samples:
     def get_random_pitch(self):
-        return random.uniform(-1,1)
+        return random.random()*(random.choices([-1,1])[0])
     def get_random_yaw(self):
-        return random.uniform(-1,1)
+        return random.random()*(random.choices([-1,1])[0])
     def get_random_roll(self):
-        return random.uniform(-1,1)
+        return random.random()*(random.choices([-1,1])[0])
     def get_random_stickythrottle(self):
-        return random.uniform(0,1)
+        return random.random()
     def get_random_pitchangle(self):
-        return random.uniform(0,1)
+        return random.random()
     def get_random_bankangle(self):
-        return random.uniform(0,1)
+        return random.random()
