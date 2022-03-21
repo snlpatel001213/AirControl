@@ -77,6 +77,12 @@ namespace AirControl
         // private int lastCommCounter=0;
         // private int currCommCounter=0;
 
+        private float startPos_x; 
+        private float startPos_y;
+        private float startPos_z;
+        private float startRot_x; 
+        private float startRot_y;
+        private float startRot_z;
         
         #endregion
 
@@ -92,9 +98,7 @@ namespace AirControl
         #region Constants
         const float poundToKilos = 0.453592f;
         const float metersToFeets = 3.28084f;
-        private float start_x; 
-        private float start_y;
-        private float start_z;
+        
         #endregion
 
         #region Builtin Methods
@@ -107,10 +111,15 @@ namespace AirControl
 
             //calculate final mass in kilos
             float finalMass =  airplaneWeight * poundToKilos;
-            start_x = rb.position.x;
-            start_y = rb.position.y; 
-            start_z = rb.position.z;
-            Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",start_x, start_y, start_z );
+            startPos_x = rb.position.x;
+            startPos_y = rb.position.y; 
+            startPos_z = rb.position.z;
+            startRot_x = rb.rotation.eulerAngles.x;
+            startRot_y = rb.rotation.eulerAngles.y; 
+            startRot_z = rb.rotation.eulerAngles.z;
+            Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",startPos_x, startPos_y, startPos_z );
+            Debug.LogFormat("Starting Rotation  x : {0} y: {1} z: {2} ",startRot_x, startRot_y, startRot_z );
+
             
             // if rigid body added then add center of mass
             if (rb){
@@ -142,6 +151,7 @@ namespace AirControl
         {
             rewardCalculator();
             broadcastPosition();
+            broadcastRotation();
         }
 
         /// <summary>
@@ -154,10 +164,23 @@ namespace AirControl
             StaticOutputSchema.PosXAbs = absolutePosition.x;
             StaticOutputSchema.PosYAbs = absolutePosition.y;
             StaticOutputSchema.PosZAbs = absolutePosition.z;
-            Vector3 relativePosition = rb.position - new Vector3(start_x, start_y, start_z);
+            Vector3 relativePosition = rb.position - new Vector3(startPos_x, startPos_y, startPos_z);
             StaticOutputSchema.PosXRel =  relativePosition.x;
             StaticOutputSchema.PosYRel =  relativePosition.y;
             StaticOutputSchema.PosZRel =  relativePosition.z;
+        }
+
+        void broadcastRotation(){
+            Vector3 absoluteRotation = rb.rotation.eulerAngles;
+            StaticOutputSchema.RotXAbs = absoluteRotation.x;
+            StaticOutputSchema.RotYAbs = absoluteRotation.y;
+            StaticOutputSchema.RotZAbs = absoluteRotation.z;
+            Vector3 relativeRotation = rb.rotation.eulerAngles - new Vector3(startRot_x, startRot_y, startRot_z);
+            StaticOutputSchema.RotXRel =  relativeRotation.x;
+            StaticOutputSchema.RotYRel =  relativeRotation.y;
+            StaticOutputSchema.RotZRel =  relativeRotation.z;
+            // Debug.LogFormat("Abs Rotation  x : {0} y: {1} z: {2} ",absoluteRotation.x, absoluteRotation.y, absoluteRotation.z );
+            // Debug.LogFormat("Relative Rotation  x : {0} y: {1} z: {2} ", relativeRotation.x, relativeRotation.y, relativeRotation.z);
         }
 
         /// <summary>

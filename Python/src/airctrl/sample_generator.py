@@ -18,9 +18,9 @@ class samples:
     def get_random_pitch(self):
         return random.random()*(random.choices([-1,1])[0])
     def get_random_yaw(self):
-        return random.random()*(random.choices([-1,1])[0])
+        return random.normalvariate(0,0.25)
     def get_random_roll(self):
-        return random.random()*(random.choices([-1,1])[0])
+        return random.normalvariate(0,0.25)
     def get_random_stickythrottle(self):
         return random.random()
     def get_random_pitchangle(self):

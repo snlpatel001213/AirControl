@@ -27,6 +27,12 @@
   "PosXRel": 0.0,
   "PosYRel": 0.0,
   "PosZRel": 0.0,
+  "RotXAbs": 0.0,
+  "RotYAbs": 0.0,
+  "RotZAbs": 0.0,
+  "RotXRel": 0.0,
+  "RotYRel": 0.0,
+  "RotZRel": 0.0,
   "MsgType": "Output",
   "Version": "1.0.0"
 }

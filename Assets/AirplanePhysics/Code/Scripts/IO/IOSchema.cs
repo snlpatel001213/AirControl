@@ -107,6 +107,12 @@ namespace Communicator
 		public static float PosXRel;
 		public static float PosYRel;
 		public static float PosZRel;
+		public static float RotXAbs;
+		public static float RotYAbs;
+		public static float RotZAbs;
+		public static float RotXRel;
+		public static float RotYRel;
+		public static float RotZRel;
 
 		public static string log = "";
 		
@@ -147,6 +153,12 @@ namespace Communicator
 		public float PosXRel;
 		public float PosYRel;
 		public float PosZRel;
+		public float RotXAbs;
+		public float RotYAbs;
+		public float RotZAbs;
+		public float RotXRel;
+		public float RotYRel;
+		public float RotZRel;
 	}
 	#endregion
 

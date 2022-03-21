@@ -63,6 +63,12 @@ namespace Communicator
                 PosXRel =  StaticOutputSchema.PosXRel,
                 PosYRel =  StaticOutputSchema.PosYRel,
                 PosZRel =  StaticOutputSchema.PosZRel,
+                RotXAbs = StaticOutputSchema.RotXAbs,
+                RotYAbs = StaticOutputSchema.RotYAbs,
+                RotZAbs = StaticOutputSchema.RotZAbs,
+                RotXRel = StaticOutputSchema.RotXRel,
+                RotYRel = StaticOutputSchema.RotYRel,
+                RotZRel = StaticOutputSchema.RotZRel,
                 
             }, new PrimitiveToStringConverter());
             StaticOutputSchema.Counter ++; 

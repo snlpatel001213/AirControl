@@ -11538,8 +11538,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 21
-  minutes: 28
+  hour: 10
+  minutes: 55
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
@@ -13452,6 +13452,10 @@ PrefabInstance:
       propertyPath: m_TagString
       value: Airplane
       objectReference: {fileID: 0}
+    - target: {fileID: 605216745124453596, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: Mute
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 605216745145840241, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: m_TagString
       value: Airplane
@@ -13483,6 +13487,10 @@ PrefabInstance:
     - target: {fileID: 605216745851624489, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: m_TagString
       value: Airplane
+      objectReference: {fileID: 0}
+    - target: {fileID: 605216745905441723, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: Mute
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 937161384672560947, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: m_TagString

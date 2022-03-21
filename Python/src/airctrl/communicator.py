@@ -61,7 +61,7 @@ class Communicator:
         Receive data partwise
     
         :param timeout: The timeout parameter specifies the time-out as a floating point number in
-        seconds
+        seconds, this help is getting time out at first call to server and subsequent calls.
         :return: A list of dictionaries. Each dictionary is a question.
         
         """
