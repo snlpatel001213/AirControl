@@ -3340,7 +3340,6 @@ GameObject:
   - component: {fileID: 403296594}
   - component: {fileID: 403296596}
   - component: {fileID: 403296595}
-  - component: {fileID: 403296597}
   m_Layer: 0
   m_Name: CockpitCamera
   m_TagString: Airplane
@@ -3413,20 +3412,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!114 &403296597
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 403296593}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c9b3e738b44e0701fb888d375c6a8d00, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  numberOfIncrements: 360
-  maxRange: 100000
 --- !u!1 &406965419
 GameObject:
   m_ObjectHideFlags: 1
@@ -10661,6 +10646,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4aceb154824b2f88596fc8cfcb350fac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1703146571
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1703146572}
+  - component: {fileID: 1703146573}
+  m_Layer: 0
+  m_Name: Lidar
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1703146572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703146571}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.616, z: 0.598}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6182990085044994289}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1703146573
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703146571}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b3e738b44e0701fb888d375c6a8d00, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  numberOfIncrements: 360
+  maxRange: 500
 --- !u!1 &1710438470
 GameObject:
   m_ObjectHideFlags: 0
@@ -11538,8 +11568,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 10
-  minutes: 55
+  hour: 12
+  minutes: 1
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
@@ -13491,6 +13521,18 @@ PrefabInstance:
     - target: {fileID: 605216745905441723, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: Mute
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 606089198616957824, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 606089198616957824, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 606089198616957824, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 937161384672560947, guid: 11d7e6246fc77b908b73a99a972c70e9, type: 3}
       propertyPath: m_TagString
