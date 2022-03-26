@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['oncamerachange_1304',['OnCameraChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a9f7ee324a4310869ca481ad868516ee9',1,'AirControl::AC_Airplane_CameraController']]],
-  ['onchanged_1305',['OnChanged',['../classXCharts_1_1Legend.html#ae7827759da542cf78edce21c05b44b77',1,'XCharts.Legend.OnChanged()'],['../classXCharts_1_1Location.html#a93d308700a49e528405474d33238c83b',1,'XCharts.Location.OnChanged()']]],
-  ['onscenechange_1306',['OnSceneChange',['../classAirControl_1_1AC__Airplane__CameraController.html#a5529c3888f1d6ce6a2ae12ea8f1b435b',1,'AirControl::AC_Airplane_CameraController']]]
+  ['parseinput_1320',['ParseInput',['../classCommunicator_1_1InputHandle.html#adfb21fe5928d971a3f69c8b910b4ac2b',1,'Communicator::InputHandle']]],
+  ['parsejsondata_1321',['ParseJsonData',['../classXCharts_1_1Serie.html#a41268319a48039bd50aa59e1057e8e7b',1,'XCharts::Serie']]],
+  ['parseoutput_1322',['ParseOutput',['../classCommunicator_1_1OutputHandle.html#a982cfccc5c860cbe33b5ca36837bca29',1,'Communicator::OutputHandle']]]
 ];

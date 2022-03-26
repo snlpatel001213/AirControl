@@ -5,66 +5,63 @@
       <Name>Root</Name>
       <Path>index.html</Path>
       <Subnodes>
-        <Subnodes>
-         <Node>
-          <Name>System Requirement</Name>
-          <Path>index.html</Path>
-          <Anchor>autotoc_md0</Anchor>
-         </Node>
-         <Node>
-          <Name>Getting started</Name>
-          <Path>index.html</Path>
-          <Anchor>autotoc_md1</Anchor>
-         </Node>
-        </Subnodes>
        <Node>
-        <Name>XCharts API</Name>
-        <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
+        <Name>README</Name>
+        <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
         <Subnodes>
          <Node>
-          <Name>&lt;tt&gt;BaseChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md3</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;CoordinateChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md4</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;LineChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md5</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;BarChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md6</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;PieChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md7</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;RadarChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md8</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;ScatterChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md9</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;HeatmapChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md10</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;RingChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
-          <Anchor>autotoc_md11</Anchor>
+          <Name>Welcome to AirControl</Name>
+          <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+          <Anchor>autotoc_md0</Anchor>
+          <Subnodes>
+           <Node>
+            <Name>System Requirement</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md1</Anchor>
+           </Node>
+           <Node>
+            <Name>Control Inputs</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md2</Anchor>
+           </Node>
+           <Node>
+            <Name>Getting started</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md3</Anchor>
+           </Node>
+           <Node>
+            <Name>Documentation</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md4</Anchor>
+           </Node>
+           <Node>
+            <Name>Client examples</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md5</Anchor>
+           </Node>
+           <Node>
+            <Name>Future Release</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md6</Anchor>
+           </Node>
+           <Node>
+            <Name>Tools and Technology</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md7</Anchor>
+           </Node>
+           <Node>
+            <Name>Contribute</Name>
+            <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+            <Anchor>autotoc_md8</Anchor>
+            <Subnodes>
+             <Node>
+              <Name>Current Contributors</Name>
+              <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+              <Anchor>autotoc_md9</Anchor>
+             </Node>
+            </Subnodes>
+           </Node>
+          </Subnodes>
          </Node>
         </Subnodes>
        </Node>
@@ -75,252 +72,252 @@
          <Node>
           <Name>&lt;tt&gt;Theme&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md13</Anchor>
+          <Anchor>autotoc_md11</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Title&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md14</Anchor>
+          <Anchor>autotoc_md12</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;TitleStyle&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md15</Anchor>
+          <Anchor>autotoc_md13</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Legend&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md16</Anchor>
+          <Anchor>autotoc_md14</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Polar&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md17</Anchor>
+          <Anchor>autotoc_md15</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Radar&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md18</Anchor>
+          <Anchor>autotoc_md16</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Radar.Indicator&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md19</Anchor>
+          <Anchor>autotoc_md17</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;TextLimit&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md20</Anchor>
+          <Anchor>autotoc_md18</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;TextStyle&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md21</Anchor>
+          <Anchor>autotoc_md19</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Tooltip&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md22</Anchor>
+          <Anchor>autotoc_md20</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Vessel&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md23</Anchor>
+          <Anchor>autotoc_md21</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;DataZoom&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md24</Anchor>
+          <Anchor>autotoc_md22</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;VisualMap&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md25</Anchor>
+          <Anchor>autotoc_md23</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Grid&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md26</Anchor>
+          <Anchor>autotoc_md24</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;GaugeAxis&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md27</Anchor>
+          <Anchor>autotoc_md25</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;GaugePointer&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md28</Anchor>
+          <Anchor>autotoc_md26</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;XAxis&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md29</Anchor>
+          <Anchor>autotoc_md27</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Background&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md30</Anchor>
+          <Anchor>autotoc_md28</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;YAxis&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md31</Anchor>
+          <Anchor>autotoc_md29</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Series&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md32</Anchor>
+          <Anchor>autotoc_md30</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Line&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md33</Anchor>
+          <Anchor>autotoc_md31</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Bar&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md34</Anchor>
+          <Anchor>autotoc_md32</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Pie&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md35</Anchor>
+          <Anchor>autotoc_md33</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Radar&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md36</Anchor>
+          <Anchor>autotoc_md34</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Scatter&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md37</Anchor>
+          <Anchor>autotoc_md35</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Heatmap&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md38</Anchor>
+          <Anchor>autotoc_md36</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Gauge&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md39</Anchor>
+          <Anchor>autotoc_md37</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Ring&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md40</Anchor>
+          <Anchor>autotoc_md38</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Liquid&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md41</Anchor>
+          <Anchor>autotoc_md39</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Serie-Candlestick&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md42</Anchor>
+          <Anchor>autotoc_md40</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Settings&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md43</Anchor>
+          <Anchor>autotoc_md41</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;SerieAnimation&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md44</Anchor>
+          <Anchor>autotoc_md42</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;AreaStyle&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md45</Anchor>
+          <Anchor>autotoc_md43</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;AxisLabel&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md46</Anchor>
+          <Anchor>autotoc_md44</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;AxisLine&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md47</Anchor>
+          <Anchor>autotoc_md45</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;AxisName&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md48</Anchor>
+          <Anchor>autotoc_md46</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;AxisSplitLine&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md49</Anchor>
+          <Anchor>autotoc_md47</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;AxisSplitArea&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md50</Anchor>
+          <Anchor>autotoc_md48</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;AxisTick&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md51</Anchor>
+          <Anchor>autotoc_md49</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Emphasis&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md52</Anchor>
+          <Anchor>autotoc_md50</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;ItemStyle&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md53</Anchor>
+          <Anchor>autotoc_md51</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;LineArrow&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md54</Anchor>
+          <Anchor>autotoc_md52</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;LineStyle&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md55</Anchor>
+          <Anchor>autotoc_md53</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;Location&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md56</Anchor>
+          <Anchor>autotoc_md54</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;MarkLine&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md57</Anchor>
+          <Anchor>autotoc_md55</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;MarkLineData&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md58</Anchor>
+          <Anchor>autotoc_md56</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;SerieData&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md59</Anchor>
+          <Anchor>autotoc_md57</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;SerieLabel&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md60</Anchor>
+          <Anchor>autotoc_md58</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;SerieSymbol&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md61</Anchor>
+          <Anchor>autotoc_md59</Anchor>
          </Node>
          <Node>
           <Name>&lt;tt&gt;IconStyle&lt;/tt&gt;</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
-          <Anchor>autotoc_md62</Anchor>
+          <Anchor>autotoc_md60</Anchor>
          </Node>
         </Subnodes>
        </Node>
@@ -331,605 +328,147 @@
          <Node>
           <Name>How-to-adjust-the-margin-between-the-axis-and-the=-background</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md64</Anchor>
+          <Anchor>autotoc_md62</Anchor>
          </Node>
          <Node>
           <Name>How-to-play-agian-the-fadeIn-animation</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md65</Anchor>
+          <Anchor>autotoc_md63</Anchor>
          </Node>
          <Node>
           <Name>How-to-customize-the-color-of-data-item-in-line chart-and-pie-chart</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md66</Anchor>
+          <Anchor>autotoc_md64</Anchor>
          </Node>
          <Node>
           <Name>How-to-formatter-the-text-of-axis-label-such-as-add-a-units-text</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md67</Anchor>
+          <Anchor>autotoc_md65</Anchor>
          </Node>
          <Node>
           <Name>How-to-stack-the-bar-of-bar-chart</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md68</Anchor>
+          <Anchor>autotoc_md66</Anchor>
          </Node>
          <Node>
           <Name>How-to-make-the-bar-serie-in-the-same-bar-but-not-stack</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md69</Anchor>
+          <Anchor>autotoc_md67</Anchor>
          </Node>
          <Node>
           <Name>How-to-adjust-the-bar-width-and-gap-of-barchart</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md70</Anchor>
+          <Anchor>autotoc_md68</Anchor>
          </Node>
          <Node>
           <Name>How-to-adjust-the-color-of-bar</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md71</Anchor>
+          <Anchor>autotoc_md69</Anchor>
          </Node>
          <Node>
           <Name>Can-I-adjust-the-anchor-of-chart</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md72</Anchor>
+          <Anchor>autotoc_md70</Anchor>
          </Node>
          <Node>
           <Name>Can-display-more-than-1000-data</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md73</Anchor>
+          <Anchor>autotoc_md71</Anchor>
          </Node>
          <Node>
           <Name>Can-line-chart-drawing-be-dash-dot-and-dash-dot</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md74</Anchor>
+          <Anchor>autotoc_md72</Anchor>
          </Node>
          <Node>
           <Name>How-to-limit-the-value-range-of-the-Y-axis</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md75</Anchor>
+          <Anchor>autotoc_md73</Anchor>
          </Node>
          <Node>
           <Name>How-to-customize-the-tick-value-range-of-value-axis</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md76</Anchor>
+          <Anchor>autotoc_md74</Anchor>
          </Node>
          <Node>
           <Name>How-to-display-text-at-the-top-of-data-items</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md77</Anchor>
+          <Anchor>autotoc_md75</Anchor>
          </Node>
          <Node>
           <Name>How-do-I-customize-icons-for-data-items</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md78</Anchor>
+          <Anchor>autotoc_md76</Anchor>
          </Node>
          <Node>
           <Name>How-to-anti-aliasing-and-make-the-chart-smoother</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md79</Anchor>
+          <Anchor>autotoc_md77</Anchor>
          </Node>
          <Node>
           <Name>Why-does-mouse-over-chart-Tooltip-not-show</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md80</Anchor>
+          <Anchor>autotoc_md78</Anchor>
          </Node>
          <Node>
           <Name>How-not-to-display-the-bar-line-of-Tooltip</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md81</Anchor>
+          <Anchor>autotoc_md79</Anchor>
          </Node>
          <Node>
           <Name>How-do-I-customize-the-display-of-Tooltip</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md82</Anchor>
+          <Anchor>autotoc_md80</Anchor>
          </Node>
          <Node>
           <Name>How-do-I-get-the-Y-axis-to-display-multiple-decimal-places</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md83</Anchor>
+          <Anchor>autotoc_md81</Anchor>
          </Node>
          <Node>
           <Name>How-do-I-dynamically-update-data-with-code</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md84</Anchor>
+          <Anchor>autotoc_md82</Anchor>
          </Node>
          <Node>
           <Name>How-to-display-legend?Why-are-legends-sometimes-not-displayed</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md85</Anchor>
+          <Anchor>autotoc_md83</Anchor>
          </Node>
          <Node>
           <Name>How-to-make-chart-as-prefab</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md86</Anchor>
+          <Anchor>autotoc_md84</Anchor>
          </Node>
          <Node>
           <Name>How-do-I-draw-custom-content-in-chart-such-as-line-or-dot</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md87</Anchor>
+          <Anchor>autotoc_md85</Anchor>
          </Node>
          <Node>
           <Name>How-to-achieve-similar-data-movement-effect-of-ELECTRO-cardiogram</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md88</Anchor>
+          <Anchor>autotoc_md86</Anchor>
          </Node>
          <Node>
           <Name>How-do-I-use-the-background-component-What-are-the-conditions</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md89</Anchor>
+          <Anchor>autotoc_md87</Anchor>
          </Node>
          <Node>
           <Name>Mesh-cannot-have-more-than-65000-vertices</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md90</Anchor>
+          <Anchor>autotoc_md88</Anchor>
          </Node>
          <Node>
           <Name>Why-are-the-parameters-set-in-Serie-reset-after-they-run</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md91</Anchor>
+          <Anchor>autotoc_md89</Anchor>
          </Node>
          <Node>
           <Name>Why_are_many_custom_colors_lost_after_upgrading_to_1_6_0_How_should_I_upgrade</Name>
           <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-          <Anchor>autotoc_md92</Anchor>
-         </Node>
-        </Subnodes>
-       </Node>
-       <Node>
-        <Name>XCharts API</Name>
-        <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-        <Subnodes>
-         <Node>
-          <Name>&lt;tt&gt;BaseChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md94</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;CoordinateChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md95</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;LineChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md96</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;BarChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md97</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;RadarChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md98</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;ScatterChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md99</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;HeatmapChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md100</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;RingChart&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-          <Anchor>autotoc_md101</Anchor>
-         </Node>
-        </Subnodes>
-       </Node>
-       <Node>
-        <Name>配置项手册</Name>
-        <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-        <Subnodes>
-         <Node>
-          <Name>&lt;tt&gt;Theme&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md103</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Title&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md104</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;TitleStyle&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md105</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Legend&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md106</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Polar&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md107</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Radar&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md108</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Radar.Indicator&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md109</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;TextLimit&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md110</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;TextStyle&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md111</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Tooltip&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md112</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Vessel&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md113</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;DataZoom&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md114</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;VisualMap&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md115</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Grid&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md116</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;GaugeAxis&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md117</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;GaugePointer&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md118</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;XAxis&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md119</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Background&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md120</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;YAxis&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md121</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Series&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md122</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Line&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md123</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Bar&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md124</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Pie&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md125</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Radar&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md126</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Scatter&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md127</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Heatmap&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md128</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Gauge&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md129</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Ring&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md130</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Liquid&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md131</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Serie-Candlestick&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md132</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Settings&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md133</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;SerieAnimation&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md134</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;AreaStyle&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md135</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;AxisLabel&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md136</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;AxisLine&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md137</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;AxisName&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md138</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;AxisSplitLine&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md139</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;AxisSplitArea&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md140</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;AxisTick&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md141</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Emphasis&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md142</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;ItemStyle&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md143</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;LineArrow&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md144</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;LineStyle&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md145</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;Location&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md146</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;MarkLine&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md147</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;MarkLineData&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md148</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;SerieData&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md149</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;SerieLabel&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md150</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;SerieSymbol&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md151</Anchor>
-         </Node>
-         <Node>
-          <Name>&lt;tt&gt;IconStyle&lt;/tt&gt;</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-          <Anchor>autotoc_md152</Anchor>
-         </Node>
-        </Subnodes>
-       </Node>
-       <Node>
-        <Name>XCharts问答</Name>
-        <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-        <Subnodes>
-         <Node>
-          <Name>如何调整坐标轴与背景的边距</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md154</Anchor>
-         </Node>
-         <Node>
-          <Name>如何让初始动画重新播放</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md155</Anchor>
-         </Node>
-         <Node>
-          <Name>如何自定义折线图_饼图等数据项的颜色</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md156</Anchor>
-         </Node>
-         <Node>
-          <Name>如何格式化文字_如我想给坐标轴标签加上单位</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md157</Anchor>
-         </Node>
-         <Node>
-          <Name>如何让柱形图的柱子堆叠显示</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md158</Anchor>
-         </Node>
-         <Node>
-          <Name>如何让柱形图的柱子同柱但不重叠</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md159</Anchor>
-         </Node>
-         <Node>
-          <Name>如何调整柱形图的柱子宽度和间距</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md160</Anchor>
-         </Node>
-         <Node>
-          <Name>如何调整柱形图单个柱子的颜色</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md161</Anchor>
-         </Node>
-         <Node>
-          <Name>如何调整图表的对齐方式</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md162</Anchor>
-         </Node>
-         <Node>
-          <Name>可以显示超过1000以上的大数据吗</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md163</Anchor>
-         </Node>
-         <Node>
-          <Name>折线图可以画虚线_点线_点划线吗</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md164</Anchor>
-         </Node>
-         <Node>
-          <Name>如何限定Y轴的值范围</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md165</Anchor>
-         </Node>
-         <Node>
-          <Name>如何自定义数值轴刻度大小</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md166</Anchor>
-         </Node>
-         <Node>
-          <Name>如何在数据项顶上显示文本</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md167</Anchor>
-         </Node>
-         <Node>
-          <Name>如何给数据项自定义图标</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md168</Anchor>
-         </Node>
-         <Node>
-          <Name>锯齿太严重_如何让图表更顺滑</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md169</Anchor>
-         </Node>
-         <Node>
-          <Name>为什么鼠标移上图表Tooltip不显示</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md170</Anchor>
-         </Node>
-         <Node>
-          <Name>如何取消Tooltip的竖线</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md171</Anchor>
-         </Node>
-         <Node>
-          <Name>如何自定义Tooltip的显示内容</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md172</Anchor>
-         </Node>
-         <Node>
-          <Name>如何让Y轴显示多位小数</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md173</Anchor>
-         </Node>
-         <Node>
-          <Name>如何用代码动态更新数据</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md174</Anchor>
-         </Node>
-         <Node>
-          <Name>如何显示图例_为什么有时候图例无法显示</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md175</Anchor>
-         </Node>
-         <Node>
-          <Name>如何做成预设</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md176</Anchor>
-         </Node>
-         <Node>
-          <Name>如何在图表上画点画线等自定义内容</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md177</Anchor>
-         </Node>
-         <Node>
-          <Name>如何实现心电图类似的数据移动效果</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md178</Anchor>
-         </Node>
-         <Node>
-          <Name>如何使用背景组件_有什么条件限制</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md179</Anchor>
-         </Node>
-         <Node>
-          <Name>区域折线图在用半透明颜色时有时候会一条叠加的线</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md180</Anchor>
-         </Node>
-         <Node>
-          <Name>Mesh_cannot_have_more_than_65000_vertices</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md181</Anchor>
-         </Node>
-         <Node>
-          <Name>为什么serie里设置的参数运行后又被重置了</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md182</Anchor>
-         </Node>
-         <Node>
-          <Name>为什么升级到1_6_0版本后很多自定义颜色丢失了_应该如何升级</Name>
-          <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
-          <Anchor>autotoc_md183</Anchor>
+          <Anchor>autotoc_md90</Anchor>
          </Node>
         </Subnodes>
        </Node>
@@ -1001,225 +540,6 @@
             <Name>AirControl</Name>
             <Path>namespaceAirControl.html</Path>
             <Subnodes>
-             <Node>
-              <Name>communicator</Name>
-              <Path></Path>
-              <Subnodes>
-               <Node>
-                <Name>Communicator</Name>
-                <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__init__</Name>
-                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                  <Anchor>a51791082fb558db19b2072d76d6e5bec</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>receive_data</Name>
-                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                  <Anchor>a472eb6e6285c6fa39bcbccc49654682c</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>send_data</Name>
-                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                  <Anchor>ab72a682f3cb0c1fdf9f60c45b96b2d03</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>RECV_BUF_SIZE</Name>
-                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                  <Anchor>ac752e89897185e0ab4619b162558f00d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>SEND_BUF_SIZE</Name>
-                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                  <Anchor>a2900470e4d90430957c0c203978fa69d</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>sock</Name>
-                  <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-                  <Anchor>a2b854fa916b956973d05a0c424074697</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-               <Node>
-                <Name>NpEncoder</Name>
-                <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>default</Name>
-                  <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
-                  <Anchor>a268d5aa51489b6355b20300e2c8bf09d</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
-              <Name>environment</Name>
-              <Path></Path>
-              <Subnodes>
-               <Node>
-                <Name>Trigger</Name>
-                <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>__init__</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a149f842a3461ed5732984fd1eb53bbc1</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>bool2string</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>aa4b412701625daf2b58fd7d49976f990</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>check_input_type</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a85630185cef13614131a8af56317bdff</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>get_connected</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a7caf5f43025526001c6ab51edc73d654</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>get_output</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>ad3052444582c292260fe2697832ea60c</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>process_output</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a1209c6c130dcf23920afa51bb8d0acb2</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>reset</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>ae97fbf3581307920f3544bf194e0e142</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_audio</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>ad4518e553704e434e4b57215ca5165dd</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_camera</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a76d0cc375738660b7b6ac39be5aef0e9</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_fuel</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>ae3867edb3d3bedf590eb9dc4600f3d44</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_lidar</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a2c2e93eb35e5dba85bcd53509dc8257e</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_TOD</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a11e6e1c134cae3d918676b077fcc6e69</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_ui</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>aed5e475557cc1b6cdcda020b30a1500c</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_uicontrol</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a558ad72cdf365cc1014c05560d52cbbc</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>set_weather</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a2d658e7521289128eaf7cef85ada4514</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>step</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>a240584376662e9cf2c1b87ad228b0c60</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>connection</Name>
-                  <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-                  <Anchor>afbd348fa7cb39fbbb64e19b3a79b85ed</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
-              <Name>sample_generator</Name>
-              <Path></Path>
-              <Subnodes>
-               <Node>
-                <Name>samples</Name>
-                <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>get_random_bankangle</Name>
-                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
-                  <Anchor>a1d6e1b9b4715d4a287578f665e80bb84</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>get_random_pitch</Name>
-                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
-                  <Anchor>a30f2e85e6ca803d7515e5ab960f140fb</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>get_random_pitchangle</Name>
-                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
-                  <Anchor>af0cc8b9c1c826d20780870394e7b40f6</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>get_random_roll</Name>
-                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
-                  <Anchor>ac2996f76439fdd35efa5971d99e669d4</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>get_random_stickythrottle</Name>
-                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
-                  <Anchor>ad5a56a424c78fb00c2e9109f676aff03</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>get_random_yaw</Name>
-                  <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
-                  <Anchor>af5e84f861a22051be34d9ef6fe2bf371</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-              </Subnodes>
-             </Node>
-             <Node>
-              <Name>utils</Name>
-              <Path></Path>
-              <Subnodes>
-               <Node>
-                <Name>Launch</Name>
-                <Path>classAirControl_1_1utils_1_1Launch.html</Path>
-                <Subnodes>
-                 <Node>
-                  <Name>get_platform</Name>
-                  <Path>classAirControl_1_1utils_1_1Launch.html</Path>
-                  <Anchor>af6cfc58907e00ab9b4aff9597e69de08</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>launch_executable</Name>
-                  <Path>classAirControl_1_1utils_1_1Launch.html</Path>
-                  <Anchor>a233ee02e40e319c7b81c5a72136a11ba</Anchor>
-                 </Node>
-                 <Node>
-                  <Name>validate_environment_path</Name>
-                  <Path>classAirControl_1_1utils_1_1Launch.html</Path>
-                  <Anchor>a1159f24254b250a14b656b2f67a10bb7</Anchor>
-                 </Node>
-                </Subnodes>
-               </Node>
-              </Subnodes>
-             </Node>
              <Node>
               <Name>AC_Airplane_Airspeed</Name>
               <Path>classAirControl_1_1AC__Airplane__Airspeed.html</Path>
@@ -2428,6 +1748,242 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>airctrl</Name>
+            <Path></Path>
+            <Subnodes>
+             <Node>
+              <Name>communicator</Name>
+              <Path></Path>
+              <Subnodes>
+               <Node>
+                <Name>Communicator</Name>
+                <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>aecd7d36a2fa9aeacc88b51e3e2f59c90</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>receive_data</Name>
+                  <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>adf7fd05d649d73e673763d948c87acdc</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>send_data</Name>
+                  <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>a31ff7b3596a173863c96b51bc43809f7</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>RECV_BUF_SIZE</Name>
+                  <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>aec1ca00976cf84f1cea843a6510e0811</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>SEND_BUF_SIZE</Name>
+                  <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>a0295a067589ec1d96e4b3b25ad281e3c</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>sock</Name>
+                  <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+                  <Anchor>ad926389445bf3d2127a2267b5ab44eda</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>NpEncoder</Name>
+                <Path>classairctrl_1_1communicator_1_1NpEncoder.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>default</Name>
+                  <Path>classairctrl_1_1communicator_1_1NpEncoder.html</Path>
+                  <Anchor>a53042cfb98e4176eebd18ee6a2cdf0a8</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>environment</Name>
+              <Path></Path>
+              <Subnodes>
+               <Node>
+                <Name>Trigger</Name>
+                <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>__init__</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a6f549e030b2b43a9d9b9da996ecc1455</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>bool2string</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a32b977f3cb5c85c3253f9b597a8a4009</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>check_input_type</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a2b31fccbc795f7681f5640f66f55df01</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_connected</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a6633f3b0e9c4cf78df033795d8fbada8</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_output</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a377cc63f4adf2eb39873c53265bb6093</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>process_output</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a091b15295defeb6050b53603dde23f00</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>reset</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a0a2b794f2ba460202184b7d0400fd1c5</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_audio</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a4199171a18e9337047fc3247a3734aa2</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_camera</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>ad99274565ec0634e9057051ae28f1b0f</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_fuel</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a0d90ffdd1bd6d98295db06be08c9b111</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_lidar</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>afee18386c891beb3e63021321ca7ef6b</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_TOD</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>acab455561dd2d93c5933e96ffc5b8dff</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_ui</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a37af35fffd362325d0fcbfb39beafcfe</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_uicontrol</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a832d3e7b63d776932b4905554e7cf167</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>set_weather</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a79a5cd7c3f9dbccb72944337ae847fe5</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>step</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a78158334a05c1f5ae62a6d463cad1df1</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>connection</Name>
+                  <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+                  <Anchor>a3ceec98c813e2982c188a70f4798548f</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>sample_generator</Name>
+              <Path></Path>
+              <Subnodes>
+               <Node>
+                <Name>samples</Name>
+                <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                <Subnodes>
+                 <Node>
+                  <Name>beta_dist</Name>
+                  <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>a387aa2bfb9ffedc868c1158f3eb71fa8</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_bankangle</Name>
+                  <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>a87a1d5a28047ef9cc1523a13037280ed</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_pitch</Name>
+                  <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>a1186b750c2876eacb430a41615139b75</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_pitchangle</Name>
+                  <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>ab40027f740f5a1fe563ae1ce89bd7424</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_roll</Name>
+                  <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>a2a26aa5fc41ad9dd9c70c1209afa8c77</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_stickythrottle</Name>
+                  <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>a4e5af6f20612d04f0a385a0463225df0</Anchor>
+                 </Node>
+                 <Node>
+                  <Name>get_random_yaw</Name>
+                  <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+                  <Anchor>ac45f588db6cef26d35938ac794f64a33</Anchor>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+             <Node>
+              <Name>utils</Name>
+              <Path></Path>
+              <Subnodes>
+               <Node>
+                <Name>unity</Name>
+                <Path></Path>
+                <Subnodes>
+                 <Node>
+                  <Name>Launch</Name>
+                  <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+                  <Subnodes>
+                   <Node>
+                    <Name>get_platform</Name>
+                    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+                    <Anchor>a262a71c585c47864163aa5f652e9ac84</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>launch_executable</Name>
+                    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+                    <Anchor>aa2e93bbe890b9191ccc7bffcdb0eba3a</Anchor>
+                   </Node>
+                   <Node>
+                    <Name>validate_environment_path</Name>
+                    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+                    <Anchor>a06f0af2a3c0e142455d18fc89fdb975c</Anchor>
+                   </Node>
+                  </Subnodes>
+                 </Node>
+                </Subnodes>
+               </Node>
+              </Subnodes>
+             </Node>
+            </Subnodes>
+           </Node>
+           <Node>
             <Name>Communicator</Name>
             <Path>namespaceCommunicator.html</Path>
             <Subnodes>
@@ -2690,11 +2246,6 @@
                 <Anchor>a237b72cb55f0db853eb8332d469cb2aa</Anchor>
                </Node>
                <Node>
-                <Name>MyAction</Name>
-                <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
-                <Anchor>a3733cbd8ba357d67bfec13564e9b0f3b</Anchor>
-               </Node>
-               <Node>
                 <Name>ResetThings</Name>
                 <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
                 <Anchor>ab0f57236ef14536ba79b447e663757be</Anchor>
@@ -2702,7 +2253,7 @@
                <Node>
                 <Name>SendMessage</Name>
                 <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
-                <Anchor>a9fa57f9d151ee441e5b7fdc5f4df53aa</Anchor>
+                <Anchor>a40476bfa5cd4f98e5b31ab7cb2ed0a0f</Anchor>
                </Node>
                <Node>
                 <Name>currentReadings</Name>
@@ -2733,7 +2284,7 @@
                <Node>
                 <Name>ParseOutput</Name>
                 <Path>classCommunicator_1_1OutputHandle.html</Path>
-                <Anchor>a32de13ec8013c9158ecae31b7972d113</Anchor>
+                <Anchor>a982cfccc5c860cbe33b5ca36837bca29</Anchor>
                </Node>
               </Subnodes>
              </Node>
@@ -2875,6 +2426,36 @@
                 <Name>Reward</Name>
                 <Path>classCommunicator_1_1OutputSchema.html</Path>
                 <Anchor>a2b111bcd93b19d8cb1a7c59218646120</Anchor>
+               </Node>
+               <Node>
+                <Name>RotXAbs</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a5403961d02595e1b20f621484141d3b7</Anchor>
+               </Node>
+               <Node>
+                <Name>RotXRel</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>aed22f0edfd8adecdd52d73ea86bcbefc</Anchor>
+               </Node>
+               <Node>
+                <Name>RotYAbs</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a7c8ee61a8e742fa989f77db540a71e3a</Anchor>
+               </Node>
+               <Node>
+                <Name>RotYRel</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a45df0a595912f9d35366dfa12757439b</Anchor>
+               </Node>
+               <Node>
+                <Name>RotZAbs</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>a83499f4af6bc0a7c2a08d6cf912e053f</Anchor>
+               </Node>
+               <Node>
+                <Name>RotZRel</Name>
+                <Path>classCommunicator_1_1OutputSchema.html</Path>
+                <Anchor>afe7d4636c26aed2473535c4a829870d4</Anchor>
                </Node>
                <Node>
                 <Name>ScreenCapture</Name>
@@ -3291,6 +2872,12 @@
                <Node>
                 <Name>RewardChart</Name>
                 <Path>classXCharts_1_1Examples_1_1RewardChart.html</Path>
+                <Subnodes>
+                </Subnodes>
+               </Node>
+               <Node>
+                <Name>TriggerDistribution</Name>
+                <Path>classXCharts_1_1Examples_1_1TriggerDistribution.html</Path>
                 <Subnodes>
                 </Subnodes>
                </Node>
@@ -14803,6 +14390,10 @@
             </Subnodes>
            </Node>
            <Node>
+            <Name>RandomInstanciate</Name>
+            <Path>classRandomInstanciate.html</Path>
+           </Node>
+           <Node>
             <Name>TakeScreenshot</Name>
             <Path>classTakeScreenshot.html</Path>
             <Subnodes>
@@ -15180,8 +14771,8 @@
             <Path>classAirControl_1_1ColorEncoding.html</Path>
            </Node>
            <Node>
-            <Name>AirControl.communicator.Communicator</Name>
-            <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
+            <Name>airctrl.communicator.Communicator</Name>
+            <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
            </Node>
            <Node>
             <Name>Communicator.ControlSchema</Name>
@@ -15420,14 +15011,14 @@
             <Path></Path>
             <Subnodes>
              <Node>
-              <Name>AirControl.communicator.NpEncoder</Name>
-              <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+              <Name>airctrl.communicator.NpEncoder</Name>
+              <Path>classairctrl_1_1communicator_1_1NpEncoder.html</Path>
              </Node>
             </Subnodes>
            </Node>
            <Node>
-            <Name>AirControl.utils.Launch</Name>
-            <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+            <Name>airctrl.utils.unity.Launch</Name>
+            <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
            </Node>
            <Node>
             <Name>XCharts.LegendItem</Name>
@@ -15618,6 +15209,10 @@
               <Path>classOnScreenConsole.html</Path>
              </Node>
              <Node>
+              <Name>RandomInstanciate</Name>
+              <Path>classRandomInstanciate.html</Path>
+             </Node>
+             <Node>
               <Name>TakeScreenshot</Name>
               <Path>classTakeScreenshot.html</Path>
              </Node>
@@ -15712,6 +15307,10 @@
              <Node>
               <Name>XCharts.Examples.RewardChart</Name>
               <Path>classXCharts_1_1Examples_1_1RewardChart.html</Path>
+             </Node>
+             <Node>
+              <Name>XCharts.Examples.TriggerDistribution</Name>
+              <Path>classXCharts_1_1Examples_1_1TriggerDistribution.html</Path>
              </Node>
              <Node>
               <Name>XCharts.XChartsMgr</Name>
@@ -15998,8 +15597,8 @@
             <Path>classXCharts_1_1RingChart.html</Path>
            </Node>
            <Node>
-            <Name>AirControl.sample_generator.samples</Name>
-            <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+            <Name>airctrl.sample_generator.samples</Name>
+            <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
            </Node>
            <Node>
             <Name>ScriptableObject</Name>
@@ -16032,8 +15631,8 @@
             <Path>classCommunicator_1_1TODSchema.html</Path>
            </Node>
            <Node>
-            <Name>AirControl.environment.Trigger</Name>
-            <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
+            <Name>airctrl.environment.Trigger</Name>
+            <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
            </Node>
            <Node>
             <Name>Communicator.UIControlsSchema</Name>
@@ -16200,10 +15799,6 @@
               <Path>functions_func_l.html</Path>
              </Node>
              <Node>
-              <Name>m</Name>
-              <Path>functions_func_m.html</Path>
-             </Node>
-             <Node>
               <Name>n</Name>
               <Path>functions_func_n.html</Path>
              </Node>
@@ -16354,6 +15949,10 @@
            <Node>
             <Name>__init__.py</Name>
             <Path>____init_____8py_source.html</Path>
+           </Node>
+           <Node>
+            <Name>utils/__init__.py</Name>
+            <Path>utils_2____init_____8py_source.html</Path>
            </Node>
            <Node>
             <Name>AC_Airplane_Airspeed.cs</Name>
@@ -16668,6 +16267,10 @@
             <Path>ComponentThemeDrawer_8cs_source.html</Path>
            </Node>
            <Node>
+            <Name>console.py</Name>
+            <Path>console_8py_source.html</Path>
+           </Node>
+           <Node>
             <Name>CoordinateChart.cs</Name>
             <Path>CoordinateChart_8cs_source.html</Path>
            </Node>
@@ -16898,6 +16501,10 @@
            <Node>
             <Name>GaugePointer.cs</Name>
             <Path>GaugePointer_8cs_source.html</Path>
+           </Node>
+           <Node>
+            <Name>general.py</Name>
+            <Path>general_8py_source.html</Path>
            </Node>
            <Node>
             <Name>GPSEncoder.cs</Name>
@@ -17144,6 +16751,10 @@
             <Path>RadarDrawer_8cs_source.html</Path>
            </Node>
            <Node>
+            <Name>RandomInstanciate.cs</Name>
+            <Path>RandomInstanciate_8cs_source.html</Path>
+           </Node>
+           <Node>
             <Name>RewardChart.cs</Name>
             <Path>RewardChart_8cs_source.html</Path>
            </Node>
@@ -17332,6 +16943,10 @@
             <Path>TooltipTheme_8cs_source.html</Path>
            </Node>
            <Node>
+            <Name>TriggerDistribution.cs</Name>
+            <Path>TriggerDistribution_8cs_source.html</Path>
+           </Node>
+           <Node>
             <Name>UGL.cs</Name>
             <Path>UGL_8cs_source.html</Path>
            </Node>
@@ -17344,8 +16959,8 @@
             <Path>UGLHelper_8cs_source.html</Path>
            </Node>
            <Node>
-            <Name>utils.py</Name>
-            <Path>utils_8py_source.html</Path>
+            <Name>unity.py</Name>
+            <Path>unity_8py_source.html</Path>
            </Node>
            <Node>
             <Name>Vessel.cs</Name>

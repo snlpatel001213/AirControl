@@ -2,10 +2,10 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN</Name>
+      <Name>md__home_supatel_Games_AirControl_2020_README</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
-    <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-api-EN.html</Path>
+    <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -20,27 +20,6 @@
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
     <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI</Name>
-      <APILanguage>markdown</APILanguage>
-    </TokenIdentifier>
-    <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XChartsAPI.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts配置项手册</Name>
-      <APILanguage>markdown</APILanguage>
-    </TokenIdentifier>
-    <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_xBD_5fe0087255f79a08729fc9cb28851021.html</Path>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts问答</Name>
-      <APILanguage>markdown</APILanguage>
-    </TokenIdentifier>
-    <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x97_xAE_xE7_xAD_x94.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -181,6 +160,15 @@
     <Anchor>ac5022e42f1c74f4a8713565fce7f2a4a</Anchor>
     <Abstract>This is a simple logging function that will write to the console and to a file.</Abstract>
     <DeclaredIn>OnScreenConsole.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RandomInstanciate</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>RandomInstanciate</Scope>
+    </TokenIdentifier>
+    <Path>classRandomInstanciate.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -968,22 +956,22 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>AirControl::communicator::Communicator</Name>
+      <Name>airctrl::communicator::Communicator</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>AirControl.communicator.Communicator</Scope>
+      <Scope>airctrl.communicator.Communicator</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
+    <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>__init__</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.communicator.Communicator</Scope>
+      <Scope>airctrl.communicator.Communicator</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-    <Anchor>a51791082fb558db19b2072d76d6e5bec</Anchor>
+    <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+    <Anchor>aecd7d36a2fa9aeacc88b51e3e2f59c90</Anchor>
     <DeclaredIn>communicator.py</DeclaredIn>
   </Token>
   <Token>
@@ -991,10 +979,10 @@
       <Name>send_data</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.communicator.Communicator</Scope>
+      <Scope>airctrl.communicator.Communicator</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-    <Anchor>ab72a682f3cb0c1fdf9f60c45b96b2d03</Anchor>
+    <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+    <Anchor>a31ff7b3596a173863c96b51bc43809f7</Anchor>
     <DeclaredIn>communicator.py</DeclaredIn>
   </Token>
   <Token>
@@ -1002,50 +990,50 @@
       <Name>receive_data</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.communicator.Communicator</Scope>
+      <Scope>airctrl.communicator.Communicator</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1communicator_1_1Communicator.html</Path>
-    <Anchor>a472eb6e6285c6fa39bcbccc49654682c</Anchor>
+    <Path>classairctrl_1_1communicator_1_1Communicator.html</Path>
+    <Anchor>adf7fd05d649d73e673763d948c87acdc</Anchor>
     <DeclaredIn>communicator.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>AirControl::communicator::NpEncoder</Name>
+      <Name>airctrl::communicator::NpEncoder</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>AirControl.communicator.NpEncoder</Scope>
+      <Scope>airctrl.communicator.NpEncoder</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
+    <Path>classairctrl_1_1communicator_1_1NpEncoder.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>default</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.communicator.NpEncoder</Scope>
+      <Scope>airctrl.communicator.NpEncoder</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1communicator_1_1NpEncoder.html</Path>
-    <Anchor>a268d5aa51489b6355b20300e2c8bf09d</Anchor>
+    <Path>classairctrl_1_1communicator_1_1NpEncoder.html</Path>
+    <Anchor>a53042cfb98e4176eebd18ee6a2cdf0a8</Anchor>
     <DeclaredIn>communicator.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>AirControl::environment::Trigger</Name>
+      <Name>airctrl::environment::Trigger</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>get_connected</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a7caf5f43025526001c6ab51edc73d654</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a6633f3b0e9c4cf78df033795d8fbada8</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1053,10 +1041,10 @@
       <Name>bool2string</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>aa4b412701625daf2b58fd7d49976f990</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a32b977f3cb5c85c3253f9b597a8a4009</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1064,10 +1052,10 @@
       <Name>set_camera</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a76d0cc375738660b7b6ac39be5aef0e9</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>ad99274565ec0634e9057051ae28f1b0f</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1075,10 +1063,10 @@
       <Name>step</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a240584376662e9cf2c1b87ad228b0c60</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a78158334a05c1f5ae62a6d463cad1df1</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1086,10 +1074,10 @@
       <Name>set_fuel</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>ae3867edb3d3bedf590eb9dc4600f3d44</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a0d90ffdd1bd6d98295db06be08c9b111</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1097,10 +1085,10 @@
       <Name>get_output</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>ad3052444582c292260fe2697832ea60c</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a377cc63f4adf2eb39873c53265bb6093</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1108,10 +1096,10 @@
       <Name>reset</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>ae97fbf3581307920f3544bf194e0e142</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a0a2b794f2ba460202184b7d0400fd1c5</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1119,10 +1107,10 @@
       <Name>set_lidar</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a2c2e93eb35e5dba85bcd53509dc8257e</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>afee18386c891beb3e63021321ca7ef6b</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1130,10 +1118,10 @@
       <Name>set_TOD</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a11e6e1c134cae3d918676b077fcc6e69</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>acab455561dd2d93c5933e96ffc5b8dff</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1141,10 +1129,10 @@
       <Name>set_ui</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>aed5e475557cc1b6cdcda020b30a1500c</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a37af35fffd362325d0fcbfb39beafcfe</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1152,10 +1140,10 @@
       <Name>set_audio</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>ad4518e553704e434e4b57215ca5165dd</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a4199171a18e9337047fc3247a3734aa2</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1163,10 +1151,10 @@
       <Name>set_weather</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a2d658e7521289128eaf7cef85ada4514</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a79a5cd7c3f9dbccb72944337ae847fe5</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1174,62 +1162,139 @@
       <Name>set_uicontrol</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.environment.Trigger</Scope>
+      <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a558ad72cdf365cc1014c05560d52cbbc</Anchor>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a832d3e7b63d776932b4905554e7cf167</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>AirControl::sample_generator::samples</Name>
+      <Name>airctrl::sample_generator::samples</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>AirControl.sample_generator.samples</Scope>
+      <Scope>airctrl.sample_generator.samples</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1sample__generator_1_1samples.html</Path>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>AirControl::utils::Launch</Name>
+      <Name>get_random_pitch</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>a1186b750c2876eacb430a41615139b75</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_random_yaw</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>ac45f588db6cef26d35938ac794f64a33</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_random_roll</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>a2a26aa5fc41ad9dd9c70c1209afa8c77</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_random_stickythrottle</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>a4e5af6f20612d04f0a385a0463225df0</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_random_pitchangle</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>ab40027f740f5a1fe563ae1ce89bd7424</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>get_random_bankangle</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>a87a1d5a28047ef9cc1523a13037280ed</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>beta_dist</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>a387aa2bfb9ffedc868c1158f3eb71fa8</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>airctrl::utils::unity::Launch</Name>
       <APILanguage>python</APILanguage>
       <Type>cl</Type>
-      <Scope>AirControl.utils.Launch</Scope>
+      <Scope>airctrl.utils.unity.Launch</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
+    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>launch_executable</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.utils.Launch</Scope>
+      <Scope>airctrl.utils.unity.Launch</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
-    <Anchor>a233ee02e40e319c7b81c5a72136a11ba</Anchor>
-    <DeclaredIn>utils.py</DeclaredIn>
+    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+    <Anchor>aa2e93bbe890b9191ccc7bffcdb0eba3a</Anchor>
+    <DeclaredIn>unity.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>get_platform</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.utils.Launch</Scope>
+      <Scope>airctrl.utils.unity.Launch</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
-    <Anchor>af6cfc58907e00ab9b4aff9597e69de08</Anchor>
-    <DeclaredIn>utils.py</DeclaredIn>
+    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+    <Anchor>a262a71c585c47864163aa5f652e9ac84</Anchor>
+    <DeclaredIn>unity.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
       <Name>validate_environment_path</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.utils.Launch</Scope>
+      <Scope>airctrl.utils.unity.Launch</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1utils_1_1Launch.html</Path>
-    <Anchor>a1159f24254b250a14b656b2f67a10bb7</Anchor>
-    <DeclaredIn>utils.py</DeclaredIn>
+    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+    <Anchor>a06f0af2a3c0e142455d18fc89fdb975c</Anchor>
+    <DeclaredIn>unity.py</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1399,25 +1464,13 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>MyAction</Name>
-      <APILanguage>csharp</APILanguage>
-      <Type>instm</Type>
-      <Scope>Communicator.NetworkCommunicator</Scope>
-    </TokenIdentifier>
-    <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
-    <Anchor>a3733cbd8ba357d67bfec13564e9b0f3b</Anchor>
-    <Abstract>Depricated Usage : UnityEvent m_MyEvent = new UnityEvent(); public NetworkCommunicator ns; m_MyEvent....</Abstract>
-    <DeclaredIn>NetworkCommunicator.cs</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
       <Name>SendMessage</Name>
       <APILanguage>csharp</APILanguage>
       <Type>instm</Type>
       <Scope>Communicator.NetworkCommunicator</Scope>
     </TokenIdentifier>
     <Path>classCommunicator_1_1NetworkCommunicator.html</Path>
-    <Anchor>a9fa57f9d151ee441e5b7fdc5f4df53aa</Anchor>
+    <Anchor>a40476bfa5cd4f98e5b31ab7cb2ed0a0f</Anchor>
     <Abstract>Send message to client using socket connection.</Abstract>
     <DeclaredIn>NetworkCommunicator.cs</DeclaredIn>
   </Token>
@@ -1439,7 +1492,7 @@
       <Scope>Communicator.OutputHandle</Scope>
     </TokenIdentifier>
     <Path>classCommunicator_1_1OutputHandle.html</Path>
-    <Anchor>a32de13ec8013c9158ecae31b7972d113</Anchor>
+    <Anchor>a982cfccc5c860cbe33b5ca36837bca29</Anchor>
     <Abstract>Prepare output object and return json string to be dispatched</Abstract>
     <DeclaredIn>OutputHandle.cs</DeclaredIn>
   </Token>
@@ -25549,6 +25602,15 @@
       <Scope>XCharts.Examples.RewardChart</Scope>
     </TokenIdentifier>
     <Path>classXCharts_1_1Examples_1_1RewardChart.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>XCharts::Examples::TriggerDistribution</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>XCharts.Examples.TriggerDistribution</Scope>
+    </TokenIdentifier>
+    <Path>classXCharts_1_1Examples_1_1TriggerDistribution.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>

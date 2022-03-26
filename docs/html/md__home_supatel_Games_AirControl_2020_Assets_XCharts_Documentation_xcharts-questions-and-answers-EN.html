@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -133,92 +133,92 @@ $(document).ready(function(){initNavTree('md__home_supatel_Games_AirControl_2020
  <a href="#Why-are-the-parameters-set-in-Serie-reset-after-they-run">QA 28: Why are the parameters set in Serie reset after they run?</a> <br  />
  <a href="#Why_are_many_custom_colors_lost_after_upgrading_to_1_6_0_How_should_I_upgrade">QA 29: Why are many custom colors lost after upgrading to 1.6.0? How should I upgrade?</a> <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md64"></a>
+<h1><a class="anchor" id="autotoc_md62"></a>
 How-to-adjust-the-margin-between-the-axis-and-the=-background</h1>
 <p>A: <code>Grid</code> conponent，which can adjust the left, right, up, down margins of chart.</p>
-<h1><a class="anchor" id="autotoc_md65"></a>
+<h1><a class="anchor" id="autotoc_md63"></a>
 How-to-play-agian-the-fadeIn-animation</h1>
 <p>A: call the <code>chart.AnimationReset()</code> API.</p>
-<h1><a class="anchor" id="autotoc_md66"></a>
+<h1><a class="anchor" id="autotoc_md64"></a>
 How-to-customize-the-color-of-data-item-in-line chart-and-pie-chart</h1>
 <p>A: <code>Theme</code>-&gt;<code>colorPalette</code>, or the sub component <code>LineStyle</code> and <code>ItemStyle</code> of <code>Serie</code>.</p>
-<h1><a class="anchor" id="autotoc_md67"></a>
+<h1><a class="anchor" id="autotoc_md65"></a>
 How-to-formatter-the-text-of-axis-label-such-as-add-a-units-text</h1>
 <p>A: Adjust <code>formatter</code> and <code>numericFormatter</code> parameter of <code>Legend</code>, <code>AxisLabel</code>, <code>Tooltop</code>, <code>SerieLabel</code>.</p>
-<h1><a class="anchor" id="autotoc_md68"></a>
+<h1><a class="anchor" id="autotoc_md66"></a>
 How-to-stack-the-bar-of-bar-chart</h1>
 <p>A: Set the <code>stack</code> parameter of <code>Serie</code>, the series will stack in a bar with the same <code>stack</code>.</p>
-<h1><a class="anchor" id="autotoc_md69"></a>
+<h1><a class="anchor" id="autotoc_md67"></a>
 How-to-make-the-bar-serie-in-the-same-bar-but-not-stack</h1>
 <p>A: Set the <code>barGap</code> of <code>Serie</code> to <code>-1</code>，<code>stack</code> to null.</p>
-<h1><a class="anchor" id="autotoc_md70"></a>
+<h1><a class="anchor" id="autotoc_md68"></a>
 How-to-adjust-the-bar-width-and-gap-of-barchart</h1>
 <p>A: Adjust the <code>barWidth</code> and <code>barGap</code> parameter of <code>Serie</code>, the last <code>serie</code>'s <code>barWidth</code> and <code>barGap</code> are valid when multiple <code>serie</code>.</p>
-<h1><a class="anchor" id="autotoc_md71"></a>
+<h1><a class="anchor" id="autotoc_md69"></a>
 How-to-adjust-the-color-of-bar</h1>
 <p>A: Adjust the <code>ItemStyle</code> of <code>Data</code> in <code>inspector</code>.</p>
-<h1><a class="anchor" id="autotoc_md72"></a>
+<h1><a class="anchor" id="autotoc_md70"></a>
 Can-I-adjust-the-anchor-of-chart</h1>
 <p>A: Yes, you can set any one of 16 anchors but the value use default.</p>
-<h1><a class="anchor" id="autotoc_md73"></a>
+<h1><a class="anchor" id="autotoc_md71"></a>
 Can-display-more-than-1000-data</h1>
 <p>A: Yes. But <code>UGUI</code> limits <code>65000</code> vertices to a single <code>Graphic</code>, so too much data may not be displayed completely. The sampling simplification curve can be turned on by setting the sampling distance <code>sampleDist</code>. You can also set some parameters to reduce the number of vertices in the chart to help show more data. Such as reducing the size of the chart, close or reduce the axis of the client drawing, close <code>Symbol</code> and <code>Label</code> display. A <code>Normal</code> line chart occupies fewer vertices than a <code>Smooth</code> line chart. The <code>1.5.0</code> and above versions can set <code>large</code> and <code>largeThreshold</code> parameters to enable performance mode.</p>
-<h1><a class="anchor" id="autotoc_md74"></a>
+<h1><a class="anchor" id="autotoc_md72"></a>
 Can-line-chart-drawing-be-dash-dot-and-dash-dot</h1>
 <p>A: Yes. Adjust the <code>lineType</code> of <code>Serie</code>.</p>
-<h1><a class="anchor" id="autotoc_md75"></a>
+<h1><a class="anchor" id="autotoc_md73"></a>
 How-to-limit-the-value-range-of-the-Y-axis</h1>
 <p>A: Select the <code>minMaxType</code> of <code>Axis</code> as <code>Custom</code>, then set <code>min</code> and <code>max</code> to the values you want.</p>
-<h1><a class="anchor" id="autotoc_md76"></a>
+<h1><a class="anchor" id="autotoc_md74"></a>
 How-to-customize-the-tick-value-range-of-value-axis</h1>
 <p>A: By default, it is automatically split by the <code>splitNumber</code> of <code>Axis</code>. Also, you can customize the <code>interval</code> to the range you want.</p>
-<h1><a class="anchor" id="autotoc_md77"></a>
+<h1><a class="anchor" id="autotoc_md75"></a>
 How-to-display-text-at-the-top-of-data-items</h1>
 <p>A: Adjust the <code>Label</code> of <code>Serie</code>.</p>
-<h1><a class="anchor" id="autotoc_md78"></a>
+<h1><a class="anchor" id="autotoc_md76"></a>
 How-do-I-customize-icons-for-data-items</h1>
 <p>A: Set the <code>Icon</code> of <code>Data</code> in <code>Serie</code>.</p>
-<h1><a class="anchor" id="autotoc_md79"></a>
+<h1><a class="anchor" id="autotoc_md77"></a>
 How-to-anti-aliasing-and-make-the-chart-smoother</h1>
 <p>A: Open the <code>Anti-Aliasing</code> setting in <code>Unity</code>. Selected the UI Canvas <code>Render Mode</code> as <code>Screen Space-Camera</code>, selected <code>MSAA</code>, set <code>4</code> times or higher anti-aliasing. The sawtooth can only be reduced and unavoidable. The higher the pixel, the less obvious the sawtooth is.</p>
-<h1><a class="anchor" id="autotoc_md80"></a>
+<h1><a class="anchor" id="autotoc_md78"></a>
 Why-does-mouse-over-chart-Tooltip-not-show</h1>
 <p>A: Verify <code>Toolip</code> is opened. Verify that the parent node of chart has turned off mouse events.</p>
-<h1><a class="anchor" id="autotoc_md81"></a>
+<h1><a class="anchor" id="autotoc_md79"></a>
 How-not-to-display-the-bar-line-of-Tooltip</h1>
 <p>A: Set the <code>type</code> of <code>Tooltup</code> as <code>None</code>. Or adjust the parameters of <code>lineStyle</code>.</p>
-<h1><a class="anchor" id="autotoc_md82"></a>
+<h1><a class="anchor" id="autotoc_md80"></a>
 How-do-I-customize-the-display-of-Tooltip</h1>
 <p>A: See the <code>formatter</code>, <code>itemFormatter</code>, <code>titleFormatter</code> parameters of <code>Tooltip</code>.</p>
-<h1><a class="anchor" id="autotoc_md83"></a>
+<h1><a class="anchor" id="autotoc_md81"></a>
 How-do-I-get-the-Y-axis-to-display-multiple-decimal-places</h1>
 <p>A: Set the <code>numericFormatter</code> parameter of <code>AxisLabel</code>.</p>
-<h1><a class="anchor" id="autotoc_md84"></a>
+<h1><a class="anchor" id="autotoc_md82"></a>
 How-do-I-dynamically-update-data-with-code</h1>
 <p>A: See example: <code><a class="el" href="Example01__UpdateData_8cs_source.html">Example01_UpdateData.cs</a></code></p>
-<h1><a class="anchor" id="autotoc_md85"></a>
+<h1><a class="anchor" id="autotoc_md83"></a>
 How-to-display-legend?Why-are-legends-sometimes-not-displayed</h1>
 <p>A: First, the <code>name</code> in <code>Serie</code> must have a value that is not null. Then set <code>Legend</code> is <code>show</code>, where <code>data</code> can be empty by default, indicating that all legends are displayed. If you only want to display part of the <code>Serie</code> legend, fill in <code>data</code> with the <code>name</code> of the legend you want to display. If none of the values in <code>data</code> are <code>name</code> of the series, the legend will not be displayed.</p>
-<h1><a class="anchor" id="autotoc_md86"></a>
+<h1><a class="anchor" id="autotoc_md84"></a>
 How-to-make-chart-as-prefab</h1>
 <p>A: Before make prefab, please delete all sub gameObject under chart which auto-created by <code><a class="el" href="namespaceXCharts.html">XCharts</a></code>.</p>
-<h1><a class="anchor" id="autotoc_md87"></a>
+<h1><a class="anchor" id="autotoc_md85"></a>
 How-do-I-draw-custom-content-in-chart-such-as-line-or-dot</h1>
 <p>A: Implement <code>onCustomDraw</code> of chart, see <code><a class="el" href="Example12__CustomDrawing_8cs_source.html">Example12_CustomDrawing.cs</a></code>.</p>
-<h1><a class="anchor" id="autotoc_md88"></a>
+<h1><a class="anchor" id="autotoc_md86"></a>
 How-to-achieve-similar-data-movement-effect-of-ELECTRO-cardiogram</h1>
 <p>A: See <code><a class="el" href="Example__Dynamic_8cs_source.html">Example_Dynamic.cs</a></code>.</p>
-<h1><a class="anchor" id="autotoc_md89"></a>
+<h1><a class="anchor" id="autotoc_md87"></a>
 How-do-I-use-the-background-component-What-are-the-conditions</h1>
 <p>A: Setting <code>show</code> to <code>true</code> for the <code>background</code> component.</p>
-<h1><a class="anchor" id="autotoc_md90"></a>
+<h1><a class="anchor" id="autotoc_md88"></a>
 Mesh-cannot-have-more-than-65000-vertices</h1>
 <p>A: This is the limit of <code>UGUI</code> on the number of vertices for a single <code>Graphic</code>. <code><a class="el" href="namespaceXCharts.html">XCharts</a></code> is draw chart on a single <code>Graphic</code>, so there is also this limitation. The solution can be referred to: <a href="#Can-display-more-than-1000-data">QA 10: Can display more than 1000 data</a> <br  />
 </p>
-<h1><a class="anchor" id="autotoc_md91"></a>
+<h1><a class="anchor" id="autotoc_md89"></a>
 Why-are-the-parameters-set-in-Serie-reset-after-they-run</h1>
 <p>A: Check whether <code>RemoveData()</code> and add new <code>Serie</code> in the code. If you want to keep the configuration of <code>Serie</code>, you can only <code>ClearData()</code> which just clear data and then readd the data to the old serie.</p>
-<h1><a class="anchor" id="autotoc_md92"></a>
+<h1><a class="anchor" id="autotoc_md90"></a>
 Why_are_many_custom_colors_lost_after_upgrading_to_1_6_0_How_should_I_upgrade</h1>
 <p>A: In version <code>1.6.0</code>, in order to reduce implicit conversion, all drawing related <code>Color</code> was changed to <code>Color32</code>, so some custom colors were lost. The main components affected are: <code>ItemStyle</code>, <code>LineStyle</code>, <code>AreaStyle</code>, <code>Vessel</code>, <code>VisualMap</code>, <code>AxisSplitArea</code>, <code>AxisSplitLine</code>, <code>GaugeAxis</code>,<code>SerieLabel</code>, etc. Can use the script <a href="https://github.com/monitor1394/unity-ugui-XCharts/blob/master/Assets/XCharts/Editor/Tools/UpgradeChartColor.cs">UpgradeChartColor.cs</a> to upgrade. The upgrade steps are as follows:</p><ol type="1">
 <li>Back up the project.</li>

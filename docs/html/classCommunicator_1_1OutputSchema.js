@@ -27,6 +27,12 @@ var classCommunicator_1_1OutputSchema =
     [ "PosZAbs", "classCommunicator_1_1OutputSchema.html#a642c2049199f6ec8c5cec4089222189b", null ],
     [ "PosZRel", "classCommunicator_1_1OutputSchema.html#a3e8526394dfa7ba6630c2b9ac713a25e", null ],
     [ "Reward", "classCommunicator_1_1OutputSchema.html#a2b111bcd93b19d8cb1a7c59218646120", null ],
+    [ "RotXAbs", "classCommunicator_1_1OutputSchema.html#a5403961d02595e1b20f621484141d3b7", null ],
+    [ "RotXRel", "classCommunicator_1_1OutputSchema.html#aed22f0edfd8adecdd52d73ea86bcbefc", null ],
+    [ "RotYAbs", "classCommunicator_1_1OutputSchema.html#a7c8ee61a8e742fa989f77db540a71e3a", null ],
+    [ "RotYRel", "classCommunicator_1_1OutputSchema.html#a45df0a595912f9d35366dfa12757439b", null ],
+    [ "RotZAbs", "classCommunicator_1_1OutputSchema.html#a83499f4af6bc0a7c2a08d6cf912e053f", null ],
+    [ "RotZRel", "classCommunicator_1_1OutputSchema.html#afe7d4636c26aed2473535c4a829870d4", null ],
     [ "ScreenCapture", "classCommunicator_1_1OutputSchema.html#a483142b466b6eed8025c8bf3d5fdb798", null ],
     [ "MsgType", "classCommunicator_1_1OutputSchema.html#a8b9ac753defd60e46bb10aecbd71b746", null ],
     [ "Version", "classCommunicator_1_1OutputSchema.html#aaa0e0b24cadcc0b468d7c82f5195f8c6", null ]

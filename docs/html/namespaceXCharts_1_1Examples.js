@@ -22,5 +22,6 @@ var namespaceXCharts_1_1Examples =
     [ "Example_LargeData", "classXCharts_1_1Examples_1_1Example__LargeData.html", "classXCharts_1_1Examples_1_1Example__LargeData" ],
     [ "Example_PieChart", "classXCharts_1_1Examples_1_1Example__PieChart.html", null ],
     [ "Example_Test", "classXCharts_1_1Examples_1_1Example__Test.html", null ],
-    [ "RewardChart", "classXCharts_1_1Examples_1_1RewardChart.html", null ]
+    [ "RewardChart", "classXCharts_1_1Examples_1_1RewardChart.html", null ],
+    [ "TriggerDistribution", "classXCharts_1_1Examples_1_1TriggerDistribution.html", null ]
 ];

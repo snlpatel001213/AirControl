@@ -10080,7 +10080,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 488, y: -84}
+  m_AnchoredPosition: {x: 573.3, y: -84}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1594258157
@@ -11620,7 +11620,7 @@ MonoBehaviour:
   longitude: -504.55
   latitude: -1650.4
   hour: 22
-  minutes: 18
+  minutes: 46
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731

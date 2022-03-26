@@ -94,7 +94,7 @@ var hierarchy =
     ] ],
     [ "XCharts.ChartText", "classXCharts_1_1ChartText.html", null ],
     [ "AirControl.ColorEncoding", "classAirControl_1_1ColorEncoding.html", null ],
-    [ "AirControl.communicator.Communicator", "classAirControl_1_1communicator_1_1Communicator.html", null ],
+    [ "airctrl.communicator.Communicator", "classairctrl_1_1communicator_1_1Communicator.html", null ],
     [ "Communicator.ControlSchema", "classCommunicator_1_1ControlSchema.html", null ],
     [ "XCharts.CoordinateChart", "classXCharts_1_1CoordinateChart.html", [
       [ "XCharts.CandlestickChart", "classXCharts_1_1CandlestickChart.html", null ],
@@ -159,9 +159,9 @@ var hierarchy =
       [ "Communicator.PrimitiveToStringConverter", "classCommunicator_1_1PrimitiveToStringConverter.html", null ]
     ] ],
     [ "JSONEncoder", null, [
-      [ "AirControl.communicator.NpEncoder", "classAirControl_1_1communicator_1_1NpEncoder.html", null ]
+      [ "airctrl.communicator.NpEncoder", "classairctrl_1_1communicator_1_1NpEncoder.html", null ]
     ] ],
-    [ "AirControl.utils.Launch", "classAirControl_1_1utils_1_1Launch.html", null ],
+    [ "airctrl.utils.unity.Launch", "classairctrl_1_1utils_1_1unity_1_1Launch.html", null ],
     [ "XCharts.LegendItem", "classXCharts_1_1LegendItem.html", null ],
     [ "Communicator.LevelSchema", "classCommunicator_1_1LevelSchema.html", null ],
     [ "Communicator.LidarSchema", "classCommunicator_1_1LidarSchema.html", null ],
@@ -211,6 +211,7 @@ var hierarchy =
       [ "FPSDisplay", "classFPSDisplay.html", null ],
       [ "KeyManual", "classKeyManual.html", null ],
       [ "OnScreenConsole", "classOnScreenConsole.html", null ],
+      [ "RandomInstanciate", "classRandomInstanciate.html", null ],
       [ "TakeScreenshot", "classTakeScreenshot.html", null ],
       [ "XCharts.Examples.Example00_CheatSheet", "classXCharts_1_1Examples_1_1Example00__CheatSheet.html", null ],
       [ "XCharts.Examples.Example01_UpdateData", "classXCharts_1_1Examples_1_1Example01__UpdateData.html", null ],
@@ -235,6 +236,7 @@ var hierarchy =
       [ "XCharts.Examples.Example_PieChart", "classXCharts_1_1Examples_1_1Example__PieChart.html", null ],
       [ "XCharts.Examples.Example_Test", "classXCharts_1_1Examples_1_1Example__Test.html", null ],
       [ "XCharts.Examples.RewardChart", "classXCharts_1_1Examples_1_1RewardChart.html", null ],
+      [ "XCharts.Examples.TriggerDistribution", "classXCharts_1_1Examples_1_1TriggerDistribution.html", null ],
       [ "XCharts.XChartsMgr", "classXCharts_1_1XChartsMgr.html", null ]
     ] ],
     [ "Communicator.OutputSchema", "classCommunicator_1_1OutputSchema.html", null ],
@@ -310,7 +312,7 @@ var hierarchy =
       [ "XCharts.SeriesDrawer", "classXCharts_1_1SeriesDrawer.html", null ]
     ] ],
     [ "XCharts.RingChart", "classXCharts_1_1RingChart.html", null ],
-    [ "AirControl.sample_generator.samples", "classAirControl_1_1sample__generator_1_1samples.html", null ],
+    [ "airctrl.sample_generator.samples", "classairctrl_1_1sample__generator_1_1samples.html", null ],
     [ "ScriptableObject", null, [
       [ "XCharts.XChartsSettings", "classXCharts_1_1XChartsSettings.html", null ]
     ] ],
@@ -319,7 +321,7 @@ var hierarchy =
     [ "Communicator.StaticUIControlsSchema", "classCommunicator_1_1StaticUIControlsSchema.html", null ],
     [ "XCharts.ChartEditorHelper.Styles", "classXCharts_1_1ChartEditorHelper_1_1Styles.html", null ],
     [ "Communicator.TODSchema", "classCommunicator_1_1TODSchema.html", null ],
-    [ "AirControl.environment.Trigger", "classAirControl_1_1environment_1_1Trigger.html", null ],
+    [ "airctrl.environment.Trigger", "classairctrl_1_1environment_1_1Trigger.html", null ],
     [ "Communicator.UIControlsSchema", "classCommunicator_1_1UIControlsSchema.html", null ],
     [ "Communicator.UISchema", "classCommunicator_1_1UISchema.html", null ],
     [ "Communicator.WeatherSchema", "classCommunicator_1_1WeatherSchema.html", null ],

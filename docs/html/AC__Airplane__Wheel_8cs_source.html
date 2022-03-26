@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -137,93 +137,82 @@ $(document).ready(function(){initNavTree('AC__Airplane__Wheel_8cs_source.html','
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            wheelCol = GetComponent&lt;WheelCollider&gt;();</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="comment">// void OnCollisionExit(Collision other) {</span></div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="comment">//     string colliderObjectTag = other.gameObject.tag;</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        <span class="comment">//     Debug.Log(&quot;Wheel collided with : &quot; + colliderObjectTag);</span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="comment">//     if ( colliderObjectTag != &quot;Runway&quot;) {</span></div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="comment">//         StaticOutputSchema.IfCollision = true;</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="comment">//         StaticOutputSchema.CollisionObject = colliderObjectTag;</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        <span class="comment">//     }</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// }</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">void</span> Update(){</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            WheelHit hit;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">if</span> (wheelCol.GetGroundHit(out hit)) {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordtype">string</span> surface = hit.collider.tag;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordtype">float</span> wheelPenalty = 10.0f;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">if</span>(hit.collider.tag != <span class="stringliteral">&quot;Runway&quot;</span>){</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    CommonFunctions.MaxR -= wheelPenalty;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    StaticOutputSchema.IfCollision = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    StaticOutputSchema.CollisionObject = surface;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="comment">// Update is called once per frame</span></div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">        #region Custom Method</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__Airplane__Wheel.html#a6488dff41e3e90d5d219438fb85e9d51">initWheel</a>(){</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span> (wheelCol){</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="comment">//setting wheel torque to really small, this way wheel dont exert ant force or get locked</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                wheelCol.motorTorque = 0.0000000001f;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        }</div>
-<div class="line"><a name="l00088"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__Airplane__Wheel.html#aa484b1c1f6485fa04caea405bf2521f4">   88</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__Airplane__Wheel.html#aa484b1c1f6485fa04caea405bf2521f4">HandleWheel</a>(<a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html">AC_BaseAirplane_Input</a> input)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordflow">if</span>(wheelCol)</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                wheelCol.GetWorldPose(out worldPos, out worldRot);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                <span class="keywordflow">if</span>(wheelGraphic)</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                {   <span class="comment">//updating wheel rotation </span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                    wheelGraphic.rotation = worldRot;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    wheelGraphic.position = worldPos;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                }<span class="comment">// handle Else</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="keywordflow">if</span> (isBraking)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                    <span class="keywordflow">if</span>(input.Brake &gt; 0.1f)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="comment">//slowly apply brake</span></div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        slowlyBrake = Mathf.Lerp(slowlyBrake,input.Brake*brakePower, Time.deltaTime );</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                        wheelCol.brakeTorque = slowlyBrake;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                        <span class="comment">// Release motor torque to move forward</span></div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                        wheelCol.motorTorque = 0.0f;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    {</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                        <span class="comment">//relase the brake</span></div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                        slowlyBrake = 0f;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        wheelCol.brakeTorque = 0.0f;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                        <span class="comment">// small motor torque not to allow airplane roll backward</span></div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;                        wheelCol.motorTorque = 0.00001f;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                    }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                }</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                <span class="keywordflow">if</span>(isSteering)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                    wheelCol.steerAngle = -input.Yaw * steerAngle;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="comment">// check to see if the wheels are grounded</span></div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                isGrounded = wheelCol.isGrounded;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                </div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        }</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;<span class="preprocessor">        #endregion</span></div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160; </div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keywordtype">void</span> Update(){</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            WheelHit hit;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span> (wheelCol.GetGroundHit(out hit) &amp;&amp; (StaticOutputSchema.IfCollision == <span class="keyword">false</span>)){</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordtype">string</span> surface = hit.collider.tag;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordtype">float</span> wheelPenalty = 100.0f;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="keywordflow">if</span>(hit.collider.tag != <span class="stringliteral">&quot;Runway&quot;</span>){</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    StaticOutputSchema.Reward -= wheelPenalty;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    StaticOutputSchema.IfCollision = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    StaticOutputSchema.CollisionObject = surface;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="comment">// Update is called once per frame</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="preprocessor">        #region Custom Method</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__Airplane__Wheel.html#a6488dff41e3e90d5d219438fb85e9d51">initWheel</a>(){</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordflow">if</span> (wheelCol){</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="comment">//setting wheel torque to really small, this way wheel dont exert ant force or get locked</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                wheelCol.motorTorque = 0.0000000001f;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        }</div>
+<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="classAirControl_1_1AC__Airplane__Wheel.html#aa484b1c1f6485fa04caea405bf2521f4">   77</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1AC__Airplane__Wheel.html#aa484b1c1f6485fa04caea405bf2521f4">HandleWheel</a>(<a class="code" href="classAirControl_1_1AC__BaseAirplane__Input.html">AC_BaseAirplane_Input</a> input)</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            <span class="keywordflow">if</span>(wheelCol)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;                wheelCol.GetWorldPose(out worldPos, out worldRot);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keywordflow">if</span>(wheelGraphic)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                {   <span class="comment">//updating wheel rotation </span></div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                    wheelGraphic.rotation = worldRot;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                    wheelGraphic.position = worldPos;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                }<span class="comment">// handle Else</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">if</span> (isBraking)</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                    <span class="keywordflow">if</span>(input.Brake &gt; 0.1f)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                    {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                        <span class="comment">//slowly apply brake</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                        slowlyBrake = Mathf.Lerp(slowlyBrake,input.Brake*brakePower, Time.deltaTime );</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        wheelCol.brakeTorque = slowlyBrake;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        <span class="comment">// Release motor torque to move forward</span></div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        wheelCol.motorTorque = 0.0f;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                    {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                        <span class="comment">//relase the brake</span></div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                        slowlyBrake = 0f;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                        wheelCol.brakeTorque = 0.0f;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                        <span class="comment">// small motor torque not to allow airplane roll backward</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                        wheelCol.motorTorque = 0.00001f;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                    }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordflow">if</span>(isSteering)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    wheelCol.steerAngle = -input.Yaw * steerAngle;</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                <span class="comment">// check to see if the wheels are grounded</span></div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                isGrounded = wheelCol.isGrounded;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;        }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;<span class="preprocessor">        #endregion</span></div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160; </div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    }</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160; </div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <div class="ttc" id="aclassAirControl_1_1AC__BaseAirplane__Input_html"><div class="ttname"><a href="classAirControl_1_1AC__BaseAirplane__Input.html">AirControl.AC_BaseAirplane_Input</a></div><div class="ttdoc">Base class to listen for keyboard Inputs</div><div class="ttdef"><b>Definition:</b> <a href="AC__BaseAirplane__Input_8cs_source.html#l00011">AC_BaseAirplane_Input.cs:11</a></div></div>
-<div class="ttc" id="aclassAirControl_1_1AC__Airplane__Wheel_html_a6488dff41e3e90d5d219438fb85e9d51"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Wheel.html#a6488dff41e3e90d5d219438fb85e9d51">AirControl.AC_Airplane_Wheel.initWheel</a></div><div class="ttdeci">void initWheel()</div><div class="ttdoc">Init wheel set the motor torque to very small nuber to allow it to roll freely</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Wheel_8cs_source.html#l00077">AC_Airplane_Wheel.cs:77</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1AC__Airplane__Wheel_html_a6488dff41e3e90d5d219438fb85e9d51"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Wheel.html#a6488dff41e3e90d5d219438fb85e9d51">AirControl.AC_Airplane_Wheel.initWheel</a></div><div class="ttdeci">void initWheel()</div><div class="ttdoc">Init wheel set the motor torque to very small nuber to allow it to roll freely</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Wheel_8cs_source.html#l00066">AC_Airplane_Wheel.cs:66</a></div></div>
 <div class="ttc" id="anamespaceAirControl_html"><div class="ttname"><a href="namespaceAirControl.html">AirControl</a></div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Menus_8cs_source.html#l00006">AC_Airplane_Menus.cs:6</a></div></div>
 <div class="ttc" id="anamespaceCommunicator_html"><div class="ttname"><a href="namespaceCommunicator.html">Communicator</a></div><div class="ttdef"><b>Definition:</b> <a href="InputHandle_8cs_source.html#l00010">InputHandle.cs:10</a></div></div>
-<div class="ttc" id="aclassAirControl_1_1AC__Airplane__Wheel_html_aa484b1c1f6485fa04caea405bf2521f4"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Wheel.html#aa484b1c1f6485fa04caea405bf2521f4">AirControl.AC_Airplane_Wheel.HandleWheel</a></div><div class="ttdeci">void HandleWheel(AC_BaseAirplane_Input input)</div><div class="ttdoc">Handle whele graphics, and steering</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Wheel_8cs_source.html#l00088">AC_Airplane_Wheel.cs:88</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1AC__Airplane__Wheel_html_aa484b1c1f6485fa04caea405bf2521f4"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Wheel.html#aa484b1c1f6485fa04caea405bf2521f4">AirControl.AC_Airplane_Wheel.HandleWheel</a></div><div class="ttdeci">void HandleWheel(AC_BaseAirplane_Input input)</div><div class="ttdoc">Handle whele graphics, and steering</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Wheel_8cs_source.html#l00077">AC_Airplane_Wheel.cs:77</a></div></div>
 <div class="ttc" id="aclassAirControl_1_1AC__Airplane__Wheel_html"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Wheel.html">AirControl.AC_Airplane_Wheel</a></div><div class="ttdoc">Handle wheel braking and steering</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Wheel_8cs_source.html#l00011">AC_Airplane_Wheel.cs:11</a></div></div>
 <div class="ttc" id="anamespaceCommons_html"><div class="ttname"><a href="namespaceCommons.html">Commons</a></div><div class="ttdef"><b>Definition:</b> <a href="CommonConfigs_8cs_source.html#l00009">CommonConfigs.cs:9</a></div></div>
 <!-- HTML footer for doxygen 1.8.17-->

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['examples_1198',['Examples',['../namespaceXCharts_1_1Examples.html',1,'XCharts']]],
-  ['xcharts_1199',['XCharts',['../namespaceXCharts.html',1,'']]],
-  ['xugl_1200',['XUGL',['../namespaceXUGL.html',1,'']]]
+  ['examples_1205',['Examples',['../namespaceXCharts_1_1Examples.html',1,'XCharts']]],
+  ['xcharts_1206',['XCharts',['../namespaceXCharts.html',1,'']]],
+  ['xugl_1207',['XUGL',['../namespaceXUGL.html',1,'']]]
 ];
