@@ -116,7 +116,7 @@ graph TD
   OR 
   Use relative imports
 ```
-**Pypi Release-Alpha** `Not Tested` [![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/airctrl) : https://pypi.org/project/airctrl/
+**Pypi Release** `Not Tested` [![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/airctrl) : https://pypi.org/project/airctrl/
 ```
   pip install airctrl
 ```
