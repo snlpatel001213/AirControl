@@ -162,4 +162,3 @@ We love your input! We want to make contributing to AirControl as easy and trans
 ### Current Contributors
 <a href = "https://github.com/snlpatel001213/AirControl/graphs/contributors">
 <img src = "https://contrib.rocks/image?repo=snlpatel001213/AirControl"/>
-</a>
