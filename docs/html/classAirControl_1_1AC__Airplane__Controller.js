@@ -8,6 +8,9 @@ var classAirControl_1_1AC__Airplane__Controller =
     [ "controlSurfaces", "classAirControl_1_1AC__Airplane__Controller.html#a2c9e342337d2f704f4825bed7c9df57a", null ],
     [ "engines", "classAirControl_1_1AC__Airplane__Controller.html#afb5be84781e8d0bf909b1563f2f3fc5e", null ],
     [ "input", "classAirControl_1_1AC__Airplane__Controller.html#a79a67116146dd536245dd9c02dfa5666", null ],
+    [ "IsFlyingObject", "classAirControl_1_1AC__Airplane__Controller.html#a408d53e964de6b95a8cd85f88f4d9546", null ],
+    [ "IsGroundedObject", "classAirControl_1_1AC__Airplane__Controller.html#adb221cc25a8261f4aa64ef80a75258b0", null ],
+    [ "IsTaxiingObject", "classAirControl_1_1AC__Airplane__Controller.html#a88fe0964aa7a1a427afb18a7441dcd5c", null ],
     [ "wheels", "classAirControl_1_1AC__Airplane__Controller.html#ae51a9655a11a925700bf23882672efe7", null ],
     [ "CurrentAGL", "classAirControl_1_1AC__Airplane__Controller.html#aa0382a9ca85286c9e30f265793ee398f", null ],
     [ "CurrentMSL", "classAirControl_1_1AC__Airplane__Controller.html#a0514624fb89ba55ca766a3646823b317", null ]

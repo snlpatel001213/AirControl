@@ -4,14 +4,15 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using Communicator;
 using Commons;
-using System.IO;
+using UnityEngine.UI;
 using System;
+using UnityEditor;
 
 namespace AirControl
 {
 
     public enum AirplaneState{
-        LANDED, 
+        Taxiing, 
         GROUNDED, 
         FLYING,
     }
@@ -52,10 +53,17 @@ namespace AirControl
         public List<AC_Airplane_ControlSurface> controlSurfaces = new List<AC_Airplane_ControlSurface>();
 
         // Starting from ground
-        private AirplaneState airplaneState =  AirplaneState.LANDED;
+        private AirplaneState airplaneState =  AirplaneState.Taxiing;
         [SerializeField] private bool isGrounded =  true;
-        [SerializeField] private bool isLanded =  true;
+        [SerializeField] private bool isTaxiing =  true;
         [SerializeField] private bool isFlying =  false;
+
+        [Header("Airplane States")]
+        [Tooltip("Attach Airplane state gameobject from UI canvas here")]
+        public Toggle IsGroundedObject;
+        public Toggle IsFlyingObject;
+        public Toggle IsTaxiingObject;
+        
 
         // Meadian sea level
         private float currentMSL;
@@ -68,6 +76,14 @@ namespace AirControl
 
         // private int lastCommCounter=0;
         // private int currCommCounter=0;
+
+        private float startPos_x; 
+        private float startPos_y;
+        private float startPos_z;
+        private float startRot_x; 
+        private float startRot_y;
+        private float startRot_z;
+        
         #endregion
 
         #region Properties
@@ -82,9 +98,7 @@ namespace AirControl
         #region Constants
         const float poundToKilos = 0.453592f;
         const float metersToFeets = 3.28084f;
-        private float start_x; 
-        private float start_y;
-        private float start_z;
+        
         #endregion
 
         #region Builtin Methods
@@ -97,10 +111,15 @@ namespace AirControl
 
             //calculate final mass in kilos
             float finalMass =  airplaneWeight * poundToKilos;
-            start_x = rb.position.x;
-            start_y = rb.position.y; 
-            start_z = rb.position.z;
-            Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",start_x, start_y, start_z );
+            startPos_x = rb.position.x;
+            startPos_y = rb.position.y; 
+            startPos_z = rb.position.z;
+            startRot_x = rb.rotation.eulerAngles.x;
+            startRot_y = rb.rotation.eulerAngles.y; 
+            startRot_z = rb.rotation.eulerAngles.z;
+            Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",startPos_x, startPos_y, startPos_z );
+            Debug.LogFormat("Starting Rotation  x : {0} y: {1} z: {2} ",startRot_x, startRot_y, startRot_z );
+
             
             // if rigid body added then add center of mass
             if (rb){
@@ -125,28 +144,93 @@ namespace AirControl
                     }
                 }
             } 
-
             InvokeRepeating("CheckGrounded", 1f, 1f); 
-            InvokeRepeating("DetectAirplaneStuck", 5f, 5f); 
-            // InvokeRepeating("DetectCounterStuck", 5f, 5f); 
+            // InvokeRepeating("DetectAirplaneStuck", 5f, 5f); 
         }
-        void update()
+        void Update()
         {
-            // rewardCalculator();
+            rewardCalculator();
+            broadcastPosition();
+            broadcastRotation();
         }
 
+        /// <summary>
+        /// calculate abolute and relative position of the Airplane. 
+        /// Absolute -  w.r.t. world
+        /// Relative - w.r.t initila position
+        /// </summary>
+        void broadcastPosition(){
+            Vector3 absolutePosition = rb.position;
+            StaticOutputSchema.PosXAbs = absolutePosition.x;
+            StaticOutputSchema.PosYAbs = absolutePosition.y;
+            StaticOutputSchema.PosZAbs = absolutePosition.z;
+            Vector3 relativePosition = rb.position - new Vector3(startPos_x, startPos_y, startPos_z);
+            StaticOutputSchema.PosXRel =  relativePosition.x;
+            StaticOutputSchema.PosYRel =  relativePosition.y;
+            StaticOutputSchema.PosZRel =  relativePosition.z;
+        }
+
+        void broadcastRotation(){
+            Vector3 absoluteRotation = rb.rotation.eulerAngles;
+            StaticOutputSchema.RotXAbs = absoluteRotation.x;
+            StaticOutputSchema.RotYAbs = absoluteRotation.y;
+            StaticOutputSchema.RotZAbs = absoluteRotation.z;
+            Vector3 relativeRotation = rb.rotation.eulerAngles - new Vector3(startRot_x, startRot_y, startRot_z);
+            StaticOutputSchema.RotXRel =  relativeRotation.x;
+            StaticOutputSchema.RotYRel =  relativeRotation.y;
+            StaticOutputSchema.RotZRel =  relativeRotation.z;
+            // Debug.LogFormat("Abs Rotation  x : {0} y: {1} z: {2} ",absoluteRotation.x, absoluteRotation.y, absoluteRotation.z );
+            // Debug.LogFormat("Relative Rotation  x : {0} y: {1} z: {2} ", relativeRotation.x, relativeRotation.y, relativeRotation.z);
+        }
+
+        /// <summary>
+        /// Calculates reward for RL optimization
+        /// </summary>
         // void rewardCalculator(){
         //     float Height = 100f;
         //     float Base = start_y;
         //     float RateOfInclination = 230f;
         //     float Angle = 3f;
-        //     double ideal_height= Height+((Base-Height)/(1.0f+Math.Pow(rb.position.z/RateOfInclination,Angle)));
-        //     double Penalty = Math.Pow(ideal_height-rb.position.y, 2);
-        //     MaxR -= Penalty;
-        //     StaticOutputSchema.Reward = MaxR;
+        //     float ideal_height= Height+((Base-Height)/(1.0f+ (float)Math.Pow(rb.position.z/RateOfInclination,Angle)));
+        //     float Penalty = (float)Math.Pow(ideal_height-rb.position.y, 2);
+        //     CommonFunctions.MaxR -= Penalty;
+        //     Debug.Log("Reward : "+CommonFunctions.MaxR );
+        //     StaticOutputSchema.Reward = CommonFunctions.MaxR;
         //     // Debug.LogFormat( "Ideal Height : {0} |  Position Up (y) : {1} | Position Forward (z) : {2} ",ideal_height, rb.position.y, rb.position.z);
+        // }
 
-        // // }
+        /// <summary>
+        /// Calculates reward for RL optimization
+        /// </summary>
+        void rewardCalculator(){
+
+            /// Don't call once the collision is registered, 
+            /// This will help in 
+            if (StaticOutputSchema.IfCollision == false)
+            {
+                if (isTaxiing){
+                    Debug.DrawLine(rb.transform.forward,rb.velocity);
+                    float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward)*0.1f;
+                    // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
+                    float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
+                    float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                    // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
+                    StaticOutputSchema.Reward = forward_velocity+l2_up-l2_side;
+                }
+                if (isFlying){
+                    Debug.DrawLine(rb.transform.forward,rb.velocity);
+                    float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward);
+                    // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
+                    float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
+                    float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                    // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
+                    StaticOutputSchema.Reward = forward_velocity+currentMSL-l2_side; ;
+                }
+            }
+            
+        
+        }
+
         #endregion
 
         #region Custom Methods
@@ -257,38 +341,34 @@ namespace AirControl
                 }
                 if(groundedCount ==  wheels.Count)
                 {
-                    isGrounded = true;
-                    isFlying = false;
-                    isLanded = false;                    
-                    // update to API
-                    StaticOutputSchema.IsGrounded = isGrounded;
-                    StaticOutputSchema.IsLanded = isLanded;
-                    StaticOutputSchema.IsFlying = isLanded;
-                    if(rb.velocity.magnitude < 1f){
-                        isLanded = true;
+                    if(rb.velocity.magnitude > 1f){
+                        isTaxiing = true;
                         isGrounded = false;
                         isFlying = false;
-                        // update to API
-                        StaticOutputSchema.IsGrounded = isGrounded;
-                        StaticOutputSchema.IsLanded = isLanded;
-                        StaticOutputSchema.IsFlying = isLanded;
+                        // update to API and UI
+                        IsGroundedObject.isOn = StaticOutputSchema.IsGrounded = isGrounded;
+                        IsTaxiingObject.isOn = StaticOutputSchema.IsTaxiing = isTaxiing;
+                        IsFlyingObject.isOn = StaticOutputSchema.IsFlying = isFlying;
                     }
                     else{
-                        isLanded = false;
+                        isTaxiing = false;
                         isGrounded = true;
                         isFlying = false;
-                        StaticOutputSchema.IsLanded = isLanded;
-                        StaticOutputSchema.IsGrounded = isGrounded;
+                        // update to API and UI
+                        IsGroundedObject.isOn = StaticOutputSchema.IsGrounded = isGrounded;
+                        IsTaxiingObject.isOn = StaticOutputSchema.IsTaxiing = isTaxiing;
+                        IsFlyingObject.isOn = StaticOutputSchema.IsFlying = isFlying;
                     }
                 }
                 else
                 {
-                    isLanded = false;
+                    isTaxiing = false;
                     isGrounded = false;
                     isFlying = true;
-                    StaticOutputSchema.IsGrounded = isGrounded;
-                    StaticOutputSchema.IsLanded = isLanded;
-                    StaticOutputSchema.IsFlying = isLanded;
+                    // update to API and UI
+                    IsGroundedObject.isOn = StaticOutputSchema.IsGrounded = isGrounded;
+                    IsTaxiingObject.isOn = StaticOutputSchema.IsTaxiing = isTaxiing;
+                    IsFlyingObject.isOn = StaticOutputSchema.IsFlying = isFlying;
                 }
 
             }
@@ -296,23 +376,23 @@ namespace AirControl
         /// <summary>
         /// Checking if the airplane is stuck in the same position. If it is stuck, it will reload the level.
         /// </summary>
-        private void DetectAirplaneStuck()
-        {
-            currAirplanePosition = rb.transform.localPosition;
-            if(currAirplanePosition == lastAirplanePosition)
-            {
-                StaticOutputSchema.log = "Airplane was stuck";
-                Debug.LogError("Airplane was stuck");
+        // private void DetectAirplaneStuck()
+        // {
+        //     currAirplanePosition = rb.transform.localPosition;
+        //     if(currAirplanePosition == lastAirplanePosition)
+        //     {
+        //         StaticOutputSchema.log = "Airplane was stuck";
+        //         Debug.LogError("Airplane was stuck");
                 
-                // Relaod the level 
-                SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
-                SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
-                StaticOutputSchema.IfCollision = true;
-                StaticOutputSchema.CollisionObject = "Stuck";
-            }
-            lastAirplanePosition = currAirplanePosition;
+        //         // Relaod the level 
+        //         SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene().name);
+        //         SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().name); 
+        //         StaticOutputSchema.IfCollision = true;
+        //         StaticOutputSchema.CollisionObject = "Stuck";
+        //     }
+        //     lastAirplanePosition = currAirplanePosition;
             
-        }
+        // }
 
       
         #endregion

@@ -1,0 +1,13 @@
+<map id="XCharts.RadarChartEditor" name="XCharts.RadarChartEditor">
+<area shape="rect" id="node1" title="Editor class used to edit UI RadarChart." alt="" coords="39,577,226,604"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1BaseChartEditor.html" title="Editor class used to edit UI BaseChart." alt="" coords="69,501,196,528"/>
+<area shape="rect" id="node3" title=" " alt="" coords="81,412,141,439"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1BaseChart.html" title="The base class of all charts. 所有Chart的基类。" alt="" coords="165,412,308,439"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="12,81,133,108"/>
+<area shape="rect" id="node9" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="149,171,281,197"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1Settings.html" title="Global parameter setting component. The default value can be used in general, and can be adjusted whe..." alt="" coords="89,323,219,349"/>
+<area shape="rect" id="node8" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="212,247,341,273"/>
+<area shape="rect" id="node10" href="$classXCharts_1_1ChartTheme.html" title="Theme. 主题相关配置。" alt="" coords="243,323,399,349"/>
+<area shape="rect" id="node11" href="$classXCharts_1_1Series.html" title="the list of series. 系列列表。每个系列通过 type 决定自己的图表类型。" alt="" coords="423,323,539,349"/>
+</map>

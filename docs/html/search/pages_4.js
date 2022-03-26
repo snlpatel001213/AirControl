@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['piper_20framework_23',['PIPER Framework',['../pageFramework.html',1,'']]],
-  ['preparation_20of_20the_20hbm_20model_20_26_20metadata_24',['Preparation of the HBM model &amp; Metadata',['../pageHbmPreparation.html',1,'']]]
+  ['配置项手册_1932',['配置项手册',['../md__home_supatel_Games_New_AirControl_2020_Assets_XCharts_Documentation_XCharts_xE9_x85_x8D_xE7_d610393b384b4d901b7da663be67e57b.html',1,'']]]
 ];

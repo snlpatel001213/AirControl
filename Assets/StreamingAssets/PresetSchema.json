@@ -1,6 +1,6 @@
 {
   "MsgType": "StartUp",
-  "Version": "0.1.5",
+  "Version": "1.2.0",
   "AirplaneMass": 1000.0,
   "Fuel": 61.0,
   "FuelBurnRate": 6.1,

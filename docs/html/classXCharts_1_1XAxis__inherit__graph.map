@@ -1,0 +1,6 @@
+<map id="XCharts.XAxis" name="XCharts.XAxis">
+<area shape="rect" id="node1" title="The x axis in cartesian(rectangular) coordinate. a grid component can place at most 2 x axis,..." alt="" coords="15,229,128,256"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1Axis.html" title="The axis in rectangular coordinate. 直角坐标系的坐标轴组件。" alt="" coords="46,155,97,181"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="7,80,136,107"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="5,5,137,32"/>
+</map>

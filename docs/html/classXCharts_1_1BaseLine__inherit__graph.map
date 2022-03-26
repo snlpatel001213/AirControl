@@ -1,0 +1,11 @@
+<map id="XCharts.BaseLine" name="XCharts.BaseLine">
+<area shape="rect" id="node1" title="Settings related to base line. 线条基础配置。" alt="" coords="355,132,489,159"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1AxisLine.html" title="Settings related to axis line. 坐标轴轴线。" alt="" coords="573,5,704,32"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1AxisSplitLine.html" title="Split line of axis in grid area. 坐标轴在 grid 区域中的分隔线。" alt="" coords="559,56,719,83"/>
+<area shape="rect" id="node6" href="$classXCharts_1_1AxisTick.html" title="Settings related to axis tick. 坐标轴刻度相关设置。" alt="" coords="573,107,704,133"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1GaugeAxisLine.html" title=" " alt="" coords="552,157,725,184"/>
+<area shape="rect" id="node8" href="$classXCharts_1_1GaugeAxisSplitLine.html" title="分割线" alt="" coords="537,208,740,235"/>
+<area shape="rect" id="node9" href="$classXCharts_1_1GaugeAxisTick.html" title="刻度" alt="" coords="552,259,725,285"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="185,132,307,159"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="5,132,137,159"/>
+</map>

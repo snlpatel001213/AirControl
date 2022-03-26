@@ -1,0 +1,18 @@
+<map id="XCharts.ComponentTheme" name="XCharts.ComponentTheme">
+<area shape="rect" id="node1" title=" " alt="" coords="363,284,559,311"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1BaseAxisTheme.html" title=" " alt="" coords="611,132,793,159"/>
+<area shape="rect" id="node11" href="$classXCharts_1_1DataZoomTheme.html" title=" " alt="" coords="607,183,797,209"/>
+<area shape="rect" id="node12" href="$classXCharts_1_1LegendTheme.html" title=" " alt="" coords="618,233,786,260"/>
+<area shape="rect" id="node13" href="$classXCharts_1_1SubTitleTheme.html" title=" " alt="" coords="615,284,789,311"/>
+<area shape="rect" id="node14" href="$classXCharts_1_1TitleTheme.html" title=" " alt="" coords="627,335,777,361"/>
+<area shape="rect" id="node15" href="$classXCharts_1_1TooltipTheme.html" title=" " alt="" coords="620,385,784,412"/>
+<area shape="rect" id="node16" href="$classXCharts_1_1VisualMapTheme.html" title=" " alt="" coords="607,436,797,463"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="185,284,315,311"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="5,284,137,311"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1AngleAxisTheme.html" title=" " alt="" coords="849,5,1035,32"/>
+<area shape="rect" id="node6" href="$classXCharts_1_1AxisTheme.html" title=" " alt="" coords="867,56,1017,83"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1GaugeAxisTheme.html" title=" " alt="" coords="847,107,1037,133"/>
+<area shape="rect" id="node8" href="$classXCharts_1_1PolarAxisTheme.html" title=" " alt="" coords="851,157,1033,184"/>
+<area shape="rect" id="node9" href="$classXCharts_1_1RadarAxisTheme.html" title=" " alt="" coords="849,208,1035,235"/>
+<area shape="rect" id="node10" href="$classXCharts_1_1RadiusAxisTheme.html" title=" " alt="" coords="845,259,1039,285"/>
+</map>

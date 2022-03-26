@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">0.1.0</span>
+   &#160;<span id="projectnumber">1.2.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -105,233 +105,263 @@ $(document).ready(function(){initNavTree('Sun_8cs_source.html',''); initResizabl
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> System.Collections.Generic;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> UnityEngine;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">using</span> <a class="code" href="namespaceCommunicator.html">Communicator</a>;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAirControl.html">AirControl</a></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    [RequireComponent(typeof(Light))]</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    [ExecuteInEditMode]</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classAirControl_1_1Sun.html">   14</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAirControl_1_1Sun.html">Sun</a> : MonoBehaviour</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        [SerializeField]</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordtype">float</span> longitude;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        [SerializeField]</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keywordtype">float</span> latitude;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        [SerializeField]</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        [Range(0, 24)]</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordtype">int</span> hour;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> UnityEngine.UI;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespaceAirControl.html">AirControl</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    [RequireComponent(typeof(Light))]</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    [ExecuteInEditMode]</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classAirControl_1_1Sun.html">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="classAirControl_1_1Sun.html">Sun</a> : MonoBehaviour</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="comment">//UI slider</span></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span> GameObject sliderAndText;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span> Toggle sunLocationControl;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span> Slider longitudeSlider;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">public</span> Slider latitudeSlider;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">public</span> Slider sunHourSlider;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">public</span> Slider sunMinuteSlider;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        [SerializeField]</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        [Range(0, 60)]</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordtype">int</span> minutes;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        DateTime time;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        <span class="keyword">new</span> Light light;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        [SerializeField]</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">float</span> timeSpeed = 1;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keywordtype">float</span> longitude;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordtype">float</span> latitude;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        [Range(0, 24)]</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keywordtype">int</span> hour;</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        [SerializeField]</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordtype">int</span> frameSteps = 1;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> frameStep;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        [Range(0, 60)]</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordtype">int</span> minutes;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        [SerializeField]</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        DateTime date;</div>
-<div class="line"><a name="l00047"></a><span class="lineno"><a class="line" href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">   47</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">SetTime</a>(<span class="keywordtype">int</span> hour, <span class="keywordtype">int</span> minutes) {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            this.hour = hour;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            this.minutes = minutes;            </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            OnValidate();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">   57</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">SetLocation</a>(<span class="keywordtype">float</span> longitude, <span class="keywordtype">float</span> latitude){</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          this.longitude = longitude;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          this.latitude = latitude;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="comment">// public void SetDate(DateTime dateTime){</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="comment">//  this.hour = dateTime.Hour;</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="comment">//  this.minutes = dateTime.Minute;</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="comment">//  this.date = dateTime.Date;</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="comment">//  OnValidate();</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <span class="comment">// }</span></div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> SetUpdateSteps(<span class="keywordtype">int</span> i) {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            frameSteps = i;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> SetTimeSpeed(<span class="keywordtype">float</span> speed) {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            timeSpeed = speed;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            light = GetComponent&lt;Light&gt;();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            time = DateTime.Now;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            hour = time.Hour;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            minutes = time.Minute;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            date = time.Date;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnValidate()</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        DateTime time;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">new</span> Light light;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordtype">float</span> timeSpeed = 1;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keywordtype">int</span> frameSteps = 1;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordtype">int</span> frameStep;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        [SerializeField]</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        DateTime date;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">   57</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">SetTime</a>(<span class="keywordtype">int</span> hour, <span class="keywordtype">int</span> minutes) {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            this.hour = hour;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            this.minutes = minutes;            </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            OnValidate();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno"><a class="line" href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">   67</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">SetLocation</a>(<span class="keywordtype">float</span> longitude, <span class="keywordtype">float</span> latitude){</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          this.longitude = longitude;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          this.latitude = latitude;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="comment">// public void SetDate(DateTime dateTime){</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="comment">//  this.hour = dateTime.Hour;</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">//  this.minutes = dateTime.Minute;</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">//  this.date = dateTime.Date;</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="comment">//  OnValidate();</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        <span class="comment">// }</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> SetUpdateSteps(<span class="keywordtype">int</span> i) {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            frameSteps = i;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> SetTimeSpeed(<span class="keywordtype">float</span> speed) {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            timeSpeed = speed;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> Awake()</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            time = date + <span class="keyword">new</span> TimeSpan(hour, minutes, 0);</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> FixedUpdate()</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        {   </div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">            #region IOSwitch</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;            <span class="keywordflow">if</span>(StaticTODSchema.IsActive)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="keywordtype">float</span> sunLatitude = StaticTODSchema.SunLatitude;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="keywordtype">float</span> sunLongitude = StaticTODSchema.SunLongitude;</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="keywordtype">int</span> sunHour = StaticTODSchema.Hour;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="keywordtype">int</span> sunMinute = StaticTODSchema.Minute;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <a class="code" href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">SetTime</a>(sunHour, sunMinute);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <a class="code" href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">SetLocation</a>(sunLatitude, sunLongitude);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="comment">// set is active to false to not let this loop run for all the updates</span></div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                StaticTODSchema.IsActive =<span class="keyword">false</span>;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            }</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;<span class="preprocessor">            #endregion</span></div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            time = time.AddSeconds(timeSpeed * Time.deltaTime);</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">if</span> (frameStep==0) {</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                SetPosition();</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            }</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            frameStep = (frameStep + 1) % frameSteps;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160; </div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        }</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        <span class="keywordtype">void</span> SetPosition()</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        {</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160; </div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            Vector3 angles = <span class="keyword">new</span> Vector3();</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="keywordtype">double</span> alt;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            <span class="keywordtype">double</span> azi;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            SunPosition.CalculateSunPosition(time, (<span class="keywordtype">double</span>)latitude, (<span class="keywordtype">double</span>)longitude, out azi, out alt);</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            angles.x = (float)alt * Mathf.Rad2Deg;</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            angles.y = (<span class="keywordtype">float</span>)azi * Mathf.Rad2Deg;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="comment">//UnityEngine.Debug.Log(angles);</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            transform.localRotation = Quaternion.Euler(angles);</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            light.intensity = Mathf.InverseLerp(-12, 0, angles.x);</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;        }</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>SunPosition</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">double</span> Deg2Rad = Math.PI / 180.0;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">double</span> Rad2Deg = 180.0 / Math.PI;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            light = GetComponent&lt;Light&gt;();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            time = DateTime.Now;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            hour = time.Hour;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            minutes = time.Minute;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            date = time.Date;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> OnValidate()</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            time = date + <span class="keyword">new</span> TimeSpan(hour, minutes, 0);</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">void</span> FixedUpdate()</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;        {   </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;            </div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordtype">float</span> sunLatitude=-66f;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordtype">float</span> sunLongitude=-45f;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordtype">int</span> sunHour=1;</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            <span class="keywordtype">int</span> sunMinute=1;</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordtype">bool</span> isActive =  sunLocationControl.isOn;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            sliderAndText.SetActive(isActive);</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            <span class="keywordflow">if</span>(isActive)</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            {  </div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                sunLatitude = longitudeSlider.value;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                sunLongitude = latitudeSlider.value;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                sunHour = (int)sunHourSlider.value;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                sunMinute = (<span class="keywordtype">int</span>)sunMinuteSlider.value;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <a class="code" href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">SetTime</a>(sunHour, sunMinute);</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <a class="code" href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">SetLocation</a>(sunLatitude, sunLongitude);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            }</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;<span class="preprocessor">            #region IOSwitch</span></div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            <span class="keywordflow">if</span>(StaticTODSchema.IsActive )</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            {   </div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                sunLocationControl.isOn = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                Debug.Log(<span class="stringliteral">&quot;UI Control is set to &quot;</span> + sunLocationControl.isOn);</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                sunLatitude = StaticTODSchema.SunLatitude;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                sunLongitude = StaticTODSchema.SunLongitude;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                sunHour = StaticTODSchema.Hour;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                sunMinute = StaticTODSchema.Minute;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <a class="code" href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">SetTime</a>(sunHour, sunMinute);</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <a class="code" href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">SetLocation</a>(sunLatitude, sunLongitude);</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                <span class="comment">// set is active to false to not let this loop run for all the updates</span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                StaticTODSchema.IsActive =<span class="keyword">false</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                </div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="preprocessor">            #endregion</span></div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160; </div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            time = time.AddSeconds(timeSpeed * Time.deltaTime);</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="keywordflow">if</span> (frameStep==0) {</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                SetPosition();</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            }</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            frameStep = (frameStep + 1) % frameSteps;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
 <div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160; </div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> CalculateSunPosition(</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;            DateTime dateTime, <span class="keywordtype">double</span> latitude, <span class="keywordtype">double</span> longitude, out <span class="keywordtype">double</span> outAzimuth, out <span class="keywordtype">double</span> outAltitude)</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;        {</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="comment">// Convert to UTC  </span></div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            dateTime = dateTime.ToUniversalTime();</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        <span class="keywordtype">void</span> SetPosition()</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;        {</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160; </div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            Vector3 angles = <span class="keyword">new</span> Vector3();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            <span class="keywordtype">double</span> alt;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordtype">double</span> azi;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            SunPosition.CalculateSunPosition(time, (<span class="keywordtype">double</span>)latitude, (<span class="keywordtype">double</span>)longitude, out azi, out alt);</div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;            angles.x = (float)alt * Mathf.Rad2Deg;</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;            angles.y = (<span class="keywordtype">float</span>)azi * Mathf.Rad2Deg;</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            <span class="comment">//UnityEngine.Debug.Log(angles);</span></div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            transform.localRotation = Quaternion.Euler(angles);</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            light.intensity = Mathf.InverseLerp(-12, 0, angles.x);</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;        }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;        </div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;    }</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="comment">// Number of days from J2000.0.  </span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            <span class="keywordtype">double</span> julianDate = 367 * dateTime.Year -</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                (int)((7.0 / 4.0) * (dateTime.Year +</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                (int)((dateTime.Month + 9.0) / 12.0))) +</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                (int)((275.0 * dateTime.Month) / 9.0) +</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                dateTime.Day - 730531.5;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160; </div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">double</span> julianCenturies = julianDate / 36525.0;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            <span class="comment">// Sidereal Time  </span></div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;            <span class="keywordtype">double</span> siderealTimeHours = 6.6974 + 2400.0513 * julianCenturies;</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;            <span class="keywordtype">double</span> siderealTimeUT = siderealTimeHours +</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                (366.2422 / 365.2422) * (double)dateTime.TimeOfDay.TotalHours;</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordtype">double</span> siderealTime = siderealTimeUT * 15 + longitude;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160; </div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            <span class="comment">// Refine to number of days (fractional) to specific time.  </span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            julianDate += (<span class="keywordtype">double</span>)dateTime.TimeOfDay.TotalHours / 24.0;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            julianCenturies = julianDate / 36525.0;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="comment">// Solar Coordinates  </span></div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordtype">double</span> meanLongitude = CorrectAngle(Deg2Rad *</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                (280.466 + 36000.77 * julianCenturies));</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="keywordtype">double</span> meanAnomaly = CorrectAngle(Deg2Rad *</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                (357.529 + 35999.05 * julianCenturies));</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160; </div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="keywordtype">double</span> equationOfCenter = Deg2Rad * ((1.915 - 0.005 * julianCenturies) *</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                Math.Sin(meanAnomaly) + 0.02 * Math.Sin(2 * meanAnomaly));</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span>SunPosition</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    {</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">double</span> Deg2Rad = Math.PI / 180.0;</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">double</span> Rad2Deg = 180.0 / Math.PI;</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> <span class="keywordtype">void</span> CalculateSunPosition(</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            DateTime dateTime, <span class="keywordtype">double</span> latitude, <span class="keywordtype">double</span> longitude, out <span class="keywordtype">double</span> outAzimuth, out <span class="keywordtype">double</span> outAltitude)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// Convert to UTC  </span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            dateTime = dateTime.ToUniversalTime();</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160; </div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="keywordtype">double</span> elipticalLongitude =</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                CorrectAngle(meanLongitude + equationOfCenter);</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            <span class="keywordtype">double</span> obliquity = (23.439 - 0.013 * julianCenturies) * Deg2Rad;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            <span class="comment">// Right Ascension  </span></div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordtype">double</span> rightAscension = Math.Atan2(</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;                Math.Cos(obliquity) * Math.Sin(elipticalLongitude),</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                Math.Cos(elipticalLongitude));</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordtype">double</span> declination = Math.Asin(</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                Math.Sin(rightAscension) * Math.Sin(obliquity));</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160; </div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;            <span class="comment">// Horizontal Coordinates  </span></div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;            <span class="keywordtype">double</span> hourAngle = CorrectAngle(siderealTime * Deg2Rad) - rightAscension;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            <span class="keywordflow">if</span> (hourAngle &gt; Math.PI)</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            {</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                hourAngle -= 2 * Math.PI;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            }</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            <span class="comment">// Number of days from J2000.0.  </span></div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            <span class="keywordtype">double</span> julianDate = 367 * dateTime.Year -</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                (int)((7.0 / 4.0) * (dateTime.Year +</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                (int)((dateTime.Month + 9.0) / 12.0))) +</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                (int)((275.0 * dateTime.Month) / 9.0) +</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;                dateTime.Day - 730531.5;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160; </div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordtype">double</span> julianCenturies = julianDate / 36525.0;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160; </div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;            <span class="comment">// Sidereal Time  </span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordtype">double</span> siderealTimeHours = 6.6974 + 2400.0513 * julianCenturies;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160; </div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            <span class="keywordtype">double</span> siderealTimeUT = siderealTimeHours +</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                (366.2422 / 365.2422) * (double)dateTime.TimeOfDay.TotalHours;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160; </div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            <span class="keywordtype">double</span> siderealTime = siderealTimeUT * 15 + longitude;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160; </div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            <span class="comment">// Refine to number of days (fractional) to specific time.  </span></div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            julianDate += (<span class="keywordtype">double</span>)dateTime.TimeOfDay.TotalHours / 24.0;</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            julianCenturies = julianDate / 36525.0;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160; </div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="keywordtype">double</span> altitude = Math.Asin(Math.Sin(latitude * Deg2Rad) *</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                Math.Sin(declination) + Math.Cos(latitude * Deg2Rad) *</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                Math.Cos(declination) * Math.Cos(hourAngle));</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;            <span class="comment">// Solar Coordinates  </span></div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            <span class="keywordtype">double</span> meanLongitude = CorrectAngle(Deg2Rad *</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                (280.466 + 36000.77 * julianCenturies));</div>
 <div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160; </div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="comment">// Nominator and denominator for calculating Azimuth  </span></div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            <span class="comment">// angle. Needed to test which quadrant the angle is in.  </span></div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            <span class="keywordtype">double</span> aziNom = -Math.Sin(hourAngle);</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordtype">double</span> aziDenom =</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                Math.Tan(declination) * Math.Cos(latitude * Deg2Rad) -</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                Math.Sin(latitude * Deg2Rad) * Math.Cos(hourAngle);</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160; </div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="keywordtype">double</span> azimuth = Math.Atan(aziNom / aziDenom);</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordtype">double</span> meanAnomaly = CorrectAngle(Deg2Rad *</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                (357.529 + 35999.05 * julianCenturies));</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            <span class="keywordtype">double</span> equationOfCenter = Deg2Rad * ((1.915 - 0.005 * julianCenturies) *</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                Math.Sin(meanAnomaly) + 0.02 * Math.Sin(2 * meanAnomaly));</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="keywordtype">double</span> elipticalLongitude =</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                CorrectAngle(meanLongitude + equationOfCenter);</div>
 <div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordflow">if</span> (aziDenom &lt; 0) <span class="comment">// In 2nd or 3rd quadrant  </span></div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                azimuth += Math.PI;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            }</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (aziNom &lt; 0) <span class="comment">// In 4th quadrant  </span></div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            {</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                azimuth += 2 * Math.PI;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            }</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160; </div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            outAltitude = altitude;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            outAzimuth = azimuth;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;        }</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordtype">double</span> obliquity = (23.439 - 0.013 * julianCenturies) * Deg2Rad;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160; </div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="comment">// Right Ascension  </span></div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordtype">double</span> rightAscension = Math.Atan2(</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                Math.Cos(obliquity) * Math.Sin(elipticalLongitude),</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                Math.Cos(elipticalLongitude));</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160; </div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordtype">double</span> declination = Math.Asin(</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                Math.Sin(rightAscension) * Math.Sin(obliquity));</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160; </div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="comment">// Horizontal Coordinates  </span></div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordtype">double</span> hourAngle = CorrectAngle(siderealTime * Deg2Rad) - rightAscension;</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">double</span> CorrectAngle(<span class="keywordtype">double</span> angleInRadians)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;        {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            <span class="keywordflow">if</span> (angleInRadians &lt; 0)</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            {</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;                <span class="keywordflow">return</span> 2 * Math.PI - (Math.Abs(angleInRadians) % (2 * Math.PI));</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            }</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (angleInRadians &gt; 2 * Math.PI)</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                <span class="keywordflow">return</span> angleInRadians % (2 * Math.PI);</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                <span class="keywordflow">return</span> angleInRadians;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;        }</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;    }</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160; </div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;}</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordflow">if</span> (hourAngle &gt; Math.PI)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                hourAngle -= 2 * Math.PI;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            }</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordtype">double</span> altitude = Math.Asin(Math.Sin(latitude * Deg2Rad) *</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                Math.Sin(declination) + Math.Cos(latitude * Deg2Rad) *</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                Math.Cos(declination) * Math.Cos(hourAngle));</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="comment">// Nominator and denominator for calculating Azimuth  </span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            <span class="comment">// angle. Needed to test which quadrant the angle is in.  </span></div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            <span class="keywordtype">double</span> aziNom = -Math.Sin(hourAngle);</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            <span class="keywordtype">double</span> aziDenom =</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                Math.Tan(declination) * Math.Cos(latitude * Deg2Rad) -</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                Math.Sin(latitude * Deg2Rad) * Math.Cos(hourAngle);</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160; </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;            <span class="keywordtype">double</span> azimuth = Math.Atan(aziNom / aziDenom);</div>
+<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160; </div>
+<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;            <span class="keywordflow">if</span> (aziDenom &lt; 0) <span class="comment">// In 2nd or 3rd quadrant  </span></div>
+<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;            {</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                azimuth += Math.PI;</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;            }</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (aziNom &lt; 0) <span class="comment">// In 4th quadrant  </span></div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            {</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                azimuth += 2 * Math.PI;</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            }</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160; </div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            outAltitude = altitude;</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;            outAzimuth = azimuth;</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;        }</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160; </div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">double</span> CorrectAngle(<span class="keywordtype">double</span> angleInRadians)</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            <span class="keywordflow">if</span> (angleInRadians &lt; 0)</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            {</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                <span class="keywordflow">return</span> 2 * Math.PI - (Math.Abs(angleInRadians) % (2 * Math.PI));</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;            }</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span> (angleInRadians &gt; 2 * Math.PI)</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;            {</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keywordflow">return</span> angleInRadians % (2 * Math.PI);</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;            }</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;            {</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                <span class="keywordflow">return</span> angleInRadians;</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;            }</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;        }</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    }</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160; </div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassAirControl_1_1Sun_html"><div class="ttname"><a href="classAirControl_1_1Sun.html">AirControl.Sun</a></div><div class="ttdoc">Function to change sun location and create Day and Night effects.</div><div class="ttdef"><b>Definition:</b> <a href="Sun_8cs_source.html#l00014">Sun.cs:14</a></div></div>
-<div class="ttc" id="aclassAirControl_1_1Sun_html_a4ee38be8ec854626fe7b959242175521"><div class="ttname"><a href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">AirControl.Sun.SetLocation</a></div><div class="ttdeci">void SetLocation(float longitude, float latitude)</div><div class="ttdoc">Set sun location as per the Longitude and latitude</div><div class="ttdef"><b>Definition:</b> <a href="Sun_8cs_source.html#l00057">Sun.cs:57</a></div></div>
-<div class="ttc" id="aclassAirControl_1_1Sun_html_a09cf68bd77f0dd3a32c0560f5984136d"><div class="ttname"><a href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">AirControl.Sun.SetTime</a></div><div class="ttdeci">void SetTime(int hour, int minutes)</div><div class="ttdoc">set dun location as per Hour and Minute</div><div class="ttdef"><b>Definition:</b> <a href="Sun_8cs_source.html#l00047">Sun.cs:47</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1Sun_html"><div class="ttname"><a href="classAirControl_1_1Sun.html">AirControl.Sun</a></div><div class="ttdoc">Function to change sun location and create Day and Night effects.</div><div class="ttdef"><b>Definition:</b> <a href="Sun_8cs_source.html#l00016">Sun.cs:16</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1Sun_html_a4ee38be8ec854626fe7b959242175521"><div class="ttname"><a href="classAirControl_1_1Sun.html#a4ee38be8ec854626fe7b959242175521">AirControl.Sun.SetLocation</a></div><div class="ttdeci">void SetLocation(float longitude, float latitude)</div><div class="ttdoc">Set sun location as per the Longitude and latitude</div><div class="ttdef"><b>Definition:</b> <a href="Sun_8cs_source.html#l00067">Sun.cs:67</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1Sun_html_a09cf68bd77f0dd3a32c0560f5984136d"><div class="ttname"><a href="classAirControl_1_1Sun.html#a09cf68bd77f0dd3a32c0560f5984136d">AirControl.Sun.SetTime</a></div><div class="ttdeci">void SetTime(int hour, int minutes)</div><div class="ttdoc">set dun location as per Hour and Minute</div><div class="ttdef"><b>Definition:</b> <a href="Sun_8cs_source.html#l00057">Sun.cs:57</a></div></div>
 <div class="ttc" id="anamespaceAirControl_html"><div class="ttname"><a href="namespaceAirControl.html">AirControl</a></div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Menus_8cs_source.html#l00006">AC_Airplane_Menus.cs:6</a></div></div>
 <div class="ttc" id="anamespaceCommunicator_html"><div class="ttname"><a href="namespaceCommunicator.html">Communicator</a></div><div class="ttdef"><b>Definition:</b> <a href="InputHandle_8cs_source.html#l00010">InputHandle.cs:10</a></div></div>
 <!-- HTML footer for doxygen 1.8.17-->

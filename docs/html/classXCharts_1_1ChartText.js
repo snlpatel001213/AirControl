@@ -1,0 +1,25 @@
+var classXCharts_1_1ChartText =
+[
+    [ "ChartText", "classXCharts_1_1ChartText.html#aca7d7ac6e8736e6bb81daaab20081286", null ],
+    [ "ChartText", "classXCharts_1_1ChartText.html#a385f31443e42125e0dfb4fcc8635c89d", null ],
+    [ "GetPreferredHeight", "classXCharts_1_1ChartText.html#a8954d4e4f54621ba3a8e126533036919", null ],
+    [ "GetPreferredText", "classXCharts_1_1ChartText.html#a9b0a402e9e7390ad16b27c3a32cd8078", null ],
+    [ "GetPreferredWidth", "classXCharts_1_1ChartText.html#ab7ef1ef680b5b7af169cdb7e6a340f24", null ],
+    [ "GetPreferredWidth", "classXCharts_1_1ChartText.html#a50ce7c6049757f2795991a6dbc0c75f5", null ],
+    [ "GetText", "classXCharts_1_1ChartText.html#a954a18ccf44199ef23bdeed6cd97d7f8", null ],
+    [ "SetActive", "classXCharts_1_1ChartText.html#a8a69cd2b831c0fde704a85d4705e21a7", null ],
+    [ "SetAlignment", "classXCharts_1_1ChartText.html#a69745ff93d19e912aea6262d955fa28b", null ],
+    [ "SetColor", "classXCharts_1_1ChartText.html#aadc9505575f5e58cb27197b5e9707dd5", null ],
+    [ "SetFont", "classXCharts_1_1ChartText.html#a89c7df5410e2c9724881e9cd6f9c5246", null ],
+    [ "SetFontAndSizeAndStyle", "classXCharts_1_1ChartText.html#a8d5275a1b3da9654c755aaae758cc791", null ],
+    [ "SetFontSize", "classXCharts_1_1ChartText.html#a3a11ffbfc7acfd9fa993e234b6e2aa1e", null ],
+    [ "SetFontStyle", "classXCharts_1_1ChartText.html#ae6bf84d27e6570cc237ea6bf6329cbcd", null ],
+    [ "SetLineSpacing", "classXCharts_1_1ChartText.html#a37ec34ec945a7674abc182a6d2dd5229", null ],
+    [ "SetLocalEulerAngles", "classXCharts_1_1ChartText.html#a78a50f1b2864a4fa8aa9a2dea9b2953f", null ],
+    [ "SetLocalPosition", "classXCharts_1_1ChartText.html#a2f57313319eadabfc0e22cbeab1db616", null ],
+    [ "SetSizeDelta", "classXCharts_1_1ChartText.html#ae684ff382395cb71c300e1ef16b0c139", null ],
+    [ "SetText", "classXCharts_1_1ChartText.html#ab562dd95ddd813b78500289fba647891", null ],
+    [ "alignment", "classXCharts_1_1ChartText.html#a452018644e7e3712efd3350fb35d4a71", null ],
+    [ "gameObject", "classXCharts_1_1ChartText.html#a0d6d33887fa126dcdbbf14e48378553f", null ],
+    [ "text", "classXCharts_1_1ChartText.html#ad0421d49829b2cdba9a4928f53dd1950", null ]
+];

@@ -14,7 +14,6 @@ namespace AirControl
         #region Variable
         protected Rigidbody rb;
         protected AudioSource aSource;
-        private double MaxR = 100;
         private bool hasEntered;
 
                 
@@ -24,7 +23,7 @@ namespace AirControl
         // Methods to be called before start goes here
         public  virtual void Awake()
         {
-#if !UNITY_WEBGL
+#if UNITY_EDITOR
             // init DB
             // not applicable to unity webGL deployment as this is not supported
             IOInit.CreateSchema();
@@ -48,41 +47,45 @@ namespace AirControl
         void FixedUpdate()
         {
             if(rb){
-                HandlePhysics();
-                // HandleLocation();
+                HandlePhysics();                
             }
             
         }
 
-        void OnCollisionExit(Collision col)
+        void OnCollisionStay(Collision col)
         {
-            // if(col.gameObject.tag!= "Runway" )
-            // {
-                // hasEntered = true;
-                DateTime now = DateTime.Now;
-                MaxR -=10f;
-                Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}",col.gameObject.tag, CommonFunctions.Counter);  
-                StaticOutputSchema.IfCollision=true;
-                StaticOutputSchema.CollisionObject = col.gameObject.tag;
-            // }
-            return;
-        }
-
-        void OnTriggerExit(Collider col)
-        {
-           if(col.CompareTag("Fence"))
+            //Allow collision penality once
+            if (StaticOutputSchema.IfCollision == false)
             {
-                // hasEntered = true;
+                //reward function
+                StaticOutputSchema.Reward -= 100f;
+                // Collision detection
                 DateTime now = DateTime.Now;
-                MaxR -=10f;
-                Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}",col.gameObject.tag, CommonFunctions.Counter);  
+                // Debug.LogFormat(now +" - Collided with : {0} , Counter : {1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
                 StaticOutputSchema.IfCollision=true;
                 StaticOutputSchema.CollisionObject = col.gameObject.tag;
             }
-            return;
+        
+            
         }
 
-        
+        // void OnTriggerStay(Collider col)
+        // {
+        //     if (StaticOutputSchema.IfCollision == false)
+        //     {
+        //       if(col.CompareTag("Fence"))
+        //         {
+        //             //reward function
+        //             StaticOutputSchema.Reward -= 100f;
+        //             // Collision detection
+        //             DateTime now = DateTime.Now;
+        //             Debug.LogFormat(now +" - Collided with : {0} , Counter :{1}, reward : {2}",col.gameObject.tag, StaticOutputSchema.Counter, StaticOutputSchema.Reward);  
+        //             StaticOutputSchema.IfCollision=true;
+        //             StaticOutputSchema.CollisionObject = col.gameObject.tag;
+        //         }
+        //     }
+           
+        // }      
         #endregion
 
         protected virtual void HandlePhysics(){

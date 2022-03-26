@@ -1,0 +1,9 @@
+<map id="XCharts.Axis" name="XCharts.Axis">
+<area shape="rect" id="node1" title="The axis in rectangular coordinate. 直角坐标系的坐标轴组件。" alt="" coords="271,155,375,181"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1AngleAxis.html" title="Angle axis of Polar Coordinate. 极坐标系的角度轴。" alt="" coords="5,229,147,256"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1RadiusAxis.html" title="Radial axis of polar coordinate. 极坐标系的径向轴。" alt="" coords="171,229,319,256"/>
+<area shape="rect" id="node6" href="$classXCharts_1_1XAxis.html" title="The x axis in cartesian(rectangular) coordinate. a grid component can place at most 2 x axis,..." alt="" coords="343,229,457,256"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1YAxis.html" title="The x axis in cartesian(rectangular) coordinate. a grid component can place at most 2 x axis,..." alt="" coords="481,229,591,256"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="258,80,387,107"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="257,5,389,32"/>
+</map>

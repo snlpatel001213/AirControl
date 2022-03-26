@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5f_5finit_5f_5f_196',['__init__',['../classAirControl_1_1communicator_1_1Communicator.html#a51791082fb558db19b2072d76d6e5bec',1,'AirControl::communicator::Communicator']]]
+  ['_5f_5finit_5f_5f_1208',['__init__',['../classairctrl_1_1communicator_1_1Communicator.html#aecd7d36a2fa9aeacc88b51e3e2f59c90',1,'airctrl::communicator::Communicator']]]
 ];

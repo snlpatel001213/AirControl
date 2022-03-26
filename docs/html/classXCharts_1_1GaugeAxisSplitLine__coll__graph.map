@@ -1,0 +1,9 @@
+<map id="XCharts.GaugeAxisSplitLine" name="XCharts.GaugeAxisSplitLine">
+<area shape="rect" id="node1" title="分割线" alt="" coords="5,488,208,515"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1BaseLine.html" title="Settings related to base line. 线条基础配置。" alt="" coords="66,412,147,439"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="41,247,162,273"/>
+<area shape="rect" id="node7" href="$classXCharts_1_1LineStyle.html" title="The style of line. 线条样式。 注： 修改 lineStyle 中的颜色不会影响图例颜色，如果需要图例颜色和折线图颜色一致，需修改 itemStyle...." alt="" coords="123,323,259,349"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="35,171,167,197"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="41,81,162,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="34,5,169,32"/>
+</map>

@@ -21,16 +21,22 @@ namespace Communicator
         /// Prepare output object and return json string to be dispatched
         /// </summary>
         /// <returns>Output json string</returns>
-        public string  ParseOutput()
+        public void  ParseOutput(ref string outputmsg)
         {
-            ref var screencapture = ref StaticOutputSchema.ScreenCapture;
             // to avoid null retun from Screencapture
+            ref var screencapture = ref StaticOutputSchema.ScreenCapture;
             if (screencapture == null){
                 screencapture =  new byte[0];
             }
+
+            // to avoid null retun from Screencapture
+            var lidarPointCloud = StaticOutputSchema.LidarPointCloud;
+            if (lidarPointCloud == null){
+                lidarPointCloud =  new float[0];
+            }
             
-            CommonFunctions.Counter ++; 
-            string output = JsonConvert.SerializeObject(new OutputSchema{
+            
+            outputmsg = JsonConvert.SerializeObject(new OutputSchema{
                 BankAngle = StaticOutputSchema.BankAngle,
                 PitchAngle = StaticOutputSchema.PitchAngle,
                 AGL = StaticOutputSchema.AGL,
@@ -41,23 +47,31 @@ namespace Communicator
                 CurrentPower = StaticOutputSchema.CurrentPower,
                 CurrentSpeed = StaticOutputSchema.CurrentSpeed,
                 ScreenCapture = screencapture,
-                LidarPointCloud = StaticOutputSchema.LidarPointCloud,
+                LidarPointCloud = lidarPointCloud,
                 Latitude = StaticOutputSchema.Latitude,
                 Longitude = StaticOutputSchema.Longitude,
                 IfCollision = StaticOutputSchema.IfCollision,
                 Reward = StaticOutputSchema.Reward,
-                Counter = CommonFunctions.Counter,
+                Counter = StaticOutputSchema.Counter,
                 CollisionObject = StaticOutputSchema.CollisionObject,
                 IsFlying =  StaticOutputSchema.IsFlying,
                 IsGrounded =  StaticOutputSchema.IsGrounded,
-                IsLanded =  StaticOutputSchema.IsLanded,
+                IsTaxiing =  StaticOutputSchema.IsTaxiing,
+                PosXAbs =  StaticOutputSchema.PosXAbs,
+                PosYAbs =  StaticOutputSchema.PosYAbs,
+                PosZAbs =  StaticOutputSchema.PosZAbs,
+                PosXRel =  StaticOutputSchema.PosXRel,
+                PosYRel =  StaticOutputSchema.PosYRel,
+                PosZRel =  StaticOutputSchema.PosZRel,
+                RotXAbs = StaticOutputSchema.RotXAbs,
+                RotYAbs = StaticOutputSchema.RotYAbs,
+                RotZAbs = StaticOutputSchema.RotZAbs,
+                RotXRel = StaticOutputSchema.RotXRel,
+                RotYRel = StaticOutputSchema.RotYRel,
+                RotZRel = StaticOutputSchema.RotZRel,
                 
             }, new PrimitiveToStringConverter());
-            if(StaticOutputSchema.IfCollision)
-            {
-                // Debug.Log(output);
-            }
-            return output;
+            StaticOutputSchema.Counter ++; 
         }
         /// <summary>
         /// Just Log output if the entire output is not required

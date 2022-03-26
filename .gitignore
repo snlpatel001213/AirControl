@@ -79,8 +79,22 @@ crashlytics-build.properties
 */*/.ipynb_checkpoints
 
 # unity meta files
-.meta
+*.meta
+
 
 # Experiments
 ReinforcementLearningExample/
 Python/client_examples/.ipynb_checkpoints
+
+# snap ignore
+/snap/parts/desktop-gtk2
+/snap/parts/mygame
+/snap/parts/.snapcraft_global_state
+/snap/prime/**
+/snap/snap/local/*.debug
+/snap/snap/local/*.so
+/snap/snap/local/*.x86_64
+/snap/snap/local/*-AirControl**
+/snap/stage/**
+/snap/*.snap
+/snap/*.swp

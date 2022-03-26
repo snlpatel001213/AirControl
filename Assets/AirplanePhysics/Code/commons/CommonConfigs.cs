@@ -11,13 +11,24 @@ namespace Commons
 
     public static class CommonFunctions
     {
-        static int counter=0;
+        // max reward 
+        // if you chnage this value, put the same value at Scripts/Communicator/NetworkCommunicator.cs
+        public static float maxR = 0;
+        public static int counter=0;
+
+        #region Properties
+        public static float MaxR{
+            get{return maxR;}
+            set{maxR = value;}
+        }
+        #endregion
+
         /// <summary>
         /// Get current dev version please update this version before each build and relases
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "1.0.0";
+            string VERSION = "1.2.0";
             return VERSION;
         } 
         /// <summary>

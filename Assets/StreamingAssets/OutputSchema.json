@@ -20,7 +20,19 @@
   "Reward": 0.0,
   "IsGrounded": "false",
   "IsFlying": "false",
-  "IsLanded": "false",
+  "IsTaxiing": "false",
+  "PosXAbs": 0.0,
+  "PosYAbs": 0.0,
+  "PosZAbs": 0.0,
+  "PosXRel": 0.0,
+  "PosYRel": 0.0,
+  "PosZRel": 0.0,
+  "RotXAbs": 0.0,
+  "RotYAbs": 0.0,
+  "RotZAbs": 0.0,
+  "RotXRel": 0.0,
+  "RotYRel": 0.0,
+  "RotZRel": 0.0,
   "MsgType": "Output",
-  "Version": "0.1.5"
+  "Version": "1.2.0"
 }

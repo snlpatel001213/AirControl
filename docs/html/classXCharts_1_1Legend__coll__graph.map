@@ -1,0 +1,8 @@
+<map id="XCharts.Legend" name="XCharts.Legend">
+<area shape="rect" id="node1" title="Legend component.The legend component shows different sets of tags, colors, and names...." alt="" coords="90,323,213,349"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="8,247,137,273"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="7,171,139,197"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="12,81,133,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node6" href="$interfaceXCharts_1_1IPropertyChanged.html" title="属性变更接口" alt="" coords="162,247,301,273"/>
+</map>

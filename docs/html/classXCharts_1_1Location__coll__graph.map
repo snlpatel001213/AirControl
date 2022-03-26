@@ -1,0 +1,8 @@
+<map id="XCharts.Location" name="XCharts.Location">
+<area shape="rect" id="node1" title="Location type. Quick to set the general location. 位置类型。通过Align快速设置大体位置，再通过left，right，top，bottom微调具体位置..." alt="" coords="85,323,215,349"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1SubComponent.html" title=" " alt="" coords="12,247,133,273"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="7,171,139,197"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="12,81,133,108"/>
+<area shape="rect" id="node5" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node6" href="$interfaceXCharts_1_1IPropertyChanged.html" title="属性变更接口" alt="" coords="158,247,297,273"/>
+</map>

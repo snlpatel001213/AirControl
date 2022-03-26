@@ -1,0 +1,8 @@
+<map id="XCharts.BaseChart" name="XCharts.BaseChart">
+<area shape="rect" id="node1" title="The base class of all charts. 所有Chart的基类。" alt="" coords="5,107,148,133"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1GaugeChart.html" title=" " alt="" coords="196,5,349,32"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1LiquidChart.html" title="水位图" alt="" coords="197,56,348,83"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1PieChart.html" title=" " alt="" coords="207,107,338,133"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1PolarChart.html" title=" " alt="" coords="201,157,345,184"/>
+<area shape="rect" id="node6" href="$classXCharts_1_1RadarChart.html" title=" " alt="" coords="198,208,347,235"/>
+</map>

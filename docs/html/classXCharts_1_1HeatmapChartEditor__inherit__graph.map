@@ -1,0 +1,6 @@
+<map id="XCharts.HeatmapChartEditor" name="XCharts.HeatmapChartEditor">
+<area shape="rect" id="node1" title="Editor class used to edit UI HeatmapChart." alt="" coords="5,229,215,256"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1CoordinateChartEditor.html" title="Editor class used to edit UI CoordinateChart." alt="" coords="27,155,193,181"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1BaseChartEditor.html" title="Editor class used to edit UI BaseChart." alt="" coords="47,80,173,107"/>
+<area shape="rect" id="node4" title=" " alt="" coords="80,5,140,32"/>
+</map>

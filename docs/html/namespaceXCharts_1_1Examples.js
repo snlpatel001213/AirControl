@@ -1,0 +1,27 @@
+var namespaceXCharts_1_1Examples =
+[
+    [ "Example00_CheatSheet", "classXCharts_1_1Examples_1_1Example00__CheatSheet.html", null ],
+    [ "Example01_UpdateData", "classXCharts_1_1Examples_1_1Example01__UpdateData.html", null ],
+    [ "Example02_ChartEvent", "classXCharts_1_1Examples_1_1Example02__ChartEvent.html", null ],
+    [ "Example03_ChartAnimation", "classXCharts_1_1Examples_1_1Example03__ChartAnimation.html", null ],
+    [ "Example10_LineChart", "classXCharts_1_1Examples_1_1Example10__LineChart.html", null ],
+    [ "Example11_AddSinCurve", "classXCharts_1_1Examples_1_1Example11__AddSinCurve.html", "classXCharts_1_1Examples_1_1Example11__AddSinCurve" ],
+    [ "Example12_CustomDrawing", "classXCharts_1_1Examples_1_1Example12__CustomDrawing.html", null ],
+    [ "Example13_LineSimple", "classXCharts_1_1Examples_1_1Example13__LineSimple.html", null ],
+    [ "Example20_BarChart", "classXCharts_1_1Examples_1_1Example20__BarChart.html", null ],
+    [ "Example30_PieChart", "classXCharts_1_1Examples_1_1Example30__PieChart.html", null ],
+    [ "Example31_PieUpdateName", "classXCharts_1_1Examples_1_1Example31__PieUpdateName.html", null ],
+    [ "Example40_Radar", "classXCharts_1_1Examples_1_1Example40__Radar.html", null ],
+    [ "Example41_RadarUpdate", "classXCharts_1_1Examples_1_1Example41__RadarUpdate.html", null ],
+    [ "Example50_Scatter", "classXCharts_1_1Examples_1_1Example50__Scatter.html", null ],
+    [ "Example60_Heatmap", "classXCharts_1_1Examples_1_1Example60__Heatmap.html", null ],
+    [ "Example70_Gauge", "classXCharts_1_1Examples_1_1Example70__Gauge.html", null ],
+    [ "Example80_Polar", "classXCharts_1_1Examples_1_1Example80__Polar.html", null ],
+    [ "Example90_Candlestick", "classXCharts_1_1Examples_1_1Example90__Candlestick.html", "classXCharts_1_1Examples_1_1Example90__Candlestick" ],
+    [ "Example_Dynamic", "classXCharts_1_1Examples_1_1Example__Dynamic.html", "classXCharts_1_1Examples_1_1Example__Dynamic" ],
+    [ "Example_LargeData", "classXCharts_1_1Examples_1_1Example__LargeData.html", "classXCharts_1_1Examples_1_1Example__LargeData" ],
+    [ "Example_PieChart", "classXCharts_1_1Examples_1_1Example__PieChart.html", null ],
+    [ "Example_Test", "classXCharts_1_1Examples_1_1Example__Test.html", null ],
+    [ "RewardChart", "classXCharts_1_1Examples_1_1RewardChart.html", null ],
+    [ "TriggerDistribution", "classXCharts_1_1Examples_1_1TriggerDistribution.html", null ]
+];
