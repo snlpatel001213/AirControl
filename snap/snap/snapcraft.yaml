@@ -1,5 +1,5 @@
 name: "aircontrol"
-version: "1.0.0"
+version: "1.2.0"
 summary: "AirControl is an Open Source,Flight Simulator For Deep Learning Research."
 description: AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research. AirControl offers a realistic simulation experience with a variety of airplanes. 
 base: core18

@@ -41,8 +41,10 @@ class samples:
     
     def get_random_stickythrottle(self, distribution="uniform"):
         """
-        Return a random number between -1 and 1
-        :return: A random float between -1 and 1.
+        Get a random number from a uniform distribution between 0 and 1
+        
+        :param distribution: uniform or beta, defaults to uniform (optional)
+        :return: A random number between 0 and 1.
         """
         if(distribution=="uniform"):
             return random.random()

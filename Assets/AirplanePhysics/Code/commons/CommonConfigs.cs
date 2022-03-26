@@ -28,7 +28,7 @@ namespace Commons
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "1.0.0";
+            string VERSION = "1.2.0";
             return VERSION;
         } 
         /// <summary>
