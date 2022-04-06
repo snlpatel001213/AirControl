@@ -8,7 +8,7 @@ using UnityEngine;
 
 namespace Commons
 {
-
+    
     public static class CommonFunctions
     {
         // max reward 
@@ -93,6 +93,12 @@ namespace Commons
                 di.Delete();
             }
         }
+
+    public static GameObject GetAirplane(){
+        var airplane =  Resources.Load("AirplanePhysics/Art/Objects/Airplanes/IndiePixel_Airplanes/Prefabs/Cessna-152.prefab",typeof(GameObject))  as GameObject;
+        return airplane;
+    }
+
                 
     }
 

@@ -23,11 +23,14 @@ namespace AirControl
         // Methods to be called before start goes here
         public  virtual void Awake()
         {
+            // Debug.Log("Airplane Instanciated");
+            // Instantiate(Resources.Load("AirplanePhysics/Art/Objects/Airplanes/IndiePixel_Airplanes/Prefabs/Cessna-152.prefab",typeof(GameObject)));
 #if UNITY_EDITOR
             // init DB
             // not applicable to unity webGL deployment as this is not supported
             IOInit.CreateSchema();
 #endif
+        
             
         }
         // Start is called before the first frame update

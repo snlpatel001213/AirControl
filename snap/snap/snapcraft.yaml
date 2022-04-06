@@ -59,10 +59,10 @@ parts:
        - libibus-1.0-5
 apps:
    AirControl:
-     command: desktop-launch $SNAP/v1.0.0-AirControl.x86_64
+     command: desktop-launch $SNAP/v1.2.0-AirControl.x86_64
 
      environment:
-       LD_LIBRARY_PATH: "$SNAP/local/:$SNAP/local/v1.0.0-AirControl_Data/MonoBleedingEdge/x86_64:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio:$LD_LIBRARY_PATH"
+       LD_LIBRARY_PATH: "$SNAP/local/:$SNAP/local/v1.2.0-AirControl_Data/MonoBleedingEdge/x86_64:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio:$LD_LIBRARY_PATH"
      plugs:
        - x11
        - opengl
