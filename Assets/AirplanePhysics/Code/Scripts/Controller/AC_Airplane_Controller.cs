@@ -206,16 +206,16 @@ namespace AirControl
 
             /// Don't call once the collision is registered, 
             /// This will help in 
-            if (StaticOutputSchema.IfCollision == false)
-            {
+            // if (StaticOutputSchema.IfCollision == false)
+            // {
                 if (isTaxiing){
                     Debug.DrawLine(rb.transform.forward,rb.velocity);
-                    float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward)*0.1f;
+                    float forward_velocity =  Vector3.Dot(rb.velocity.normalized,rb.transform.forward)*0.1f;
                     // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
                     float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
-                    float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                    float l2_up = -Vector3.Dot(rb.velocity,rb.transform.up);
                     // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
-                    StaticOutputSchema.Reward = forward_velocity+l2_up-l2_side;
+                    StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side;
                 }
                 if (isFlying){
                     Debug.DrawLine(rb.transform.forward,rb.velocity);
@@ -224,9 +224,18 @@ namespace AirControl
                     float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
                     float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
                     // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
-                    StaticOutputSchema.Reward = forward_velocity+currentMSL-l2_side; ;
+                    // Upside down detection 
+                    // to discourage Rolling
+                    float rolling = -Vector3.Dot(transform.up, Vector3.down); // penalize if roll
+                    float pitch = Vector3.Dot(transform.forward, Vector3.up); // penalize if head down
+                    // Debug.Log("pitch :  "+ pitch + " l2 up : "+ l2_up);
+                    // Final reward
+                    // StaticOutputSchema.Reward = l2_up*currentMSL*rolling-l2_side;
+                    // StaticOutputSchema.Reward = pitch*currentMSL*rolling-l2_side;
+                    StaticOutputSchema.Reward = pitch*currentMSL*rolling;
                 }
-            }
+
+            // }
             
         
         }
