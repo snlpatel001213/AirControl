@@ -1,40 +1,3 @@
-// using UnityEngine;
-// public class Pause : MonoBehaviour 
-// {
-//     [SerializeField] private GameObject PausePanel;
-//     void Start()
-//     {
-//         // pausePanel.SetActive(false);
-//     }
-//     void Update()
-//     {
-//         if(Input.GetKeyDown (KeyCode.Escape)) 
-//         {
-//             if (!pausePanel.activeInHierarchy) 
-//             {
-//                 PauseGame();
-//             }
-//             if (pausePanel.activeInHierarchy) 
-//             {
-//                  ContinueGame();   
-//             }
-//         } 
-//     }
-//     private void PauseGame()
-//     {
-//         Time.timeScale = 0;
-//         // pausePanel.SetActive(true);
-//         //Disable scripts that still work while timescale is set to 0
-//     } 
-//     private void ContinueGame()
-//     {
-//         Time.timeScale = 1;
-//         // pausePanel.SetActive(false);
-//         //enable the scripts again
-//     }
-// }
- 
-
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -42,38 +5,37 @@ using Communicator;
 
 public class Pause : MonoBehaviour
 {
-    bool pressed = true;
-    bool active = true;
-    // Start is called before the first frame update
-    void Start()
+    static bool active = false;
+
+    /// <summary>
+    /// play/pause the simulation
+    /// </summary>
+    public static void Pressed()
     {
+            if (active==false){
+                PauseGame();
+                active = true;
+            }
+            else{
+                ContinueGame();
+                active = false;
+            }
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        pressed = GUILayout.Toggle(pressed, "Toggle me !", "Button");
-        // control through API
-        if (active==false){
-            PauseGame();
-            active = true;
-        }
-        else{
-            ContinueGame();
-            active = false;
-        }
-    }
-    private void PauseGame()
+    /// <summary>
+    /// Pause Game
+    /// </summary>
+    public static void PauseGame()
     {
         Time.timeScale = 0;
-        // pausePanel.SetActive(true);
-        //Disable scripts that still work while timescale is set to 0
+        Debug.Log("Simulation Paused");
     } 
-    private void ContinueGame()
+    /// <summary>
+    /// Resume Game
+    /// </summary>
+    public static void ContinueGame()
     {
         Time.timeScale = 1;
-        // pausePanel.SetActive(false);
-        //enable the scripts again
+        Debug.Log("Simulation Resumed");
     }
 }

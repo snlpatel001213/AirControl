@@ -219,7 +219,7 @@ namespace AirControl
                     if(StaticOutputSchema.CurrentSpeed<60){
                         //extra penalty if plane moves away from center of runway when speed is low
                         float dist = Mathf.Abs(transform.position.x - startPos_x);
-                        StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side-(dist*0.1);
+                        StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side-(dist*0.2);
                     }
                     else{
                         StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side;
@@ -244,7 +244,7 @@ namespace AirControl
                     if(StaticOutputSchema.CurrentSpeed<60){
                         //extra penalty if plane moves away from center of runway when speed is low
                         float dist = Mathf.Abs(transform.position.x - startPos_x);
-                        StaticOutputSchema.Reward = pitch*currentMSL*rolling-(dist*0.1);
+                        StaticOutputSchema.Reward = pitch*currentMSL*rolling-(dist*0.2);
                     }
                     else{
                         StaticOutputSchema.Reward = pitch*currentMSL*rolling;
