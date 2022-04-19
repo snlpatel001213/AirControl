@@ -17,6 +17,18 @@ import numpy as np
 # | Brake            | int   | 0 : Dis-engaged, 1 : Engaged            |
 # | Flaps            | int   | 0 : None, 1 : 15 Degree, 2 : 30 Degree  |
 class samples:
+    def get_sample(self, distribution="uniform"):
+        """
+        General function to return random values for pitch, yaw, roll and, stickyThrottle
+        :param distribution: uniform or beta, defaults to uniform (optional)
+        :return: Numpy array with all random values.
+        """
+        pitch =  self.get_random_pitch()
+        yaw = self.get_random_yaw()
+        roll= self.get_random_roll()
+        stickyThrottle= self.get_random_stickythrottle(distribution="uniform")
+        return np.array([pitch, yaw,roll,stickyThrottle])
+
     def get_random_pitch(self):
         """
         This function returns a random pitch value between -1 and 1
