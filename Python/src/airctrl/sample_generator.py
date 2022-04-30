@@ -26,7 +26,7 @@ class samples:
         pitch =  self.get_random_pitch()
         yaw = self.get_random_yaw()
         roll= self.get_random_roll()
-        stickyThrottle= self.get_random_stickythrottle(distribution="uniform")
+        stickyThrottle= self.get_random_stickythrottle(distribution=distribution)
         return np.array([pitch, yaw,roll,stickyThrottle])
 
     def get_random_pitch(self):

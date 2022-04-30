@@ -216,7 +216,7 @@ namespace AirControl
                     float l2_up = -Vector3.Dot(rb.velocity,rb.transform.up);
                     // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
                     StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side;
-                    if(StaticOutputSchema.CurrentSpeed<60){
+                    if(StaticOutputSchema.CurrentSpeed<45){
                         //extra penalty if plane moves away from center of runway when speed is low
                         float dist = Mathf.Abs(transform.position.x - startPos_x);
                         StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side-(dist*0.2);
@@ -241,13 +241,13 @@ namespace AirControl
                     // StaticOutputSchema.Reward = l2_up*currentMSL*rolling-l2_side;
                     // StaticOutputSchema.Reward = pitch*currentMSL*rolling-l2_side;
                     
-                    if(StaticOutputSchema.CurrentSpeed<60){
+                    if(StaticOutputSchema.CurrentSpeed<45){
                         //extra penalty if plane moves away from center of runway when speed is low
                         float dist = Mathf.Abs(transform.position.x - startPos_x);
-                        StaticOutputSchema.Reward = pitch*currentMSL*rolling-(dist*0.2);
+                        StaticOutputSchema.Reward = pitch*currentMSL*2*rolling-(dist*0.2);
                     }
                     else{
-                        StaticOutputSchema.Reward = pitch*currentMSL*rolling;
+                        StaticOutputSchema.Reward = pitch*currentMSL*2*rolling;
                     }
                     
                 }
