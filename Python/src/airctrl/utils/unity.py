@@ -6,7 +6,7 @@ from sys import platform
 
 
 class Launch:
-    def launch_executable(self, file_name: str, sleeptime=5) -> subprocess.Popen:
+    def launch_executable(self, file_name: str, port=8053, sleeptime=5) -> subprocess.Popen:
         """
         Launches a Unity executable and returns the process handle for it.
         :param file_name: the name of the executable
@@ -24,7 +24,7 @@ class Launch:
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
             try:
                 process  = subprocess.Popen(
-                    subprocess_args,
+                    args= "{0} --port  {1}".format(subprocess_args,port),
                     # start_new_session=True means that signals to the parent python process
                     # (e.g. SIGINT from keyboard interrupt) will not be sent to the new process on POSIX platforms.
                     # This is generally good since we want the environment to have a chance to shutdown,
