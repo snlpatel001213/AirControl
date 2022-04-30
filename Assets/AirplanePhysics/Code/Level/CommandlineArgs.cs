@@ -3,10 +3,7 @@ using System;
 using Utility;
 using AirControl;
 
-/// <summary>
-///  open CMDTest.app/ --args -myarg andstuff and more
-/// https://www.codeproject.com/Articles/3111/C-NET-Command-Line-Arguments-Parser
-/// </summary>
+
 namespace AirControl {
 
     public class CommandlineArgs: MonoBehaviour {
@@ -14,6 +11,9 @@ namespace AirControl {
         static string cmdInfo = "";
         LevelControl level =  new LevelControl();
         
+        /// <summary>
+        /// It takes the command line arguments, parses them, and then calls the ParseIt function
+        /// </summary>
         void Awake() {
             string[] arguments = Environment.GetCommandLineArgs();
             Arguments CommandLine = new Arguments(arguments);
@@ -31,10 +31,9 @@ namespace AirControl {
         }
 
         /// <summary>
-        /// 
+        /// Parse command line variable here
         /// </summary>
         /// <param name="CommandLine"></param>
-        
         void ParseIt(Arguments CommandLine) {
             //parse port from commandline
             if (CommandLine["port"] != null) {                
@@ -42,6 +41,8 @@ namespace AirControl {
                 level.ServerPort = int.Parse(CommandLine["port"]);
             } else {
                 Console.WriteLine("port not defined !");
+                //set default port
+                level.ServerPort = 8053;
             }
 
             Console.Out.WriteLine("Arguments parsed. Press a key");
