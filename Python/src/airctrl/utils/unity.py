@@ -19,18 +19,18 @@ class Launch:
                 f"Couldn't launch the {file_name} environment. Provided filename does not match any environments."
             )
         else:
-            subprocess_args = [launch_string] 
+            subprocess_args = launch_string
             # std_out_option = DEVNULL means the outputs will not be displayed on terminal.
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
             try:
                 process  = subprocess.Popen(
-                    args= "{0} --port  {1}".format(subprocess_args,port),
+                    args = [subprocess_args, "--port",  str(port)],
                     # start_new_session=True means that signals to the parent python process
                     # (e.g. SIGINT from keyboard interrupt) will not be sent to the new process on POSIX platforms.
                     # This is generally good since we want the environment to have a chance to shutdown,
                     # but may be undesirable in come cases; if so, we'll add a command-line toggle.
                     # Note that on Windows, the CTRL_C signal will still be sent.
-                    start_new_session=True,
+                    shell=True, start_new_session=True,
                 )
                 print("Sleeping for {0} seconds to allow environment load".format(sleeptime))
                 time.sleep(sleeptime)
