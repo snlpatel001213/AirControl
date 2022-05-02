@@ -1,9 +1,10 @@
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
  
 public class FPSDisplay : MonoBehaviour
 {
-    public Text fpsText;
+    public TextMeshProUGUI fpsText;
     private float deltaTime;
  
     void Update () {
