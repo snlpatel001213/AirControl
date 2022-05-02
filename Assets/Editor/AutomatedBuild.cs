@@ -22,6 +22,7 @@ public class AutomatedBuild : MonoBehaviour
     public static void BuildAll ()
     {
         BuildLinux();
+        BuildLinuxHeadless();
         BuildWindows();
         BuildMac();
         // BuildWebGL();
@@ -50,6 +51,30 @@ public class AutomatedBuild : MonoBehaviour
         // Build player.
         EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneLinux64);
         BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".x86_64"), BuildTarget.StandaloneLinux64, BuildOptions.None);
+    }
+
+    /// <summary>
+    /// Build for  Linux - headless
+    /// </summary>
+    [MenuItem("Air Control/Build/LinuxBuildHeadless")]
+    public static void BuildLinuxHeadless ()
+    {
+        // Get filename.
+        String OS = "linux";
+        UnityEngine.Debug.Log("Starting build for - "+OS);
+        String appName = releaseVersion;
+        string buildPath = "Build/LinuxHeadless";
+        string sceneName = SceneManager.GetActiveScene().name;
+        string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
+        //Create directory , remove existing
+        if (Directory.Exists(buildPath))
+        {
+            CommonFunctions.clearFolder(buildPath);
+        }
+        DirectoryInfo di  = Directory.CreateDirectory(buildPath);
+        // Build player.
+        EditorUserBuildSettings.SwitchActiveBuildTarget(BuildTargetGroup.Standalone, BuildTarget.StandaloneLinux64);
+        BuildPipeline.BuildPlayer(levels, System.IO.Path.Combine(buildPath,appName+".x86_64"), BuildTarget.StandaloneLinux64, BuildOptions.EnableHeadlessMode);
     }
 
     /// <summary>
