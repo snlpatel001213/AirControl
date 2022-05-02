@@ -10,8 +10,8 @@ class Launch:
         """
         Launches a Unity executable and returns the process handle for it.
         :param file_name: the name of the executable
-        :param args: List of string that will be passed as command line arguments
-        when launching the executable.
+        :param port: Server will listen to this port
+        :param sleeptime: Sleeptime to make sure no API fores while server is loading the simulation.
         """
         launch_string = self.validate_environment_path(file_name)
         if launch_string is None:

@@ -31,10 +31,14 @@ class samples:
 
     def get_random_pitch(self):
         """
-        This function returns a random pitch value between -1 and 1
+        This function returns a random pitch value between 0 and 1
+        It follows beta distribution
         :return: A random pitch value.
         """
         return random.random()*(random.choices([-1,1])[0])
+        # a, b = 1.0, 0.6
+        # s = np.random.beta(a, b)
+        # return s
     
     def get_random_yaw(self):
         """
