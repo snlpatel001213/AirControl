@@ -3,9 +3,12 @@ import glob
 import os
 import time
 from sys import platform
-
+import socket
 
 class Launch:
+    def get_client_info(self):
+        return socket.gethostbyname(socket.gethostname())
+
     def launch_executable(self, file_name: str, port=8053, sleeptime=5) -> subprocess.Popen:
         """
         Launches a Unity executable and returns the process handle for it.
@@ -24,6 +27,7 @@ class Launch:
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
             print("Loading environment from {0} at port {1}".format(subprocess_args,str(port)))
             try:
+                client_info_ip = self.get_client_info()
                 process  = subprocess.Popen(
                     
                     args = [subprocess_args, "--port",  str(port)],
