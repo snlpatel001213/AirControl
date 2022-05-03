@@ -10,15 +10,7 @@ namespace AirControl
     /// </summary>
     public class LevelControl:MonoBehaviour
     {
-        /// <summary>
-        /// Defining server port
-        /// </summary>
-        public static int serverPort; // field 
-        public int ServerPort   // property
-        {
-            get { return serverPort; }   // get method
-            set { serverPort = value; }  // set method
-        }
+        
         /// <summary>
         /// Constantly check for the reset level trigger
         /// </summary>

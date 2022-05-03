@@ -1,7 +1,7 @@
 using UnityEngine;
 using System;
 using Utility;
-using AirControl;
+using Commons;
 
 
 namespace AirControl {
@@ -10,6 +10,10 @@ namespace AirControl {
         
         static string cmdInfo = "";
         LevelControl level =  new LevelControl();
+
+        // link current airplane to the active airplane 
+        public GameObject currentAirplane;
+        public GameObject ActiveAirplane;
         
         /// <summary>
         /// It takes the command line arguments, parses them, and then calls the ParseIt function
@@ -18,6 +22,11 @@ namespace AirControl {
             string[] arguments = Environment.GetCommandLineArgs();
             Arguments CommandLine = new Arguments(arguments);
             ParseIt(CommandLine);
+
+            if (true){
+                ActiveAirplane = currentAirplane;
+            }
+
         }
 
         /// <summary>
@@ -36,13 +45,13 @@ namespace AirControl {
         /// <param name="CommandLine"></param>
         void ParseIt(Arguments CommandLine) {
             //parse port from commandline
-            if (CommandLine["port"] != null) {                
-                Console.WriteLine("port value: " +CommandLine["port"]);
-                level.ServerPort = int.Parse(CommandLine["port"]);
+            if (int.TryParse(CommandLine["port"], out _)) {  
+                // if port provided              
+                CommonFunctions.ServerPort = int.Parse(CommandLine["port"]);
             } else {
-                Console.WriteLine("port not defined !");
-                //set default port
-                level.ServerPort = 8053;
+                //If no port is provided, set default port
+                CommonFunctions.ServerPort = 8054;
+                Console.WriteLine("No Port not defined. Selecting default: "+ CommonFunctions.ServerPort);        
             }
 
             Console.Out.WriteLine("Arguments parsed. Press a key");

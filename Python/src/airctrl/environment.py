@@ -11,13 +11,14 @@ INPUT_CONTROL_TYPE = ["Code", "Other"]
 
 class Trigger:
     def __init__(self):
-        print("Now call method `.get_connected()` to get connected")
+        print("Now call method `.get_connected(port=<Default 8053>)` to get connected")
         
-    def get_connected(self):
+    def get_connected(self, port=8053):
         """
         Get connected to the simulation host
+        param port: the same port as environment 
         """
-        self.connection = communicator.Communicator()
+        self.connection = communicator.Communicator(port=port)
         
     def bool2string(self,booltype):
         """

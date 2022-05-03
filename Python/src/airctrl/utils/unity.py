@@ -22,15 +22,17 @@ class Launch:
             subprocess_args = launch_string
             # std_out_option = DEVNULL means the outputs will not be displayed on terminal.
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
+            print("Loading environment from {0} at port {1}".format(subprocess_args,str(port)))
             try:
                 process  = subprocess.Popen(
+                    
                     args = [subprocess_args, "--port",  str(port)],
                     # start_new_session=True means that signals to the parent python process
                     # (e.g. SIGINT from keyboard interrupt) will not be sent to the new process on POSIX platforms.
                     # This is generally good since we want the environment to have a chance to shutdown,
                     # but may be undesirable in come cases; if so, we'll add a command-line toggle.
                     # Note that on Windows, the CTRL_C signal will still be sent.
-                    shell=True, start_new_session=True,
+                    start_new_session=True
                 )
                 print("Sleeping for {0} seconds to allow environment load".format(sleeptime))
                 time.sleep(sleeptime)
