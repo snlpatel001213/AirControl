@@ -9,7 +9,6 @@ namespace AirControl {
     public class CommandlineArgs: MonoBehaviour {
         
         static string cmdInfo = "";
-        LevelControl level =  new LevelControl();
 
         // link current airplane to the active airplane 
         public GameObject currentAirplane;
@@ -44,17 +43,52 @@ namespace AirControl {
         /// </summary>
         /// <param name="CommandLine"></param>
         void ParseIt(Arguments CommandLine) {
+            /* Parsing the port number from the command line and sets the port number to the
+            global variable `CommonFunctions.ServerPort` */
+            defineServerPort(CommandLine);
+            /* This function displays the host and port of the client */
+            displayHostPortClient(CommandLine);
+        }
+
+        /// <summary>
+        /// This function parses the port number from the command line and sets the port number to the
+        /// global variable `CommonFunctions.ServerPort`
+        /// </summary>
+        /// <param name="Arguments">This is the class that contains the command line arguments.</param>
+        void defineServerPort(Arguments CommandLine){
             //parse port from commandline
             if (int.TryParse(CommandLine["port"], out _)) {  
                 // if port provided              
                 CommonFunctions.ServerPort = int.Parse(CommandLine["port"]);
+                Console.WriteLine("Server port is defined as : "+ CommonFunctions.ServerPort);
             } else {
                 //If no port is provided, set default port
                 CommonFunctions.ServerPort = 8054;
-                Console.WriteLine("No Port not defined. Selecting default: "+ CommonFunctions.ServerPort);        
+                Console.WriteLine("Server Port not defined. Selecting default: "+ CommonFunctions.ServerPort);        
             }
+        }
 
-            Console.Out.WriteLine("Arguments parsed. Press a key");
+        /// <summary>
+        /// This function displays the host and port of the client
+        /// </summary>
+        /// <param name="Arguments">This is the object that contains the command line arguments.</param>
+        void displayHostPortClient(Arguments CommandLine){
+            if (CommandLine["clientIP"] != "") {  
+                // if port provided              
+                CommonFunctions.clientIP = CommandLine["clientIP"];
+                Console.WriteLine("ClientIP is defined as : "+ CommonFunctions.ServerPort);
+            } else {
+                //If no port is provided, set default port
+                Console.WriteLine("ClientIP not defined.");        
+            }
+            if (CommandLine["clientPort"] != "") {  
+                // if port provided              
+                CommonFunctions.clientPort = CommandLine["clientPort"];
+                Console.WriteLine("clientPort is defined as : "+ CommonFunctions.ServerPort);
+            } else {
+                //If no port is provided, set default port
+                Console.WriteLine("clientPort not defined.");        
+            }
         }
     }
 

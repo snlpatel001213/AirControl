@@ -17,11 +17,32 @@ namespace Commons
         // if you chnage this value, put the same value at Scripts/Communicator/NetworkCommunicator.cs
         public static float maxR = 0;
         public static int counter=0;
+        public static string clientIP = "None";
+        public static string clientPort = "None";
         public static int serverPort; // field 
         #region Properties
+        
+        /// <summary>
+        /// Getting and setting max reward
+        /// </summary>
+        /// <value></value>
         public static float MaxR{
             get{return maxR;}
             set{maxR = value;}
+        }
+
+        /// <summary>
+        /// getting and setting host and port of the client
+        /// </summary>
+        /// <value></value>
+        public static string ClientIP{
+            get{return clientIP;}
+            set{clientIP = value;}
+        }
+
+        public static string ClientPort{
+            get{return clientPort;}
+            set{clientPort = value;}
         }
 
         /// <summary>

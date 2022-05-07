@@ -23,18 +23,22 @@ class samples:
         :param distribution: uniform or beta, defaults to uniform (optional)
         :return: Numpy array with all random values.
         """
-        pitch =  self.get_random_pitch()
+        pitch =  self.get_random_pitch(distribution=distribution)
         yaw = self.get_random_yaw()
         roll= self.get_random_roll()
         stickyThrottle= self.get_random_stickythrottle(distribution=distribution)
         return np.array([pitch, yaw,roll,stickyThrottle])
 
-    def get_random_pitch(self):
+    def get_random_pitch(self, distribution="uniform"):
         """
         This function returns a random pitch value between -1 and 1
         :return: A random pitch value.
         """
-        return random.random()*(random.choices([-1,1])[0])
+        if(distribution=="uniform"):
+            return random.random()*(random.choices([-1,1])[0])
+        if(distribution=="beta"):
+            a, b = 1.0, 0.5
+            return np.random.beta(a, b)
     
     def get_random_yaw(self):
         """
