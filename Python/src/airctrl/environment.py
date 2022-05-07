@@ -7,8 +7,6 @@ from . import communicator
 INPUT_CONTROL_TYPE = ["Code", "Other"]
 
 
-
-
 class Trigger:
     def __init__(self):
         print("Now call method `.get_connected(port=<Default 8053>)` to get connected")
@@ -191,7 +189,6 @@ class Trigger:
         output =  self.connection.receive_data()
         return  self.process_output(output)
 
-
     def reset(self,
         InputControlType="Code", IsOutput=True
     ):
@@ -300,7 +297,25 @@ class Trigger:
         self.connection.send_data(ui_schema)
         output =  self.connection.receive_data()
         return  self.process_output(output)
-    
+
+    def set_clientInfo(self, IsActive=False, ClientPort=""):
+        """
+        This function is used to set the client information
+        Args:
+            IsActive: True or False, defaults to False (optional)
+            ClientPort: The port number that the client is listening on
+        """
+        ClientIP = self.get_client_info()
+        client_schema = {
+            "MsgType": "ClientInfo",
+            "IsActive": self.bool2string(IsActive),
+            "clientIP": ClientIP,
+            "clientPort": ClientPort,
+        }
+        self.connection.send_data(client_schema)
+        output =  self.connection.receive_data()
+        return  self.process_output(output)
+
     def set_audio(self, IsActive=False, EnableAudio=True, IsOutput=False
     ):
         """

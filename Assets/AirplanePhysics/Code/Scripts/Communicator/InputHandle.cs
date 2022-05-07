@@ -195,12 +195,27 @@ namespace Communicator
                 // Currently relaod is only supported
                 else if (MsgType=="UIControls") // if operation type is transaction
                 {   
-                    bool isActive = bool.Parse(inputJson["IsActive"].ToString());
+                    
                     bool ifExit = bool.Parse(inputJson["ifExit"].ToString());
                     //primary key
                     StaticUIControlsSchema.MsgType = "UIControls";
                     //set if clouds are enabled
                     StaticUIControlsSchema.ifExit = ifExit;
+
+                }
+                #endregion
+
+                #region ClientInfo
+                // UI control like exit, reload etc
+                // Currently relaod is only supported
+                else if (MsgType=="ClientInfo") // if operation type is transaction
+                {  
+                    bool isActive = bool.Parse(inputJson["IsActive"].ToString()); 
+                    string clientIP = inputJson["clientIP"].ToString();
+                    string clientPort = inputJson["clientPort"].ToString();
+                    StaticClientInfo.IsActive = isActive;
+                    StaticClientInfo.ClientIP = clientIP;
+                    StaticClientInfo.ClientPort = clientPort;
 
                 }
                 #endregion

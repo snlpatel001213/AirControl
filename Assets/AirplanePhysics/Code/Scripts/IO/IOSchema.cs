@@ -365,6 +365,32 @@ namespace Communicator
 	}
 	#endregion
 
+		#region UISchema
+	/// <summary>
+	///Ui and Audio class for serialization deserialization
+	/// </summary>
+	public class ClientInfo
+	{	
+		public bool IsActive {get; set;} = false;
+		// if transaction schema is active or not this is to reduce computation load in the update loops
+		public string ClientIP {get; set;} = "None";
+		public string ClientPort {get; set;} = "None";
+
+	}
+	/// <summary>
+	/// UI and audio control.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
+	public static class StaticClientInfo
+	{	
+		public static bool IsActive {get; set;} = false;
+		// if transaction schema is active or not this is to reduce computation load in the update loops
+		public static string ClientIP {get; set;} = "None";
+		public static string ClientPort {get; set;} = "None";
+	}
+	#endregion
+
 	#region UIAudioSchema
 	/// <summary>
 	///Ui and Audio class for serialization deserialization
