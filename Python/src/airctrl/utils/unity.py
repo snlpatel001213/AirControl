@@ -9,7 +9,7 @@ class Launch:
     def get_client_info(self):
         return socket.gethostbyname(socket.gethostname())
 
-    def launch_executable(self, file_name: str, port=8053, sleeptime=5) -> subprocess.Popen:
+    def launch_executable(self, file_name: str, server_port=8053, sleeptime=5) -> subprocess.Popen:
         """
         Launches a Unity executable and returns the process handle for it.
         :param file_name: the name of the executable
@@ -25,12 +25,12 @@ class Launch:
             subprocess_args = launch_string
             # std_out_option = DEVNULL means the outputs will not be displayed on terminal.
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
-            print("Loading environment from {0} at port {1}".format(subprocess_args,str(port)))
+            print("Loading environment from {0} at port {1}".format(subprocess_args,str(server_port)))
             try:
                 client_info_ip = self.get_client_info()
                 process  = subprocess.Popen(
                     
-                    args = [subprocess_args, "--port",  str(port)],
+                    args = [subprocess_args, "--serverPort",  str(server_port)],
                     # start_new_session=True means that signals to the parent python process
                     # (e.g. SIGINT from keyboard interrupt) will not be sent to the new process on POSIX platforms.
                     # This is generally good since we want the environment to have a chance to shutdown,

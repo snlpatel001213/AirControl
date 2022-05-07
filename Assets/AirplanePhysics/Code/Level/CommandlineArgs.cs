@@ -57,9 +57,9 @@ namespace AirControl {
         /// <param name="Arguments">This is the class that contains the command line arguments.</param>
         void defineServerPort(Arguments CommandLine){
             //parse port from commandline
-            if (int.TryParse(CommandLine["port"], out _)) {  
+            if (int.TryParse(CommandLine["serverPort"], out _)) {  
                 // if port provided              
-                CommonFunctions.ServerPort = int.Parse(CommandLine["port"]);
+                CommonFunctions.ServerPort = int.Parse(CommandLine["serverPort"]);
                 Console.WriteLine("Server port is defined as : "+ CommonFunctions.ServerPort);
             } else {
                 //If no port is provided, set default port
