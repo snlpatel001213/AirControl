@@ -15,10 +15,20 @@ class Launch:
 
     def launch_executable(self, file_name: str,  server_port=8053, client_ip=None, sleeptime=5) -> subprocess.Popen:
         """
-        Launches a Unity executable and returns the process handle for it.
-        :param file_name: the name of the executable
-        :param args: List of string that will be passed as command line arguments
-        when launching the executable.
+        The function takes in the name of the executable file, the server port, the client ip and the sleep
+        time. 
+        
+        It then checks if the executable file is present in the environment folder. If it is, it launches
+        the executable file with the server port, client ip and client port as arguments. 
+        
+        It then sleeps for the specified time to allow the environment to load.
+        
+        :param file_name: The name of the executable file to launch
+        :type file_name: str
+        :param server_port: The port that the server will listen on, defaults to 8053 (optional)
+        :param client_ip: The IP address of the client machine
+        :param sleeptime: The time to wait for the environment to load, defaults to 5 (optional)
+        :return: The process object is being returned.
         """
         launch_string = self.validate_environment_path(file_name)
         if launch_string is None:
