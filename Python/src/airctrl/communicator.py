@@ -1,7 +1,7 @@
 import json
 import socket
 import time
-
+import traceback
 import numpy as np
 
 
@@ -42,7 +42,9 @@ class Communicator:
             self.sock.connect((host, port))   
             self.sock.settimeout(10)      
         except Exception as e:
-            print("Faced Error while establishing server-client connect.",e)
+
+            print("Faced following error while establishing server-client connect.",e)
+            print(traceback.print_exc())
 
     def send_data(self, data_dict: dict):
         """

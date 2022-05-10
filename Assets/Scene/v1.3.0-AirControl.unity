@@ -13579,8 +13579,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 17
-  minutes: 59
+  hour: 21
+  minutes: 41
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
@@ -16397,6 +16397,34 @@ PrefabInstance:
     - target: {fileID: 280568390844412875, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208955142174974568, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.88
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208955142174974568, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.38
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208955142174974568, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9990483
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208955142174974568, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.043619405
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208955142174974568, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208955142174974568, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6208955142174974568, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 6208955143581434320, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
       propertyPath: maxRPM

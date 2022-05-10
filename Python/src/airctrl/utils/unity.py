@@ -5,6 +5,8 @@ import time
 from sys import platform
 import socket
 
+from click import command
+
 class Launch:
     def get_client_info(self):
         """
@@ -36,18 +38,18 @@ class Launch:
                 f"Couldn't launch the {file_name} environment. Provided filename does not match any environments."
             )
         else:
+            if(client_ip==None):
+                client_ip = self.get_client_info()
             subprocess_args = launch_string
             # std_out_option = DEVNULL means the outputs will not be displayed on terminal.
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
             print("Loading environment from {0} at port {1} client ip {2} client port {3}".format(subprocess_args,str(server_port),str(client_ip), str(server_port)))
             
             try:
-                if(client_ip==""):
-                    client_ip = self.get_client_info()
-                
+                command_line = [subprocess_args, "--serverPort",  str(server_port), "--clientIP" , str(client_ip), "--clientPort", str(server_port)]
+                print(command_line)
                 process  = subprocess.Popen(
-                    
-                    args = [subprocess_args, "--serverPort",  str(server_port), "--clientIP" , str(client_ip), "--clientPort", str(server_port)],
+                    args = command_line,
                     # start_new_session=True means that signals to the parent python process
                     # (e.g. SIGINT from keyboard interrupt) will not be sent to the new process on POSIX platforms.
                     # This is generally good since we want the environment to have a chance to shutdown,

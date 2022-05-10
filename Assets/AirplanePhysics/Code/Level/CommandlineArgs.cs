@@ -76,7 +76,7 @@ namespace AirControl {
             if (CommandLine["clientIP"] != "") {  
                 // if port provided              
                 CommonFunctions.clientIP = CommandLine["clientIP"];
-                Console.WriteLine("ClientIP is defined as : "+ CommonFunctions.ServerPort);
+                Console.WriteLine("ClientIP is defined as : "+ CommonFunctions.clientIP);
             } else {
                 //If no port is provided, set default port
                 Console.WriteLine("ClientIP not defined.");        
@@ -84,10 +84,10 @@ namespace AirControl {
             if (CommandLine["clientPort"] != "") {  
                 // if port provided              
                 CommonFunctions.clientPort = CommandLine["clientPort"];
-                Console.WriteLine("clientPort is defined as : "+ CommonFunctions.ServerPort);
+                Console.WriteLine("ClientPort is defined as : "+ CommonFunctions.ServerPort);
             } else {
                 //If no port is provided, set default port
-                Console.WriteLine("clientPort not defined.");        
+                Console.WriteLine("ClientPort not defined.");        
             }
         }
     }
