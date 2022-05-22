@@ -16,6 +16,7 @@ class Trigger:
         Get connected to the simulation host
         param port: the same port as environment 
         """
+        print("Connecting with port {0}".format(port))
         self.connection = communicator.Communicator(port=port)
         
     def bool2string(self,booltype):

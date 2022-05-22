@@ -16,6 +16,7 @@ namespace Commons
         // max reward 
         // if you chnage this value, put the same value at Scripts/Communicator/NetworkCommunicator.cs
         public static float maxR = 0;
+        // request counter
         public static int counter=0;
         public static string clientIP = "None";
         public static string clientPort = "None";
@@ -61,7 +62,7 @@ namespace Commons
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "1.2.0";
+            string VERSION = "1.3.0";
             return VERSION;
         } 
         /// <summary>
