@@ -5,7 +5,7 @@ using UnityEngine;
 namespace AirControl
 {
     /// <summary>
-    /// Monitor and updates the Throttle lever to UI 
+    /// Monitor and updates the Roll lever to UI 
     /// </summary>
     public class AC_Airplane_RollLever : MonoBehaviour, IAirplaneUI
     {
