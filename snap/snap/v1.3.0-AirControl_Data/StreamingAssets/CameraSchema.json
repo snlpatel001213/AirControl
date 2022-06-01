@@ -1,0 +1,11 @@
+{
+  "MsgType": "Camera",
+  "Version": "1.3.0",
+  "IsActive": "false",
+  "ActiveCamera": 0,
+  "IsCapture": "false",
+  "CaptureCamera": 0,
+  "CaptureType": 0,
+  "CaptureWidth": 256,
+  "CaptureHeight": 256
+}

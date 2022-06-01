@@ -1,11 +1,8 @@
 # Console scripts
 
 import sys
-
+from colorama import Fore, Back, Style
 from .__init__ import __version__  # all imports require a dot when building package: '.__init__', etc.
-from .utils.general import colorstr
-
-prefix = colorstr('airctrl : ')
 
 
 # def main_with_argparse():
@@ -26,11 +23,13 @@ prefix = colorstr('airctrl : ')
 
 
 def main():
-    if len(sys.argv) == 1 or sys.argv[1] == 'version':  # usage: $ ultralytics version
-        print(f'{prefix}Version {__version__}')
-        print(f'{prefix}For more info see https://github.com/snlpatel001213/AirControl/')
+    if len(sys.argv) == 1 or sys.argv[1] == 'version':  # usage: $ aircontrol version
+        print(Fore.Blue + 'Version {__version__}')
+        print(Fore.Blue + 'For more info see https://github.com/snlpatel001213/AirControl/')
+        print(Style.RESET_ALL)
     else:
-        print(f'{prefix}argument no recognized')
+        print(Fore.Blue + 'Arguments not recognized')
+        print(Style.RESET_ALL)
         exit()
 
 

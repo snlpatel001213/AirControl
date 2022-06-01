@@ -12,6 +12,7 @@ Please note we have a code of conduct,please follow it in all your interactions 
    2. file `Assets/AirplanePhysics/Code/commons/CommonConfigs.cs` in the `GET_VERSION()` function
    3. Change `PROJECT_NUMBER` in `docs/doxygen.conf file`
    4. Change `version` in `snap/snap/snapcraft.yaml`
+   5. Chnage version at `Python/src/airctrl/__init__.py`
 2. Make sure if any third-party plugins are used then it also supports open usage and compile for following Platform.
     1. Windows
     2. Mac 
