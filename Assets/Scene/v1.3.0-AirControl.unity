@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.45112008, g: 0.50091267, b: 0.5739921, a: 1}
+  m_IndirectSpecularColor: {r: 0.4511196, g: 0.5009117, b: 0.573991, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -3343,7 +3343,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 341614989}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 9.100805}
+  m_LocalPosition: {x: 0, y: 0, z: 9.100803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 225223656}
@@ -3353,11 +3353,11 @@ RectTransform:
   m_Father: {fileID: 252995766}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 300, y: 130}
-  m_SizeDelta: {x: 13, y: 193.22}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 241, y: -335}
+  m_SizeDelta: {x: 13, y: 193.21997}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &341614991
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3538,7 +3538,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -178.20001, y: 30.122986}
+  m_AnchoredPosition: {x: -178.20001, y: 30.123016}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &380894391
@@ -4057,7 +4057,7 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 443305534}
   m_LocalRotation: {x: 0, y: 0, z: -0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 9.100805}
+  m_LocalPosition: {x: 0, y: 0, z: 9.100803}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2095655892}
@@ -4067,11 +4067,11 @@ RectTransform:
   m_Father: {fileID: 252995766}
   m_RootOrder: 23
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: -450, y: 130}
-  m_SizeDelta: {x: 13, y: 193.22}
-  m_Pivot: {x: 0.5, y: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -274, y: -328}
+  m_SizeDelta: {x: 13, y: 193.21997}
+  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &443305536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10856,7 +10856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 31.6996, y: 40}
+  m_AnchoredPosition: {x: -26, y: 38}
   m_SizeDelta: {x: 194.3391, y: 193.22}
   m_Pivot: {x: 0.5, y: 0}
 --- !u!114 &1248939433
@@ -15788,8 +15788,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 21
-  minutes: 5
+  hour: 18
+  minutes: 40
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731

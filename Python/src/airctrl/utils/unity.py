@@ -4,7 +4,7 @@ import os
 import time
 from sys import platform
 import socket
-
+from colorama import Fore, Back, Style
 from click import command
 
 class Launch:
@@ -43,8 +43,8 @@ class Launch:
             subprocess_args = launch_string
             # std_out_option = DEVNULL means the outputs will not be displayed on terminal.
             # std_out_option = None is default behavior: the outputs are displayed on terminal.
-            print("Loading environment from {0} at port {1} client ip {2} client port {3}".format(subprocess_args,str(server_port),str(client_ip), str(server_port)))
-            
+            print(Fore.GREEN + "Loading environment from {0} at port {1} client ip {2} client port {3}".format(subprocess_args,str(server_port),str(client_ip), str(server_port)))
+            print(Style.RESET_ALL)
             try:
                 command_line = [subprocess_args, "--serverPort",  str(server_port), "--clientIP" , str(client_ip), "--clientPort", str(server_port)]
                 process  = subprocess.Popen(
@@ -56,12 +56,13 @@ class Launch:
                     # Note that on Windows, the CTRL_C signal will still be sent.
                     start_new_session=True
                 )
-                print("Sleeping for {0} seconds to allow environment load".format(sleeptime))
+                print(Fore.GREEN + "Sleeping for {0} seconds to allow environment load".format(sleeptime))
+                print(Style.RESET_ALL)
                 time.sleep(sleeptime)
                 return process
             except PermissionError as perm:
                 # This is likely due to missing read or execute permissions on file.
-                raise (
+                raise (Fore.RED + 
                     f"Error when trying to launch environment - make sure "
                     f"permissions are set correctly. For example "
                     f'"chmod -R 755 {launch_string}"'

@@ -1,22 +1,23 @@
-import json
-import socket
 from typing import Dict
 import numpy as np
 from . import communicator
+from colorama import Fore, Back, Style
 
 INPUT_CONTROL_TYPE = ["Code", "Other"]
 
 
 class Trigger:
     def __init__(self):
-        print("Now call method `.get_connected(port=<Default 8053>)` to get connected")
+        print(Fore.GREEN+"Now call method `.get_connected(port=<Default 8053>)` to get connected")
+        print(Style.RESET_ALL)
         
     def get_connected(self, port=8053):
         """
         Get connected to the simulation host
         param port: the same port as environment 
         """
-        print("Connecting with port {0}".format(port))
+        print(Fore.GREEN+"Connecting with port {0}".format(port))
+        print(Style.RESET_ALL)
         self.connection = communicator.Communicator(port=port)
         
     def bool2string(self,booltype):
@@ -50,7 +51,7 @@ class Trigger:
     def check_input_type(self,InputControlType: str):
         # proper input control type not provided
         if InputControlType not in INPUT_CONTROL_TYPE:
-            raise Exception(
+            raise Exception(Fore.RED+
                 "Set control type {} not defualts {}".format(
                     InputControlType, INPUT_CONTROL_TYPE
                 )
