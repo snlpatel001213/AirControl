@@ -15788,8 +15788,13 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
+<<<<<<< HEAD
   hour: 18
   minutes: 40
+=======
+  hour: 21
+  minutes: 36
+>>>>>>> c9ae99f7e2d9808fa8e9c2151230193cc7eaa7c4
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
