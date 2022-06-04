@@ -62,7 +62,7 @@ namespace Commons
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "1.3.0";
+            string VERSION = "FORSIMULATION";
             return VERSION;
         } 
         /// <summary>

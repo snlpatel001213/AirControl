@@ -33,6 +33,9 @@
   "RotXRel": 0.0,
   "RotYRel": 0.0,
   "RotZRel": 0.0,
+  "AngularXVelocity": 0.0,
+  "AngularYVelocity": 0.0,
+  "AngularZVelocity": 0.0,
   "MsgType": "Output",
-  "Version": "1.3.0"
+  "Version": "FORSIMULATION"
 }

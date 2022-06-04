@@ -1,6 +1,6 @@
 {
   "MsgType": "Level",
-  "Version": "1.3.0",
+  "Version": "FORSIMULATION",
   "InputControlType": "Other",
   "IsActive": "false",
   "LevelReload": "false"

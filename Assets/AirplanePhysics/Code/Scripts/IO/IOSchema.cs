@@ -113,6 +113,19 @@ namespace Communicator
 		public static float RotXRel;
 		public static float RotYRel;
 		public static float RotZRel;
+		public static float AngularXVelocity;
+		public static float AngularYVelocity;
+		public static float AngularZVelocity;
+		public static float LinearXVelocity;
+        public static float LinearYVelocity;
+        public static float LinearZVelocity;
+		public static float AngularXAcceleration;
+		public static float AngularYAcceleration;
+		public static float AngularZAcceleration;
+		public static float LinearXAcceleration;
+        public static float LinearYAcceleration;
+        public static float LinearZAcceleration;
+		
 
 		public static string log = "";
 		
@@ -159,6 +172,18 @@ namespace Communicator
 		public float RotXRel;
 		public float RotYRel;
 		public float RotZRel;
+		public float AngularXVelocity;
+		public float AngularYVelocity;
+		public float AngularZVelocity;
+		public float LinearXVelocity;
+        public float LinearYVelocity;
+        public float LinearZVelocity;
+		public float AngularXAcceleration;
+		public float AngularYAcceleration;
+		public float AngularZAcceleration;
+		public float LinearXAcceleration;
+        public float LinearYAcceleration;
+        public float LinearZAcceleration;
 	}
 	#endregion
 
