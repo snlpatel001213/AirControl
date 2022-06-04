@@ -1,6 +1,6 @@
 {
   "MsgType": "Camera",
-  "Version": "FORSIMULATION",
+  "Version": "1.3.0",
   "IsActive": "false",
   "ActiveCamera": 0,
   "IsCapture": "false",

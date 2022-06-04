@@ -1,6 +1,6 @@
 {
   "MsgType": "ControlInput",
-  "Version": "FORSIMULATION",
+  "Version": "1.3.0",
   "InputControlType": "Other",
   "Pitch": 0.0,
   "Roll": 0.0,

@@ -1,5 +1,5 @@
 {
   "MsgType": "Fuel",
-  "Version": "FORSIMULATION",
+  "Version": "1.3.0",
   "InputControlType": "Other"
 }

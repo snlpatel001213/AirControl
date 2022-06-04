@@ -36,6 +36,15 @@
   "AngularXVelocity": 0.0,
   "AngularYVelocity": 0.0,
   "AngularZVelocity": 0.0,
+  "LinearXVelocity": 0.0,
+  "LinearYVelocity": 0.0,
+  "LinearZVelocity": 0.0,
+  "AngularXAcceleration": 0.0,
+  "AngularYAcceleration": 0.0,
+  "AngularZAcceleration": 0.0,
+  "LinearXAcceleration": 0.0,
+  "LinearYAcceleration": 0.0,
+  "LinearZAcceleration": 0.0,
   "MsgType": "Output",
-  "Version": "FORSIMULATION"
+  "Version": "1.3.0"
 }

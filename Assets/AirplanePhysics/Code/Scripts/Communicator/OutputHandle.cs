@@ -23,10 +23,12 @@ namespace Communicator
         /// <returns>Output json string</returns>
         public void  ParseOutput(ref string outputmsg)
         {
-            // to avoid null retun from Screencapture
+            // To avoid null retun from Screencapture
+            // To not to send the screencapture if `IsCapture` is to `false`, to save bandwidth
             ref var screencapture = ref StaticOutputSchema.ScreenCapture;
-            if (screencapture == null){
+            if (screencapture == null || StaticCameraSchema.IsCapture == false){
                 screencapture =  new byte[0];
+                
             }
 
             // to avoid null retun from Screencapture
@@ -69,6 +71,18 @@ namespace Communicator
                 RotXRel = StaticOutputSchema.RotXRel,
                 RotYRel = StaticOutputSchema.RotYRel,
                 RotZRel = StaticOutputSchema.RotZRel,
+                AngularXVelocity = StaticOutputSchema.AngularXVelocity,
+                AngularYVelocity = StaticOutputSchema.AngularYVelocity,
+                AngularZVelocity = StaticOutputSchema.AngularZVelocity,
+                LinearXVelocity = StaticOutputSchema.LinearXVelocity,
+                LinearYVelocity = StaticOutputSchema.LinearYVelocity,
+                LinearZVelocity = StaticOutputSchema.LinearZVelocity,
+                AngularXAcceleration = StaticOutputSchema.AngularXAcceleration,
+                AngularYAcceleration = StaticOutputSchema.AngularYAcceleration,
+                AngularZAcceleration = StaticOutputSchema.AngularZAcceleration,
+                LinearXAcceleration = StaticOutputSchema.LinearXAcceleration,
+                LinearYAcceleration = StaticOutputSchema.LinearYAcceleration,
+                LinearZAcceleration = StaticOutputSchema.LinearZAcceleration,
                 
             }, new PrimitiveToStringConverter());
             StaticOutputSchema.Counter ++; 

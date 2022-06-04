@@ -136,26 +136,24 @@ namespace AirControl
                 Debug.unityLogger.Log(logString);
                 StaticCameraSchema.IsActive = false;
             }
-
-            if (isCapture)
-            {
-                //screen capture
-                CapturePass pass = CapturePassList[captureType];
-                pass.camera.enabled =true;
-                ScreenToBytes(pass.camera, cameras[curentCameraIndex] , captureWidth, captureHeight, pass.supportsAntialiasing, pass.needsRescale, ref StaticOutputSchema.ScreenCapture);
-                //if the camera is changed then disable all active capture camera
-                if(currentCaprtureCamera != captureCamera)
-                {  
-                    ResetAllCaptureCam(capturePasses);
-                    currentCaprtureCamera = captureCamera;
-                    string logString = System.String.Format("Active scene camera - {0} Capture camera - {1} Width - {2}  Height - {3}: ",curentCameraIndex, currentCaprtureCamera, captureWidth, captureHeight);
-                    StaticLogger.Log = logString;
-                    Debug.unityLogger.Log(logString);
-                }
-                OnCameraChange(cameras[currentCaprtureCamera]);// 1 indicate the outside camera
-                OnSceneChange();
-    
+            // These statements were removed as these were causing delay in the scrrenshot by one frame 
+            // Capture will be continuous, to send the capture to client is defined by `isCapture` defined in Outputhandle 
+  
+            CapturePass pass = CapturePassList[captureType];
+            pass.camera.enabled =true;
+            ScreenToBytes(pass.camera, cameras[curentCameraIndex] , captureWidth, captureHeight, pass.supportsAntialiasing, pass.needsRescale, ref StaticOutputSchema.ScreenCapture);
+            //if the camera is changed then disable all active capture camera
+            if(currentCaprtureCamera != captureCamera)
+            {  
+                ResetAllCaptureCam(capturePasses);
+                currentCaprtureCamera = captureCamera;
+                string logString = System.String.Format("Active scene camera - {0} Capture camera - {1} Width - {2}  Height - {3}: ",curentCameraIndex, currentCaprtureCamera, captureWidth, captureHeight);
+                StaticLogger.Log = logString;
+                Debug.unityLogger.Log(logString);
             }
+            OnCameraChange(cameras[currentCaprtureCamera]);// 1 indicate the outside camera
+            OnSceneChange();
+
 
             #endregion
             // Manual Camera switch with key c
