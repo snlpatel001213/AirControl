@@ -32,6 +32,22 @@ Please note we have a code of conduct,please follow it in all your interactions 
 9. You may merge the Pull Request in once you have the sign-off of two other developers, or if you 
    do not have permission to do that, you may request the second reviewer to merge it for you.
 
+# Setting Up VScode with Unity 
+
+This is not an exhaustive guide but just listing steps
+
+- `wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh`
+- `chmod +X  dotnet-install.sh`
+- `sudo apt install mono-devel`
+- Set appropriate dotnet path ( use command `find / -name dotnet` to get it located  ): in my case it was - `/home/supatel/.dotnet/`
+- Set apparopriate mono path  ( use command `which mono` to get it located ) : in my case it was `/usr/bin/mono`
+- Provide dotnet path to C# extension setting `Omnisharp: Dotnet Path`
+- Provide mono path to C# extension setting `Omnisharp: Mono Path`
+- You may also require lib ssl with unity 2021
+- wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.9_amd64.deb
+- sudo dpkg -i libssl1.0.0_1.0.2n-1ubuntu5.9_amd64.deb
+
+
 ## Code of Conduct
 
 ### Our Pledge

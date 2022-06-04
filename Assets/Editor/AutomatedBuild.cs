@@ -39,7 +39,7 @@ public class AutomatedBuild : MonoBehaviour
         String OS = "linux";
         UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
-        string buildPath = "Build/Linux";
+        string buildPath = System.IO.Path.Combine("Build",CommonFunctions.GET_VERSION(),"Linux");
         string sceneName = SceneManager.GetActiveScene().name;
         string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
@@ -63,7 +63,7 @@ public class AutomatedBuild : MonoBehaviour
         String OS = "linux";
         UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
-        string buildPath = "Build/LinuxHeadless";
+        string buildPath = System.IO.Path.Combine("Build",CommonFunctions.GET_VERSION(),"LinuxHeadless");
         string sceneName = SceneManager.GetActiveScene().name;
         string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
@@ -87,7 +87,7 @@ public class AutomatedBuild : MonoBehaviour
         String OS = "windows";
         UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
-        string buildPath = "Build/Windows";
+        string buildPath = System.IO.Path.Combine("Build",CommonFunctions.GET_VERSION(),"Windows");
         string sceneName = SceneManager.GetActiveScene().name;
         string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
@@ -111,7 +111,7 @@ public class AutomatedBuild : MonoBehaviour
         String OS = "mac";
         UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
-        string buildPath = "Build/Mac";
+        string buildPath = System.IO.Path.Combine("Build",CommonFunctions.GET_VERSION(),"Mac");
         string sceneName = SceneManager.GetActiveScene().name;
         string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
@@ -136,7 +136,7 @@ public class AutomatedBuild : MonoBehaviour
         String OS = "webgl";
         UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
-        string buildPath = "Build/WebGL";
+        string buildPath = System.IO.Path.Combine("Build",CommonFunctions.GET_VERSION(),"WebGL");
         string sceneName = SceneManager.GetActiveScene().name;
         string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
@@ -155,7 +155,7 @@ public class AutomatedBuild : MonoBehaviour
     {
         String OS = "UnityPackage";
         String appName = releaseVersion;
-        string buildPath = "Build/UnityPackage";
+        string buildPath = System.IO.Path.Combine("Build",CommonFunctions.GET_VERSION(),"UnityPackage");
         //Create directory , remove existing
         if (Directory.Exists(buildPath))
         {
@@ -197,7 +197,7 @@ public class AutomatedBuild : MonoBehaviour
         String OS = "snap";
         UnityEngine.Debug.Log("Starting build for - "+OS);
         String appName = releaseVersion;
-        string buildPath = "snap/snap";
+        string buildPath = System.IO.Path.Combine(CommonFunctions.GET_VERSION(),"snap/snap");
         string sceneName = SceneManager.GetActiveScene().name;
         string[] levels = new string[] {"Assets/Scene/"+sceneName+".unity"};
         //Create directory , remove existing
