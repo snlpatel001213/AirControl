@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Commons;
 namespace AirControl
 {
     /// <summary>
@@ -11,12 +11,18 @@ namespace AirControl
     {
         #region Variables
         [Header("Flap Lever Properties")]
-        public AC_BaseAirplane_Input input;
+        [SerializeField]
+        private AC_BaseAirplane_Input input;
         public RectTransform parentRect;
         public RectTransform handleRect;
         private float handleSpeed = 2f;
         #endregion
 
+        #region Builtin methods
+        void Start(){
+            input = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_BaseAirplane_Input>();
+        }
+        #endregion
 
         #region Interface Methods
         /// <summary>

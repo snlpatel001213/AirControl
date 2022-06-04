@@ -10,23 +10,23 @@ namespace AirControl {
         
         static string cmdInfo = "";
 
-        // link current airplane to the active airplane 
-        public GameObject currentAirplane;
-        public GameObject ActiveAirplane;
+        // // link current airplane to the active airplane 
+        // public GameObject currentAirplane;
+        // public GameObject ActiveAirplane;
         
-        /// <summary>
-        /// It takes the command line arguments, parses them, and then calls the ParseIt function
-        /// </summary>
-        void Awake() {
-            string[] arguments = Environment.GetCommandLineArgs();
-            Arguments CommandLine = new Arguments(arguments);
-            ParseIt(CommandLine);
+        // /// <summary>
+        // /// It takes the command line arguments, parses them, and then calls the ParseIt function
+        // /// </summary>
+        // void Awake() {
+        //     string[] arguments = Environment.GetCommandLineArgs();
+        //     Arguments CommandLine = new Arguments(arguments);
+        //     ParseIt(CommandLine);
 
-            if (true){
-                ActiveAirplane = currentAirplane;
-            }
+        //     if (true){
+        //         ActiveAirplane = currentAirplane;
+        //     }
 
-        }
+        // }
 
         /// <summary>
         /// just for debug, use as given below. Assign value to the `cmdInfo` variable

@@ -21,6 +21,7 @@ namespace Commons
         public static string clientIP = "None";
         public static string clientPort = "None";
         public static int serverPort; // field 
+        public static string activeAirplane = "None";
         #region Properties
         
         /// <summary>
@@ -44,6 +45,11 @@ namespace Commons
         public static string ClientPort{
             get{return clientPort;}
             set{clientPort = value;}
+        }
+
+        public static string ActiveAirplane{
+            get{return activeAirplane;}
+            set{activeAirplane = value;}
         }
 
         /// <summary>

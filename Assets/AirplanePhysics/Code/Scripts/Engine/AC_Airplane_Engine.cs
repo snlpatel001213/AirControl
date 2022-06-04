@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
-
+using Commons;
 namespace AirControl
 {   
     /// <summary>
@@ -57,6 +57,9 @@ namespace AirControl
         /// </summary>
         void Start()
         {
+
+            // propeller = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Propeller>();
+            // Debug.Log("Setting Propeller");
             if(!fuel)
             {
                 fuel = GetComponent<AC_Airplane_Fuel>();

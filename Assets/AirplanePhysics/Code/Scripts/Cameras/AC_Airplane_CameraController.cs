@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Rendering;
 using Communicator;
 using System.IO;
-
+using Commons;
 
 namespace AirControl
 {
@@ -72,8 +72,10 @@ namespace AirControl
 
         #region Builtin Methods
         // Start is called before the first frame update
+
         void Start()
         {
+            input = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_BaseAirplane_Input>();
             if (startCameraIndex >=0 && startCameraIndex < cameras.Count)
             {
                 DisableAllCameras();

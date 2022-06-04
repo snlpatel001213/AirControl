@@ -25,11 +25,13 @@ namespace  AirControl
 
         #region Builtin Methods
         // Start is called before the first frame update
+        
         void Start()
-        {
+        {   
+            airplane = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<Transform>();
             originalCamraHeight = cameraHeight;
         }
-
+        
         // Update is called once per frame
         void FixedUpdate()
         {

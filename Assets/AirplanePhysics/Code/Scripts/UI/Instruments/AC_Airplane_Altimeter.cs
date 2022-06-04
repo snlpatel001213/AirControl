@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Commons;
 
 namespace AirControl
 {
@@ -12,11 +13,20 @@ namespace AirControl
         #region Variables
         [Header("Altimeter Properties")]
         [Tooltip("Drag and drop Airplane Here")]
-        public AC_Airplane_Controller airplane;
+        [SerializeField]
+        private AC_Airplane_Controller airplane;
         [Tooltip("Drag and drop Hundreds pointer Here")]
-        public RectTransform hundredspointer; 
+        [SerializeField]
+        private RectTransform hundredspointer; 
         [Tooltip("Drag and drop Thousands Pointer Here")]
-        public RectTransform thousandsPointer;
+        [SerializeField]
+        private RectTransform thousandsPointer;
+        #endregion
+
+        #region Builtin methods
+        void Start(){
+            airplane = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Controller>();
+        }
         #endregion
 
         #region Interface Methods

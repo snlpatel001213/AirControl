@@ -54,6 +54,7 @@ namespace AirControl
                     StaticOutputSchema.CollisionObject = surface;
                 }
             }
+
         }
 
         // Update is called once per frame
@@ -76,6 +77,7 @@ namespace AirControl
         /// <param name="input">Airplane Input</param>
         public void HandleWheel(AC_BaseAirplane_Input input)
         {
+            print(wheelCol.motorTorque);
             if(wheelCol)
             {
 

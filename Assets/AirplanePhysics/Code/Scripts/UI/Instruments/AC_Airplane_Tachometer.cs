@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Commons;
+using System.ComponentModel;
 
 namespace AirControl
 {
@@ -12,7 +14,8 @@ namespace AirControl
         #region Variables
         [Header("Tachometer  Properties")]
         [Tooltip("Drag and drop Engine Here")]
-        public AC_Airplane_Engine engine;
+        [SerializeField]
+        private AC_Airplane_Engine engine;
         [Tooltip("Drag and drop pointer Here")]
         public RectTransform pointer; 
         public float maxRPMIntachometer = 3500f;
@@ -20,7 +23,10 @@ namespace AirControl
         private float smoothrotation;
         #endregion
 
-        #region Builtin Methods
+        #region Builtin methods
+        void Start(){
+            engine = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Engine>();
+        }
         #endregion
 
         #region Interface Methods
