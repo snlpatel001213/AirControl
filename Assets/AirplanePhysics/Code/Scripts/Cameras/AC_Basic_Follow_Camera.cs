@@ -14,9 +14,13 @@ namespace  AirControl
         [Header("Basic follow camera properties")]
         [Tooltip("Drag and drop entire airplane group over here")]
         public Transform airplane;
-        public float cameraDistance = 10f;
-        public float cameraHeight = 6f;
-        public float cameraMovementSpeed = 0.5f;
+        [SerializeField]
+        private float cameraDistance = 12f;
+        [SerializeField]
+        private float cameraHeight = 6
+        [SerializeField]
+        private float cameraMovementSpeed = 0.5f;
+        public float minHeaightFromGround = 8;
 
         private Vector3 smoothVelocity;
 
@@ -55,6 +59,13 @@ namespace  AirControl
             transform.position = Vector3.SmoothDamp(transform.position, wantedPosition, ref smoothVelocity, cameraMovementSpeed);
             // Watch the airplane
             transform.LookAt(airplane);
+            RaycastHit hit;
+            if(Physics.Raycast(transform.position, Vector3.down, out hit)){
+                if(hit.distance < minHeaightFromGround && hit.transform.tag == "Ground"){
+                    float wantedHeight =  originalCamraHeight + (minHeaightFromGround - hit.distance);
+                    cameraHeight = wantedHeight;
+                }
+            }
         }
     #endregion
     }

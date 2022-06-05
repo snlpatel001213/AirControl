@@ -25,6 +25,7 @@ namespace AirControl
         public float brakePower = 500f;
         public bool isSteering=false;
         public float steerAngle=20f;
+        public float motorTorque;
 
         private WheelCollider wheelCol;
         private Vector3 worldPos;
@@ -77,7 +78,6 @@ namespace AirControl
         /// <param name="input">Airplane Input</param>
         public void HandleWheel(AC_BaseAirplane_Input input)
         {
-            print(wheelCol.motorTorque);
             if(wheelCol)
             {
 
@@ -103,7 +103,7 @@ namespace AirControl
                         slowlyBrake = 0f;
                         wheelCol.brakeTorque = 0.0f;
                         // small motor torque not to allow airplane roll backward
-                        wheelCol.motorTorque = 0.00001f;
+                        wheelCol.motorTorque = motorTorque;
                     }
                 }
                 if(isSteering)

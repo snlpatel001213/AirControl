@@ -1,18 +1,22 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Communicator;
+using UnityEditor;
 using UnityEngine;
+using Commons;
+using Unity.Profiling.Editor;
 
-public class AirplaneProperties : MonoBehaviour
-{
-    // Start is called before the first frame update
-    void Start()
+namespace AirControl{
+    public static class AirplaneProperties
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
+        // Start is called before the first frame update
+        public static void Getter()
+        {
+            float cameraHeight=4;
+        }
         
     }
 }
+
+

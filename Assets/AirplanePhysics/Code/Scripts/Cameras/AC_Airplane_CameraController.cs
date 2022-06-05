@@ -16,8 +16,9 @@ namespace AirControl
         #region Variables
         [Header("Camera Controller Properties")]
         public AC_BaseAirplane_Input input;
-
-        public List<Camera> cameras = new List<Camera>();
+        [SerializeField]
+        private List<Camera> cameras = new List<Camera>();
+        private Transform airplane;
         public List<CapturePass> CapturePassList = new List<CapturePass>();
         public int startCameraIndex =1;
         private int curentCameraIndex=1;
@@ -73,9 +74,17 @@ namespace AirControl
         #region Builtin Methods
         // Start is called before the first frame update
 
+        void Awake(){
+            
+        }
         void Start()
         {
             input = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_BaseAirplane_Input>();
+            //Adding cameras
+            cameras.Add(GameObject.Find(CommonFunctions.ActiveAirplane+"/FollowCamera").GetComponent<Camera>());
+            cameras.Add(GameObject.Find(CommonFunctions.ActiveAirplane+"/CockpitCamera").GetComponent<Camera>());
+            
+
             if (startCameraIndex >=0 && startCameraIndex < cameras.Count)
             {
                 DisableAllCameras();
