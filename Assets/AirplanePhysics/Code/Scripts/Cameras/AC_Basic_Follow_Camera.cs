@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Commons;
+using System.Dynamic;
+using UnityEditorInternal;
 
 namespace  AirControl
 {
@@ -17,7 +19,7 @@ namespace  AirControl
         [SerializeField]
         private float cameraDistance = 12f;
         [SerializeField]
-        private float cameraHeight = 6
+        private float cameraHeight = 6; //AirplaneProperties.getFloat(CommonFunctions.ActiveAirplane, "cameraHeight");
         [SerializeField]
         private float cameraMovementSpeed = 0.5f;
         public float minHeaightFromGround = 8;

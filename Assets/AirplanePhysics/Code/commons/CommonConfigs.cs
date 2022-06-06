@@ -23,6 +23,13 @@ namespace Commons
         public static int serverPort; // field 
         public static string activeAirplane = "None";
         #region Properties
+
+        #region preset
+        public static string  persistentDataPath = Application.streamingAssetsPath;
+        public static string presetFilename = "AirplaneProperties.json";
+        public static dynamic airplanePreset = new JObject();
+        public static string presetFilepath = System.IO.Path.Combine(persistentDataPath,presetFilename);
+        #endregion
         
         /// <summary>
         /// Getting and setting max reward
@@ -71,6 +78,14 @@ namespace Commons
             string VERSION = "1.3.0";
             return VERSION;
         } 
+
+        public static bool ifExists(string path){
+            if (File.Exists(path)){
+                return true;
+            } 
+            return false;
+        }
+
         /// <summary>
         /// Delete file
         /// </summary>
@@ -134,39 +149,11 @@ namespace Commons
             }
         }
 
-    public static GameObject GetAirplane(){
-        var airplane =  Resources.Load("AirplanePhysics/Art/Objects/Airplanes/IndiePixel_Airplanes/Prefabs/Cessna-152.prefab",typeof(GameObject))  as GameObject;
-        return airplane;
+        public static GameObject GetAirplane(){
+            var airplane =  Resources.Load("AirplanePhysics/Art/Objects/Airplanes/IndiePixel_Airplanes/Prefabs/Cessna-152.prefab",typeof(GameObject))  as GameObject;
+            return airplane;
+        }
     }
-
-
-    public static void SaveInt(string name, int value)
-    {
-        PlayerPrefs.SetInt(name, value);
-    }
-    public static int LoadInt(string name)
-    {
-        return PlayerPrefs.GetInt(name);
-    }
-    public static void SaveFloat(string name, int value)
-    {
-        PlayerPrefs.SetInt(name, value);
-    }
-    public static float LoadFloat(string name)
-    {
-        return PlayerPrefs.GetFloat(name);
-    }
-    public static void SaveString(string name, string value)
-    {
-        PlayerPrefs.SetString(name,value);
-    }
-    public static string LoadString(string name)
-    {
-        return PlayerPrefs.GetString(name);
-    }
-
-    }
-
 }
         
 
