@@ -28,6 +28,7 @@ namespace Commons
         public static string  persistentDataPath = Application.streamingAssetsPath;
         public static string presetFilename = "AirplaneProperties.json";
         public static dynamic airplanePreset = new JObject();
+        public static dynamic jsonPreset = new JObject();
         public static string presetFilepath = System.IO.Path.Combine(persistentDataPath,presetFilename);
         #endregion
         

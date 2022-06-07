@@ -53,6 +53,5 @@
         "temp/":true,
         "Temp/":true
     },
-    "omnisharp.path": "latest",
-    "omnisharp.useGlobalMono": "always"
+    
 }

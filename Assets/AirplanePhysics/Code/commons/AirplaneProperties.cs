@@ -10,9 +10,13 @@ using Newtonsoft.Json.Linq;
 using UnityEditor.UIElements;
 using System.IO.Enumeration;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Globalization;
 
 namespace Commons{
     public static class AirplaneProperties{
+
+        // public static Jobject jsonContent;
+
         public static int getInt(string airplaneName, string property){
             string key = airplaneName+"-"+property;
             bool ifKeyPresent = CommonFunctions.airplanePreset.ContainsKey[key];
@@ -56,10 +60,10 @@ namespace Commons{
             // read JSON directly from a file
             StreamReader file = File.OpenText(filepath);
             JsonTextReader reader = new JsonTextReader(file);
-            JObject o2 = new JObject();
+            JObject jsonContent = new JObject();
             
             try{
-                CommonFunctions.airplanePreset = (JObject) JToken.ReadFrom(reader);
+                CommonFunctions.jsonPreset = (JObject) JToken.ReadFrom(reader);
                 return true;
             }
             catch (JsonException ioExp){   
@@ -80,8 +84,10 @@ namespace Commons{
         }
 
         public static void initAirplaneJsonObject(){
-            CommonFunctions.airplanePreset["Cessna152-cameraHeight"] = 4;
-        }  
+            CommonFunctions.airplanePreset["General/docversion"] = 1;
+            CommonFunctions.airplanePreset["Cessna152/cameraHeight"] = 4;
+        } 
+ 
     }
        
 }

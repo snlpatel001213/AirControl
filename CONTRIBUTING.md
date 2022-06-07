@@ -34,15 +34,44 @@ Please note we have a code of conduct,please follow it in all your interactions 
 
 # Setting Up VScode with Unity 
 
-This is not an exhaustive guide but just listing steps
+This is not an exhaustive guide but just listing key steps
 
-- `wget https://dotnet.microsoft.com/download/dotnet/scripts/v1/dotnet-install.sh`
-- `chmod +X  dotnet-install.sh`
+- Download and install dotnet sdk 
+      
+   ``` 
+      wget https://packages.microsoft.com/config/ubuntu/20.04/packages-microsoft-prod.deb -O packages-microsoft-prod.deb
+      sudo dpkg -i packages-microsoft-prod.deb`
+      Run Update and also install tool for HTTPS support
+      sudo apt update
+      sudo apt install -y apt-transport-https
+      sudo apt install dotnet-sdk-6.0
+      sudo apt install mono-complete
+   ```
+
+- `sudo bash dotnet-install.sh`
 - `sudo apt install mono-devel`
-- Set appropriate dotnet path ( use command `find / -name dotnet` to get it located  ): in my case it was - `/home/supatel/.dotnet/`
+- Set appropriate dotnet path ( use command `find / -name dotnet` to get it located  ): in my case it was - `/home/<user>/.dotnet/`
+- add dotnet to bashrc `export PATH="/home/.dotnet/:$PATH"`
 - Set apparopriate mono path  ( use command `which mono` to get it located ) : in my case it was `/usr/bin/mono`
-- Provide dotnet path to C# extension setting `Omnisharp: Dotnet Path`
-- Provide mono path to C# extension setting `Omnisharp: Mono Path`
+- Use C# extension - 
+- use following settings in the `~/.config/Code/User`
+   ```
+      {
+         "omnisharp.monoPath": "/usr/bin/mono",
+         "omnisharp.dotnetPath": "/usr/bin/dotnet",
+         "omnisharp.disableMSBuildDiagnosticWarning": true,
+         "omnisharp.path": "latest",
+         "omnisharp.useGlobalMono": "never",
+         "omnisharp.useModernNet": true,
+         "csharp.inlayHints.parameters.enabled": true,
+         "omnisharp.enableImportCompletion": true,
+         "omnisharp.useEditorFormattingSettings": false,
+         "omnisharp.sdkIncludePrereleases": true,
+         "csharp.referencesCodeLens.enabled": false,
+         "workbench.colorTheme": "eppz!",
+         "csharp.suppressDotnetRestoreNotification": true,
+      }
+   ```
 - You may also require lib ssl with unity 2021
 - wget http://archive.ubuntu.com/ubuntu/pool/main/o/openssl1.0/libssl1.0.0_1.0.2n-1ubuntu5.9_amd64.deb
 - sudo dpkg -i libssl1.0.0_1.0.2n-1ubuntu5.9_amd64.deb

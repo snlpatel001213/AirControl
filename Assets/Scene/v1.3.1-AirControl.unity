@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.4511196, g: 0.5009117, b: 0.573991, a: 1}
+  m_IndirectSpecularColor: {r: 0.45111972, g: 0.500912, b: 0.57399106, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1449,7 +1449,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &116055504
 Transform:
   m_ObjectHideFlags: 0
@@ -9939,7 +9939,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1318f0667b08b2c92b9e2f59685ccca8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cameraHeight: 0
 --- !u!1 &908433996
 GameObject:
   m_ObjectHideFlags: 0
@@ -18433,8 +18432,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 12
-  minutes: 45
+  hour: 21
+  minutes: 28
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
@@ -20039,7 +20038,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5249af52884f9ded8a78fd44c7b5d9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeAirplane: 0
+  activeAirplane: 1
 --- !u!1 &2013012021
 GameObject:
   m_ObjectHideFlags: 1
@@ -21777,7 +21776,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6652086869070719233, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6652086869070719236, guid: 5d596cbec63c80b578d44825687574b9, type: 3}
       propertyPath: IsFlyingObject
