@@ -1,14 +1,8 @@
 using System.IO;
-using System.Collections;
-using System.Collections.Generic;
-using Communicator;
-using UnityEditor;
 using UnityEngine;
 using Commons;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
-using UnityEditor.UIElements;
-using System.IO.Enumeration;
+using System;
+
 
 namespace AirControl {
     public class AirplaneSelector : MonoBehaviour
@@ -20,16 +14,26 @@ namespace AirControl {
         void Awake()
         {
 
-            // Selecting active airplane and disabling the rest
-            foreach (int i in Enum.GetValues(typeof(availableAirplanes)))  
-            {  
-                if (i!=activeAirplane){
-                    // disable prefabs
-                    
+            foreach(availableAirplanes currentAirplane in Enum.GetValues(typeof(availableAirplanes))){
+                // disable all the non selected airplanes
+                if (activeAirplane != currentAirplane)
+                {
+                    Debug.Log("Disabled Airplane : "+currentAirplane);
+                    GameObject.Find(currentAirplane.ToString()).SetActive(false);
                 }
-            }  
+                else
+                {
+                    Debug.Log("Active Airplane : "+ activeAirplane);
+                    GameObject.Find(activeAirplane.ToString()).SetActive(true);
+                }
+            }
 
-
+            //disable audio listner 
+            AudioListener [] listeners = GameObject.FindObjectsOfType<AudioListener>();
+            foreach(var eachListner in listeners){
+                eachListner.enabled  =  false;
+            }
+        
             CommonFunctions.ActiveAirplane =  activeAirplane.ToString();
             //Loading settings from json
             AirplaneProperties.initAirplaneJsonObject();
@@ -68,8 +72,8 @@ namespace AirControl {
                 AirplaneProperties.saveJson(CommonFunctions.presetFilepath);
             }
             //check priority
-            var jsonPriority = CommonFunctions.jsonPreset["General/priority"];
-            var currentPriority = CommonFunctions.airplanePreset["General/priority"];
+            var jsonPriority = (int)CommonFunctions.jsonPreset["General/priority"];
+            var currentPriority = (int)CommonFunctions.airplanePreset["General/priority"];
             if (jsonPriority > currentPriority ){ 
                 // if the jsonDocVersion greater then read properties from json
                 Debug.Log("json doc version has higher priority, reading value from json");

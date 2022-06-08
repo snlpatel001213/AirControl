@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Commons;
 using System.Dynamic;
-using UnityEditorInternal;
+using System.ComponentModel;
 
 namespace  AirControl
 {
@@ -16,16 +16,12 @@ namespace  AirControl
         [Header("Basic follow camera properties")]
         [Tooltip("Drag and drop entire airplane group over here")]
         public Transform airplane;
-        [SerializeField]
-        private float cameraDistance = 12f;
-        [SerializeField]
-        private float cameraHeight = 6; //AirplaneProperties.getFloat(CommonFunctions.ActiveAirplane, "cameraHeight");
-        [SerializeField]
+        private float cameraDistance;
+        private float cameraHeight; //AirplaneProperties.getFloat(CommonFunctions.ActiveAirplane, "cameraHeight");
         private float cameraMovementSpeed = 0.5f;
-        public float minHeaightFromGround = 8;
+        public float minHeaightFromGround;
 
         private Vector3 smoothVelocity;
-
         protected float originalCamraHeight;
         #endregion
 
@@ -34,6 +30,10 @@ namespace  AirControl
         
         void Start()
         {   
+            cameraDistance = (float)CommonFunctions.airplanePreset["Cessna152/cameraDistance"];
+            cameraHeight = (float)CommonFunctions.airplanePreset["Cessna152/cameraHeight"]; //AirplaneProperties.getFloat(CommonFunctions.ActiveAirplane, "cameraHeight");
+            cameraMovementSpeed = 0.5f;
+            minHeaightFromGround = (float)CommonFunctions.airplanePreset["Cessna152/minHeaightFromGround"];
             airplane = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<Transform>();
             originalCamraHeight = cameraHeight;
         }

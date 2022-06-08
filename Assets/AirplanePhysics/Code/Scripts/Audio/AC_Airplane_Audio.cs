@@ -52,11 +52,8 @@ namespace AirControl{
             if(fullThrottleSource)
             {
                 fullThrottleSource.volume = 0f;
-
             }
-            
         }
-
         // Update is called once per frame
         void Update()
         {
