@@ -124,9 +124,9 @@ namespace Commons{
             CommonFunctions.airplanePreset["Cessna152/steerAngle"] = 20; //
             
             ////////////////// F4UCorsair ///////////////////////////
-            CommonFunctions.airplanePreset["F4UCorsair/cameraHeight"] = 12;//
+            CommonFunctions.airplanePreset["F4UCorsair/cameraHeight"] = 35;//
             CommonFunctions.airplanePreset["F4UCorsair/cameraDistance"] = 25;//
-            CommonFunctions.airplanePreset["F4UCorsair/minHeaightFromGround"] = 4;//
+            CommonFunctions.airplanePreset["F4UCorsair/minHeaightFromGround"] = 25;//
             //characteristics
             CommonFunctions.airplanePreset["F4UCorsair/maxMPH"] = 150;//
             CommonFunctions.airplanePreset["F4UCorsair/rbLerpSpeed"] = 0.1;//

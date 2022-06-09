@@ -19,7 +19,7 @@ namespace  AirControl
         private float cameraDistance;
         private float cameraHeight; //AirplaneProperties.getFloat(CommonFunctions.ActiveAirplane, "cameraHeight");
         private float cameraMovementSpeed = 0.5f;
-        public float minHeaightFromGround;
+        private float minHeaightFromGround;
 
         private Vector3 smoothVelocity;
         protected float originalCamraHeight;
@@ -60,7 +60,7 @@ namespace  AirControl
             // Debug.DrawLine(airplane.position, wantedPosition, Color.blue);
             transform.position = Vector3.SmoothDamp(transform.position, wantedPosition, ref smoothVelocity, cameraMovementSpeed);
             // Watch the airplane
-            transform.LookAt(airplane);
+            // transform.LookAt(airplane.transform.position, Vector3.up);
             RaycastHit hit;
             if(Physics.Raycast(transform.position, Vector3.down, out hit)){
                 if(hit.distance < minHeaightFromGround && hit.transform.tag == "Ground"){

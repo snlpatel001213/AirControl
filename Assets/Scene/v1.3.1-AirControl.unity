@@ -3580,7 +3580,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 1, y: 1}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -178.20007, y: 30.123138}
+  m_AnchoredPosition: {x: -178.20007, y: 30.123108}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0, y: 1}
 --- !u!1 &380894391
@@ -15293,7 +15293,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &1737466726
 AudioListener:
   m_ObjectHideFlags: 0
@@ -15972,8 +15972,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 19
-  minutes: 45
+  hour: 22
+  minutes: 17
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
@@ -17538,7 +17538,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5249af52884f9ded8a78fd44c7b5d9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeAirplane: 0
+  activeAirplane: 1
 --- !u!1 &2013012021
 GameObject:
   m_ObjectHideFlags: 1
