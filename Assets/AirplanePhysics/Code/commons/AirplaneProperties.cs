@@ -88,8 +88,8 @@ namespace Commons{
         public static void initAirplaneJsonObject(){
             CommonFunctions.airplanePreset["General/docversion"] = CommonFunctions.GET_VERSION();
             CommonFunctions.airplanePreset["General/priority"] = 5; 
-            CommonFunctions.airplanePreset["Cessna152/cameraHeight"] = 12;//
-            CommonFunctions.airplanePreset["Cessna152/cameraDistance"] = 25;//
+            CommonFunctions.airplanePreset["Cessna152/cameraHeight"] = 6;//
+            CommonFunctions.airplanePreset["Cessna152/cameraDistance"] = 12;//
             CommonFunctions.airplanePreset["Cessna152/minHeaightFromGround"] = 4;//
             //characteristics
             CommonFunctions.airplanePreset["Cessna152/maxMPH"] = 150;//
@@ -102,12 +102,12 @@ namespace Commons{
             CommonFunctions.airplanePreset["Cessna152/rollSpeed"] = 4000;//
             CommonFunctions.airplanePreset["Cessna152/yawSpeed"] = 5000; //
             // Airplane Controller
-            CommonFunctions.airplanePreset["Cessna152/airplaneWeight"] = 1200; //
+            CommonFunctions.airplanePreset["Cessna152/airplaneWeight"] = 1080.27; //
             //control surface
             CommonFunctions.airplanePreset["Cessna152/smoothSpeed"] = 4; //
             CommonFunctions.airplanePreset["Cessna152/maxAngle"] = 30;
             //engine
-            CommonFunctions.airplanePreset["Cessna152/maxForce"] = 3000;//
+            CommonFunctions.airplanePreset["Cessna152/maxForce"] = 4000;//
             CommonFunctions.airplanePreset["Cessna152/maxRPM"] = 3500;//
             CommonFunctions.airplanePreset["Cessna152/shutOffSpeed"] = 2;//
             //fuel 
@@ -118,7 +118,7 @@ namespace Commons{
             CommonFunctions.airplanePreset["Cessna152/liftForce"] = 50; //
             CommonFunctions.airplanePreset["Cessna152/maxSpeed"] = 15; //
             //input
-            CommonFunctions.airplanePreset["Cessna152/throttleSpeed"] = 0.5;//
+            CommonFunctions.airplanePreset["Cessna152/throttleSpeed"] = 0.8;//
             //wheel
             CommonFunctions.airplanePreset["Cessna152/brakePower"] = 500; //
             CommonFunctions.airplanePreset["Cessna152/steerAngle"] = 20; //
