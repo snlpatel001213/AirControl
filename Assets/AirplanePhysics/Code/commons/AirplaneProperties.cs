@@ -111,8 +111,8 @@ namespace Commons{
             CommonFunctions.airplanePreset["Cessna152/maxRPM"] = 3500;//
             CommonFunctions.airplanePreset["Cessna152/shutOffSpeed"] = 2;//
             //fuel 
-            CommonFunctions.airplanePreset["Cessna152/fuelCapacity"] = 25;
-            CommonFunctions.airplanePreset["Cessna152/fuelBurnRate"] = 25;
+            CommonFunctions.airplanePreset["Cessna152/fuelCapacity"] = 29;
+            CommonFunctions.airplanePreset["Cessna152/fuelBurnRate"] = 6.1;
             //ground effect
             CommonFunctions.airplanePreset["Cessna152/groundDistance"] = 3; //
             CommonFunctions.airplanePreset["Cessna152/liftForce"] = 50; //
@@ -124,31 +124,31 @@ namespace Commons{
             CommonFunctions.airplanePreset["Cessna152/steerAngle"] = 20; //
             
             ////////////////// F4UCorsair ///////////////////////////
-            CommonFunctions.airplanePreset["F4UCorsair/cameraHeight"] = 35;//
-            CommonFunctions.airplanePreset["F4UCorsair/cameraDistance"] = 25;//
+            CommonFunctions.airplanePreset["F4UCorsair/cameraHeight"] = 25;//
+            CommonFunctions.airplanePreset["F4UCorsair/cameraDistance"] = 15;//
             CommonFunctions.airplanePreset["F4UCorsair/minHeaightFromGround"] = 25;//
             //characteristics
-            CommonFunctions.airplanePreset["F4UCorsair/maxMPH"] = 150;//
-            CommonFunctions.airplanePreset["F4UCorsair/rbLerpSpeed"] = 0.1;//
-            CommonFunctions.airplanePreset["F4UCorsair/maxLiftPower"] = 200;//
-            CommonFunctions.airplanePreset["F4UCorsair/flapLiftPower"] = 100;//
+            CommonFunctions.airplanePreset["F4UCorsair/maxMPH"] = 200;//
+            CommonFunctions.airplanePreset["F4UCorsair/rbLerpSpeed"] = 0.5;//
+            CommonFunctions.airplanePreset["F4UCorsair/maxLiftPower"] = 400;//
+            CommonFunctions.airplanePreset["F4UCorsair/flapLiftPower"] = 300;//
             CommonFunctions.airplanePreset["F4UCorsair/dragFactor"] = 0.01;//
             CommonFunctions.airplanePreset["F4UCorsair/flapDragFactor"] = 0.0005;//
-            CommonFunctions.airplanePreset["F4UCorsair/pitchSpeed"] = 5000;//
-            CommonFunctions.airplanePreset["F4UCorsair/rollSpeed"] = 4000;//
-            CommonFunctions.airplanePreset["F4UCorsair/yawSpeed"] = 5000; //
+            CommonFunctions.airplanePreset["F4UCorsair/pitchSpeed"] = 15000;//
+            CommonFunctions.airplanePreset["F4UCorsair/rollSpeed"] = 18000;//
+            CommonFunctions.airplanePreset["F4UCorsair/yawSpeed"] = 20000; //
             // Airplane Controller
-            CommonFunctions.airplanePreset["F4UCorsair/airplaneWeight"] = 1200; //
+            CommonFunctions.airplanePreset["F4UCorsair/airplaneWeight"] = 1500; //
             //control surface
             CommonFunctions.airplanePreset["F4UCorsair/smoothSpeed"] = 4; //
             CommonFunctions.airplanePreset["F4UCorsair/maxAngle"] = 30;
             //engine
-            CommonFunctions.airplanePreset["F4UCorsair/maxForce"] = 3000;//
-            CommonFunctions.airplanePreset["F4UCorsair/maxRPM"] = 3500;//
+            CommonFunctions.airplanePreset["F4UCorsair/maxForce"] = 5500;//
+            CommonFunctions.airplanePreset["F4UCorsair/maxRPM"] = 5000;//
             CommonFunctions.airplanePreset["F4UCorsair/shutOffSpeed"] = 2;//
             //fuel 
-            CommonFunctions.airplanePreset["F4UCorsair/fuelCapacity"] = 25;
-            CommonFunctions.airplanePreset["F4UCorsair/fuelBurnRate"] = 25;
+            CommonFunctions.airplanePreset["F4UCorsair/fuelCapacity"] = 75;
+            CommonFunctions.airplanePreset["F4UCorsair/fuelBurnRate"] = 12;
             //ground effect
             CommonFunctions.airplanePreset["F4UCorsair/groundDistance"] = 3; //
             CommonFunctions.airplanePreset["F4UCorsair/liftForce"] = 50; //
