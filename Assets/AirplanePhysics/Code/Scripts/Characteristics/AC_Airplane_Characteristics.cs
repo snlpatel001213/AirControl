@@ -12,25 +12,25 @@ namespace AirControl
     {
         #region Varaibles
         [Header("Characteristics Properties")]
-        private  float maxMPH = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxMPH"];
-        private float rbLerpSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/rbLerpSpeed"];
+        private  float maxMPH;
+        private float rbLerpSpeed;
 
 
         [Header("Lift Properties")]
-        private float maxLiftPower =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxLiftPower"] ;
+        private float maxLiftPower;
         public AnimationCurve liftCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
-        private float flapLiftPower =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/flapLiftPower"];
+        private float flapLiftPower;
 
 
         [Header("Drag Properties")]
-        private float dragFactor =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/dragFactor"];
-        private float flapDragFactor =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/flapDragFactor"];
+        private float dragFactor;
+        private float flapDragFactor;
 
 
         [Header("Control Properties")]
-        private float pitchSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/pitchSpeed"];
-        private float rollSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/rollSpeed"];
-        private float yawSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/yawSpeed"];
+        private float pitchSpeed;
+        private float rollSpeed;
+        private float yawSpeed;
         public AnimationCurve controlSurfaceEfficiency = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
         public float forwardSpeed;
@@ -62,6 +62,23 @@ namespace AirControl
         
         #region Constants
         const float mpsToMph = 2.23694f;
+        #endregion
+
+        #region BuiltIn Methods 
+        void Start(){
+        maxMPH = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxMPH"];
+        rbLerpSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/rbLerpSpeed"];
+
+        maxLiftPower =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxLiftPower"] ;
+        flapLiftPower =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/flapLiftPower"];
+
+        dragFactor =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/dragFactor"];
+        flapDragFactor =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/flapDragFactor"];
+
+        pitchSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/pitchSpeed"];
+        rollSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/rollSpeed"];
+        yawSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/yawSpeed"];
+        }
         #endregion
 
         #region Custom Methods

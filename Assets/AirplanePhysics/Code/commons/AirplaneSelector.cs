@@ -14,6 +14,7 @@ namespace AirControl {
         void Awake()
         {
 
+            CommonFunctions.ActiveAirplane =  activeAirplane.ToString();
             foreach(availableAirplanes currentAirplane in Enum.GetValues(typeof(availableAirplanes))){
                 // disable all the non selected airplanes
                 if (activeAirplane != currentAirplane)
@@ -34,7 +35,7 @@ namespace AirControl {
                 eachListner.enabled  =  false;
             }
         
-            CommonFunctions.ActiveAirplane =  activeAirplane.ToString();
+            
             //Loading settings from json
             AirplaneProperties.initAirplaneJsonObject();
             Debug.Log(CommonFunctions.airplanePreset);

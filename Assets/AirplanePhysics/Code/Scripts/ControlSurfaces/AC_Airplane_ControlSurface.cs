@@ -18,15 +18,21 @@ namespace AirControl
     #region Variables
     [Header("Control surface Properties")]
     public ControlSurfaceType surfacetype = ControlSurfaceType.Rudder;
-    private float maxAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/maxAngle"]; 
+    private float maxAngle; 
     public Vector3 axis = Vector3.right;
     public Transform controlSurfaceGraphic;
     // smoothly rotate
-    private float smoothSpeed= (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/smoothSpeed"]; 
+    private float smoothSpeed; 
     private float wantedAngle;
     #endregion
 
     #region Builtin Methods
+
+    void Start(){
+        maxAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/maxAngle"]; 
+        smoothSpeed= (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/smoothSpeed"]; 
+
+    }
 
     // Update is called once per frame
     void Update()

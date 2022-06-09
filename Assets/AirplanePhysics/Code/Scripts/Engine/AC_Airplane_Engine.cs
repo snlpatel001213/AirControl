@@ -18,8 +18,8 @@ namespace AirControl
     {
          #region Variables
         [Header("Engine Properties")]
-        private float maxForce =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxForce"];
-        private float maxRPM = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxRPM"];
+        private float maxForce;
+        private float maxRPM ;
         
         public AnimationCurve powerCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
         public AnimationCurve liftOff = AnimationCurve.Linear(0f, 0f, 1000f, 1000f);
@@ -27,7 +27,7 @@ namespace AirControl
         [Header("Propellers")]
         public AC_Airplane_Propeller propeller;
 
-        private float shutOffSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/shutOffSpeed"];// engine slowdone rate on shutoff
+        private float shutOffSpeed;// engine slowdone rate on shutoff
         private bool isShutOff = false;
         private float lastThrottleValue;
         private float finalShutoffThrottleValue;
@@ -57,7 +57,9 @@ namespace AirControl
         /// </summary>
         void Start()
         {
-
+            maxForce =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxForce"];
+            maxRPM = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxRPM"];
+            shutOffSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/shutOffSpeed"];
             // propeller = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Propeller>();
             // Debug.Log("Setting Propeller");
             if(!fuel)

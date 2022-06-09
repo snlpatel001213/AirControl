@@ -27,7 +27,8 @@ namespace  AirControl
         // Slowly move the throttle
           
         [Header("Sticky throttle value control how the throttle can be moved")]
-        public float throttleSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/throttleSpeed"]; 
+        
+        public float throttleSpeed; 
         protected float stickyThrottle;
 
         #endregion
@@ -67,7 +68,11 @@ namespace  AirControl
         
         #region Builtin Methods
         // Update is called once per frame
+
+
         void Start(){
+
+        throttleSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/throttleSpeed"];
 #if !UNITY_EDITOR && UNITY_WEBGL
     // disable WebGLInput.captureAllKeyboardInput so elements in web page can handle keabord inputs
     WebGLInput.captureAllKeyboardInput = false;

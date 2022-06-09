@@ -22,9 +22,9 @@ namespace AirControl
         [Header("Wheel Properties")]
         public Transform wheelGraphic;
         public bool isBraking=false;
-        private float brakePower = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/brakePower"]; 
+        private float brakePower; 
         public bool isSteering=false;
-        private float steerAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/steerAngle"]; 
+        private float steerAngle; 
         public float motorTorque;
 
         private WheelCollider wheelCol;
@@ -37,6 +37,8 @@ namespace AirControl
         // Start is called before the first frame update
         void Start()
         {
+            brakePower = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/brakePower"];
+            steerAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/steerAngle"];
             wheelCol = GetComponent<WheelCollider>();
         }
         /// <summary>

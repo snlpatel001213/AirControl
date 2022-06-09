@@ -31,7 +31,7 @@ namespace AirControl
         public AC_Airplane_Characteristics characteristics;
 
         [Tooltip("Weight is in pounds")]
-        private float airplaneWeight = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/airplaneWeight"];
+        private float airplaneWeight;
 
         [Tooltip("Initialize an empty object and set it in  airplane body. That position is Center of Gravity of the Airplane. Hook that object here")]
         public Transform centerOfGravity;
@@ -117,7 +117,7 @@ namespace AirControl
         public override void Start()
         {
             base.Start();
-
+            airplaneWeight = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/airplaneWeight"];
             //calculate final mass in kilos
             float finalMass =  airplaneWeight * poundToKilos;
             startPos_x = rb.position.x;

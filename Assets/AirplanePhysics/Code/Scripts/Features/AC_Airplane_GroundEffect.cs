@@ -9,11 +9,11 @@ namespace AirControl
         // Start is called before the first frame update
         #region Variables
         [Tooltip("Distance from ground when ground effect ends")]
-        private float groundDistance = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/groundDistance"];
+        private float groundDistance;
         [Tooltip("Max list force")]
-        private float liftForce =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/liftForce"];
+        private float liftForce;
         [Tooltip("Max speed for max round effect")]
-        private float maxSpeed =   (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxSpeed"];
+        private float maxSpeed;
 
         private Rigidbody rb;
         #endregion
@@ -22,6 +22,9 @@ namespace AirControl
         // Start is called before the first frame update
         void Start()
         {
+            groundDistance = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/groundDistance"];
+            liftForce =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/liftForce"];
+            maxSpeed =   (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxSpeed"];
             rb = GetComponent<Rigidbody>();
         }
 
