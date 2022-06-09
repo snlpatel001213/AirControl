@@ -22,9 +22,9 @@ namespace AirControl
         [Header("Wheel Properties")]
         public Transform wheelGraphic;
         public bool isBraking=false;
-        public float brakePower = 500f;
+        private float brakePower = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/brakePower"]; 
         public bool isSteering=false;
-        public float steerAngle=20f;
+        private float steerAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/steerAngle"]; 
         public float motorTorque;
 
         private WheelCollider wheelCol;

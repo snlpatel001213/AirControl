@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Commons;
 
 namespace AirControl
 {
@@ -11,25 +12,25 @@ namespace AirControl
     {
         #region Varaibles
         [Header("Characteristics Properties")]
-        public float maxMPH = 110f;
-        public float rbLerpSpeed = 0.01f;
+        private  float maxMPH = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxMPH"];
+        private float rbLerpSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/rbLerpSpeed"];
 
 
         [Header("Lift Properties")]
-        public float maxLiftPower = 4000f ;
+        private float maxLiftPower =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxLiftPower"] ;
         public AnimationCurve liftCurve = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
-        public float flapLiftPower = 100f;
+        private float flapLiftPower =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/flapLiftPower"];
 
 
         [Header("Drag Properties")]
-        public float dragFactor = 0.01f;
-        public float flapDragFactor = 0.005f;
+        private float dragFactor =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/dragFactor"];
+        private float flapDragFactor =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/flapDragFactor"];
 
 
         [Header("Control Properties")]
-        public float pitchSpeed = 1000f;
-        public float rollSpeed = 1000f;
-        public float yawSpeed = 1000f;
+        private float pitchSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/pitchSpeed"];
+        private float rollSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/rollSpeed"];
+        private float yawSpeed =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/yawSpeed"];
         public AnimationCurve controlSurfaceEfficiency = AnimationCurve.EaseInOut(0f, 0f, 1f, 1f);
 
         public float forwardSpeed;

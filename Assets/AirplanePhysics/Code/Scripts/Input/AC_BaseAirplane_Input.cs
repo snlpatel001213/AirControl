@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
-
+using UnityEditor;
+using Commons;
 namespace  AirControl
 {
     /// <summary>
@@ -26,7 +27,7 @@ namespace  AirControl
         // Slowly move the throttle
           
         [Header("Sticky throttle value control how the throttle can be moved")]
-        public float throttleSpeed = 0.5f;
+        public float throttleSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/throttleSpeed"]; 
         protected float stickyThrottle;
 
         #endregion

@@ -30,10 +30,10 @@ namespace  AirControl
         
         void Start()
         {   
-            cameraDistance = (float)CommonFunctions.airplanePreset["Cessna152/cameraDistance"];
-            cameraHeight = (float)CommonFunctions.airplanePreset["Cessna152/cameraHeight"]; //AirplaneProperties.getFloat(CommonFunctions.ActiveAirplane, "cameraHeight");
+            cameraDistance = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/cameraDistance"];
+            cameraHeight = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/cameraHeight"]; //AirplaneProperties.getFloat(CommonFunctions.ActiveAirplane, "cameraHeight");
             cameraMovementSpeed = 0.5f;
-            minHeaightFromGround = (float)CommonFunctions.airplanePreset["Cessna152/minHeaightFromGround"];
+            minHeaightFromGround = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/minHeaightFromGround"];
             airplane = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<Transform>();
             originalCamraHeight = cameraHeight;
         }

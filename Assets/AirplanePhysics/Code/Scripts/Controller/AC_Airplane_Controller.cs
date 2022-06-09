@@ -3,7 +3,7 @@ using UnityEngine;
 using Communicator;
 using UnityEngine.UI;
 using System.Numerics;
-
+using Commons;
 namespace AirControl
 {
 
@@ -31,7 +31,7 @@ namespace AirControl
         public AC_Airplane_Characteristics characteristics;
 
         [Tooltip("Weight is in pounds")]
-        public float airplaneWeight = 1200f;
+        private float airplaneWeight = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/airplaneWeight"];
 
         [Tooltip("Initialize an empty object and set it in  airplane body. That position is Center of Gravity of the Airplane. Hook that object here")]
         public Transform centerOfGravity;

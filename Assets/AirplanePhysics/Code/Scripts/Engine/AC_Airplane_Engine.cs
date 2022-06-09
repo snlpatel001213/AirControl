@@ -18,8 +18,8 @@ namespace AirControl
     {
          #region Variables
         [Header("Engine Properties")]
-        public float maxForce = 3000f;
-        public float maxRPM = 3500f;
+        private float maxForce =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxForce"];
+        private float maxRPM = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxRPM"];
         
         public AnimationCurve powerCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
         public AnimationCurve liftOff = AnimationCurve.Linear(0f, 0f, 1000f, 1000f);
@@ -27,7 +27,7 @@ namespace AirControl
         [Header("Propellers")]
         public AC_Airplane_Propeller propeller;
 
-        private float shutOffSpeed = 2f; // engine slowdone rate on shutoff
+        private float shutOffSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/shutOffSpeed"];// engine slowdone rate on shutoff
         private bool isShutOff = false;
         private float lastThrottleValue;
         private float finalShutoffThrottleValue;

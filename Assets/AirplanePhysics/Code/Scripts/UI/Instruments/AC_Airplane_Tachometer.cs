@@ -37,7 +37,7 @@ namespace AirControl
         {
             if(engine && pointer)
             {
-                float normalizedRPM = Mathf.InverseLerp(0f, engine.maxRPM, engine.CurrentRPM);
+                float normalizedRPM = Mathf.InverseLerp(0f,  (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/maxRPM"] , engine.CurrentRPM);
                 float radialspeed = 360f * normalizedRPM;
                 //smoothly move tachmeter
                 smoothrotation = Mathf.Lerp(smoothrotation, radialspeed, Time.deltaTime*0.1f);

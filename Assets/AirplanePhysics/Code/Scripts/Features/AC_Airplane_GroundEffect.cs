@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Commons;
 namespace AirControl
 {
     public class AC_Airplane_GroundEffect : MonoBehaviour
@@ -8,11 +9,11 @@ namespace AirControl
         // Start is called before the first frame update
         #region Variables
         [Tooltip("Distance from ground when ground effect ends")]
-        public float groundDistance = 3f;
+        private float groundDistance = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/groundDistance"];
         [Tooltip("Max list force")]
-        public float liftForce = 20f;
+        private float liftForce =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/liftForce"];
         [Tooltip("Max speed for max round effect")]
-        public float maxSpeed = 15f;
+        private float maxSpeed =   (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxSpeed"];
 
         private Rigidbody rb;
         #endregion
