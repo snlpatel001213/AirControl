@@ -153,11 +153,11 @@ namespace AirControl
             Vector3 liftDir = transform.up;
             float liftPower = liftCurve.Evaluate(normalizeMPH) * maxLiftPower;
 
-            // //Add Flap Lift
-            // float finalLiftPower = flapLiftPower * input.NormalizedFlaps;
+            //Add Flap Lift
+            float finalLiftPower = flapLiftPower * input.NormalizedFlaps;
 
             //Apply the final Lift Force to the Rigidbody
-            Vector3 finalLiftForce = liftDir * (liftPower) * angleOfAttack;
+            Vector3 finalLiftForce = liftDir * ((liftPower * angleOfAttack) + finalLiftPower);
             rb.AddForce(finalLiftForce);
         }
 
@@ -173,7 +173,7 @@ namespace AirControl
             float flapDrag = input.Flaps * flapDragFactor;
 
             //add it all together!
-            float finalDrag = startDrag + speedDrag + flapDrag;
+            float finalDrag = startDrag + speedDrag + (flapDrag*input.NormalizedFlaps);
 
             rb.drag = finalDrag;
             rb.angularDrag = startAngularDrag * forwardSpeed;

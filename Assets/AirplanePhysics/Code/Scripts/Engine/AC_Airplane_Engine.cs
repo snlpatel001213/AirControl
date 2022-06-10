@@ -38,7 +38,7 @@ namespace AirControl
         private bool isShutOff = false;
         private float lastThrottleValue;
         private float finalShutoffThrottleValue;
-        private float wingSpan;
+        private float propellarSpan;
 
 
         private AC_Airplane_Fuel fuel;
@@ -75,7 +75,7 @@ namespace AirControl
             // maxForce =  //(float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxForce"];
             maxRPM = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxRPM"];
             shutOffSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/shutOffSpeed"];
-            wingSpan = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/wingSpan"];
+            propellarSpan = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/propellarSpan"];
             if(!fuel)
             {
                 fuel = GetComponent<AC_Airplane_Fuel>();
@@ -141,7 +141,7 @@ namespace AirControl
             HandleFuel(finalThrottle);
 
             // maxForce = 0.6f*0.07967f* (float)Math.Pow(1.6,4)* (float)Math.Pow(rotationDelta.magnitude,2); //cessna
-            maxForce = engineEfficiency*airDensity* (float)Math.Pow(wingSpan,4)* (float)Math.Pow(rotationDelta.magnitude,2);            
+            maxForce = engineEfficiency*airDensity* (float)Math.Pow(propellarSpan,4)* (float)Math.Pow(rotationDelta.magnitude,2);            
             //Create Force
             float finalPower = finalThrottle * maxForce;
             Vector3 finalForce = transform.forward * finalPower;
