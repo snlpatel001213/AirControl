@@ -20,7 +20,7 @@ namespace Commons
         public static int counter=0;
         public static string clientIP = "None";
         public static string clientPort = "None";
-        public static int serverPort; // field 
+        public static int serverPort=5000; // field 
         public static string activeAirplane = "None";
         #region Properties
 

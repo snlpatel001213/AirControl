@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
 using Commons;
+using JetBrains.Annotations;
+using System;
+using UnityEngine.TextCore.LowLevel;
+
 namespace AirControl
 {   
     /// <summary>
@@ -20,6 +24,9 @@ namespace AirControl
         [Header("Engine Properties")]
         private float maxForce;
         private float maxRPM ;
+
+        private Vector3 rotationDelta;
+        private Vector3 rotationLast;
         
         public AnimationCurve powerCurve = AnimationCurve.Linear(0f, 0f, 1f, 1f);
         public AnimationCurve liftOff = AnimationCurve.Linear(0f, 0f, 1000f, 1000f);
@@ -31,8 +38,15 @@ namespace AirControl
         private bool isShutOff = false;
         private float lastThrottleValue;
         private float finalShutoffThrottleValue;
+        private float wingSpan;
+
 
         private AC_Airplane_Fuel fuel;
+        #endregion
+
+        #region constants
+        private const float engineEfficiency = 1.6f; //  What percentage of propellers actions get converted to actual force 
+        private const float airDensity = 0.07967f;
         #endregion
 
         #region Properties
@@ -57,11 +71,11 @@ namespace AirControl
         /// </summary>
         void Start()
         {
-            maxForce =  (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxForce"];
+            rotationLast = propeller.transform.eulerAngles;
+            // maxForce =  //(float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxForce"];
             maxRPM = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxRPM"];
             shutOffSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/shutOffSpeed"];
-            // propeller = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Propeller>();
-            // Debug.Log("Setting Propeller");
+            wingSpan = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/wingSpan"];
             if(!fuel)
             {
                 fuel = GetComponent<AC_Airplane_Fuel>();
@@ -71,9 +85,23 @@ namespace AirControl
                 }
             }
         }
+
+        void Update(){
+            getAngularVelocityPro();
+        }
         #endregion
 
+
         #region Custom Methods
+
+        /// <summary>
+        /// Calculate angular velocity of the propellar
+        /// </summary>
+        public void getAngularVelocityPro()
+        {
+            rotationDelta = propeller.transform.eulerAngles - rotationLast;
+            rotationLast = propeller.transform.eulerAngles;
+        }
         /// <summary>
         /// Calculate the force created by engine
         /// Calculate Engine RPM 
@@ -112,7 +140,8 @@ namespace AirControl
             // Process the Fuel
             HandleFuel(finalThrottle);
 
-
+            // maxForce = 0.6f*0.07967f* (float)Math.Pow(1.6,4)* (float)Math.Pow(rotationDelta.magnitude,2); //cessna
+            maxForce = engineEfficiency*airDensity* (float)Math.Pow(wingSpan,4)* (float)Math.Pow(rotationDelta.magnitude,2);            
             //Create Force
             float finalPower = finalThrottle * maxForce;
             Vector3 finalForce = transform.forward * finalPower;
