@@ -28,7 +28,7 @@ namespace  AirControl
           
         [Header("Sticky throttle value control how the throttle can be moved")]
         
-        public float throttleSpeed; 
+        protected float throttleSpeed; 
         protected float stickyThrottle;
 
         #endregion

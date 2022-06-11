@@ -40,6 +40,7 @@ namespace AirControl
             brakePower = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/brakePower"];
             steerAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/steerAngle"];
             wheelCol = GetComponent<WheelCollider>();
+            Debug.Log(">>>>>>>>"+wheelCol);
         }
         /// <summary>
         /// This is checking if the wheel is grounded. If it is grounded, 

@@ -74,13 +74,12 @@ namespace AirControl
         #region Builtin Methods
         // Start is called before the first frame update
 
-        void Awake(){
-            
-        }
+
         void Start()
         {
             input = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_BaseAirplane_Input>();
             //Adding cameras
+            Debug.Log("###########"+CommonFunctions.ActiveAirplane+"/FollowCamera");
             cameras.Add(GameObject.Find(CommonFunctions.ActiveAirplane+"/FollowCamera").GetComponent<Camera>());
             cameras.Add(GameObject.Find(CommonFunctions.ActiveAirplane+"/CockpitCamera").GetComponent<Camera>());
             

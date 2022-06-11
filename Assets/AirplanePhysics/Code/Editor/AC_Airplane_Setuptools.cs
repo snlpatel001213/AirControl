@@ -68,6 +68,8 @@ namespace AirControl{
                 Lidar.transform.SetParent(rootGameObject.transform, false);
                 GameObject Fuel = new GameObject("Fuel", typeof(AC_Airplane_Fuel));
                 Fuel.transform.SetParent(rootGameObject.transform, false);
+                GameObject FollowCamera = new GameObject("FollowCamera");
+                FollowCamera.transform.SetParent(rootGameObject.transform, false);
 
                 // Make current selection parent to the new Aiplane 
                 rootGameObject.transform.SetParent(currentSelected.transform, worldPositionStays:false);

@@ -78,9 +78,7 @@ MonoBehaviour:
   isGrounded: 0
   wheelGraphic: {fileID: 514096788409643062}
   isBraking: 1
-  brakePower: 5
   isSteering: 0
-  steerAngle: 20
   motorTorque: 0
 --- !u!1 &517083304088473565
 GameObject:
@@ -444,9 +442,7 @@ MonoBehaviour:
   isGrounded: 0
   wheelGraphic: {fileID: 521676139175179574}
   isBraking: 1
-  brakePower: 5
   isSteering: 0
-  steerAngle: 20
   motorTorque: 100
 --- !u!1 &517083304431094023
 GameObject:
@@ -575,10 +571,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 1
-  maxAngle: 30
   axis: {x: 1, y: 0, z: 0}
   controlSurfaceGraphic: {fileID: 397050601208391485}
-  smoothSpeed: 4
 --- !u!1 &517083304546492958
 GameObject:
   m_ObjectHideFlags: 0
@@ -670,10 +664,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 3
-  maxAngle: 30
   axis: {x: -1, y: 0, z: 0}
   controlSurfaceGraphic: {fileID: 5721382649294363664}
-  smoothSpeed: 4
 --- !u!1 &517083304878574119
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,10 +1209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 0
-  maxAngle: 30
   axis: {x: 0, y: -1, z: 0}
   controlSurfaceGraphic: {fileID: 7897832111848942504}
-  smoothSpeed: 40
 --- !u!1 &517083305372344806
 GameObject:
   m_ObjectHideFlags: 0
@@ -1281,9 +1271,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 09b2b5ace387676b29ad3d37a22e6666, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxMPH: 110
-  rbLerpSpeed: 0.01
-  maxLiftPower: 4000
   liftCurve:
     serializedVersion: 2
     m_Curve:
@@ -1308,12 +1295,6 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
-  flapLiftPower: 100
-  dragFactor: 0.01
-  flapDragFactor: 0.005
-  pitchSpeed: 1000
-  rollSpeed: 1000
-  yawSpeed: 1000
   controlSurfaceEfficiency:
     serializedVersion: 2
     m_Curve:
@@ -1493,7 +1474,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   input: {fileID: 517083305372344831}
   characteristics: {fileID: 517083305372344830}
-  airplaneWeight: 1200
   centerOfGravity: {fileID: 517083305150681427}
   engines:
   - {fileID: 517083305154341403}
@@ -1618,10 +1598,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 2
-  maxAngle: 30
   axis: {x: -1, y: 0, z: 0}
   controlSurfaceGraphic: {fileID: 648229506952968210}
-  smoothSpeed: 4
 --- !u!1 &517083305504546123
 GameObject:
   m_ObjectHideFlags: 0
@@ -1753,10 +1731,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   airplane: {fileID: 517083305372344825}
-  cameraDistance: 12
-  cameraHeight: 4
-  cameraMovementSpeed: 0.5
-  minHeaightFromGround: 4
 --- !u!1 &517083305648482803
 GameObject:
   m_ObjectHideFlags: 0
@@ -1802,10 +1776,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 2
-  maxAngle: 30
   axis: {x: -1, y: 0, z: 0}
   controlSurfaceGraphic: {fileID: 7007494287315751891}
-  smoothSpeed: 4
 --- !u!1 &517083305654330981
 GameObject:
   m_ObjectHideFlags: 0
@@ -1884,9 +1856,7 @@ MonoBehaviour:
   isGrounded: 0
   wheelGraphic: {fileID: 521741046613293392}
   isBraking: 1
-  brakePower: 5
   isSteering: 0
-  steerAngle: 20
   motorTorque: 100
 --- !u!1 &517083305682602909
 GameObject:
@@ -2153,10 +2123,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   surfacetype: 3
-  maxAngle: 30
   axis: {x: 1, y: 0, z: 0}
   controlSurfaceGraphic: {fileID: 7583022039557233891}
-  smoothSpeed: 4
 --- !u!1001 &517083304553995020
 PrefabInstance:
   m_ObjectHideFlags: 0
