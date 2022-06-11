@@ -29,6 +29,7 @@ namespace Commons
         public static string presetFilename = "AirplaneProperties.json";
         public static JObject airplanePreset = new JObject();
         public static JObject jsonPreset = new JObject();
+
         public static string presetFilepath = System.IO.Path.Combine(persistentDataPath,presetFilename);
         #endregion
         
@@ -148,11 +149,6 @@ namespace Commons
                 clearFolder(di.FullName);
                 di.Delete();
             }
-        }
-
-        public static GameObject GetAirplane(){
-            var airplane =  Resources.Load("AirplanePhysics/Art/Objects/Airplanes/IndiePixel_Airplanes/Prefabs/Cessna-152.prefab",typeof(GameObject))  as GameObject;
-            return airplane;
         }
     }
 }

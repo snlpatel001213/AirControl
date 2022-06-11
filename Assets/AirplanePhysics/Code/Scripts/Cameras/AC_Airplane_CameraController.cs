@@ -79,7 +79,6 @@ namespace AirControl
         {
             input = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_BaseAirplane_Input>();
             //Adding cameras
-            Debug.Log("###########"+CommonFunctions.ActiveAirplane+"/FollowCamera");
             cameras.Add(GameObject.Find(CommonFunctions.ActiveAirplane+"/FollowCamera").GetComponent<Camera>());
             cameras.Add(GameObject.Find(CommonFunctions.ActiveAirplane+"/CockpitCamera").GetComponent<Camera>());
             

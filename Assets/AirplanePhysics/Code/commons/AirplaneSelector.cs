@@ -4,17 +4,21 @@ using Commons;
 using System;
 
 
+
 namespace AirControl {
     public class AirplaneSelector : MonoBehaviour
     {
         public enum availableAirplanes { Cessna152, F4UCorsair };
         public availableAirplanes activeAirplane;
-
+     
+        
+        
 
         void Awake()
         {
+            // Activate selected plane and deactivate others
+            // if it is not running in editor then select airplane supplied by the json/default config
 
-            CommonFunctions.ActiveAirplane =  activeAirplane.ToString();
             foreach(availableAirplanes currentAirplane in Enum.GetValues(typeof(availableAirplanes))){
                 // disable all the non selected airplanes
                 if (activeAirplane != currentAirplane)
@@ -29,12 +33,14 @@ namespace AirControl {
                 }
             }
 
-            //disable audio listner 
+            //disable all audio listners
             AudioListener [] listeners = GameObject.FindObjectsOfType<AudioListener>();
             foreach(var eachListner in listeners){
                 eachListner.enabled  =  false;
             }
-        
+
+            // log the streaming asset path 
+            Debug.Log("Assets will be saved at : "+ Application.streamingAssetsPath);
             
             //Loading settings from json
             AirplaneProperties.initAirplaneJsonObject();
@@ -60,9 +66,18 @@ namespace AirControl {
                 } 
             }
             CheckRecency();
+// once everything is done, load 
+#if !UNITY_EDITOR
+    CommonFunctions.ActiveAirplane = (string)CommonFunctions.airplanePreset["General/activeAirplane"];
+#elif UNITY_EDITOR
+    CommonFunctions.ActiveAirplane =  activeAirplane.ToString();
+#endif
         }
 
-        // Update is called once per frame
+        /// <summary>
+        /// Check recency of the avialble document at streamingAssetsPath
+        /// and the default settings for airplane
+        /// </summary>
         void CheckRecency()
         {
             //check aircontrolversion

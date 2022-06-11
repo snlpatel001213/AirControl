@@ -1,78 +1,115 @@
-using System.IO;
 using System.Collections;
 using System.Collections.Generic;
-using Communicator;
-using UnityEditor;
-using UnityEngine;
-using Commons;
-using Newtonsoft.Json;
-using Newtonsoft.Json.Linq;
+using System.Globalization;
+using System.IO;
 using System.IO.Enumeration;
 using System.Runtime.InteropServices.WindowsRuntime;
-using System.Globalization;
+using Commons;
+using Communicator;
+using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
+using UnityEditor;
+using UnityEngine;
 
-namespace Commons{
-    public static class AirplaneProperties{
-
-        // public static Jobject jsonContent;
-
-        public static int getInt(string airplaneName, string property){
-            string key = airplaneName+"/"+property;
+namespace Commons
+{
+    public static class AirplaneProperties
+    {
+        /// <summary>
+        /// Json read Int 
+        /// </summary>
+        /// <param name="airplaneName">Airplane name</param>
+        /// <param name="property">Airplane property</param>
+        /// <returns></returns>
+        public static int getInt(string airplaneName, string property)
+        {
+            string key = airplaneName + "/" + property;
             bool ifKeyPresent = CommonFunctions.airplanePreset.ContainsKey(key);
-                
-            if(ifKeyPresent){
+
+            if (ifKeyPresent)
+            {
                 return (int)CommonFunctions.airplanePreset[key];
             }
-            else {
-                Debug.Log("Key Not present - "+ key);
+            else
+            {
+                Debug.Log("Key Not present - " + key);
                 return -1;
             }
         }
-        public static float getFloat(string airplaneName, string property){
-            string key = airplaneName+"/"+property;
+        /// <summary>
+        /// Json read Float 
+        /// </summary>
+        /// <param name="airplaneName">Airplane name</param>
+        /// <param name="property">Airplane property</param>
+        /// <returns></returns>
+        public static float getFloat(string airplaneName, string property)
+        {
+            string key = airplaneName + "/" + property;
             bool ifKeyPresent = CommonFunctions.airplanePreset.ContainsKey(key);
-                
-            if(ifKeyPresent){
+
+            if (ifKeyPresent)
+            {
                 return (float)CommonFunctions.airplanePreset[key];
             }
-            else {
-                Debug.Log("Key Not present - "+ key);
+            else
+            {
+                Debug.Log("Key Not present - " + key);
                 return -1f;
             }
         }
-        public static string getString(string airplaneName, string property){
-            string key = airplaneName+"/"+property;
+        /// <summary>
+        /// Json read String 
+        /// </summary>
+        /// <param name="airplaneName">Airplane name</param>
+        /// <param name="property">Airplane property</param>
+        /// <returns></returns>
+        public static string getString(string airplaneName, string property)
+        {
+            string key = airplaneName + "/" + property;
             bool ifKeyPresent = CommonFunctions.airplanePreset.ContainsKey(key);
-                
-            if(ifKeyPresent){
+
+            if (ifKeyPresent)
+            {
                 return (string)CommonFunctions.airplanePreset[key];
             }
-            else {
-                Debug.Log("Key Not present - "+ key);
+            else
+            {
+                Debug.unityLogger.Log("Key Not present : {0} ", key);
                 return "None";
             }
         }
-
+        /// <summary>
+        /// Read Json From file
+        /// </summary>
+        /// <param name="filepath">absolute file path </param>
+        /// <returns></returns>
         public static bool readJson(string filepath)
         {
-            
+
             // read JSON directly from a file
             StreamReader file = File.OpenText(filepath);
             JsonTextReader reader = new JsonTextReader(file);
             JObject jsonContent = new JObject();
-            
-            try{
-                CommonFunctions.jsonPreset = (JObject) JToken.ReadFrom(reader);
+
+            try
+            {
+                CommonFunctions.jsonPreset = (JObject)JToken.ReadFrom(reader);
                 return true;
             }
-            catch (JsonException ioExp){   
+            catch (JsonException ioExp)
+            {
                 Debug.Log(ioExp.Message);
                 return false;
-            } 
-            
+            }
+
         }
-        
-        public static void saveJson(string filepath){
+
+        /// <summary>
+        /// Save Json
+        /// </summary>
+        /// <param name="filepath"></param>
+        public static void saveJson(string filepath)
+        {
             // write JSON directly to a file
             using (FileStream fs = File.Create(filepath))
             using (StreamWriter jsonStream = new StreamWriter(fs))
@@ -80,14 +117,19 @@ namespace Commons{
                 var jsonSerializer = new Newtonsoft.Json.JsonSerializer();
                 jsonSerializer.Formatting = Formatting.Indented;
                 //reset the priority to 1
-                CommonFunctions.airplanePreset["General/priority"] =1;
+                CommonFunctions.airplanePreset["General/priority"] = 1;
                 jsonSerializer.Serialize(jsonStream, CommonFunctions.airplanePreset);
             }
         }
 
-        public static void initAirplaneJsonObject(){
+        /// <summary>
+        /// Default properties of the Airplane
+        /// </summary>
+        public static void initAirplaneJsonObject()
+        {
             CommonFunctions.airplanePreset["General/docversion"] = CommonFunctions.GET_VERSION();
             CommonFunctions.airplanePreset["General/priority"] = 5; // if priority of json is higher json will override default setting
+            CommonFunctions.airplanePreset["General/activeAirplane"] = "Cessna152"; // if priority of json is higher json will override default setting
             CommonFunctions.airplanePreset["Cessna152/cameraHeight"] = 6;// Height of camera
             CommonFunctions.airplanePreset["Cessna152/cameraDistance"] = 12;// Camera distance
             CommonFunctions.airplanePreset["Cessna152/minHeaightFromGround"] = 4;// Min height of camera from ground when aiplane lands
@@ -109,7 +151,7 @@ namespace Commons{
             //engine
             CommonFunctions.airplanePreset["Cessna152/maxRPM"] = 4500; // RPM of the engine force will be calculated by equarion $F_i = C_t\rho\omega^2_{max}D^4$
             CommonFunctions.airplanePreset["Cessna152/shutOffSpeed"] = 2; // shutdown rate when the engien is shutoff
-            CommonFunctions.airplanePreset["Cessna152/propellarSpan"] = 1.6; // span of the propellar in meters
+            CommonFunctions.airplanePreset["Cessna152/propellerSpan"] = 1.6; // span of the propeller in meters
             //fuel 
             CommonFunctions.airplanePreset["Cessna152/fuelCapacity"] = 29; // fuel capacity of the Airplane in galloons
             CommonFunctions.airplanePreset["Cessna152/fuelBurnRate"] = 6.1; // consumpltion rate Gallons/hr 
@@ -122,7 +164,7 @@ namespace Commons{
             //wheel
             CommonFunctions.airplanePreset["Cessna152/brakePower"] = 500; // Brake Power
             CommonFunctions.airplanePreset["Cessna152/steerAngle"] = 20; // steer angle of the wheel
-            
+
             ////////////////// F4UCorsair ///////////////////////////
             CommonFunctions.airplanePreset["F4UCorsair/cameraHeight"] = 25;//
             CommonFunctions.airplanePreset["F4UCorsair/cameraDistance"] = 25;//
@@ -145,7 +187,7 @@ namespace Commons{
             //engine
             CommonFunctions.airplanePreset["F4UCorsair/maxRPM"] = 6500;//
             CommonFunctions.airplanePreset["F4UCorsair/shutOffSpeed"] = 2.5;//
-            CommonFunctions.airplanePreset["F4UCorsair/propellarSpan"] = 2.2; //
+            CommonFunctions.airplanePreset["F4UCorsair/propellerSpan"] = 2.2; //
             //fuel 
             CommonFunctions.airplanePreset["F4UCorsair/fuelCapacity"] = 75;
             CommonFunctions.airplanePreset["F4UCorsair/fuelBurnRate"] = 12;
@@ -158,10 +200,10 @@ namespace Commons{
             //wheel
             CommonFunctions.airplanePreset["F4UCorsair/brakePower"] = 500; //
             CommonFunctions.airplanePreset["F4UCorsair/steerAngle"] = 25; //
-        } 
- 
+        }
+
     }
-       
+
 }
 
 

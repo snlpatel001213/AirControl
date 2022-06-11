@@ -16019,8 +16019,8 @@ MonoBehaviour:
   sunMinuteSlider: {fileID: 532086365}
   longitude: -504.55
   latitude: -1650.4
-  hour: 14
-  minutes: 38
+  hour: 16
+  minutes: 56
   timeSpeed: 1
   frameSteps: 1
 --- !u!1 &1801252731
@@ -17635,7 +17635,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5249af52884f9ded8a78fd44c7b5d9e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activeAirplane: 1
+  activeAirplane: 0
 --- !u!1 &2013012021
 GameObject:
   m_ObjectHideFlags: 1
@@ -19099,6 +19099,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1383941250}
     m_Modifications:
+    - target: {fileID: 4835569527564380448, guid: 11873ad1cf5f5271185b614cd31d1e83, type: 3}
+      propertyPath: Loop
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4835569527564380448, guid: 11873ad1cf5f5271185b614cd31d1e83, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 9b7e72a3bd917fe86b7af3b427fb7efc, type: 3}
+    - target: {fileID: 4835569527700495661, guid: 11873ad1cf5f5271185b614cd31d1e83, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4835569528060673955, guid: 11873ad1cf5f5271185b614cd31d1e83, type: 3}
       propertyPath: idleSource
       value: 
@@ -19167,6 +19179,10 @@ PrefabInstance:
       propertyPath: IsGroundedObject
       value: 
       objectReference: {fileID: 625852227}
+    - target: {fileID: 4835569528243281604, guid: 11873ad1cf5f5271185b614cd31d1e83, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bd2a7ba8bb5494ef19a2f5c3ead31bd0, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 11873ad1cf5f5271185b614cd31d1e83, type: 3}
 --- !u!1 &5097086846703730040
