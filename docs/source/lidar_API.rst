@@ -12,7 +12,7 @@ Importing Requirements
 
 .. code:: ipython3
 
-    from AirControl import actions
+    from airctrl import environment
     from pprint import pprint
     import PIL.Image as Image
     import base64
@@ -21,7 +21,7 @@ Importing Requirements
     from matplotlib.pyplot import  imshow
     import matplotlib.pyplot as plt
     
-    A =  actions.Actions()
+    A =  environment.Trigger()
 
 
 
@@ -827,13 +827,13 @@ the above-shown lidar output is very near to airplane.
 
 |image0|
 
-.. |image0| image:: ../images/lidar/5.png
+.. |image0| image:: /home/supatel/Documents/AirControl_20/docs/images/Lidar/5.png
 
 Similarly, lidar interacts with buildings and provides a sense of
 nearness.
 
 |image0|
 
-.. |image0| image:: ../images/lidar/9.png
+.. |image0| image:: /home/supatel/Documents/AirControl_20/docs/images/Lidar/9.png
 
 1. `Physics.Raycast <https://docs.unity3d.com/ScriptReference/Physics.Raycast.html>`__

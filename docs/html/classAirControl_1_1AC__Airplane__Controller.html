@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -150,9 +150,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a270fbe0682b3f0d53c2d7100f96b0190"><td class="memItemLeft" align="right" valign="top"><a id="a270fbe0682b3f0d53c2d7100f96b0190"></a>
 <a class="el" href="classAirControl_1_1AC__Airplane__Characteristics.html">AC_Airplane_Characteristics</a>&#160;</td><td class="memItemRight" valign="bottom"><b>characteristics</b></td></tr>
 <tr class="separator:a270fbe0682b3f0d53c2d7100f96b0190"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1c5ef96ee673db03df4c150533768670"><td class="memItemLeft" align="right" valign="top"><a id="a1c5ef96ee673db03df4c150533768670"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>airplaneWeight</b> = 1200f</td></tr>
-<tr class="separator:a1c5ef96ee673db03df4c150533768670"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acc9443b09a0c21acef0672e8cdb5fa6e"><td class="memItemLeft" align="right" valign="top"><a id="acc9443b09a0c21acef0672e8cdb5fa6e"></a>
 Transform&#160;</td><td class="memItemRight" valign="bottom"><b>centerOfGravity</b></td></tr>
 <tr class="separator:acc9443b09a0c21acef0672e8cdb5fa6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,6 +186,12 @@ float&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentMSL</b><code>
 <tr class="memitem:aa0382a9ca85286c9e30f265793ee398f"><td class="memItemLeft" align="right" valign="top"><a id="aa0382a9ca85286c9e30f265793ee398f"></a>
 float&#160;</td><td class="memItemRight" valign="bottom"><b>CurrentAGL</b><code> [get]</code></td></tr>
 <tr class="separator:aa0382a9ca85286c9e30f265793ee398f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7199b8cb4f441f61118a31bae655a284"><td class="memItemLeft" align="right" valign="top"><a id="a7199b8cb4f441f61118a31bae655a284"></a>
+UnityEngine.Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>AngularVelocity</b><code> [get]</code></td></tr>
+<tr class="separator:a7199b8cb4f441f61118a31bae655a284"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c20596abf33cf7c16bd77a5654581fe"><td class="memItemLeft" align="right" valign="top"><a id="a2c20596abf33cf7c16bd77a5654581fe"></a>
+UnityEngine.Vector3&#160;</td><td class="memItemRight" valign="bottom"><b>LinearVelocity</b><code> [get]</code></td></tr>
+<tr class="separator:a2c20596abf33cf7c16bd77a5654581fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -203,7 +206,7 @@ AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>aSource</b></t
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Master Controller, controls the entire Airplane it implements function to Handle Engines, Handle Characteristics, Handle ControlSurfaces, Handle Wheel and Handle Altitude </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00026">26</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00022">22</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="acabf1bb24aebddea20a7a52fcff4d1bc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acabf1bb24aebddea20a7a52fcff4d1bc">&#9670;&nbsp;</a></span>HandlePhysics()</h2>
@@ -232,20 +235,20 @@ AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>aSource</b></t
 
 <p>Reimplemented from <a class="el" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AirControl.AC_BaseRigidbody_Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00240">240</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;        {</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordflow">if</span>(input)</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            {</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                HandleEngines();</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                HandleCharacteristics();</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                HandleControlSurfaces();</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                HandleWheel();</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                HandleAltitude();</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            }<span class="comment">// handle else</span></div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="comment">// DB based update</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00305">305</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        {</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            <span class="keywordflow">if</span>(input)</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            {</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                HandleEngines();</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                HandleCharacteristics();</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                HandleControlSurfaces();</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                HandleWheel();</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                HandleAltitude();</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;            }<span class="comment">// handle else</span></div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160; </div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;            <span class="comment">// DB based update</span></div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;            </div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -276,48 +279,50 @@ AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>aSource</b></t
 
 <p>Reimplemented from <a class="el" href="classAirControl_1_1AC__BaseRigidbody__Controller.html">AirControl.AC_BaseRigidbody_Controller</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00108">108</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        {</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            base.Start();</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160; </div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">//calculate final mass in kilos</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="keywordtype">float</span> finalMass =  airplaneWeight * poundToKilos;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            startPos_x = rb.position.x;</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            startPos_y = rb.position.y; </div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            startPos_z = rb.position.z;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            startRot_x = rb.rotation.eulerAngles.x;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            startRot_y = rb.rotation.eulerAngles.y; </div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            startRot_z = rb.rotation.eulerAngles.z;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            Debug.LogFormat(<span class="stringliteral">&quot;Starting Position  x : {0} y: {1} z: {2} &quot;</span>,startPos_x, startPos_y, startPos_z );</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            Debug.LogFormat(<span class="stringliteral">&quot;Starting Rotation  x : {0} y: {1} z: {2} &quot;</span>,startRot_x, startRot_y, startRot_z );</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160; </div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            <span class="comment">// if rigid body added then add center of mass</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordflow">if</span> (rb){</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                rb.mass = finalMass;</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                <span class="keywordflow">if</span>(centerOfGravity){</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                    rb.centerOfMass = centerOfGravity.localPosition;</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                } <span class="comment">// handel exception </span></div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="comment">// Initialize Airplane characteristics  </span></div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                characteristics = GetComponent&lt;AC_Airplane_Characteristics&gt;();  </div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">if</span>(characteristics){</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                    characteristics.<a class="code" href="classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05">InitCharacteristics</a>(rb, input);</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                }</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                </div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            }</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;            </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="comment">// Initialize Wheels</span></div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            <span class="keywordflow">if</span> (wheels != <span class="keyword">null</span>){</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keywordflow">if</span>(wheels.Count&gt;0){</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                    <span class="keywordflow">foreach</span>(AC_Airplane_Wheel wheel <span class="keywordflow">in</span> wheels){</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                        wheel.initWheel();</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    }</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                }</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            } </div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            InvokeRepeating(<span class="stringliteral">&quot;CheckGrounded&quot;</span>, 1f, 1f); </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            <span class="comment">// InvokeRepeating(&quot;DetectAirplaneStuck&quot;, 5f, 5f); </span></div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Controller_8cs_source.html#l00117">117</a> of file <a class="el" href="AC__Airplane__Controller_8cs_source.html">AC_Airplane_Controller.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;        {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;            base.Start();</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;            airplaneWeight = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+<span class="stringliteral">&quot;/airplaneWeight&quot;</span>];</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="comment">//calculate final mass in kilos</span></div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordtype">float</span> finalMass =  airplaneWeight * poundToKilos;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            startPos_x = rb.position.x;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;            startPos_y = rb.position.y; </div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            startPos_z = rb.position.z;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            startRot_x = rb.rotation.eulerAngles.x;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;            startRot_y = rb.rotation.eulerAngles.y; </div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;            startRot_z = rb.rotation.eulerAngles.z;</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;            Debug.LogFormat(<span class="stringliteral">&quot;Starting Position  x : {0} y: {1} z: {2} &quot;</span>,startPos_x, startPos_y, startPos_z );</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;            Debug.LogFormat(<span class="stringliteral">&quot;Starting Rotation  x : {0} y: {1} z: {2} &quot;</span>,startRot_x, startRot_y, startRot_z );</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;            <span class="comment">// linear &amp; angular; Velocity &amp; Acceleration</span></div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;            lastLinearVelocity = rb.velocity;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;            lastAngularVelocity = rb.angularVelocity;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            </div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="comment">// if rigid body added then add center of mass</span></div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordflow">if</span> (rb){</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                rb.mass = finalMass;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keywordflow">if</span>(centerOfGravity){</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                    rb.centerOfMass = centerOfGravity.localPosition;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                } <span class="comment">// handel exception </span></div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="comment">// Initialize Airplane characteristics  </span></div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                characteristics = GetComponent&lt;AC_Airplane_Characteristics&gt;();  </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                <span class="keywordflow">if</span>(characteristics){</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    characteristics.<a class="code" href="classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05">InitCharacteristics</a>(rb, input);</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                </div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;            }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            </div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            <span class="comment">// Initialize Wheels</span></div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            <span class="keywordflow">if</span> (wheels != <span class="keyword">null</span>){</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">if</span>(wheels.Count&gt;0){</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    <span class="keywordflow">foreach</span>(AC_Airplane_Wheel wheel <span class="keywordflow">in</span> wheels){</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                        wheel.initWheel();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            } </div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;            InvokeRepeating(<span class="stringliteral">&quot;CheckGrounded&quot;</span>, 1f, 1f); </div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;            <span class="comment">// InvokeRepeating(&quot;DetectAirplaneStuck&quot;, 5f, 5f); </span></div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -326,7 +331,7 @@ AudioSource&#160;</td><td class="memItemRight" valign="bottom"><b>aSource</b></t
 </ul>
 </div><!-- contents -->
 </div><!-- doc-content -->
-<div class="ttc" id="aclassAirControl_1_1AC__Airplane__Characteristics_html_a06dce47f65a8f8d7dc6c3f18027afc05"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05">AirControl.AC_Airplane_Characteristics.InitCharacteristics</a></div><div class="ttdeci">void InitCharacteristics(Rigidbody curRB, AC_BaseAirplane_Input curInput)</div><div class="ttdoc">Initialize Airplane Charatceristics</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Characteristics_8cs_source.html#l00072">AC_Airplane_Characteristics.cs:72</a></div></div>
+<div class="ttc" id="aclassAirControl_1_1AC__Airplane__Characteristics_html_a06dce47f65a8f8d7dc6c3f18027afc05"><div class="ttname"><a href="classAirControl_1_1AC__Airplane__Characteristics.html#a06dce47f65a8f8d7dc6c3f18027afc05">AirControl.AC_Airplane_Characteristics.InitCharacteristics</a></div><div class="ttdeci">void InitCharacteristics(Rigidbody curRB, AC_BaseAirplane_Input curInput)</div><div class="ttdoc">Initialize Airplane Charatceristics</div><div class="ttdef"><b>Definition:</b> <a href="AC__Airplane__Characteristics_8cs_source.html#l00090">AC_Airplane_Characteristics.cs:90</a></div></div>
 <!-- HTML footer for doxygen 1.8.17-->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->

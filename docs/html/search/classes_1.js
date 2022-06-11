@@ -1,15 +1,15 @@
 var searchData=
 [
-  ['background_986',['Background',['../classXCharts_1_1Background.html',1,'XCharts']]],
-  ['backgrounddrawer_987',['BackgroundDrawer',['../classXCharts_1_1BackgroundDrawer.html',1,'XCharts']]],
-  ['barchart_988',['BarChart',['../classXCharts_1_1BarChart.html',1,'XCharts']]],
-  ['barcharteditor_989',['BarChartEditor',['../classXCharts_1_1BarChartEditor.html',1,'XCharts']]],
-  ['baseaxistheme_990',['BaseAxisTheme',['../classXCharts_1_1BaseAxisTheme.html',1,'XCharts']]],
-  ['baseaxisthemedrawer_991',['BaseAxisThemeDrawer',['../classXCharts_1_1BaseAxisThemeDrawer.html',1,'XCharts']]],
-  ['basechart_992',['BaseChart',['../classXCharts_1_1BaseChart.html',1,'XCharts']]],
-  ['basecharteditor_993',['BaseChartEditor',['../classXCharts_1_1BaseChartEditor.html',1,'XCharts']]],
-  ['basegraph_994',['BaseGraph',['../classXCharts_1_1BaseGraph.html',1,'XCharts']]],
-  ['baseline_995',['BaseLine',['../classXCharts_1_1BaseLine.html',1,'XCharts']]],
-  ['baselinedrawer_996',['BaseLineDrawer',['../classXCharts_1_1BaseLineDrawer.html',1,'XCharts']]],
-  ['basepropertydrawer_997',['BasePropertyDrawer',['../classXCharts_1_1BasePropertyDrawer.html',1,'XCharts']]]
+  ['background_1013',['Background',['../classXCharts_1_1Background.html',1,'XCharts']]],
+  ['backgrounddrawer_1014',['BackgroundDrawer',['../classXCharts_1_1BackgroundDrawer.html',1,'XCharts']]],
+  ['barchart_1015',['BarChart',['../classXCharts_1_1BarChart.html',1,'XCharts']]],
+  ['barcharteditor_1016',['BarChartEditor',['../classXCharts_1_1BarChartEditor.html',1,'XCharts']]],
+  ['baseaxistheme_1017',['BaseAxisTheme',['../classXCharts_1_1BaseAxisTheme.html',1,'XCharts']]],
+  ['baseaxisthemedrawer_1018',['BaseAxisThemeDrawer',['../classXCharts_1_1BaseAxisThemeDrawer.html',1,'XCharts']]],
+  ['basechart_1019',['BaseChart',['../classXCharts_1_1BaseChart.html',1,'XCharts']]],
+  ['basecharteditor_1020',['BaseChartEditor',['../classXCharts_1_1BaseChartEditor.html',1,'XCharts']]],
+  ['basegraph_1021',['BaseGraph',['../classXCharts_1_1BaseGraph.html',1,'XCharts']]],
+  ['baseline_1022',['BaseLine',['../classXCharts_1_1BaseLine.html',1,'XCharts']]],
+  ['baselinedrawer_1023',['BaseLineDrawer',['../classXCharts_1_1BaseLineDrawer.html',1,'XCharts']]],
+  ['basepropertydrawer_1024',['BasePropertyDrawer',['../classXCharts_1_1BasePropertyDrawer.html',1,'XCharts']]]
 ];

@@ -19,14 +19,21 @@ var annotated_dup =
       ] ]
     ] ],
     [ "Communicator", "namespaceCommunicator.html", "namespaceCommunicator" ],
+    [ "Utility", "namespaceUtility.html", "namespaceUtility" ],
     [ "XCharts", "namespaceXCharts.html", "namespaceXCharts" ],
     [ "XUGL", "namespaceXUGL.html", "namespaceXUGL" ],
     [ "AC_Airplane_Magnetometer", "classAC__Airplane__Magnetometer.html", null ],
+    [ "ActiveAirplane", "classActiveAirplane.html", "classActiveAirplane" ],
     [ "AutomatedBuild", "classAutomatedBuild.html", null ],
+    [ "ClientInfo", "classClientInfo.html", "classClientInfo" ],
     [ "ExitButton", "classExitButton.html", "classExitButton" ],
     [ "FPSDisplay", "classFPSDisplay.html", "classFPSDisplay" ],
+    [ "Instanciate", "classInstanciate.html", "classInstanciate" ],
     [ "KeyManual", "classKeyManual.html", "classKeyManual" ],
     [ "OnScreenConsole", "classOnScreenConsole.html", "classOnScreenConsole" ],
-    [ "RandomInstanciate", "classRandomInstanciate.html", null ],
-    [ "TakeScreenshot", "classTakeScreenshot.html", "classTakeScreenshot" ]
+    [ "Pause", "classPause.html", null ],
+    [ "RequestCount", "classRequestCount.html", "classRequestCount" ],
+    [ "ServerInfo", "classServerInfo.html", "classServerInfo" ],
+    [ "TakeScreenshot", "classTakeScreenshot.html", "classTakeScreenshot" ],
+    [ "TargetSelector", "classTargetSelector.html", null ]
 ];

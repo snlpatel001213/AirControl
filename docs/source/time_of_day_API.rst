@@ -24,7 +24,7 @@ Importing Requirement
 
 .. code:: ipython3
 
-    from AirControl import actions
+    from airctrl import environment
     
     from pprint import pprint
     import PIL.Image as Image
@@ -34,7 +34,8 @@ Importing Requirement
     from io import BytesIO
     from matplotlib.pyplot import  imshow
     import matplotlib.pyplot as plt
-    A =  actions.Actions()
+    A =  environment.Trigger()
+
 
 
 .. parsed-literal::
@@ -63,7 +64,7 @@ Importing Requirement
 
 
 
-.. image:: ../images/time_of_day_API_files/time_of_day_API_6_0.png
+.. image:: time_of_day_API_files/time_of_day_API_6_0.png
 
 
 **Sunset light**
@@ -82,7 +83,7 @@ Importing Requirement
 
 
 
-.. image:: ../images/time_of_day_API_files/time_of_day_API_8_0.png
+.. image:: time_of_day_API_files/time_of_day_API_8_0.png
 
 
 **Noon - Sun at vertical angle**
@@ -100,7 +101,7 @@ Importing Requirement
 
 
 
-.. image:: ../images/time_of_day_API_files/time_of_day_API_10_0.png
+.. image:: time_of_day_API_files/time_of_day_API_10_0.png
 
 
 **Night**
@@ -118,7 +119,7 @@ Importing Requirement
 
 
 
-.. image:: ../images/time_of_day_API_files/time_of_day_API_12_0.png
+.. image:: time_of_day_API_files/time_of_day_API_12_0.png
 
 
 .. code:: ipython3
@@ -134,6 +135,6 @@ Importing Requirement
 
 
 
-.. image:: ../images/time_of_day_API_files/time_of_day_API_13_0.png
+.. image:: time_of_day_API_files/time_of_day_API_13_0.png
 
 

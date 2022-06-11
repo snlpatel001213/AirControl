@@ -53,7 +53,8 @@ Importing Requirements
 
 .. code:: ipython3
 
-    from AirControl import actions
+    from airctrl import environment
+    
     from pprint import pprint
     import PIL.Image as Image
     import base64
@@ -62,7 +63,7 @@ Importing Requirements
     from matplotlib.pyplot import  imshow
     import matplotlib.pyplot as plt
     
-    A =  actions.Actions()
+    A =  environment.Trigger()
 
 
 
@@ -126,7 +127,7 @@ following output.
     'ScreenCapture': '',
     'Version': '0.0.4'}
 
-.. figure:: ../images/bankAngle.png
+.. figure:: ../../docs/images/bankAngle.png
    :alt: Bank Angle
 
    Bank Angle
@@ -134,7 +135,7 @@ following output.
 Angle between vertical component of the Airplane w.r.t global
 vertical.\ `Source <https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_aircraft)>`__
 
-.. figure:: ../images/pitchAngle.png
+.. figure:: ../../docs/images/pitchAngle.png
    :alt: Pitch Angle
 
    Pitch Angle

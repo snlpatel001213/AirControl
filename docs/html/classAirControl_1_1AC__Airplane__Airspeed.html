@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -123,10 +123,9 @@ Collaboration diagram for AirControl.AC_Airplane_Airspeed:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__Airplane__Airspeed__coll__graph.png" border="0" usemap="#AirControl_8AC__Airplane__Airspeed_coll__map" alt="Collaboration graph"/></div>
 <map name="AirControl_8AC__Airplane__Airspeed_coll__map" id="AirControl_8AC__Airplane__Airspeed_coll__map">
-<area shape="rect" title="Monitor and updates the Airspeed to UI" alt="" coords="89,185,259,227"/>
+<area shape="rect" title="Monitor and updates the Airspeed to UI" alt="" coords="49,80,219,121"/>
 <area shape="rect" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__Characteristics.html" title="Main class defines the Airplane Characteristics" alt="" coords="89,81,259,123"/>
-<area shape="rect" href="interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="284,89,379,115"/>
+<area shape="rect" href="interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="153,5,248,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -138,9 +137,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:abd24d02ce6fe98a7cb3d906be0e00cc0"><td class="memItemLeft" align="right" valign="top"><a id="abd24d02ce6fe98a7cb3d906be0e00cc0"></a>
-<a class="el" href="classAirControl_1_1AC__Airplane__Characteristics.html">AC_Airplane_Characteristics</a>&#160;</td><td class="memItemRight" valign="bottom"><b>characteristics</b></td></tr>
-<tr class="separator:abd24d02ce6fe98a7cb3d906be0e00cc0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d1b3783be049f4f12a1c0fae535215f"><td class="memItemLeft" align="right" valign="top"><a id="a9d1b3783be049f4f12a1c0fae535215f"></a>
 RectTransform&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b></td></tr>
 <tr class="separator:a9d1b3783be049f4f12a1c0fae535215f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -157,7 +153,7 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>mphToKnts</b> 
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Monitor and updates the Airspeed to UI </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__Airspeed_8cs_source.html#l00011">11</a> of file <a class="el" href="AC__Airplane__Airspeed_8cs_source.html">AC_Airplane_Airspeed.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Airspeed_8cs_source.html#l00012">12</a> of file <a class="el" href="AC__Airplane__Airspeed_8cs_source.html">AC_Airplane_Airspeed.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="a1c1a7f4562dd0d096615f0f61e057261"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1c1a7f4562dd0d096615f0f61e057261">&#9670;&nbsp;</a></span>HandleAirplaneUI()</h2>
@@ -186,24 +182,24 @@ const float&#160;</td><td class="memItemRight" valign="bottom"><b>mphToKnts</b> 
 
 <p>Implements <a class="el" href="interfaceAirControl_1_1IAirplaneUI.html">AirControl.IAirplaneUI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__Airspeed_8cs_source.html#l00029">29</a> of file <a class="el" href="AC__Airplane__Airspeed_8cs_source.html">AC_Airplane_Airspeed.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keywordflow">if</span>(characteristics &amp;&amp; pointer)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                currentKnots = characteristics.MPH * mphToKnts;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="comment">//Debug.Log(currentKnots);</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordtype">float</span> normalizedKnots = Mathf.InverseLerp(0f, maxIndicatedKnots, currentKnots);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordtype">float</span> wantedRotation = 360f * normalizedKnots;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                pointer.rotation = Quaternion.Euler(0f, 0f, -wantedRotation);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">            #region DBArea</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            StaticOutputSchema.CurrentSpeed = currentKnots;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">//Set value of AGL and MSL to DB</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">// DB_Functions.SetSpeed(connection, currentKnots);</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">            #endregion         </span></div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__Airspeed_8cs_source.html#l00036">36</a> of file <a class="el" href="AC__Airplane__Airspeed_8cs_source.html">AC_Airplane_Airspeed.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="keywordflow">if</span>(characteristics &amp;&amp; pointer)</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                currentKnots = characteristics.MPH * mphToKnts;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="comment">//Debug.Log(currentKnots);</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordtype">float</span> normalizedKnots = Mathf.InverseLerp(0f, maxIndicatedKnots, currentKnots);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordtype">float</span> wantedRotation = 360f * normalizedKnots;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                pointer.rotation = Quaternion.Euler(0f, 0f, -wantedRotation);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="preprocessor">            #region DBArea</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            StaticOutputSchema.CurrentSpeed = currentKnots;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">//Set value of AGL and MSL to DB</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// DB_Functions.SetSpeed(connection, currentKnots);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;<span class="preprocessor">            #endregion         </span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>

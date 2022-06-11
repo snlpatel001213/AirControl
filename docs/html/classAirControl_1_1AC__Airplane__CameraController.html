@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -172,9 +172,6 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a1072b7094e1fa6ede35c8a67080c4e9c"><td class="memItemLeft" align="right" valign="top"><a id="a1072b7094e1fa6ede35c8a67080c4e9c"></a>
 <a class="el" href="classAirControl_1_1AC__BaseAirplane__Input.html">AC_BaseAirplane_Input</a>&#160;</td><td class="memItemRight" valign="bottom"><b>input</b></td></tr>
 <tr class="separator:a1072b7094e1fa6ede35c8a67080c4e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac3f63bb72ecd39f9b70dff1cb72eb82b"><td class="memItemLeft" align="right" valign="top"><a id="ac3f63bb72ecd39f9b70dff1cb72eb82b"></a>
-List&lt; Camera &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>cameras</b> = new List&lt;Camera&gt;()</td></tr>
-<tr class="separator:ac3f63bb72ecd39f9b70dff1cb72eb82b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a276f6c099a48fdbce9c1af7343836195"><td class="memItemLeft" align="right" valign="top"><a id="a276f6c099a48fdbce9c1af7343836195"></a>
 List&lt; <a class="el" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html">CapturePass</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>CapturePassList</b> = new List&lt;<a class="el" href="structAirControl_1_1AC__Airplane__CameraController_1_1CapturePass.html">CapturePass</a>&gt;()</td></tr>
 <tr class="separator:a276f6c099a48fdbce9c1af7343836195"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -247,15 +244,15 @@ Protected Member Functions</h2></td></tr>
 
 <p>Create hidden capture camera for each schene camera </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00090">90</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> q = 0; q &lt; capturePasses.Length; q++)</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    capturePasses[q].camera = CreateHiddenCamera(capturePasses[q].name, cameras[currentCaprtureCamera].transform);</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    CapturePassList.Add(capturePasses[q]);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                }    </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00099">99</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> q = 0; q &lt; capturePasses.Length; q++)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                    capturePasses[q].camera = CreateHiddenCamera(capturePasses[q].name, cameras[currentCaprtureCamera].transform);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                    CapturePassList.Add(capturePasses[q]);</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                }    </div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;            </div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -291,36 +288,36 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00405">405</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160;        {</div>
-<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;            <span class="keywordtype">int</span> targetDisplay = 1;</div>
-<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;            <span class="keywordflow">foreach</span> (var pass <span class="keywordflow">in</span> capturePasses)</div>
-<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;            {</div>
-<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;                <span class="keywordflow">if</span> (pass.camera == activeCamera)</div>
-<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;                    <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00412"></a><span class="lineno">  412</span>&#160; </div>
-<div class="line"><a name="l00413"></a><span class="lineno">  413</span>&#160;                <span class="comment">// cleanup capturing camera</span></div>
-<div class="line"><a name="l00414"></a><span class="lineno">  414</span>&#160;                pass.camera.RemoveAllCommandBuffers();</div>
-<div class="line"><a name="l00415"></a><span class="lineno">  415</span>&#160; </div>
-<div class="line"><a name="l00416"></a><span class="lineno">  416</span>&#160;                <span class="comment">// copy all &quot;main&quot; camera parameters into capturing camera</span></div>
-<div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;                pass.camera.CopyFrom(activeCamera);</div>
-<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160; </div>
-<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;                <span class="comment">// set targetDisplay here since it gets overriden by CopyFrom()</span></div>
-<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;                pass.camera.targetDisplay = targetDisplay++;</div>
-<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;            }</div>
-<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160; </div>
-<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160;            <span class="comment">// cache materials and setup material properties</span></div>
-<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;            <span class="keywordflow">if</span> (!opticalFlowMaterial || opticalFlowMaterial.shader != opticalFlowShader)</div>
-<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                opticalFlowMaterial = <span class="keyword">new</span> Material(opticalFlowShader);</div>
-<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160;            opticalFlowMaterial.SetFloat(<span class="stringliteral">&quot;_Sensitivity&quot;</span>, opticalFlowSensitivity);</div>
-<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160; </div>
-<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;            <span class="comment">// setup command buffers and replacement shaders</span></div>
-<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160;            SetupCameraWithReplacementShader(capturePasses[1].camera, uberReplacementShader, ReplacementMode.ObjectId, Color.black);</div>
-<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;            SetupCameraWithReplacementShader(capturePasses[2].camera, uberReplacementShader, ReplacementMode.CatergoryId, Color.black);</div>
-<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;            SetupCameraWithReplacementShader(capturePasses[3].camera, uberReplacementShader, ReplacementMode.DepthCompressed, Color.white);</div>
-<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            SetupCameraWithReplacementShader(capturePasses[4].camera, uberReplacementShader, ReplacementMode.Normals, Color.black);</div>
-<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160;            SetupCameraWithPostShader(capturePasses[5].camera, opticalFlowMaterial, DepthTextureMode.Depth | DepthTextureMode.MotionVectors);</div>
-<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00416">416</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00417"></a><span class="lineno">  417</span>&#160;        {</div>
+<div class="line"><a name="l00418"></a><span class="lineno">  418</span>&#160;            <span class="keywordtype">int</span> targetDisplay = 1;</div>
+<div class="line"><a name="l00419"></a><span class="lineno">  419</span>&#160;            <span class="keywordflow">foreach</span> (var pass <span class="keywordflow">in</span> capturePasses)</div>
+<div class="line"><a name="l00420"></a><span class="lineno">  420</span>&#160;            {</div>
+<div class="line"><a name="l00421"></a><span class="lineno">  421</span>&#160;                <span class="keywordflow">if</span> (pass.camera == activeCamera)</div>
+<div class="line"><a name="l00422"></a><span class="lineno">  422</span>&#160;                    <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00423"></a><span class="lineno">  423</span>&#160; </div>
+<div class="line"><a name="l00424"></a><span class="lineno">  424</span>&#160;                <span class="comment">// cleanup capturing camera</span></div>
+<div class="line"><a name="l00425"></a><span class="lineno">  425</span>&#160;                pass.camera.RemoveAllCommandBuffers();</div>
+<div class="line"><a name="l00426"></a><span class="lineno">  426</span>&#160; </div>
+<div class="line"><a name="l00427"></a><span class="lineno">  427</span>&#160;                <span class="comment">// copy all &quot;main&quot; camera parameters into capturing camera</span></div>
+<div class="line"><a name="l00428"></a><span class="lineno">  428</span>&#160;                pass.camera.CopyFrom(activeCamera);</div>
+<div class="line"><a name="l00429"></a><span class="lineno">  429</span>&#160; </div>
+<div class="line"><a name="l00430"></a><span class="lineno">  430</span>&#160;                <span class="comment">// set targetDisplay here since it gets overriden by CopyFrom()</span></div>
+<div class="line"><a name="l00431"></a><span class="lineno">  431</span>&#160;                pass.camera.targetDisplay = targetDisplay++;</div>
+<div class="line"><a name="l00432"></a><span class="lineno">  432</span>&#160;            }</div>
+<div class="line"><a name="l00433"></a><span class="lineno">  433</span>&#160; </div>
+<div class="line"><a name="l00434"></a><span class="lineno">  434</span>&#160;            <span class="comment">// cache materials and setup material properties</span></div>
+<div class="line"><a name="l00435"></a><span class="lineno">  435</span>&#160;            <span class="keywordflow">if</span> (!opticalFlowMaterial || opticalFlowMaterial.shader != opticalFlowShader)</div>
+<div class="line"><a name="l00436"></a><span class="lineno">  436</span>&#160;                opticalFlowMaterial = <span class="keyword">new</span> Material(opticalFlowShader);</div>
+<div class="line"><a name="l00437"></a><span class="lineno">  437</span>&#160;            opticalFlowMaterial.SetFloat(<span class="stringliteral">&quot;_Sensitivity&quot;</span>, opticalFlowSensitivity);</div>
+<div class="line"><a name="l00438"></a><span class="lineno">  438</span>&#160; </div>
+<div class="line"><a name="l00439"></a><span class="lineno">  439</span>&#160;            <span class="comment">// setup command buffers and replacement shaders</span></div>
+<div class="line"><a name="l00440"></a><span class="lineno">  440</span>&#160;            SetupCameraWithReplacementShader(capturePasses[1].camera, uberReplacementShader, ReplacementMode.ObjectId, Color.black);</div>
+<div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            SetupCameraWithReplacementShader(capturePasses[2].camera, uberReplacementShader, ReplacementMode.CatergoryId, Color.black);</div>
+<div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            SetupCameraWithReplacementShader(capturePasses[3].camera, uberReplacementShader, ReplacementMode.DepthCompressed, Color.white);</div>
+<div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            SetupCameraWithReplacementShader(capturePasses[4].camera, uberReplacementShader, ReplacementMode.Normals, Color.black);</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            SetupCameraWithPostShader(capturePasses[5].camera, opticalFlowMaterial, DepthTextureMode.Depth | DepthTextureMode.MotionVectors);</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -349,21 +346,21 @@ Protected Member Functions</h2></td></tr>
 
 <p>Deprecated Not used with API This fucntion was used to switch the screen manually </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00386">386</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;        {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;            var renderers = Object.FindObjectsOfType&lt;Renderer&gt;();</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;            var mpb = <span class="keyword">new</span> MaterialPropertyBlock();</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;            <span class="keywordflow">foreach</span> (var r <span class="keywordflow">in</span> renderers)</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;            {</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                var <span class="keywordtype">id</span> = r.gameObject.GetInstanceID();</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                var layer = r.gameObject.layer;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                var tag = r.gameObject.tag;</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160; </div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;                mpb.SetColor(<span class="stringliteral">&quot;_ObjectColor&quot;</span>, ColorEncoding.EncodeIDAsColor(<span class="keywordtype">id</span>));</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;                mpb.SetColor(<span class="stringliteral">&quot;_CategoryColor&quot;</span>, ColorEncoding.EncodeLayerAsColor(layer));</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;                r.SetPropertyBlock(mpb);</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            }</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00397">397</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;        {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;            var renderers = Object.FindObjectsOfType&lt;Renderer&gt;();</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            var mpb = <span class="keyword">new</span> MaterialPropertyBlock();</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;            <span class="keywordflow">foreach</span> (var r <span class="keywordflow">in</span> renderers)</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;            {</div>
+<div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;                var <span class="keywordtype">id</span> = r.gameObject.GetInstanceID();</div>
+<div class="line"><a name="l00404"></a><span class="lineno">  404</span>&#160;                var layer = r.gameObject.layer;</div>
+<div class="line"><a name="l00405"></a><span class="lineno">  405</span>&#160;                var tag = r.gameObject.tag;</div>
+<div class="line"><a name="l00406"></a><span class="lineno">  406</span>&#160; </div>
+<div class="line"><a name="l00407"></a><span class="lineno">  407</span>&#160;                mpb.SetColor(<span class="stringliteral">&quot;_ObjectColor&quot;</span>, ColorEncoding.EncodeIDAsColor(<span class="keywordtype">id</span>));</div>
+<div class="line"><a name="l00408"></a><span class="lineno">  408</span>&#160;                mpb.SetColor(<span class="stringliteral">&quot;_CategoryColor&quot;</span>, ColorEncoding.EncodeLayerAsColor(layer));</div>
+<div class="line"><a name="l00409"></a><span class="lineno">  409</span>&#160;                r.SetPropertyBlock(mpb);</div>
+<div class="line"><a name="l00410"></a><span class="lineno">  410</span>&#160;            }</div>
+<div class="line"><a name="l00411"></a><span class="lineno">  411</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -445,50 +442,50 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00215">215</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;        {</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;             <span class="keywordflow">if</span> (width &lt;= 0 || height &lt;= 0)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;            {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                width = Screen.width;</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                height = Screen.height;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;            }</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;            </div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;            var depth = 8;</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;            var format = RenderTextureFormat.Default;</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;            var readWrite = RenderTextureReadWrite.Default;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            var antiAliasing = (supportsAntialiasing) ? Mathf.Max(1, QualitySettings.antiAliasing) : 1;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            var finalRT =</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                RenderTexture.GetTemporary(width, height, depth, format, readWrite, antiAliasing);</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            var renderRT = (!needsRescale) ? finalRT :</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                RenderTexture.GetTemporary(mainCamera.pixelWidth, mainCamera.pixelHeight, depth, format, readWrite, antiAliasing);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            var tex = <span class="keyword">new</span> Texture2D(width, height, TextureFormat.RGB24, <span class="keyword">false</span>);</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            var prevActiveRT = RenderTexture.active;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            var prevCameraRT = cam.targetTexture;</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="comment">// render to offscreen texture (readonly from CPU side)</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            RenderTexture.active = renderRT;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            cam.targetTexture = renderRT;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160; </div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            cam.Render();</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordflow">if</span> (needsRescale)</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            {</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="comment">// blit to rescale (see issue with Motion Vectors in @KNOWN ISSUES)</span></div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                RenderTexture.active = finalRT;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                Graphics.Blit(renderRT, finalRT);</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                RenderTexture.ReleaseTemporary(renderRT);</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            }</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160; </div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="comment">// read offsreen texture contents into the CPU readable texture</span></div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            tex.ReadPixels(<span class="keyword">new</span> <a class="code" href="namespaceXCharts.html#a94f818e5bdf51e1934daea325ee96f98a69ad58d91eec91b5c152d21ca117dc81">Rect</a>(0, 0, tex.width, tex.height), 0, 0);</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            tex.Apply();</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160; </div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="comment">// encode texture into PNG</span></div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            screencapture =  tex.EncodeToPNG();</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00226">226</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        {</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;             <span class="keywordflow">if</span> (width &lt;= 0 || height &lt;= 0)</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            {</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                width = Screen.width;</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                height = Screen.height;</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;            }</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;            </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;            var depth = 8;</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            var format = RenderTextureFormat.Default;</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            var readWrite = RenderTextureReadWrite.Default;</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            var antiAliasing = (supportsAntialiasing) ? Mathf.Max(1, QualitySettings.antiAliasing) : 1;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160; </div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            var finalRT =</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                RenderTexture.GetTemporary(width, height, depth, format, readWrite, antiAliasing);</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            var renderRT = (!needsRescale) ? finalRT :</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                RenderTexture.GetTemporary(mainCamera.pixelWidth, mainCamera.pixelHeight, depth, format, readWrite, antiAliasing);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            var tex = <span class="keyword">new</span> Texture2D(width, height, TextureFormat.RGB24, <span class="keyword">false</span>);</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160; </div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            var prevActiveRT = RenderTexture.active;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            var prevCameraRT = cam.targetTexture;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160; </div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="comment">// render to offscreen texture (readonly from CPU side)</span></div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            RenderTexture.active = renderRT;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            cam.targetTexture = renderRT;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160; </div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            cam.Render();</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160; </div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordflow">if</span> (needsRescale)</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            {</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="comment">// blit to rescale (see issue with Motion Vectors in @KNOWN ISSUES)</span></div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                RenderTexture.active = finalRT;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                Graphics.Blit(renderRT, finalRT);</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                RenderTexture.ReleaseTemporary(renderRT);</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;            }</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160; </div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="comment">// read offsreen texture contents into the CPU readable texture</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            tex.ReadPixels(<span class="keyword">new</span> <a class="code" href="namespaceXCharts.html#a94f818e5bdf51e1934daea325ee96f98a69ad58d91eec91b5c152d21ca117dc81">Rect</a>(0, 0, tex.width, tex.height), 0, 0);</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;            tex.Apply();</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160; </div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            <span class="comment">// encode texture into PNG</span></div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;            screencapture =  tex.EncodeToPNG();</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            </div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -524,16 +521,16 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00337">337</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        {</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            DisableAllCameras();</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            </div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            <span class="keywordflow">if</span> (cameraId &lt;= cameras.Count){</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                cameras[cameraId].enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                cameras[cameraId].GetComponent&lt;AudioListener&gt;().enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                curentCameraIndex = cameraId;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            }</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00348">348</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        {</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            DisableAllCameras();</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;            </div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            <span class="keywordflow">if</span> (cameraId &lt;= cameras.Count){</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                cameras[cameraId].enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                cameras[cameraId].GetComponent&lt;AudioListener&gt;().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                curentCameraIndex = cameraId;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;            }</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -562,18 +559,18 @@ Protected Member Functions</h2></td></tr>
 
 <p>Switch camera </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00320">320</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            <span class="comment">// chnage the camera index as we chaneg the camera</span></div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;            DisableAllCameras();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            curentCameraIndex++;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            <span class="comment">//circular index </span></div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;            <span class="keywordflow">if</span> (curentCameraIndex &gt;= cameras.Count){</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                curentCameraIndex = 0;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            cameras[curentCameraIndex].enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            cameras[curentCameraIndex].GetComponent&lt;AudioListener&gt;().enabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00331">331</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;        {</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;            <span class="comment">// chnage the camera index as we chaneg the camera</span></div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;            DisableAllCameras();</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;            curentCameraIndex++;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;            <span class="comment">//circular index </span></div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            <span class="keywordflow">if</span> (curentCameraIndex &gt;= cameras.Count){</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                curentCameraIndex = 0;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            cameras[curentCameraIndex].enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;            cameras[curentCameraIndex].GetComponent&lt;AudioListener&gt;().enabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -598,7 +595,7 @@ Protected Member Functions</h2></td></tr>
 <div class="line">            <span class="keyword">new</span> CapturePass() { name = <span class="stringliteral">&quot;_flow&quot;</span>, supportsAntialiasing = <span class="keyword">false</span>, needsRescale = <span class="keyword">true</span> } </div>
 <div class="line">        }</div>
 </div><!-- fragment -->
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00038">38</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__CameraController_8cs_source.html#l00039">39</a> of file <a class="el" href="AC__Airplane__CameraController_8cs_source.html">AC_Airplane_CameraController.cs</a>.</p>
 
 </div>
 </div>

@@ -2,6 +2,7 @@ var namespaceCommunicator =
 [
     [ "AudioSchema", "classCommunicator_1_1AudioSchema.html", "classCommunicator_1_1AudioSchema" ],
     [ "CameraSchema", "classCommunicator_1_1CameraSchema.html", "classCommunicator_1_1CameraSchema" ],
+    [ "ClientInfo", "classCommunicator_1_1ClientInfo.html", "classCommunicator_1_1ClientInfo" ],
     [ "ControlSchema", "classCommunicator_1_1ControlSchema.html", "classCommunicator_1_1ControlSchema" ],
     [ "FuelSchema", "classCommunicator_1_1FuelSchema.html", "classCommunicator_1_1FuelSchema" ],
     [ "InputHandle", "classCommunicator_1_1InputHandle.html", "classCommunicator_1_1InputHandle" ],

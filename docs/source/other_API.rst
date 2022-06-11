@@ -6,9 +6,8 @@ Importing requirements
 
 .. code:: ipython3
 
-    from AirControl import actions
+    from airctrl import environment
     
-    from AirControl import schemaDef
     from pprint import pprint
     import PIL.Image as Image
     import base64
@@ -17,7 +16,8 @@ Importing requirements
     from matplotlib.pyplot import  imshow
     import matplotlib.pyplot as plt
     
-    A =  actions.Actions()
+    A =  environment.Trigger()
+
 
 
 .. parsed-literal::

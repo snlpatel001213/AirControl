@@ -45,9 +45,10 @@ namespace AirControl {
         void ParseIt(Arguments CommandLine) {
             /* Parsing the port number from the command line and sets the port number to the
             global variable `CommonFunctions.ServerPort` */
-            defineServerPort(CommandLine);
+            DefineServerPort(CommandLine);
             /* This function displays the host and port of the client */
-            displayHostPortClient(CommandLine);
+            DisplayHostPortClient(CommandLine);
+            
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace AirControl {
         /// global variable `CommonFunctions.ServerPort`
         /// </summary>
         /// <param name="Arguments">This is the class that contains the command line arguments.</param>
-        void defineServerPort(Arguments CommandLine){
+        void DefineServerPort(Arguments CommandLine){
             //parse port from commandline
             if (int.TryParse(CommandLine["serverPort"], out _)) {  
                 // if port provided              
@@ -72,7 +73,7 @@ namespace AirControl {
         /// This function displays the host and port of the client
         /// </summary>
         /// <param name="Arguments">This is the object that contains the command line arguments.</param>
-        void displayHostPortClient(Arguments CommandLine){
+        void DisplayHostPortClient(Arguments CommandLine){
             if (CommandLine["clientIP"] != "") {  
                 // if port provided              
                 CommonFunctions.clientIP = CommandLine["clientIP"];

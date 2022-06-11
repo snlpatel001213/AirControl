@@ -1,0 +1,4 @@
+<map id="ServerInfo" name="ServerInfo">
+<area shape="rect" id="node1" title="It displays the IP and Port of the client" alt="" coords="23,80,112,107"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,129,32"/>
+</map>

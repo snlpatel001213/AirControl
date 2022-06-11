@@ -110,7 +110,8 @@ Importing Requirements
 
 .. code:: ipython3
 
-    from AirControl import actions
+    import sys
+    sys.path.append("../../")
     from pprint import pprint
     import PIL.Image as Image
     import base64
@@ -118,19 +119,67 @@ Importing Requirements
     from io import BytesIO
     from matplotlib.pyplot import  imshow
     import matplotlib.pyplot as plt
-    
-    A =  actions.Actions()
+
+.. code:: ipython3
+
+    from Python.src.airctrl import environment 
+    from Python.src.airctrl import sample_generator
+    from Python.src.airctrl.utils import unity
+    A =  environment.Trigger()
+    L = unity.Launch()
+    port = 7858
+    process = L.launch_executable("/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64", server_port=port)
 
 
 .. parsed-literal::
 
-    Now play the environment and call call method `Action.get_connected` to get connected
+    [32mNow call method `.get_connected(port=<Default 8053>)` to get connected
+    [0m
+    [32mLoading environment from /home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64 at port 7858 client ip 127.0.1.1 client port 7858
+    [0m
+    [32mSleeping for 5 seconds to allow environment load
+    [0m
+    [UnityMemory] Configuration Parameters - Can be set up in boot.config
+        "memorysetup-bucket-allocator-granularity=16"
+        "memorysetup-bucket-allocator-bucket-count=8"
+        "memorysetup-bucket-allocator-block-size=4194304"
+        "memorysetup-bucket-allocator-block-count=1"
+        "memorysetup-main-allocator-block-size=16777216"
+        "memorysetup-thread-allocator-block-size=16777216"
+        "memorysetup-gfx-main-allocator-block-size=16777216"
+        "memorysetup-gfx-thread-allocator-block-size=16777216"
+        "memorysetup-cache-allocator-block-size=4194304"
+        "memorysetup-typetree-allocator-block-size=2097152"
+        "memorysetup-profiler-bucket-allocator-granularity=16"
+        "memorysetup-profiler-bucket-allocator-bucket-count=8"
+        "memorysetup-profiler-bucket-allocator-block-size=4194304"
+        "memorysetup-profiler-bucket-allocator-block-count=1"
+        "memorysetup-profiler-allocator-block-size=16777216"
+        "memorysetup-profiler-editor-allocator-block-size=1048576"
+        "memorysetup-temp-allocator-size-main=4194304"
+        "memorysetup-job-temp-allocator-block-size=2097152"
+        "memorysetup-job-temp-allocator-block-size-background=1048576"
+        "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+        "memorysetup-temp-allocator-size-background-worker=32768"
+        "memorysetup-temp-allocator-size-job-worker=262144"
+        "memorysetup-temp-allocator-size-preload-manager=262144"
+        "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+        "memorysetup-temp-allocator-size-audio-worker=65536"
+        "memorysetup-temp-allocator-size-cloud-worker=32768"
+        "memorysetup-temp-allocator-size-gfx=262144"
 
 
 .. code:: ipython3
 
     # get connected to server
-    A.get_connected()
+    A.get_connected(port=port)
+
+
+.. parsed-literal::
+
+    [32mConnecting with port 7858
+    [0m
+
 
 Examples (Cockpit Camera)
 -------------------------
@@ -139,7 +188,7 @@ Examples (Cockpit Camera)
 
 .. code:: ipython3
 
-    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=0,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
     image = output['ScreenCapture']
     if image != "":
         im = Image.open(BytesIO(base64.b64decode(image)))
@@ -147,8 +196,14 @@ Examples (Cockpit Camera)
         plt.axis('off')
 
 
+.. parsed-literal::
 
-.. image:: ../images/camera_API_files/camera_API_8_0.png
+    CPU times: user 44.6 s, sys: 7.02 s, total: 51.6 s
+    Wall time: 51.6 s
+
+
+
+.. image:: camera_API_files/camera_API_9_1.png
 
 
 **Instance Segmentation**
@@ -162,11 +217,6 @@ Examples (Cockpit Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
-
-
-.. image:: ../images/camera_API_files/camera_API_10_0.png
-
-
 **Semantic segmentation**
 
 .. code:: ipython3
@@ -177,11 +227,6 @@ Examples (Cockpit Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
-
-
-
-.. image:: ../images/camera_API_files/camera_API_12_0.png
-
 
 **Depth**
 
@@ -194,11 +239,6 @@ Examples (Cockpit Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
-
-
-.. image:: ../images/camera_API_files/camera_API_14_0.png
-
-
 **Normals**
 
 .. code:: ipython3
@@ -210,11 +250,6 @@ Examples (Cockpit Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
-
-
-.. image:: ../images/camera_API_files/camera_API_16_0.png
-
-
 **Optical Flow**
 
 .. code:: ipython3
@@ -225,11 +260,6 @@ Examples (Cockpit Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
-
-
-
-.. image:: ../images/camera_API_files/camera_API_18_0.png
-
 
 Example (External Camera)
 -------------------------
@@ -245,11 +275,6 @@ Example (External Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
-
-
-.. image:: ../images/camera_API_files/camera_API_21_0.png
-
-
 **Instance Segmentation**
 
 .. code:: ipython3
@@ -260,11 +285,6 @@ Example (External Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
-
-
-
-.. image:: ../images/camera_API_files/camera_API_23_0.png
-
 
 **Semantic segmentation**
 
@@ -277,11 +297,6 @@ Example (External Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
-
-
-.. image:: ../images/camera_API_files/camera_API_25_0.png
-
-
 **Depth**
 
 .. code:: ipython3
@@ -292,11 +307,6 @@ Example (External Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
-
-
-
-.. image:: ../images/camera_API_files/camera_API_27_0.png
-
 
 **Normals**
 
@@ -309,11 +319,6 @@ Example (External Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
-
-
-.. image:: ../images/camera_API_files/camera_API_29_0.png
-
-
 **Optical Flow**
 
 .. code:: ipython3
@@ -325,11 +330,6 @@ Example (External Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
-
-
-
-.. image:: ../images/camera_API_files/camera_API_31_0.png
-
 
 Reference
 =========
