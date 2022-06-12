@@ -19,12 +19,12 @@ update_client_example_doc{
 }
 # client documentation generation
 # ipython to ipynb to RST
-# update_client_example_doc()
+update_client_example_doc()
 # Upload to Pypi
-rm -rf dist
-cp  ../README.md .
-cp ../LICENSE .
-cp ../VERSION .
- ~/miniconda3/bin/pip install twine
- ~/miniconda3/bin/python setup.py sdist
- ~/miniconda3/bin/twine upload dist/* --verbose
+# rm -rf dist
+# cp  ../README.md .
+# cp ../LICENSE .
+# cp ../VERSION .
+#  ~/miniconda3/bin/pip install twine
+#  ~/miniconda3/bin/python setup.py sdist
+#  ~/miniconda3/bin/twine upload dist/* --verbose
