@@ -111,7 +111,6 @@ Importing Requirements
 .. code:: ipython3
 
     import sys
-    sys.path.append("../../")
     from pprint import pprint
     import PIL.Image as Image
     import base64
@@ -122,12 +121,12 @@ Importing Requirements
 
 .. code:: ipython3
 
-    from Python.src.airctrl import environment 
-    from Python.src.airctrl import sample_generator
-    from Python.src.airctrl.utils import unity
+    from airctrl import environment 
+    from airctrl import sample_generator
+    from airctrl.utils import unity
     A =  environment.Trigger()
     L = unity.Launch()
-    port = 7858
+    port = 5000
     process = L.launch_executable("/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64", server_port=port)
 
 
@@ -135,7 +134,7 @@ Importing Requirements
 
     [32mNow call method `.get_connected(port=<Default 8053>)` to get connected
     [0m
-    [32mLoading environment from /home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64 at port 7858 client ip 127.0.1.1 client port 7858
+    [32mLoading environment from /home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64 at port 5000 client ip 127.0.1.1 client port 5000
     [0m
     [32mSleeping for 5 seconds to allow environment load
     [0m
@@ -177,7 +176,7 @@ Importing Requirements
 
 .. parsed-literal::
 
-    [32mConnecting with port 7858
+    [32mConnecting with port 5000
     [0m
 
 
@@ -196,26 +195,25 @@ Examples (Cockpit Camera)
         plt.axis('off')
 
 
-.. parsed-literal::
 
-    CPU times: user 44.6 s, sys: 7.02 s, total: 51.6 s
-    Wall time: 51.6 s
-
-
-
-.. image:: camera_API_files/camera_API_9_1.png
+.. image:: camera_API_files/camera_API_9_0.png
 
 
 **Instance Segmentation**
 
 .. code:: ipython3
 
-    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=0,CaptureType=1,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
+    output = A.set_camera(ActiveCamera=1, IsCapture=True,CaptureCamera=1,CaptureType=1,CaptureHeight=256,CaptureWidth=256,IsOutput=True)
     image = output['ScreenCapture']
     if image != "":
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
+
+
+
+.. image:: camera_API_files/camera_API_11_0.png
+
 
 **Semantic segmentation**
 
@@ -228,6 +226,11 @@ Examples (Cockpit Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
+
+
+.. image:: camera_API_files/camera_API_13_0.png
+
+
 **Depth**
 
 .. code:: ipython3
@@ -238,6 +241,11 @@ Examples (Cockpit Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
+
+
+
+.. image:: camera_API_files/camera_API_15_0.png
+
 
 **Normals**
 
@@ -250,6 +258,11 @@ Examples (Cockpit Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
+
+
+.. image:: camera_API_files/camera_API_17_0.png
+
+
 **Optical Flow**
 
 .. code:: ipython3
@@ -260,6 +273,11 @@ Examples (Cockpit Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
+
+
+
+.. image:: camera_API_files/camera_API_19_0.png
+
 
 Example (External Camera)
 -------------------------
@@ -275,6 +293,11 @@ Example (External Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
+
+
+.. image:: camera_API_files/camera_API_22_0.png
+
+
 **Instance Segmentation**
 
 .. code:: ipython3
@@ -285,6 +308,11 @@ Example (External Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
+
+
+
+.. image:: camera_API_files/camera_API_24_0.png
+
 
 **Semantic segmentation**
 
@@ -297,6 +325,11 @@ Example (External Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
+
+
+.. image:: camera_API_files/camera_API_26_0.png
+
+
 **Depth**
 
 .. code:: ipython3
@@ -307,6 +340,11 @@ Example (External Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
+
+
+
+.. image:: camera_API_files/camera_API_28_0.png
+
 
 **Normals**
 
@@ -319,6 +357,11 @@ Example (External Camera)
         imshow(np.asarray(im))
         plt.axis('off')
 
+
+
+.. image:: camera_API_files/camera_API_30_0.png
+
+
 **Optical Flow**
 
 .. code:: ipython3
@@ -330,6 +373,11 @@ Example (External Camera)
         im = Image.open(BytesIO(base64.b64decode(image)))
         imshow(np.asarray(im))
         plt.axis('off')
+
+
+
+.. image:: camera_API_files/camera_API_32_0.png
+
 
 Reference
 =========

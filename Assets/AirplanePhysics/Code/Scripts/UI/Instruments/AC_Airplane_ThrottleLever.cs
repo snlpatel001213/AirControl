@@ -20,7 +20,6 @@ namespace AirControl
 
         #region Builtin methods
         void Start(){
-            Debug.Log("#####################"+ CommonFunctions.ActiveAirplane);
             input = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_BaseAirplane_Input>();
         }
         #endregion

@@ -47,7 +47,7 @@ class samples:
                 a, b = 10, 0.9 # emsure shift toward -1 side, that forces the airplane up
                 return np.random.beta(a, b)*-1
     
-    def get_random_yaw(self, rng):
+    def get_random_yaw(self, rng=None):
         """
         This function returns a random value from a normal distribution with a mean of 0 and a standard
         deviation of 0.25
@@ -57,7 +57,7 @@ class samples:
              return rng.normal(0,0.1)
         return np.random.normal(0,0.1)
     
-    def get_random_roll(self, rng):
+    def get_random_roll(self, rng=None):
         """
         This function returns a random number between -1 and 1
         :return: A random number between -1 and 1

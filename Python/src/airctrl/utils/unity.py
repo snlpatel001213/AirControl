@@ -47,6 +47,7 @@ class Launch:
             print(Style.RESET_ALL)
             try:
                 command_line = [subprocess_args, "--serverPort",  str(server_port), "--clientIP" , str(client_ip), "--clientPort", str(server_port)]
+                print(command_line)
                 process  = subprocess.Popen(
                     args = command_line,
                     # start_new_session=True means that signals to the parent python process

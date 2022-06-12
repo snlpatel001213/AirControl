@@ -17,7 +17,8 @@ Please note we have a code of conduct,please follow it in all your interactions 
     1. Windows
     2. Mac 
     3. Ubuntu
-    4, WebGl
+    4. Headless Ubuntu
+    5. WebGl (Discontunied from 1.5.0 release, due to complexity webGL no longer render the project)
 3. Make sure if any third-party plugins are used then Windows, Linux, and MacOS build are tested manually.
 4. Make sure to add a docstring to any new python and C# function.
 5. update requirements.txt file for any additional python requirement
@@ -175,6 +176,7 @@ This is not an exhaustive guide but just listing key steps
    Received response for /v2/getcodeactions but could not find request.
    Received response for /quickinfo but could not find request.
    Received response for /v2/getcodeactions but could not find request.
+   
    ```
 
 ## Code of Conduct

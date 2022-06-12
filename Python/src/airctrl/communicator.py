@@ -97,5 +97,4 @@ class Communicator:
                 pass
         
         #join all parts to make final string
-        print("recived : ", total_data)
         return eval(total_data)

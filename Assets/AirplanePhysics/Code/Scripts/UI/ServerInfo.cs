@@ -13,6 +13,10 @@ public class ServerInfo : MonoBehaviour
     public TextMeshProUGUI PortText;
     private float deltaTime;
     
+    /// <summary>
+    /// Get the host IP address
+    /// </summary>
+    /// <returns>IP addess</returns>
     public static string GetLocalIPAddress()
     {
         var host = Dns.GetHostEntry(Dns.GetHostName());

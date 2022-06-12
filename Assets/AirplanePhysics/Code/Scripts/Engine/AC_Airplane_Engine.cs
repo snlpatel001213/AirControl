@@ -70,7 +70,7 @@ namespace AirControl
         void Start()
         {
             // maxForce = 7000;// cesna 4500
-            propellerSpan = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/propellarSpan"];
+            propellerSpan = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/propellerSpan"];
             maxRPM = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/maxRPM"];
             shutOffSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.ActiveAirplane+"/shutOffSpeed"];
             if(!fuel)

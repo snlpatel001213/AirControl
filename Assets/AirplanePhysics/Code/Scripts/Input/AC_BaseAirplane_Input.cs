@@ -4,6 +4,8 @@ using UnityEngine;
 using Communicator;
 using UnityEditor;
 using Commons;
+using System;
+
 namespace  AirControl
 {
     /// <summary>
@@ -71,7 +73,6 @@ namespace  AirControl
 
 
         void Start(){
-
         throttleSpeed = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/throttleSpeed"];
 #if !UNITY_EDITOR && UNITY_WEBGL
     // disable WebGLInput.captureAllKeyboardInput so elements in web page can handle keabord inputs

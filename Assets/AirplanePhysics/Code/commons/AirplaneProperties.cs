@@ -74,7 +74,7 @@ namespace Commons
             }
             else
             {
-                Debug.unityLogger.Log("Key Not present : {0} ", key);
+                Debug.unityLogger.LogError("Key Not present : {0} ", key);
                 return "None";
             }
         }
@@ -89,7 +89,6 @@ namespace Commons
             // read JSON directly from a file
             StreamReader file = File.OpenText(filepath);
             JsonTextReader reader = new JsonTextReader(file);
-            JObject jsonContent = new JObject();
 
             try
             {
@@ -98,7 +97,7 @@ namespace Commons
             }
             catch (JsonException ioExp)
             {
-                Debug.Log(ioExp.Message);
+                Debug.LogError(ioExp.Message);
                 return false;
             }
 
@@ -128,7 +127,7 @@ namespace Commons
         public static void initAirplaneJsonObject()
         {
             CommonFunctions.airplanePreset["General/docversion"] = CommonFunctions.GET_VERSION();
-            CommonFunctions.airplanePreset["General/priority"] = 5; // if priority of json is higher json will override default setting
+            CommonFunctions.airplanePreset["General/priority"] = 1; // if priority of json is higher json will override default setting
             CommonFunctions.airplanePreset["General/activeAirplane"] = "Cessna152"; // if priority of json is higher json will override default setting
             CommonFunctions.airplanePreset["Cessna152/cameraHeight"] = 6;// Height of camera
             CommonFunctions.airplanePreset["Cessna152/cameraDistance"] = 12;// Camera distance
