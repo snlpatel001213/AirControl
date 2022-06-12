@@ -1,4 +1,4 @@
-#!/bin/bashVERSconfigION
+#!/bin/bash
 
 ###### referecne ####
 # https://snapcraft.io/blog/publish-your-unity-games-in-the-snap-store
@@ -15,8 +15,8 @@ sudo rm -rf  snap/local/*.so
 # remove snap build files
 rm -rf *.snap
 # copy build from the unity linux build
-cp -r ../Build/Linux/*.* snap/local/
+cp -r ../Build/"$VERSION"/Linux/*.* snap/local/
 # build the snap
 sudo snapcraft --destructive-mode
-sudo snap install aircontrol_"$VERSION"_amd64.snap --dangerous
-sudo snapcraft push aircontrol_"$VERSION"_amd64.snap
+# sudo snap install aircontrol_"$VERSION"_amd64.snap --dangerous
+# sudo snapcraft push aircontrol_"$VERSION"_amd64.snap
