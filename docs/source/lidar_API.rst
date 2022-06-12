@@ -502,14 +502,14 @@ the above-shown lidar output is very near to airplane.
 
 |image0|
 
-.. |image0| image:: ../images/lidar/5.png
+.. |image0| image:: ../../docs/images/lidar/5.png
 
 Similarly, lidar interacts with buildings and provides a sense of
 nearness.
 
 |image0|
 
-.. |image0| image:: ../images/lidar/9.png
+.. |image0| image:: ../../docs/images/lidar/9.png
 
 Reference
 ---------

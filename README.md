@@ -4,7 +4,7 @@
 
 <div align="center">
 
-![GitHub release (latest by date)](https://img.shields.io/badge/Release-1.0.0-orange)
+![GitHub release (latest by date)](https://img.shields.io/badge/Release-1.2.0-orange)
 ![GitHub repo size](https://img.shields.io/github/repo-size/snlpatel001213/AirControl)
 ![GitHub repo size](https://badgen.net/github/license/micromatch/micromatch)
 [![Documentation Status](https://readthedocs.org/projects/aircontrol/badge/?version=master)](https://aircontrol.readthedocs.io/en/master/?badge=master)
@@ -14,7 +14,7 @@
 ![GitHub commit activity](https://img.shields.io/github/commit-activity/m/snlpatel001213/AirControl)
 ![visitors](https://visitor-badge.glitch.me/badge?page_id=snlpatel001213.visitor-badge.issue.1)
 [![Gitter](https://badges.gitter.im/Aircontrol-chat/community.svg)](https://gitter.im/Aircontrol-chat/community?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge)
-[![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/aircontrol-python)
+[![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/airctrl)
 [![aircontrol](https://snapcraft.io/aircontrol/badge.svg)](https://snapcraft.io/aircontrol)
 
 Supported OS
@@ -116,7 +116,7 @@ graph TD
   OR 
   Use relative imports
 ```
-**Pypi Release-Alpha** `Not Tested` [![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/airctrl) : https://pypi.org/project/aircontrol-python/
+**Pypi Release** [![PyPI version](https://badge.fury.io/py/airctrl.svg)](https://badge.fury.io/py/airctrl) : https://pypi.org/project/airctrl/
 ```
   pip install airctrl
 ```
@@ -164,4 +164,3 @@ We love your input! We want to make contributing to AirControl as easy and trans
 ### Current Contributors
 <a href = "https://github.com/snlpatel001213/AirControl/graphs/contributors">
 <img src = "https://contrib.rocks/image?repo=snlpatel001213/AirControl"/>
-</a>
