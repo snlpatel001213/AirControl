@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
+using Commons;
 
 namespace AirControl
 {
@@ -12,7 +13,8 @@ namespace AirControl
     {
         #region Variables
         [Header("Attitude Indicator Properties")]
-        public AC_Airplane_Controller airplane;
+        [SerializeField]
+        private AC_Airplane_Controller airplane;
         public RectTransform bgRect;
         public RectTransform arrowRect;
         protected float bankAngle; 
@@ -27,6 +29,12 @@ namespace AirControl
         }
         public float PitchAngle{
             get{return pitchAngle;}
+        }
+        #endregion
+
+        #region Builtin methods
+        void Start(){
+            airplane = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Controller>();
         }
         #endregion
 

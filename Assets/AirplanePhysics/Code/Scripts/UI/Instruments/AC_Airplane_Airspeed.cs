@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
+using Commons;
 
 namespace AirControl
 {
@@ -12,7 +13,8 @@ namespace AirControl
     {
         #region Variables
         [Header("Airspeed Indicator Properties")]
-        public AC_Airplane_Characteristics characteristics;
+        [SerializeField]
+        private AC_Airplane_Characteristics characteristics;
         public RectTransform pointer;
         public float maxIndicatedKnots = 200f;
         float currentKnots;
@@ -21,6 +23,11 @@ namespace AirControl
 
         public const float mphToKnts = 0.868976f;
 
+        #region Builtin methods
+        void Start(){
+            characteristics = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Characteristics>();
+        }
+        #endregion
 
         #region Interface Methods
         /// <summary>

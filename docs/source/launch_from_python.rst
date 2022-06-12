@@ -1,0 +1,86 @@
+Launching Unity Environment From Python
+=======================================
+
+It is possible to launch and terminate the environment from Python.
+
+This provide additional level of fexibilty where you will not have to
+lauch environment manually everytime.
+
+.. code:: ipython3
+
+    from airctrl import environment 
+    from airctrl import sample_generator
+    from airctrl.utils import unity
+    from airctrl import sample_generator
+    port=8999
+    sample = sample_generator.samples()
+
+Use ``Launch()`` class from ``unity`` subpackage to create and object
+
+.. code:: ipython3
+
+    env =  environment.Trigger()
+    L = unity.Launch()
+
+
+.. parsed-literal::
+
+    [32mNow call method `.get_connected(port=<Default 8053>)` to get connected
+    [0m
+
+
+Use function ``launch_executable()`` to launch an environment.
+``launch_executable()`` takes path where the executable is located. Use
+suitable path according to OS.
+
+.. code:: ipython3
+
+    process = L.launch_executable("/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64", server_port=port)
+    env.get_connected(port=port)
+
+
+.. parsed-literal::
+
+    [32mLoading environment from /home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64 at port 8999 client ip 127.0.1.1 client port 8999
+    [0m
+    ['/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64', '--serverPort', '8999', '--clientIP', '127.0.1.1', '--clientPort', '8999']
+    [32mSleeping for 5 seconds to allow environment load
+    [0m
+    [UnityMemory] Configuration Parameters - Can be set up in boot.config
+        "memorysetup-bucket-allocator-granularity=16"
+        "memorysetup-bucket-allocator-bucket-count=8"
+        "memorysetup-bucket-allocator-block-size=4194304"
+        "memorysetup-bucket-allocator-block-count=1"
+        "memorysetup-main-allocator-block-size=16777216"
+        "memorysetup-thread-allocator-block-size=16777216"
+        "memorysetup-gfx-main-allocator-block-size=16777216"
+        "memorysetup-gfx-thread-allocator-block-size=16777216"
+        "memorysetup-cache-allocator-block-size=4194304"
+        "memorysetup-typetree-allocator-block-size=2097152"
+        "memorysetup-profiler-bucket-allocator-granularity=16"
+        "memorysetup-profiler-bucket-allocator-bucket-count=8"
+        "memorysetup-profiler-bucket-allocator-block-size=4194304"
+        "memorysetup-profiler-bucket-allocator-block-count=1"
+        "memorysetup-profiler-allocator-block-size=16777216"
+        "memorysetup-profiler-editor-allocator-block-size=1048576"
+        "memorysetup-temp-allocator-size-main=4194304"
+        "memorysetup-job-temp-allocator-block-size=2097152"
+        "memorysetup-job-temp-allocator-block-size-background=1048576"
+        "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+        "memorysetup-temp-allocator-size-background-worker=32768"
+        "memorysetup-temp-allocator-size-job-worker=262144"
+        "memorysetup-temp-allocator-size-preload-manager=262144"
+        "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+        "memorysetup-temp-allocator-size-audio-worker=65536"
+        "memorysetup-temp-allocator-size-cloud-worker=32768"
+        "memorysetup-temp-allocator-size-gfx=262144"
+    [32mConnecting with port 8999
+    [0m
+
+
+Once done you can call ``terminate()`` function call to kill the
+environment.
+
+.. code:: ipython3
+
+    process.terminate()

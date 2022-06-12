@@ -66,10 +66,10 @@ namespace Communicator
 		public void ListenForIncommingRequests () { 		
 			try { 			
 				// Create listener on localhost port 8052. 			
-				tcpListener = new TcpListener(IPAddress.Parse("0.0.0.0"), 8053); 	
+				tcpListener = new TcpListener(IPAddress.Parse("0.0.0.0"), CommonFunctions.ServerPort); 	
 					
 				tcpListener.Start();              
-				Debug.Log("Server is listening");              
+				Debug.Log("Started Server At Port "+CommonFunctions.ServerPort);              
 				Byte[] bytes = new Byte[1024];
 				if(inputHandle)
 				{

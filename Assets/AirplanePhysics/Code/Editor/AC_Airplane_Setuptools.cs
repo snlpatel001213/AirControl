@@ -20,6 +20,8 @@ namespace AirControl{
         /// <param name="airplaneName">Name of the new Airplane</param>
         public static void buildNewAirplane(string airplaneName)
         {
+            // The new Airplane will be added to the current selection
+            GameObject currentSelected = Selection.activeTransform.gameObject;
             //create root object
             GameObject rootGameObject =  new GameObject(airplaneName, typeof(AC_Airplane_Controller), typeof(AC_BaseAirplane_Input));
             //create center of gravity
@@ -59,11 +61,18 @@ namespace AirControl{
                 
                 // Setup control surfaces
                 setupControlSurfaces(rootGameObject);
+                // Setup Cockpit camera , Lidar and Fuel
+                GameObject CockpitCamera = new GameObject("CockpitCamera");
+                CockpitCamera.transform.SetParent(rootGameObject.transform, false);
+                GameObject Lidar = new GameObject("Lidar", typeof(Lidar));
+                Lidar.transform.SetParent(rootGameObject.transform, false);
+                GameObject Fuel = new GameObject("Fuel", typeof(AC_Airplane_Fuel));
+                Fuel.transform.SetParent(rootGameObject.transform, false);
+                GameObject FollowCamera = new GameObject("FollowCamera");
+                FollowCamera.transform.SetParent(rootGameObject.transform, false);
 
-                // Setup UI GRP
-                // No need to call this method as UI grp is common to all
-                // setupUIGRP(rootGameObject);
-
+                // Make current selection parent to the new Aiplane 
+                rootGameObject.transform.SetParent(currentSelected.transform, worldPositionStays:false);
             }
         }
         /// <summary>

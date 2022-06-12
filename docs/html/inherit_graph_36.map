@@ -1,3 +1,7 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$interfaceXCharts_1_1IComponentHandler.html" title=" " alt="" coords="5,5,212,32"/>
+<area shape="rect" id="node1" href="$classXCharts_1_1CoordinateChart.html" title="The basic class of rectangular coordinate chart，such as LineChart,BarChart and ScatterChart...." alt="" coords="5,81,188,108"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1CandlestickChart.html" title=" " alt="" coords="236,5,423,32"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1HeatmapChart.html" title=" " alt="" coords="244,56,415,83"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1LineChart.html" title=" " alt="" coords="260,107,399,133"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1ScatterChart.html" title=" " alt="" coords="251,157,408,184"/>
 </map>

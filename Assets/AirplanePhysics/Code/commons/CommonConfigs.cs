@@ -8,18 +8,67 @@ using UnityEngine;
 
 namespace Commons
 {
-
+    
     public static class CommonFunctions
     {
+
+
         // max reward 
         // if you chnage this value, put the same value at Scripts/Communicator/NetworkCommunicator.cs
         public static float maxR = 0;
+        // request counter
         public static int counter=0;
-
+        public static string clientIP = "None";
+        public static string clientPort = "None";
+        public static int serverPort=5000; // field 
+        public static string activeAirplane = "None";
         #region Properties
+
+        #region preset
+        public static string  persistentDataPath = Application.streamingAssetsPath;
+        public static string presetFilename = "AirplaneProperties.json";
+        public static JObject airplanePreset = new JObject();
+        public static JObject jsonPreset = new JObject();
+
+        public static string presetFilepath = System.IO.Path.Combine(persistentDataPath,presetFilename);
+        #endregion
+        
+        /// <summary>
+        /// Getting and setting max reward
+        /// </summary>
+        /// <value></value>
         public static float MaxR{
             get{return maxR;}
             set{maxR = value;}
+        }
+
+        /// <summary>
+        /// getting and setting host and port of the client
+        /// </summary>
+        /// <value></value>
+        public static string ClientIP{
+            get{return clientIP;}
+            set{clientIP = value;}
+        }
+
+        public static string ClientPort{
+            get{return clientPort;}
+            set{clientPort = value;}
+        }
+
+        public static string ActiveAirplane{
+            get{return activeAirplane;}
+            set{activeAirplane = value;}
+        }
+
+        /// <summary>
+        /// Defining server port
+        /// </summary>
+        
+        public static int ServerPort   // property
+        {
+            get { return serverPort; }   // get method
+            set { serverPort = value; }  // set method
         }
         #endregion
 
@@ -28,9 +77,17 @@ namespace Commons
         /// </summary>
         /// <returns></returns>
         public static string GET_VERSION(){
-            string VERSION = "1.2.0";
+            string VERSION = "1.5.0";
             return VERSION;
         } 
+
+        public static bool ifExists(string path){
+            if (File.Exists(path)){
+                return true;
+            } 
+            return false;
+        }
+
         /// <summary>
         /// Delete file
         /// </summary>
@@ -93,9 +150,7 @@ namespace Commons
                 di.Delete();
             }
         }
-                
     }
-
 }
         
 

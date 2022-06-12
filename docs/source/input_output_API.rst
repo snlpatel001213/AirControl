@@ -53,7 +53,7 @@ Importing Requirements
 
 .. code:: ipython3
 
-    from AirControl import actions
+    from airctrl import environment
     from pprint import pprint
     import PIL.Image as Image
     import base64
@@ -61,30 +61,79 @@ Importing Requirements
     from io import BytesIO
     from matplotlib.pyplot import  imshow
     import matplotlib.pyplot as plt
-    
-    A =  actions.Actions()
 
+.. code:: ipython3
+
+    from airctrl import environment 
+    from airctrl import sample_generator
+    from airctrl.utils import unity
+    from airctrl import sample_generator
+    port=8999
+    sample = sample_generator.samples()
+    env =  environment.Trigger()
+    L = unity.Launch()
 
 
 .. parsed-literal::
 
-    Now play the environment and call call method `Action.get_connected` to get connected
+    [32mNow call method `.get_connected(port=<Default 8053>)` to get connected
+    [0m
 
 
 .. code:: ipython3
 
-    A.get_connected()
+    process = L.launch_executable("/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64", server_port=port)
+    env.get_connected(port=port)
+
+
+.. parsed-literal::
+
+    [32mLoading environment from /home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64 at port 8999 client ip 127.0.1.1 client port 8999
+    [0m
+    ['/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64', '--serverPort', '8999', '--clientIP', '127.0.1.1', '--clientPort', '8999']
+    [32mSleeping for 5 seconds to allow environment load
+    [0m
+    [UnityMemory] Configuration Parameters - Can be set up in boot.config
+        "memorysetup-bucket-allocator-granularity=16"
+        "memorysetup-bucket-allocator-bucket-count=8"
+        "memorysetup-bucket-allocator-block-size=4194304"
+        "memorysetup-bucket-allocator-block-count=1"
+        "memorysetup-main-allocator-block-size=16777216"
+        "memorysetup-thread-allocator-block-size=16777216"
+        "memorysetup-gfx-main-allocator-block-size=16777216"
+        "memorysetup-gfx-thread-allocator-block-size=16777216"
+        "memorysetup-cache-allocator-block-size=4194304"
+        "memorysetup-typetree-allocator-block-size=2097152"
+        "memorysetup-profiler-bucket-allocator-granularity=16"
+        "memorysetup-profiler-bucket-allocator-bucket-count=8"
+        "memorysetup-profiler-bucket-allocator-block-size=4194304"
+        "memorysetup-profiler-bucket-allocator-block-count=1"
+        "memorysetup-profiler-allocator-block-size=16777216"
+        "memorysetup-profiler-editor-allocator-block-size=1048576"
+        "memorysetup-temp-allocator-size-main=4194304"
+        "memorysetup-job-temp-allocator-block-size=2097152"
+        "memorysetup-job-temp-allocator-block-size-background=1048576"
+        "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+        "memorysetup-temp-allocator-size-background-worker=32768"
+        "memorysetup-temp-allocator-size-job-worker=262144"
+        "memorysetup-temp-allocator-size-preload-manager=262144"
+        "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+        "memorysetup-temp-allocator-size-audio-worker=65536"
+        "memorysetup-temp-allocator-size-cloud-worker=32768"
+        "memorysetup-temp-allocator-size-gfx=262144"
+    [32mConnecting with port 8999
+    [0m
+
 
 .. code:: ipython3
 
-    control_schema = A.step(Pitch=0.0, Roll=0.0, Yaw=0.0,Throttle=0.0, StickyThrottle=0.5, Brake=0, Flaps=0,IsOutput=True)
+    control_schema = env.step(Pitch=0.0, Roll=0.0, Yaw=0.0,Throttle=0.0, StickyThrottle=0.5, Brake=0, Flaps=0,IsOutput=True)
     print(control_schema)
 
 
 .. parsed-literal::
 
-    {'MsgType': 'ControlInput', 'InputControlType': 'Code', 'Pitch': 0.0, 'Roll': 0.0, 'Yaw': 0.0, 'Throttle': 0.0, 'StickyThrottle': 0.5, 'Brake': 0, 'Flaps': 0, 'IsOutput': 'true'}
-    {'AGL': 0.0, 'MSL': 39.85072, 'CurrentRPM': 0.0, 'MaxRPM': 3000.0, 'MaxPower': 3500.0, 'CurrentPower': 0.0, 'CurrentFuel': 0.0, 'CurrentSpeed': 0.0, 'BankAngle': 0.00134001346, 'IfCollision': False, 'Latitude': -1.31427014e-05, 'Longitude': -1.70549157e-07, 'PitchAngle': 0.3310233, 'ScreenCapture': '', 'LidarPointCloud': [100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 3941.9, 100000.0, 3638.12451, 3593.41, 3641.781, 3371.41675, 4752.675, 4703.082, 4247.58936, 3252.33862, 100000.0, 100000.0, 3422.58643, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 2228.90527, 2189.29175, 2188.979, 2214.50269, 2261.62939, 2331.79858, 2385.14575, 2440.842, 2480.1394, 100000.0, 100000.0, 100000.0, 100000.0, 3025.575, 3021.22778, 100000.0, 4000.831, 100000.0, 3717.31128, 3666.853, 3252.83545, 3263.91919, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 2813.604, 1419.60864, 879.3093, 659.1871, 517.837036, 427.381439, 355.535828, 314.965424, 282.8769, 253.736771, 230.744125, 211.747314, 195.695389, 181.957321, 170.190033, 160.006683, 151.016663, 142.929, 135.569931, 17.0544567, 16.2663212, 15.5523386, 14.9027472, 14.309432, 13.7655754, 13.2654457, 12.8041487, 12.377491, 11.98189, 11.6142178, 11.2717733, 10.9521809, 10.6533728, 10.3735094, 10.1109724, 9.864328, 9.632296, 9.413731, 9.207607, 9.013001, 8.829087, 8.6551075, 8.490393, 8.334324, 8.186332, 8.045916, 7.912602, 7.78596973, 7.66562462, 7.551208, 7.44239044, 7.338867, 7.240362, 7.146611, 7.057382, 6.972451, 6.891614, 6.814681, 6.741476, 6.67184, 6.605621, 6.542673, 6.482875, 6.426093, 6.372227, 6.321164, 6.272806, 6.22706938, 6.18386126, 6.14310741, 6.10473537, 6.06867743, 6.03487158, 6.003256, 5.97378063, 5.94639635, 5.921057, 5.89772224, 5.87635326, 5.856916, 5.83938, 5.82371759, 2.16294718, 2.103184, 2.07182837, 2.05951643, 1.931648, 1.93017662, 1.92929471, 1.92900085, 1.92929482, 1.93017673, 5.77012968, 5.775854, 5.78335333, 5.792639, 5.80372429, 5.81663, 5.831371, 5.84797335, 5.86646366, 5.88686943, 5.909223, 5.93356133, 5.95992661, 5.988357, 6.01890326, 6.05161428, 6.08654737, 6.123764, 6.163324, 6.205305, 6.249777, 6.29682255, 6.34652853, 6.398991, 6.45431232, 6.51259756, 6.57396555, 6.638545, 6.70646572, 6.77787971, 6.85293961, 6.93181467, 7.014689, 7.101758, 7.193235, 7.289348, 7.39034843, 7.496498, 7.60809755, 7.72545671, 7.848921, 7.97886372, 8.115699, 8.259868, 8.41185951, 8.572208, 8.741506, 8.9204, 9.109598, 9.309894, 9.522161, 9.747371, 9.986612, 10.241087, 10.5121555, 10.801342, 11.1103687, 11.4412022, 11.7960291, 12.1773968, 12.5882187, 13.0318356, 13.512125, 14.0336084, 14.60158, 15.2223024, 15.90322, 16.6531925, 17.4830055, 18.405735, 19.4375439, 20.5985928, 21.914217, 23.417, 25.1492672, 27.1672516, 29.54717, 32.39484, 35.8620567, 40.1741066, 45.6806564, 52.955452, 63.0087051, 77.80274, 730.260559, 1073.279, 1731.26379, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0], 'MsgType': 'Output', 'Version': '0.0.5'}
+    {'AGL': 0.0, 'MSL': 4.7329154, 'CurrentRPM': 0.0, 'MaxRPM': 4500.0, 'MaxPower': 1.10416677e-05, 'CurrentPower': 0.0, 'CurrentFuel': 0.0, 'CurrentSpeed': 0.0, 'BankAngle': 0.0017182061, 'IfCollision': False, 'CollisionObject': '', 'Latitude': -1.70281146e-06, 'Longitude': 5.317519e-06, 'PitchAngle': 0.328555942, 'ScreenCapture': '', 'LidarPointCloud': [500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 305.198425, 190.873642, 138.888733, 109.184929, 89.97085, 76.52718, 66.596344, 58.9627533, 52.91375, 48.003334, 43.93948, 40.5215073, 37.60714, 35.0940552, 32.9049, 30.9822521, 29.2800446, 27.7629089, 26.4031944, 25.1775265, 24.0678177, 23.05848, 22.1366081, 21.2921562, 20.515873, 19.7997761, 19.1377239, 18.5238552, 17.3667583, 16.85289, 16.3733921, 15.9251432, 15.5053892, 15.1116667, 14.74183, 14.3939438, 14.0662823, 13.7573051, 13.465621, 13.1899881, 12.9292688, 12.6824474, 12.4485941, 12.226861, 12.01649, 11.8167715, 11.6270676, 11.44679, 11.2754, 11.1124029, 10.9573383, 10.8097925, 10.6693735, 10.5357218, 10.4085121, 10.2874269, 10.1721945, 10.0625477, 9.958239, 9.859042, 9.764748, 9.675158, 9.590094, 9.509384, 9.432868, 9.360406, 9.291856, 9.22709, 9.16599751, 9.108461, 9.054386, 9.003675, 8.95624, 8.912006, 8.870894, 8.83284, 8.797776, 8.765651, 8.736409, 8.710009, 8.686405, 8.66556, 8.647441, 8.632024, 8.619283, 8.609197, 8.601752, 8.596936, 8.594744, 8.595168, 8.598213, 8.603881, 8.612182, 8.623128, 8.636736, 8.653026, 8.672027, 8.693763, 8.718271, 8.745589, 8.775763, 8.808835, 8.844863, 8.8839035, 8.926022, 8.971289, 9.019776, 9.071569, 9.126757, 9.185434, 9.24771, 9.31369, 9.383495, 9.457261, 9.53512, 9.617225, 9.703741, 9.794838, 9.8907, 9.991533, 10.0975485, 10.2089825, 10.3260851, 10.4491243, 10.57839, 10.7142029, 10.8568945, 11.0068417, 11.16443, 11.3301029, 11.504323, 11.6875944, 11.8804846, 12.0835876, 12.2975731, 12.52315, 12.761116, 13.0123444, 13.27779, 13.5585041, 13.8556557, 14.170536, 14.5045881, 14.8594131, 15.2367773, 15.6386967, 16.067421, 16.52549, 17.0157967, 17.5415783, 18.1065712, 18.7150745, 19.372015, 20.0830765, 20.8549271, 21.69534, 22.613512, 23.6203823, 24.728941, 25.9549732, 27.3176689, 28.840662, 30.55339, 32.49287, 34.7065468, 37.2561035, 40.223156, 43.71822, 47.8943748, 52.97047, 59.2702675, 67.29411, 77.85836, 95.64346, 117.666931, 152.927475, 179.50882, 180.588379, 183.865082, 188.81514, 191.950272, 201.559128, 205.546371, 206.6388, 207.495926, 208.869339, 210.394485, 212.201462, 214.395813, 216.70224, 218.8667, 221.949463, 232.394, 231.776016, 231.526917, 237.032074, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0], 'Counter': 0, 'log': '', 'Reward': 0.0035562878254627784, 'IsGrounded': True, 'IsFlying': False, 'IsTaxiing': False, 'PosXAbs': 0.86777246, 'PosYAbs': 1.44259226, 'PosZAbs': -0.0676386356, 'PosXRel': -0.00222843885, 'PosYRel': -0.327407122, 'PosZRel': -0.09763813, 'RotXAbs': 340.814636, 'RotYAbs': 359.966278, 'RotZAbs': 0.105423734, 'RotXRel': 340.814636, 'RotYRel': 359.966278, 'RotZRel': 0.105423853, 'AngularXVelocity': -0.00521957874, 'AngularYVelocity': -8.102572e-05, 'AngularZVelocity': 0.00138697785, 'LinearXVelocity': -0.00184028456, 'LinearYVelocity': 0.007154375, 'LinearZVelocity': -0.09623016, 'AngularXAcceleration': 5.92379365e-05, 'AngularYAcceleration': -0.0001057535, 'AngularZAcceleration': 0.0, 'LinearXAcceleration': -0.000308157178, 'LinearYAcceleration': -0.030831784, 'LinearZAcceleration': -0.18662475, 'MsgType': 'Output', 'Version': '1.3.0'}
 
 
 Output
@@ -95,38 +144,108 @@ following output.
 
 ::
 
-   {'AGL': 0.0,
-    'BankAngle': -2.93484618e-07,
-    'CurrentFuel': 0.0,
-    'CurrentPower': 4666.8457,
-    'CurrentRPM': 2333.42285,
-    'CurrentSpeed': 0.0,
-    'LidarPointCloud': [100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-                        100000.0,
-    'MaxRPM': 2500.0,
-    'MsgType': 'Output',
-    'PitchAngle': 1.66752621e-08,
-    'ScreenCapture': '',
-    'Version': '0.0.4'}
+   {
+      "AGL":0.0,
+      "MSL":4.7329154,
+      "CurrentRPM":0.0,
+      "MaxRPM":4500.0,
+      "MaxPower":1.10416677e-05,
+      "CurrentPower":0.0,
+      "CurrentFuel":0.0,
+      "CurrentSpeed":0.0,
+      "BankAngle":0.0017182061,
+      "IfCollision":false,
+      "CollisionObject":"",
+      "Latitude":-1.70281146e-06,
+      "Longitude":5.317519e-06,
+      "PitchAngle":0.328555942,
+      "ScreenCapture":"Here the screen capture will be returned as base64 o",
+      "LidarPointCloud":[
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         305.198425,
+         190.873642,
+         138.888733,
+         109.184929,
+         89.97085,
+         76.52718,
+         66.596344,
+         58.9627533,
+         52.91375,
+         48.003334,
+         43.93948,
+         40.5215073,
+         37.60714,
+         35.0940552,
+         32.9049,
+         30.9822521,
+         29.2800446,
+         27.7629089,
+         26.4031944,
+         25.1775265,
+         24.0678177,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         500.0,
+         ...,
+         ...,
+         ...,
+      ],
+      "Counter":0,
+      "log":"",
+      "Reward":0.0035562878254627784,
+      "IsGrounded":true,
+      "IsFlying":false,
+      "IsTaxiing":false,
+      "PosXAbs":0.86777246,
+      "PosYAbs":1.44259226,
+      "PosZAbs":-0.0676386356,
+      "PosXRel":-0.00222843885,
+      "PosYRel":-0.327407122,
+      "PosZRel":-0.09763813,
+      "RotXAbs":340.814636,
+      "RotYAbs":359.966278,
+      "RotZAbs":0.105423734,
+      "RotXRel":340.814636,
+      "RotYRel":359.966278,
+      "RotZRel":0.105423853,
+      "AngularXVelocity":-0.00521957874,
+      "AngularYVelocity":-8.102572e-05,
+      "AngularZVelocity":0.00138697785,
+      "LinearXVelocity":-0.00184028456,
+      "LinearYVelocity":0.007154375,
+      "LinearZVelocity":-0.09623016,
+      "AngularXAcceleration":5.92379365e-05,
+      "AngularYAcceleration":-0.0001057535,
+      "AngularZAcceleration":0.0,
+      "LinearXAcceleration":-0.000308157178,
+      "LinearYAcceleration":-0.030831784,
+      "LinearZAcceleration":-0.18662475,
+      "MsgType":"Output",
+      "Version":"1.3.0"
+   }
 
-.. figure:: ../images/bankAngle.png
+.. figure:: ../../docs/images/bankAngle.png
    :alt: Bank Angle
 
    Bank Angle
@@ -134,7 +253,7 @@ following output.
 Angle between vertical component of the Airplane w.r.t global
 vertical.\ `Source <https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_aircraft)>`__
 
-.. figure:: ../images/pitchAngle.png
+.. figure:: ../../docs/images/pitchAngle.png
    :alt: Pitch Angle
 
    Pitch Angle
@@ -142,35 +261,177 @@ vertical.\ `Source <https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_ai
 Angle between vertical component of the Airplane w.r.t global
 vertical.\ `Source <https://en.wikipedia.org/wiki/Flight_dynamics_(fixed-wing_aircraft)>`__
 
-Glossary
---------
++-----------------------+-----------------------+-----------------------+
+| Measure               | Description           | example               |
++=======================+=======================+=======================+
+| AGL                   | Above Ground Level,   | 0.0                   |
+|                       | or AGL, describes the |                       |
+|                       | literal height above  |                       |
+|                       | the ground over which |                       |
+|                       | you’re flying.This    |                       |
+|                       | also accounts for the |                       |
+|                       | building and          |                       |
+|                       | mounntain heights.    |                       |
++-----------------------+-----------------------+-----------------------+
+| MSL                   | Mean Sea Level, or    | 4.7329154             |
+|                       | MSL, is your true     |                       |
+|                       | altitude or           |                       |
+|                       | elevation. This is    |                       |
+|                       | measured as           |                       |
+|                       | differrence of        |                       |
+|                       | current height and    |                       |
+|                       | 0.0 in XZ plane.      |                       |
++-----------------------+-----------------------+-----------------------+
+| BankAngle             | The roll angle is     | 0.0                   |
+|                       | also known as bank    |                       |
+|                       | angle on a fixed-wing |                       |
+|                       | aircraft, which       |                       |
+|                       | usually “banks” to    |                       |
+|                       | change the horizontal |                       |
+|                       | direction of flight.  |                       |
+|                       | Value in radian limit |                       |
+|                       | -1 to +1.             |                       |
++-----------------------+-----------------------+-----------------------+
+| PitchAngle            | Angle between the     | 0.328555942           |
+|                       | aircraft longitudinal |                       |
+|                       | axis and horizontal;  |                       |
+|                       | Value in radian limit |                       |
+|                       | -1 to +1.             |                       |
++-----------------------+-----------------------+-----------------------+
+| CurrentFuel           | [WIP] : Current fuel  | 29.4                  |
+|                       | in gallons.           |                       |
++-----------------------+-----------------------+-----------------------+
+| CurrentPower          | Current engine power. | 1.10416677e-05        |
++-----------------------+-----------------------+-----------------------+
+| Current RPM           | Current Engine RPM.   | 0.0                   |
++-----------------------+-----------------------+-----------------------+
+| CurrentSpeed          | Current Airplane      |                       |
+|                       | Speed in Knots.       |                       |
++-----------------------+-----------------------+-----------------------+
+| MaxRPM                | : Max engine RPM.     | 4500.0                |
++-----------------------+-----------------------+-----------------------+
+| ScreenCapture         | Captured Screenshot,  | Base 64 Image         |
+|                       | if proper trigger set |                       |
+|                       | from ``set_camera``   |                       |
+|                       | function              |                       |
++-----------------------+-----------------------+-----------------------+
+| LidarPointCloud       | Captured Lidar point  | Vector : [500.0,      |
+|                       | cloud, if proper      | 500.0, 500.0, …, 25,  |
+|                       | trigger set from      | 190.873642,           |
+|                       | ``set_lidar``         | 138.888733,           |
+|                       | function              | 109.184929]           |
++-----------------------+-----------------------+-----------------------+
+| Counter               | Number of request the | 13                    |
+|                       | client has sent to    |                       |
+|                       | the server.           |                       |
++-----------------------+-----------------------+-----------------------+
+| log                   | : Log of events, if   |                       |
+|                       | requested.            |                       |
++-----------------------+-----------------------+-----------------------+
+| Reward                | Internal example      | 0.0035562878254627784 |
+|                       | reward system. user   |                       |
+|                       | can define their own  |                       |
+|                       | reward system         |                       |
+|                       | externally.           |                       |
++-----------------------+-----------------------+-----------------------+
+| IsGrounded            | Indicates if the      | true                  |
+|                       | Airplane is grounded. |                       |
++-----------------------+-----------------------+-----------------------+
+| IsFlying              | Indicates if the      | false                 |
+|                       | Airplane is flying.   |                       |
++-----------------------+-----------------------+-----------------------+
+| IsTaxiing             | Indicates if the      | false                 |
+|                       | Airplane is taxing on |                       |
+|                       | runway.               |                       |
++-----------------------+-----------------------+-----------------------+
+| PosXAbs               | Absolute position on  | 0.86777246            |
+|                       | X axis.               |                       |
++-----------------------+-----------------------+-----------------------+
+| PosYAbs               | Absolute position on  | 1.44259226            |
+|                       | Y axis.               |                       |
++-----------------------+-----------------------+-----------------------+
+| PosZAbs               | Absolute position on  | -0.0676386356         |
+|                       | Z axis.               |                       |
++-----------------------+-----------------------+-----------------------+
+| PosXRel               | Relative position     | -0.00222843885        |
+|                       | w.r.t start position  |                       |
+|                       | of the Airplane on X  |                       |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| PosYRel               | Absolute position     | -0.327407122          |
+|                       | w.r.t start position  |                       |
+|                       | of the Airplane on Y  |                       |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| PosZRel               | Absolute position     | -0.09763813           |
+|                       | w.r.t start position  |                       |
+|                       | of the Airplane on Z  |                       |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| RotXAbs               | Absolute rotation on  | 340.814636            |
+|                       | X axis.               |                       |
++-----------------------+-----------------------+-----------------------+
+| RotYAbs               | Absolute rotation on  | 359.966278            |
+|                       | Y axis.               |                       |
++-----------------------+-----------------------+-----------------------+
+| RotZAbs               | Absolute rotation on  | 0.105423734           |
+|                       | Z axis.               |                       |
++-----------------------+-----------------------+-----------------------+
+| RotXRel               | Absolute rotation     | 340.814636            |
+|                       | w.r.t start rotation  |                       |
+|                       | of the Airplane on Y  |                       |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| RotYRel               | Absolute rotation     | 359.966278            |
+|                       | w.r.t start rotation  |                       |
+|                       | of the Airplane on Y  |                       |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| RotZRel               | Absolute position     | 0.105423853           |
+|                       | w.r.t start rotation  |                       |
+|                       | of the Airplane on Y  |                       |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| AngularXVelocity      | Angular velocity on X | -0.00521957874        |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| AngularYVelocity      | Angular velocity on Y | -8.102572e-05         |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| AngularZVelocity      | Angular velocity on Z | 0.00138697785         |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| LinearXVelocity       | Linear velocity on X  | -0.00184028456        |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| LinearYVelocity       | Linear velocity on Y  | 0.007154375           |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| LinearZVelocity       | Linear velocity on Z  | -0.09623016           |
+|                       | axis.                 |                       |
++-----------------------+-----------------------+-----------------------+
+| AngularXAcceleration  | Angular acceleration  | 5.92379365e-05        |
+|                       | on X axis.            |                       |
++-----------------------+-----------------------+-----------------------+
+| AngularYAcceleration  | Angular acceleration  | -0.0001057535         |
+|                       | on Y axis.            |                       |
++-----------------------+-----------------------+-----------------------+
+| AngularZAcceleration  | Angular acceleration  | 0.0                   |
+|                       | on Z axis.            |                       |
++-----------------------+-----------------------+-----------------------+
+| LinearXAcceleration   | Linear acceleration   | -0.000308157178       |
+|                       | on Z axis.            |                       |
++-----------------------+-----------------------+-----------------------+
+| LinearYAcceleration   | Linear acceleration   | -0.030831784          |
+|                       | on Z axis.            |                       |
++-----------------------+-----------------------+-----------------------+
+| LinearZAcceleration   | Linear acceleration   | -0.18662475           |
+|                       | on Z axis.            |                       |
++-----------------------+-----------------------+-----------------------+
+| MsgType               | Message type will be  | Output                |
+|                       | output. Example       |                       |
++-----------------------+-----------------------+-----------------------+
+| Version               | Version of the        | 1.3.0                 |
+|                       | server.               |                       |
++-----------------------+-----------------------+-----------------------+
 
-**AGL** : Above Ground Level, or AGL, describes the literal height above
-the ground over which you’re flying.This also accounts for the building
-and mounntain heights
-
-**MSL** : Mean Sea Level, or MSL, is your true altitude or elevation.
-This is measured as differrence of current height and 0.0 in XZ plane
-
-**BankAngle** : The roll angle is also known as bank angle on a
-fixed-wing aircraft, which usually “banks” to change the horizontal
-direction of flight. Value in radian limit -1 to +1
-
-**PitchAngle** : angle between the aircraft longitudinal axis and
-horizontal; Value in radian limit -1 to +1
-
-**CurrentFuel** [WIP] : Current fuel in gallons
-
-**CurrentPower** : Current engine power
-
-**CurrentRPM** : Current Engine RPM
-
-**CurrentSpeed** : Current Airplane Speed in Knots
-
-**MaxRPM** : Max engine RPM
-
-**ScreenCapture** : Captured Screenshot, if proper trigger set from
-``set_camera`` function
-
-**LidarPointCloud** : Captured Lidar point cloud, if proper trigger set
-from ``set_lidar`` function

@@ -2,6 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using Communicator;
+using Unity.Collections;
+using Commons;
 
 namespace AirControl{
 
@@ -13,11 +15,14 @@ namespace AirControl{
         #region Variables
         [Header("Airplane Audio Properties")]
         [Tooltip("Attach base input script to audio group; Drag and drop that script component on input")]
-        public AC_BaseAirplane_Input input;
+        [ReadOnly][SerializeField]
+        private AC_BaseAirplane_Input input;
         [Tooltip("Create empty Gameobject - idleSource, add audiosource to it; add audio idleSource file to audiosource; Drag and drop that game object on idleSource")]
-        public AudioSource idleSource;
+        [ReadOnly][SerializeField]
+        private AudioSource idleSource;
         [Tooltip("Create empty Gameobject - fullThrottleSource, add audiosource to it; add audio fullThrottleSource file to audiosource; Drag and drop that game object on fullThrottleSource")]
-        public AudioSource fullThrottleSource;
+        [ReadOnly][SerializeField]
+        private AudioSource fullThrottleSource;
         private float maxPitchValue = 1.5f;
 
         private float fullVolumeValue;
@@ -38,17 +43,17 @@ namespace AirControl{
         #endregion
 
         #region Builtin Methods
+
         // Start is called before the first frame update
         void Start()
-        {
+        {   input = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_BaseAirplane_Input>();
+            idleSource =  GameObject.Find(CommonFunctions.ActiveAirplane+"/Audio_GRP/Idle").GetComponent<AudioSource>();
+            fullThrottleSource =  GameObject.Find(CommonFunctions.ActiveAirplane+"/Audio_GRP/FullThrottle").GetComponent<AudioSource>();
             if(fullThrottleSource)
             {
                 fullThrottleSource.volume = 0f;
-
             }
-            
         }
-
         // Update is called once per frame
         void Update()
         {

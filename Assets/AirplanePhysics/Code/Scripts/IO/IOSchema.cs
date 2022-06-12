@@ -113,6 +113,19 @@ namespace Communicator
 		public static float RotXRel;
 		public static float RotYRel;
 		public static float RotZRel;
+		public static float AngularXVelocity;
+		public static float AngularYVelocity;
+		public static float AngularZVelocity;
+		public static float LinearXVelocity;
+        public static float LinearYVelocity;
+        public static float LinearZVelocity;
+		public static float AngularXAcceleration;
+		public static float AngularYAcceleration;
+		public static float AngularZAcceleration;
+		public static float LinearXAcceleration;
+        public static float LinearYAcceleration;
+        public static float LinearZAcceleration;
+		
 
 		public static string log = "";
 		
@@ -159,6 +172,18 @@ namespace Communicator
 		public float RotXRel;
 		public float RotYRel;
 		public float RotZRel;
+		public float AngularXVelocity;
+		public float AngularYVelocity;
+		public float AngularZVelocity;
+		public float LinearXVelocity;
+        public float LinearYVelocity;
+        public float LinearZVelocity;
+		public float AngularXAcceleration;
+		public float AngularYAcceleration;
+		public float AngularZAcceleration;
+		public float LinearXAcceleration;
+        public float LinearYAcceleration;
+        public float LinearZAcceleration;
 	}
 	#endregion
 
@@ -362,6 +387,32 @@ namespace Communicator
 		public static bool IsActive {get; set;} = false;
 		// // if transaction schema is active or not this is to reduce computation load in the update loops
 		public static bool ShowUIElements {get; set;} = true;
+	}
+	#endregion
+
+		#region UISchema
+	/// <summary>
+	///Ui and Audio class for serialization deserialization
+	/// </summary>
+	public class ClientInfo
+	{	
+		public bool IsActive {get; set;} = false;
+		// if transaction schema is active or not this is to reduce computation load in the update loops
+		public string ClientIP {get; set;} = "None";
+		public string ClientPort {get; set;} = "None";
+
+	}
+	/// <summary>
+	/// UI and audio control.
+	/// This class can be accessed anywhere in the code as dict.
+	/// used for getting/setting input/outout received from python API.
+	/// </summary>
+	public static class StaticClientInfo
+	{	
+		public static bool IsActive {get; set;} = false;
+		// if transaction schema is active or not this is to reduce computation load in the update loops
+		public static string ClientIP {get; set;} = "None";
+		public static string ClientPort {get; set;} = "None";
 	}
 	#endregion
 

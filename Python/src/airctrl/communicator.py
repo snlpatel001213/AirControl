@@ -1,9 +1,9 @@
 import json
 import socket
 import time
-
+import traceback
 import numpy as np
-
+from colorama import Fore, Back, Style
 
 class NpEncoder(json.JSONEncoder):
     def default(self, obj):
@@ -42,7 +42,10 @@ class Communicator:
             self.sock.connect((host, port))   
             self.sock.settimeout(10)      
         except Exception as e:
-            print("Faced Error while establishing server-client connect.",e)
+
+            print(Fore.RED + "Faced following error while establishing server-client connect.",e)
+            print(Style.RESET_ALL)
+            print(traceback.print_exc())
 
     def send_data(self, data_dict: dict):
         """
@@ -94,5 +97,4 @@ class Communicator:
                 pass
         
         #join all parts to make final string
-        # print("recived : ", total_data)
         return eval(total_data)

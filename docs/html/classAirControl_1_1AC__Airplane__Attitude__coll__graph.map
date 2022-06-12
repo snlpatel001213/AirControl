@@ -1,9 +1,5 @@
 <map id="AirControl.AC_Airplane_Attitude" name="AirControl.AC_Airplane_Attitude">
-<area shape="rect" id="node1" title="Monitor and updates the Attitude to UI" alt="" coords="817,65,988,106"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,62,129,88"/>
-<area shape="rect" id="node5" href="$classAirControl_1_1AC__BaseRigidbody__Controller.html" title=" " alt="" coords="179,39,393,66"/>
-<area shape="rect" id="node6" href="$classAirControl_1_1AC__BaseAirplane__Input.html" title="Base class to listen for keyboard Inputs" alt="" coords="185,90,387,132"/>
-<area shape="rect" id="node7" href="$classAirControl_1_1AC__Airplane__Characteristics.html" title="Main class defines the Airplane Characteristics" alt="" coords="201,156,371,197"/>
-<area shape="rect" id="node3" href="$interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="579,131,674,158"/>
-<area shape="rect" id="node4" href="$classAirControl_1_1AC__Airplane__Controller.html" title="Master Controller, controls the entire Airplane it implements function to Handle Engines,..." alt="" coords="541,65,712,106"/>
+<area shape="rect" id="node1" title="Monitor and updates the Attitude to UI" alt="" coords="49,80,219,121"/>
+<area shape="rect" id="node2" title=" " alt="" coords="5,5,129,32"/>
+<area shape="rect" id="node3" href="$interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="153,5,248,32"/>
 </map>

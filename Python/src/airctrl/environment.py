@@ -1,23 +1,24 @@
-import json
-import socket
 from typing import Dict
 import numpy as np
 from . import communicator
+from colorama import Fore, Back, Style
 
 INPUT_CONTROL_TYPE = ["Code", "Other"]
 
 
-
-
 class Trigger:
     def __init__(self):
-        print("Now call method `.get_connected()` to get connected")
+        print(Fore.GREEN+"Now call method `.get_connected(port=<Default 8053>)` to get connected")
+        print(Style.RESET_ALL)
         
-    def get_connected(self):
+    def get_connected(self, port=8053):
         """
         Get connected to the simulation host
+        param port: the same port as environment 
         """
-        self.connection = communicator.Communicator()
+        print(Fore.GREEN+"Connecting with port {0}".format(port))
+        print(Style.RESET_ALL)
+        self.connection = communicator.Communicator(port=port)
         
     def bool2string(self,booltype):
         """
@@ -50,7 +51,7 @@ class Trigger:
     def check_input_type(self,InputControlType: str):
         # proper input control type not provided
         if InputControlType not in INPUT_CONTROL_TYPE:
-            raise Exception(
+            raise Exception(Fore.RED+
                 "Set control type {} not defualts {}".format(
                     InputControlType, INPUT_CONTROL_TYPE
                 )
@@ -190,7 +191,6 @@ class Trigger:
         output =  self.connection.receive_data()
         return  self.process_output(output)
 
-
     def reset(self,
         InputControlType="Code", IsOutput=True
     ):
@@ -299,7 +299,25 @@ class Trigger:
         self.connection.send_data(ui_schema)
         output =  self.connection.receive_data()
         return  self.process_output(output)
-    
+
+    def set_clientInfo(self, IsActive=False, ClientPort=""):
+        """
+        This function is used to set the client information
+        Args:
+            IsActive: True or False, defaults to False (optional)
+            ClientPort: The port number that the client is listening on
+        """
+        ClientIP = self.get_client_info()
+        client_schema = {
+            "MsgType": "ClientInfo",
+            "IsActive": self.bool2string(IsActive),
+            "clientIP": ClientIP,
+            "clientPort": ClientPort,
+        }
+        self.connection.send_data(client_schema)
+        output =  self.connection.receive_data()
+        return  self.process_output(output)
+
     def set_audio(self, IsActive=False, EnableAudio=True, IsOutput=False
     ):
         """

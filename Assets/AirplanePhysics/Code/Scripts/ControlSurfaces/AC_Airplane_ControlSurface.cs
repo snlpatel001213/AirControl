@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Commons;
 
 namespace AirControl
 {   public enum ControlSurfaceType{
@@ -17,15 +18,21 @@ namespace AirControl
     #region Variables
     [Header("Control surface Properties")]
     public ControlSurfaceType surfacetype = ControlSurfaceType.Rudder;
-    public float maxAngle = 30f;
+    private float maxAngle; 
     public Vector3 axis = Vector3.right;
     public Transform controlSurfaceGraphic;
     // smoothly rotate
-    public float smoothSpeed=4f; 
+    private float smoothSpeed; 
     private float wantedAngle;
     #endregion
 
     #region Builtin Methods
+
+    void Start(){
+        maxAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/maxAngle"]; 
+        smoothSpeed= (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/smoothSpeed"]; 
+
+    }
 
     // Update is called once per frame
     void Update()

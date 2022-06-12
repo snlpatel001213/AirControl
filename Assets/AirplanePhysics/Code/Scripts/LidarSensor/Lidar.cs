@@ -11,7 +11,7 @@ namespace AirControl
     public class Lidar : MonoBehaviour
     {
         public int numberOfIncrements = 360;
-        public float maxRange = 100000f;
+        public float maxRange = 500f;
 
         [HideInInspector]
         public static float[] distances;

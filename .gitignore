@@ -91,10 +91,10 @@ Python/client_examples/.ipynb_checkpoints
 /snap/parts/mygame
 /snap/parts/.snapcraft_global_state
 /snap/prime/**
-/snap/snap/local/*.debug
-/snap/snap/local/*.so
-/snap/snap/local/*.x86_64
-/snap/snap/local/*-AirControl**
+/snap/snap/*.debug
+/snap/snap/*.so
+/snap/snap/*.x86_64
+snap/snap/v1.5.0-AirControl_Data
 /snap/stage/**
 /snap/*.snap
 /snap/*.swp

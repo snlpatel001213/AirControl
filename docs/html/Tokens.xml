@@ -2,24 +2,24 @@
 <Tokens version="1.0">
   <Token>
     <TokenIdentifier>
-      <Name>md__home_supatel_Games_AirControl_2020_README</Name>
+      <Name>md__home_supatel_Games_AirControl_2021_README</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
-    <Path>md__home_supatel_Games_AirControl_2020_README.html</Path>
+    <Path>md__home_supatel_Games_AirControl_2021_README.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN</Name>
+      <Name>md__home_supatel_Games_AirControl_2021_Assets_XCharts_Documentation_xcharts-configuration-EN</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
-    <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
+    <Path>md__home_supatel_Games_AirControl_2021_Assets_XCharts_Documentation_xcharts-configuration-EN.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN</Name>
+      <Name>md__home_supatel_Games_AirControl_2021_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN</Name>
       <APILanguage>markdown</APILanguage>
     </TokenIdentifier>
-    <Path>md__home_supatel_Games_AirControl_2020_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
+    <Path>md__home_supatel_Games_AirControl_2021_Assets_XCharts_Documentation_xcharts-questions-and-answers-EN.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -30,6 +30,15 @@
     </TokenIdentifier>
     <Path>classAC__Airplane__Magnetometer.html</Path>
     <Abstract>https://gamedev-resources.com/create-a-compass-with-ugui/</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ActiveAirplane</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>ActiveAirplane</Scope>
+    </TokenIdentifier>
+    <Path>classActiveAirplane.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -62,6 +71,18 @@
     <Path>classAutomatedBuild.html</Path>
     <Anchor>a5bc349d227a0874cdb1d7f4fde2e86ad</Anchor>
     <Abstract>Build for Linux</Abstract>
+    <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>BuildLinuxHeadless</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>AutomatedBuild</Scope>
+    </TokenIdentifier>
+    <Path>classAutomatedBuild.html</Path>
+    <Anchor>a687af107668c388b42d7ad9154800189</Anchor>
+    <Abstract>Build for Linux - headless</Abstract>
     <DeclaredIn>AutomatedBuild.cs</DeclaredIn>
   </Token>
   <Token>
@@ -114,6 +135,16 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>ClientInfo</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>ClientInfo</Scope>
+    </TokenIdentifier>
+    <Path>classClientInfo.html</Path>
+    <Abstract>It displays the IP and Port of the client</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>ExitButton</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
@@ -129,6 +160,15 @@
       <Scope>FPSDisplay</Scope>
     </TokenIdentifier>
     <Path>classFPSDisplay.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Instanciate</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Instanciate</Scope>
+    </TokenIdentifier>
+    <Path>classInstanciate.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -163,12 +203,68 @@
   </Token>
   <Token>
     <TokenIdentifier>
-      <Name>RandomInstanciate</Name>
+      <Name>Pause</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
-      <Scope>RandomInstanciate</Scope>
+      <Scope>Pause</Scope>
     </TokenIdentifier>
-    <Path>classRandomInstanciate.html</Path>
+    <Path>classPause.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Pressed</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>Pause</Scope>
+    </TokenIdentifier>
+    <Path>classPause.html</Path>
+    <Anchor>ab438a78eeb1d568e2c37aa8330ee609e</Anchor>
+    <Abstract>play/pause the simulation</Abstract>
+    <DeclaredIn>Pause.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>PauseGame</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>Pause</Scope>
+    </TokenIdentifier>
+    <Path>classPause.html</Path>
+    <Anchor>a21bdb61dee522050ca420af70ef77e6c</Anchor>
+    <Abstract>Pause Game</Abstract>
+    <DeclaredIn>Pause.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ContinueGame</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>clm</Type>
+      <Scope>Pause</Scope>
+    </TokenIdentifier>
+    <Path>classPause.html</Path>
+    <Anchor>acc6d249b3e32758c81dc60ad7a7ba9cf</Anchor>
+    <Abstract>Resume Game</Abstract>
+    <DeclaredIn>Pause.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>RequestCount</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>RequestCount</Scope>
+    </TokenIdentifier>
+    <Path>classRequestCount.html</Path>
+    <Abstract>It updates the text of the request count text object with the value of the counter variable in the Co...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>ServerInfo</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>ServerInfo</Scope>
+    </TokenIdentifier>
+    <Path>classServerInfo.html</Path>
+    <Abstract>It displays the IP and Port of the client</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -178,6 +274,15 @@
       <Scope>TakeScreenshot</Scope>
     </TokenIdentifier>
     <Path>classTakeScreenshot.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>TargetSelector</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>TargetSelector</Scope>
+    </TokenIdentifier>
+    <Path>classTargetSelector.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -279,12 +384,12 @@
       <Name>HandleCamera</Name>
       <APILanguage>csharp</APILanguage>
       <Type>instm</Type>
-      <Scope>AirControl.AC_Airplane_Camera</Scope>
+      <Scope>AirControl.AC_Basic_Follow_Camera</Scope>
     </TokenIdentifier>
-    <Path>classAirControl_1_1AC__Airplane__Camera.html</Path>
-    <Anchor>ad3973eeff27aa8ebc149dc72668fc9f4</Anchor>
-    <Abstract>Handle follow camera</Abstract>
-    <DeclaredIn>AC_Airplane_Camera.cs</DeclaredIn>
+    <Path>classAirControl_1_1AC__Basic__Follow__Camera.html</Path>
+    <Anchor>a324d4aa9d922af9c09cb5f7f91c4f8c3</Anchor>
+    <Abstract>Setup follow camera height and distance from the Airplane</Abstract>
+    <DeclaredIn>AC_Basic_Follow_Camera.cs</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -623,6 +728,28 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>AirControl::AC_Airplane_PitchLever</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.AC_Airplane_PitchLever</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1AC__Airplane__PitchLever.html</Path>
+    <Abstract>Monitor and updates the Pitch lever to UI</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HandleAirplaneUI</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.AC_Airplane_PitchLever</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1AC__Airplane__PitchLever.html</Path>
+    <Anchor>a7a26fe2c80a33bdba4fb59b555816db8</Anchor>
+    <Abstract>Updates to UI</Abstract>
+    <DeclaredIn>AC_Airplane_PitchLever.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl::AC_Airplane_Propeller</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
@@ -630,6 +757,28 @@
     </TokenIdentifier>
     <Path>classAirControl_1_1AC__Airplane__Propeller.html</Path>
     <Abstract>Control propeller rotation</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AirControl::AC_Airplane_RollLever</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.AC_Airplane_RollLever</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1AC__Airplane__RollLever.html</Path>
+    <Abstract>Monitor and updates the Roll lever to UI</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HandleAirplaneUI</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.AC_Airplane_RollLever</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1AC__Airplane__RollLever.html</Path>
+    <Anchor>afcc7429e924265547df0ef7fe18fe096</Anchor>
+    <Abstract>Updates to UI</Abstract>
+    <DeclaredIn>AC_Airplane_RollLever.cs</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -708,6 +857,28 @@
     <Anchor>aa484b1c1f6485fa04caea405bf2521f4</Anchor>
     <Abstract>Handle whele graphics, and steering</Abstract>
     <DeclaredIn>AC_Airplane_Wheel.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AirControl::AC_Airplane_YawLever</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.AC_Airplane_YawLever</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1AC__Airplane__YawLever.html</Path>
+    <Abstract>Monitor and updates the Yaw lever to UI</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>HandleAirplaneUI</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instm</Type>
+      <Scope>AirControl.AC_Airplane_YawLever</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1AC__Airplane__YawLever.html</Path>
+    <Anchor>a8f0165c22f5bf26542bdc79d14a587c7</Anchor>
+    <Abstract>Updates to UI</Abstract>
+    <DeclaredIn>AC_Airplane_YawLever.cs</DeclaredIn>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -862,6 +1033,24 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>AirControl::AirplaneSelector</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.AirplaneSelector</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1AirplaneSelector.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AirControl::autopilot</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.autopilot</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1autopilot.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>AirControl::ColorEncoding</Name>
       <APILanguage>csharp</APILanguage>
       <Type>cl</Type>
@@ -869,6 +1058,15 @@
     </TokenIdentifier>
     <Path>classAirControl_1_1ColorEncoding.html</Path>
     <Abstract>Capture camera settings</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>AirControl::CommandlineArgs</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>AirControl.CommandlineArgs</Scope>
+    </TokenIdentifier>
+    <Path>classAirControl_1_1CommandlineArgs.html</Path>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1033,7 +1231,7 @@
       <Scope>airctrl.environment.Trigger</Scope>
     </TokenIdentifier>
     <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
-    <Anchor>a6633f3b0e9c4cf78df033795d8fbada8</Anchor>
+    <Anchor>af305bd4e0cc0fa6e5b32b72a40997fd9</Anchor>
     <DeclaredIn>environment.py</DeclaredIn>
   </Token>
   <Token>
@@ -1137,6 +1335,17 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>set_clientInfo</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.environment.Trigger</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1environment_1_1Trigger.html</Path>
+    <Anchor>a15a4e45ac74304e12b6313b36d41873a</Anchor>
+    <DeclaredIn>environment.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>set_audio</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
@@ -1179,13 +1388,24 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>get_sample</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.sample_generator.samples</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
+    <Anchor>a6014c776d59e7180b25825d55aaeb243</Anchor>
+    <DeclaredIn>sample_generator.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>get_random_pitch</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>airctrl.sample_generator.samples</Scope>
     </TokenIdentifier>
     <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
-    <Anchor>a1186b750c2876eacb430a41615139b75</Anchor>
+    <Anchor>ad14b4c20fd92525f9a8fa86504850eba</Anchor>
     <DeclaredIn>sample_generator.py</DeclaredIn>
   </Token>
   <Token>
@@ -1196,7 +1416,7 @@
       <Scope>airctrl.sample_generator.samples</Scope>
     </TokenIdentifier>
     <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
-    <Anchor>ac45f588db6cef26d35938ac794f64a33</Anchor>
+    <Anchor>a1284043b9574bd51b697af7a88a35806</Anchor>
     <DeclaredIn>sample_generator.py</DeclaredIn>
   </Token>
   <Token>
@@ -1207,7 +1427,7 @@
       <Scope>airctrl.sample_generator.samples</Scope>
     </TokenIdentifier>
     <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
-    <Anchor>a2a26aa5fc41ad9dd9c70c1209afa8c77</Anchor>
+    <Anchor>a3acf61d6ae9a88b8587f7e04431fb593</Anchor>
     <DeclaredIn>sample_generator.py</DeclaredIn>
   </Token>
   <Token>
@@ -1218,29 +1438,7 @@
       <Scope>airctrl.sample_generator.samples</Scope>
     </TokenIdentifier>
     <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
-    <Anchor>a4e5af6f20612d04f0a385a0463225df0</Anchor>
-    <DeclaredIn>sample_generator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>get_random_pitchangle</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>airctrl.sample_generator.samples</Scope>
-    </TokenIdentifier>
-    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
-    <Anchor>ab40027f740f5a1fe563ae1ce89bd7424</Anchor>
-    <DeclaredIn>sample_generator.py</DeclaredIn>
-  </Token>
-  <Token>
-    <TokenIdentifier>
-      <Name>get_random_bankangle</Name>
-      <APILanguage>python</APILanguage>
-      <Type>instm</Type>
-      <Scope>airctrl.sample_generator.samples</Scope>
-    </TokenIdentifier>
-    <Path>classairctrl_1_1sample__generator_1_1samples.html</Path>
-    <Anchor>a87a1d5a28047ef9cc1523a13037280ed</Anchor>
+    <Anchor>a998c3498f6a6f1e879811f63f93864ed</Anchor>
     <DeclaredIn>sample_generator.py</DeclaredIn>
   </Token>
   <Token>
@@ -1265,13 +1463,24 @@
   </Token>
   <Token>
     <TokenIdentifier>
+      <Name>get_client_info</Name>
+      <APILanguage>python</APILanguage>
+      <Type>instm</Type>
+      <Scope>airctrl.utils.unity.Launch</Scope>
+    </TokenIdentifier>
+    <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
+    <Anchor>a4334e7903ebd49ec98544823223f97f1</Anchor>
+    <DeclaredIn>unity.py</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
       <Name>launch_executable</Name>
       <APILanguage>python</APILanguage>
       <Type>instm</Type>
       <Scope>airctrl.utils.unity.Launch</Scope>
     </TokenIdentifier>
     <Path>classairctrl_1_1utils_1_1unity_1_1Launch.html</Path>
-    <Anchor>aa2e93bbe890b9191ccc7bffcdb0eba3a</Anchor>
+    <Anchor>aaf105056a288dba9da97b81ecda2d2df</Anchor>
     <DeclaredIn>unity.py</DeclaredIn>
   </Token>
   <Token>
@@ -1333,6 +1542,16 @@
     </TokenIdentifier>
     <Path>classCommunicator_1_1CameraSchema.html</Path>
     <Abstract>Camera class for serialization deserialization</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Communicator::ClientInfo</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Communicator.ClientInfo</Scope>
+    </TokenIdentifier>
+    <Path>classCommunicator_1_1ClientInfo.html</Path>
+    <Abstract>Ui and Audio class for serialization deserialization</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>
@@ -1607,6 +1826,48 @@
     </TokenIdentifier>
     <Path>classCommunicator_1_1WeatherSchema.html</Path>
     <Abstract>weather class for serialization deserialization</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Utility</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>ns</Type>
+      <Scope>Utility</Scope>
+    </TokenIdentifier>
+    <Path>namespaceUtility.html</Path>
+    <Abstract>Simple Commandline Argument Parser https://www.codeproject.com/Articles/3111/C-NET-Command-Line-Argum...</Abstract>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Utility::Arguments</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>cl</Type>
+      <Scope>Utility.Arguments</Scope>
+    </TokenIdentifier>
+    <Path>classUtility_1_1Arguments.html</Path>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>Arguments</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instm</Type>
+      <Scope>Utility.Arguments</Scope>
+    </TokenIdentifier>
+    <Path>classUtility_1_1Arguments.html</Path>
+    <Anchor>a7a40cb7b6b9424a004d2d781ebe336e6</Anchor>
+    <Abstract>Constructor Parsing command line arguments</Abstract>
+    <DeclaredIn>Arguments.cs</DeclaredIn>
+  </Token>
+  <Token>
+    <TokenIdentifier>
+      <Name>this[string Param]</Name>
+      <APILanguage>csharp</APILanguage>
+      <Type>instp</Type>
+      <Scope>Utility.Arguments</Scope>
+    </TokenIdentifier>
+    <Path>classUtility_1_1Arguments.html</Path>
+    <Anchor>a452b25754c07138e97934479ada6bf71</Anchor>
+    <Abstract>Retrieve a parameter value if it exists (overriding C# indexer property)</Abstract>
   </Token>
   <Token>
     <TokenIdentifier>

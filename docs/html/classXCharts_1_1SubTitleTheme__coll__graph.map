@@ -1,8 +1,9 @@
 <map id="XCharts.SubTitleTheme" name="XCharts.SubTitleTheme">
-<area shape="rect" id="node1" title=" " alt="" coords="5,399,180,425"/>
-<area shape="rect" id="node2" href="$classXCharts_1_1ComponentTheme.html" title=" " alt="" coords="21,323,164,349"/>
-<area shape="rect" id="node3" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="28,247,157,273"/>
-<area shape="rect" id="node4" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="27,171,159,197"/>
-<area shape="rect" id="node5" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="32,81,153,108"/>
-<area shape="rect" id="node6" title=" " alt="" coords="25,5,160,32"/>
+<area shape="rect" id="node1" title=" " alt="" coords="43,412,217,439"/>
+<area shape="rect" id="node2" href="$classXCharts_1_1ComponentTheme.html" title=" " alt="" coords="59,336,201,363"/>
+<area shape="rect" id="node3" href="$classXCharts_1_1MainComponent.html" title=" " alt="" coords="8,247,137,273"/>
+<area shape="rect" id="node4" href="$classXCharts_1_1ChartComponent.html" title=" " alt="" coords="7,171,139,197"/>
+<area shape="rect" id="node5" href="$classXCharts_1_1Painter.html" title=" " alt="" coords="12,81,133,108"/>
+<area shape="rect" id="node6" title=" " alt="" coords="5,5,140,32"/>
+<area shape="rect" id="node7" title=" " alt="" coords="162,247,213,273"/>
 </map>

@@ -2,6 +2,7 @@
 //www.michaeltaylor3d.com
 using UnityEngine;
 using Communicator;
+using Commons;
 namespace AirControl
 {   
     
@@ -29,6 +30,10 @@ namespace AirControl
             HandleLocation();
         }
 
+        void Start()
+        {   
+            rb = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<Rigidbody>();
+        }
 
         #region Instance Functions
         public void FindMetersPerLat(float lat) // Compute lengths of degrees

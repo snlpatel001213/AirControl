@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -97,7 +97,6 @@ $(document).ready(function(){initNavTree('classAirControl_1_1AC__Airplane__Groun
 
 <div class="header">
   <div class="summary">
-<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classAirControl_1_1AC__Airplane__GroundEffect-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -123,18 +122,6 @@ Collaboration diagram for AirControl.AC_Airplane_GroundEffect:</div>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
-Public Attributes</h2></td></tr>
-<tr class="memitem:aac696852d9efe32ab2465f3d10211ab1"><td class="memItemLeft" align="right" valign="top"><a id="aac696852d9efe32ab2465f3d10211ab1"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>groundDistance</b> = 3f</td></tr>
-<tr class="separator:aac696852d9efe32ab2465f3d10211ab1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a546b6ae46b30cb1c907b5260301e8e20"><td class="memItemLeft" align="right" valign="top"><a id="a546b6ae46b30cb1c907b5260301e8e20"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>liftForce</b> = 20f</td></tr>
-<tr class="separator:a546b6ae46b30cb1c907b5260301e8e20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1e5c61cd268789015bf213b64c416fec"><td class="memItemLeft" align="right" valign="top"><a id="a1e5c61cd268789015bf213b64c416fec"></a>
-float&#160;</td><td class="memItemRight" valign="bottom"><b>maxSpeed</b> = 15f</td></tr>
-<tr class="separator:a1e5c61cd268789015bf213b64c416fec"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
 <tr class="memitem:ae4b18e4e4a6d6d78dee4a284befae91f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAirControl_1_1AC__Airplane__GroundEffect.html#ae4b18e4e4a6d6d78dee4a284befae91f">HandleGroundEffect</a> ()</td></tr>
@@ -143,7 +130,7 @@ Protected Member Functions</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock">
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html#l00006">6</a> of file <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html">AC_Airplane_GroundEffect.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html#l00007">7</a> of file <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html">AC_Airplane_GroundEffect.cs</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a id="ae4b18e4e4a6d6d78dee4a284befae91f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae4b18e4e4a6d6d78dee4a284befae91f">&#9670;&nbsp;</a></span>HandleGroundEffect()</h2>
@@ -170,25 +157,25 @@ Protected Member Functions</h2></td></tr>
 
 <p>Creates the Ground effect - <a href="https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)">https://en.wikipedia.org/wiki/Ground_effect_(aerodynamics)</a> </p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html#l00041">41</a> of file <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html">AC_Airplane_GroundEffect.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            RaycastHit hit;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keywordflow">if</span>(Physics.Raycast(transform.position, Vector3.down, out hit))</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">if</span>(hit.distance &lt; groundDistance &amp;&amp; hit.transform.tag==<span class="stringliteral">&quot;Ground&quot;</span>)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="keywordtype">float</span> currentSpeed = rb.velocity.magnitude;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="keywordtype">float</span> normalizedSpeed = currentSpeed/maxSpeed;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    normalizedSpeed = Mathf.Clamp01(normalizedSpeed);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keywordtype">float</span> distance = groundDistance - hit.distance;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordtype">float</span> finalForce = liftForce *distance *normalizedSpeed;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    rb.AddForce(Vector3.up*finalForce);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html#l00045">45</a> of file <a class="el" href="AC__Airplane__GroundEffect_8cs_source.html">AC_Airplane_GroundEffect.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            RaycastHit hit;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordflow">if</span>(Physics.Raycast(transform.position, Vector3.down, out hit))</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keywordflow">if</span>(hit.distance &lt; groundDistance &amp;&amp; hit.transform.tag==<span class="stringliteral">&quot;Ground&quot;</span>)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keywordtype">float</span> currentSpeed = rb.velocity.magnitude;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordtype">float</span> normalizedSpeed = currentSpeed/maxSpeed;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    normalizedSpeed = Mathf.Clamp01(normalizedSpeed);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    <span class="keywordtype">float</span> distance = groundDistance - hit.distance;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    <span class="keywordtype">float</span> finalForce = liftForce *distance *normalizedSpeed;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    rb.AddForce(Vector3.up*finalForce);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>

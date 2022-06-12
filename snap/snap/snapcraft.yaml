@@ -1,5 +1,5 @@
 name: "aircontrol"
-version: "1.2.0"
+version: &version "1.5.0"
 summary: "AirControl is an Open Source,Flight Simulator For Deep Learning Research."
 description: AirControl is an Open Source, Modular, Cross-Platform, and Extensible Flight Simulator For Deep Learning Research. AirControl offers a realistic simulation experience with a variety of airplanes. 
 base: core18
@@ -58,11 +58,11 @@ parts:
        - ibus-gtk
        - libibus-1.0-5
 apps:
-   AirControl:
-     command: desktop-launch $SNAP/v1.0.0-AirControl.x86_64
+   launch:
+     command: desktop-launch $SNAP/1.3.0-AirControl.x86_64
 
      environment:
-       LD_LIBRARY_PATH: "$SNAP/local/:$SNAP/local/v1.0.0-AirControl_Data/MonoBleedingEdge/x86_64:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio:$LD_LIBRARY_PATH"
+       LD_LIBRARY_PATH: $SNAP/local/:$SNAP/local/v1.3.0-AirControl_Data/MonoBleedingEdge/x86_64:$SNAP/usr/lib/$SNAPCRAFT_ARCH_TRIPLET/pulseaudio:$LD_LIBRARY_PATH
      plugs:
        - x11
        - opengl

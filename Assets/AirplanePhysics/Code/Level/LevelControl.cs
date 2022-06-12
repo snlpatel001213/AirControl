@@ -10,6 +10,7 @@ namespace AirControl
     /// </summary>
     public class LevelControl:MonoBehaviour
     {
+        
         /// <summary>
         /// Constantly check for the reset level trigger
         /// </summary>

@@ -39,7 +39,7 @@
   <td id="projectlogo"><img alt="Logo" src="logo_original_large-256_x_256.png"/></td>
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">AirControl
-   &#160;<span id="projectnumber">1.2.0</span>
+   &#160;<span id="projectnumber">1.3.0</span>
    </div>
    <div id="projectbrief">Open Source, Modular, and Extensible Flight Simulator For Deep Learning Research</div>
   </td>
@@ -122,10 +122,9 @@ Collaboration diagram for AirControl.AC_Airplane_FuelGauge:</div>
 <div class="dyncontent">
 <div class="center"><img src="classAirControl_1_1AC__Airplane__FuelGauge__coll__graph.png" border="0" usemap="#AirControl_8AC__Airplane__FuelGauge_coll__map" alt="Collaboration graph"/></div>
 <map name="AirControl_8AC__Airplane__FuelGauge_coll__map" id="AirControl_8AC__Airplane__FuelGauge_coll__map">
-<area shape="rect" title="Monitor and updates the Fuel level to UI" alt="" coords="106,171,277,212"/>
+<area shape="rect" title="Monitor and updates the Fuel level to UI" alt="" coords="49,80,219,121"/>
 <area shape="rect" title=" " alt="" coords="5,5,129,32"/>
-<area shape="rect" href="classAirControl_1_1AC__Airplane__Fuel.html" title="Control fuel consumption" alt="" coords="89,81,293,108"/>
-<area shape="rect" href="interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="317,81,412,108"/>
+<area shape="rect" href="interfaceAirControl_1_1IAirplaneUI.html" title=" " alt="" coords="153,5,248,32"/>
 </map>
 <center><span class="legend">[<a target="top" href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
@@ -137,9 +136,6 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
-<tr class="memitem:a284ae9d3d5639e1e4ffd8bab84ed500d"><td class="memItemLeft" align="right" valign="top"><a id="a284ae9d3d5639e1e4ffd8bab84ed500d"></a>
-<a class="el" href="classAirControl_1_1AC__Airplane__Fuel.html">AC_Airplane_Fuel</a>&#160;</td><td class="memItemRight" valign="bottom"><b>fuel</b></td></tr>
-<tr class="separator:a284ae9d3d5639e1e4ffd8bab84ed500d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa06050763e4de1c522fcfd74353ba7e7"><td class="memItemLeft" align="right" valign="top"><a id="aa06050763e4de1c522fcfd74353ba7e7"></a>
 RectTransform&#160;</td><td class="memItemRight" valign="bottom"><b>pointer</b></td></tr>
 <tr class="separator:aa06050763e4de1c522fcfd74353ba7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -179,14 +175,14 @@ Vector2&#160;</td><td class="memItemRight" valign="bottom"><b>minMaxRotation</b>
 
 <p>Implements <a class="el" href="interfaceAirControl_1_1IAirplaneUI.html">AirControl.IAirplaneUI</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="AC__Airplane__FuelGauge_8cs_source.html#l00024">24</a> of file <a class="el" href="AC__Airplane__FuelGauge_8cs_source.html">AC_Airplane_FuelGauge.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span>(fuel &amp;&amp; pointer)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="keywordtype">float</span> wantedRotation = Mathf.Lerp(minMaxRotation.x, minMaxRotation.y, fuel.NormalizedFuel);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                pointer.rotation = Quaternion.Euler(0f, 0f, -wantedRotation);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        }</div>
+<p class="definition">Definition at line <a class="el" href="AC__Airplane__FuelGauge_8cs_source.html#l00030">30</a> of file <a class="el" href="AC__Airplane__FuelGauge_8cs_source.html">AC_Airplane_FuelGauge.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">if</span>(fuel &amp;&amp; pointer)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordtype">float</span> wantedRotation = Mathf.Lerp(minMaxRotation.x, minMaxRotation.y, fuel.NormalizedFuel);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                pointer.rotation = Quaternion.Euler(0f, 0f, -wantedRotation);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>

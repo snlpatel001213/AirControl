@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using Commons;
 namespace AirControl
 {
     /// <summary>
@@ -11,11 +11,17 @@ namespace AirControl
     {
         #region Variables
         [Header("Fuel Guage Properties")]
-        public AC_Airplane_Fuel fuel;
+        [SerializeField]
+        private AC_Airplane_Fuel fuel;
         public RectTransform pointer;
         public Vector2 minMaxRotation = new Vector2(-90f, 90f);
         #endregion
 
+        #region Builtin methods
+        void Start(){
+            fuel = GameObject.Find(CommonFunctions.ActiveAirplane).GetComponent<AC_Airplane_Fuel>();
+        }
+        #endregion
 
         #region Custom Methods
         /// <summary>

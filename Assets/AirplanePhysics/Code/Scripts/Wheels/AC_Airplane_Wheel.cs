@@ -22,9 +22,10 @@ namespace AirControl
         [Header("Wheel Properties")]
         public Transform wheelGraphic;
         public bool isBraking=false;
-        public float brakePower = 500f;
+        private float brakePower; 
         public bool isSteering=false;
-        public float steerAngle=20f;
+        private float steerAngle; 
+        public float motorTorque;
 
         private WheelCollider wheelCol;
         private Vector3 worldPos;
@@ -36,6 +37,8 @@ namespace AirControl
         // Start is called before the first frame update
         void Start()
         {
+            brakePower = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/brakePower"];
+            steerAngle = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/steerAngle"];
             wheelCol = GetComponent<WheelCollider>();
         }
         /// <summary>
@@ -54,6 +57,7 @@ namespace AirControl
                     StaticOutputSchema.CollisionObject = surface;
                 }
             }
+
         }
 
         // Update is called once per frame
@@ -101,7 +105,7 @@ namespace AirControl
                         slowlyBrake = 0f;
                         wheelCol.brakeTorque = 0.0f;
                         // small motor torque not to allow airplane roll backward
-                        wheelCol.motorTorque = 0.00001f;
+                        wheelCol.motorTorque = motorTorque;
                     }
                 }
                 if(isSteering)

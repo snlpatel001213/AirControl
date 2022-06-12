@@ -6,29 +6,61 @@ Importing requirements
 
 .. code:: ipython3
 
-    from AirControl import actions
-    
-    from AirControl import schemaDef
-    from pprint import pprint
-    import PIL.Image as Image
-    import base64
-    import numpy as np
-    from io import BytesIO
-    from matplotlib.pyplot import  imshow
-    import matplotlib.pyplot as plt
-    
-    A =  actions.Actions()
+    from airctrl import environment 
+    from airctrl import sample_generator
+    from airctrl.utils import unity
+    from airctrl import sample_generator
+    port=8999
+    sample = sample_generator.samples()
+
+.. code:: ipython3
+
+    env =  environment.Trigger()
+    L = unity.Launch()
+    process = L.launch_executable("/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64", server_port=port)
+    env.get_connected(port=port)
 
 
 .. parsed-literal::
 
-    Now play the environment and call call method `Action.get_connected` to get connected
+    [32mNow call method `.get_connected(port=<Default 8053>)` to get connected
+    [0m
+    [32mLoading environment from /home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64 at port 8999 client ip 127.0.1.1 client port 8999
+    [0m
+    ['/home/supatel/Games/AirControl_2021/Build/1.3.0/Linux/v1.3.0-AirControl.x86_64', '--serverPort', '8999', '--clientIP', '127.0.1.1', '--clientPort', '8999']
+    [32mSleeping for 5 seconds to allow environment load
+    [0m
+    [UnityMemory] Configuration Parameters - Can be set up in boot.config
+        "memorysetup-bucket-allocator-granularity=16"
+        "memorysetup-bucket-allocator-bucket-count=8"
+        "memorysetup-bucket-allocator-block-size=4194304"
+        "memorysetup-bucket-allocator-block-count=1"
+        "memorysetup-main-allocator-block-size=16777216"
+        "memorysetup-thread-allocator-block-size=16777216"
+        "memorysetup-gfx-main-allocator-block-size=16777216"
+        "memorysetup-gfx-thread-allocator-block-size=16777216"
+        "memorysetup-cache-allocator-block-size=4194304"
+        "memorysetup-typetree-allocator-block-size=2097152"
+        "memorysetup-profiler-bucket-allocator-granularity=16"
+        "memorysetup-profiler-bucket-allocator-bucket-count=8"
+        "memorysetup-profiler-bucket-allocator-block-size=4194304"
+        "memorysetup-profiler-bucket-allocator-block-count=1"
+        "memorysetup-profiler-allocator-block-size=16777216"
+        "memorysetup-profiler-editor-allocator-block-size=1048576"
+        "memorysetup-temp-allocator-size-main=4194304"
+        "memorysetup-job-temp-allocator-block-size=2097152"
+        "memorysetup-job-temp-allocator-block-size-background=1048576"
+        "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+        "memorysetup-temp-allocator-size-background-worker=32768"
+        "memorysetup-temp-allocator-size-job-worker=262144"
+        "memorysetup-temp-allocator-size-preload-manager=262144"
+        "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+        "memorysetup-temp-allocator-size-audio-worker=65536"
+        "memorysetup-temp-allocator-size-cloud-worker=32768"
+        "memorysetup-temp-allocator-size-gfx=262144"
+    [32mConnecting with port 8999
+    [0m
 
-
-.. code:: ipython3
-
-    # get connected to server
-    A.get_connected()
 
 UI and Audio
 ------------
@@ -55,19 +87,25 @@ Python API
 
 .. code:: ipython3
 
-    audio_control = A.set_audio(EnableAudio=False, IsActive=True)
+    audio_control = env.set_audio(EnableAudio=False, IsActive=True)
     print(audio_control)
 
 
 .. parsed-literal::
 
-    {'Log': ''}
+    {'Log': 'Active scene camera - 1 Capture camera - 0 Width - 256  Height - 256: '}
 
 
 .. code:: ipython3
 
-    ui_control = A.set_ui(ShowUIElements=True, IsActive= True)
+    ui_control = env.set_ui(ShowUIElements=True, IsActive= True)
     print(ui_control)
+
+
+.. parsed-literal::
+
+    {'Log': 'Active scene camera - 1 Capture camera - 0 Width - 256  Height - 256: '}
+
 
 Level Reset
 -----------
@@ -94,14 +132,25 @@ Python API
 
 .. code:: ipython3
 
-    output = A.reset(IsOutput=True)
+    output = env.reset(IsOutput=True)
     print(output)
 
 
 .. parsed-literal::
 
-    {'AGL': 0.0, 'MSL': 38.6391869, 'CurrentRPM': 0.0, 'MaxRPM': 3000.0, 'MaxPower': 3500.0, 'CurrentPower': 0.0, 'CurrentFuel': 0.0, 'CurrentSpeed': 0.00141569716, 'BankAngle': 0.04395718, 'IfCollision': False, 'Latitude': -0.0002827725, 'Longitude': 6.64276831e-06, 'PitchAngle': 0.489656836, 'ScreenCapture': '', 'LidarPointCloud': [100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 27.4915733, 26.7108173, 25.9808674, 25.2972565, 24.6560211, 24.0536346, 23.4869576, 22.9532032, 22.449852, 21.97466, 21.5255852, 21.1007957, 20.6986313, 20.3175831, 19.95628, 19.6134682, 19.28802, 18.9788761, 18.68509, 18.4057827, 18.1401424, 17.8874359, 17.6469727, 17.4181252, 17.2003117, 16.9929848, 16.7956581, 16.6078625, 16.429163, 16.2591724, 16.0975151, 15.9438534, 15.79786, 15.6592436, 15.5277281, 15.4030552, 15.2849884, 15.1733036, 15.0678, 14.968276, 14.8745584, 14.7864857, 14.7039051, 14.6266689, 14.55465, 14.4877291, 14.4257956, 14.3687449, 14.31649, 14.2689457, 14.2260323, 14.1876879, 14.1538477, 14.2291193, 100000.0, 1739.399, 798.429749, 511.143036, 364.384, 294.8295, 247.451462, 211.54483, 184.810669, 164.097992, 147.591949, 134.172623, 122.899017, 113.404884, 105.302261, 98.30814, 92.21161, 86.85198, 82.104866, 77.87221, 74.07604, 70.65333, 67.5526, 64.73144, 62.1546822, 59.792717, 57.6206169, 55.61715, 53.7641335, 52.04595, 50.44908, 48.96781, 47.5896339, 46.3006363, 45.093, 43.9597969, 42.8949051, 41.8928452, 40.9487228, 40.0581551, 39.2171822, 38.4222755, 37.6728668, 36.9638, 36.29177, 35.6544075, 35.0495377, 34.475174, 33.92951, 33.41085, 32.9176979, 32.44863, 32.00235, 31.5776749, 31.1734829, 30.7887745, 30.4226036, 30.0740929, 29.7424316, 29.42686, 29.12671, 28.8413086, 28.57007, 28.3124275, 28.06786, 27.8358974, 27.61607, 27.4079819, 27.2112236, 27.025444, 26.85031, 26.6855087, 26.5307522, 26.3857632, 26.2503071, 26.1241512, 26.00709, 25.8989239, 25.7994766, 25.7086, 25.62614, 25.55195, 25.4859467, 2.162949, 2.10318661, 2.07183, 2.05951762, 1.931648, 1.9301765, 1.92929471, 1.92900085, 1.92929471, 1.93017673, 25.2785034, 25.30605, 25.3413773, 25.3845482, 25.435627, 25.4946976, 25.5618362, 25.6371727, 25.7208061, 25.81287, 25.9135246, 26.0229244, 26.14125, 26.26869, 26.4054661, 26.5518055, 26.7079544, 26.874176, 27.0507832, 27.2380772, 27.4363956, 27.6461048, 27.8676033, 28.1013069, 28.34767, 28.60718, 28.880373, 29.1678, 29.4700642, 29.7878437, 30.1218071, 30.4727478, 30.8414574, 31.2288361, 31.6358261, 32.0634537, 32.5128479, 32.9852028, 33.481842, 34.00417, 34.5537529, 35.132267, 35.74156, 36.38364, 37.0607033, 37.7751541, 38.529686, 39.3271866, 40.17089, 41.06437, 42.0115852, 43.01695, 44.08538, 45.2223473, 46.4340324, 47.72737, 49.11021, 50.591465, 52.18124, 53.8910866, 55.73434, 57.72641, 59.87568, 62.1836, 64.69705, 67.44368, 70.45633, 73.77417, 77.44466, 81.5256348, 86.1379852, 91.34503, 97.2534943, 104.013054, 111.819092, 120.931618, 131.705109, 144.364868, 159.592926, 178.4731, 201.696732, 231.309311, 275.0283, 339.538239, 441.27533, 604.813049, 1101.75525, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 15.9831982, 15.0613651, 15.1135492, 15.1707354, 15.2330122, 15.3004837, 15.3732557, 15.4514542, 15.5352125, 15.6246662, 15.7199707, 15.8212948, 15.9288177, 16.0427341, 16.1632462, 16.2905846, 16.4249878, 16.566721, 16.716053, 16.8732853, 17.0387478, 17.21278, 17.39576, 17.5880833, 17.7901878, 18.0025387, 18.22564, 18.4600372, 18.70631, 18.9650974, 19.2370872, 19.5230255, 19.82373, 20.1400661, 20.4729977, 20.82357, 21.1929264, 21.5823269, 21.99312, 22.426815, 22.8850727, 23.3697128, 23.88277, 24.4264565, 25.0032635, 25.6159649, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0, 100000.0], 'Counter': 1, 'log': '', 'Reward': 0.0, 'MsgType': 'Output', 'Version': '0.0.5'}
+    {'AGL': 0.0, 'MSL': 4.629269, 'CurrentRPM': 0.0, 'MaxRPM': 4500.0, 'MaxPower': 1.731072e-05, 'CurrentPower': 0.0, 'CurrentFuel': 0.0, 'CurrentSpeed': 0.0, 'BankAngle': 0.04627315, 'IfCollision': False, 'CollisionObject': '', 'Latitude': -0.000172575281, 'Longitude': 5.26217764e-06, 'PitchAngle': 0.334689736, 'ScreenCapture': '', 'LidarPointCloud': [500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 448.642853, 234.270966, 158.557083, 119.857109, 96.36547, 80.59447, 69.27724, 60.7635, 54.1279564, 48.81236, 44.4597244, 40.8312149, 37.7611237, 35.1299248, 32.85116, 30.85884, 29.1028557, 27.543745, 26.1508026, 24.89903, 23.7687283, 22.7430458, 21.8084869, 20.9541874, 20.17015, 19.4480934, 18.781765, 18.1649017, 17.5923538, 17.0599041, 16.5634632, 16.0998478, 15.6664734, 15.2599268, 14.878726, 14.5203571, 14.1829128, 13.8650055, 13.5649071, 13.2816982, 13.0139561, 12.7605734, 12.5205307, 12.2931213, 12.07737, 11.8725891, 11.6782169, 11.4934578, 11.3180656, 11.1509838, 10.9922924, 10.8411655, 10.6975231, 10.560667, 10.43038, 10.3064928, 10.1884851, 10.076252, 9.969445, 9.8677845, 9.771229, 9.67941, 9.592241, 9.509407, 9.430925, 9.356548, 9.286107, 9.219494, 9.156597, 9.097355, 9.041557, 8.989214, 8.940166, 8.894346, 8.85165, 8.81202, 8.77549, 8.741838, 8.71110249, 8.683243, 8.658138, 8.635839, 8.616283, 8.59939, 8.585234, 8.573659, 8.564738, 8.558472, 8.554833, 8.553766, 8.555275, 8.559478, 8.566202, 8.5756, 8.58765, 8.602289, 8.619665, 8.639746, 8.662611, 8.688187, 8.71656, 8.747832, 8.781985, 8.819149, 8.859278, 8.902578, 8.949003, 8.99863, 9.051601, 9.108125, 9.167935, 9.231453, 9.298783, 9.369947, 9.44515, 9.524359, 9.608, 9.696024, 9.78858948, 9.886199, 9.988784, 10.0965548, 10.2099037, 10.3288908, 10.453907, 10.5853653, 10.7233849, 10.8685217, 11.0208683, 11.18111, 11.3496485, 11.5269909, 11.7134, 11.90961, 12.1162586, 12.3342743, 12.56382, 12.8061886, 13.062355, 13.3328524, 13.6190958, 13.9223022, 14.2436848, 14.5847187, 14.9475231, 15.3331957, 15.744544, 16.1833267, 16.6527042, 17.15538, 17.6949978, 18.2752438, 18.901001, 19.5771732, 20.3098831, 21.1067047, 21.97527, 22.9256248, 23.9692974, 25.1207275, 26.3968716, 27.81858, 29.4116058, 31.2081165, 33.24909, 35.5875359, 38.2924347, 41.45584, 43.89486, 48.2217255, 53.4786873, 60.1293564, 68.6363, 79.97531, 99.9875641, 125.519127, 168.6308, 181.557327, 184.687927, 200.397171, 203.654251, 204.736618, 206.287659, 207.92598, 209.655365, 211.9318, 214.359268, 216.515945, 219.109375, 222.7964, 226.68, 231.220367, 237.020813, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0, 500.0], 'Counter': 0, 'log': '', 'Reward': 0.0034183502709721368, 'IsGrounded': True, 'IsFlying': False, 'IsTaxiing': False, 'PosXAbs': 0.8587413, 'PosYAbs': 1.41092455, 'PosZAbs': -6.854991, 'PosXRel': -0.0112596154, 'PosYRel': -0.359074831, 'PosZRel': -6.88499069, 'RotXAbs': 340.446533, 'RotYAbs': 357.65744, 'RotZAbs': 2.8175633, 'RotXRel': 340.446533, 'RotYRel': 357.65744, 'RotZRel': 2.81756353, 'AngularXVelocity': 0.000147444662, 'AngularYVelocity': -0.00334466086, 'AngularZVelocity': 0.00412675971, 'LinearXVelocity': 0.006331574, 'LinearYVelocity': -0.0038418388, 'LinearZVelocity': -0.55398947, 'AngularXAcceleration': 0.0005955342, 'AngularYAcceleration': -0.0006038579, 'AngularZAcceleration': 0.0, 'LinearXAcceleration': 0.00348708127, 'LinearYAcceleration': -0.000720331445, 'LinearZAcceleration': -0.0345647335, 'MsgType': 'Output', 'Version': '1.3.0'}
 
+
+Collision Detection
+-------------------
+
+Colision detection is an integral part of the Aircontrol. As part of
+Aircontrol at each response following data field provide information
+regarding collision.
+
+::
+
+   'IfCollision': False, 'CollisionObject': "Ground"
 
 Work In Progress
 ================
@@ -116,9 +165,3 @@ Weather API
 
 Can be used to control environmantal fog and clouds. Planned for HDRP
 release only.
-
-Collision Detection
--------------------
-
-Will provide information about collision and object with which it
-collided

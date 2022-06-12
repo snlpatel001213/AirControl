@@ -1,13 +1,9 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using Communicator;
-using Commons;
 using UnityEngine.UI;
-using System;
-using UnityEditor;
-
+using System.Numerics;
+using Commons;
 namespace AirControl
 {
 
@@ -35,7 +31,7 @@ namespace AirControl
         public AC_Airplane_Characteristics characteristics;
 
         [Tooltip("Weight is in pounds")]
-        public float airplaneWeight = 1200f;
+        private float airplaneWeight;
 
         [Tooltip("Initialize an empty object and set it in  airplane body. That position is Center of Gravity of the Airplane. Hook that object here")]
         public Transform centerOfGravity;
@@ -70,9 +66,11 @@ namespace AirControl
         // Above Ground Level
         private float currentAGL;
 
+        private float angularVelocity;
+
         // To detect if the Airplane is stuck 
-        private Vector3 lastAirplanePosition;
-        private Vector3 currAirplanePosition;
+        private UnityEngine.Vector3 lastAirplanePosition;
+        private UnityEngine.Vector3 currAirplanePosition;
 
         // private int lastCommCounter=0;
         // private int currCommCounter=0;
@@ -83,7 +81,12 @@ namespace AirControl
         private float startRot_x; 
         private float startRot_y;
         private float startRot_z;
-        
+        // Linear and angular velocity calcuation
+        // Linear and angular acceleration calcuation
+        private UnityEngine.Vector3 lastLinearVelocity;
+        private UnityEngine.Vector3 lastAngularVelocity;
+        private UnityEngine.Vector3 linearAcceleration;
+        private UnityEngine.Vector3 angularAcceleration;
         #endregion
 
         #region Properties
@@ -92,6 +95,12 @@ namespace AirControl
         }
         public float CurrentAGL{
             get{return currentAGL;}
+        }
+        public UnityEngine.Vector3 AngularVelocity{
+            get{return rb.angularVelocity;}
+        }
+        public UnityEngine.Vector3 LinearVelocity{
+            get{return rb.velocity;}
         }
         #endregion
 
@@ -108,7 +117,7 @@ namespace AirControl
         public override void Start()
         {
             base.Start();
-
+            airplaneWeight = (float)CommonFunctions.airplanePreset[CommonFunctions.activeAirplane+"/airplaneWeight"];
             //calculate final mass in kilos
             float finalMass =  airplaneWeight * poundToKilos;
             startPos_x = rb.position.x;
@@ -119,7 +128,9 @@ namespace AirControl
             startRot_z = rb.rotation.eulerAngles.z;
             Debug.LogFormat("Starting Position  x : {0} y: {1} z: {2} ",startPos_x, startPos_y, startPos_z );
             Debug.LogFormat("Starting Rotation  x : {0} y: {1} z: {2} ",startRot_x, startRot_y, startRot_z );
-
+            // linear & angular; Velocity & Acceleration
+            lastLinearVelocity = rb.velocity;
+            lastAngularVelocity = rb.angularVelocity;
             
             // if rigid body added then add center of mass
             if (rb){
@@ -152,6 +163,7 @@ namespace AirControl
             rewardCalculator();
             broadcastPosition();
             broadcastRotation();
+            broadcastAngulars();
         }
 
         /// <summary>
@@ -160,27 +172,54 @@ namespace AirControl
         /// Relative - w.r.t initila position
         /// </summary>
         void broadcastPosition(){
-            Vector3 absolutePosition = rb.position;
+            UnityEngine.Vector3 absolutePosition = rb.position;
             StaticOutputSchema.PosXAbs = absolutePosition.x;
             StaticOutputSchema.PosYAbs = absolutePosition.y;
             StaticOutputSchema.PosZAbs = absolutePosition.z;
-            Vector3 relativePosition = rb.position - new Vector3(startPos_x, startPos_y, startPos_z);
+            UnityEngine.Vector3 relativePosition = rb.position - new UnityEngine.Vector3(startPos_x, startPos_y, startPos_z);
             StaticOutputSchema.PosXRel =  relativePosition.x;
             StaticOutputSchema.PosYRel =  relativePosition.y;
             StaticOutputSchema.PosZRel =  relativePosition.z;
         }
-
+        /// <summary>
+        /// calculate abolute and relative rotation of the Airplane. 
+        /// Absolute -  w.r.t. world
+        /// Relative - w.r.t initila position
+        /// </summary>
         void broadcastRotation(){
-            Vector3 absoluteRotation = rb.rotation.eulerAngles;
+            UnityEngine.Vector3 absoluteRotation = rb.rotation.eulerAngles;
             StaticOutputSchema.RotXAbs = absoluteRotation.x;
             StaticOutputSchema.RotYAbs = absoluteRotation.y;
             StaticOutputSchema.RotZAbs = absoluteRotation.z;
-            Vector3 relativeRotation = rb.rotation.eulerAngles - new Vector3(startRot_x, startRot_y, startRot_z);
+            UnityEngine.Vector3 relativeRotation = rb.rotation.eulerAngles - new UnityEngine.Vector3(startRot_x, startRot_y, startRot_z);
             StaticOutputSchema.RotXRel =  relativeRotation.x;
             StaticOutputSchema.RotYRel =  relativeRotation.y;
             StaticOutputSchema.RotZRel =  relativeRotation.z;
             // Debug.LogFormat("Abs Rotation  x : {0} y: {1} z: {2} ",absoluteRotation.x, absoluteRotation.y, absoluteRotation.z );
             // Debug.LogFormat("Relative Rotation  x : {0} y: {1} z: {2} ", relativeRotation.x, relativeRotation.y, relativeRotation.z);
+        }
+        /// <summary>
+        /// calculating linear and angular acceleration and Velocity
+        /// </summary>
+        void broadcastAngulars(){
+            // angular Acceleration & Velocity
+            StaticOutputSchema.AngularXVelocity = AngularVelocity.x;
+            StaticOutputSchema.AngularYVelocity = AngularVelocity.y;
+            StaticOutputSchema.AngularZVelocity = AngularVelocity.z;
+            angularAcceleration = (rb.angularVelocity - lastAngularVelocity) / Time.fixedDeltaTime;
+            lastAngularVelocity = rb.angularVelocity;
+            StaticOutputSchema.AngularXAcceleration = angularAcceleration.x;
+            StaticOutputSchema.AngularYAcceleration = angularAcceleration.y;
+            StaticOutputSchema.AngularXAcceleration = angularAcceleration.z;
+            // linear Acceleration  & Velocity
+            StaticOutputSchema.LinearXVelocity = LinearVelocity.x;
+            StaticOutputSchema.LinearYVelocity = LinearVelocity.y;
+            StaticOutputSchema.LinearZVelocity = LinearVelocity.z;
+            linearAcceleration = (rb.velocity - lastLinearVelocity) / Time.fixedDeltaTime;
+            lastLinearVelocity = rb.velocity;
+            StaticOutputSchema.LinearXAcceleration = linearAcceleration.x;
+            StaticOutputSchema.LinearYAcceleration = linearAcceleration.y;
+            StaticOutputSchema.LinearZAcceleration = linearAcceleration.z;
         }
 
         /// <summary>
@@ -206,27 +245,53 @@ namespace AirControl
 
             /// Don't call once the collision is registered, 
             /// This will help in 
-            if (StaticOutputSchema.IfCollision == false)
-            {
+            // if (StaticOutputSchema.IfCollision == false)
+            // {
                 if (isTaxiing){
                     Debug.DrawLine(rb.transform.forward,rb.velocity);
-                    float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward)*0.1f;
+                    float forward_velocity =  UnityEngine.Vector3.Dot(rb.velocity.normalized,rb.transform.forward)*0.1f;
                     // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
-                    float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
-                    float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                    float l2_side = Mathf.Pow(UnityEngine.Vector3.Dot(rb.velocity,rb.transform.right),2);
+                    float l2_up = -UnityEngine.Vector3.Dot(rb.velocity,rb.transform.up);
                     // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
-                    StaticOutputSchema.Reward = forward_velocity+l2_up-l2_side;
+                    StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side;
+                    if(StaticOutputSchema.CurrentSpeed<45){
+                        //extra penalty if plane moves away from center of runway when speed is low
+                        float dist = Mathf.Abs(transform.position.x - startPos_x);
+                        StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side-(dist*0.2);
+                    }
+                    else{
+                        StaticOutputSchema.Reward = forward_velocity*l2_up-l2_side;
+                    }
                 }
                 if (isFlying){
                     Debug.DrawLine(rb.transform.forward,rb.velocity);
-                    float forward_velocity =  Vector3.Dot(rb.velocity,rb.transform.forward);
+                    float forward_velocity =  UnityEngine.Vector3.Dot(rb.velocity,rb.transform.forward);
                     // Debug.LogFormat("Forward Velocity : {0}, Direction : {1}, Forward Vector {2}",rb.velocity, rb.transform.forward,forward_velocity);
-                    float l2_side = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.right),2);
-                    float l2_up = Mathf.Pow(Vector3.Dot(rb.velocity,rb.transform.up),2);
+                    float l2_side = Mathf.Pow(UnityEngine.Vector3.Dot(rb.velocity,rb.transform.right),2);
+                    float l2_up = Mathf.Pow(UnityEngine.Vector3.Dot(rb.velocity,rb.transform.up),2);
                     // Debug.LogFormat("other Side penalty : {0}, up reward : {1}",l2_side, l2_up);
-                    StaticOutputSchema.Reward = forward_velocity+currentMSL-l2_side; ;
+                    // Upside down detection 
+                    // to discourage Rolling
+                    float rolling = -UnityEngine.Vector3.Dot(transform.up, UnityEngine.Vector3.down); // penalize if roll
+                    float pitch = UnityEngine.Vector3.Dot(transform.forward, UnityEngine.Vector3.up); // penalize if head down
+                    // Debug.Log("pitch :  "+ pitch + " l2 up : "+ l2_up);
+                    // Final reward
+                    // StaticOutputSchema.Reward = l2_up*currentMSL*rolling-l2_side;
+                    // StaticOutputSchema.Reward = pitch*currentMSL*rolling-l2_side;
+                    
+                    if(StaticOutputSchema.CurrentSpeed<45){
+                        //extra penalty if plane moves away from center of runway when speed is low
+                        float dist = Mathf.Abs(transform.position.x - startPos_x);
+                        StaticOutputSchema.Reward = pitch*currentMSL*2*rolling-(dist*0.2);
+                    }
+                    else{
+                        StaticOutputSchema.Reward = pitch*currentMSL*2*rolling;
+                    }
+                    
                 }
-            }
+
+            // }
             
         
         }
@@ -311,7 +376,7 @@ namespace AirControl
         void HandleAltitude(){
             currentMSL  =  transform.position.y * metersToFeets;
             RaycastHit hit;
-            if(Physics.Raycast(transform.position, Vector3.down, out hit))
+            if(Physics.Raycast(transform.position, UnityEngine.Vector3.down, out hit))
             {
                 if(hit.transform.tag == "Ground" || hit.transform.tag == "Building")
                 {
