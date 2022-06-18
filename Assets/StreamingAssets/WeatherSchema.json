@@ -1,6 +1,6 @@
 {
   "MsgType": "Weather",
-  "Version": "1.3.0",
+  "Version": "1.5.0",
   "InputControlType": "Other",
   "IsClouds": "false",
   "IsFog": "false"

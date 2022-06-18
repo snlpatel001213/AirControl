@@ -46,5 +46,5 @@
   "LinearYAcceleration": 0.0,
   "LinearZAcceleration": 0.0,
   "MsgType": "Output",
-  "Version": "1.3.0"
+  "Version": "1.5.0"
 }
