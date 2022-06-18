@@ -210,7 +210,7 @@ namespace AirControl
             lastAngularVelocity = rb.angularVelocity;
             StaticOutputSchema.AngularXAcceleration = angularAcceleration.x;
             StaticOutputSchema.AngularYAcceleration = angularAcceleration.y;
-            StaticOutputSchema.AngularXAcceleration = angularAcceleration.z;
+            StaticOutputSchema.AngularZAcceleration = angularAcceleration.z;
             // linear Acceleration  & Velocity
             StaticOutputSchema.LinearXVelocity = LinearVelocity.x;
             StaticOutputSchema.LinearYVelocity = LinearVelocity.y;
