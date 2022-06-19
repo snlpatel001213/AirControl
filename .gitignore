@@ -98,3 +98,5 @@ snap/snap/v1.5.0-AirControl_Data
 /snap/stage/**
 /snap/*.snap
 /snap/*.swp
+
+/Python/gymtest

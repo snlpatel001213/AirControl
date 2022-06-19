@@ -111,10 +111,13 @@ namespace Communicator
 
 													outputHandle.ParseOutput(ref  outputmsg);
  													SendMessage(ref outputmsg);
+													StaticOutputSchema.Counter ++; 
+
 												}
 												else{
 													string logOutput = outputHandle.LogOutput();
 													SendMessage(ref logOutput);
+													
 												}
 											}
 										}

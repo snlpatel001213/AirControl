@@ -85,7 +85,6 @@ namespace Communicator
                 LinearZAcceleration = StaticOutputSchema.LinearZAcceleration,
                 
             }, new PrimitiveToStringConverter());
-            StaticOutputSchema.Counter ++; 
         }
         /// <summary>
         /// Just Log output if the entire output is not required

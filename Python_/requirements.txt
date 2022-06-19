@@ -2,10 +2,9 @@ sphinx_press_theme
 Click==7.0
 colorama==0.4.3
 matplotlib==3.5.1
-numpy==1.18.0
+numpy==1.17.4
 setuptools==45.2.0
-torch
+torch==1.8.1
 torchvision
 tqdm==4.62.3
-gym
-zipp
+wandb==0.12.11

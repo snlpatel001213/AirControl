@@ -43,8 +43,8 @@ setup(
                  'Programming Language :: Python :: 3.9',
                  ],  # Classifiers help users find your project by categorizing it https://pypi.org/classifiers/
     keywords='Airplane Simulation, Unity, C#, Python',  # Optional
-    package_dir={'': 'airctrl'},  # Optional, use if source code is in a subdirectory under the project root, i.e. `src/`
-    packages=find_packages(where='gym_basic'),  # Required
+    package_dir={'': 'src'},  # Optional, use if source code is in a subdirectory under the project root, i.e. `src/`
+    packages=find_packages(where='src'),  # Required
     python_requires='>=3.7, <4',
 
     # For an analysis of "install_requires" vs pip's requirements files see:
