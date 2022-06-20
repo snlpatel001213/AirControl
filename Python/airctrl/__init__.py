@@ -1,6 +1,6 @@
 from gym.envs.registration import register
 
 register(
-    id='AirControl150',
-    entry_point='airctrl.envs:AirControl150',
+    id='GymAirctrl-v0',
+    entry_point='airctrl.envs:Env',
 )

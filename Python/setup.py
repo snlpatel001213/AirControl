@@ -6,6 +6,7 @@ Adapted from : https://github.com/ultralytics/pip
 import pathlib
 import re
 
+
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 
@@ -44,7 +45,7 @@ setup(
                  ],  # Classifiers help users find your project by categorizing it https://pypi.org/classifiers/
     keywords='Airplane Simulation, Unity, C#, Python',  # Optional
     package_dir={'': 'airctrl'},  # Optional, use if source code is in a subdirectory under the project root, i.e. `src/`
-    packages=find_packages(where='gym_basic'),  # Required
+    packages=find_packages(where='airctrl'),  # Required
     python_requires='>=3.7, <4',
 
     # For an analysis of "install_requires" vs pip's requirements files see:

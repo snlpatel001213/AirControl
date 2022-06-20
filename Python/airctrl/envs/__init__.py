@@ -1,1 +1,1 @@
-from airctrl.envs.env150 import AirControl150
+from airctrl.envs.gymenv import Env

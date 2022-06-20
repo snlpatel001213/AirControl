@@ -3,15 +3,15 @@ from gym import error, spaces, utils
 from gym.utils import seeding
 import numpy as np
 from torch import dtype
-from airctrl.src import environment 
-from airctrl.src import sample_generator
-from airctrl.src.utils import unity
+from airctrl.envs.src import environment 
+from airctrl.envs.src import sample_generator
+from airctrl.envs.src.utils import unity
 import os
 
 # same as BasicEnv, with one difference: the reward for each action is a normal variable
 # purpose is to see if we can use libraries
 
-class AirControl150(gym.Env):
+class Env(gym.Env):
     metadata = {'render.modes': ['human']}
     def __init__(self,action_space=4, observation_space=385, server_port=8899, MAX_EULAR = 360, MAX_ENV_SIZE = 10000, MAX_REWARD_SIZE=1000, MAX_LIDAR_RANGE = 500):
         """_summary_
@@ -116,9 +116,9 @@ class AirControl150(gym.Env):
         self.x.set_lidar(IsActive=False)
         state, _, _, info = self.output_to_features(state)
         state = np.array(state,dtype="float32")
-        return (state, info) if return_info else info
+        return (state, info) if return_info else state
   
-    def render(self, server_port=8899):
+    def render(self, mode='human',server_port=8899):
         """_summary_
 
         Args:
