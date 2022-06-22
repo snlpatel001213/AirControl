@@ -13,19 +13,17 @@ import wandb
 # purpose is to see if we can use libraries
 class Env(gym.Env):
     metadata = {'render.modes': ['human']}
-    def __init__(self, executable_location = "/home/supatel/Games/AirControl_2021/Build/FORSIMULATION/Linux/vFORSIMULATION-AirControl.x86_64", action_space=4, observation_space=385, server_port=8899, max_eular = 360, max_env_size = 10000, max_reward_size=1000, max_lidar_range = 500, max_step=10000):
+    def __init__(self, executable_location = "/home/supatel/Games/AirControl_2021/Build/FORSIMULATION/LinuxHeadless/vFORSIMULATION-AirControl.x86_64", action_space=4, observation_space=385, server_port=8899, max_eular = 360, max_env_size = 10000, max_reward_size=1000, max_lidar_range = 500, max_step=10000):
         """_summary_
 
         Args:
-            executable_location (str, optional): _description_. Defaults to "/home/supatel/Games/AirControl_2021/Build/FORSIMULATION/LinuxHeadless/vFORSIMULATION-AirControl.x86_64".
             action_space (int, optional): _description_. Defaults to 4.
             observation_space (int, optional): _description_. Defaults to 385.
             server_port (int, optional): _description_. Defaults to 8899.
-            max_eular (int, optional): _description_. Defaults to 360.
-            max_env_size (int, optional): _description_. Defaults to 10000.
-            max_reward_size (int, optional): _description_. Defaults to 1000.
-            max_lidar_range (int, optional): _description_. Defaults to 500.
-            max_step (int, optional): _description_. Defaults to 10000.
+            MAX_EULAR (int, optional): _description_. Defaults to 360.
+            MAX_ENV_SIZE (int, optional): _description_. Defaults to 10000.
+            MAX_REWARD_SIZE (int, optional): _description_. Defaults to 1000.
+            MAX_LIDAR_RANGE (int, optional): _description_. Defaults to 500.
         """
         
         self.MAX_EULAR = max_eular # boundary for eular

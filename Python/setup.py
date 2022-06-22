@@ -2,11 +2,8 @@
 A setuptools based setup module.
 Adapted from : https://github.com/ultralytics/pip
 """
-
 import pathlib
 import re
-
-
 # Always prefer setuptools over distutils
 from setuptools import setup, find_packages
 
@@ -18,7 +15,8 @@ with open(here / 'requirements.txt') as fp:  # read requirements.txt
 
 def get_version():
     version = open("VERSION","r").readline().strip()
-    print("################Version {0}#################".format(version))
+    print("################ Version {0} #################".format(version))
+    print ("Installing : ",  find_packages(where='airctrl'))
     return version    
 
 
@@ -44,8 +42,8 @@ setup(
                  'Programming Language :: Python :: 3.9',
                  ],  # Classifiers help users find your project by categorizing it https://pypi.org/classifiers/
     keywords='Airplane Simulation, Unity, C#, Python',  # Optional
-    package_dir={'': 'airctrl'},  # Optional, use if source code is in a subdirectory under the project root, i.e. `src/`
-    packages=find_packages(where='airctrl'),  # Required
+    # package_dir={'': 'airctrl'},  # Optional, use if source code is in a subdirectory under the project root, i.e. `src/`
+    # packages=find_packages(where='airctrl'),  # Required
     python_requires='>=3.7, <4',
 
     # For an analysis of "install_requires" vs pip's requirements files see:
@@ -59,10 +57,6 @@ setup(
     # extras_require={'dev': ['check-manifest'],
     #                 'test': ['coverage'],
     #                 },  # Optional
-
-    package_data={'airctrl': ['package_data.dat'],
-                  },  # Optional, Data files included in your packages that need to be installed
-
     # Although 'package_data' is the preferred approach, in some case you may
     # need to place data files outside of your packages. See:
     # http://docs.python.org/distutils/setupscript.html#installing-additional-files
