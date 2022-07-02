@@ -1,7 +1,11 @@
 LICENSE
+MANIFEST.in
 README.md
 VERSION
+requirements.txt
+setup.cfg
 setup.py
+airctrl/__init__.py
 airctrl/airctrl.egg-info/PKG-INFO
 airctrl/airctrl.egg-info/SOURCES.txt
 airctrl/airctrl.egg-info/dependency_links.txt
@@ -9,8 +13,6 @@ airctrl/airctrl.egg-info/entry_points.txt
 airctrl/airctrl.egg-info/requires.txt
 airctrl/airctrl.egg-info/top_level.txt
 airctrl/envs/__init__.py
-airctrl/envs/basic_env.py
-airctrl/envs/basic_env_2.py
 airctrl/envs/gymenv.py
 airctrl/envs/src/__init__.py
 airctrl/envs/src/communicator.py

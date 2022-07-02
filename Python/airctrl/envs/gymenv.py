@@ -1,3 +1,4 @@
+from click import style
 import gym
 from gym import error, spaces, utils
 from gym.utils import seeding
@@ -6,6 +7,8 @@ from torch import dtype
 from airctrl.envs.src import environment 
 from airctrl.envs.src import sample_generator
 from airctrl.envs.src.utils import unity
+from colorama import Fore, Back, Style
+
 import os
 import wandb
 
@@ -13,11 +16,11 @@ import wandb
 # purpose is to see if we can use libraries
 class Env(gym.Env):
     metadata = {'render.modes': ['human']}
-    def __init__(self, executable_location = "/home/supatel/Games/AirControl_2021/Build/FORSIMULATION/Linux/vFORSIMULATION-AirControl.x86_64", action_space=4, observation_space=385, server_port=8899, max_eular = 360, max_env_size = 10000, max_reward_size=1000, max_lidar_range = 500, max_step=10000):
+    def __init__(self, executable_location = "/home/supatel/Games/AirControl_2021/Build/FORSIMULATION/Linux/vFORSIMULATION-AirControl.x86_64", action_space=4, observation_space=385, server_port=8899, max_eular = 360, max_env_size = 10000, max_reward_size=1000, max_lidar_range = 500, max_step=10000):        
         """_summary_
 
         Args:
-            executable_location (str, optional): _description_. Defaults to "/home/supatel/Games/AirControl_2021/Build/FORSIMULATION/LinuxHeadless/vFORSIMULATION-AirControl.x86_64".
+            executable_location (str, optional): _description_. Defaults to "/home/supatel/Games/AirControl_2021/Build/FORSIMULATION/Linux/vFORSIMULATION-AirControl.x86_64".
             action_space (int, optional): _description_. Defaults to 4.
             observation_space (int, optional): _description_. Defaults to 385.
             server_port (int, optional): _description_. Defaults to 8899.
@@ -27,7 +30,10 @@ class Env(gym.Env):
             max_lidar_range (int, optional): _description_. Defaults to 500.
             max_step (int, optional): _description_. Defaults to 10000.
         """
-        
+        current_args = [i for i in zip(locals().keys(),locals().values())]
+        for i,j in current_args[1:]:
+            print(Fore.RED + str(i)+ Style.RESET_ALL +" : "+ Fore.GREEN +  str(j)++ Style.RESET_ALL)
+                
         self.MAX_EULAR = max_eular # boundary for eular
         self.MAX_ENV_SIZE = max_env_size
         self.MAX_REWARD_SIZE=max_reward_size

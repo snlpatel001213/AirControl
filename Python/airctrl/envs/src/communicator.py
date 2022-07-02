@@ -91,7 +91,7 @@ class Communicator:
                     begin=time.time()
                 else:
                     #sleep for sometime to indicate a gap
-                    time.sleep(0.1)
+                    time.sleep(0.01)
             except Exception as e: 
                 # print("Exception : ", e)
                 pass
